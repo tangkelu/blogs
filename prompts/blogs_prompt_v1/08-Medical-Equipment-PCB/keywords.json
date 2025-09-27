@@ -1,0 +1,1253 @@
+{
+  "section_number": 8,
+  "section_title": "Medical and Healthcare Electronics",
+  "subsections": [
+    {
+      "name": "Medical Imaging Equipment",
+      "keywords": [
+        {
+          "keyword": "Medical Imaging PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "CT Scanner PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "MRI PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "X-Ray PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Ultrasound PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Mammography PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "PET Scanner PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "SPECT PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Digital Radiography PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Fluoroscopy PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "C-Arm PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Angiography PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Medical Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "PACS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "DICOM PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Image Processing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Image Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Medical Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Endoscope PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Surgical Imaging PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "3D Imaging PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "4D Imaging PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Real-Time Imaging PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "High Resolution PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Low Dose PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Portable Imaging PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Mobile Imaging PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Point of Care PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Bedside Imaging PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        },
+        {
+          "keyword": "Interventional PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Imaging Equipment"
+        }
+      ]
+    },
+    {
+      "name": "Patient Monitoring Systems",
+      "keywords": [
+        {
+          "keyword": "Patient Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Vital Signs Monitor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "ECG Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "EKG Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "EEG Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "EMG Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Blood Pressure Monitor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "SpO2 Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Pulse Oximeter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Capnography PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Temperature Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Respiration Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Cardiac Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Fetal Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Neonatal Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "ICU Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Anesthesia Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Telemetry Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Bedside Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Portable Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Wearable Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Remote Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Wireless Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Multi Parameter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Central Station PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Nurse Call PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Alarm System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Clinical Information PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "EMR Integration PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        },
+        {
+          "keyword": "Hospital Network PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Patient Monitoring Systems"
+        }
+      ]
+    },
+    {
+      "name": "Therapeutic and Life Support",
+      "keywords": [
+        {
+          "keyword": "Ventilator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Respirator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "CPAP PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "BiPAP PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Oxygen Concentrator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Nebulizer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Infusion Pump PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Syringe Pump PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Insulin Pump PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Drug Delivery PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Dialysis Machine PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Heart Lung Machine PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Defibrillator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Pacemaker PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "ICD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Hearing Aid PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Cochlear Implant PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Blood Glucose Monitor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Surgical Equipment PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Electrosurgery PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Laser Surgery PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Dental Equipment PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Physical Therapy PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Rehabilitation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Pain Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Neurostimulation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Deep Brain Stimulation",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Spinal Cord Stimulation",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "TENS Unit PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        },
+        {
+          "keyword": "Ultrasound Therapy PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Therapeutic and Life Support"
+        }
+      ]
+    },
+    {
+      "name": "Laboratory and Diagnostic",
+      "keywords": [
+        {
+          "keyword": "Lab Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Chemistry Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Hematology Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Immunoassay Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Blood Gas Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Coagulation Analyzer",
+          "used": true,
+          "template": "medical-equipment-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Urinalysis PCB",
+          "used": true,
+          "template": "medical-equipment-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "PCR Machine PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "qPCR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "DNA Sequencer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Gene Sequencer PCB",
+          "used": true,
+          "template": "medical-equipment-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Flow Cytometer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Cell Counter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Microscope PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Digital Microscope PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Centrifuge PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Incubator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Spectrophotometer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Chromatography PCB",
+          "used": true,
+          "template": "medical-equipment-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Mass Spectrometer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Lab Automation PCB",
+          "used": true,
+          "template": "medical-equipment-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Sample Handling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Liquid Handling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Pipetting PCB",
+          "used": true,
+          "template": "medical-equipment-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Sample Storage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Temperature Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Humidity Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Clean Room PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Biosafety PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        },
+        {
+          "keyword": "Sterilization PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Diagnostic"
+        }
+      ]
+    },
+    {
+      "name": "Medical Device Safety and Compliance",
+      "keywords": [
+        {
+          "keyword": "Medical Power Supply PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical Isolation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Patient Isolation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical Safety PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "IEC 60601 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "2 MOPP PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "2 MOOP PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical AC DC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical DC DC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical Battery Charger",
+          "used": true,
+          "template": "medical-equipment-pcb-v3.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical UPS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Surgical Power PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Life Support Power PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical EMC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical EMI Filter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Low Leakage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical Grade PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Hospital Grade PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Medical Certification PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "FDA Compliant PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "CE Medical PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "ISO 13485 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Risk Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Clinical Evaluation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Biocompatibility PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Sterilization Compatible",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Usability Engineering",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Human Factors PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Cybersecurity PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        },
+        {
+          "keyword": "Software Validation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Medical Device Safety and Compliance"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "medical-equipment-pcb-v1.md",
+    "medical-equipment-pcb-v2.md",
+    "medical-equipment-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "medical-equipment-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "medical-equipment-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "medical-equipment-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

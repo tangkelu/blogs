@@ -1,0 +1,1245 @@
+{
+  "section_number": 15,
+  "section_title": "Display and Visual Technology",
+  "subsections": [
+    {
+      "name": "LCD and TFT Technology",
+      "keywords": [
+        {
+          "keyword": "LCD Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "LCD Driver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "TFT Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "LCD Backlight PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "LED Backlight Driver",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Mini LED Backlight",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Micro LED Backlight",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Quantum Dot PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "CCFL Inverter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "LCD Power Supply PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "TCON PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Timing Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Source Driver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Gate Driver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "LCD Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "LVDS Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "MIPI DSI PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "eDP Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "LCD Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Character LCD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Graphic LCD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Segment LCD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Touch LCD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Color TFT PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Monochrome LCD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Sunlight Readable PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Transflective PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Transmissive PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "Reflective PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "LCD and TFT Technology"
+        }
+      ]
+    },
+    {
+      "name": "OLED and Advanced Displays",
+      "keywords": [
+        {
+          "keyword": "OLED Driver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "AMOLED Driver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "PMOLED Driver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Power Supply",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Flexible OLED PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Transparent OLED PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Module PCB",
+          "used": true,
+          "template": "display-technology-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Display Panel",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Micro OLED PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Lighting PCB",
+          "used": true,
+          "template": "display-technology-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Interface PCB",
+          "used": true,
+          "template": "display-technology-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Foldable OLED PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Rollable OLED PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED TV PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Phone PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Watch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "OLED Testing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "E-Paper Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "E-Ink Display PCB",
+          "used": true,
+          "template": "display-technology-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Electrophoretic PCB",
+          "used": true,
+          "template": "display-technology-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Cholesteric LCD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Electrowetting PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Quantum Dot OLED",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "QD-OLED PCB",
+          "used": true,
+          "template": "display-technology-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "MicroLED Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "Direct View LED",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        },
+        {
+          "keyword": "DVLED PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "OLED and Advanced Displays"
+        }
+      ]
+    },
+    {
+      "name": "Projection and Large Format",
+      "keywords": [
+        {
+          "keyword": "Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "DLP Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "LCD Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "LED Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Laser Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "LCOS Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "DMD Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Light Engine PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Lamp Driver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "LED Light Source PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Laser Light Source",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Projection Lens Control",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Focus Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Zoom Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Keystone Correction",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Image Processing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "4K Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "8K Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "HDR Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Interactive Projector",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Short Throw PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Ultra Short Throw",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Mapping Projector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Edge Blending PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Multi-Projector PCB",
+          "used": true,
+          "template": "display-technology-pcb-v1.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Video Wall PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Tiled Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Seamless Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "Curved Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        },
+        {
+          "keyword": "360 Degree Display",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Projection and Large Format"
+        }
+      ]
+    },
+    {
+      "name": "Touch and Interactive Technology",
+      "keywords": [
+        {
+          "keyword": "Touch Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Capacitive Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Resistive Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Infrared Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "SAW Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Optical Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Multi Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch Panel PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch Glass PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch Film PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch Overlay PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch Calibration",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch Driver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Touch IC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Haptic Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Force Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "3D Touch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Gesture Recognition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Hand Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Eye Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Voice Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Motion Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Interactive Whiteboard",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Smart Board PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Digital Signage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Kiosk Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        },
+        {
+          "keyword": "Wayfinding Display",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Touch and Interactive Technology"
+        }
+      ]
+    },
+    {
+      "name": "Virtual and Augmented Reality",
+      "keywords": [
+        {
+          "keyword": "VR Headset PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "AR Glasses PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Mixed Reality PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "XR Device PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Head Mounted Display",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "HMD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "VR Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "AR Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Optical Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Lens Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Eye Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Head Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Motion Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Sensor Fusion PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "IMU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "6DOF Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Inside-Out Tracking",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Outside-In Tracking",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Hand Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Finger Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Haptic Feedback PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Force Feedback PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "VR Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Motion Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Wireless VR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Standalone VR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Tethered VR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Mobile VR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "WebXR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        },
+        {
+          "keyword": "Cloud VR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Virtual and Augmented Reality"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "display-technology-pcb-v1.md",
+    "display-technology-pcb-v2.md",
+    "display-technology-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "display-technology-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "display-technology-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "display-technology-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

@@ -1,0 +1,1253 @@
+{
+  "section_number": 10,
+  "section_title": "Security and Surveillance Systems",
+  "subsections": [
+    {
+      "name": "Video Surveillance and Analytics",
+      "keywords": [
+        {
+          "keyword": "IP Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "CCTV Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "PTZ Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Dome Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Bullet Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Box Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Thermal Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Night Vision Camera",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "4K Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "8K Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "AI Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Smart Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Wireless Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "PoE Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Solar Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Battery Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Body Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Dash Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Action Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Drone Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "360 Degree Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Panoramic Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Fisheye Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Covert Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "License Plate Camera",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "ANPR Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Face Recognition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "People Counting PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Behavior Analysis PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        },
+        {
+          "keyword": "Object Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Video Surveillance and Analytics"
+        }
+      ]
+    },
+    {
+      "name": "Access Control and Authentication",
+      "keywords": [
+        {
+          "keyword": "Access Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Card Reader PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Biometric Reader PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Fingerprint Reader PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Face Recognition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Iris Scanner PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Palm Reader PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Voice Recognition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Vein Scanner PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "RFID Access PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "NFC Access PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Bluetooth Access PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Mobile Access PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "QR Code Access PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Keypad Access PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Door Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Electric Lock PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Magnetic Lock PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Strike Lock PCB",
+          "used": true,
+          "template": "security-surveillance-pcb-v3.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Turnstile PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Barrier Gate PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Gate Operator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Visitor Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Time Attendance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Multi-Factor Authentication",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Credential Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Security Badge PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Smart Card PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Proximity Card PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        },
+        {
+          "keyword": "Key Fob PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Access Control and Authentication"
+        }
+      ]
+    },
+    {
+      "name": "Perimeter and Intrusion Detection",
+      "keywords": [
+        {
+          "keyword": "Perimeter Security PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Fence Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Barrier Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Beam Break PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Microwave Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "PIR Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Dual Technology PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Triple Technology PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Vibration Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Seismic Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Acoustic Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Video Analytics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Thermal Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "LIDAR Security PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Radar Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Underground Cable PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Fiber Optic Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Pressure Mat PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Contact Switch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Magnetic Contact PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Window Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Door Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Glass Break Detector",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Shock Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Tilt Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Tamper Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "False Alarm Reduction",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Weather Compensation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Pet Immunity PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        },
+        {
+          "keyword": "Zone Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Perimeter and Intrusion Detection"
+        }
+      ]
+    },
+    {
+      "name": "Security Management and Communication",
+      "keywords": [
+        {
+          "keyword": "Security Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Central Station PCB",
+          "used": true,
+          "template": "security-surveillance-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Control Room PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Security Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "NVR PCB",
+          "used": true,
+          "template": "security-surveillance-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "DVR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Video Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Access Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Event Management PCB",
+          "used": true,
+          "template": "security-surveillance-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Alarm Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Integration Platform PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Security Protocol PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Encrypted Communication",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Secure Transmission PCB",
+          "used": true,
+          "template": "security-surveillance-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Cybersecurity PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Network Security PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Firewall PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "IDS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "IPS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "VPN Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Security Router PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Security Switch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "SIEM PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Security Analytics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Threat Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Vulnerability Assessment",
+          "used": true,
+          "template": "security-surveillance-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Penetration Testing PCB",
+          "used": true,
+          "template": "security-surveillance-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Security Audit PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Compliance Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        },
+        {
+          "keyword": "Incident Response PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Security Management and Communication"
+        }
+      ]
+    },
+    {
+      "name": "Emergency and Life Safety",
+      "keywords": [
+        {
+          "keyword": "Fire Alarm PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Smoke Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Heat Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Flame Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Gas Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "CO Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Carbon Monoxide PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Toxic Gas PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Explosive Gas PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Oxygen Depletion PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Multi-Gas Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Fire Panel PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Addressable System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Conventional System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Wireless Fire PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Voice Evacuation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Mass Notification PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Emergency Communication",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "PA System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Intercom PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Emergency Phone PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Call Box PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Panic Button PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Duress Alarm PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Medical Alert PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Lone Worker PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Man Down PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Fall Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Emergency Lighting PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        },
+        {
+          "keyword": "Exit Sign PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Emergency and Life Safety"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "security-surveillance-pcb-v1.md",
+    "security-surveillance-pcb-v2.md",
+    "security-surveillance-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "security-surveillance-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "security-surveillance-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "security-surveillance-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

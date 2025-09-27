@@ -1,0 +1,1253 @@
+{
+  "section_number": 9,
+  "section_title": "IoT and Wireless Communication",
+  "subsections": [
+    {
+      "name": "IoT Connectivity Platforms",
+      "keywords": [
+        {
+          "keyword": "IoT Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Industrial IoT Gateway",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Consumer IoT Gateway",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Edge Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Fog Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Cloud Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Multi-Protocol Gateway",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Hub PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Bridge PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Router PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Concentrator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Aggregator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Edge Computing",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Data Processing",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Security Gateway",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "IoT Platform PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Smart Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Wireless Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "LoRaWAN Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Zigbee Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Thread Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Matter Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Cellular Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Satellite Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Mesh Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Protocol Bridge PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Data Acquisition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        },
+        {
+          "keyword": "Remote Monitoring PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "IoT Connectivity Platforms"
+        }
+      ]
+    },
+    {
+      "name": "Wireless Communication Modules",
+      "keywords": [
+        {
+          "keyword": "WiFi Module PCB",
+          "used": true,
+          "template": "iot-wireless-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "WiFi 6 Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "WiFi 6E Module PCB",
+          "used": true,
+          "template": "iot-wireless-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "WiFi 7 Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Bluetooth Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "BLE Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Bluetooth 5 Module",
+          "used": true,
+          "template": "iot-wireless-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Bluetooth Mesh PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Zigbee Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Zigbee 3.0 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Z-Wave Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Z-Wave Plus PCB",
+          "used": true,
+          "template": "iot-wireless-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Thread Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Matter Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "LoRa Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "LoRaWAN Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Sigfox Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "NB-IoT Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "LTE-M Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Cat-M1 Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "4G Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "5G Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Cellular Module PCB",
+          "used": true,
+          "template": "iot-wireless-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "GPS Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "GNSS Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Antenna Module PCB",
+          "used": true,
+          "template": "iot-wireless-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "RF Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Sub-GHz Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "ISM Band PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "Mesh Network PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Communication Modules"
+        }
+      ]
+    },
+    {
+      "name": "RFID and Near Field Communication",
+      "keywords": [
+        {
+          "keyword": "RFID Reader PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Tag PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Antenna PCB",
+          "used": true,
+          "template": "iot-wireless-pcb-v2.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "UHF RFID PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "HF RFID PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "LF RFID PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Active RFID PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Passive RFID PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Semi-Passive RFID PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "NFC Reader PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "NFC Tag PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "NFC Antenna PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "NFC Payment PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "NFC Access PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Gate PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Portal PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Handheld PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Fixed Reader",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Printer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Middleware PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Asset Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Inventory Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Access Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Time Attendance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Animal Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Vehicle Identification",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Supply Chain PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Anti-Counterfeiting",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Library System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Retail Security PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RFID and Near Field Communication"
+        }
+      ]
+    },
+    {
+      "name": "Sensor Networks and Edge Computing",
+      "keywords": [
+        {
+          "keyword": "Sensor Node PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Wireless Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "IoT Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Smart Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Environmental Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Temperature Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Humidity Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Pressure Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Motion Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Light Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Gas Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Vibration Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Acoustic Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Proximity Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Level Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Flow Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Force Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Strain Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Accelerometer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Gyroscope PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Magnetometer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Air Quality PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Water Quality PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Soil Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Weather Station PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Seismic Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Radiation Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Chemical Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Biological Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        },
+        {
+          "keyword": "Multi-Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Sensor Networks and Edge Computing"
+        }
+      ]
+    },
+    {
+      "name": "Edge AI and Machine Learning",
+      "keywords": [
+        {
+          "keyword": "Edge AI PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Edge Computing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "AI Accelerator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Neural Processing Unit",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "NPU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Machine Learning PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Deep Learning PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Computer Vision PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Image Recognition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Voice Recognition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Natural Language PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Edge Inference PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Real-Time AI PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Low Power AI PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "AI Chip PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "AI Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "AI Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "AI Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "AI Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Smart Camera PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Intelligent Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Anomaly Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Predictive Analytics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Pattern Recognition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Decision Making PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Autonomous System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Cognitive Computing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Neuromorphic PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Quantum ML PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        },
+        {
+          "keyword": "Federated Learning PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Edge AI and Machine Learning"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "iot-wireless-pcb-v1.md",
+    "iot-wireless-pcb-v2.md",
+    "iot-wireless-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "iot-wireless-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "iot-wireless-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "iot-wireless-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

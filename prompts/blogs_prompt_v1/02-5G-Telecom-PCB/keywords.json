@@ -1,0 +1,1101 @@
+{
+  "section_number": 2,
+  "section_title": "5G and Telecommunications",
+  "subsections": [
+    {
+      "name": "5G Base Station",
+      "keywords": [
+        {
+          "keyword": "5G Base Station PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G BTS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G gNodeB PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Small Cell PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Macro Cell PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Femto Cell PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Pico Cell PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Micro Cell PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G RRU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G BBU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G AAU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G DU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G CU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Massive MIMO PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Beamforming PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Antenna PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G RF PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Frontend PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Backhaul PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Fronthaul PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G SA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G NSA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "mmWave 5G PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "Sub-6GHz PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "C-Band PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G NR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G ORAN PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G Cloud RAN PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G RIC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G Base Station"
+        }
+      ]
+    },
+    {
+      "name": "5G RF Components",
+      "keywords": [
+        {
+          "keyword": "5G Power Amplifier PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Low Noise Amplifier PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Filter PCB",
+          "used": true,
+          "template": "5g-telecom-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Duplexer PCB",
+          "used": true,
+          "template": "5g-telecom-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Diplexer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Circulator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Isolator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Combiner PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Splitter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Coupler PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Attenuator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Phase Shifter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Mixer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Oscillator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Synthesizer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Modulator PCB",
+          "used": true,
+          "template": "5g-telecom-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Demodulator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Transceiver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G ADC PCB",
+          "used": true,
+          "template": "5g-telecom-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G DAC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "GaN PA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "GaAs PA PCB",
+          "used": true,
+          "template": "5g-telecom-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "LDMOS PA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Switch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Load PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Termination PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "Antenna Tuner PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Balun PCB",
+          "used": true,
+          "template": "5g-telecom-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "5G RF Components"
+        },
+        {
+          "keyword": "5G Transformer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "5G RF Components"
+        }
+      ]
+    },
+    {
+      "name": "6G and Beyond",
+      "keywords": [
+        {
+          "keyword": "6G Research PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Terahertz PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "THz Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "6G mmWave PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "6G Antenna PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "6G Beamforming PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "AI-Native PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Holographic Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Reconfigurable Intelligence PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "6G Edge Computing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Quantum Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Satellite Integration PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "6G IoT PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Extended Reality PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Digital Twin PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Brain Computer Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Haptic Communication PCB",
+          "used": true,
+          "template": "5g-telecom-pcb-v3.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Molecular Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Optical Wireless PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Visible Light Communication",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "6G and Beyond"
+        }
+      ]
+    },
+    {
+      "name": "Fiber Optic Communication",
+      "keywords": [
+        {
+          "keyword": "Optical Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "Optical Transceiver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "SFP Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "SFP Plus Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "SFP28 Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "QSFP Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "QSFP Plus Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "QSFP28 Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "QSFP-DD Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "QSFP56 Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "OSFP Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "CFP Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "CFP2 Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "CFP4 Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "CFP8 Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "DWDM Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "CWDM Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "AOC Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "DAC Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "Coherent Optical PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "Direct Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "PAM4 Optical PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "Pluggable Coherent PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "Silicon Photonic PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        },
+        {
+          "keyword": "Indium Phosphide PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fiber Optic Communication"
+        }
+      ]
+    },
+    {
+      "name": "Wireless Infrastructure",
+      "keywords": [
+        {
+          "keyword": "Cell Tower PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Antenna System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Distributed Antenna System",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "DAS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Small Cell PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Femtocell PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Picocell PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Microcell PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Repeater PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Booster PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "RF Combiner PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "RF Splitter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Tower Mounted Amplifier",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "TMA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Base Station Controller",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "BSC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Mobile Switching Center",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "MSC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Home Location Register",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "HLR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Visitor Location Register",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "VLR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Authentication Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Equipment Identity Register",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "EIR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Packet Core PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Evolved Packet Core",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "EPC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Wireless Infrastructure"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "5g-telecom-pcb-v1.md",
+    "5g-telecom-pcb-v2.md",
+    "5g-telecom-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "5g-telecom-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "5g-telecom-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "5g-telecom-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

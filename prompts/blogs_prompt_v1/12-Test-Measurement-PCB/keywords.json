@@ -1,0 +1,1253 @@
+{
+  "section_number": 12,
+  "section_title": "Test, Measurement, and Instrumentation",
+  "subsections": [
+    {
+      "name": "Electronic Test Equipment",
+      "keywords": [
+        {
+          "keyword": "Oscilloscope PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Digital Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Analog Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Mixed Signal Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Real Time Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Sampling Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Storage Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Handheld Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Benchtop Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "PC Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "USB Oscilloscope",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Oscilloscope Frontend",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Oscilloscope ADC",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Oscilloscope Trigger",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Oscilloscope Memory",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Oscilloscope Display",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Oscilloscope Probe",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Active Probe PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Differential Probe",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Current Probe PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "High Voltage Probe",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "High Frequency Probe",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Logic Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Protocol Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Mixed Domain PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Eye Diagram PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Jitter Analysis PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Noise Analysis PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "EMI Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        },
+        {
+          "keyword": "Signal Integrity PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electronic Test Equipment"
+        }
+      ]
+    },
+    {
+      "name": "RF and Microwave Test",
+      "keywords": [
+        {
+          "keyword": "Spectrum Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "RF Spectrum Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Signal Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Vector Signal Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Real Time Analyzer",
+          "used": true,
+          "template": "test-measurement-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Swept Analyzer PCB",
+          "used": true,
+          "template": "test-measurement-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "FFT Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Handheld Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Benchtop Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Spectrum Frontend",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Spectrum Mixer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Spectrum Filter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Spectrum Detector",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Spectrum Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Spectrum Processor",
+          "used": true,
+          "template": "test-measurement-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "EMC Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "EMI Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Noise Figure Analyzer",
+          "used": true,
+          "template": "test-measurement-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Phase Noise Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Modulation Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Vector Network Analyzer",
+          "used": true,
+          "template": "test-measurement-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "VNA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Time Domain Reflectometer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "TDR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Cable Tester PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Antenna Analyzer PCB",
+          "used": true,
+          "template": "test-measurement-pcb-v3.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Power Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "RF Power Meter",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Microwave Counter PCB",
+          "used": true,
+          "template": "test-measurement-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "Frequency Counter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "RF and Microwave Test"
+        }
+      ]
+    },
+    {
+      "name": "Signal Generation and Synthesis",
+      "keywords": [
+        {
+          "keyword": "Signal Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Function Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Waveform Generator",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Arbitrary Waveform",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "AWG PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Pulse Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Pattern Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Clock Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "RF Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Microwave Generator",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Vector Signal Generator",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Frequency Synthesizer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "DDS Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "PLL Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "VCO PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Sweep Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Noise Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Audio Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Video Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Digital Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Analog Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Programmable Generator",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Calibration Generator",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Standard Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Reference Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Clock Recovery PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Jitter Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "BER Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Eye Generator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        },
+        {
+          "keyword": "Modulation Generator",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Signal Generation and Synthesis"
+        }
+      ]
+    },
+    {
+      "name": "Power and Energy Measurement",
+      "keywords": [
+        {
+          "keyword": "Power Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Power Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Energy Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Power Quality Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Harmonic Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Three Phase Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Single Phase Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "AC Power Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "DC Power Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Power Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Power Logger PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Power Recorder PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Current Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Voltage Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Power Factor Meter",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Demand Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Load Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Motor Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Battery Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Solar Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Grid Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Efficiency Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Loss Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Transient Recorder PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Disturbance Analyzer",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Flicker Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Unbalance Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Sequence Analyzer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Revenue Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        },
+        {
+          "keyword": "Smart Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Power and Energy Measurement"
+        }
+      ]
+    },
+    {
+      "name": "Laboratory and Research Instruments",
+      "keywords": [
+        {
+          "keyword": "Laboratory PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Research Equipment PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Scientific Instrument PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Data Acquisition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "DAQ PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Multichannel PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "High Resolution PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "High Speed PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Precision Measurement PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Calibration PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Standard PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Reference PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Environmental Chamber PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Temperature Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Humidity Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Pressure Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Flow Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "pH Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Conductivity Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Turbidity Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Dissolved Oxygen PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Ion Selective PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Electrochemical PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Analytical Balance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Scale PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Weighing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Force Gauge PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Torque Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Vibration Meter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        },
+        {
+          "keyword": "Accelerometer Test PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Laboratory and Research Instruments"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "test-measurement-pcb-v1.md",
+    "test-measurement-pcb-v2.md",
+    "test-measurement-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "test-measurement-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "test-measurement-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "test-measurement-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

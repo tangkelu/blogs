@@ -1,0 +1,1253 @@
+{
+  "section_number": 11,
+  "section_title": "Aerospace, Defense, and Space",
+  "subsections": [
+    {
+      "name": "Commercial Aviation Electronics",
+      "keywords": [
+        {
+          "keyword": "Avionics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Flight Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Flight Computer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Autopilot PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Flight Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Navigation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Transponder PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "TCAS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Weather Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Terrain Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Collision Avoidance",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Aircraft Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Cockpit Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "HUD Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Aircraft Instrument",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Aircraft Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Aircraft Power PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Aircraft Lighting PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Aircraft Entertainment",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Cabin Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Passenger Service PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "In-Flight Entertainment",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "IFE PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Connectivity PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Satcom PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Maintenance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Health Monitoring PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Engine Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        },
+        {
+          "keyword": "Environmental Control",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Commercial Aviation Electronics"
+        }
+      ]
+    },
+    {
+      "name": "Military and Defense Systems",
+      "keywords": [
+        {
+          "keyword": "Military PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Defense PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military Radio PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Tactical Radio PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Software Defined Radio",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "SDR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military GPS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military Sonar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Electronic Warfare PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Jamming PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "ECM PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "ECCM PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Signal Intelligence PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military Computer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Rugged Computer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military Display PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Night Vision PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Thermal Imaging PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military Vehicle PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military UAV PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military Communication",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Military Encryption PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Secure Communication",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Command Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Battle Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Surveillance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Reconnaissance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Target Acquisition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        },
+        {
+          "keyword": "Fire Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Military and Defense Systems"
+        }
+      ]
+    },
+    {
+      "name": "Satellite and Space Systems",
+      "keywords": [
+        {
+          "keyword": "Satellite PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Modem PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Terminal PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Antenna PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Transceiver",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "VSAT PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Router PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Ground Station PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "LEO Satellite PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "MEO Satellite PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "GEO Satellite PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite IoT PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Phone PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite TV PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Radio PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Navigation",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Satellite Payload PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Transponder PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Downconverter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Upconverter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "LNB PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "LNA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "HPA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "BUC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Block Converter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "Frequency Converter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        },
+        {
+          "keyword": "IF Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Satellite and Space Systems"
+        }
+      ]
+    },
+    {
+      "name": "Space Electronics and Components",
+      "keywords": [
+        {
+          "keyword": "Spacecraft PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Vehicle PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Station PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Rocket PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Launch Vehicle PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Probe PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Computer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Power PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Communication",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Navigation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Guidance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Radiation Hardened PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Qualified PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "High Reliability PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Vacuum Compatible PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Testing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Grade PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Space Certification",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Fault Tolerant PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Redundant System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Error Correction PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Latch-up Protection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "SEU Mitigation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "TID Resistance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Displacement Damage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Thermal Cycling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Outgassing Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        },
+        {
+          "keyword": "Atomic Oxygen PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Space Electronics and Components"
+        }
+      ]
+    },
+    {
+      "name": "Radar and Electronic Warfare",
+      "keywords": [
+        {
+          "keyword": "Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Radar Transmitter PCB",
+          "used": true,
+          "template": "aerospace-defense-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Radar Receiver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Radar Antenna PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Phased Array Radar",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "AESA Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "PESA Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Pulse Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "FMCW Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Doppler Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Synthetic Aperture PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "SAR Radar PCB",
+          "used": true,
+          "template": "aerospace-defense-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "ISAR Radar PCB",
+          "used": true,
+          "template": "aerospace-defense-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Ground Penetrating PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "GPR Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Weather Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Air Traffic Radar",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Marine Radar PCB",
+          "used": true,
+          "template": "aerospace-defense-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Ground Radar PCB",
+          "used": true,
+          "template": "aerospace-defense-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Surveillance Radar",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Tracking Radar PCB",
+          "used": true,
+          "template": "aerospace-defense-pcb-v1.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Fire Control Radar",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Missile Guidance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Countermeasure PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Jamming Resistant PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Anti-Jamming PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "ECCM PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Signal Processing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Beamforming PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Radar and Electronic Warfare"
+        },
+        {
+          "keyword": "Digital Beamforming",
+          "used": true,
+          "template": "aerospace-defense-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Radar and Electronic Warfare"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "aerospace-defense-pcb-v1.md",
+    "aerospace-defense-pcb-v2.md",
+    "aerospace-defense-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "aerospace-defense-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "aerospace-defense-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "aerospace-defense-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

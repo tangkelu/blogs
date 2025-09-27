@@ -1,0 +1,1189 @@
+{
+  "section_number": 3,
+  "section_title": "Automotive Electronics",
+  "subsections": [
+    {
+      "name": "Electric Vehicle Powertrain",
+      "keywords": [
+        {
+          "keyword": "EV PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Electric Vehicle PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "EV Battery PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "EV Motor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "EV Charger PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "EV Inverter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "EV Converter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "EV Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "BMS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Battery Management System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Cell Monitoring PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Cell Balancing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Battery Protection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Battery Safety PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Thermal Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "OBC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "On Board Charger PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "DC DC Converter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "EV Power Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "EV Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Battery Pack PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Cell Module PCB",
+          "used": true,
+          "template": "automotive-pcb-v3.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Contactors PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Fuse Box PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "High Voltage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Low Voltage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "48V System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "400V System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "800V System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        },
+        {
+          "keyword": "Bidirectional Charger PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Electric Vehicle Powertrain"
+        }
+      ]
+    },
+    {
+      "name": "ADAS and Autonomous Driving",
+      "keywords": [
+        {
+          "keyword": "ADAS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Advanced Driver Assistance PCB",
+          "used": true,
+          "template": "automotive-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Autonomous Driving PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Self Driving PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "ADAS Camera PCB",
+          "used": true,
+          "template": "automotive-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "ADAS Radar PCB",
+          "used": true,
+          "template": "automotive-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "ADAS Lidar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "ADAS Ultrasonic PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "ADAS Controller PCB",
+          "used": true,
+          "template": "automotive-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "ADAS Processor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "ADAS Fusion PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Vision Processing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Radar Processing PCB",
+          "used": true,
+          "template": "automotive-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Lidar Processing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Sensor Fusion PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Object Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Lane Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Traffic Sign Recognition PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Pedestrian Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Collision Avoidance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "L1 ADAS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "L2 ADAS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "L3 Autonomous PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "L4 Autonomous PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "L5 Autonomous PCB",
+          "used": true,
+          "template": "automotive-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Edge AI PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Automotive AI PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Neural Processing Unit",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "NPU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        },
+        {
+          "keyword": "Computer Vision PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "ADAS and Autonomous Driving"
+        }
+      ]
+    },
+    {
+      "name": "Vehicle-to-Everything (V2X)",
+      "keywords": [
+        {
+          "keyword": "V2X Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "V2V Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "V2I Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "V2P Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "V2N Communication PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "DSRC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "C-V2X PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "LTE-V2X PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "5G V2X PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "V2X Antenna PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "V2X Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "V2X Security PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "V2X Processor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Connected Car PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Telematics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Vehicle Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Fleet Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Remote Diagnostics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Over-the-Air Update PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Vehicle Cloud PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Smart Infrastructure PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Traffic Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Cooperative Driving PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Platooning PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        },
+        {
+          "keyword": "Intersection Safety PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle-to-Everything (V2X)"
+        }
+      ]
+    },
+    {
+      "name": "Automotive Radar Systems",
+      "keywords": [
+        {
+          "keyword": "Automotive Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "24GHz Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "77GHz Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "79GHz Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "4D Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Imaging Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Long Range Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Short Range Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Medium Range Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Corner Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Front Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Rear Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Side Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Blind Spot Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Cross Traffic Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Parking Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "FMCW Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Pulse Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "MIMO Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Radar Antenna PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Radar Transceiver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Radar Signal Processing",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Radar Sensor Fusion",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Radar ECU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Radar Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Cascade Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Digital Radar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Software Defined Radar",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Automotive Lidar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        },
+        {
+          "keyword": "Solid State Lidar PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Automotive Radar Systems"
+        }
+      ]
+    },
+    {
+      "name": "Vehicle Networking",
+      "keywords": [
+        {
+          "keyword": "CAN Bus PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "CAN FD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "LIN Bus PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "FlexRay PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "MOST Bus PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Automotive Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "100BASE-T1 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "1000BASE-T1 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Vehicle Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Central Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Domain Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Zone Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Network Switch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Vehicle Network PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "In-Vehicle Network PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Body Network PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Powertrain Network PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Chassis Network PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Infotainment Network PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Diagnostic PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "OBD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "UDS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Vehicle Protocol PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Bus Transceiver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "CAN Transceiver PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        },
+        {
+          "keyword": "Vehicle Bus PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Vehicle Networking"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "automotive-pcb-v1.md",
+    "automotive-pcb-v2.md",
+    "automotive-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "automotive-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "automotive-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "automotive-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

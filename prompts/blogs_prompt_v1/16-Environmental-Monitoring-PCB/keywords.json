@@ -1,0 +1,1253 @@
+{
+  "section_number": 16,
+  "section_title": "Environmental and Agricultural Technology",
+  "subsections": [
+    {
+      "name": "Precision Agriculture and Farming",
+      "keywords": [
+        {
+          "keyword": "Precision Agriculture PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Smart Agriculture PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Smart Farming PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Agricultural IoT PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Farm Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Crop Monitoring PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Livestock Monitoring",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Soil Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Soil Moisture PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Soil pH PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Soil Nutrient PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Soil Conductivity PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Plant Health PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Leaf Wetness PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Weather Station PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Irrigation Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Fertigation Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Greenhouse Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Hydroponic Control",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Aeroponic Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Climate Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "CO2 Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Lighting Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Automated Feeding PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Milking Robot PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Egg Collection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Poultry Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Aquaculture PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Fish Farming PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        },
+        {
+          "keyword": "Shrimp Farming PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Precision Agriculture and Farming"
+        }
+      ]
+    },
+    {
+      "name": "Environmental Monitoring and Compliance",
+      "keywords": [
+        {
+          "keyword": "Air Quality Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "PM2.5 Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "PM10 Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "PM1 Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "CO2 Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "CO Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "NOx Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "SO2 Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "O3 Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "VOC Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Formaldehyde Sensor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Benzene Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Toluene Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Ammonia Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Hydrogen Sulfide PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Methane Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Radon Detector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Radiation Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Noise Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Vibration Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Light Pollution PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Water Quality Monitor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "pH Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "ORP Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Dissolved Oxygen PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Turbidity Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Conductivity Sensor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "TDS Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Salinity Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        },
+        {
+          "keyword": "Chlorine Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Environmental Monitoring and Compliance"
+        }
+      ]
+    },
+    {
+      "name": "Weather and Climate Systems",
+      "keywords": [
+        {
+          "keyword": "Weather Station PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Meteorological PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Climate Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Temperature Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Humidity Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Barometric Pressure PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Wind Speed Sensor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Wind Direction Sensor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Rain Gauge PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Snow Depth Sensor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Solar Radiation Sensor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "UV Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Evapotranspiration PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Soil Temperature PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Leaf Temperature PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Dew Point Sensor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Heat Index PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Wind Chill PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Lightning Detector",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Storm Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Tornado Warning PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Hurricane Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Earthquake Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Tsunami Warning PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Flood Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Drought Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Fire Weather PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Aviation Weather PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Marine Weather PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        },
+        {
+          "keyword": "Agricultural Weather",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Weather and Climate Systems"
+        }
+      ]
+    },
+    {
+      "name": "Waste Management and Recycling",
+      "keywords": [
+        {
+          "keyword": "Smart Waste PCB",
+          "used": true,
+          "template": "environmental-monitoring-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Waste Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Garbage Truck PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Waste Collection PCB",
+          "used": true,
+          "template": "environmental-monitoring-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Bin Monitoring PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Fill Level Sensor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Weight Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Compaction Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Route Optimization PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Fleet Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "GPS Tracking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Waste Analytics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Recycling Sort PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Material Recovery PCB",
+          "used": true,
+          "template": "environmental-monitoring-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Optical Sorting PCB",
+          "used": true,
+          "template": "environmental-monitoring-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Magnetic Separation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Eddy Current PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Air Classification PCB",
+          "used": true,
+          "template": "environmental-monitoring-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Size Reduction PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Shredder Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Baler Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Compactor Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Incinerator Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Gasification PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Pyrolysis PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Biogas Production PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Methane Capture PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Landfill Gas PCB",
+          "used": true,
+          "template": "environmental-monitoring-pcb-v2.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Leachate Treatment PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        },
+        {
+          "keyword": "Environmental Compliance",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Waste Management and Recycling"
+        }
+      ]
+    },
+    {
+      "name": "Water Treatment and Management",
+      "keywords": [
+        {
+          "keyword": "Water Treatment PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Water Purification PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Filtration Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Membrane Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "RO System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "UV Sterilization PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Ozonation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Chlorination PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Disinfection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "pH Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Chemical Dosing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Coagulation Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Flocculation Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Sedimentation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Clarification PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Biological Treatment PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Activated Sludge PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Anaerobic Digestion PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Nutrient Removal PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Phosphorus Removal PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Nitrogen Removal PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Denitrification PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Nitrification PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Biofilm Reactor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Moving Bed PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Sequencing Batch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Membrane Bioreactor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "MBR PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Ultrafiltration PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Water Treatment and Management"
+        },
+        {
+          "keyword": "Nanofiltration PCB",
+          "used": true,
+          "template": "environmental-monitoring-pcb-v2.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "Water Treatment and Management"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "environmental-monitoring-pcb-v1.md",
+    "environmental-monitoring-pcb-v2.md",
+    "environmental-monitoring-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "environmental-monitoring-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "environmental-monitoring-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "environmental-monitoring-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

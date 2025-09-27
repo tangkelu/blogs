@@ -1,0 +1,1253 @@
+{
+  "section_number": 13,
+  "section_title": "Smart Building and Infrastructure",
+  "subsections": [
+    {
+      "name": "Building Automation Systems",
+      "keywords": [
+        {
+          "keyword": "Building Automation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "BAS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Building Management System",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "BMS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Facility Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Smart Building PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Intelligent Building PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Connected Building PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "IoT Building PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Building Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Central Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Room Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Floor Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Zone Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "HVAC Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Lighting Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Security Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Fire Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Access Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Energy Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Demand Response PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Load Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Peak Shaving PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Energy Optimization PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Building Analytics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Occupancy Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Space Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Asset Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Predictive Maintenance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        },
+        {
+          "keyword": "Fault Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Building Automation Systems"
+        }
+      ]
+    },
+    {
+      "name": "HVAC and Climate Control",
+      "keywords": [
+        {
+          "keyword": "HVAC Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Thermostat PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Smart Thermostat PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Programmable Thermostat",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "WiFi Thermostat PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Learning Thermostat",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Zone Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Temperature Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Humidity Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Air Quality Control",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Ventilation Control",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Heating Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Cooling Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Fan Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Damper Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "VAV Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "CAV Control PCB",
+          "used": true,
+          "template": "smarthome-building-pcb-v3.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "VRF Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "VRV Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Heat Pump Control",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Boiler Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Chiller Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Furnace Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Air Handler PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Economizer PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Heat Recovery PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "ERV Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "HRV Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Fresh Air PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        },
+        {
+          "keyword": "Exhaust Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "HVAC and Climate Control"
+        }
+      ]
+    },
+    {
+      "name": "Smart Infrastructure and Cities",
+      "keywords": [
+        {
+          "keyword": "Smart City PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Urban IoT PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Infrastructure PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Connected Infrastructure",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Intelligent Transportation",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Traffic PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Parking PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Waste PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Water PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Grid PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Energy PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Lighting PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Security PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Emergency PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Environmental Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Air Quality Monitor",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Noise Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Pollution Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Weather Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Flood Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Earthquake Monitor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Smart Sensor Network",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Edge Computing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "5G Infrastructure PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Digital Twin PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "City Analytics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Urban Planning PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Citizen Services PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Government PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        },
+        {
+          "keyword": "Public Safety PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Smart Infrastructure and Cities"
+        }
+      ]
+    },
+    {
+      "name": "Elevator and Escalator Systems",
+      "keywords": [
+        {
+          "keyword": "Elevator Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Lift Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Escalator Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Motor Drive PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Inverter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Brake Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Door Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Floor Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Call Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Safety Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Emergency Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Fire Service PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Earthquake Service PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Power Failure PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Backup Power PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "UPS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Battery Backup PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Position Encoder PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Load Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Speed Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Safety Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Door Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Obstruction Sensor PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Car Position PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Hall Call PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Car Call PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Destination Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Group Control PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Traffic Analysis PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        },
+        {
+          "keyword": "Energy Optimization PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Elevator and Escalator Systems"
+        }
+      ]
+    },
+    {
+      "name": "Fire Safety and Emergency Systems",
+      "keywords": [
+        {
+          "keyword": "Fire Alarm PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Fire Control Panel PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Smoke Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Heat Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Flame Detection PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Gas Detection PCB",
+          "used": true,
+          "template": "smarthome-building-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Fire Suppression PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Sprinkler Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Deluge System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Foam System PCB",
+          "used": true,
+          "template": "smarthome-building-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Gas Suppression PCB",
+          "used": true,
+          "template": "smarthome-building-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Water Mist PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Fire Pump Controller",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Jockey Pump PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Pressure Maintenance PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Fire Door PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Smoke Door PCB",
+          "used": true,
+          "template": "smarthome-building-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Fire Damper PCB",
+          "used": true,
+          "template": "smarthome-building-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Smoke Damper PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Stair Pressurization",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Smoke Exhaust PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Emergency Lighting PCB",
+          "used": true,
+          "template": "smarthome-building-pcb-v1.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Exit Sign PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Emergency Power PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Generator Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Transfer Switch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Mass Notification PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Voice Evacuation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "PA System PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        },
+        {
+          "keyword": "Emergency Communication",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Fire Safety and Emergency Systems"
+        }
+      ]
+    }
+  ],
+  "available_templates": [
+    "smarthome-building-pcb-v1.md",
+    "smarthome-building-pcb-v2.md",
+    "smarthome-building-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "smarthome-building-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "smarthome-building-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "smarthome-building-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  }
+}

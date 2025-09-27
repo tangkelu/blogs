@@ -1,0 +1,1454 @@
+{
+  "section_number": 1,
+  "section_title": "Data Center and Server PCB",
+  "available_templates": [
+    "datacenter-server-pcb-v1.md",
+    "datacenter-server-pcb-v2.md",
+    "datacenter-server-pcb-v3.md"
+  ],
+  "template_usage_stats": {
+    "datacenter-server-pcb-v1.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "datacenter-server-pcb-v2.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    },
+    "datacenter-server-pcb-v3.md": {
+      "usage_count": 0,
+      "last_used": null,
+      "created_blogs": []
+    }
+  },
+  "subsections": [
+    {
+      "name": "Server Motherboard",
+      "keywords": [
+        {
+          "keyword": "Server Motherboard PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Server Main Board",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Server System Board",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Dual CPU Motherboard",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Quad CPU Motherboard",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Multi-Socket Motherboard",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Server Backplane PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Server Midplane PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Blade Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Rack Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Tower Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "1U Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "2U Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "4U Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "High Density Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Micro Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Edge Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "ARM Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "x86 Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "RISC Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Power Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "EPYC Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Xeon Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Threadripper PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Server Socket PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "LGA Socket PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "PGA Socket PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Server Chipset PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Northbridge PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Southbridge PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        },
+        {
+          "keyword": "Platform Controller Hub",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Server Motherboard"
+        }
+      ]
+    },
+    {
+      "name": "AI and GPU Server",
+      "keywords": [
+        {
+          "keyword": "AI Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "GPU Server PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v1.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by test script using datacenter-server-pcb-v1.md"
+        },
+        {
+          "keyword": "AI Accelerator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "TPU Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "NPU Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "Machine Learning Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "Deep Learning Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "Neural Network PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "Training Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "Inference Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Cluster PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "GPU Cluster PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Workstation PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Edge Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Cloud Server PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "Tensor Processing PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Chip PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Module PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Development PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Production PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "CUDA Core PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "Tensor Core PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "RT Core PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Fabric PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Memory PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "HBM Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Cooling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "Liquid Cooling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "Immersion Cooling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        },
+        {
+          "keyword": "AI Power Delivery",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "AI and GPU Server"
+        }
+      ]
+    },
+    {
+      "name": "Data Center Infrastructure",
+      "keywords": [
+        {
+          "keyword": "Data Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Data Center Switch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Data Center Router PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Data Center Storage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Data Center Power PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Data Center Cooling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Data Center Management PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Data Center Monitoring PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Data Center Security PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Data Center Backup PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Hyperscale Data Center PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v1.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by test script using datacenter-server-pcb-v1.md"
+        },
+        {
+          "keyword": "Colocation Data Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Enterprise Data Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Cloud Data Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Edge Data Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Modular Data Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Container Data Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Micro Data Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Green Data Center PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Liquid Cooling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Immersion Cooling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Free Air Cooling PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Power Distribution Unit PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "PDU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "UPS PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v1.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by test script using datacenter-server-pcb-v1.md"
+        },
+        {
+          "keyword": "Battery Backup PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Rack Power PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        },
+        {
+          "keyword": "Power Shelf PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Data Center Infrastructure"
+        }
+      ]
+    },
+    {
+      "name": "High Speed Interconnect",
+      "keywords": [
+        {
+          "keyword": "PCIe Gen4 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "PCIe Gen5 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "PCIe Gen6 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "PCIe Gen7 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "CXL Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "CXL.io PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "CXL.cache PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "CXL.mem PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "NVLink PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "NVLink-C2C PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v3.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by batch script",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "Infinity Fabric PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "UPI Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "QPI Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "CCIX Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "Gen-Z Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "OpenCAPI PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "OMI Interface PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "High Speed Backplane",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "High Speed Connector PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "SerDes PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "PAM4 PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "NRZ SerDes PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "56G SerDes PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "112G SerDes PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "224G SerDes PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "Optical Interconnect PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "Silicon Photonics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "Co-packaged Optics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "Photonic Integrated Circuit",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "Linear Optics PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "Ring Resonator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "High Speed Interconnect"
+        }
+      ]
+    },
+    {
+      "name": "Network Interface",
+      "keywords": [
+        {
+          "keyword": "10G Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "25G Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "40G Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "50G Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "100G Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "200G Ethernet PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "400G Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "800G Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "1.6T Ethernet PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "3.2T Ethernet PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v1.md",
+          "usage_date": "2025-09-26",
+          "notes": "Generated by test script using datacenter-server-pcb-v1.md"
+        },
+        {
+          "keyword": "Network Interface Card PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "SmartNIC PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "DPU PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "IPU PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "xPU PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "InfiniBand PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "EDR InfiniBand PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "HDR InfiniBand PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "NDR InfiniBand PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "RoCE PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "iWARP PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "Fiber Channel PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "FCoE PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "Network Adapter PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "Ethernet Adapter PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "HCA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "Host Channel Adapter",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "TOR Switch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "Spine Switch PCB",
+          "used": true,
+          "template": "datacenter-server-pcb-v3.md",
+          "usage_date": "2025-09-27",
+          "notes": "Generated by batch script",
+          "subsection": "Network Interface"
+        },
+        {
+          "keyword": "Leaf Switch PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Network Interface"
+        }
+      ]
+    },
+    {
+      "name": "Storage Systems",
+      "keywords": [
+        {
+          "keyword": "NVMe SSD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "U.2 SSD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "M.2 SSD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "mSATA SSD PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "eMMC PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "UFS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "Storage Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "SSD Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "Flash Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "RAID Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "HBA PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "SAS Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "SATA Controller PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "Storage Array PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "All Flash Array PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "Hybrid Storage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "Object Storage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "Block Storage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "File Storage PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "Storage Fabric PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "SAN PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "NAS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "DAS PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "Storage Gateway PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        },
+        {
+          "keyword": "Storage Accelerator PCB",
+          "used": false,
+          "template": null,
+          "usage_date": null,
+          "notes": "",
+          "subsection": "Storage Systems"
+        }
+      ]
+    }
+  ]
+}
