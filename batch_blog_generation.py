@@ -20,7 +20,8 @@ from slugify import slugify
 # 配置
 PROMPTS_DIR = Path("prompts/blogs_prompt_v1")
 OUTPUT_BASE_DIR = Path("blogs")
-GEMINI_API_KEY = "AIzaSyALnAc5TlHvjInfh1e3qpQarYAD1ePXz-U"
+GEMINI_API_KEY = "AIzaSyDNPpthbPLNonQmC8ybz6FEIuzqhHszBv8"
+GEMINI_API_KEY_2 = "AIzaSyALnAc5TlHvjInfh1e3qpQarYAD1ePXz-U"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 DELAY_BETWEEN_REQUESTS = 5  # 秒
 
