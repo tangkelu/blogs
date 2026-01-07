@@ -1,0 +1,50 @@
+{
+  "section_number": 61,
+  "section_title": "EMC抑制与认证课堂",
+  "subsections": [
+    {
+      "name": "辐射与传导基础",
+      "keywords": [
+        {"keyword": "common mode choke layout", "used": false},
+        {"keyword": "emi partitioning tutorial", "used": false},
+        {"keyword": "return current mapping", "used": false},
+        {"keyword": "spread spectrum clocking guide", "used": false},
+        {"keyword": "shield can design rules", "used": false},
+        {"keyword": "emi filter topology", "used": false}
+      ]
+    },
+    {
+      "name": "测量与诊断",
+      "keywords": [
+        {"keyword": "near field probe mapping", "used": false},
+        {"keyword": "pre compliance chamber setup", "used": false},
+        {"keyword": "conducted emission troubleshooting", "used": false},
+        {"keyword": "emi scan plan", "used": false},
+        {"keyword": "fft analyzer workflow", "used": false},
+        {"keyword": "bulk current injection guide", "used": false}
+      ]
+    },
+    {
+      "name": "设计与整改",
+      "keywords": [
+        {"keyword": "stitching capacitor matrix", "used": false},
+        {"keyword": "emi aware stackup", "used": false},
+        {"keyword": "slot antenna mitigation", "used": false},
+        {"keyword": "filter placement priority", "used": false},
+        {"keyword": "transient suppression network", "used": false},
+        {"keyword": "ground isolation strategy", "used": false}
+      ]
+    },
+    {
+      "name": "认证与流程",
+      "keywords": [
+        {"keyword": "iec cispr planning", "used": false},
+        {"keyword": "fcc class b roadmap", "used": false},
+        {"keyword": "emc design review template", "used": false},
+        {"keyword": "mitigation logbook", "used": false},
+        {"keyword": "emi change control", "used": false},
+        {"keyword": "aptpcb emc service", "used": false}
+      ]
+    }
+  ]
+}

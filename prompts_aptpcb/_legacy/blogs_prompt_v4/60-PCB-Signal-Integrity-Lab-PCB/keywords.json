@@ -1,0 +1,50 @@
+{
+  "section_number": 60,
+  "section_title": "信号完整性实验室教程",
+  "subsections": [
+    {
+      "name": "建模与仿真",
+      "keywords": [
+        {"keyword": "s parameter extraction tutorial", "used": false},
+        {"keyword": "tline modeling workflow", "used": false},
+        {"keyword": "si channel budget", "used": false},
+        {"keyword": "crosstalk analysis steps", "used": false},
+        {"keyword": "eye diagram interpretation", "used": false},
+        {"keyword": "loss tangent estimation", "used": false}
+      ]
+    },
+    {
+      "name": "实验与测量",
+      "keywords": [
+        {"keyword": "tda si lab procedure", "used": false},
+        {"keyword": "tdr impedance measurement", "used": false},
+        {"keyword": "vna calibration pcb", "used": false},
+        {"keyword": "de embedded coupon design", "used": false},
+        {"keyword": "probe fixturing guidelines", "used": false},
+        {"keyword": "high speed coupon routing", "used": false}
+      ]
+    },
+    {
+      "name": "优化与调试",
+      "keywords": [
+        {"keyword": "reference plane stitching si", "used": false},
+        {"keyword": "via stub mitigation", "used": false},
+        {"keyword": "equalization planning pcb", "used": false},
+        {"keyword": "power aware si analysis", "used": false},
+        {"keyword": "common mode noise control", "used": false},
+        {"keyword": "diff pair desense repair", "used": false}
+      ]
+    },
+    {
+      "name": "流程与输出",
+      "keywords": [
+        {"keyword": "si lab report template", "used": false},
+        {"keyword": "stackup and si co design", "used": false},
+        {"keyword": "multi board si correlation", "used": false},
+        {"keyword": "si signoff checklist", "used": false},
+        {"keyword": "lab equipment readiness", "used": false},
+        {"keyword": "aptpcb si support", "used": false}
+      ]
+    }
+  ]
+}

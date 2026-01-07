@@ -1,0 +1,50 @@
+{
+  "section_number": 56,
+  "section_title": "家用饮品与酿造PCB",
+  "subsections": [
+    {
+      "name": "Coffee & Espresso",
+      "keywords": [
+        {"keyword": "smart espresso boiler pcb", "used": false},
+        {"keyword": "pressure profiling coffee pcb", "used": false},
+        {"keyword": "grinder rpm control pcb", "used": false},
+        {"keyword": "milk frother temperature pcb", "used": false},
+        {"keyword": "pour over scale controller pcb", "used": false},
+        {"keyword": "cold brew circulation pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Beer & Fermentation",
+      "keywords": [
+        {"keyword": "homebrew fermentation controller pcb", "used": false},
+        {"keyword": "co2 keg monitor pcb", "used": false},
+        {"keyword": "glycol chiller pcb", "used": false},
+        {"keyword": "hydrometer iot pcb", "used": false},
+        {"keyword": "mini keg dispensing pcb", "used": false},
+        {"keyword": "brewery pump automation pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Tea & Functional Drinks",
+      "keywords": [
+        {"keyword": "smart tea brewer pcb", "used": false},
+        {"keyword": "kombucha fermentation pcb", "used": false},
+        {"keyword": "sparkling water carbonator pcb", "used": false},
+        {"keyword": "smoothie blender torque pcb", "used": false},
+        {"keyword": "nut milk maker heating pcb", "used": false},
+        {"keyword": "infusion flavor dosing pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Compliance & Connectivity",
+      "keywords": [
+        {"keyword": "food grade brewing pcb", "used": false},
+        {"keyword": "beer iot wifi ble pcb", "used": false},
+        {"keyword": "brewery ul 197 compliance pcb", "used": false},
+        {"keyword": "kitchen ipx4 pcb", "used": false},
+        {"keyword": "sanitation resistant pcb coating", "used": false},
+        {"keyword": "fermentation traceability pcb", "used": false}
+      ]
+    }
+  ]
+}

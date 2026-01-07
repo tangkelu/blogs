@@ -1,0 +1,50 @@
+{
+  "section_number": 54,
+  "section_title": "智能婴儿护理PCB",
+  "subsections": [
+    {
+      "name": "Feeding & Hygiene",
+      "keywords": [
+        {"keyword": "smart bottle warmer pcb", "used": false},
+        {"keyword": "uv baby bottle sterilizer pcb", "used": false},
+        {"keyword": "formula dispenser control pcb", "used": false},
+        {"keyword": "baby food processor pcb", "used": false},
+        {"keyword": "diaper pail odor control pcb", "used": false},
+        {"keyword": "smart breast pump controller pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Sleep & Monitoring",
+      "keywords": [
+        {"keyword": "smart baby monitor ai pcb", "used": false},
+        {"keyword": "crib breathing sensor pcb", "used": false},
+        {"keyword": "video baby monitor low power pcb", "used": false},
+        {"keyword": "smart white noise machine pcb", "used": false},
+        {"keyword": "nursery climate controller pcb", "used": false},
+        {"keyword": "bassinet motion controller pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Mobility & Safety",
+      "keywords": [
+        {"keyword": "smart stroller power assist pcb", "used": false},
+        {"keyword": "infant car seat monitoring pcb", "used": false},
+        {"keyword": "baby wearable vitals tracker pcb", "used": false},
+        {"keyword": "anti roll baby sensor pcb", "used": false},
+        {"keyword": "nursery door window safety pcb", "used": false},
+        {"keyword": "wireless baby call button pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Connectivity & Compliance",
+      "keywords": [
+        {"keyword": "hipaa baby monitor data pcb", "used": false},
+        {"keyword": "baby product fcc compliance pcb", "used": false},
+        {"keyword": "nursery matter thread pcb", "used": false},
+        {"keyword": "baby device ultra low emf pcb", "used": false},
+        {"keyword": "medical grade infant wearable pcb", "used": false},
+        {"keyword": "baby care ipx4 pcb", "used": false}
+      ]
+    }
+  ]
+}

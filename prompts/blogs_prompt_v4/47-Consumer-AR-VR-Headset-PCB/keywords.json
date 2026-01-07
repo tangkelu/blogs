@@ -1,0 +1,50 @@
+{
+  "section_number": 47,
+  "section_title": "消费级AR/VR头显PCB",
+  "subsections": [
+    {
+      "name": "Core Processing",
+      "keywords": [
+        {"keyword": "standalone vr mainboard pcb", "used": false},
+        {"keyword": "snapdragon xr reference pcb", "used": false},
+        {"keyword": "usb4 xr dock pcb", "used": false},
+        {"keyword": "wifi 7 xr bridge pcb", "used": false},
+        {"keyword": "sub 1ms imu pcb", "used": false},
+        {"keyword": "foveated rendering control pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Optics & Displays",
+      "keywords": [
+        {"keyword": "rgb waveguide driver pcb", "used": false},
+        {"keyword": "micro oled bridge pcb", "used": false},
+        {"keyword": "inside out tracking camera pcb", "used": false},
+        {"keyword": "eye tracking sensor pcb", "used": false},
+        {"keyword": "face gasket thermal pcb", "used": false},
+        {"keyword": "xr fanless heat spreader pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Controllers & Accessories",
+      "keywords": [
+        {"keyword": "6dof controller pcb", "used": false},
+        {"keyword": "haptic glove flex pcb", "used": false},
+        {"keyword": "hand tracking depth pcb", "used": false},
+        {"keyword": "controller fast charging pcb", "used": false},
+        {"keyword": "magnetic pogo pin pcb", "used": false},
+        {"keyword": "xr room beacon pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Power & Reliability",
+      "keywords": [
+        {"keyword": "xr battery sled pcb", "used": false},
+        {"keyword": "xr safety proximity pcb", "used": false},
+        {"keyword": "emi shielded visor pcb", "used": false},
+        {"keyword": "spatial audio earcup pcb", "used": false},
+        {"keyword": "controller imu calibration pcb", "used": false},
+        {"keyword": "xr headset test coupon pcb", "used": false}
+      ]
+    }
+  ]
+}

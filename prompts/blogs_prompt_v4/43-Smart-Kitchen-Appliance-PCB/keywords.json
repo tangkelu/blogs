@@ -1,0 +1,50 @@
+{
+  "section_number": 43,
+  "section_title": "智能厨房家电控制PCB",
+  "subsections": [
+    {
+      "name": "Control & Stackup",
+      "keywords": [
+        {"keyword": "dual induction hob control PCB stackup", "used": false},
+        {"keyword": "steam oven power board design", "used": false},
+        {"keyword": "smart coffee grinder controller", "used": false},
+        {"keyword": "dishwasher IPX5 coating PCB", "used": false},
+        {"keyword": "cooktop capacitive touch PCB", "used": false},
+        {"keyword": "sous vide temperature loop PCB", "used": false}
+      ]
+    },
+    {
+      "name": "Sensors & Interfaces",
+      "keywords": [
+        {"keyword": "smart toaster triac firing PCB", "used": false},
+        {"keyword": "induction coil driver gate board", "used": false},
+        {"keyword": "kitchen hub wifi control PCB", "used": false},
+        {"keyword": "food processor bldc control PCB", "used": false},
+        {"keyword": "instant pot heating relay PCB", "used": false},
+        {"keyword": "smart fridge door display PCB", "used": false}
+      ]
+    },
+    {
+      "name": "Power & Safety",
+      "keywords": [
+        {"keyword": "oil fume sensor interface PCB", "used": false},
+        {"keyword": "water leak detector kitchen PCB", "used": false},
+        {"keyword": "smart spice dispenser dosing PCB", "used": false},
+        {"keyword": "kitchen safety interlock PCB", "used": false},
+        {"keyword": "high moisture conformal coating PCB", "used": false},
+        {"keyword": "food grade ptfe pcb material", "used": false}
+      ]
+    },
+    {
+      "name": "Connectivity & Compliance",
+      "keywords": [
+        {"keyword": "steam proof connector PCB", "used": false},
+        {"keyword": "high temperature silicone keypad PCB", "used": false},
+        {"keyword": "haccp traceability pcb", "used": false},
+        {"keyword": "smart kitchen voice control PCB", "used": false},
+        {"keyword": "nsf kitchen electronics compliance", "used": false},
+        {"keyword": "cooktop emi emc pcb design", "used": false}
+      ]
+    }
+  ]
+}

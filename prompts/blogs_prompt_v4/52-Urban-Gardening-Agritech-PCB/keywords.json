@@ -1,0 +1,50 @@
+{
+  "section_number": 52,
+  "section_title": "智能园艺与都市农业PCB",
+  "subsections": [
+    {
+      "name": "Lighting & Photosynthesis",
+      "keywords": [
+        {"keyword": "horticulture led driver pcb", "used": false},
+        {"keyword": "full spectrum grow light pcb", "used": false},
+        {"keyword": "far red uv horticulture pcb", "used": false},
+        {"keyword": "grow tower lighting ring pcb", "used": false},
+        {"keyword": "vertical farm light bar pcb", "used": false},
+        {"keyword": "led horticulture thermal pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Nutrient & Water Control",
+      "keywords": [
+        {"keyword": "hydroponic nutrient dosing pcb", "used": false},
+        {"keyword": "smart irrigation valve pcb", "used": false},
+        {"keyword": "ph ec sensor board", "used": false},
+        {"keyword": "soil moisture wireless pcb", "used": false},
+        {"keyword": "fertigation pump control pcb", "used": false},
+        {"keyword": "condensation resistant pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Environment & Automation",
+      "keywords": [
+        {"keyword": "greenhouse climate controller pcb", "used": false},
+        {"keyword": "co2 enrichment controller pcb", "used": false},
+        {"keyword": "urban farm robotics pcb", "used": false},
+        {"keyword": "smart planter gateway pcb", "used": false},
+        {"keyword": "agritech ai edge pcb", "used": false},
+        {"keyword": "modular farm sensor hub pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Compliance & Connectivity",
+      "keywords": [
+        {"keyword": "ip65 horticulture pcb", "used": false},
+               {"keyword": "agriculture ul 61010 pcb", "used": false},
+        {"keyword": "lo ra farm monitoring pcb", "used": false},
+        {"keyword": "smart greenhouse matter pcb", "used": false},
+        {"keyword": "urban farming data platform pcb", "used": false},
+        {"keyword": "food grade greenhouse pcb", "used": false}
+      ]
+    }
+  ]
+}

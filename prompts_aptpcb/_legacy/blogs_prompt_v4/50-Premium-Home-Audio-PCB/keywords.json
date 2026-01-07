@@ -1,0 +1,50 @@
+{
+  "section_number": 50,
+  "section_title": "高端家庭影音音频PCB",
+  "subsections": [
+    {
+      "name": "Amplification & Processing",
+      "keywords": [
+        {"keyword": "class d immersive amplifier pcb", "used": false},
+        {"keyword": "dolby atmos soundbar dsp pcb", "used": false},
+        {"keyword": "audiophile preamp hdi pcb", "used": false},
+        {"keyword": "multiroom audio hub pcb", "used": false},
+        {"keyword": "lossless streaming dac pcb", "used": false},
+        {"keyword": "balanced xlr interface pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Wireless & Connectivity",
+      "keywords": [
+        {"keyword": "wifi 7 home audio pcb", "used": false},
+        {"keyword": "ble lc3 audio controller pcb", "used": false},
+        {"keyword": "uhd earc interface pcb", "used": false},
+        {"keyword": "sub ghz speaker sync pcb", "used": false},
+        {"keyword": "wireless rear speaker pcb", "used": false},
+        {"keyword": "smart soundbar matter pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Power & Thermal",
+      "keywords": [
+        {"keyword": "high current audio power supply pcb", "used": false},
+        {"keyword": "fanless amplifier heat spreader pcb", "used": false},
+        {"keyword": "class g rail tracking pcb", "used": false},
+        {"keyword": "audio emi shielded pcb", "used": false},
+        {"keyword": "low noise analog ground pcb", "used": false},
+        {"keyword": "metal backed audio pcb", "used": false}
+      ]
+    },
+    {
+      "name": "Control & Compliance",
+      "keywords": [
+        {"keyword": "voice assistant integration pcb", "used": false},
+        {"keyword": "hires audio certification pcb", "used": false},
+        {"keyword": "smart home theater control pcb", "used": false},
+        {"keyword": "far field microphone array pcb", "used": false},
+        {"keyword": "luxury audio touch control pcb", "used": false},
+        {"keyword": "audio equipment safety compliance pcb", "used": false}
+      ]
+    }
+  ]
+}

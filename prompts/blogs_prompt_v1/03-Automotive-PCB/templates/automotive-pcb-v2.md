@@ -36,7 +36,7 @@ tags: {{tags}}
   - 必须在合适的段落结束后**原封不动**插入以下固定HTML按钮，不得修改、不得转义：
 
   ```html
-  <center><a href="https://hilpcb.com/cn/quote" style="display:inline-block;background:#4CAF50;color:#fff;padding:10px 20px;font-size:16px;border-radius:5px;text-decoration:none;margin:20px 20px;">获取PCB报价</a></center>
+  <!-- COMPONENT: BlogQuickQuoteInline -->
   ```
 
   ## 内链策略（每文3–5个）
@@ -61,6 +61,14 @@ tags: {{tags}}
   - https://hilpcb.com/en/products/halogen-free-pcb  
 
   ### 组装服务链接
+### 工具链接
+- https://hilpcb.com/en/tools/3d-viewer
+- https://hilpcb.com/en/tools/bom-viewer
+- https://hilpcb.com/en/tools/circuit-simulator
+- https://hilpcb.com/en/tools/gerber-viewer
+- https://hilpcb.com/en/tools/impedance-calculator
+- https://hilpcb.com/en/tools/pcb-viewer
+
   - https://hilpcb.com/en/products/smt-assembly  
   - https://hilpcb.com/en/products/through-hole-assembly  
   - https://hilpcb.com/en/products/turnkey-assembly  
