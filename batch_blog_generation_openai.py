@@ -174,6 +174,17 @@ def parse_args() -> argparse.Namespace:
         default=MIN_WORDS_FLOOR,
         help="Absolute minimum word count floor used with --min-words-ratio (default: 1200).",
     )
+    parser.add_argument(
+        "--keyword-search",
+        type=str,
+        default=None,
+        help="Filter keywords containing this string (case-insensitive). Overrides other selection logic.",
+    )
+    parser.add_argument(
+        "--ignore-sitemap",
+        action="store_true",
+        help="Ignore existing slugs from sitemap (allow generating conflicting slugs). Useful for rewriting existing blogs.",
+    )
     return parser.parse_args()
 
 
@@ -764,6 +775,49 @@ def _insert_section_before_conclusion(markdown: str, section_markdown: str) -> s
             insert = section_markdown.strip("\n").rstrip()
             return (before + "\n\n" + insert + "\n\n" + marker + after).strip() + "\n"
     return (text + "\n\n" + section_markdown.strip("\n").rstrip()).strip() + "\n"
+
+
+
+def repair_truncated_conclusion(markdown: str) -> str:
+    """
+    Detect if the blog content ends abruptly (no punctuation/newline) and fix it.
+    Common with LLM max_token limits.
+    """
+    text = (markdown or "").strip()
+    if not text:
+        return text
+
+    # Valid ending characters
+    valid_endings = ('.', '!', '?', '>', ']', '}', '"', "'")
+    if text.endswith(valid_endings):
+        return text + "\n"
+
+    print("⚠️ Detected truncated output at end of file. Attempting repair...")
+
+    # Pattern 1: Cut off during a link "[Link Text](url..."
+    if text.endswith("(") or text.endswith("["):
+        text = text[:-1].strip()
+
+    # Pattern 2: "to discuss your" -> "to discuss your project."
+    if text.endswith("to discuss your"):
+        return text + " project.\n"
+    if text.endswith("to discuss"):
+        return text + " your project.\n"
+    if text.endswith("contact us"):
+        return text + " today.\n"
+
+    # Fallback: Trim to last sentence ending.
+    last_punct = max(text.rfind('.'), text.rfind('!'), text.rfind('?'))
+    
+    if last_punct > len(text) - 200: 
+        print(f"✂️  Trimming truncated tail: '{text[last_punct+1:]}'")
+        text = text[:last_punct+1]
+        if "Signed," not in text[-500:]:
+             text += "\n\nSigned, The Engineering Team at APTPCB"
+    else:
+        text += "."
+        
+    return text + "\n"
 
 
 def repair_missing_required_sections_locally(
@@ -1463,7 +1517,7 @@ def _has_highlights_block(markdown: str) -> bool:
     t = markdown or ""
     if re.search(r"(?im)^\s*\*\*Highlights\*\*\s*$", t):
         return True
-    if re.search(r"(?im)^\s*###\s*Highlights\b", t):
+    if re.search(r"(?im)^\s*#{2,3}\s*Highlights\b", t):
         return True
     return False
 
@@ -2057,20 +2111,34 @@ def select_keywords(keywords_data: Dict) -> Tuple[Optional[Dict], List[str]]:
     选择1个主关键词和5个LSI关键词
     返回: (主关键词字典, LSI关键词列表)
     """
-    # 收集所有未使用的关键词
-    all_unused_keywords = []
+    # 收集候选词
+    main_candidates = []
+    lsi_pool = []
     
     for subsection in keywords_data.get("subsections", []):
         for keyword_obj in subsection.get("keywords", []):
-            if keyword_obj.get("used", False):
-                continue
-            if KEYWORD_INTENT != "auto":
-                if keyword_obj.get("intent") != KEYWORD_INTENT:
-                    continue
             keyword_obj["subsection"] = subsection["name"]
-            all_unused_keywords.append(keyword_obj)
+            
+            # LSI pool: include everything (even used ones can be LSIs)
+            lsi_pool.append(keyword_obj)
+
+            # Main Keyword Selection Logic
+            if KEYWORD_SEARCH_FILTER:
+                # Search mode: Must match filter. Ignore 'used' status.
+                if KEYWORD_SEARCH_FILTER.lower() in keyword_obj["keyword"].lower():
+                    main_candidates.append(keyword_obj)
+            else:
+                # Normal mode: Must NOT be used.
+                if not keyword_obj.get("used", False):
+                     if KEYWORD_INTENT != "auto":
+                        if keyword_obj.get("intent") != KEYWORD_INTENT:
+                            continue
+                     main_candidates.append(keyword_obj)
     
-    if not all_unused_keywords:
+    if not main_candidates:
+        if KEYWORD_SEARCH_FILTER:
+            return None, []
+
         if KEYWORD_INTENT != "auto":
             # Fallback: if no intent-matching keyword remains, relax the filter.
             print(f"⚠️ 没有找到 intent={KEYWORD_INTENT} 的未使用关键词，回退为任意未使用关键词")
@@ -2080,12 +2148,13 @@ def select_keywords(keywords_data: Dict) -> Tuple[Optional[Dict], List[str]]:
                 return select_keywords(keywords_data)
             finally:
                 globals()["KEYWORD_INTENT"] = old_intent
-        print("❌ 没有找到未使用的关键词")
+        
+        # print("❌ 没有找到未使用的关键词") # Suppressed by previous fix logic
         return None, []
     
     # 优先从 "Manufacturing & Assembly" 子类选择主关键词
-    ma_candidates = [kw for kw in all_unused_keywords if kw.get("subsection") == "Manufacturing & Assembly"]
-    main_pool = ma_candidates if ma_candidates else all_unused_keywords
+    ma_candidates = [kw for kw in main_candidates if kw.get("subsection") == "Manufacturing & Assembly"]
+    main_pool = ma_candidates if ma_candidates else main_candidates
     main_keyword = random.choice(main_pool)
     
     def _keyword_tokens(text: str) -> set:
@@ -2110,7 +2179,7 @@ def select_keywords(keywords_data: Dict) -> Tuple[Optional[Dict], List[str]]:
 
     # Prefer LSI keywords from the same subsection, and rank by token overlap to avoid topic drift.
     candidates = [
-        kw for kw in all_unused_keywords
+        kw for kw in lsi_pool
         if kw["subsection"] == main_keyword["subsection"] and kw != main_keyword
     ]
 
@@ -2209,11 +2278,33 @@ def fill_template_variables(template_content: str, keyword: str, lsi_keywords: L
     tags = [keyword] + lsi_keywords
     tags_str = json.dumps(tags, ensure_ascii=False)
     
+    
+    # --- Asset Image Pool Injection (Simple Full Dump) ---
+    assets_image_pool_str = "<!-- No image catalog found. Use placeholders. -->"
+    try:
+        # Assuming PROMPTS_DIR is available specifically, or hardcoding relative path for APTPCB
+        # We try to locate the file in specific known locations relative to CWD or prompts_dir (if available)
+        catalog_candidates = [
+            Path("prompts_aptpcb/assets-img-filenames.md"),
+            Path("prompts_aptpcb/blogs_prompt_v6/assets-img-filenames.md"),
+             Path("prompts_aptpcb/blogs_prompt_v5/assets-img-filenames.md")
+        ]
+        
+        for cand in catalog_candidates:
+            if cand.exists():
+                assets_image_pool_str = cand.read_text(encoding='utf-8')
+                print(f"🖼️  Loaded image catalog from: {cand}")
+                break
+                
+    except Exception as e:
+        print(f"⚠️ Image catalog load error: {e}")
+
     # 替换变量
     filled_template = template_content.replace("{{keyword}}", keyword)
     filled_template = filled_template.replace("{{lsi}}", ", ".join(lsi_keywords))
     filled_template = filled_template.replace("{{date}}", date_str)
     filled_template = filled_template.replace("{{tags}}", tags_str)
+    filled_template = filled_template.replace("{{assets_image_pool}}", assets_image_pool_str)
     
     return filled_template
 
@@ -3825,7 +3916,7 @@ def generate_blog_with_gemini(prompt: str, max_retries: int = 3) -> Optional[str
                     {"role": "user", "content": prompt},
                 ],
                 temperature=0.1,
-                max_tokens=7000,
+                max_tokens=20000,
             )
             print(f"✅ Gemini 生成成功，字符数: {len(result)}")
             candidate = result.strip()
@@ -4310,15 +4401,19 @@ def process_category(category_dir: Path) -> bool:
     keywords_file = category_dir / "keywords.json"
     if not keywords_file.exists():
         print(f"❌ 关键词文件不存在: {keywords_file}")
-        return False
+        return "failed"
     
     keywords_data = load_keywords(keywords_file)
     if not keywords_data:
-        return False
+        return "failed"
     
     # 选择关键词
     main_keyword, lsi_keywords = select_keywords(keywords_data)
     if not main_keyword:
+        if KEYWORD_SEARCH_FILTER:
+            return "skipped"
+        print(f"❌ 无法选择关键词")
+        return "failed"
         print(f"❌ 无法选择关键词")
         return False
     
@@ -4358,12 +4453,48 @@ def process_category(category_dir: Path) -> bool:
         else:
             print(f"⚠️ 未找到匹配 template-kind={TEMPLATE_KIND} 的模板，回退为全部模板")
 
-    template_file = get_least_used_template(templates_dir, keywords_data, template_files=template_files)
+    # 优先匹配逻辑：Template > Intent > Load Balancing
+    preferred_template = None
+    
+    # 1. Check explicit "template" field in keyword data
+    explicit_template_name = main_keyword.get("template")
+    if explicit_template_name:
+        for p in template_files:
+            if p.name == explicit_template_name:
+                preferred_template = p
+                print(f"🎯 精确匹配模板: {preferred_template.name}")
+                break
+        if not preferred_template:
+            print(f"⚠️ 指定的模板 {explicit_template_name} 未在目录中找到，尝试 Intent 匹配...")
+
+    # 2. Check "intent" field (fuzzy match)
+    if not preferred_template:
+        intent = main_keyword.get("intent")
+        if intent:
+            # map intent to filename keywords
+            # e.g. intent="query" -> look for "*query*" in filename
+            candidates = [p for p in template_files if intent.lower() in p.name.lower()]
+            if candidates:
+                # If multiple candidates (e.g. query-v6, query-v5), pick one (could use load balancing here too, but keep simple for now)
+                # Ideally prefer v6 if available
+                v6_candidates = [p for p in candidates if "-v6" in p.name]
+                preferred_template = v6_candidates[0] if v6_candidates else candidates[0]
+                print(f"🎯 Intent ('{intent}') 匹配模板: {preferred_template.name}")
+            else:
+                print(f"⚠️ 指定的 Intent ('{intent}') 无对应模板，回退为自动选择")
+
+    if preferred_template:
+        template_file = preferred_template
+    else:
+        template_file = get_least_used_template(templates_dir, keywords_data, template_files=template_files)
     if not template_file:
         print(f"❌ 没有找到模板文件")
-        return False
-    
+        return "failed"
+
     print(f"📝 使用模板: {template_file.name}")
+    is_v6_template = "-v6" in template_file.name
+    if is_v6_template:
+        print("🚀 检测到 v6 模板: 将禁用强制脚本注入 (Opening/Links)，完全依赖 Prompt。")
     
     # 加载并填充模板
     try:
@@ -4371,7 +4502,11 @@ def process_category(category_dir: Path) -> bool:
             template_content = f.read()
     except Exception as e:
         print(f"❌ 读取模板失败: {e}")
-        return False
+        return "failed"
+
+    # ...
+
+
     
     internal_pool_text = ""
     if INTERNAL_LINK_POOL_FILE and INTERNAL_LINK_POOL_FILE.exists():
@@ -4529,7 +4664,8 @@ def process_category(category_dir: Path) -> bool:
 
     # Normalize opening + highlights + description for more consistent one-shot quality.
     kind = kind_hint if kind_hint != "unknown" else _infer_article_kind_from_content(blog_content)
-    blog_content = ensure_opening_paragraph(blog_content, keyword=generation_keyword, kind=kind)
+    if kind != "story" and not is_v6_template:
+        blog_content = ensure_opening_paragraph(blog_content, keyword=generation_keyword, kind=kind)
     blog_content = ensure_highlights(blog_content, keyword=generation_keyword, kind=kind)
     blog_content = ensure_front_matter_description(blog_content, keyword=generation_keyword)
     blog_content = ensure_title_case_and_headings(blog_content, language=language)
@@ -4538,6 +4674,7 @@ def process_category(category_dir: Path) -> bool:
     blog_content = fix_malformed_conclusion_heading(blog_content)
     blog_content = repair_truncated_key_takeaways(blog_content)
     blog_content = ensure_blog_quick_quote_marker(blog_content, kind_hint=kind)
+    blog_content = repair_truncated_conclusion(blog_content)
     blog_content = fix_toc_leaked_into_key_takeaways(blog_content)
     if kind == "story":
         blog_content = strip_story_key_takeaways(blog_content, kind_hint=kind)
@@ -4626,7 +4763,7 @@ def process_category(category_dir: Path) -> bool:
     # Deterministic enforcement (no extra API calls):
     # - playbook/pillar: 6–10 internal links + at least 2 local images (hero + 1 in-body)
     kind = _infer_article_kind_from_content(blog_content)
-    if kind in {"playbook", "pillar"}:
+    if kind in {"playbook", "pillar"} and not is_v6_template:
         try:
             internal_urls = extract_internal_link_pool_urls(internal_pool_text or "")
             if internal_urls:
@@ -4702,7 +4839,7 @@ def process_category(category_dir: Path) -> bool:
         print("✅ 关键词状态已更新（仅主关键词；LSI 不标记 used）")
         print(f"✅ 模板使用统计已更新: {template_file.name}")
     
-    return True
+    return "generated"
 
 def main():
     """主函数"""
@@ -4730,7 +4867,12 @@ def main():
     IMAGE_POLICY = str(args.image_policy or IMAGE_POLICY)
     MIN_WORDS_RATIO = float(args.min_words_ratio or MIN_WORDS_RATIO)
     MIN_WORDS_FLOOR = int(args.min_words_floor or MIN_WORDS_FLOOR)
+    MIN_WORDS_FLOOR = int(args.min_words_floor or MIN_WORDS_FLOOR)
     MAX_GENERATION_ATTEMPTS = int(args.max_generation_attempts or MAX_GENERATION_ATTEMPTS)
+    
+    global KEYWORD_SEARCH_FILTER
+    KEYWORD_SEARCH_FILTER = args.keyword_search
+
 
     print("=" * 80)
     print("批量PCB博客生成脚本")
@@ -4761,11 +4903,17 @@ def main():
     print(f"关键词意图偏好: {KEYWORD_INTENT}")
     print("=" * 80)
     
-    # 预加载已存在的 slug：sitemap + 本地 blogs
+    # Load used slugs to prevent collisions
     global USED_SLUGS
-    sitemap_slugs = load_sitemap_slugs(SITEMAP_FILE)
+    sitemap_slugs = load_sitemap_slugs(SITEMAP_FILE) if SITEMAP_FILE.exists() else set()
     local_slugs = load_local_blog_slugs(OUTPUT_BASE_DIR)
-    USED_SLUGS = set(sitemap_slugs) | set(local_slugs)
+    
+    if args.ignore_sitemap:
+        print("⚠️ Ignoring sitemap/existing slugs (--ignore-sitemap). Collisions will be allowed (overwrite mode).")
+        USED_SLUGS = set()
+    else:
+        USED_SLUGS = set(sitemap_slugs) | set(local_slugs)
+    
     print(f"🔎 已有 /blog/slug 数量（sitemap+本地）：{len(USED_SLUGS)}")
 
     # 获取所有类别
@@ -4780,10 +4928,22 @@ def main():
             break
         print(f"\n[{i}/{len(categories)}] 处理类别: {category_dir.name}")
         
+        status = "failed"
         try:
-            if process_category(category_dir):
+            status = process_category(category_dir)
+            if status == "generated":
                 success_count += 1
                 print(f"✅ 类别 {category_dir.name} 处理成功")
+                
+                # OPTIMIZATION: If searching for a specific keyword, and we just generated it, 
+                # we can stop checking other categories (assuming 1 keyword = 1 blog).
+                if KEYWORD_SEARCH_FILTER:
+                    print("⚡ 目标关键词已生成，停止遍历其他类别。")
+                    break
+                    
+            elif status == "skipped":
+                # Silently skip
+                pass
             else:
                 failed_categories.append(category_dir.name)
                 print(f"❌ 类别 {category_dir.name} 处理失败")
@@ -4791,10 +4951,14 @@ def main():
             failed_categories.append(category_dir.name)
             print(f"❌ 类别 {category_dir.name} 处理异常: {e}")
         
-        # Delay between blog generations (skip for dry-run and after the last category).
+        # Delay logic: Only delay if we actually generated something OR failed (attempted).
+        # Skip delay if we just skipped the category (status == "skipped").
         if not DRY_RUN and i < len(categories) and DELAY_BETWEEN_REQUESTS > 0:
-            print(f"⏳ 等待 {DELAY_BETWEEN_REQUESTS:g} 秒...")
-            time.sleep(DELAY_BETWEEN_REQUESTS)
+            if status == "skipped":
+                 pass
+            else:
+                print(f"⏳ 等待 {DELAY_BETWEEN_REQUESTS:g} 秒...")
+                time.sleep(DELAY_BETWEEN_REQUESTS)
     
     # 总结
     print("\n" + "=" * 80)

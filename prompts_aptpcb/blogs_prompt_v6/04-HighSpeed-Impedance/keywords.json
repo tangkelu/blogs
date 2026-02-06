@@ -1,0 +1,5178 @@
+{
+  "section_number": 4,
+  "section_title": "High-Speed, RF, Impedance & HDI (APTPCB)",
+  "subsections": [
+    {
+      "name": "48V Power Trees",
+      "keywords": [
+        {
+          "keyword": "48V to 12V conversion board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "48V Power Trees"
+        },
+        {
+          "keyword": "48V to 12V conversion board stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "48V Power Trees"
+        }
+      ]
+    },
+    {
+      "name": "5G Base Station",
+      "keywords": [
+        {
+          "keyword": "5G Antenna PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "5G RF PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "5G Base Station"
+        },
+        {
+          "keyword": "mmWave 5G PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "5G Base Station"
+        }
+      ]
+    },
+    {
+      "name": "5G RF Components",
+      "keywords": [
+        {
+          "keyword": "Antenna Tuner PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "5G RF Components"
+        }
+      ]
+    },
+    {
+      "name": "6G and Beyond",
+      "keywords": [
+        {
+          "keyword": "6G Antenna PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "6G mmWave PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "6G and Beyond"
+        },
+        {
+          "keyword": "Brain Computer Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "6G and Beyond"
+        }
+      ]
+    },
+    {
+      "name": "Access Control and Authentication",
+      "keywords": [
+        {
+          "keyword": "RFID Access PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Access Control and Authentication"
+        }
+      ]
+    },
+    {
+      "name": "ADAS & Sensors",
+      "keywords": [
+        {
+          "keyword": "ADAS radar PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "ADAS & Sensors"
+        },
+        {
+          "keyword": "ADAS radar PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "ADAS & Sensors"
+        }
+      ]
+    },
+    {
+      "name": "Advanced PCB Process",
+      "keywords": [
+        {
+          "keyword": "Controlled impedance",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Advanced PCB Process"
+        },
+        {
+          "keyword": "HDI any-layer",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Advanced PCB Process"
+        }
+      ]
+    },
+    {
+      "name": "Advanced Substrates",
+      "keywords": [
+        {
+          "keyword": "CoWoS carrier substrate impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Advanced Substrates"
+        },
+        {
+          "keyword": "CoWoS carrier substrate stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Advanced Substrates"
+        }
+      ]
+    },
+    {
+      "name": "AI and GPU Server",
+      "keywords": [
+        {
+          "keyword": "HBM Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "AI and GPU Server"
+        }
+      ]
+    },
+    {
+      "name": "AI Server PCB",
+      "keywords": [
+        {
+          "keyword": "AI server motherboard PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "AI Server PCB"
+        },
+        {
+          "keyword": "AI server motherboard PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "AI Server PCB"
+        }
+      ]
+    },
+    {
+      "name": "Amplification & Processing",
+      "keywords": [
+        {
+          "keyword": "audiophile preamp hdi pcb",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Amplification & Processing"
+        },
+        {
+          "keyword": "balanced xlr interface pcb",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Amplification & Processing"
+        }
+      ]
+    },
+    {
+      "name": "Antenna & Arrays",
+      "keywords": [
+        {
+          "keyword": "Beamforming module board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Antenna & Arrays"
+        },
+        {
+          "keyword": "Beamforming module board stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Antenna & Arrays"
+        }
+      ]
+    },
+    {
+      "name": "Automotive Radar Systems",
+      "keywords": [
+        {
+          "keyword": "Radar Antenna PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Radar Systems"
+        }
+      ]
+    },
+    {
+      "name": "Backplane & Interconnect",
+      "keywords": [
+        {
+          "keyword": "GPU server PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Backplane & Interconnect"
+        },
+        {
+          "keyword": "GPU server PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Backplane & Interconnect"
+        }
+      ]
+    },
+    {
+      "name": "Baseband & Fronthaul",
+      "keywords": [
+        {
+          "keyword": "automotive-grade RF front-end low noise PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "data-center RF front-end low noise PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "high-speed RF front-end low noise PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "industrial-grade RF front-end low noise PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "low-loss RF front-end low noise PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        },
+        {
+          "keyword": "RF front-end low noise PCB validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Baseband & Fronthaul"
+        }
+      ]
+    },
+    {
+      "name": "Biocompatibility",
+      "keywords": [
+        {
+          "keyword": "BLE medical gateway PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Biocompatibility"
+        },
+        {
+          "keyword": "BLE medical gateway PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Biocompatibility"
+        }
+      ]
+    },
+    {
+      "name": "BMS & Charging",
+      "keywords": [
+        {
+          "keyword": "SiC inverter gate driver PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "BMS & Charging"
+        },
+        {
+          "keyword": "SiC inverter gate driver PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "BMS & Charging"
+        }
+      ]
+    },
+    {
+      "name": "Broadcasting and Transmission",
+      "keywords": [
+        {
+          "keyword": "RF Amplifier PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Broadcasting and Transmission"
+        },
+        {
+          "keyword": "RF Switch PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Broadcasting and Transmission"
+        }
+      ]
+    },
+    {
+      "name": "Co-Packaged Optics",
+      "keywords": [
+        {
+          "keyword": "OSFP 800G transceiver board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Co-Packaged Optics"
+        },
+        {
+          "keyword": "OSFP 800G transceiver board stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Co-Packaged Optics"
+        }
+      ]
+    },
+    {
+      "name": "Connectivity & Security",
+      "keywords": [
+        {
+          "keyword": "ECG acquisition board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectivity & Security"
+        },
+        {
+          "keyword": "ECG acquisition board stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Connectivity & Security"
+        }
+      ]
+    },
+    {
+      "name": "Connectors & Compliance",
+      "keywords": [
+        {
+          "keyword": "automotive-grade CXL SI best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "CXL SI best practices validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "data-center CXL SI best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "high-speed CXL SI best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "industrial-grade CXL SI best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        },
+        {
+          "keyword": "low-loss CXL SI best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Compliance"
+        }
+      ]
+    },
+    {
+      "name": "Connectors & Fibers",
+      "keywords": [
+        {
+          "keyword": "Co-packaged optics baseboard impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Fibers"
+        },
+        {
+          "keyword": "Co-packaged optics baseboard stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Connectors & Fibers"
+        }
+      ]
+    },
+    {
+      "name": "Control & Stackup",
+      "keywords": [
+        {
+          "keyword": "dual induction hob control PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Control & Stackup"
+        }
+      ]
+    },
+    {
+      "name": "Design & Stackup",
+      "keywords": [
+        {
+          "keyword": "28GHz base station antenna PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "antenna-in-package feed PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "any-layer HDI stackup planning",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "ceramic PCB stackup Al2O3 AlN",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "encoder interface RS-485/ABZ/SSI layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "hermetic sealing interfaces PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "high voltage BMS stackup design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "implantable device PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "low thermal conductivity stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "MCPCB stackup design aluminum core",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "mmWave lens antenna transition",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "mmWave phased array PCB design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "RF beamforming network layout",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "satellite phased array feed board",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "SLP escape routing for BGA 0.35mm",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "SLP fine line routing 30/30um",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "SLP impedance control for high speed",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "SLP warpage and flatness control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "via-in-pad copper filled design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        }
+      ]
+    },
+    {
+      "name": "dfm与文件",
+      "keywords": [
+        {
+          "keyword": "stackup documentation guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "dfm与文件"
+        }
+      ]
+    },
+    {
+      "name": "Electric Vehicle Charging",
+      "keywords": [
+        {
+          "keyword": "RFID Reader PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Electric Vehicle Charging"
+        }
+      ]
+    },
+    {
+      "name": "EMC/EMI & Shielding",
+      "keywords": [
+        {
+          "keyword": "Phase consistency routing impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "EMC/EMI & Shielding"
+        },
+        {
+          "keyword": "Phase consistency routing stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EMC/EMI & Shielding"
+        }
+      ]
+    },
+    {
+      "name": "EMI/EMC & Safety",
+      "keywords": [
+        {
+          "keyword": "SiC rectifier board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "EMI/EMC & Safety"
+        },
+        {
+          "keyword": "SiC rectifier board stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EMI/EMC & Safety"
+        }
+      ]
+    },
+    {
+      "name": "Energy Storage",
+      "keywords": [
+        {
+          "keyword": "MPPT controller board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Energy Storage"
+        },
+        {
+          "keyword": "MPPT controller board stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Energy Storage"
+        }
+      ]
+    },
+    {
+      "name": "EV Powertrain",
+      "keywords": [
+        {
+          "keyword": "automotive-grade LiDAR interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "data-center LiDAR interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "high-speed LiDAR interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "industrial-grade LiDAR interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board assembly",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board compliance",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board design",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board layout",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board manufacturing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board materials",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board prototype",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board quality",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board reliability",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board routing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board testing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "LiDAR interface board validation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "EV Powertrain"
+        },
+        {
+          "keyword": "low-loss LiDAR interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "EV Powertrain"
+        }
+      ]
+    },
+    {
+      "name": "Fleet Management and Logistics",
+      "keywords": [
+        {
+          "keyword": "RFID Tracking PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Fleet Management and Logistics"
+        }
+      ]
+    },
+    {
+      "name": "Grid Tie & Safety",
+      "keywords": [
+        {
+          "keyword": "SiC MOSFET gate driver PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Grid Tie & Safety"
+        },
+        {
+          "keyword": "SiC MOSFET gate driver PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Grid Tie & Safety"
+        }
+      ]
+    },
+    {
+      "name": "HBM & Interposers",
+      "keywords": [
+        {
+          "keyword": "HBM3 interposer PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "HBM & Interposers"
+        },
+        {
+          "keyword": "HBM3 interposer PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "HBM & Interposers"
+        }
+      ]
+    },
+    {
+      "name": "HDI",
+      "keywords": [
+        {
+          "keyword": "hdi pcb cost",
+          "intent": "query",
+          "used": false,
+          "subsection": "HDI"
+        },
+        {
+          "keyword": "hdi sequential lamination basics",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "HDI"
+        },
+        {
+          "keyword": "hdi stackup (1+n+1) cost vs reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "HDI"
+        },
+        {
+          "keyword": "microvia reliability: filled vs capped",
+          "intent": "query",
+          "used": false,
+          "subsection": "HDI"
+        },
+        {
+          "keyword": "vippo (via in pad plated over) manufacturing guidelines",
+          "intent": "query",
+          "used": false,
+          "subsection": "HDI"
+        }
+      ]
+    },
+    {
+      "name": "High Speed Interconnect",
+      "keywords": [
+        {
+          "keyword": "CCIX Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "CXL Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "Gen-Z Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "OMI Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "QPI Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "High Speed Interconnect"
+        },
+        {
+          "keyword": "UPI Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "High Speed Interconnect"
+        }
+      ]
+    },
+    {
+      "name": "High-Density Routing",
+      "keywords": [
+        {
+          "keyword": "Chiplet bridge PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "High-Density Routing"
+        },
+        {
+          "keyword": "Chiplet bridge PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "High-Density Routing"
+        }
+      ]
+    },
+    {
+      "name": "High-Speed & High-Frequency",
+      "keywords": [
+        {
+          "keyword": "copper roughness vs signal loss: what to specify",
+          "intent": "query",
+          "used": false,
+          "subsection": "High-Speed & High-Frequency"
+        },
+        {
+          "keyword": "high frequency pcb fabrication",
+          "intent": "query",
+          "used": false,
+          "subsection": "High-Speed & High-Frequency"
+        },
+        {
+          "keyword": "high speed pcb design",
+          "intent": "query",
+          "used": false,
+          "subsection": "High-Speed & High-Frequency"
+        },
+        {
+          "keyword": "how to choose low loss laminate for 56g 112g",
+          "intent": "query",
+          "used": false,
+          "subsection": "High-Speed & High-Frequency"
+        },
+        {
+          "keyword": "insertion loss budgeting for high speed pcb links",
+          "intent": "query",
+          "used": false,
+          "subsection": "High-Speed & High-Frequency"
+        },
+        {
+          "keyword": "via stubs and backdrill guidelines",
+          "intent": "query",
+          "used": false,
+          "subsection": "High-Speed & High-Frequency"
+        }
+      ]
+    },
+    {
+      "name": "HMI & UI",
+      "keywords": [
+        {
+          "keyword": "IGBT/GaN driver board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "HMI & UI"
+        },
+        {
+          "keyword": "IGBT/GaN driver board stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "HMI & UI"
+        }
+      ]
+    },
+    {
+      "name": "Human Machine Interface (HMI)",
+      "keywords": [
+        {
+          "keyword": "Human Machine Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Human Machine Interface (HMI)"
+        }
+      ]
+    },
+    {
+      "name": "HVAC and Climate Control",
+      "keywords": [
+        {
+          "keyword": "VRF Control PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "HVAC and Climate Control"
+        }
+      ]
+    },
+    {
+      "name": "Imaging Systems",
+      "keywords": [
+        {
+          "keyword": "automotive-grade Ultrasound probe interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "data-center Ultrasound probe interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "high-speed Ultrasound probe interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "industrial-grade Ultrasound probe interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "low-loss Ultrasound probe interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        },
+        {
+          "keyword": "Ultrasound probe interface PCB validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Imaging Systems"
+        }
+      ]
+    },
+    {
+      "name": "Impedance & Stackup",
+      "keywords": [
+        {
+          "keyword": "controlled impedance stackup checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Impedance & Stackup"
+        },
+        {
+          "keyword": "gcpw vs microstrip vs stripline: when to use which",
+          "intent": "query",
+          "used": false,
+          "subsection": "Impedance & Stackup"
+        },
+        {
+          "keyword": "how to read impedance coupon tdr report",
+          "intent": "query",
+          "used": false,
+          "subsection": "Impedance & Stackup"
+        },
+        {
+          "keyword": "impedance controlled pcb",
+          "intent": "query",
+          "used": false,
+          "subsection": "Impedance & Stackup"
+        },
+        {
+          "keyword": "impedance tolerance: what pcb fabs can realistically hold",
+          "intent": "query",
+          "used": false,
+          "subsection": "Impedance & Stackup"
+        },
+        {
+          "keyword": "pcb stackup design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Impedance & Stackup"
+        }
+      ]
+    },
+    {
+      "name": "Industrial Networks",
+      "keywords": [
+        {
+          "keyword": "automotive-grade EtherCAT interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "data-center EtherCAT interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB assembly",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB compliance",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB design",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB layout",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB manufacturing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB materials",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB prototype",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB quality",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB reliability",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB routing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB testing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "EtherCAT interface PCB validation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "high-speed EtherCAT interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "industrial-grade EtherCAT interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        },
+        {
+          "keyword": "low-loss EtherCAT interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Industrial Networks"
+        }
+      ]
+    },
+    {
+      "name": "Industrial Robotics",
+      "keywords": [
+        {
+          "keyword": "Robot Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Industrial Robotics"
+        }
+      ]
+    },
+    {
+      "name": "Infotainment & Connectivity",
+      "keywords": [
+        {
+          "keyword": "On-board charger PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Infotainment & Connectivity"
+        },
+        {
+          "keyword": "On-board charger PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Infotainment & Connectivity"
+        }
+      ]
+    },
+    {
+      "name": "Inventory and Asset Management",
+      "keywords": [
+        {
+          "keyword": "RFID Inventory PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Inventory and Asset Management"
+        }
+      ]
+    },
+    {
+      "name": "LCD and TFT Technology",
+      "keywords": [
+        {
+          "keyword": "eDP Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "LCD Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LCD and TFT Technology"
+        },
+        {
+          "keyword": "LVDS Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LCD and TFT Technology"
+        }
+      ]
+    },
+    {
+      "name": "Manufacturing",
+      "keywords": [
+        {
+          "keyword": "automotive-grade MT ferrule connector interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "data-center MT ferrule connector interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "high-speed MT ferrule connector interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "industrial-grade MT ferrule connector interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "low-loss MT ferrule connector interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        },
+        {
+          "keyword": "MT ferrule connector interface validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing"
+        }
+      ]
+    },
+    {
+      "name": "Manufacturing & Assembly",
+      "keywords": [
+        {
+          "keyword": "antenna tuning and trimming",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "board handling and depanelization",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "cleaning and surface preparation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "mmWave module SMT process",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "overmolding for RF front-end",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "reflow profile for thin board",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "RF connector launch assembly",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "RF shield can design PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "SLP SMT for micro pitch BGA",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "stencil design for 0201/01005",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "thermal interface material selection",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "ultrasonic welding interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "void control for VIPPO BGA",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "warpage control during assembly",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "waveguide-to-PCB transition fixture",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "wirebonding for qubit interface",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        }
+      ]
+    },
+    {
+      "name": "Manufacturing & Tolerance",
+      "keywords": [
+        {
+          "keyword": "automotive-grade Rogers/PTFE hybrid stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "data-center Rogers/PTFE hybrid stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "high-speed Rogers/PTFE hybrid stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "industrial-grade Rogers/PTFE hybrid stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "low-loss Rogers/PTFE hybrid stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        },
+        {
+          "keyword": "Rogers/PTFE hybrid stackup validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Tolerance"
+        }
+      ]
+    },
+    {
+      "name": "Materials & Layout",
+      "keywords": [
+        {
+          "keyword": "automotive-grade Grid code compliance interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "data-center Grid code compliance interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "Grid code compliance interface validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "high-speed Grid code compliance interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "industrial-grade Grid code compliance interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        },
+        {
+          "keyword": "low-loss Grid code compliance interface",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Layout"
+        }
+      ]
+    },
+    {
+      "name": "Materials & Loss",
+      "keywords": [
+        {
+          "keyword": "automotive-grade PCIe Gen6 SI checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "data-center PCIe Gen6 SI checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "high-speed PCIe Gen6 SI checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "industrial-grade PCIe Gen6 SI checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "low-loss PCIe Gen6 SI checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        },
+        {
+          "keyword": "PCIe Gen6 SI checklist validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Loss"
+        }
+      ]
+    },
+    {
+      "name": "Materials & Processes",
+      "keywords": [
+        {
+          "keyword": "copper foil profile for signal integrity",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "copper plating uniformity mmWave",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "copper surface roughness cryo",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "hybrid PTFE ceramic stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "low DkDf laminate for mmWave",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "low ESL decoupling and stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "mSAP vs SAP manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "RF coax-launch transition PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "select surface finish for reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "silver plating for superconducting interfaces",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "SLP black oxide/oxide alternative",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "SLP low DkDf resin selection",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "SLP surface finish ENIG/ENEPIG",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "surface finish for ceramic PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "surface finish for high reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "surface finish impact on power loss",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "surface finish impact on SI",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "surface finish selection for power/analog",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "surface roughness control for RF",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "thermal interface and heat spreading",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "thick copper busbar interface",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "thin core bonding for mmWave",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "thin core handling and registration",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        }
+      ]
+    },
+    {
+      "name": "Materials & Stackup",
+      "keywords": [
+        {
+          "keyword": "NVLink backplane PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Stackup"
+        },
+        {
+          "keyword": "NVLink backplane PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Stackup"
+        },
+        {
+          "keyword": "TIA/LA receiver board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Stackup"
+        },
+        {
+          "keyword": "TIA/LA receiver board stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Stackup"
+        }
+      ]
+    },
+    {
+      "name": "Military and Defense Systems",
+      "keywords": [
+        {
+          "keyword": "Electronic Warfare PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Military and Defense Systems"
+        }
+      ]
+    },
+    {
+      "name": "mmWave Materials",
+      "keywords": [
+        {
+          "keyword": "O-RAN RU PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "mmWave Materials"
+        },
+        {
+          "keyword": "O-RAN RU PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "mmWave Materials"
+        }
+      ]
+    },
+    {
+      "name": "Monitoring & Control",
+      "keywords": [
+        {
+          "keyword": "Bidirectional DC/DC converter PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Monitoring & Control"
+        },
+        {
+          "keyword": "Bidirectional DC/DC converter PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Monitoring & Control"
+        },
+        {
+          "keyword": "PMBus monitor PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Monitoring & Control"
+        },
+        {
+          "keyword": "PMBus monitor PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Monitoring & Control"
+        }
+      ]
+    },
+    {
+      "name": "Motion Control",
+      "keywords": [
+        {
+          "keyword": "Servo motor driver PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Motion Control"
+        },
+        {
+          "keyword": "Servo motor driver PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Motion Control"
+        }
+      ]
+    },
+    {
+      "name": "Motor Drives and Motion Control",
+      "keywords": [
+        {
+          "keyword": "Encoder Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Motor Drives and Motion Control"
+        },
+        {
+          "keyword": "Resolver Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Motor Drives and Motion Control"
+        }
+      ]
+    },
+    {
+      "name": "Network Interface",
+      "keywords": [
+        {
+          "keyword": "Network Interface Card PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Network Interface"
+        }
+      ]
+    },
+    {
+      "name": "Neuromorphic and Brain-Computer Interface",
+      "keywords": [
+        {
+          "keyword": "Brain Computer Interface",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Neuromorphic and Brain-Computer Interface"
+        },
+        {
+          "keyword": "Cognitive Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Neuromorphic and Brain-Computer Interface"
+        },
+        {
+          "keyword": "ECoG Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Neuromorphic and Brain-Computer Interface"
+        },
+        {
+          "keyword": "EEG Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Neuromorphic and Brain-Computer Interface"
+        },
+        {
+          "keyword": "Memory Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Neuromorphic and Brain-Computer Interface"
+        },
+        {
+          "keyword": "Motor Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Neuromorphic and Brain-Computer Interface"
+        },
+        {
+          "keyword": "Neural Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Neuromorphic and Brain-Computer Interface"
+        },
+        {
+          "keyword": "Sensory Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Neuromorphic and Brain-Computer Interface"
+        }
+      ]
+    },
+    {
+      "name": "OLED and Advanced Displays",
+      "keywords": [
+        {
+          "keyword": "OLED Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "OLED and Advanced Displays"
+        }
+      ]
+    },
+    {
+      "name": "Optical Transceivers",
+      "keywords": [
+        {
+          "keyword": "QSFP-DD module PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Optical Transceivers"
+        },
+        {
+          "keyword": "QSFP-DD module PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Optical Transceivers"
+        }
+      ]
+    },
+    {
+      "name": "Patient Monitoring",
+      "keywords": [
+        {
+          "keyword": "MRI-compatible PCB materials impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Patient Monitoring"
+        },
+        {
+          "keyword": "MRI-compatible PCB materials stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Patient Monitoring"
+        }
+      ]
+    },
+    {
+      "name": "Power & Battery",
+      "keywords": [
+        {
+          "keyword": "Wearable patch PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Power & Battery"
+        },
+        {
+          "keyword": "Wearable patch PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Power & Battery"
+        }
+      ]
+    },
+    {
+      "name": "Power & Drivers",
+      "keywords": [
+        {
+          "keyword": "Dual-channel safety control PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Power & Drivers"
+        },
+        {
+          "keyword": "Dual-channel safety control PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Power & Drivers"
+        }
+      ]
+    },
+    {
+      "name": "Power & Safety",
+      "keywords": [
+        {
+          "keyword": "oil fume sensor interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Power & Safety"
+        }
+      ]
+    },
+    {
+      "name": "Power & Thermal",
+      "keywords": [
+        {
+          "keyword": "Laser driver PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Power & Thermal"
+        },
+        {
+          "keyword": "Laser driver PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Power & Thermal"
+        }
+      ]
+    },
+    {
+      "name": "Power Delivery (48V/VRM)",
+      "keywords": [
+        {
+          "keyword": "PCIe Gen6 backplane PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Power Delivery (48V/VRM)"
+        },
+        {
+          "keyword": "PCIe Gen6 backplane PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Power Delivery (48V/VRM)"
+        }
+      ]
+    },
+    {
+      "name": "Power Integrity",
+      "keywords": [
+        {
+          "keyword": "RDL fan-out substrate impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Power Integrity"
+        },
+        {
+          "keyword": "RDL fan-out substrate stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Power Integrity"
+        }
+      ]
+    },
+    {
+      "name": "Professional Audio Systems",
+      "keywords": [
+        {
+          "keyword": "Audio Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional Audio Systems"
+        },
+        {
+          "keyword": "Recording Interface",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional Audio Systems"
+        },
+        {
+          "keyword": "Studio Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional Audio Systems"
+        }
+      ]
+    },
+    {
+      "name": "Purification & Sensing",
+      "keywords": [
+        {
+          "keyword": "voc sensor interface pcb",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Purification & Sensing"
+        }
+      ]
+    },
+    {
+      "name": "PV Inverters",
+      "keywords": [
+        {
+          "keyword": "Three-phase inverter control PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "PV Inverters"
+        },
+        {
+          "keyword": "Three-phase inverter control PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "PV Inverters"
+        }
+      ]
+    },
+    {
+      "name": "Quantum Computing and Communication",
+      "keywords": [
+        {
+          "keyword": "Classical Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Quantum Computing and Communication"
+        },
+        {
+          "keyword": "Quantum Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Quantum Computing and Communication"
+        },
+        {
+          "keyword": "RF Control PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Quantum Computing and Communication"
+        }
+      ]
+    },
+    {
+      "name": "Redundancy & Hot-Swap",
+      "keywords": [
+        {
+          "keyword": "Redundant PSU backplane impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Redundancy & Hot-Swap"
+        },
+        {
+          "keyword": "Redundant PSU backplane stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Redundancy & Hot-Swap"
+        }
+      ]
+    },
+    {
+      "name": "Reference Clocks",
+      "keywords": [
+        {
+          "keyword": "224G PAM4 link",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link assembly",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link compliance",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link design",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link layout",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link manufacturing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link materials",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link prototype",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link quality",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link reliability",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link routing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link testing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "224G PAM4 link validation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "automotive-grade 224G PAM4 link",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "data-center 224G PAM4 link",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "high-speed 224G PAM4 link",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "industrial-grade 224G PAM4 link",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        },
+        {
+          "keyword": "low-loss 224G PAM4 link",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reference Clocks"
+        }
+      ]
+    },
+    {
+      "name": "Reliability & Compliance",
+      "keywords": [
+        {
+          "keyword": "cleanliness and underfill use",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "environmental sealing for RF boards",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "ionic contamination control SLP",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "IPC 6012 class 3 for SLP",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "network performance validation TSN/Determinism",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "OTR satellite qualification testing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "PIM suppression techniques",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "RF calibration and verification PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "RF calibration traceability",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "RF moisture absorption control",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "SLP CAF mitigation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "solder joint reliability micro BGA",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "thermal cycling for fine line",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "thermal drift in phased array PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        }
+      ]
+    },
+    {
+      "name": "RF and Microwave Test",
+      "keywords": [
+        {
+          "keyword": "Antenna Analyzer PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "RF Power Meter",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "RF Spectrum Analyzer",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RF and Microwave Test"
+        },
+        {
+          "keyword": "TDR PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RF and Microwave Test"
+        }
+      ]
+    },
+    {
+      "name": "RF Front-End",
+      "keywords": [
+        {
+          "keyword": "automotive-grade mmWave antenna array PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "data-center mmWave antenna array PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "high-speed mmWave antenna array PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "industrial-grade mmWave antenna array PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "low-loss mmWave antenna array PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB design",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        },
+        {
+          "keyword": "mmWave antenna array PCB validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "RF Front-End"
+        }
+      ]
+    },
+    {
+      "name": "RFID and Near Field Communication",
+      "keywords": [
+        {
+          "keyword": "Active RFID PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Anti-Counterfeiting",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "HF RFID PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "LF RFID PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "NFC Antenna PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "Passive RFID PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Antenna PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Fixed Reader",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Gate PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Handheld PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Middleware PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Portal PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Printer PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "RFID Tag PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        },
+        {
+          "keyword": "UHF RFID PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "RFID and Near Field Communication"
+        }
+      ]
+    },
+    {
+      "name": "Routing & Vias",
+      "keywords": [
+        {
+          "keyword": "automotive-grade Back-drill via design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "Back-drill via design validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "data-center Back-drill via design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "high-speed Back-drill via design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "industrial-grade Back-drill via design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        },
+        {
+          "keyword": "low-loss Back-drill via design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Routing & Vias"
+        }
+      ]
+    },
+    {
+      "name": "Safety & Compliance",
+      "keywords": [
+        {
+          "keyword": "BMS balancing board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Safety & Compliance"
+        },
+        {
+          "keyword": "BMS balancing board stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Safety & Compliance"
+        },
+        {
+          "keyword": "noise cancelling airflow pcb",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Safety & Compliance"
+        }
+      ]
+    },
+    {
+      "name": "Safety & Redundancy",
+      "keywords": [
+        {
+          "keyword": "PROFINET control PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Safety & Redundancy"
+        },
+        {
+          "keyword": "PROFINET control PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Safety & Redundancy"
+        }
+      ]
+    },
+    {
+      "name": "Satellite and Space Systems",
+      "keywords": [
+        {
+          "keyword": "Satellite Antenna PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Satellite and Space Systems"
+        }
+      ]
+    },
+    {
+      "name": "Sensing & Feedback",
+      "keywords": [
+        {
+          "keyword": "automotive-grade Encoder interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "data-center Encoder interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board assembly",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board compliance",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board design",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board layout",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board manufacturing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board materials",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board prototype",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board quality",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board reliability",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board routing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board testing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "Encoder interface board validation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "high-speed Encoder interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "industrial-grade Encoder interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        },
+        {
+          "keyword": "low-loss Encoder interface board",
+          "intent": "query",
+          "used": false,
+          "subsection": "Sensing & Feedback"
+        }
+      ]
+    },
+    {
+      "name": "SerDes & Links",
+      "keywords": [
+        {
+          "keyword": "112G SerDes routing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing assembly",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing compliance",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing design",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing layout",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing manufacturing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing materials",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing prototype",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing quality",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing reliability",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing routing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing testing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "112G SerDes routing validation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "automotive-grade 112G SerDes routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "data-center 112G SerDes routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "high-speed 112G SerDes routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "industrial-grade 112G SerDes routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        },
+        {
+          "keyword": "low-loss 112G SerDes routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "SerDes & Links"
+        }
+      ]
+    },
+    {
+      "name": "Signal Generation and Synthesis",
+      "keywords": [
+        {
+          "keyword": "RF Generator PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Signal Generation and Synthesis"
+        }
+      ]
+    },
+    {
+      "name": "Skin & Hair Devices",
+      "keywords": [
+        {
+          "keyword": "rf skin tightening pcb",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Skin & Hair Devices"
+        }
+      ]
+    },
+    {
+      "name": "Smartphone and Mobile Devices",
+      "keywords": [
+        {
+          "keyword": "Phone Antenna Board",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smartphone and Mobile Devices"
+        },
+        {
+          "keyword": "Phone RF Board",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smartphone and Mobile Devices"
+        }
+      ]
+    },
+    {
+      "name": "Testing & Reliability",
+      "keywords": [
+        {
+          "keyword": "48V VRM board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Testing & Reliability"
+        },
+        {
+          "keyword": "48V VRM board stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Testing & Reliability"
+        }
+      ]
+    },
+    {
+      "name": "Thermal & Cooling",
+      "keywords": [
+        {
+          "keyword": "automotive-grade CXL 3.0 interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "CXL 3.0 interface PCB validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "data-center CXL 3.0 interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "GaN power stage PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "GaN power stage PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "high-speed CXL 3.0 interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "industrial-grade CXL 3.0 interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        },
+        {
+          "keyword": "low-loss CXL 3.0 interface PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Cooling"
+        }
+      ]
+    },
+    {
+      "name": "Thermal & Environment",
+      "keywords": [
+        {
+          "keyword": "Automotive Ethernet PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Environment"
+        },
+        {
+          "keyword": "Automotive Ethernet PCB stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal & Environment"
+        }
+      ]
+    },
+    {
+      "name": "Thermal & Mechanics",
+      "keywords": [
+        {
+          "keyword": "Anti-islanding detection board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Mechanics"
+        },
+        {
+          "keyword": "Anti-islanding detection board stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal & Mechanics"
+        }
+      ]
+    },
+    {
+      "name": "Thermal Interface",
+      "keywords": [
+        {
+          "keyword": "automotive-grade microvia HDI stack",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "data-center microvia HDI stack",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "high-speed microvia HDI stack",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "industrial-grade microvia HDI stack",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "low-loss microvia HDI stack",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack assembly",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack compliance",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack design",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack layout",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack manufacturing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack materials",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack prototype",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack quality",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack reliability",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack routing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack testing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        },
+        {
+          "keyword": "microvia HDI stack validation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Thermal Interface"
+        }
+      ]
+    },
+    {
+      "name": "Touch and Interactive Technology",
+      "keywords": [
+        {
+          "keyword": "Touch Interface PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Touch and Interactive Technology"
+        }
+      ]
+    },
+    {
+      "name": "Validation & Test",
+      "keywords": [
+        {
+          "keyword": "automotive-grade SFP/QSFP-DD connector routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "data-center SFP/QSFP-DD connector routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "high-speed SFP/QSFP-DD connector routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "industrial-grade SFP/QSFP-DD connector routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "low-loss SFP/QSFP-DD connector routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing assembly",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing best practices",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing compliance",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing cost optimization",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing layout",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing low volume",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing mass production",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing materials",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing prototype",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing quality",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing quick turn",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing reliability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing routing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing testing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        },
+        {
+          "keyword": "SFP/QSFP-DD connector routing validation",
+          "intent": "query",
+          "used": false,
+          "subsection": "Validation & Test"
+        }
+      ]
+    },
+    {
+      "name": "Vehicle-to-Everything (V2X)",
+      "keywords": [
+        {
+          "keyword": "V2X Antenna PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Vehicle-to-Everything (V2X)"
+        }
+      ]
+    },
+    {
+      "name": "VRM Modules",
+      "keywords": [
+        {
+          "keyword": "Digital VRM controller PCB impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "VRM Modules"
+        },
+        {
+          "keyword": "Digital VRM controller PCB stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "VRM Modules"
+        }
+      ]
+    },
+    {
+      "name": "Wearables",
+      "keywords": [
+        {
+          "keyword": "CT detector array board impedance control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Wearables"
+        },
+        {
+          "keyword": "CT detector array board stackup",
+          "intent": "query",
+          "used": false,
+          "subsection": "Wearables"
+        }
+      ]
+    },
+    {
+      "name": "Wireless & Connectivity",
+      "keywords": [
+        {
+          "keyword": "uhd earc interface pcb",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Wireless & Connectivity"
+        }
+      ]
+    },
+    {
+      "name": "Wireless Communication Modules",
+      "keywords": [
+        {
+          "keyword": "Antenna Module PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Wireless Communication Modules"
+        },
+        {
+          "keyword": "RF Module PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Wireless Communication Modules"
+        }
+      ]
+    },
+    {
+      "name": "Wireless Infrastructure",
+      "keywords": [
+        {
+          "keyword": "Antenna System PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "Distributed Antenna System",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "RF Combiner PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Wireless Infrastructure"
+        },
+        {
+          "keyword": "RF Splitter PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Wireless Infrastructure"
+        }
+      ]
+    },
+    {
+      "name": "制造与可靠性",
+      "keywords": [
+        {
+          "keyword": "stackup cost modeling",
+          "intent": "query",
+          "used": false,
+          "subsection": "制造与可靠性"
+        }
+      ]
+    },
+    {
+      "name": "制造影响",
+      "keywords": [
+        {
+          "keyword": "surface finish comparison",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造影响"
+        }
+      ]
+    },
+    {
+      "name": "制造流程",
+      "keywords": [
+        {
+          "keyword": "surface finish selection tips",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造流程"
+        }
+      ]
+    },
+    {
+      "name": "叠层策略",
+      "keywords": [
+        {
+          "keyword": "backdrill ready stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层策略"
+        },
+        {
+          "keyword": "differential impedance stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层策略"
+        }
+      ]
+    },
+    {
+      "name": "叠层设计",
+      "keywords": [
+        {
+          "keyword": "8 layer stackup example",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层设计"
+        },
+        {
+          "keyword": "four layer impedance control",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层设计"
+        },
+        {
+          "keyword": "hdI stackup tutorial",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层设计"
+        },
+        {
+          "keyword": "hdmi pcb stackup guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "叠层设计"
+        }
+      ]
+    },
+    {
+      "name": "基础概念",
+      "keywords": [
+        {
+          "keyword": "pcb stackup tutorial",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "基础概念"
+        },
+        {
+          "keyword": "what is controlled impedance pcb",
+          "intent": "query",
+          "used": false,
+          "subsection": "基础概念"
+        }
+      ]
+    },
+    {
+      "name": "实验与测量",
+      "keywords": [
+        {
+          "keyword": "tdr impedance measurement",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "实验与测量"
+        }
+      ]
+    },
+    {
+      "name": "布局布线技巧",
+      "keywords": [
+        {
+          "keyword": "impedance friendly routing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "布局布线技巧"
+        }
+      ]
+    },
+    {
+      "name": "材料选择",
+      "keywords": [
+        {
+          "keyword": "rf pcb material comparison",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料选择"
+        }
+      ]
+    },
+    {
+      "name": "标准与文档",
+      "keywords": [
+        {
+          "keyword": "stackup approval checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "标准与文档"
+        },
+        {
+          "keyword": "stackup change control",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "标准与文档"
+        }
+      ]
+    },
+    {
+      "name": "概念到规划",
+      "keywords": [
+        {
+          "keyword": "stackup documentation sample",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "概念到规划"
+        }
+      ]
+    },
+    {
+      "name": "流程与输出",
+      "keywords": [
+        {
+          "keyword": "stackup and si co design",
+          "intent": "query",
+          "used": false,
+          "subsection": "流程与输出"
+        }
+      ]
+    },
+    {
+      "name": "环境与合规",
+      "keywords": [
+        {
+          "keyword": "thermal reliability stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "环境与合规"
+        }
+      ]
+    },
+    {
+      "name": "设计与整改",
+      "keywords": [
+        {
+          "keyword": "slot antenna mitigation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "设计与整改"
+        }
+      ]
+    }
+  ],
+  "template_usage_stats": {
+    "aptpcb-query.md": {
+      "usage_count": 9,
+      "last_used": "2025-12-29 14:15:43",
+      "created_blogs": [
+        {
+          "filename": "void-control-for-vippo-bga-aptpcb-query.md",
+          "created_at": "2025-12-18 13:46:47"
+        },
+        {
+          "filename": "thermal-interface-material-selection-aptpcb-query.md",
+          "created_at": "2025-12-19 17:41:32"
+        },
+        {
+          "filename": "reflow-profile-for-thin-board-aptpcb-query.md",
+          "created_at": "2025-12-20 18:45:20"
+        },
+        {
+          "filename": "mmwave-module-smt-process.md",
+          "created_at": "2025-12-23 09:29:16"
+        },
+        {
+          "filename": "warpage-control-during-assembly.md",
+          "created_at": "2025-12-23 13:30:58"
+        },
+        {
+          "filename": "antenna-tuning-and-trimming.md",
+          "created_at": "2025-12-23 14:54:18"
+        },
+        {
+          "filename": "pcie-gen6-si-checklist-mass-production.md",
+          "created_at": "2025-12-23 20:06:43"
+        },
+        {
+          "filename": "redundant-psu-backplane-impedance-control.md",
+          "created_at": "2025-12-23 21:31:20"
+        },
+        {
+          "filename": "cxl-3-0-interface-pcb-mass-production.md",
+          "created_at": "2025-12-29 14:15:43"
+        }
+      ]
+    },
+    "aptpcb-pillar.md": {
+      "usage_count": 10,
+      "last_used": "2025-12-29 15:42:36",
+      "created_blogs": [
+        {
+          "filename": "board-handling-and-depanelization-aptpcb-pillar.md",
+          "created_at": "2025-12-18 15:02:52"
+        },
+        {
+          "filename": "cleaning-and-surface-preparation-aptpcb-pillar.md",
+          "created_at": "2025-12-20 10:24:27"
+        },
+        {
+          "filename": "waveguide-to-transition-fixture-aptpcb-pillar.md",
+          "created_at": "2025-12-21 00:39:59"
+        },
+        {
+          "filename": "rf-connector-launch-assembly.md",
+          "created_at": "2025-12-21 19:59:58"
+        },
+        {
+          "filename": "wirebonding-for-qubit-interface.md",
+          "created_at": "2025-12-23 14:07:54"
+        },
+        {
+          "filename": "pcb-stackup-design-2.md",
+          "created_at": "2025-12-23 16:56:16"
+        },
+        {
+          "filename": "ethercat-interface-pcb-best-practices.md",
+          "created_at": "2025-12-23 18:41:38"
+        },
+        {
+          "filename": "automotive-grade-rf-front-end-low-noise-pcb.md",
+          "created_at": "2025-12-29 10:47:11"
+        },
+        {
+          "filename": "rf-amplifier-pcb.md",
+          "created_at": "2025-12-29 13:43:44"
+        },
+        {
+          "filename": "mt-ferrule-connector-interface-reliability.md",
+          "created_at": "2025-12-29 15:42:36"
+        }
+      ]
+    },
+    "aptpcb-playbook.md": {
+      "usage_count": 9,
+      "last_used": "2025-12-29 14:52:49",
+      "created_blogs": [
+        {
+          "filename": "rf-shield-can-design-aptpcb-playbook.md",
+          "created_at": "2025-12-21 14:17:32"
+        },
+        {
+          "filename": "slp-smt-for-micro-pitch-bga-aptpcb-playbook.md",
+          "created_at": "2025-12-21 14:36:07"
+        },
+        {
+          "filename": "ultrasonic-welding-interface-aptpcb-playbook.md",
+          "created_at": "2025-12-21 15:12:31"
+        },
+        {
+          "filename": "overmolding-for-rf-front-end.md",
+          "created_at": "2025-12-21 21:43:36"
+        },
+        {
+          "filename": "stencil-design-for-0201-01005.md",
+          "created_at": "2025-12-23 10:30:04"
+        },
+        {
+          "filename": "lidar-interface-board-assembly.md",
+          "created_at": "2025-12-23 15:48:22"
+        },
+        {
+          "filename": "cxl-3-0-interface-pcb-validation.md",
+          "created_at": "2025-12-23 17:51:36"
+        },
+        {
+          "filename": "data-center-ultrasound-probe-interface-pcb-2.md",
+          "created_at": "2025-12-23 20:49:59"
+        },
+        {
+          "filename": "how-to-read-impedance-coupon-tdr-report.md",
+          "created_at": "2025-12-29 14:52:49"
+        }
+      ]
+    },
+    "README.md": {
+      "usage_count": 8,
+      "last_used": "2025-12-28 21:04:29",
+      "created_blogs": [
+        {
+          "filename": "lidar-interface-board-prototype-readme.md",
+          "created_at": "2025-12-28 21:04:29"
+        }
+      ]
+    },
+    "aptpcb-story.md": {
+      "usage_count": 1,
+      "last_used": "2025-12-30 07:56:42",
+      "created_blogs": [
+        {
+          "filename": "vrf-control-pcb.md",
+          "created_at": "2025-12-30 07:56:42"
+        }
+      ]
+    }
+  }
+}

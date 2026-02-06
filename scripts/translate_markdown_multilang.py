@@ -537,6 +537,12 @@ def main() -> int:
     parser.add_argument("--engine", choices=["hf", "google"], default="hf")
     parser.add_argument("--hf-batch-size", type=int, default=16)
     parser.add_argument("--overwrite", action="store_true")
+    parser.add_argument(
+        "--overwrite-if-smaller-than",
+        type=float,
+        default=0.0,
+        help="Overwrite existing translated file only if its size/source size ratio is below this threshold (0 to disable).",
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 

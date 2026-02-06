@@ -1,0 +1,1828 @@
+{
+  "section_number": 5,
+  "section_title": "Materials, Thermal & Special Substrates (APTPCB)",
+  "subsections": [
+    {
+      "name": "Aluminum / MCPCB / LED",
+      "keywords": [
+        {
+          "keyword": "aluminum led pcb",
+          "intent": "query",
+          "used": false,
+          "subsection": "Aluminum / MCPCB / LED"
+        },
+        {
+          "keyword": "aluminum pcb",
+          "intent": "query",
+          "used": false,
+          "subsection": "Aluminum / MCPCB / LED"
+        },
+        {
+          "keyword": "how to specify ims stackup for high power led",
+          "intent": "query",
+          "used": false,
+          "subsection": "Aluminum / MCPCB / LED"
+        },
+        {
+          "keyword": "ims vs fr4 thermal performance comparison",
+          "intent": "query",
+          "used": false,
+          "subsection": "Aluminum / MCPCB / LED"
+        },
+        {
+          "keyword": "led mcpcb",
+          "intent": "query",
+          "used": false,
+          "subsection": "Aluminum / MCPCB / LED"
+        },
+        {
+          "keyword": "led pcb manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Aluminum / MCPCB / LED"
+        },
+        {
+          "keyword": "mcpcb thermal via design and copper thickness",
+          "intent": "query",
+          "used": false,
+          "subsection": "Aluminum / MCPCB / LED"
+        },
+        {
+          "keyword": "thermal resistance and dielectric selection for mcpcb",
+          "intent": "query",
+          "used": false,
+          "subsection": "Aluminum / MCPCB / LED"
+        }
+      ]
+    },
+    {
+      "name": "Automotive Lighting",
+      "keywords": [
+        {
+          "keyword": "Accent Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Adaptive Headlight PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Adaptive Lighting PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Ambient Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Automotive LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Beacon Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Brake Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Cornering Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Dashboard Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Daytime Running Light",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "DRL PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Emergency Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Fog Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Headlight PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "High Beam PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Interior Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Laser Headlight PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "License Plate Light",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Low Beam PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Matrix LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Off-Road Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "OLED Tail Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Parking Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Reverse Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Side Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Strobe Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Tail Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Turn Signal PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Warning Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        },
+        {
+          "keyword": "Work Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Automotive Lighting"
+        }
+      ]
+    },
+    {
+      "name": "Design & Stackup",
+      "keywords": [
+        {
+          "keyword": "ceramic PCB stackup Al2O3 AlN",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "copper thickness 2oz+ power design",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "creepage and clearance for HV IMS",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "dielectric thickness selection for IMS",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "high current trace design for IMS",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "high voltage isolation on ceramic",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "MCPCB stackup design aluminum core",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "metallization patterns and clearances",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "solder joint design on ceramic",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "thermal design for power modules",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "thermal via and heat spreading",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        },
+        {
+          "keyword": "via and through hole on ceramic",
+          "intent": "query",
+          "used": false,
+          "subsection": "Design & Stackup"
+        }
+      ]
+    },
+    {
+      "name": "LED Display Systems",
+      "keywords": [
+        {
+          "keyword": "Broadcast LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "COB LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Control Room PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Creative LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Curved LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Dual Color LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Fine Pitch LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Fixed Install PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Flexible LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Full Color LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "GOB LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Indoor LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Interactive LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "LED Matrix PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "LED Module PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "LED Panel PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "LED Screen PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "LED Video Wall PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Micro LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Mini LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Outdoor LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Rental LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "RGB LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Single Color LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "SMD LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Stadium LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Touch LED Display PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Transparent LED PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        },
+        {
+          "keyword": "Ultra Fine Pitch PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Display Systems"
+        }
+      ]
+    },
+    {
+      "name": "LED Driver Circuits",
+      "keywords": [
+        {
+          "keyword": "0-10V Dimming PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "AC LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Analog Dimming PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Boost LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Buck LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Buck-Boost LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Constant Current LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Constant Voltage LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "DALI Driver PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "DC LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Dimmable LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Emergency LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Flicker Free PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Flyback LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "High Frequency PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "High Power LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Indoor LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Leading Edge PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "LED Driver PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Linear LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Low Power LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Non-Dimmable LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Outdoor LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Phase Cut Dimming",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Programmable LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "PWM Dimming PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Smart LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Switching LED Driver",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "Trailing Edge PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        },
+        {
+          "keyword": "TRIAC Dimming PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "LED Driver Circuits"
+        }
+      ]
+    },
+    {
+      "name": "Manufacturing & Assembly",
+      "keywords": [
+        {
+          "keyword": "cleaning and surface preparation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "depanelization of MCPCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "die attach on ceramic substrates",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "fixture design for heavy boards",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "handling and breakage prevention",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "high mass board thermal profiling",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "LED MCPCB assembly and reflow",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "reflow and thermal profile for ceramic",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "soldering on ceramic PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "thermal interface material selection",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "wave solder and TH components on IMS",
+          "intent": "query",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        },
+        {
+          "keyword": "wire bonding on ceramic",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Manufacturing & Assembly"
+        }
+      ]
+    },
+    {
+      "name": "Material Selection",
+      "keywords": [
+        {
+          "keyword": "cti and creepage: pcb material considerations",
+          "intent": "query",
+          "used": false,
+          "subsection": "Material Selection"
+        },
+        {
+          "keyword": "high tg fr4 vs standard fr4: when it matters",
+          "intent": "query",
+          "used": false,
+          "subsection": "Material Selection"
+        },
+        {
+          "keyword": "how to choose pcb material (dk df tg cte)",
+          "intent": "query",
+          "used": false,
+          "subsection": "Material Selection"
+        },
+        {
+          "keyword": "isola vs megtron vs rogers: laminate selection guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "Material Selection"
+        },
+        {
+          "keyword": "pcb material selection",
+          "intent": "query",
+          "used": false,
+          "subsection": "Material Selection"
+        }
+      ]
+    },
+    {
+      "name": "Materials & Processes",
+      "keywords": [
+        {
+          "keyword": "Al2O3 vs AlN selection",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "aluminum vs copper core IMS",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "ceramic DBC/AMB copper bonding",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "dielectric thermal conductivity selection",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "IMS flatness and bow control",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "IMS surface finish OSP/ENIG",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "laser machining and tolerance",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "MCPCB machining and routing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "metallization Cu/Ag/PtAu",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "solder mask and white ink for LED",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "surface finish for ceramic PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        },
+        {
+          "keyword": "thick film vs thin film process",
+          "intent": "query",
+          "used": false,
+          "subsection": "Materials & Processes"
+        }
+      ]
+    },
+    {
+      "name": "Professional and Architectural Lighting",
+      "keywords": [
+        {
+          "keyword": "Architectural Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Building Integration PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Cove Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Education Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Facade Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Flood Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Gallery Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Hazardous Location PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Healthcare Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "High CRI PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Hospitality Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Industrial Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Landscape Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Linear Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Media Facade PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Mesh Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Museum Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Node Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Office Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Pixel Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Retail Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "RGBW Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "RGBWW Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Spot Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "String Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Strip Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Track Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Variable White PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        },
+        {
+          "keyword": "Wall Washer PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Professional and Architectural Lighting"
+        }
+      ]
+    },
+    {
+      "name": "Reliability & Compliance",
+      "keywords": [
+        {
+          "keyword": "adhesion and delamination risks in IMS",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "adhesion and metallization reliability",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "biocompatibility for medical ceramic PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "ESD and surge on ceramic PCB",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "high voltage dielectric strength test",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "IPC and UL for ceramic substrates",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "moisture and corrosion for aluminum core",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "salt spray and outdoor durability",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "solder joint reliability high power LED",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "thermal cycling and high temp storage",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "thermal cycling for IMS boards",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        },
+        {
+          "keyword": "UL and creepage for high voltage",
+          "intent": "query",
+          "used": false,
+          "subsection": "Reliability & Compliance"
+        }
+      ]
+    },
+    {
+      "name": "Rogers & RF Materials",
+      "keywords": [
+        {
+          "keyword": "ptfe pcb drilling and plating challenges",
+          "intent": "query",
+          "used": false,
+          "subsection": "Rogers & RF Materials"
+        },
+        {
+          "keyword": "rf laminate prepreg selection: bonding film vs prepreg",
+          "intent": "query",
+          "used": false,
+          "subsection": "Rogers & RF Materials"
+        },
+        {
+          "keyword": "rogers pcb manufacturing",
+          "intent": "query",
+          "used": false,
+          "subsection": "Rogers & RF Materials"
+        },
+        {
+          "keyword": "taconic vs rogers for rf pcb",
+          "intent": "query",
+          "used": false,
+          "subsection": "Rogers & RF Materials"
+        },
+        {
+          "keyword": "teflon pcb fabrication challenges and solutions",
+          "intent": "query",
+          "used": false,
+          "subsection": "Rogers & RF Materials"
+        }
+      ]
+    },
+    {
+      "name": "Smart and Connected Lighting",
+      "keywords": [
+        {
+          "keyword": "Bluetooth Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Circadian Lighting PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Color Changing PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Color Sensor PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Connected Lighting PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Daylight Sensor PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Human Centric Lighting PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Intelligent Lighting PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "IoT Lighting PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Lighting Automation PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "LUX Sensor PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Matter Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Mobile App Control",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Motion Sensor Light",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Occupancy Sensor PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Photocell PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Scene Control PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Sensor Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Smart Bulb PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Smart Dimmer PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Smart Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Thread Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Tunable White PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Voice Control PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "WiFi Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Wireless Control PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Z-Wave Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        },
+        {
+          "keyword": "Zigbee Light PCB",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "Smart and Connected Lighting"
+        }
+      ]
+    },
+    {
+      "name": "制造与可靠性",
+      "keywords": [
+        {
+          "keyword": "coupon design practice",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造与可靠性"
+        },
+        {
+          "keyword": "press cycle optimization",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造与可靠性"
+        },
+        {
+          "keyword": "resin starvation analysis",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造与可靠性"
+        },
+        {
+          "keyword": "stackup cost modeling",
+          "intent": "query",
+          "used": false,
+          "subsection": "制造与可靠性"
+        },
+        {
+          "keyword": "thermal cycling stress",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造与可靠性"
+        },
+        {
+          "keyword": "warpage control tutorial",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造与可靠性"
+        }
+      ]
+    },
+    {
+      "name": "制造影响",
+      "keywords": [
+        {
+          "keyword": "glass weave skew mitigation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造影响"
+        },
+        {
+          "keyword": "pcb warpage control",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造影响"
+        },
+        {
+          "keyword": "prepreg resin content lesson",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造影响"
+        },
+        {
+          "keyword": "solder mask selection tutorial",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造影响"
+        },
+        {
+          "keyword": "surface finish comparison",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "制造影响"
+        },
+        {
+          "keyword": "via filling material guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "制造影响"
+        }
+      ]
+    },
+    {
+      "name": "叠层策略",
+      "keywords": [
+        {
+          "keyword": "backdrill ready stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层策略"
+        },
+        {
+          "keyword": "blind buried via planning",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层策略"
+        },
+        {
+          "keyword": "coplanar waveguide stack",
+          "intent": "query",
+          "used": false,
+          "subsection": "叠层策略"
+        },
+        {
+          "keyword": "differential impedance stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层策略"
+        },
+        {
+          "keyword": "flex rigid transition stack",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层策略"
+        },
+        {
+          "keyword": "hybrid material recipe",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层策略"
+        }
+      ]
+    },
+    {
+      "name": "叠层设计",
+      "keywords": [
+        {
+          "keyword": "8 layer stackup example",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层设计"
+        },
+        {
+          "keyword": "backdrill planning guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "叠层设计"
+        },
+        {
+          "keyword": "four layer impedance control",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层设计"
+        },
+        {
+          "keyword": "hdI stackup tutorial",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层设计"
+        },
+        {
+          "keyword": "hdmi pcb stackup guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "叠层设计"
+        },
+        {
+          "keyword": "high current copper balancing",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "叠层设计"
+        }
+      ]
+    },
+    {
+      "name": "材料科学",
+      "keywords": [
+        {
+          "keyword": "cti design requirement",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料科学"
+        },
+        {
+          "keyword": "dielectric modeling workflow",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料科学"
+        },
+        {
+          "keyword": "glass weave mitigation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料科学"
+        },
+        {
+          "keyword": "halogen free compliance guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "材料科学"
+        },
+        {
+          "keyword": "low loss laminate roadmap",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料科学"
+        },
+        {
+          "keyword": "spread glass selection",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料科学"
+        }
+      ]
+    },
+    {
+      "name": "材料选择",
+      "keywords": [
+        {
+          "keyword": "flex rigid material stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料选择"
+        },
+        {
+          "keyword": "halogen free pcb materials",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料选择"
+        },
+        {
+          "keyword": "high tg fr4 guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "材料选择"
+        },
+        {
+          "keyword": "low loss laminate tutorial",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料选择"
+        },
+        {
+          "keyword": "metal core pcb basics",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料选择"
+        },
+        {
+          "keyword": "rf pcb material comparison",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "材料选择"
+        }
+      ]
+    },
+    {
+      "name": "标准与文档",
+      "keywords": [
+        {
+          "keyword": "ipc 2221 stack guidance",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "标准与文档"
+        },
+        {
+          "keyword": "materials data sheet mapping",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "标准与文档"
+        },
+        {
+          "keyword": "stackup approval checklist",
+          "intent": "query",
+          "used": false,
+          "subsection": "标准与文档"
+        },
+        {
+          "keyword": "stackup change control",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "标准与文档"
+        },
+        {
+          "keyword": "supply chain material planning",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "标准与文档"
+        },
+        {
+          "keyword": "ul recognition workflow",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "标准与文档"
+        }
+      ]
+    },
+    {
+      "name": "环境与合规",
+      "keywords": [
+        {
+          "keyword": "cti requirement explanation",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "环境与合规"
+        },
+        {
+          "keyword": "ipc 4101 specification guide",
+          "intent": "query",
+          "used": false,
+          "subsection": "环境与合规"
+        },
+        {
+          "keyword": "pcb material data sheet reading",
+          "intent": "query",
+          "used": false,
+          "subsection": "环境与合规"
+        },
+        {
+          "keyword": "rohs reach compliance lesson",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "环境与合规"
+        },
+        {
+          "keyword": "thermal reliability stackup",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "环境与合规"
+        },
+        {
+          "keyword": "ul 94 pcb rating",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "环境与合规"
+        }
+      ]
+    }
+  ],
+  "template_usage_stats": {
+    "aptpcb-query.md": {
+      "usage_count": 11,
+      "last_used": "2025-12-29 15:44:02",
+      "created_blogs": [
+        {
+          "filename": "fixture-design-for-heavy-boards-aptpcb-query.md",
+          "created_at": "2025-12-18 13:47:53"
+        },
+        {
+          "filename": "thermal-interface-material-selection-aptpcb-query.md",
+          "created_at": "2025-12-20 10:25:32"
+        },
+        {
+          "filename": "wire-bonding-on-ceramic-aptpcb-query.md",
+          "created_at": "2025-12-21 00:41:16"
+        },
+        {
+          "filename": "depanelization-of-mc-aptpcb-query.md",
+          "created_at": "2025-12-21 15:14:02"
+        },
+        {
+          "filename": "led-mcpcb-assembly-and-reflow.md",
+          "created_at": "2025-12-23 10:31:19"
+        },
+        {
+          "filename": "backdrill-planning-guide.md",
+          "created_at": "2025-12-23 13:32:08"
+        },
+        {
+          "filename": "z-wave-light-pcb.md",
+          "created_at": "2025-12-23 15:50:17"
+        },
+        {
+          "filename": "side-light-pcb.md",
+          "created_at": "2025-12-23 18:42:54"
+        },
+        {
+          "filename": "healthcare-light-pcb.md",
+          "created_at": "2025-12-23 21:32:59"
+        },
+        {
+          "filename": "outdoor-led-driver.md",
+          "created_at": "2025-12-29 14:54:25"
+        },
+        {
+          "filename": "hazardous-location-pcb.md",
+          "created_at": "2025-12-29 15:44:02"
+        }
+      ]
+    },
+    "aptpcb-pillar.md": {
+      "usage_count": 11,
+      "last_used": "2025-12-29 16:42:44",
+      "created_blogs": [
+        {
+          "filename": "soldering-on-ceramic-aptpcb-pillar.md",
+          "created_at": "2025-12-18 15:04:00"
+        },
+        {
+          "filename": "wave-solder-and-th-components-on-ims-aptpcb-pillar.md",
+          "created_at": "2025-12-19 17:42:38"
+        },
+        {
+          "filename": "handling-and-breakage-prevention-aptpcb-pillar.md",
+          "created_at": "2025-12-20 18:46:34"
+        },
+        {
+          "filename": "high-mass-board-thermal-profiling-aptpcb-pillar.md",
+          "created_at": "2025-12-21 14:37:10"
+        },
+        {
+          "filename": "reflow-and-thermal-profile-for-ceramic.md",
+          "created_at": "2025-12-23 09:30:26"
+        },
+        {
+          "filename": "blind-buried-via-planning.md",
+          "created_at": "2025-12-23 14:09:08"
+        },
+        {
+          "filename": "mobile-app-control.md",
+          "created_at": "2025-12-23 16:57:43"
+        },
+        {
+          "filename": "mesh-light-pcb.md",
+          "created_at": "2025-12-23 20:08:08"
+        },
+        {
+          "filename": "aluminum-pcb-guide.md",
+          "created_at": "2025-12-29 11:47:55"
+        },
+        {
+          "filename": "brake-light-pcb.md",
+          "created_at": "2025-12-29 14:17:12"
+        },
+        {
+          "filename": "daylight-sensor-pcb.md",
+          "created_at": "2025-12-29 16:42:44"
+        }
+      ]
+    },
+    "aptpcb-playbook.md": {
+      "usage_count": 10,
+      "last_used": "2025-12-29 13:45:13",
+      "created_blogs": [
+        {
+          "filename": "cleaning-and-surface-preparation.md",
+          "created_at": "2025-12-21 20:01:15"
+        },
+        {
+          "filename": "die-attach-on-ceramic-substrates.md",
+          "created_at": "2025-12-21 21:45:03"
+        },
+        {
+          "filename": "thermal-cycling-stress.md",
+          "created_at": "2025-12-23 14:55:49"
+        },
+        {
+          "filename": "ceramic-dbc-amb-copper-bonding.md",
+          "created_at": "2025-12-23 17:53:07"
+        },
+        {
+          "filename": "cob-led-display-pcb.md",
+          "created_at": "2025-12-23 20:51:36"
+        },
+        {
+          "filename": "scene-control-pcb.md",
+          "created_at": "2025-12-29 10:48:37"
+        },
+        {
+          "filename": "reverse-light-pcb.md",
+          "created_at": "2025-12-29 13:45:13"
+        }
+      ]
+    },
+    "README.md": {
+      "usage_count": 9,
+      "last_used": "2025-12-28 21:05:05",
+      "created_blogs": [
+        {
+          "filename": "spread-glass-selection-readme.md",
+          "created_at": "2025-12-28 21:05:05"
+        }
+      ]
+    },
+    "aptpcb-story.md": {
+      "usage_count": 1,
+      "last_used": "2025-12-30 07:57:47",
+      "created_blogs": [
+        {
+          "filename": "beacon-light-pcb.md",
+          "created_at": "2025-12-30 07:57:47"
+        }
+      ]
+    }
+  }
+}

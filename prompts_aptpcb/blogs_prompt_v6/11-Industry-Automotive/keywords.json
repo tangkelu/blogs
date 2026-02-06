@@ -1,0 +1,103 @@
+{
+  "section_number": 11,
+  "section_title": "Industry: Automotive & EV (APTPCB v6)",
+  "subsections": [
+    {
+      "name": "Automotive ADAS EV Power PCB",
+      "keywords": [
+        {
+          "keyword": "ADAS radar PCB mass production",
+          "intent": "story",
+          "used": false,
+          "subsection": "Automotive ADAS EV Power PCB",
+          "context": "You are an EV Power Electronics Engineer (specializing in SiC/GaN inverters) who is now managing ADAS Radar PCB sourcing. Analyze the Radar PCB challenges by constantly comparing them to High-Voltage EV challenges (e.g., 'Impedance control at 77GHz is like Clearance/Creepage at 800V - one tiny slip kills the system'). Use this specific analogy throughout the story."
+        },
+        {
+          "keyword": "Automotive Ethernet PCB layout",
+          "intent": "story",
+          "used": false,
+          "subsection": "Automotive ADAS EV Power PCB",
+          "context": "You are a Functional Safety (ISO 26262) Auditor. Write about this topic focusing purely on failure propagation and redundancy. Every design decision must be justified by 'ASIL-D requirements'."
+        }
+      ]
+    },
+    {
+      "name": "General Technology (Query Test)",
+      "keywords": [
+        {
+          "keyword": "PCB impedance control standards",
+          "intent": "pillar",
+          "used": false,
+          "subsection": "General Technology (Query Test)",
+          "context": "You are a Senior FAE. Write a comprehensive master guide on impedance control."
+        }
+      ]
+    }
+  ],
+  "template_usage_stats": {
+    "aptpcb-story-v6.md": {
+      "usage_count": 5,
+      "last_used": "2026-01-07 15:44:03",
+      "created_blogs": [
+        {
+          "filename": "automotive-ethernet-pcb-layout.md",
+          "created_at": "2026-01-07 14:55:28"
+        },
+        {
+          "filename": "adas-radar-pcb-mass-production.md",
+          "created_at": "2026-01-07 15:09:15"
+        },
+        {
+          "filename": "adas-radar-pcb-mass-production.md",
+          "created_at": "2026-01-07 15:18:02"
+        },
+        {
+          "filename": "adas-radar-pcb-mass-production.md",
+          "created_at": "2026-01-07 15:24:59"
+        },
+        {
+          "filename": "adas-radar-pcb-mass-production.md",
+          "created_at": "2026-01-07 15:44:03"
+        }
+      ]
+    },
+    "aptpcb-pillar-v6.md": {
+      "usage_count": 7,
+      "last_used": "2026-01-07 20:35:41",
+      "created_blogs": [
+        {
+          "filename": "pcb-impedance-control-standards.md",
+          "created_at": "2026-01-07 16:29:43"
+        },
+        {
+          "filename": "pcb-impedance-control-standards.md",
+          "created_at": "2026-01-07 20:35:41"
+        }
+      ]
+    },
+    "aptpcb-playbook-v6.md": {
+      "usage_count": 6,
+      "last_used": "2026-01-07 18:42:30",
+      "created_blogs": [
+        {
+          "filename": "pcb-impedance-control-standards.md",
+          "created_at": "2026-01-07 18:42:30"
+        }
+      ]
+    },
+    "aptpcb-query-v6.md": {
+      "usage_count": 7,
+      "last_used": "2026-01-07 17:59:26",
+      "created_blogs": [
+        {
+          "filename": "pcb-impedance-control-standards.md",
+          "created_at": "2026-01-07 17:27:18"
+        },
+        {
+          "filename": "pcb-impedance-control-standards.md",
+          "created_at": "2026-01-07 17:59:26"
+        }
+      ]
+    }
+  }
+}

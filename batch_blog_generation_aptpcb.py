@@ -27,11 +27,16 @@ def main() -> int:
 
     argv = sys.argv[1:]
 
-    cmd = [sys.executable, str(runner)]
+    cmd = [sys.executable, "-u", str(runner)]
     if not _has_flag(argv, "--prompts-dir"):
         cmd += ["--prompts-dir", "prompts_aptpcb/blogs_prompt_v5"]
     if not _has_flag(argv, "--base-templates-dir"):
-        cmd += ["--base-templates-dir", "prompts_aptpcb/blogs_prompt_v5/_base_templates_v2"]
+        # Auto-detect v6 base templates if prompts-dir is v6-related
+        is_v6 = any("blogs_prompt_v6" in arg for arg in argv)
+        if is_v6:
+            cmd += ["--base-templates-dir", "prompts_aptpcb/blogs_prompt_v6/_base_templates"]
+        else:
+            cmd += ["--base-templates-dir", "prompts_aptpcb/blogs_prompt_v5/_base_templates_v2"]
     if not _has_flag(argv, "--internal-link-pool"):
         cmd += ["--internal-link-pool", "prompts_aptpcb/internal_link_pool.md"]
     if not _has_flag(argv, "--sitemap-file"):
