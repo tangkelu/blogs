@@ -1,0 +1,6 @@
+record_id,site_scope,category,sub_category,param_key,param_value,unit,condition_or_freq,test_method,source_type,source_ref,effective_date,version,status,owner,last_verified_at,notes
+FSR-0001,HILPCB,Material,Rogers,RO4350B_Dk,3.48,,10GHz/23C,IPC-TM-650,official_datasheet,,2026-01-01,v1.0,draft,engineering,,示例行：请替换为真实已验证数据
+FSR-0002,HILPCB,Material,Rogers,RO4350B_Df,0.0037,,10GHz/23C,IPC-TM-650,official_datasheet,,2026-01-01,v1.0,draft,engineering,,示例行：请替换为真实已验证数据
+FSR-0003,APTPCB,Factory Capability,Fabrication,min_trace_width,2.5,mil,standard process,DFM rulebook,internal_spec,,2026-01-01,v1.0,draft,process,,示例行：请替换为真实已验证数据
+FSR-0004,APTPCB,Factory Capability,Fabrication,max_layer_count,40,layer,standard process,capability_sheet,internal_spec,,2026-01-01,v1.0,draft,process,,示例行：请替换为真实已验证数据
+FSR-0005,Shared,Factory Capability,Fabrication,min_mechanical_hole,,,,,internal_spec,,2026-01-01,v1.0,draft,process,,待补充
