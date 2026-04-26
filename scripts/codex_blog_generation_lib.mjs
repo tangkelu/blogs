@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const BLOGS_ROOT = '/code/blogs'
+const LLM_WIKI_ROOT = path.join(BLOGS_ROOT, 'llm_wiki')
 
 export const SITE_CONFIGS = {
   hilpcb: {
@@ -250,13 +251,18 @@ export function buildArtifactPaths(input) {
 }
 
 export function buildEvidencePrompt(input) {
-  return [
+  const strategyMode = input.strategyMode || (input.allowWebSearch ? 'web_only' : 'local_only')
+  const prompt = [
     `请围绕关键词“${input.keyword}”为 ${input.siteKey.toUpperCase()} 准备技术博客证据包。`,
     `目标语言：${input.locale}`,
     `页面类型：${input.templateType}`,
     '',
     '要求：',
-    '- 必须联网搜索公开可验证来源。',
+    strategyMode === 'hybrid'
+      ? '- 先使用本地 llm_wiki 已命中的资料，再联网补充本地未覆盖或证据不足的公开来源。'
+      : input.allowWebSearch
+        ? '- 当前本地 llm_wiki 未形成足够命中，允许联网搜索公开可验证来源补齐。'
+        : '- 优先只使用本地 llm_wiki 已命中的资料，不要额外联网搜索。',
     '- 只收集与 PCB/PCBA 技术判断直接相关的事实、标准、白皮书、datasheet 语境、验证方法。',
     '- 不要编造数字。',
     '- 不要输出整篇博客。',
@@ -275,50 +281,13 @@ export function buildEvidencePrompt(input) {
     '- Authority / Reviewer Inputs 需要准备作者、审核人、团队边界或实体资料，优先真实可识别实体。',
     '- FAQ Query Seeds 至少提供 4 个贴近自然语言搜索问句的高频问法。',
     '- Candidate Internal Links 只写适合导向 HILPCB 产品页、服务页、工具页的落点建议。'
-  ].join('\n')
-}
+  ]
 
-export function buildArticleFromEvidencePrompt(input) {
-  return [
-    `你现在要基于已准备好的证据包，为 ${input.siteKey.toUpperCase()} 生成一篇真实可发布的中文技术博客。`,
-    `目标语言：${input.locale}`,
-    `主关键词：${input.keyword}`,
-    `页面类型：${input.templateType}`,
-    '',
-    '你必须严格依据下面的证据包写作；证据包没有提供的硬数字，不要补造。',
-    '',
-    '证据包：',
-    sanitizeModelText(input.evidenceText),
-    '',
-    '共享主提示词：',
-    input.sharedPrompt.trim(),
-    '',
-    '站点 overlay：',
-    input.siteOverlay.trim(),
-    '',
-    '可用内链池：',
-    input.internalLinkPool.trim(),
-    '',
-    '补充执行要求：',
-    '- 本轮不要再联网搜索，直接基于证据包与模板生成。',
-    '- 只输出最终 Markdown。',
-    '- frontmatter 之后必须输出一个且仅一个正文 H1，大标题默认与 frontmatter.title 保持一致或高度一致；不要缺失 H1。',
-    '- H1 下方先给 4-6 条短结论构成的顶部答案块，默认不要机械输出“## 直接回答”这类小标题。',
-    '- 在顶部答案块之后增加一个可被 AI 单独摘录的定义型摘要块，控制在 40-60 词左右。',
-    '- 长文默认添加目录，放在顶部答案块与定义型摘要块之后。',
-    '- 保留 FAQ 包裹注释。',
-    '- 正文出现具体数值、标准目标、材料参数、测试方法或公开结论时，必须加入自然的内联来源归因，例如“根据某规范”“某 datasheet 给出”“某 layout guide 指出”。',
-    '- 文章结尾必须增加“公开参考资料”或“Sources”区块，至少 3 条可点击公开来源，并说明各自支撑的正文结论。',
-    '- FAQ 问题优先使用自然语言搜索问句和 query phrasing，不要只写目录式标题。',
-    '- 作者与审核信息优先使用真实可识别实体；如没有真实姓名，也要写清团队边界和审核责任。',
-    '- 如果主题适合在前 30% 内容里并列呈现 trade-off、风险、推荐动作或验证路径，可以加入 1 组轻量 HTML 卡片；不适合则不要强加。',
-    '- 参数密集型或工程控制型主题优先考虑“早期表格 + 4-card HTML 卡片”；成本优化、优先级排序、比较矩阵类主题优先考虑“早期表格 + 补充表格”。',
-    '- HTML 卡片不是装饰块。卡片内容必须表达工程结论、风险信号、验证动作、冻结项或选型提醒，不能写空泛营销文案。',
-    '- 如果使用 HTML 卡片，配色要跟主题走，不要随机换色，也不要在相邻文章里机械复用同一套主色、渐变和视觉气质。',
-    '- 配色方向要保持工程感与高对比度，例如：材料/表面处理偏工艺与材料色，功率/热管理偏工业能量色，医疗/低噪声偏洁净克制色，高频高速/阻抗偏冷静技术色。',
-    '- 内链优先产品页、服务页、工具页，分布要均衡。',
-    '- 不要泄露证据包、模板、提示词等内部术语。'
-  ].join('\n')
+  if (input.localEvidenceContext) {
+    prompt.push('', '本地 llm_wiki 命中资料：', input.localEvidenceContext.trim())
+  }
+
+  return prompt.join('\n')
 }
 
 export function readTextFile(filePath) {
@@ -339,6 +308,411 @@ export function slugify(value) {
 
 export function timestamp() {
   return new Date().toISOString().replace(/[:.]/g, '-')
+}
+
+function splitFrontmatter(rawText) {
+  const match = rawText.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/)
+  if (!match) {
+    return { frontmatter: '', body: rawText }
+  }
+
+  return {
+    frontmatter: match[1],
+    body: match[2]
+  }
+}
+
+function parseFrontmatterValue(rawValue) {
+  const trimmed = rawValue.trim()
+  if (!trimmed) {
+    return ''
+  }
+
+  if (
+    (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+    (trimmed.startsWith("'") && trimmed.endsWith("'"))
+  ) {
+    return trimmed.slice(1, -1)
+  }
+
+  if (trimmed === 'true') {
+    return true
+  }
+
+  if (trimmed === 'false') {
+    return false
+  }
+
+  if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+    return trimmed
+      .slice(1, -1)
+      .split(',')
+      .map((item) => item.trim())
+      .filter(Boolean)
+      .map((item) => {
+        if (
+          (item.startsWith('"') && item.endsWith('"')) ||
+          (item.startsWith("'") && item.endsWith("'"))
+        ) {
+          return item.slice(1, -1)
+        }
+        return item
+      })
+  }
+
+  return trimmed
+}
+
+function parseSimpleFrontmatter(rawText) {
+  const result = {}
+  let currentKey = ''
+
+  for (const line of rawText.split(/\r?\n/)) {
+    if (!line.trim()) {
+      continue
+    }
+
+    const keyMatch = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/)
+    if (keyMatch) {
+      currentKey = keyMatch[1]
+      const rawValue = keyMatch[2]
+      result[currentKey] = parseFrontmatterValue(rawValue)
+      continue
+    }
+
+    const listMatch = line.match(/^\s*-\s+(.*)$/)
+    if (listMatch && currentKey) {
+      const existing = Array.isArray(result[currentKey]) ? result[currentKey] : []
+      existing.push(parseFrontmatterValue(listMatch[1]))
+      result[currentKey] = existing
+    }
+  }
+
+  return result
+}
+
+function extractHeadings(body) {
+  return body
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => /^#+\s+/.test(line))
+    .map((line) => line.replace(/^#+\s+/, ''))
+}
+
+function extractSummary(body) {
+  const quoteMatch = body.match(/>\s*([^\n]+)/)
+  if (quoteMatch) {
+    return quoteMatch[1].trim()
+  }
+
+  const paragraphMatch = body.match(/\n\n([^\n#>-][^\n]*)/)
+  return paragraphMatch ? paragraphMatch[1].trim() : ''
+}
+
+function extractLinks(body) {
+  const links = new Set()
+
+  for (const match of body.matchAll(/https?:\/\/[^\s)]+/g)) {
+    links.add(match[0])
+  }
+
+  return [...links]
+}
+
+function normalizeStringArray(value) {
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item).trim()).filter(Boolean)
+  }
+
+  if (typeof value === 'string' && value.trim()) {
+    return [value.trim()]
+  }
+
+  return []
+}
+
+function tokenizeForLookup(value) {
+  return (value || '')
+    .toLowerCase()
+    .split(/[^a-z0-9]+/i)
+    .map((token) => token.trim())
+    .filter((token) => token.length >= 2)
+}
+
+function scoreLlmWikiEntry(tokens, entry) {
+  let score = 0
+  const haystacks = [
+    entry.id,
+    entry.title,
+    entry.summary,
+    ...entry.tags,
+    ...entry.headings
+  ]
+    .join(' \n ')
+    .toLowerCase()
+
+  for (const token of tokens) {
+    if (entry.id.toLowerCase().includes(token)) {
+      score += 5
+    }
+    if (entry.title.toLowerCase().includes(token)) {
+      score += 4
+    }
+    if (entry.tags.some((tag) => tag.toLowerCase().includes(token))) {
+      score += 3
+    }
+    if (haystacks.includes(token)) {
+      score += 1
+    }
+  }
+
+  if (entry.kind === 'wiki') {
+    score += 2
+  }
+
+  if (entry.mustRefresh) {
+    score -= 1
+  }
+
+  return score
+}
+
+function walkMarkdownFiles(rootDir) {
+  if (!fs.existsSync(rootDir)) {
+    return []
+  }
+
+  const results = []
+  const stack = [rootDir]
+
+  while (stack.length > 0) {
+    const current = stack.pop()
+    const stat = fs.statSync(current)
+
+    if (stat.isDirectory()) {
+      for (const child of fs.readdirSync(current)) {
+        stack.push(path.join(current, child))
+      }
+      continue
+    }
+
+    if (current.endsWith('.md')) {
+      results.push(current)
+    }
+  }
+
+  return results
+}
+
+function readLlmWikiDocument(kind, filePath) {
+  const rawText = readTextFile(filePath)
+  const { frontmatter, body } = splitFrontmatter(rawText)
+  const meta = parseSimpleFrontmatter(frontmatter)
+
+  const idKey =
+    kind === 'wiki' ? 'topic_id' : kind === 'fact' ? 'fact_id' : 'source_id'
+
+  return {
+    kind,
+    id: String(meta[idKey] || path.basename(filePath, '.md')).trim(),
+    title: String(meta.title || '').trim(),
+    tags: normalizeStringArray(meta.tags || meta.topic_tags),
+    headings: extractHeadings(body),
+    summary: extractSummary(body),
+    links: extractLinks(body),
+    sourceIds: normalizeStringArray(meta.source_ids),
+    factIds: normalizeStringArray(meta.fact_ids),
+    mustRefresh: Boolean(meta.must_refresh),
+    jurisdiction: String(meta.jurisdiction || '').trim(),
+    trustTier: String(meta.trust_tier || '').trim(),
+    sourceType: String(meta.source_type || '').trim(),
+    path: filePath
+  }
+}
+
+export function loadLlmWikiIndex(rootDir = LLM_WIKI_ROOT) {
+  const groups = [
+    { kind: 'wiki', dir: path.join(rootDir, 'wiki') },
+    { kind: 'fact', dir: path.join(rootDir, 'facts') },
+    { kind: 'source', dir: path.join(rootDir, 'sources/registry') }
+  ]
+
+  const entries = []
+
+  for (const group of groups) {
+    for (const filePath of walkMarkdownFiles(group.dir)) {
+      entries.push(readLlmWikiDocument(group.kind, filePath))
+    }
+  }
+
+  return entries
+}
+
+export function buildLlmWikiLookup(keyword, index, options = {}) {
+  const maxMatches = options.maxMatches || 6
+  const tokens = [...new Set(tokenizeForLookup(keyword))]
+
+  const matches = index
+    .map((entry) => ({
+      ...entry,
+      score: scoreLlmWikiEntry(tokens, entry)
+    }))
+    .filter((entry) => entry.score > 0)
+    .sort((left, right) => right.score - left.score)
+    .slice(0, maxMatches)
+
+  return {
+    keyword,
+    hasMatches: matches.length > 0,
+    matches
+  }
+}
+
+export function assembleLlmWikiEvidenceContext(lookup) {
+  if (!lookup?.hasMatches || !Array.isArray(lookup.matches) || lookup.matches.length === 0) {
+    return ''
+  }
+
+  const coverageScore = scoreLlmWikiLookup(lookup)
+  const strategy = resolveLlmWikiEvidenceStrategy(lookup)
+
+  const lines = [
+    `Local LLM Wiki Matches For: ${lookup.keyword}`,
+    '',
+    'Use these local materials first. Keep numeric claims bounded by their stated source conditions.',
+    `coverage_score: ${coverageScore}`,
+    `coverage_mode: ${strategy.mode}`
+  ]
+
+  lookup.matches.forEach((entry, index) => {
+    lines.push('')
+    lines.push(`${index + 1}. [${entry.kind}] ${entry.title || entry.id}`)
+    lines.push(`   id: ${entry.id}`)
+    if (entry.tags.length > 0) {
+      lines.push(`   tags: ${entry.tags.join(', ')}`)
+    }
+    if (entry.summary) {
+      lines.push(`   summary: ${entry.summary}`)
+    }
+    if (entry.factIds.length > 0) {
+      lines.push(`   fact_ids: ${entry.factIds.join(', ')}`)
+    }
+    if (entry.sourceIds.length > 0) {
+      lines.push(`   source_ids: ${entry.sourceIds.join(', ')}`)
+    }
+    if (entry.links.length > 0) {
+      lines.push(`   links: ${entry.links.slice(0, 3).join(', ')}`)
+    }
+    if (entry.mustRefresh) {
+      lines.push('   must_refresh: true')
+    }
+    lines.push(`   file: ${entry.path}`)
+  })
+
+  return lines.join('\n')
+}
+
+export function shouldUseWebSearchForLlmWikiLookup(lookup) {
+  return resolveLlmWikiEvidenceStrategy(lookup).useWebSearch
+}
+
+export function scoreLlmWikiLookup(lookup) {
+  if (!lookup?.hasMatches || !Array.isArray(lookup.matches) || lookup.matches.length === 0) {
+    return 0
+  }
+
+  let score = 0
+  const kindSet = new Set()
+  const sourceIdSet = new Set()
+  const factIdSet = new Set()
+  let publicLinkCount = 0
+  let refreshPenalty = 0
+  let internalOnlyPenalty = 0
+
+  for (const match of lookup.matches) {
+    if (match.kind) {
+      kindSet.add(match.kind)
+    }
+
+    for (const sourceId of normalizeStringArray(match.sourceIds)) {
+      sourceIdSet.add(sourceId)
+    }
+
+    for (const factId of normalizeStringArray(match.factIds)) {
+      factIdSet.add(factId)
+    }
+
+    publicLinkCount += normalizeStringArray(match.links).length
+
+    if (match.summary) {
+      score += 1
+    }
+
+    if (match.mustRefresh) {
+      refreshPenalty += 1
+    }
+
+    if ((match.jurisdiction || '').toLowerCase() === 'internal') {
+      internalOnlyPenalty += 1
+    }
+  }
+
+  score += kindSet.size * 2
+  score += Math.min(sourceIdSet.size, 3) * 2
+  score += Math.min(factIdSet.size, 3) * 2
+  score += Math.min(publicLinkCount, 3)
+  score -= refreshPenalty
+  score -= internalOnlyPenalty
+
+  return Math.max(score, 0)
+}
+
+export function resolveLlmWikiEvidenceStrategy(lookup) {
+  if (!lookup?.hasMatches || !Array.isArray(lookup.matches) || lookup.matches.length === 0) {
+    return {
+      mode: 'web_only',
+      coverageScore: 0,
+      useWebSearch: true
+    }
+  }
+
+  const coverageScore = scoreLlmWikiLookup(lookup)
+  const hasWiki = lookup.matches.some((match) => match.kind === 'wiki')
+  const hasFact = lookup.matches.some((match) => match.kind === 'fact')
+  const hasSource = lookup.matches.some((match) => match.kind === 'source')
+  const hasPublicLinks = lookup.matches.some(
+    (match) => Array.isArray(match.links) && match.links.length > 0
+  )
+  const hasExternalAnchor = lookup.matches.some((match) => {
+    const jurisdiction = (match.jurisdiction || '').toLowerCase()
+    return jurisdiction !== 'internal' && Array.isArray(match.links) && match.links.length > 0
+  })
+  const hasStructuredRefs = lookup.matches.some(
+    (match) =>
+      normalizeStringArray(match.sourceIds).length > 0 ||
+      normalizeStringArray(match.factIds).length > 0
+  )
+
+  if (
+    coverageScore >= 10 &&
+    hasWiki &&
+    hasFact &&
+    (hasSource || hasPublicLinks) &&
+    hasStructuredRefs &&
+    hasExternalAnchor
+  ) {
+    return {
+      mode: 'local_only',
+      coverageScore,
+      useWebSearch: false
+    }
+  }
+
+  return {
+    mode: 'hybrid',
+    coverageScore,
+    useWebSearch: true
+  }
 }
 
 export function resolveTemplateType(keyword, requestedTemplate = 'auto') {
@@ -388,6 +762,50 @@ export function resolveTemplateType(keyword, requestedTemplate = 'auto') {
 
   return normalized.split(/\s+/).length <= 4 ? 'pillar' : 'query'
 }
+
+export function buildArticleFromEvidencePrompt(input) {
+  return [
+    `你现在要基于已准备好的证据包，为 ${input.siteKey.toUpperCase()} 生成一篇真实可发布的中文技术博客。`,
+    `目标语言：${input.locale}`,
+    `主关键词：${input.keyword}`,
+    `页面类型：${input.templateType}`,
+    '',
+    '你必须严格依据下面的证据包写作；证据包没有提供的硬数字，不要补造。',
+    '',
+    '证据包：',
+    sanitizeModelText(input.evidenceText),
+    '',
+    '共享主提示词：',
+    input.sharedPrompt.trim(),
+    '',
+    '站点 overlay：',
+    input.siteOverlay.trim(),
+    '',
+    '可用内链池：',
+    input.internalLinkPool.trim(),
+    '',
+    '补充执行要求：',
+    '- 本轮不要再联网搜索，直接基于证据包与模板生成。',
+    '- 只输出最终 Markdown。',
+    '- frontmatter 之后必须输出一个且仅一个正文 H1，大标题默认与 frontmatter.title 保持一致或高度一致；不要缺失 H1。',
+    '- H1 下方先给 4-6 条短结论构成的顶部答案块，默认不要机械输出“## 直接回答”这类小标题。',
+    '- 在顶部答案块之后增加一个可被 AI 单独摘录的定义型摘要块，控制在 40-60 词左右。',
+    '- 长文默认添加目录，放在顶部答案块与定义型摘要块之后。',
+    '- 保留 FAQ 包裹注释。',
+    '- 正文出现具体数值、标准目标、材料参数、测试方法或公开结论时，必须加入自然的内联来源归因，例如“根据某规范”“某 datasheet 给出”“某 layout guide 指出”。',
+    '- 文章结尾必须增加“公开参考资料”或“Sources”区块，至少 3 条可点击公开来源，并说明各自支撑的正文结论。',
+    '- FAQ 问题优先使用自然语言搜索问句和 query phrasing，不要只写目录式标题。',
+    '- 作者与审核信息优先使用真实可识别实体；如没有真实姓名，也要写清团队边界和审核责任。',
+    '- 如果主题适合在前 30% 内容里并列呈现 trade-off、风险、推荐动作或验证路径，可以加入 1 组轻量 HTML 卡片；不适合则不要强加。',
+    '- 参数密集型或工程控制型主题优先考虑“早期表格 + 4-card HTML 卡片”；成本优化、优先级排序、比较矩阵类主题优先考虑“早期表格 + 补充表格”。',
+    '- HTML 卡片不是装饰块。卡片内容必须表达工程结论、风险信号、验证动作、冻结项或选型提醒，不能写空泛营销文案。',
+    '- 如果使用 HTML 卡片，配色要跟主题走，不要随机换色，也不要在相邻文章里机械复用同一套主色、渐变和视觉气质。',
+    '- 配色方向要保持工程感与高对比度，例如：材料/表面处理偏工艺与材料色，功率/热管理偏工业能量色，医疗/低噪声偏洁净克制色，高频高速/阻抗偏冷静技术色。',
+    '- 内链优先产品页、服务页、工具页，分布要均衡。',
+    '- 不要泄露证据包、模板、提示词等内部术语。'
+  ].join('\n')
+}
+
 
 export function resolveSiteAssets(siteKey, templateType) {
   const site = SITE_CONFIGS[siteKey]

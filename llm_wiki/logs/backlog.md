@@ -1,0 +1,1459 @@
+# Backlog
+
+Last updated: 2026-04-26
+
+## Status Legend
+
+- `now`: 当前立即执行
+- `next`: 下一批
+- `queued`: 已确认要做，但排在后面
+- `watch`: 需要持续观察或等待更强主源
+
+## Coverage Snapshot
+
+Current covered areas:
+
+- Standards metadata:
+  - IPC document revision metadata
+  - 3GPP 38-series / TS 38.104 indexing
+- Compliance:
+  - RoHS / REACH / SVHC baseline handling
+- Materials:
+  - Rogers RF families
+  - Isola 370HR / IS410 / FR408 / FR408HR / I-Speed / I-Tera MT40 / Astra MT77 / Tachyon 100G
+  - Isola Tachyon 100G
+  - Panasonic MEGTRON lineup / 4 / 6 / 7 / 8
+  - Ventec VT-870 / VTM1000i / VT-464G
+  - AGC RF-30A / RF-10 / RF-35HTC
+  - Arlon official discovery anchors plus 55NT / 85N / 85NT exact-product coverage and hi-rel branch normalization
+  - Rogers RO4400 / RO4450F / RO4460G2 bondply anchors
+  - Ceramic / alumina / AlN class-level anchors via CeramTec and MARUWA
+  - ABF and BT substrate-material class-level anchors via Ajinomoto / AFT and MGC
+  - Flexible circuit-board / LCP material class-level anchors via Panasonic FELIOS
+  - internal APT material-family coverage for Arlon, Isola, Megtron, Taconic, Teflon/PTFE, spread-glass FR-4, and controlled-impedance stackups
+- Methods:
+  - SPI / AOI / ICT boundaries
+  - internal hybrid stackups
+  - internal RF validation
+  - PTFE processing support
+  - RF-oriented finish selection
+  - selective multi-finish strategy
+  - internal PCBA gates from NPI through mass production
+  - internal PCBA quality gates, FPT, fine-pitch/stencil/selective-solder controls, cable/harness, and IC programming integration
+  - internal HDI, impedance/TDR, high-layer/backdrill, thermal-platform, rigid-flex, and IC-substrate manufacturing postures
+- Wiki pages:
+  - Rogers RO3000 family
+  - RF surface finish selection
+  - RF validation and test coverage
+  - backplane execution and connector integration
+  - hybrid RF stackup strategy
+  - RF drilling and transition control
+  - PTFE processing and manufacturability
+  - cavity and shield feature planning
+  - validation ladder from e-test to SI verification
+  - high-speed material family selection
+  - RF material selector by application band
+  - finish zoning and selective multi-finish
+
+Main structural gaps:
+
+- topic wiki 已可供 prompt 初步消费，但 evidence-pack 规范还没接到 `prompts_template/`
+- 高频材料主源仍可继续扩展，尤其 Taconic 与更多 Arlon 产品级官方 datasheet anchors
+- generic material-class anchors 已补到官方类别级；下一步缺口集中在产品级 datasheet / grade anchors
+- finish / fabrication standards 元数据还偏薄，不能替代付费标准正文
+
+## Now
+
+### P1-01 Roadmap And Tracking
+
+- status: `completed`
+- deliverables:
+  - `ROADMAP.md`
+  - `logs/backlog.md`
+  - `logs/phase-status.md`
+
+### P2-01 Internal Capability Inventory Expansion
+
+- status: `completed`
+- objective:
+  - 系统扫描 `frontendHIL` 和 `frontendAPT` 非博客公开内容
+  - 把还没沉淀成 facts 的能力点列成明确队列
+- target outputs:
+  - gap list
+  - next batch candidate cards
+  - `logs/internal-capability-inventory.md`
+
+## Next
+
+### P2-02 Finish And Fabrication Control Cards
+
+- status: `completed`
+- candidate fact cards:
+  - `backdrill-control-capability`
+  - `cavity-machining-capability`
+  - `finish-zoning-by-assembly-sequence-and-storage-exposure`
+  - `press-fit-finish-selection`
+- source expectation:
+  - internal product/capability pages first
+  - if numeric or standards-sensitive, attach official support source
+
+### P2-04 Backplane And Validation Follow-On Cards
+
+- status: `completed`
+- candidate fact cards:
+  - `press-fit-and-backplane-integration-posture`
+  - `advanced-validation-scope-segmentation`
+- source expectation:
+  - prefer backplane / drilling / quality / high-speed internal pages
+  - avoid freezing customer-facing numeric commitments unless repeated and clearly capability-oriented
+
+### P2-05 Internal Capability Taxonomy Normalization
+
+- status: `completed`
+- target:
+  - 把已落内部能力卡统一归类为 `stackup / fabrication / finish / validation / integration`
+  - 补清楚后续 topic wiki 的聚合边界
+
+### P2-06 Topic Wiki Planning By Taxonomy Bucket
+
+- status: `completed`
+- target:
+  - 先从 `finish / validation / integration` 三个桶里各挑一个高价值 wiki 聚合页
+  - 让已落 methods cards 开始形成系统化主题页，而不是继续只加原子卡
+- progress:
+  - `wiki/processes/rf-surface-finish-selection.md` 已落，作为 `finish` 桶第一张聚合页
+  - `wiki/testing/rf-validation-and-test-coverage.md` 已落，作为 `validation` 桶第一张聚合页
+  - `wiki/processes/backplane-execution-and-connector-integration.md` 已落，作为 `integration` 桶第一张聚合页
+  - `finish / validation / integration` 三个桶已完成第一轮聚合
+
+### P2-07 Second-Round Wiki Aggregation For Stackup And Fabrication
+
+- status: `completed`
+- target:
+  - 回到 `stackup / fabrication` 桶，把已有 facts 继续上卷成主题页
+- first targets:
+  - `wiki/processes/hybrid-rf-stackup-strategy.md`
+  - `wiki/processes/rf-drilling-and-transition-control.md`
+- note:
+  - 继续优先做“已具备聚合素材的主题页”，避免回到零散补卡模式
+- progress:
+  - `wiki/processes/hybrid-rf-stackup-strategy.md` 已落，作为 `stackup` 桶第一张聚合页
+  - `wiki/processes/rf-drilling-and-transition-control.md` 已落，作为 `fabrication` 桶第一张聚合页
+  - `stackup / fabrication` 两个桶已完成第一轮聚合
+
+### P2-08 Third-Round Topic Wiki Densification
+
+- status: `completed`
+- target:
+  - 在已有五个桶首轮聚合完成后，补第二层专题页，提升 prompt 可消费性
+- first targets:
+  - `wiki/processes/ptfe-processing-and-manufacturability.md`
+  - `wiki/processes/cavity-and-shield-feature-planning.md`
+  - `wiki/testing/validation-ladder-from-e-test-to-si-verification.md`
+- note:
+  - 这轮优先细化已存在主题，不优先新增零散 facts
+- execution:
+  - 使用 parallel sub-agents 分别写三张独立 wiki 页
+  - 主 agent 负责最终审查、日志、计数、roadmap 同步
+- progress:
+  - `wiki/processes/ptfe-processing-and-manufacturability.md` 已落
+  - `wiki/processes/cavity-and-shield-feature-planning.md` 已落
+  - `wiki/testing/validation-ladder-from-e-test-to-si-verification.md` 已落
+
+### P2-09 Phase 2 Closeout And Phase 3 Entry Plan
+
+- status: `completed`
+- target:
+  - 对 Phase 2 内部能力层做一次收口核查
+  - 明确 Phase 3 官方主源扩展的第一批并行任务
+- expected outputs:
+  - Phase 2 coverage summary
+  - Phase 3 source-expansion batch split for sub-agents
+  - evidence-pack 接入前的最小 checklist
+- note:
+  - 不再继续无边界扩写 internal wiki，先准备进入官方主源扩展
+- progress:
+  - `logs/phase-2-closeout-summary.md` 已落
+  - `logs/phase-3-entry-plan.md` 已落
+  - `logs/evidence-pack-minimum-checklist.md` 已落
+  - Phase 2 closeout 结论：无阻塞 gap，Phase 3 可以启动
+
+## Queued
+
+### P3-00 Phase 3 Entry Control
+
+- status: `completed`
+- output:
+  - `logs/phase-3-entry-plan.md`
+- execution order:
+  - `P3-02 Finish Standard Metadata`
+  - `P3-01 Taconic Official Coverage`
+  - `P3-03 More High-Speed / RF Material Families`
+- note:
+  - Phase 3 起步仍坚持 source-first，不直接写材料事实或标准事实
+
+### P3-01 Taconic Official Coverage
+
+- status: `completed`
+- reason:
+  - 是明显材料空白，但官方公开资料可检索性较弱，需要更谨慎找主源
+- suggested sub-agent ownership:
+  - one agent searches and registers official source records only
+  - one agent extracts material facts only after official sources are confirmed
+- next action:
+  - 已完成保守 source discovery
+  - 当前仅登记 division-level / compliance-level 官方 anchors
+  - 未写产品参数 facts，因为产品级 datasheet anchors 尚未稳定确认
+- progress:
+  - `sources/registry/materials/taconic-divisions-page.md`
+  - `sources/registry/materials/taconic-add-rohs-weee-compliance-2022.md`
+  - `facts/materials/taconic-official-source-coverage-gap.md`
+
+### P3-02 Finish Standard Metadata
+
+- status: `completed`
+- target:
+  - IPC-4552
+  - IPC-4553
+  - IPC-4554
+  - IPC-4556
+- note:
+  - 先确认能否找到合规的公共 revision anchors，再决定写入粒度
+- suggested sub-agent ownership:
+  - one agent handles public revision anchors and source registry
+  - one agent drafts conservative metadata facts without reproducing paid standard text
+- next action:
+  - 已完成 source-first anchor 登记
+  - 已完成保守 metadata fact 卡
+- progress:
+  - `sources/registry/standards/ipc-4552b-toc.md`
+  - `sources/registry/standards/ipc-4553a-chinese-toc.md`
+  - `sources/registry/standards/ipc-4554-am1-toc.md`
+  - `sources/registry/standards/ipc-4556-toc.md`
+  - `sources/registry/standards/ipc-status-of-standardization.md`
+  - `facts/standards/ipc-finish-standards-metadata.md`
+
+### P3-03 More High-Speed / RF Material Families
+
+- status: `completed`
+- candidate families:
+  - additional Isola low-loss lines
+  - more Panasonic build-up / ultra-low-loss references
+  - more Ventec RF / low-loss families where official data is strong
+- suggested sub-agent ownership:
+  - split by manufacturer family to avoid source/fact collisions
+- next action:
+  - 已完成第一批官方锚点强的厂家家族扩展
+  - 后续可转入 Phase 4 topic wiki expansion
+- progress:
+  - `sources/registry/materials/isola-tachyon-100g-datasheet.md`
+  - `sources/registry/materials/panasonic-megtron-8-series-page.md`
+  - `sources/registry/materials/ventec-vt-464g-datasheet-page.md`
+  - `facts/materials/isola-tachyon-100g.md`
+  - `facts/materials/panasonic-megtron-8.md`
+  - `facts/materials/ventec-vt-464g.md`
+
+### P4-01 Topic Wiki Expansion
+
+- status: `completed`
+- candidate wiki pages:
+  - `finish-zoning-and-selective-multi-finish`
+  - `rf-material-selector-by-application-band`
+  - `high-speed-material-family-selection`
+- execution:
+  - 使用 parallel sub-agents 分别写三张独立 topic wiki 页
+  - 主 agent 负责命名一致性、官方来源边界、日志和计数收口
+- progress:
+  - `wiki/materials/high-speed-material-family-selection.md` 已落
+  - `wiki/materials/rf-material-selector-by-application-band.md` 已落
+  - `wiki/processes/finish-zoning-and-selective-multi-finish.md` 已落
+
+### P4-02 Internal JSON Densification
+
+- status: `completed`
+- target:
+  - 系统采集 `frontendAPT` 和 `frontendHIL` 英文非博客 JSON 的 PCBA、PCB 制造能力、材料页数据
+  - 用 source records 固化页面来源，用少量聚合 facts 固化可复用真实数据
+- execution:
+  - APT PCBA 由 worker 独立处理
+  - APT/HIL PCB 与产品能力页由 worker 独立处理
+  - APT materials 由主 agent 处理
+  - 主 agent 统一做 source-id 引用检查和日志同步
+- progress:
+  - `logs/internal-json-source-spine.md` 已覆盖 APT 98 个英文非博客 JSON 与 HIL 27 个英文非博客 JSON
+  - APT PCBA 新增 FPT、IQC、FAI/FQI、NPI、小批量、量产、钢网、选择焊、BGA/QFN、线缆/线束、IC 烧录等 source records
+  - APT/HIL PCB 新增 HDI、高层数、阻抗、先进制程、热管理、金属基、陶瓷、刚挠、IC substrate、大小批量装配等 source records
+  - APT materials 新增 Arlon、Isola、Megtron、Taconic、Teflon/PTFE、spread-glass、controlled-impedance stackups source records
+  - 剩余 APT capabilities / industries / resources / materials / PCB / PCBA 与剩余 HIL products / service landings 已用目录级 index source records 覆盖
+  - 新增 PCBA、advanced fabrication、materials 聚合 fact cards
+  - fact source-id 引用检查已通过
+
+### P4-03 Topic Wiki Aggregation For PCBA And Advanced Fabrication
+
+- status: `completed`
+- target:
+  - 把 P4-02 新增 facts 上卷成可直接消费的 topic wiki
+- candidate wiki pages:
+  - `wiki/testing/pcba-quality-gates-and-test-strategy.md`
+  - `wiki/processes/pcba-npi-to-mass-production-flow.md`
+  - `wiki/processes/advanced-pcb-fabrication-and-stackup-planning.md`
+  - `wiki/materials/internal-material-family-coverage-and-refresh-rules.md`
+- progress:
+  - `wiki/testing/pcba-quality-gates-and-test-strategy.md` 已落
+  - `wiki/processes/pcba-npi-to-mass-production-flow.md` 已落
+  - `wiki/processes/advanced-pcb-fabrication-and-stackup-planning.md` 已落
+  - `wiki/materials/internal-material-family-coverage-and-refresh-rules.md` 已落
+  - topic wiki `fact_ids` / `source_ids` 引用检查已通过
+- note:
+  - 这批不优先新增大量 sources，除非 topic wiki 暴露明显引用缺口
+  - 每页必须区分 `official material facts`、`internal support`、`must-refresh numeric claims`
+
+### P4-04 Prompt Consumption Bridge Planning
+
+- status: `completed`
+- target:
+  - 把现有 topic wiki 和 fact cards 映射成后续 `prompts_template/` 可消费的 evidence-pack 输入规范
+  - 先规划，不直接改写博客正文
+- candidate outputs:
+  - topic-to-evidence-pack mapping
+  - blog pre-publish refresh checklist expansion
+  - first prompt-side integration notes
+- progress:
+  - `logs/blog-write-readiness-sample.md` 已完成 8 篇代表性博客抽样评估
+  - 样本结论：`0 ready`, `4 mostly_ready`, `4 needs_sources`, `0 not_ready`
+  - 当前 corpus 已能支撑 PCBA testing、SMT、HDI、5G RF stackup、RF material selection 的工程骨架，但外部主源缺口仍会阻塞严肃发布
+
+### P4-05 External Source Gap Fill From Blog Readiness
+
+- status: `completed`
+- reason:
+  - 抽样评估暴露出一批博客写作会反复遇到的外部主源缺口
+  - 这些缺口应先进入 source registry / conservative fact 层，而不是在写博客时临时引用
+- first targets:
+  - IPC J-STD-001 and IPC-A-610 metadata
+  - IPC-9252 or equivalent electrical-test metadata
+  - IPC-2226 public metadata
+  - IPC-CC-830 public metadata
+  - FR-4 laminate manufacturer source anchors
+  - MCPCB / IMS thermal-management material anchors
+  - solder-paste reflow profile guidance anchors
+  - phased-array / phase-shifter context anchors
+- note:
+  - 这批应继续坚持 source-first；只有 source record 稳定后再写 fact cards
+- progress:
+  - 新增 IPC assembly / HDI / electrical-test / conformal-coating public metadata source records
+  - 新增 Isola FR408 / FR408HR FR-4 product datasheet anchors
+  - 新增 Ventec IMS family and VT-4B7 product-level IMS anchors
+  - 新增 Indium / Kester reflow-profile and solder-paste profile anchors
+  - 新增 Electrolube / HumiSeal conformal-coating manufacturer anchors
+  - 新增 Analog Devices / Qorvo phased-array and phase-shifter context anchors
+  - 新增 6 张保守聚合 fact cards，把这些 sources 接到博客 readiness gaps
+  - source-id / fact-id 引用检查已通过，当前计数：`149` source IDs，`71` fact IDs
+
+### P4-12 Layer-Count Blog Numeric Source Supplementation
+
+- status: `now`
+- reason:
+  - 10 篇 layer-count PCB manufacturing 博客是高数字密度、高表格密度写法
+  - 当前 `llm_wiki` 已足以支撑部分保守工程骨架，但还不足以安全复写这些文章里的大量数字型论断
+  - 在进入 `P4-06` 之前，先把最常用的数字主源缺口补到 evidence-pack 可消费水位
+- target:
+  - 建立 10 篇 layer-count 博客的 readiness / gap map
+  - 先补官方材料 datasheet anchors、标准/资格元数据、高速接口系统语境 anchors、以及先进工艺可靠性 anchors
+  - 明确哪些数字类型继续 gap-control，不进入稳定 facts
+- first outputs:
+  - `logs/layer-count-blog-readiness.md`
+  - 一个按 source class 拆分的数字补强队列，而不是直接写博客数字
+- first targets:
+  - `IPC-6012` / `IPC-6013` / `IST` public metadata or public reliability context
+  - DDR4 / DDR5 / PCIe Gen4/5 / 56G / 112G PAM4 board-level context anchors
+  - broader official FR-4 / low-loss multilayer datasheet coverage
+  - microvia / stacked microvia / sequential lamination reliability anchors
+- note:
+  - 不把 fabricator-specific capability、成本、交期、yield 百分比固化成 stable facts
+  - 不用第三方 datasheet 镜像为 Taconic / unresolved Arlon 补参数
+  - 长任务执行计划已固化到 `logs/p4-12-long-task-plan.md`
+  - 最新窄范围 reassessment 已确认：新增 `AS9100D` / `AS9131D` 只提高治理边界，不改变 `20-layer` / `22-layer` blocked verdict；后续只继续追能真正抬升 ceiling 的官方非博客页
+- progress:
+  - 已完成 10 篇 layer-count 博客数字诉求分类：材料参数、工艺能力、标准阈值、高速接口上下文、热/功率数字、动态商业数字
+  - 已完成当前 `llm_wiki` 证据层审计：材料 datasheet 层最强，TDR/VNA/impedance 验证层次之，layer-count 数字型工艺能力表最弱
+  - 已新增 `logs/layer-count-blog-readiness.md`，明确 10 篇博客的 readiness verdict 与 source-gap 批次
+  - 已完成 P4-12 Batch N1 第一轮：
+    - 新增 `sources/registry/standards/ipc-6012f-toc.md`
+    - 新增 `sources/registry/standards/ipc-6013e-toc.md`
+    - 新增 `sources/registry/standards/ipc-6012f-release.md`
+    - 新增 `sources/registry/standards/ipc-microvia-reliability-warning-2019.md`
+    - 新增 `facts/standards/ipc-rigid-flex-and-microvia-reliability-metadata.md`
+  - 这批把 rigid-board / flex-board performance-specification metadata 与 microvia reliability caution context 接入 layer-count 证据层，但仍不写阈值表
+  - 已完成 P4-12 Batch N2 第一轮：
+    - 新增 `sources/registry/standards/pcisig-pcie-4-faq.md`
+    - 新增 `sources/registry/standards/pcisig-pcie-5-faq.md`
+    - 新增 `sources/registry/methods/micron-ddr4-faqs.md`
+    - 新增 `sources/registry/methods/micron-ddr5-sdram-page.md`
+    - 新增 `sources/registry/methods/samsung-ddr5-dimm-architecture.md`
+    - 新增 `sources/registry/methods/ethernet-alliance-112g-pam4.md`
+    - 新增 `sources/registry/standards/ieee-8023ck-task-force.md`
+    - 新增 `facts/methods/high-speed-interface-system-context.md`
+  - 这批把 `PCIe 4/5`、`DDR4/DDR5`、`112G/PAM4` 的 public system-context anchors 接入 layer-count 证据层，但不把标准正文、channel budgets 或 board-loss tables 写成 stable facts
+  - 已完成 P4-12 Batch N3/N4 第一轮：
+    - 新增 `sources/registry/methods/nasa-nepp-microvia-reliability-2006.md`
+    - 新增 `sources/registry/methods/ipc-microvia-failure-modes-paper.md`
+    - 新增 `sources/registry/methods/ipc-stacked-microvia-reliability-paper.md`
+    - 新增 `sources/registry/standards/ipc-tm650-test-methods-index.md`
+    - 新增 `facts/methods/microvia-reliability-public-context.md`
+    - 新增 `facts/materials/isola-fr4-to-low-loss-family-ladder.md`
+  - 这批把 public microvia / stacked-microvia / IST context 和 `IS410 → 370HR → FR408/FR408HR → I-Speed/I-Tera MT40` 的保守 family ladder 接入 layer-count 证据层
+  - 已完成 P4-12 Batch N3 第二轮：
+    - 新增 `sources/registry/materials/shengyi-s1000-2m-product-page.md`
+    - 新增 `sources/registry/materials/shengyi-s7439-product-page.md`
+    - 新增 `sources/registry/materials/iteq-it-150da-page.md`
+    - 新增 `sources/registry/materials/iteq-it-968-page.md`
+    - 新增 `sources/registry/materials/doosan-ds-7402-page.md`
+    - 新增 `sources/registry/materials/doosan-ds-7409dqn-page.md`
+    - 新增 `sources/registry/materials/emc-notebook-materials-page.md`
+    - 新增 `facts/materials/non-isola-fr4-to-very-low-loss-coverage.md`
+  - 这批把 `Shengyi / ITEQ / Doosan / EMC` 的官方产品页接入 `FR-4 / high-Tg / low-loss / very-low-loss` vendor ladder，Nan Ya 仍因当前环境证书链问题暂不纳入
+  - 已完成 P4-12 Batch N4 第三轮：
+    - 新增 `sources/registry/standards/as9102c-first-article-inspection-page.md`
+    - 新增 `sources/registry/standards/iso-13485-2016-page.md`
+    - 新增 `sources/registry/standards/astm-e595-15r21-page.md`
+    - 新增 `sources/registry/methods/nasa-vacuum-outgassing-database-page.md`
+    - 新增 `sources/registry/standards/mil-prf-31032-general-spec-page.md`
+    - 新增 `sources/registry/standards/mil-prf-31032-qml-page.md`
+    - 新增 `sources/registry/standards/ipc-2226a-hdi-standard-page.md`
+    - 新增 `sources/registry/standards/ipc-2315-legacy-hdi-guide-page.md`
+    - 新增 `facts/standards/high-reliability-program-and-outgassing-metadata.md`
+    - 新增 `facts/standards/hdi-design-reference-status-metadata.md`
+  - 这批把 `22-layer` 所需的 hi-rel program metadata 和 `20-layer` 所需的 current-vs-legacy HDI design-reference metadata 接入 corpus，但仍不写付费标准阈值表、geometry tables 或 qualification pass/fail 数字
+  - 已完成 P4-12 Batch N4 第四轮：
+    - 新增 `sources/registry/standards/fda-qmsr-page.md`
+    - 新增 `sources/registry/standards/fda-udi-basics-page.md`
+    - 新增 `sources/registry/materials/panasonic-megtron-6-family-page.md`
+    - 新增 `sources/registry/materials/iteq-product-catalog-page.md`
+    - 新增 `sources/registry/materials/iteq-high-tg-very-low-loss-page.md`
+    - 新增 `facts/materials/build-up-and-hdi-material-context-for-20-layer.md`
+    - 更新 `facts/standards/high-reliability-program-and-outgassing-metadata.md`
+  - 这批把 `22-layer` 的 medical-device hi-rel framing 从 `ISO 13485` 扩展到 FDA `QMSR / UDI`，并把 `20-layer` 的 build-up / HDI 选材语境扩展到 Panasonic `MEGTRON 6` family 与 ITEQ 官方材料家族页
+  - 已完成 P4-12 Batch N4 第五轮：
+    - 新增 `sources/registry/standards/ipc-1782b-traceability-standard-page.md`
+    - 新增 `sources/registry/standards/as5553e-counterfeit-parts-page.md`
+    - 新增 `sources/registry/standards/as6081a-independent-distribution-page.md`
+    - 新增 `sources/registry/standards/as6301a-as6081a-compliance-page.md`
+    - 新增 `sources/registry/standards/as6171a-counterfeit-test-methods-page.md`
+    - 新增 `sources/registry/standards/as6496a-authorized-distribution-page.md`
+    - 新增 `sources/registry/standards/arp6178a-non-authorized-supplier-risk-page.md`
+    - 新增 `facts/standards/high-reliability-traceability-and-counterfeit-control-metadata.md`
+    - 新增 `facts/methods/any-layer-hdi-public-boundary-for-20-layer.md`
+  - 这批把 `22-layer` 的 traceability / counterfeit-control / compliance-verification / authorized-vs-independent distribution vocabulary 接到 `IPC` 与 `SAE` 官方 metadata 层，并把 `20-layer` 的 any-layer / `ELIC` 语境边界固化为单独的 gap-control 卡
+  - 已完成 P4-12 Batch N4 第六轮：
+    - 新增 `sources/registry/standards/fda-21cfr-82050-purchasing-controls-page.md`
+    - 新增 `sources/registry/standards/fda-21cfr-82065-traceability-page.md`
+    - 新增 `sources/registry/standards/fda-21cfr-820181-device-master-record-page.md`
+    - 新增 `sources/registry/standards/fda-21cfr-820184-device-history-record-page.md`
+    - 新增 `facts/standards/fda-medical-device-documentation-and-traceability-metadata.md`
+  - 这批把 `22-layer` 所需的 medical-device supplier-control / traceability / `DMR` / `DHR` vocabulary 接到 FDA 与 eCFR 官方 metadata 层，但仍不把 bare PCB 制造直接写成普遍适用的 FDA regulatory claim
+  - 已完成 P4-12 Batch N4 第七轮：
+    - 新增 `sources/registry/materials/panasonic-megtron-6-halogen-free-page.md`
+    - 更新 `facts/materials/build-up-and-hdi-material-context-for-20-layer.md`
+  - 这批为 `20-layer` 的 build-up / high-layer 材料语境增加了一个稳定官方 Panasonic 家族锚点，但仍不写 `RCC` thickness、microvia geometry、stack height 或 `IST` 数字
+  - 已完成 P4-12 Batch N4 第八轮：
+    - 新增 `sources/registry/standards/nasa-configuration-management-page.md`
+    - 新增 `sources/registry/standards/nasa-std-0005-configuration-management-page.md`
+    - 新增 `sources/registry/standards/nasa-gidep-page.md`
+    - 新增 `sources/registry/standards/dla-counterfeit-detection-avoidance-program-page.md`
+    - 新增 `facts/standards/high-reliability-configuration-control-and-problem-reporting-metadata.md`
+  - 这批把 `22-layer` 所需的 configuration-control / baseline / audit / nonconforming-item / counterfeit-avoidance reporting vocabulary 接到 NASA 与 DLA 官方 metadata 层，但仍不写 supplier qualification、audit passed、approved baseline 之类结论
+  - 已完成 P4-12 Batch N4 第九轮：
+    - 新增 `sources/registry/materials/ventec-ultrathin-build-up-datasheet-page.md`
+    - 新增 `sources/registry/materials/resonac-mcl-hs200-build-up-page.md`
+    - 更新 `facts/materials/build-up-and-hdi-material-context-for-20-layer.md`
+  - 这批把 `20-layer` 所需的 build-up / `ALIVH` / sequential-lamination-friendly material vocabulary 扩展到 Ventec 与 Resonac 官方页，但仍不写 layer-count / geometry / reliability 数字
+  - 已完成 P4-12 Batch N4 第十轮：
+    - 新增 `sources/registry/materials/resonac-mcl-e700g-build-up-page.md`
+    - 新增 `sources/registry/materials/resonac-mcl-e705g-build-up-page.md`
+    - 更新 `facts/materials/build-up-and-hdi-material-context-for-20-layer.md`
+  - 这批继续扩展 `20-layer` 的 build-up-oriented laminate vocabulary，用 Resonac 官方 `HDI / PWB / build-up construction` 页面补强语境，但仍不写 package-substrate 数字、warpage 指标或制造窗口
+  - 已完成 P4-12 Batch N4 第十一轮：
+    - 新增 `facts/materials/20-layer-build-up-material-boundary-and-non-claims.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批把 `20-layer` build-up material 的 guardrail 单独固化，明确 Panasonic / Ventec / Resonac / ABF / BT anchors 只能支撑 vocabulary 与 family framing，不能支撑 process windows、stack recipes 或 factory capability
+  - 已完成 P4-12 Batch N4 第十二轮：
+    - 新增 `facts/methods/20-layer-any-layer-hdi-rewrite-guardrail.md`
+    - 新增 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批把 `20-layer` 与 `22-layer` 的 rewrite boundaries 显式固化成 fact cards，强制把现有草稿切分为 `safe to keep`、`keep but downgrade`、`must exclude`
+  - 这批不新增 readiness 分数，也不放行 `P4-06`；它的作用是让后续 evidence-pack bridge 无法绕开 `Class 3/3A` 阈值表、`ELIC` 几何表、`IST` 数字、supplier qualification、factory capability 等高风险 claim classes
+  - 已完成 P4-12 Batch N4 第十三轮：
+    - 新增 `sources/registry/standards/ipc-6012em-medical-addendum-release.md`
+    - 新增 `sources/registry/methods/nasa-outgassing-user-guide-page.md`
+    - 新增 `sources/registry/methods/ipc-tr-486-ist-round-robin-page.md`
+    - 更新 `facts/standards/high-reliability-program-and-outgassing-metadata.md`
+    - 更新 `facts/methods/microvia-reliability-public-context.md`
+    - 更新 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批把 `22-layer` 的 medical-addendum 与 outgassing-screening 边界再抬高一层：`IPC-6012EM` 只支持“medical addendum exists”这一层，NASA user guide 只支持把 `TML/CVCM` 放回 screening context，不支持把这些值写成通用 acceptance criteria
+  - 同时这批也把 `20-layer` 的 `IST` 语境从“技术论文提到过”抬高到“IPC 有正式 `IPC-TR-486` study/report metadata”，但仍然不放行 `200/300+ cycles`、coupon plans 或 qualification thresholds
+  - 已完成 P4-12 Batch N4 第十四轮：
+    - 新增 `sources/registry/standards/ipc-6012em-medical-addendum-page.md`
+    - 新增 `sources/registry/standards/ipc-6012fs-space-military-addendum-page.md`
+    - 新增 `sources/registry/standards/ipc-6012fs-toc.md`
+    - 新增 `facts/standards/ipc-6012-addendum-program-metadata.md`
+    - 更新 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批把 `22-layer` 的 `IPC-6012` 体系拆得更清楚：现在可以公开区分 base `IPC-6012F`、medical addendum `IPC-6012EM`、以及 current space/military avionics addendum `IPC-6012FS`
+  - `IPC-6012FS` 的公开 product metadata 和 TOC 现在足以支持“program-specific addendum touches acceptance/testing-related clause families”这一层，但仍然不能把 addendum 里的 acceptance criteria、sample sizes、test frequencies 或 `Class 3A` 阈值表写进 evidence packs
+  - 已完成 P4-12 Batch N4 第十五轮：
+    - 新增 `sources/registry/standards/iaqg-9102-page.md`
+    - 新增 `sources/registry/standards/iaqg-scmh-fai-page.md`
+    - 新增 `sources/registry/materials/isola-370hr-processing-guide.md`
+    - 新增 `facts/standards/fai-and-aerospace-quality-workflow-metadata.md`
+    - 新增 `facts/methods/high-layer-rigid-board-manufacturability-context.md`
+    - 更新 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批把 `22-layer` 的 guarded rewrite 再往前推了一步：`FAI` 现在可以被公开锚定为跨供应链 verification/documentation workflow，而 high-layer rigid-board 也有了官方 process-guide 层来支持 lamination / dimensional-control / registration-sensitive framing
+  - 但这批仍然不放行 `FAI` forms、re-accomplishment triggers、audit outcomes、hole-size / aspect-ratio / registration numbers、以及任何 shop capability tables
+  - 已完成 P4-12 Batch N4 第十六轮：
+    - 新增 `sources/registry/standards/as9145-page.md`
+    - 新增 `sources/registry/standards/as9103-page.md`
+    - 新增 `sources/registry/standards/iaqg-oasis-page.md`
+    - 新增 `sources/registry/materials/panasonic-megtron-7-series-page.md`
+    - 更新 `facts/standards/fai-and-aerospace-quality-workflow-metadata.md`
+    - 更新 `facts/methods/high-layer-rigid-board-manufacturability-context.md`
+    - 更新 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批继续用多 agent 把 `22-layer` 的 workflow context 做厚：`FAI` 现在不只是 `AS9102`，还可以安全放进 `AS9145` product/process validation、`AS9103` variation management、以及 IAQG `OASIS` verification ecosystem 这一整层
+  - 同时 high-layer rigid-board 的 supplier-side corroboration 也扩到 Panasonic `MEGTRON 7` 官方 `very high layer count` / `HDI` 定位，但仍然不能把这种 family positioning 写成 stackup feasibility、registration capability 或 production yield claim
+  - 当前仍不放行：
+    - `20-layer` 的 `ELIC / RCC thickness / laser-via geometry / IST thresholds / yield / cost / lead-time` 数字
+    - `22-layer` 的 `Class 3/3A` 阈值表、supplier qualification、FDA/ISO certification 状态、outgassing acceptance 数字
+  - 已修正 `facts/materials/isola-fr4-to-low-loss-family-ladder.md` 中的占位 `source_id`
+  - 最新 reassessment 结论：
+    - `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` = `mostly_ready` for conservative rewrite
+    - `20 / 22-layer` = `needs_sources`
+    - 上述结论不等于“当前博客原稿可直接发布”；现稿仍普遍存在高风险数字与 capability overclaim
+  - 长任务后续按 `logs/p4-12-long-task-plan.md` 执行，优先批次为：
+    - `Batch L1 Audit / Validation Ecosystem Follow-On`
+    - `Batch L2 Cross-Vendor High-Layer Process Corroboration`
+    - `Batch L3 20-Layer Reliability Vocabulary Tightening`
+    - `Batch L4 Reassessment Gate`
+  - 已完成长任务 `Batch L1`：
+    - 新增 `sources/registry/standards/iaqg-certification-page.md`
+    - 新增 `sources/registry/standards/ipc-validation-services-page.md`
+    - 更新 `facts/standards/fai-and-aerospace-quality-workflow-metadata.md`
+    - 更新 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+  - 这批把 `22-layer` 的 audit / verification ecosystem 再抬高一层：现在可以安全写到 `IAQG certification` oversight 与 `IPC Validation Services` ecosystem context，但仍不能写 supplier listed / validated / certified 结论
+  - 已完成长任务 `Batch L2`：
+    - 新增 `sources/registry/materials/ventec-vt464lt-process-guide.md`
+    - 更新 `facts/methods/high-layer-rigid-board-manufacturability-context.md`
+  - 这批把 high-layer rigid-board 的 cross-vendor process corroboration 再加厚到 Ventec process-guide 层，支持 handling / lot-traceability / inner-layer prep discipline wording，但仍不能写 recipe、timing、registration table 或 capability 数字
+  - 已推进长任务 `Batch L3`：
+    - 更新 `facts/methods/microvia-reliability-public-context.md`
+    - 更新 `facts/methods/20-layer-any-layer-hdi-rewrite-guardrail.md`
+  - 这批把 `20-layer` 的 `IST` / `TM-650` wording 更明确地绑定到 named method/report context，而不是 letting drafts 偷带 threshold、coupon 或 pass/fail 规则
+  - 已完成长任务 `Batch L3` 收口：
+    - 新增 `sources/registry/standards/ipc-tm650-method-development-packet-page.md`
+    - 新增 `sources/registry/standards/ipc-standards-related-resources-page.md`
+    - 新增 `sources/registry/materials/doosan-dsf-900sq-page.md`
+    - 更新 `facts/methods/microvia-reliability-public-context.md`
+    - 更新 `facts/methods/20-layer-any-layer-hdi-rewrite-guardrail.md`
+    - 更新 `facts/materials/build-up-and-hdi-material-context-for-20-layer.md`
+  - 这批把 `20-layer` 的 method layer 再向前推了一步：现在 `TM-650` 不只是 method-name index，还接到了 method-development governance 与 representative coupon context；同时 build-up material 侧多了一个官方 `multiple lamination + HDI process + thermal reliability` 的 Doosan anchor
+  - `Batch L4` reassessment 结论：
+    - `20-layer` 仍然 `needs_sources`
+    - `22-layer` 仍然 `needs_sources`
+    - `P4-06` 继续阻塞
+  - `Batch L5` 已落：
+    - 官方 IPC `2.6.26A` / `2.6.27B` / `2.6.7.2C` method anchors
+    - AGC `fastRise` / `bond-plies-prepregs` material-form anchors
+    - IPC `6012` addendum taxonomy anchor
+  - `Batch L5` effect:
+    - `20-layer` method vocabulary is stronger for `thermal cycling` / `thermal stress` / `continuity` / `representative coupon` wording
+    - `20-layer` material vocabulary is stronger for `bond-ply` / `nonreinforced prepreg` / `sequential lamination` / `stacked or staggered microvias`
+    - `22-layer` addendum hierarchy vocabulary is stronger for base-vs-addendum framing across `medical` / `space-military` / `automotive`
+  - `Batch L5` verdict:
+    - `20-layer` still `needs_sources`
+    - `22-layer` still `needs_sources`
+    - `P4-06` still blocked
+  - 最新 follow-on 已新增：
+    - `sources/registry/methods/nasa-nepp-program-overview-2019.md`
+    - `sources/registry/materials/mitsui-rcc-engineered-materials-page.md`
+    - `sources/registry/standards/as9100d-qms-requirements-page.md`
+    - `sources/registry/standards/as9101g-audit-requirements-page.md`
+    - `sources/registry/standards/as9131d-nonconformity-reporting-page.md`
+  - 本轮 effect:
+    - `20-layer` 新增 `screening / qualification / test / reliable use` assurance-hierarchy vocabulary
+    - `20-layer` 新增官方 `RCC` material-form anchor
+    - `22-layer` 新增公开 baseline-`QMS` / customer-regulatory-precedence / audit-process / conformity-reporting / process-effectiveness wording
+  - 结论不变：
+    - `20-layer` 仍然 `needs_sources`
+    - `22-layer` 仍然 `needs_sources`
+    - `P4-06` 继续阻塞
+
+### P4-06 Evidence-Pack Bridge To Prompt Templates
+
+- status: `in_progress`
+- target:
+  - 把当前 topic wiki / fact cards / source records 变成 `prompts_template/` 可稳定消费的 evidence-pack 规范
+  - 先接模板规则和 checklist，不直接重写博客正文
+- first outputs:
+  - evidence-pack input contract
+  - per-blog pre-publish refresh checklist
+  - source/fact/wiki selection rules for draft prompts
+- progress:
+  - 新增 `logs/p4-06-first-wave-bridge-queue.md`
+  - 新增 `logs/p4-06-6-layer-bridge-prep.md`
+  - 新增 `logs/p4-06-8-layer-bridge-prep.md`
+  - 新增 `logs/p4-06-10-layer-bridge-prep.md`
+  - 新增 `logs/p4-06-12-layer-bridge-prep.md`
+  - 新增 `logs/p4-06-16-layer-bridge-prep.md`
+  - 新增 `logs/p4-06-14-layer-bridge-prep.md`
+  - first-wave `6-layer / 8-layer / 10-layer` 已完成逐篇 bridge-prep 控制说明，明确模板选择、可用 `fact_id/source_id` 候选、章节级 keep/downgrade/exclude 规则、refresh-required 项和 stop conditions
+  - 新增 `logs/p4-06-6-layer-evidence-pack.md`
+  - 新增 `logs/p4-06-8-layer-evidence-pack.md`
+  - 新增 `logs/p4-06-10-layer-evidence-pack.md`
+  - first-wave `6-layer / 8-layer / 10-layer` 已完成实际 evidence-pack 输入稿组装，包含 traceable pack metadata、候选 `fact_id/source_id`、章节级 claim 约束、citation plan、AI-SEO primitives 与 final preflight
+  - second-wave `12-layer / 16-layer / 14-layer` 已完成逐篇 bridge-prep 控制说明，重点把 `12-layer` 的 `B + D`、`16-layer` 的 `B + D/E`、`14-layer` 的 `C + B + E` 风险拆开治理
+  - 新增 `logs/p4-06-12-layer-evidence-pack.md`
+  - 新增 `logs/p4-06-16-layer-evidence-pack.md`
+  - 新增 `logs/p4-06-14-layer-evidence-pack.md`
+  - second-wave `12-layer / 16-layer / 14-layer` 已完成实际 evidence-pack 输入稿组装，明确 system-context、thermal-platform、rigid-flex branch、standards boundary 的可用层与必须删除数字
+  - 新增 `logs/p4-06-safe-wave-draft-feasibility-and-high-density-gap-queue.md`
+  - 当前 six-pack safe wave 已完成 draft-feasibility 判断：`6 / 8 / 10 / 12 / 14 / 16-layer` 全部可进入 conservative draft execution，但仍全部未达到 high-density ready
+  - 当前完成的是 first-wave + second-wave evidence-pack 输入稿，不是最终博客重写，也不是高数字密度放行
+- note:
+  - 这一步开始进入 Phase 5 入口，但仍不应该把不完整 source gaps 藏进成稿
+  - `P4-12` 完成前，不应把 layer-count 博客批量桥接进 evidence packs
+  - 即使未来进入 `P4-06`，`20-layer` 与 `22-layer` 也必须先服从专门 rewrite guardrail，再决定是否能进入 evidence-pack 选择层
+- current queue:
+  - safe-wave 下一步：如果需要写作，按 six-pack evidence-pack 进入 conservative draft execution
+  - high-density program 下一步：`NQ-4` 已总收口；如果继续治理，回到 `P4-13` blocked-readiness 主线
+  - `18-layer` / `24-layer` 暂缓，不进 first-wave
+  - `20-layer` / `22-layer` 继续 blocked
+  - `NQ-4` 已通过 `logs/p4-06-nq-4-final-closeout.md` 总收口，不再作为 active queue 继续展开
+  - `P4-13` 已完成对 `20-layer` / `22-layer` draft 本体的直查 reassessment：当前不是简单改 readiness note，而是仍需一轮新的 surviving-blocker containment pass
+
+### P4-07 Site-Material Baseline Coverage
+
+- status: `completed`
+- reason:
+  - 两个站点非博客内容已经公开提到的材料应作为基础能力层覆盖
+  - 这些材料不能只停留在内部 JSON 或博客素材里
+- target:
+  - 扫描 `frontendAPT` / `frontendHIL` 英文非博客 JSON 的材料品牌、家族、型号
+  - 对已有 source/fact coverage 做差异清单
+  - 优先补官方主源锚点；找不到稳定产品级官方锚点的材料只写 gap-control，不写参数事实
+- progress:
+  - 新增 `logs/site-material-baseline-coverage.md`
+  - 新增 Arlon 官方目录、85N 产品页、laminate guide source records
+  - 新增 Isola 370HR、I-Speed、I-Tera MT40、IS410 datasheet source records
+  - 新增 Panasonic MEGTRON lineup、MEGTRON 4 series source records
+  - 新增 Rogers RO4400 bondply family page 和 RO4400 / RO4450F / RO4460G2 datasheet source records
+  - 新增 5 张材料覆盖 / gap-control fact cards
+  - source-id / fact-id 引用检查已通过，当前计数：`160` source IDs，`76` fact IDs
+- remaining gaps:
+  - Taconic TLY / TLX / TLC / TLE / RF-35 产品级官方 datasheet anchors
+  - Arlon 33N / 35N / 45N / 47N / CLTE-XT / TC350 / AD250 / AD255 / AD300 产品级官方 anchors
+  - ceramic / alumina / AlN / BT resin / ABF / LCP / flex polyimide 官方 class-level anchors
+
+### P4-08 Site-Material Baseline Follow-On
+
+- status: `completed`
+- target:
+  - 继续补 P4-07 暴露出的 unresolved site-mentioned material gaps
+  - 仍然 source-first，不从站内 JSON 或第三方 datasheet 镜像抽参数
+- first targets:
+  - Taconic product-level official source discovery
+  - Arlon product-level official source discovery
+  - ceramic / alumina / AlN class-level official anchors
+  - ABF / BT resin / LCP / flex polyimide class-level anchors
+- progress:
+  - 新增 CeramTec ceramic substrates 和 MARUWA AlN substrate 官方 source records
+  - 新增 Ajinomoto ABF background、AFT ABF product-family、MGC BT materials 官方 source records
+  - 新增 Panasonic FELIOS flexible materials 和 FELIOS LCP 官方 source records
+  - 新增 4 张保守材料 fact cards，覆盖 ceramic/alumina/AlN、ABF/BT、flex/LCP、P4-08 gap-control
+  - 类别级官方锚点已补齐到可用于 blog planning / evidence-pack discovery
+  - Taconic 和 Arlon 多个具体 grade 仍未参数可用，继续保持 gap-control
+
+### P4-09 Taconic And Arlon Product-Level Recovery
+
+- status: `completed`
+- reason:
+  - 这两个材料族已经被站点提到，但产品级官方资料仍不完整
+  - 不能用第三方 datasheet 镜像填参数
+- target:
+  - 只登记官方厂家或品牌控制页面
+  - 能找到产品级页面就登记 source record
+  - 找不到稳定官方 source 时，只扩展 gap-control，不写参数 fact
+- first targets:
+  - Taconic TLY / TLX / TLC / TLE / RF-35 / RF-35A
+  - Arlon 33N / 35N / 45N / 47N / CLTE-XT / TC350 / AD250 / AD255 / AD300 / CuClad / DiClad
+- progress:
+  - 新增 Arlon 33N / 35N / 37N / 45N / 47N / 84N 官方 product-page source records
+  - 新增 Arlon controlled-flow prepreg 和 heavy-copper layers 官方 application source records
+  - 新增 `materials-arlon-product-page-recovery-n-series` fact card，把这些记录定位为 product identity anchors，而不是参数 facts
+  - 更新 Arlon 官方覆盖卡，明确 N-series 覆盖提升，但 CLTE-XT / TC350 / AD250 / AD255 / AD300 / CuClad / DiClad 仍未 product-level 闭环
+  - 更新 Taconic gap 卡，记录 `taconic-add.com` 候选 URL 当前不可达，且未登记第三方 datasheet 镜像
+
+### P4-10 Material Wiki Densification From Site Baseline
+
+- status: `completed`
+- reason:
+  - 站内材料 source/fact 层已经扩到可以上卷一批材料主题页
+  - 继续只补 source 会降低可消费性，下一步应把材料基线变成 topic wiki
+- target:
+  - 把 Arlon / ceramic-AlN / ABF-BT / flex-LCP 这些已补材料上卷成主题 wiki
+  - 每页明确官方 source、内部 site support、must-refresh numeric boundaries
+- first targets:
+  - Arlon material-family source governance and use boundaries
+  - Ceramic / AlN / IMS thermal-platform material framing
+  - IC substrate material classes: ABF and BT
+  - Flex material classes: PI / LCP / rigid-flex source boundaries
+- progress:
+  - 新增 `wiki/materials/arlon-material-family-source-governance.md`
+  - 新增 `wiki/materials/ceramic-aln-ims-thermal-platforms.md`
+  - 新增 `wiki/materials/abf-and-bt-substrate-material-classes.md`
+  - 新增 `wiki/materials/flex-material-classes-pi-lcp-and-rigid-flex-boundaries.md`
+  - 这四页统一明确官方 source、内部 site support 和 must-refresh numeric boundaries
+
+## Watch
+
+### P4-11 Full Non-Blog Page Coverage Audit And Absorption
+
+- status: `completed`
+- reason:
+  - 用户要求提升为更严格标准：两个站英文非博客 public pages 不仅要有 source coverage，还要进入 `facts/wiki` 消费层
+  - 目录级 index 覆盖不能等同于逐页 source + 高价值页面吸收
+- target:
+  - 把两个站英文非博客公开 JSON 升级到逐页 source coverage
+  - 优先补场景页、漏消费页，以及能直接提升 prompt 消费质量的页面
+  - 完成后重新跑 page-level 覆盖审计与 `internal_unreferenced` 审计
+- first targets:
+  - APT industries 十个单页 source records 与场景聚合 wiki
+  - 现有未被 facts/wiki 消费的 PCB/PCBA/HIL 页面
+  - 剩余 capability / resource / landing / group pages 的逐页 source records
+- progress:
+  - 已完成 APT industries 十个单页 source records 吸收，并上卷到 `facts/methods/internal-application-scenario-coverage-map.md` 与 `wiki/applications/industry-application-scenarios-and-boundaries.md`
+  - 已完成 Batch B APT PCB/PCBA 服务层吸收：
+    - 新增 `facts/methods/pcb-prototype-quickturn-and-volume-routing.md`
+    - 新增 `facts/methods/pcb-stackup-special-process-and-baseline-families.md`
+    - 新增 `wiki/processes/pcb-service-routing-from-prototype-to-special-process.md`
+    - 扩展 `wiki/processes/advanced-pcb-fabrication-and-stackup-planning.md`
+    - 扩展 `wiki/processes/pcba-npi-to-mass-production-flow.md`
+    - 扩展 `facts/methods/pcba-box-build-system-integration-posture.md`
+    - 扩展 `facts/methods/pcba-layered-inspection-stack.md`
+    - 扩展 `facts/methods/conformal-coating-source-coverage.md`
+- progress:
+  - 已完成 APT capabilities/resources 层 Batch A 吸收
+  - 新增 `facts/methods/internal-capability-family-map.md`
+  - 新增 `facts/methods/internal-resource-layer-prompt-support-corpus.md`
+  - 新增 `wiki/processes/apt-capability-family-map-and-boundaries.md`
+  - 新增 `wiki/processes/apt-resource-layer-for-dfm-faq-and-download-retrieval.md`
+  - Batch A 覆盖 `frontendapt-capabilities-index-page-en`、`frontendapt-{ceramic,flex,hdi,metal,rigid-flex,rigid}-pcb-capability-page-en`
+  - Batch A 覆盖 `frontendapt-resources-index-page-en`、`frontendapt-{dfm-guidelines,downloads-materials,downloads,faq,glossary-terms}-resource-page-en`
+  - 已完成 Batch C 的材料与产品家族层吸收
+  - 新增 `facts/materials/apt-rogers-internal-framing.md`
+  - 新增 `facts/materials/hil-base-laminate-and-build-stage-family-map.md`
+  - 新增 `wiki/processes/prototype-vs-quick-turn-pcb-routing.md`
+  - Batch C 覆盖 `frontendapt-materials-index-en`、`frontendapt-materials-rf-rogers-page-en`、`frontendapt-materials-rogers-pcb-manufacturing-page-en`
+  - Batch C 覆盖 `frontendhil-{fr4-pcb,halogen-free-pcb,high-tg-pcb,multilayer-pcb,single-double-layer-pcb}-product-page-en`
+  - Batch C 覆盖 `frontendhil-{pcb-prototype,quick-turn-pcb}-landing-en`
+  - 已完成最终 page-level coverage 审计：无缺页
+  - 已完成最终 consumption 审计：`internal_total 133`，`internal_unreferenced 0`
+  - 结论：两个站英文非博客 internal source records 已全部进入 `facts/wiki` 消费层，可转入 `P4-06`
+
+### P4-12 Layer-Count Blog Numeric Source Supplementation
+
+- status: `now`
+- reason:
+  - `20-layer` / `22-layer` 仍然阻塞 `P4-06`
+  - 当前任务只继续吸收真正能抬高 conservative rewrite ceiling 的官方主源
+- execution note:
+  - 不再以零散 narrow-source hunting 方式推进
+  - 后续统一受 `logs/high-numeric-density-program-plan.md` 管理
+- latest progress:
+  - 新增 `sources/registry/materials/isola-sequential-lamination-in-pcbs-note.md`
+  - 扩展 `facts/methods/microvia-reliability-public-context.md`
+  - 扩展 `facts/methods/20-layer-any-layer-hdi-rewrite-guardrail.md`
+  - 扩展 `facts/materials/build-up-and-hdi-material-context-for-20-layer.md`
+  - 明确把 `Isola Sequential Lamination in PCBs` 仅用于 `sequential lamination`、`stress factors`、`failure modes` 语义层
+  - 明确拒绝把该 note 变成 lamination-count、reflow-cycle、qualification、field-life 数字来源
+  - 该轮评估时曾暂缓 `AGC fastRise` 与 `IPC Validation Services FAQ`；后续长任务 reassessment 已将两者分别吸收进不同层：`fastRise` 已作为 guarded material-form vocabulary source 落库，`IPC Validation Services FAQ` 已作为 `22-layer` qualification/listing hierarchy 的边界精度补强来源落库，但两者都不改变 blocked verdict
+  - 新增 `sources/registry/standards/ipc-validation-services-faq-page.md`
+  - 新增 `sources/registry/standards/ipc-validation-services-standards-gap-analysis-page.md`
+  - 新增 `sources/registry/materials/panasonic-megtron-m-page.md`
+  - 扩展 `facts/standards/fai-and-aerospace-quality-workflow-metadata.md`
+  - 扩展 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+  - 扩展 `facts/materials/non-isola-fr4-to-very-low-loss-coverage.md`
+  - 这轮把 `IPC FAQ` 与 `Standards Gap Analysis` 作为一组落库，用来补 `22-layer` 的 qualification/listing hierarchy 中间层，而不是把它们误读成 supplier approval
+  - 这轮只新增一个 Panasonic product-grade 数字锚点 `MEGTRON M`，不把 `IST` 或 `high multilayer` 图示转写成 capability 结论
+  - 新增 `sources/registry/methods/nasa-workmanship-page.md`
+  - 扩展 `facts/methods/microvia-reliability-public-context.md`
+  - 把 NASA workmanship 仅用于 `interconnect quality`、`inspection techniques`、`defect criteria` 这层公开治理语义，不把 NASA workmanship 转写为普通 `20-layer` bare-board acceptance 或 supplier qualification
+  - 评估后暂不落 IPC `Qualified Test Laboratories` 页面，因为它更偏 qualification ecosystem，而这一轮主线缺口是 `20-layer` 的 reliability-governance / inspection wording
+  - 新增 `sources/registry/standards/ipc-validation-services-qpl-ipc-4101-page.md`
+  - 新增 `sources/registry/standards/far-44-303-extent-of-review-page.md`
+  - 新增 `sources/registry/standards/ipc-validation-services-qpl-ipc-4103-page.md`
+  - 新增 `sources/registry/standards/ipc-validation-services-qml-ipc-1791-page.md`
+  - 扩展 `facts/materials/20-layer-build-up-material-boundary-and-non-claims.md`
+  - 扩展 `facts/standards/high-reliability-program-and-outgassing-metadata.md`
+  - 扩展 `facts/standards/fai-and-aerospace-quality-workflow-metadata.md`
+  - 扩展 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+  - 这轮把 `IPC-4101 QPL` 仅用于 `base-material / product / site listing` 边界，不把它转写为 finished-board qualification、interconnect qualification 或 customer acceptance
+  - 这轮把 `FAR 44.303` 仅用于 `purchasing-system review`、`subcontractor responsibility`、`postaward management`、`higher-level quality standards` 的采购治理语义，不把它转写为 supplier approval、qualification 或 release authority
+  - 这轮把 `IPC-4103 QPL` 仅用于 `high-speed/high-frequency base-material / bonding-layer / product / site listing` 边界，把 `IPC-1791 QML` 仅用于 `trusted designer / fabricator / assembler` 的 organization-level `QML` 边界，不把它们转写为 finished-board qualification、customer acceptance 或 trusted-source approval
+  - 补充接受官方 `J-STD-001S Space/Military Addendum QML` 页面，但仅把它用于 `EMS/OEM assembly-process QML` 边界，不把 assembly-process listing 转写为 bare-board qualification、`IPC-6012FS` standing、supplier approval 或 release authority
+  - 补充接受官方 `IPC-A-600K` TOC 和 `IPC-6011A` TOC，分别仅用于 `bare-board acceptability / inspection` 与 `generic IPC-601X framework` 边界，不把它们转写为 `IPC-6012` 阈值、supplier conformance、assembly workmanship 或 release authority
+  - 已接受官方 `MIL-PRF-55110` ASSIST detail page，但仅作为 legacy rigid-board specification 的 identity / scope / inactive-status / `MIL-PRF-31032` linkage anchor；DLA `QPL/QML` 侧 `55110` 状态页仍因主文本不可稳定直读而继续 defer
+  - IPC shop 的 `IPC-9691` / `IPC-4121` / `IPC-9241` 仍未形成可干净复核的 public primary text；相关 shop 页因 `403` 继续 gap-control
+  - 长任务新批次接收 NASA 2021/2022 两条 NTRS 评价方法记录、Isola `IS410` processing guide、以及 DLA `QML/QPL/QBL` listing page；分别只用于 `20-layer` 的 inspection / failure-analysis / physics-of-failure / mainstream laminate-prepreg boundary，以及 `22-layer` 的 government-side qualification-listing hierarchy
+  - 这批不把 NASA evaluation records 转写为 qualification plans、coupon rules、acceptance thresholds，也不把 DLA listing infrastructure 转写为 supplier approval、current listing status 或 acquisition acceptance
+  - 长任务后续再次验证 `MIL-PRF-31032` rigid-multilayer specification-sheet detail，但当前网络路径仍未提供干净 primary text；该 specification-sheet 细分层继续作为高价值候选保留在 deferred 队列，不进入 corpus
+  - 长任务新批次接收 AGC `Meteorwave 1000NF` 与 Rogers `2929 Bondply`，并复用 AGC `Bond Plies / Prepregs` 类别页，把 `20-layer` 的 bonding-layer / no-flow / unreinforced bondply 材料形态边界再拉清一层
+  - 这批不把 `no-flow prepreg`、`bond ply`、`unreinforced bondply` 转写为默认 stack recipe、blind-via reliability、qualification 或 factory capability
+  - 长任务新批次接收官方 Ventec `VT-47LT` datasheet page，把 `20-layer` 的 prepreg-side `Any-layer HDI Designs` / `Sequential Laminations` / `High Reliability for HDI Designs` 材料定位边界再拉清一层
+  - 这批不把 `VT-47LT` 的 `any-layer HDI`、`sequential lamination`、`high reliability` wording 转写为 rigid `20-layer` 默认架构、qualification 证据或 factory capability
+  - 最新 follow-on 把 `FRCC` / `RCC` / `bond ply` / `controlled-flow prepreg` / `no-flow prepreg` / ultrathin build-up / supplier-page `any-layer HDI` 再压成 evidence-pack intake 规则，只作为 prompt-safety tightening 与 material-form separation，不作为 readiness upgrade
+  - 继续复用现有 corpus，把 Arlon `37N` / `47N` 官方 low-flow product pages 接回 `controlled-flow` 分支，只作为 product-identity tightening，不作为 datasheet-grade process/parameter recovery
+  - 最新 follow-on 新增历史 `IPC/JPCA-4104` TOC、官方 Ventec `VT-464LT RCC`、官方 `AT&S` `Anylayer` 页面，只把 `HDI/microvia` taxonomy、`RCC/bondply`、supplier-side any-layer architecture 进一步压实为边界词汇，不作为 readiness upgrade
+  - 已完成 AGC `N7000-3F`、ITEQ `IT-602G`、Rogers `RO4835T / RO4450T` 这组更接近 numeric material / process context 的官方锚点补充；它们只用于 product-grade 数字与 named-construction process context，不用于 generic recipe
+  - 已完成 `PCIe 6.0 FAQ`、JEDEC `DDR5` Business Wire 发布链路、`OIF CEI-112G`、`TE 112G` 这组 system-context 锚点补充；它们只用于 interface / interconnect ecosystem vocabulary，不用于 channel budget、board-loss numbers 或 capability claims
+  - 已接受官方 `MIL-PRF-31032/1E` rigid-multilayer specification-sheet detail page，但仅用于 `MIL-PRF-31032` 体系下 rigid multilayer thermosetting-resin branch 的 sheet-level hierarchy / identity framing，不转写为 qualification flow、listing status 或 acceptance authority
+  - 已接受官方 `IPC-6012FA` product page 与 TOC，但仅用于当前 automotive addendum 的 procurement-trigger hierarchy、clause-family visibility、base-vs-addendum framing，不转写为 automotive thresholds、supplier compliance 或 program acceptance
+  - 已接受官方 Shengyi `S7439 / S7439B` processing guide，但仅用于 mainstream supplier-side 的 storage / lay-up / drilling / desmear sensitivity 语义层，不转写为 bake schedule、press cycle、drill table 或 capability claims
+  - 已接受官方 TUC `ThunderClad 5Q` product page，作为一条新的 very-low-loss / high-layer-count product-grade 数字锚点落入 non-Isola 数字材料梯度；仅用于产品身份、条件化数值与 guarded `high layer count` 定位，不转写为 stack recipe、qualification 或 factory capability
+  - 已接受官方 `DFARS 252.246-7008`，但仅用于 electronic-parts `preferred source hierarchy`、`risk-based traceability`、record availability、inspection/testing/authentication 与 subcontract flowdown 的采购治理语义，不转写为 supplier approval、authentic-lot proof 或 bare-board technical criteria
+  - 已接受官方 `DLAD 46.291`，但仅用于 `production lot testing`、lot-conformance evidence、traceability documentation、以及 contracting-officer authority 的合同治理语义，不转写为 universal `PLT` sample plans、PCB-specific test methods 或 accepted-lot proof
+  - 已接受官方 `FAR 52.246-11`，但仅用于 contract-listed `higher-level quality standards` 与 applicable lower-tier subcontract flowdown 的合同质量治理语义，不转写为 standard invocation proof、supplier compliance、approval 或 release authority
+  - 已扩展 `facts/standards/high-reliability-traceability-and-counterfeit-control-metadata.md`
+  - 已扩展 `facts/standards/fai-and-aerospace-quality-workflow-metadata.md`
+  - 已扩展 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+  - Nan Ya `NPG-199K` 当前仍因证书/下载路径不可干净复核而继续候选，不进入 corpus
+  - 当前结论不变：`20-layer` / `22-layer` 继续 `needs_sources`，`P4-06` 继续 blocked
+
+### P4-13 High Numeric Density Readiness Program
+
+- status: `now`
+- reason:
+  - 用户目标已经明确为 `high numeric density version`，不是 `conservative rewrite`
+  - 这需要把工作从 source 补丁流改为 claim-class / workstream / gate 驱动的大计划
+- outputs:
+  - `logs/high-numeric-density-program-plan.md`
+  - 后续 `H0-H8` 批次交付物
+- immediate next batch:
+  - `H1 Material Numeric Coverage Completion`
+  - `H0` 已完成，下一步先补 exact-product 材料数字覆盖，再进入 capability / standards / SI 分层
+- progress:
+  - `H0` 已完成，10 篇 layer-count blogs 的 numeric-claim inventory 已固定
+  - `H1 Batch 1` 已完成 mainstream FR-4 / high-Tg FR-4 的第一轮 product-grade / readiness cleanup
+  - `H1 Batch 2` 已完成一轮 digital low-loss / very-low-loss cleanup：
+    - 新增 `facts/materials/isola-i-speed.md`
+    - 新增 `facts/materials/isola-i-tera-mt40.md`
+    - 新增 `facts/materials/iteq-it-602g.md`
+    - 新增 `facts/materials/iteq-it-150da.md`
+    - 新增 `facts/materials/iteq-it-968.md`
+    - 新增 `facts/materials/panasonic-megtron-4-vs-megtron-6-vs-megtron-7-vs-megtron-8.md`
+  - `H1` 矩阵口径已回调到真实深度：`IT-180A`、`Shengyi S1000-2 / S1000-2M`、`MEGTRON 4` 不再高估为 fully covered product-grade
+  - `H1 Batch 3` 已完成一轮 RF / hybrid exact-product cleanup：
+    - 新增 `facts/materials/rogers-ro3003-vs-ro3006-vs-ro3010-vs-ro3035.md`
+    - 新增 `facts/materials/agc-vs-ventec-commercial-antenna-rf-compactness.md`
+    - 新增 `facts/materials/vtm1000i-ro3010-rf-compactness.md`
+  - `H1 Batch 3` 继续保持 `Taconic / unresolved Arlon` 为 gap-control，不把不稳定官方链接或第三方镜像转写为数字卡
+  - `H1 Batch 4` 已启动并完成首轮 `hi-rel / extreme-temp / special-material` cleanup：
+    - 新增 `facts/materials/agc-n7000-3f.md`
+    - 新增 `facts/materials/rogers-tmm-10i.md`
+    - 新增 `facts/materials/arlon-85n-high-temperature-polyimide-readiness.md`
+  - `H1 Batch 4` 当前口径：
+    - `N7000-3F` 已进入 exact-product baseline 层，但后续仍值得补更强的数值摘录
+    - `TMM 10i` 已进入 member-level special-material 层，但目前仍是窄成员卡
+    - `Arlon 85N` 继续 readiness-only，不提升为 product-grade numeric card
+  - `H1 Batch 4` 后续已完成 `55NT / 85N / 85NT` product-grade 收口，Arlon hi-rel 分支目前转入 normalization 而非继续找缺失 exact-product anchors
+  - `H1 Batch 5` 第一轮已完成 `build-up / flex / special-thermal boundary cleanup`：
+    - 新增 `facts/materials/rogers-ro4450f.md`
+    - 新增 `facts/materials/rogers-ro4460g2.md`
+    - 新增 `facts/materials/ventec-vt-4b7.md`
+    - 新增 `facts/materials/panasonic-r-fr10-frcc.md`
+    - 新增 `facts/materials/panasonic-r-f705s-lcp.md`
+    - 新增 `sources/registry/materials/panasonic-r-f705s-product-summary-pdf.md`
+    - 更新 `facts/materials/flex-polyimide-and-lcp-class-source-coverage.md`
+    - 更新 `facts/materials/rogers-bondply-and-hybrid-stackup-coverage.md`
+  - 这轮把 `RO4450F / RO4460G2`、`VT-4B7`、`R-FR10`、`R-F705S` 接成 exact-product numeric anchors，但 `2929 Bondply`、generic `RCC/FRCC`、generic rigid-flex `PI/Kapton/UPILEX` 仍保持 boundary / gap-control，不让窄产品例外扩散成 branch-level readiness
+  - `H1 Batch 6` 已完成 mainstream gap recovery：
+    - 新增 `sources/registry/materials/iteq-it-180a-page.md`
+    - 新增 `sources/registry/materials/iteq-it-988glse-page.md`
+    - 新增 `sources/registry/materials/shengyi-s1000-2-product-page.md`
+    - 新增 `sources/registry/materials/panasonic-megtron-4-r5725-r5620.md`
+    - 新增 `sources/registry/materials/panasonic-megtron-4-datasheet.md`
+    - 新增 `facts/materials/iteq-it-180a.md`
+    - 新增 `facts/materials/iteq-it-988glse.md`
+    - 新增 `facts/materials/shengyi-s1000-2.md`
+    - 新增 `facts/materials/shengyi-s1000-2m.md`
+    - 新增 `facts/materials/panasonic-megtron-4.md`
+    - 更新 `facts/materials/iteq-it-180a-high-tg-fr4-product-coverage.md`
+    - 更新 `facts/materials/shengyi-s1000-2-vs-s1000-2m-high-tg-fr4-coverage.md`
+    - 更新 `facts/materials/panasonic-megtron-4-low-loss-product-coverage.md`
+    - 更新 `facts/materials/panasonic-megtron-4-vs-megtron-6-vs-megtron-7-vs-megtron-8.md`
+  - 这轮把 `IT-180A`、`S1000-2`、`S1000-2M`、`MEGTRON 4 R-5725/R-5620`、`IT-988GLSE` 接成 exact-product numeric anchors；当时把 `IT-988SE` 作为未恢复目标保留下来，目的是避免把相邻 ITEQ ultra-low-loss grade 混写成已覆盖
+  - `H1 Batch 7` 已完成 ITEQ residual cleanup：
+    - 新增 `sources/registry/materials/iteq-it-150da-datasheet.md`
+    - 新增 `sources/registry/materials/iteq-it-968-datasheet.md`
+    - 新增 `sources/registry/materials/iteq-it-968g-datasheet.md`
+    - 更新 `sources/registry/materials/iteq-it-150da-page.md`
+    - 更新 `sources/registry/materials/iteq-it-968-page.md`
+    - 更新 `facts/materials/iteq-it-150da.md`
+    - 更新 `facts/materials/iteq-it-968.md`
+    - 更新 `facts/materials/non-isola-fr4-to-very-low-loss-coverage.md`
+  - 这轮把 `IT-150DA` 与 `IT-968` 从 readiness-only 升成 exact-product numeric anchors，并确认当前官方公开 ultra-low-loss 分支里应优先核查的是 `IT-988GSE` 等已出现名称，而不是继续把未确认公开命名的 `IT-988SE` 当成默认目标
+  - `H1 Batch 8` 已完成 ITEQ ultra-low-loss branch cleanup：
+    - 新增 `sources/registry/materials/iteq-it-988gse-page.md`
+    - 新增 `sources/registry/materials/iteq-it-988gse-datasheet.md`
+    - 新增 `sources/registry/materials/iteq-it-988gl-page.md`
+    - 新增 `sources/registry/materials/iteq-it-988gl-datasheet.md`
+    - 新增 `sources/registry/materials/iteq-it-988g-page.md`
+    - 新增 `sources/registry/materials/iteq-it-988g-datasheet.md`
+    - 新增 `sources/registry/materials/iteq-it-968se-page.md`
+    - 新增 `sources/registry/materials/iteq-it-968se-datasheet.md`
+    - 新增 `facts/materials/iteq-it-988gse.md`
+    - 新增 `facts/materials/iteq-it-988gl.md`
+    - 新增 `facts/materials/iteq-it-988g.md`
+    - 新增 `facts/materials/iteq-it-968se.md`
+    - 更新 `facts/materials/iteq-it-968.md`
+    - 更新 `facts/materials/non-isola-fr4-to-very-low-loss-coverage.md`
+  - 这轮把 `IT-988GSE`、`IT-988GL`、`IT-988G`、`IT-968SE` 全部接成 exact-product numeric anchors；ITEQ ultra-low-loss 支线现在不再依赖模糊相邻命名，后续重点转向跨厂 selector / normalization
+  - `H1 Batch 9` 已完成 ITEQ ladder normalization：
+    - 新增 `facts/materials/iteq-digital-laminate-ladder-normalization.md`
+    - 更新 `facts/materials/non-isola-fr4-to-very-low-loss-coverage.md`
+    - 更新 `facts/materials/iteq-it-180a-high-tg-fr4-product-coverage.md`
+  - 这轮把 `IT-180A / IT-150DA / IT-968 / IT-602G / IT-968SE / IT-988G / IT-988GL / IT-988GSE / IT-988GLSE` 接成 guarded ITEQ ladder：允许 branch placement 和同条件下的有限排序，但不允许 family averaging、suffix 推理或 capability overclaim
+  - `H1 Batch 10` 已完成 cross-vendor digital selector normalization：
+    - 新增 `facts/materials/high-speed-digital-material-ladder-normalization.md`
+    - 更新 `facts/materials/non-isola-fr4-to-very-low-loss-coverage.md`
+  - `H1` 已完成 closeout：
+    - 新增 `logs/h1-material-numeric-coverage-closeout-summary.md`
+    - 更新 `logs/h1-material-numeric-coverage-matrix.md`
+  - 这轮把 `Isola / ITEQ / Panasonic / Shengyi` 已有 product-grade rows 接成 guarded cross-vendor digital writing layer，并正式冻结 `Taconic / generic RCC-FRCC-build-up / generic rigid-flex / generic FR-4 average` 的 held posture
+  - `H2` 已启动 kickoff governance：
+    - 新增 `logs/h2-capability-number-policy.md`
+    - 新增 `logs/h2-capability-number-inventory.md`
+    - 新增 `logs/h2-dated-capability-source-schema.md`
+  - 这轮先把 fabrication capability numerics 从“散落在博客和流程页里的数字”收口成治理层：明确 source tiers、dated-record schema、bucket taxonomy、held/excluded 范围、以及 per-blog capability-impact；当前还没有放开 capability fact cards 或 evidence-pack capability tables
+  - `H2` 下一批不做泛化 capability 抄表，而是按 bucket 执行：
+    - `impedance_tolerance`
+    - `trace_space`
+    - `drill_and_via_geometry`
+    - `aspect_ratio`
+    - `backdrill_and_stub`
+  - `H2 Capability Bucket Recovery` 已进入第一桶：
+    - 新增 `logs/h2-impedance-tolerance-bucket-decision.md`
+    - 新增 `logs/h2-impedance-tolerance-source-map.md`
+    - 新增 `logs/h2-impedance-tolerance-control-notes.md`
+  - 这轮只启动 `impedance_tolerance` bucket intake：把 tolerance promise、TDR/coupon/VNA presence、以及 SI/channel-performance numerics 强制拆开；现有 corpus 只足够支撑 verification posture / planning posture / non-claim boundaries，不足以放开任何可复用 impedance tolerance 数字
+  - 当前 `impedance_tolerance` 结论：
+    - reusable tolerance numbers: `needs_source`
+    - verification / planning posture: 允许保守 `downgrade` 为非数字 wording
+    - capability fact card promotion: blocked，直到出现 `Tier 1` dated capability record
+  - `H2` 已扩展到第一波 geometry-wave intake：
+    - 新增 `logs/h2-trace-space-bucket-decision.md`
+    - 新增 `logs/h2-trace-space-source-map.md`
+    - 新增 `logs/h2-drill-and-via-geometry-bucket-decision.md`
+    - 新增 `logs/h2-drill-and-via-geometry-source-map.md`
+    - 新增 `logs/h2-aspect-ratio-bucket-decision.md`
+    - 新增 `logs/h2-aspect-ratio-source-map.md`
+    - 新增 `logs/h2-geometry-wave-control-notes.md`
+  - 这轮把 `trace_space / drill_and_via_geometry / aspect_ratio` 一起压成 geometry-wave：统一要求 source mapping、claim splitting、dated-record intake discipline；当前只放开 posture / boundary 控制，不放开任何 geometry numerics
+  - 当前 geometry-wave 结论：
+    - `trace_space`: reusable numbers `needs_source`
+    - `drill_and_via_geometry`: reusable numbers `needs_source`
+    - `aspect_ratio`: reusable numbers `needs_source`
+    - 所有 internal drilling / HDI / high-layer / IC-substrate 页面仍只可作为 `downgrade` / posture-only support，不能当 capability table
+  - `H2` 已扩展到第二波 intake：
+    - 新增 `logs/h2-backdrill-and-stub-bucket-decision.md`
+    - 新增 `logs/h2-backdrill-and-stub-source-map.md`
+    - 新增 `logs/h2-registration-bucket-decision.md`
+    - 新增 `logs/h2-registration-source-map.md`
+    - 新增 `logs/h2-board-thickness-bucket-decision.md`
+    - 新增 `logs/h2-board-thickness-source-map.md`
+    - 新增 `logs/h2-second-wave-control-notes.md`
+  - 这轮把 `backdrill_and_stub / registration / board_thickness` 一起压成 second-wave intake：统一要求 claim splitting、source mapping、dated-record intake discipline；当前只放开 posture / boundary 控制，不放开任何可复用 capability numerics
+  - 当前 second-wave 结论：
+    - `backdrill_and_stub`: reusable numbers `needs_source`
+    - `registration`: reusable numbers `needs_source`
+    - `board_thickness`: reusable numbers `needs_source`
+    - 所有 internal drilling / multilayer / high-layer / rigid-flex / stackup 页面仍只可作为 `downgrade` / posture-only support，不能当 capability table
+  - 新增 `logs/h2-testing-and-verification-capability-control-notes.md`
+  - 这轮把 `testing_and_verification_capability` 从 inventory 里的隐含 bucket 拉成显式治理层：强制拆开 `verification posture`、`numeric scope`、`coverage/acceptance-style claims`，避免把 `20GHz`、`>10Gbps`、`100% electrical testing` 混成可复用 capability 证明
+  - 新增 `logs/h2-testing-and-verification-capability-bucket-decision.md`
+  - 新增 `logs/h2-testing-and-verification-capability-source-map.md`
+  - 这轮把 `testing_and_verification_capability` 从 control-note 状态推进到正式 H2 bucket：已明确 bucket scope、claim splitting、source classes、candidate upstream inputs 与 recovery gate
+  - 当前 `testing_and_verification_capability` 结论：
+    - verification posture: 可保留为非数字 `downgrade`
+    - numeric scope / coverage / acceptance-style claims: `needs_source` 或 `delete`
+    - 在 dedicated dated capability layer 出现前，不放开任何 verification capability numerics
+  - `NQ-1` shared `B` buckets 已完成治理收口：
+    - 新增 `logs/p4-06-nq-1-shared-b-buckets-closeout.md`
+    - `impedance_tolerance / testing_and_verification_capability / trace_space / drill_and_via_geometry / aspect_ratio / registration / board_thickness / backdrill_and_stub` 现在都已具备 `bucket decision + source map`
+    - 当前结论不是 numeric recovery，而是 shared `B` governance complete
+  - 当前 `NQ-1` closeout 结论：
+    - 八个 shared `B` buckets 全部完成 bucket-level governance coverage
+    - 所有 reusable `B` numerics 继续 `needs_source`
+    - high-density program 的下一顺位从 `NQ-1` 切到 `NQ-2`
+  - `NQ-2` targeted `D` interpretation guardrails 已完成首轮收口：
+    - 新增 `facts/methods/12-layer-high-speed-context-vs-board-guarantee-boundary.md`
+    - 新增 `facts/methods/8-10-12-layer-impedance-and-geometry-implication-boundary.md`
+    - 新增 `facts/methods/16-layer-pdn-and-thermal-heuristic-boundary.md`
+    - 新增 `logs/p4-06-nq-2-d-interpretation-guardrails-closeout.md`
+  - 当前 `NQ-2` closeout 结论：
+    - `12-layer` 的 high-speed ecosystem context 与 board-guarantee / validation-package leakage 已分离
+    - `8 / 10 / 12-layer` 的 impedance / stackup framing 与 geometry implication tables 已分离
+    - `16-layer` 的 power / thermal framing 与 PDN / thermal heuristic tables 已分离
+    - 所有 reusable `D` interpretation numerics 继续 blocked
+    - high-density program 的下一顺位从 `NQ-2` 切到 `NQ-3`
+  - `NQ-3` `14-layer` special-risk branch 已完成首轮收口：
+    - 新增 `facts/standards/14-layer-standards-threshold-boundary.md`
+    - 新增 `facts/methods/14-layer-rigid-flex-reliability-numeric-boundary.md`
+    - 新增 `facts/materials/14-layer-flex-material-exact-product-boundary.md`
+    - 新增 `logs/p4-06-nq-3-14-layer-special-risk-closeout.md`
+  - 当前 `NQ-3` closeout 结论：
+    - `14-layer` 的 standards hierarchy 与 `Class 2 / Class 3` / annular-ring / registration threshold leakage 已分离
+    - `14-layer` 的 rigid-flex branch framing 与 bend-radius / flex-life / transition-tolerance / recipe-default numerics 已分离
+    - `14-layer` 的 flex-material exact-product 例外与 generic `polyimide / LCP / FRCC` numeric ladder 已分离
+    - 所有 reusable `14-layer` standards / rigid-flex reliability / generic flex-material numerics 继续 blocked
+    - high-density program 的下一顺位从 `NQ-3` 切到 `NQ-4`
+  - `NQ-4` exact-product completion 已进入多 agent planning / discovery：
+    - 新增 `docs/superpowers/plans/2026-04-26-nq-4-exact-product-completion.md`
+    - 新增 `logs/p4-06-nq-4-exact-product-completion-plan.md`
+    - 当前收敛结论不是“大面积补材料”，而是先拆成三条线：`FR-4 family-shortcut cleanup`、`flex exact-product normalization`、`remaining safe-wave named-product gaps`
+    - 当前主批次候选已收窄到 `Isola IS410 / 370HR / FR408 / FR408HR`
+    - 当前 flex 线优先动作是把现有 `Arlon 85NT` 接进 `14-layer` pack 口径，而不是继续泛化 `Panasonic-only` 或盲目新开 flex cards
+  - `NQ-4` 首批 exact-product micro-batch 已落地：
+    - 新增 `facts/materials/isola-is410.md`
+    - 新增 `facts/materials/isola-370hr.md`
+    - 新增 `facts/materials/isola-fr408.md`
+    - 新增 `facts/materials/isola-fr408hr.md`
+    - 新增 `logs/p4-06-nq-4-first-micro-batch-closeout.md`
+  - 当前 `NQ-4` 执行结论：
+    - safe-wave 里反复出现的 `Isola FR-4 / high-Tg` 例子现在已有独立 exact-product units
+    - `Arlon 85NT` 已正式接入 `14-layer` pack 口径，flex 线不再是名义上的 `Panasonic-only`
+    - `Kapton HN / UPILEX-S / S1150G` 经过首批落地后的 reassessment 仍保持 `hold`
+    - `S1141` 经过后续 reassessment 仍保持 `hold`
+    - `ITEQ IT-180GF / IT-140 / IT-158` 已从候补列表收窄为 `close_as_not_needed`
+    - `NQ-4` 已完成总收口：首批 micro-batch 已落地，低优先级尾部已分流为 `hold` 与 `close_as_not_needed`
+  - `H2` 已新增 held-governance intake：
+    - 新增 `logs/h2-annular-ring-bucket-decision.md`
+    - 新增 `logs/h2-annular-ring-source-map.md`
+    - 新增 `logs/h2-copper-plating-process-windows-bucket-decision.md`
+    - 新增 `logs/h2-copper-plating-process-windows-source-map.md`
+    - 新增 `logs/h2-stackup-recipe-and-process-count-numbers-bucket-decision.md`
+    - 新增 `logs/h2-stackup-recipe-and-process-count-numbers-source-map.md`
+    - 新增 `logs/h2-held-buckets-control-notes.md`
+  - 这轮把 `annular_ring / copper_plating_process_windows / stackup_recipe_and_process_count_numbers` 从“只在 inventory 里挂起”推进到显式治理层：
+    - `annular_ring` 现在是 governed-but-blocked bucket，重点防止 `IPC class / addendum / cookbook threshold` 被改写成 factory capability
+    - `copper_plating_process_windows` 明确保持 `hold-until-split`，先拆成 `copper weight capability / plating thickness-build allowance / etch compensation / resin-fill-balance-heavy-copper / standards minima / recipe leakage`
+    - `stackup_recipe_and_process_count_numbers` 明确按 recipe-leakage containment 处理，不当作普通 capability recovery bucket
+  - 当前 held-bucket 结论：
+    - `annular_ring`: reusable numbers `needs_source`
+    - `copper_plating_process_windows`: `hold-until-split`
+    - `stackup_recipe_and_process_count_numbers`: containment only，不进入 reusable numeric recovery
+    - dynamic commercial numerics 继续 excluded
+  - `H2` 已开始从 held `copper_plating_process_windows` 向更窄 child bucket 拆分：
+    - 新增 `logs/h2-copper-weight-capability-bucket-decision.md`
+    - 新增 `logs/h2-copper-weight-capability-source-map.md`
+    - 新增 `logs/h2-plating-thickness-build-allowance-bucket-decision.md`
+    - 新增 `logs/h2-plating-thickness-build-allowance-source-map.md`
+    - 新增 `logs/h2-etch-compensation-bucket-decision.md`
+    - 新增 `logs/h2-etch-compensation-source-map.md`
+    - 新增 `logs/h2-resin-fill-balance-heavy-copper-process-claims-bucket-decision.md`
+    - 新增 `logs/h2-resin-fill-balance-heavy-copper-process-claims-source-map.md`
+    - 新增 `logs/h2-standards-minima-bucket-decision.md`
+    - 新增 `logs/h2-standards-minima-source-map.md`
+  - 这轮只启动第一个较安全的 child bucket：
+    - `copper_weight_capability` 现在进入 governed intake
+    - 现有 heavy-copper / thermal-platform / special-process 页面只可支持 posture 与边界，不可放开 ounce-style capability numerics
+  - 这轮继续推进第二个 child bucket：
+    - `plating_thickness_build_allowance` 现在进入 governed intake
+    - 现有 heavy-copper / fabrication-process / finish 页面只可支持 posture 与边界，不可放开 plating-thickness 或 build-allowance numerics
+  - 这轮继续推进第三个 child bucket：
+    - `etch_compensation` 现在进入 governed intake
+    - 现有 heavy-copper / advanced-process / fabrication-process 页面只可支持 posture 与边界，不可放开 compensation numerics
+  - 这轮继续推进下一支 process-claim area：
+    - `resin_fill_balance_heavy_copper_process_claims` 现在进入 containment governance
+    - 现有 heavy-copper / advanced-process / application 页面只可支持 posture 与边界，不可放开 resin-fill、balance、planarization、copper-coin 等 process numerics
+  - 这轮继续推进 standards-threshold area：
+    - `standards_minima` 现在进入 containment governance
+    - 现有 standards metadata / TOC / addendum 页面只可支持 hierarchy 与边界，不可放开 minima、threshold、acceptance numerics
+  - 这轮补完 held copper/plating cluster 的最后一块 leakage containment：
+    - 新增 `logs/h2-recipe-process-window-leakage-bucket-decision.md`
+    - 新增 `logs/h2-recipe-process-window-leakage-source-map.md`
+    - `recipe_process_window_leakage` 现在进入 containment governance
+    - 现有 internal process / heavy-copper / supplier process-guide 页面只可支持 workflow posture 与边界，不可放开 bake、cure、pressure、dwell、route recipe 等 process-window numerics
+  - 当前 child-bucket 结论：
+    - `copper_weight_capability`: reusable numbers `needs_source`
+    - `plating_thickness_build_allowance`: reusable numbers `needs_source`
+    - `etch_compensation`: reusable numbers `needs_source`
+    - `resin_fill_balance_heavy_copper_process_claims`: containment only，不进入 normal numeric recovery
+    - `standards_minima`: containment only，不进入 normal numeric recovery
+    - `recipe_process_window_leakage`: containment only，不进入 normal numeric recovery
+  - `copper_plating_process_windows` 这一簇当前 child split 已完成，但没有任何 numeric unlock：
+    - 现在只新增 source-map / claim-splitting / boundary-control coverage
+    - 不生成 capability fact cards
+    - 不把 internal / supplier / process-guide 页面解释成 reusable capability tables
+  - 这轮仍不提前桥接到 `P4-06`：
+    - held-bucket governance 只增加 source-map / claim-splitting / boundary-control coverage
+    - 不生成 capability fact cards
+    - 不把 internal / supplier / standards 页面解释成 reusable capability tables
+  - `H2` 当前治理收口后，下一轮长任务已从“泛 source hunting”切到 `20-layer / 22-layer` blocker reduction：
+    - 新增 `logs/p4-13-20-22-blocker-reduction-plan.md`
+    - 下一轮不再把 `20-layer` 与 `22-layer` 混在同一条 source 队列里推进，而是按 blocker class 分两支并行
+    - `22-layer` 下一批优先做 `hi-rel acceptance-governance boundary batch`
+    - `20-layer` 下一批随后做 `interconnect-reliability and process-window boundary batch`
+    - 两支的目标都是继续降低 overclaim risk，不是提前放行 readiness 或 `P4-06`
+  - `22-layer hi-rel acceptance-governance boundary batch` 已开始落第一批 boundary cards：
+    - 新增 `facts/standards/22-layer-hi-rel-acceptance-workflow-boundary.md`
+    - 新增 `facts/standards/22-layer-qualification-listing-and-release-authority-boundary.md`
+    - 新增 `facts/standards/22-layer-contract-flowdown-and-lot-conformance-boundary.md`
+    - 更新 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批把 `22-layer` 的 hi-rel overclaim 风险再拆细一层：
+    - `acceptance workflow` 不再和 `qualification/listing/release authority` 混写
+    - `qualification/listing/release authority` 不再和 `contract flowdown / lot conformance` 混写
+    - prompt 侧现在更容易命中正确的边界卡，而不是只命中一张大 guardrail
+  - 这批仍然不放行：
+    - `Class 3 / 3A` 阈值表
+    - supplier approval / listed / certified / qualified 结论
+    - contract invocation proof
+    - accepted-lot proof
+    - outgassing acceptance numerics
+  - `20-layer interconnect-reliability and process-window boundary batch` 已完成首轮 blocker-reduction：
+    - 新增 `facts/methods/20-layer-interconnect-reliability-workflow-boundary.md`
+    - 新增 `facts/methods/20-layer-process-window-and-recipe-boundary.md`
+    - 新增 `facts/methods/20-layer-method-vs-qualification-boundary.md`
+    - 更新 `facts/methods/20-layer-any-layer-hdi-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批把 `20-layer` 的 overclaim 风险再拆细一层：
+    - `interconnect reliability workflow` 不再和 `IST thresholds / qualification proof` 混写
+    - `process-window / recipe leakage` 不再和 `material-form vocabulary` 混写
+    - `method / listing / qualification` 不再和 `supplier approval / release` 混写
+    - prompt 侧现在更容易命中正确的负控制卡，而不是只命中一张大 guardrail
+  - 这批仍然不放行：
+    - `IST` threshold / cycle numerics
+    - coupon plan / pass-fail / qualification proof
+    - process-window / bake-cure / lamination-count numerics
+    - geometry / stack recipe / factory-capability claims
+  - `22-layer Class-3 / addendum threshold-boundary batch` 已完成首轮 blocker-reduction：
+    - 新增 `facts/standards/22-layer-class-3-and-addendum-threshold-boundary.md`
+    - 新增 `facts/standards/22-layer-clause-family-vs-threshold-boundary.md`
+    - 新增 `facts/standards/22-layer-outgassing-and-screening-acceptance-boundary.md`
+    - 更新 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+    - 新增 `logs/p4-13-post-split-reassessment-and-next-sequence.md`
+  - 这批把 `22-layer` 的 overclaim 风险再拆细一层：
+    - `Class 3 / addendum hierarchy` 不再和 `threshold tables` 混写
+    - `clause-family visibility` 不再和 `technical criteria` 混写
+    - `outgassing / screening / PLT` 不再和 `universal acceptance proof` 混写
+    - 长任务顺序已重新固定：先继续 `22-layer` threshold leakage control，再做 `20-layer` geometry / capability containment
+  - 这批仍然不放行：
+    - `Class 3 / 3A` thresholds
+    - addendum technical tables / sample plans / frequencies
+    - `PLT` sample plans or accepted-lot proof
+    - outgassing acceptance numerics
+  - 当前 post-split 下一顺位已固定为：
+    - `20-layer geometry-and-capability containment batch`
+    - 目标是继续压 `geometry / trace-space / via-geometry / shop-capability` leakage，不是恢复 capability numerics
+  - `20-layer geometry-and-capability containment batch` 已完成首轮 blocker-reduction：
+    - 新增 `facts/methods/20-layer-geometry-and-factory-capability-boundary.md`
+    - 新增 `facts/methods/20-layer-build-up-material-pages-do-not-authorize-feature-size-claims.md`
+    - 新增 `facts/methods/20-layer-any-layer-vocabulary-vs-shop-capability-boundary.md`
+    - 更新 `facts/methods/20-layer-any-layer-hdi-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+    - 更新 `logs/p4-13-post-split-reassessment-and-next-sequence.md`
+  - 这批把 `20-layer` 的 overclaim 风险再拆细一层：
+    - `geometry / factory-capability leakage` 不再和 `process-window / method / material-form` 混写
+    - `build-up material pages` 不再被当作 `feature-size authority`
+    - `any-layer / ELIC / Anylayer / VIPPO / SBU` 词汇不再被当作 `shop capability / production approval`
+    - prompt 侧现在更容易命中正确的几何负控制卡，而不是把 build-up / any-layer 词汇误读成能力证明
+  - 这批仍然不放行：
+    - `trace/space` numerics
+    - drill / laser-via / aspect-ratio / registration numerics
+    - stack recipe / lamination-count / yield claims
+    - supplier / factory capability claims
+  - 当前下一顺位已调整为：
+    - 先做 `20-layer` / `22-layer` blocked-blog reassessment
+    - 只有在 reassessment 明确放行时才考虑 `P4-06`
+    - 当前结论仍不变：`20-layer` / `22-layer` 继续 `needs_sources`，`P4-06` 继续 blocked
+  - `20-layer` / `22-layer` post-containment reassessment 已完成：
+    - 新增 `logs/p4-13-post-containment-reassessment.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+    - 结论：两支仍然 `needs_sources`
+  - `22-layer supplier-status / compliance / acceptance-assertion containment` 已完成：
+    - 新增 `facts/standards/22-layer-supplier-status-marketing-boundary.md`
+    - 新增 `facts/standards/22-layer-compliance-assertion-boundary.md`
+    - 新增 `facts/standards/22-layer-qualification-and-acceptance-assertion-boundary.md`
+    - 更新 `facts/standards/22-layer-high-reliability-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批把 `22-layer` 的剩余 HIL-specific assertion 风险再拆细一层：
+    - `supplier-status marketing` 不再和 public governance ecosystem 混写
+    - `compliance assertions` 不再和 public standards / audit / military hierarchy metadata 混写
+    - `qualification / acceptance assertions` 不再和 workflow / lot-conformance vocabulary 混写
+  - 这批仍然不放行：
+    - supplier approval / trusted-source proof
+    - compliance proof
+    - qualification-package / accepted-status proof
+    - `P4-06` bridge for `22-layer`
+  - `20-layer shop-capability / process-control numeric containment` 已完成：
+    - 新增 `facts/methods/20-layer-hil-capability-claim-boundary.md`
+    - 新增 `facts/methods/20-layer-hil-process-control-numeric-boundary.md`
+    - 新增 `facts/methods/20-layer-hil-production-and-lead-time-claim-boundary.md`
+    - 更新 `facts/methods/20-layer-any-layer-hdi-rewrite-guardrail.md`
+    - 更新 `logs/layer-count-blog-readiness.md`
+  - 这批把 `20-layer` 的剩余 HIL-specific numeric 风险再拆细一层：
+    - `HIL capability claims` 不再和 public any-layer / method vocabulary 混写
+    - `HIL process-control numerics` 不再和 public process-sensitivity / process-guide vocabulary 混写
+    - `HIL production / lead-time claims` 不再和 public workflow / architecture difficulty context 混写
+  - 这批仍然不放行：
+    - HIL capability proof
+    - HIL process-control numerics
+    - HIL lead-time / yield / volume claims
+    - `P4-06` bridge for `20-layer`
+  - `post-assertion-containment reassessment` 已完成：
+    - 新增 `logs/p4-13-post-assertion-containment-reassessment.md`
+    - 两支继续 `needs_sources`
+    - `P4-06` 继续 blocked
+  - reassessment 后确认的剩余 blocker 已重新收敛：
+    - `22-layer` 的主 blocker 不再只是 `Class 3 / addendum` threshold leakage，而是 `supplier-status / compliance / acceptance-assertion leakage`
+    - `20-layer` 的主 blocker 不再只是 `geometry vocabulary leakage`，而是 `shop-capability / process-control / lead-time` 这类 HIL-specific numeric claims
+  - 两份 draft-level blocker map 已完成并纳入 `P4-13` 控制链：
+    - 新增 `logs/p4-13-20-layer-draft-blocker-map.md`
+    - 新增 `logs/p4-13-22-layer-draft-blocker-map.md`
+  - 这两份 blocker map 把剩余 blocked surface 从抽象 blocker class 压到 draft-section 级别，作为下一轮删除、降级、与 supplier-evidence hold 决策的正式控制输入
+  - 基于这两份 blocker map，下一层 draft-level control note 也已落地：
+    - 新增 `logs/p4-13-20-layer-bridge-exclusion-and-downgrade-map.md`
+    - 新增 `logs/p4-13-22-layer-bridge-exclusion-and-downgrade-map.md`
+  - 当前长任务顺序已再次固定为：
+    - 继续保持 `20-layer` / `22-layer` 为 blocked branches
+    - 优先把更安全的 branch 留给未来 `P4-06`
+    - 若要放开这两支，必须先引入单独 supplier-evidence discipline，而不是继续复用 public metadata layer
+  - 当前 immediate next step 也已进一步收窄：
+    - 先按 `p4-13-20-layer-bridge-exclusion-and-downgrade-map` 与 `p4-13-22-layer-bridge-exclusion-and-downgrade-map` 做下一轮定点 containment
+    - 不是再做一轮抽象 reassessment，也不是 readiness-note-only refresh
+  - 该轮定点 containment 现已实际落到两篇 blocked draft 本体，并形成 closeout：
+    - 新增 `logs/p4-13-draft-containment-pass-closeout.md`
+    - `20-layer` 与 `22-layer` 当前 draft 已明显收缩到 conservative context 版本
+  - 这次 closeout 改变的是 live draft risk，而不是高密度数字就绪结论：
+    - `20-layer` / `22-layer` 现可按 conservative rewrite 视角重估
+    - 但 high-density numeric readiness 仍未解锁，`P4-06` 对这两支继续 blocked
+  - `H2` shared capability-bucket governance 已正式收口：
+    - 新增 `logs/h2-capability-governance-closeout-summary.md`
+    - 当前应视为 `governance complete`，不应视为 `numeric unlock`
+    - shared `Class B` buckets 已完成 `bucket decision + source map` 覆盖，但所有 reusable capability numerics 继续 blocked，直到出现 `Tier 1` dated capability records
+  - `H3` 已正式启动：
+    - 新增 `logs/h3-threshold-and-acceptance-layer-kickoff.md`
+    - 新增 `logs/h3-threshold-inventory-and-blacklist.md`
+    - 当前已固定 `metadata_only / public_threshold_available / controlled_exclusion` 三分法
+    - 当前默认口径不是恢复 threshold numerics，而是先固定 blacklist 与 blog/risk-cluster 队列
+  - `H3 Queue 1` `22-layer` 首轮执行已落地：
+    - 新增 `logs/h3-22-layer-threshold-and-acceptance-inventory.md`
+    - 新增 `logs/h3-22-layer-source-policy-and-disposition-map.md`
+    - 当前已把 `22-layer` surviving threshold / acceptance / supplier-assertion clusters 映射到 claim family、source policy、default disposition
+    - 当前结论仍然是 `public_threshold_available: none`
+    - 允许保留的只剩 hierarchy / workflow / documentation context；thresholds、acceptance numerics、supplier-proof claims 继续 blocked 或 `hold_for_supplier_evidence`
+  - `H3` 已转为正式多 agent 长任务运行：
+    - 新增 `docs/superpowers/plans/2026-04-26-h3-threshold-acceptance-long-task.md`
+    - 新增 `logs/h3-long-task-multi-agent-plan.md`
+    - 当前队列顺序已固定为 `22-layer` → `14-layer` → `20-layer`
+    - 主 agent 负责计划、集成、跟踪；子 agent 负责独立 queue intake
+  - `H3 Queue 1` `22-layer` 已补到执行级控制：
+    - 新增 `logs/h3-22-layer-evidence-pack-blacklist-and-residual-wording.md`
+    - 当前 Queue 1 已具备 inventory、source-policy split、blacklist/residual-wording 三层控制
+    - 这仍然只是 control-complete，不是 numeric unlock：`public_threshold_available` 继续为 `none`，supplier evidence 继续缺失，`22-layer` 继续 blocked for high-density numeric reuse
+  - `H3 Queue 2` `14-layer` intake 已落地：
+    - 新增 `logs/h3-14-layer-threshold-and-rigid-flex-intake.md`
+    - 当前已把 surviving `standards-threshold / rigid-flex reliability / supplier-assertion / exact-product overreach` 风险固化为 queue intake
+    - 该 note 只做 control hardening，不重开 `P4-06` bridge，也不放行任何 `14-layer` standards 或 rigid-flex numerics
+  - `H3 Queue 3` `20-layer` intake 已落地：
+    - 新增 `logs/h3-20-layer-method-and-qualification-intake.md`
+    - 当前已把 surviving `architecture-to-recipe / build-up-material-to-feature-authority / method-to-qualification / HIL-specific proof` 风险固化为 queue intake
+    - 该 note 只做 method/qualification containment，不放行 geometry、process-window、`IST` threshold 或 HIL-specific proof claims
+  - `H3 Queue 2` `14-layer` 已升级到执行级控制：
+    - 新增 `logs/h3-14-layer-bridge-exclusion-and-supplier-hold-map.md`
+    - 当前已把 `14-layer` 的 standards、rigid-flex reliability、fabrication tables、supplier/compliance wording 细化为 `delete / downgrade_to_boundary_only / hold_for_supplier_evidence`
+    - 这仍然不是 numeric unlock：`14-layer` 继续只保留 conservative bridge posture
+  - `H3 Queue 3` `20-layer` 已升级到执行级控制：
+    - 新增 `logs/h3-20-layer-execution-control-map.md`
+    - 当前已把 `20-layer` 的 geometry、process-window、method-to-qualification、commercial、HIL-proof clusters 细化为 `delete / downgrade_to_boundary_only / hold_for_supplier_evidence`
+    - 这仍然不是 readiness unlock：geometry、recipe、`IST` threshold、commercial numerics、HIL-specific proof claims 继续 blocked
+  - `H3` 首轮 live-draft alignment 已开始落地：
+    - 新增 `logs/h3-live-draft-alignment-closeout.md`
+    - `14-layer` live draft 已按 execution-control layer 实际降载，移除了 standards-threshold、rigid-flex reliability、fabrication-table、supplier-proof 负荷
+    - `20-layer` 与 `22-layer` 当前 live drafts 已通过只读审计，现阶段基本贴合各自 execution-control stack，只保留少量 residual wording edge cases 需要继续看护
+    - 这次 alignment 改变的是 live draft risk，而不是 evidence ceiling；`14-layer` current draft risk 已下降，但 `20-layer` / `22-layer` 的 high-density blocked verdict 不变
+  - `H3` 第二轮 live-draft alignment 已继续落地到高层两支：
+    - 新增 `logs/h3-18-layer-hybrid-execution-control-map.md`
+    - 新增 `logs/h3-24-layer-high-speed-execution-control-map.md`
+    - `18-layer` live draft 已按 hybrid execution-control layer 实际降载，移除了材料/阻抗/传输线/回钻/成本表以及 HIL-specific capability/proof blocks
+    - `24-layer` live draft 已按 high-speed execution-control layer 实际降载，移除了 channel-budget、stack recipe、roughness/backdrill numerics、panel-cost 与 HIL-specific compliance/proof blocks
+    - 当前变化仍然只是 live draft risk reduction，不是 numeric unlock：`18-layer` / `24-layer` 现更接近 conservative rewrite posture，但 high-density numeric readiness 继续 blocked
+  - `H3` 下一阶段已从 live cleanup 切到 blocked branches 的 evidence ceiling discipline：
+    - 新增 `logs/h3-20-22-evidence-ceiling-and-source-lane-split.md`
+    - 当前已把 `20-layer` 的剩余 authority gap 固定为 `HIL capability/proof`、geometry/process numerics、qualification/IST authority、process-window numerics 四类优先级
+    - 当前已把 `22-layer` 的剩余 authority gap 固定为 `HIL compliance/acceptance proof`、`Class 3/3A` threshold reconstruction、workflow-to-acceptance collapse、lot/release implication 四类优先级
+    - 当前正式区分两条 lane：`public-primary-source tightening` 只允许做 metadata/hierarchy/workflow 边界收紧；`supplier-evidence-only` 接管 capability、qualification、compliance、accepted-status 与 commercial claims
+    - 这一步的意义是防止 `20-layer` / `22-layer` 再被误当成短期 numeric reopen 候选；当前 blocked verdict 不变
+  - `H3` 现已把 blocked branches 的 supplier lane 单独治理：
+    - 新增 `logs/h3-20-22-supplier-evidence-governance.md`
+    - 当前已把 `20-layer` / `22-layer` 分别拆成三类：`permanently parked`、`narrow unlockable if dated supplier record exists`、`never genericize even if supplier record exists`
+    - `20-layer` 后续若有 supplier evidence，最多优先支持 dated supplier-scoped capability/process/proof facts；但 geometry/process-window/qualification/commercial numerics 仍不得洗成 generic reusable numerics
+    - `22-layer` 后续若有 supplier 或 lot evidence，最多优先支持 dated status / lot / package existence facts；但 `Class 3/3A` thresholds、acceptance numerics、lot rules 与 proof logic 仍不得 genericize
+    - 这一步仍然只是 governance hardening，不是 supplier evidence 已获得，也不是 readiness unlock
+  - `H3` 现已继续把 supplier lane 推到 admissibility gate：
+    - 新增 `logs/h3-20-22-dated-supplier-record-admissibility.md`
+    - 当前已把未来 supplier/lot record 的最低准入字段固定为：`date + named subject + named scope + named bounded context + supplier-scoped interpretation + non-override statement + traceable record identity`
+    - 当前也已固定一票否决 shape：无日期营销页、无 site/lot/build/program scope 的 company-wide 口号、混合 claim families、public vocabulary 改写 supplier proof、timeless capability recasting、attempted threshold recovery、商业数据伪装成稳定 evidence
+    - 这一步的意义是：以后即使拿到 supplier materials，也要先过 admissibility，而不是直接进入 evidence pack 或 readiness 讨论
+  - `H3` 现已把 supplier lane 落到可执行模板层：
+    - 新增 `logs/h3-20-22-supplier-record-intake-template.md`
+    - 新增 `logs/h3-20-22-supplier-record-review-checklist.md`
+    - 当前已把未来 `20-layer / 22-layer` 的 supplier/lot record intake 标准化为统一 stub：required fields、optional fields、fixed warnings、warning flags、reviewer precheck 与 preliminary disposition 都已固定
+    - 当前也已把 reviewer-side accept/reject 逻辑单独固化，防止未来 intake 一上来就被误当成 evidence-pack-ready support
+  - `H3` 现已把 supplier lane 从模板推进到 controller 示例与启动门槛层：
+    - 新增 `logs/h3-20-22-supplier-record-filled-examples.md`
+    - 新增 `logs/h3-20-22-supplier-evidence-execution-trigger.md`
+    - 当前已把 `20-layer` / `22-layer` 各自最窄的 filled example stub 固化为 governance-only training artifact，用来演练 intake shape，而不是声明任何真实 supplier record 已存在
+    - 当前也已把 `do not start unless real dated-record path exists` 固化成 execution trigger，防止模板或示例文件被误当成 supplier-evidence batch 的起点
+    - 这一步仍然只是 workflow hardening，不是 supplier evidence 已落地，也不是 numeric unlock
+  - `H3` 现已把 supplier lane 继续拆成 branch-specific intake packs 与 reviewer decision matrix：
+    - 新增 `logs/h3-20-layer-supplier-first-target-intake-pack.md`
+    - 新增 `logs/h3-22-layer-supplier-first-target-intake-pack.md`
+    - 新增 `logs/h3-20-22-supplier-record-decision-matrix.md`
+    - 当前已把 `20-layer` first-target intake 固定为先看 `supplier_process_control_fact`，再看 `supplier_capability_fact`，并继续排除 geometry / process-window / qualification / commercial numerics 的 genericize
+    - 当前已把 `22-layer` first-target intake 固定为先看 `lot_or_build_workflow_fact`，再看 `supplier_status_or_listing_fact`，并继续排除 `Class 3 / 3A` thresholds、acceptance logic、release authority 与 timeless conformance 的 genericize
+    - 当前也已把 `reject_at_intake` / `hold_for_governed_review` 的 reviewer decision path 单独固化，降低 claim-family collapse 与 workflow-to-proof drift 风险
+    - 这一步仍然只是 branch-specific workflow hardening，不是 supplier evidence 已落地，也不是 numeric unlock
+  - `H3` 现已把 supplier lane 继续推进到 execution handoff 层：
+    - 新增 `logs/h3-20-22-supplier-record-intake-runbook.md`
+    - 新增 `logs/h3-20-22-supplier-record-reviewer-handoff-checklist.md`
+    - 当前已把 real dated-record path 出现后的执行顺序固定为：trigger check -> proposer 填 shared template -> reviewer 跑 shared precheck/checklist -> branch split -> 只输出 `reject_at_intake` / `hold_for_governed_review`
+    - 当前也已把 `controller -> reviewer` 的最小 handoff context 固化，包括 branch、claim family、trigger eligibility、identity reference、supplier-scoped interpretation、boundary risks、expected narrowest downstream use 与 forbidden claims
+    - 这一步仍然只是 execution handoff hardening，不是 supplier evidence 已落地，也不是 admissibility pass，更不是 numeric unlock
+  - `H3` 现已把 supplier lane 继续推进到 sample handoff packet 层：
+    - 新增 `logs/h3-20-layer-sample-reviewer-handoff-packet.md`
+    - 新增 `logs/h3-22-layer-sample-reviewer-handoff-packet.md`
+    - 当前已把 `20-layer` 与 `22-layer` 各自最窄 first-target handoff 样板固化为 controller-owned sample packet，供 reviewer lane 直接照着包装 branch、claim family、trigger eligibility、identity reference、narrowest downstream use 与 forbidden claims
+    - 当前也已把 sample wording 修到纯样板姿态，不把 sample packet 写成 live handoff、本体 evidence、admissibility pass 或 numeric unlock
+    - 这一步仍然只是 sample handoff packet hardening，不是 supplier evidence 已落地，也不是 admissibility pass，更不是 numeric unlock
+  - `H3` supplier-lane hardening 已正式收口：
+    - 新增 `logs/h3-supplier-lane-hardening-closeout.md`
+    - 当前应把 supplier lane 视为 `workflow-control complete enough for future intake`，不应继续视为主线扩写方向
+    - 这次 closeout 不是 supplier evidence landed，不是 admissibility pass，不是 numeric-readiness upgrade，也不是 public reusable numeric recovery 前进
+  - 下一条主线已明确切到 `numeric parameters / standardization`：
+    - 新增 `logs/h4-numeric-parameters-and-standardization-kickoff.md`
+    - 当前三条主轴已固定为：`capability parameters`、`standards / qualification / acceptance handling`、`supplier-scoped dated records`
+    - 当前优先队列已固定为：先 `20-layer` / `22-layer`，再 shared `Class B` capability-parameter classes，再 shared standardization cards
+    - 当前最短路径已固定为：先尝试 `trace/space`、`minimum mechanical drill`、`minimum laser via`、`aspect ratio`、`annular ring`、`impedance tolerance`、`registration tolerance`
+    - 这份 kickoff 只是 mainline routing，不是 numeric unlock；public reusable numeric readiness 继续 unchanged，除非后续真正落地可接受主源或 dated supplier record
+  - `H4` 已进入首批执行卡层：
+    - 新增 `logs/h4-shared-b-capability-parameters-first-wave-queue.md`
+    - 新增 `logs/h4-standards-standardization-first-card-queue.md`
+    - 当前已把“更多数字”正式收敛到 shared `B` 首波七类参数队列，把“标准化”正式收敛到 `Class 3 / addendum / qualification / acceptance` 首张 card-family 队列
+    - 这两张执行卡都只是 queue/control 起点，不代表任何 reusable numerics、thresholds、qualification proof 或 acceptance numerics 已恢复
+  - `H4` 现已从执行卡进入路由矩阵层：
+    - 新增 `logs/h4-shared-b-first-wave-parameter-routing-matrix.md`
+    - 新增 `logs/h4-class3-addendum-qualification-acceptance-routing-matrix.md`
+    - 当前已把 shared `B` 首波七类参数固定到逐类 routing posture：`main demand branches`、`current blocker shape`、`acceptable authority requirement`、`default refusal posture`
+    - 当前也已把 `Class 3 / addendum / qualification / acceptance` 固定到可执行 routing posture：`standards-family vs threshold`、`qualification vs listing vs release-authority`、`acceptance-workflow vs acceptance-threshold`、`supplier-conformance assertion boundary`
+    - 下一步应直接按这两张矩阵继续拆单类参数卡与单类标准化边界卡，而不是回到 kickoff 或 supplier-lane 层
+  - `H4` 现已正式转为多 agent 长任务：
+    - 新增 `docs/superpowers/plans/2026-04-26-h4-numeric-parameters-standardization-long-task.md`
+    - 新增 `logs/h4-long-task-multi-agent-plan.md`
+    - 当前已把 `H4` 固定为三条 lane：shared `B` capability parameters、standards / qualification / acceptance standardization、supplier-scoped dated numeric/parameter records
+    - controller 负责 lane order、集成、跟踪；lane agents 只在各自 write scope 内推进，不再回到短回合散点执行
+    - 当前下一轮应按 lane 执行，而不是继续只补 kickoff、queue 或 routing note
+  - `H4` 长任务第一轮已落地：
+    - Lane 1 Phase A 新增：
+      - `logs/h4-trace-space-routing-note.md`
+      - `logs/h4-minimum-mechanical-drill-routing-note.md`
+      - `logs/h4-minimum-laser-via-routing-note.md`
+    - Lane 2 Group A 新增：
+      - `logs/h4-standards-family-vs-threshold-note.md`
+      - `logs/h4-qualification-vs-listing-vs-release-authority-note.md`
+    - Lane 3 opening units 新增：
+      - `logs/h4-20-layer-supplier-capability-fact-lane-note.md`
+      - `logs/h4-20-layer-supplier-process-control-fact-lane-note.md`
+    - 这一轮改变的是单类 routing / separation / lane-opening precision，不是 numeric unlock，不是 threshold recovery，不是 supplier-evidence acceptance，也不是 readiness upgrade
+    - 下一轮应继续：Lane 1 Phase B（`aspect ratio`、`registration tolerance`），Lane 2 Group B（`acceptance-workflow vs acceptance-threshold`、`supplier-conformance assertion boundary`），Lane 3 下一个 opening unit（`20-layer supplier_qualification_package_existence`）
+  - `H4` 长任务第二轮已落地：
+    - Lane 1 Phase B 新增：
+      - `logs/h4-aspect-ratio-routing-note.md`
+      - `logs/h4-registration-tolerance-routing-note.md`
+    - Lane 2 Group B 新增：
+      - `logs/h4-acceptance-workflow-vs-acceptance-threshold-note.md`
+      - `logs/h4-supplier-conformance-assertion-boundary-note.md`
+    - Lane 3 next opening unit 新增：
+      - `logs/h4-20-layer-supplier-qualification-package-existence-lane-note.md`
+    - 这一轮改变的是 shared `B` Phase B routing precision、acceptance/conformance separation precision、以及 `20-layer` supplier-scoped package-existence lane control，不是 threshold recovery，不是 supplier proof，不是 release-authority recovery，也不是 readiness upgrade
+    - 下一轮应继续：Lane 1 Phase C / D（`impedance tolerance`、`annular ring`），Lane 2 final integration（`22-layer` branch routing/control mapping），Lane 3 开 `22-layer` first opening unit（`supplier_status_or_listing_fact`）
+  - `H4` 长任务第三轮已落地：
+    - Lane 1 Phase C / D 新增：
+      - `logs/h4-impedance-tolerance-routing-note.md`
+      - `logs/h4-annular-ring-routing-note.md`
+    - Lane 2 final integration 新增：
+      - `logs/h4-22-layer-branch-routing-control-mapping.md`
+    - Lane 3 first `22-layer` opening unit 新增：
+      - `logs/h4-22-layer-supplier-status-or-listing-fact-lane-note.md`
+    - 这一轮改变的是 shared `B` parameter routing precision、`22-layer` branch-level standardization control precision、以及 `22-layer` supplier status/listing intake control，不是 impedance tolerance numeric unlock，不是 annular-ring numeric unlock，不是 qualification/listing/release proof，也不是 readiness upgrade
+    - 下一轮应继续：Lane 1 first-wave closeout sweep（汇总七类 shared `B` 参数当前 refusal/hold posture 并固定 downstream priority），Lane 2 将 `22-layer` branch mapping 继续下接到 `20-layer` inherited secondary control，Lane 3 继续开 `22-layer lot_or_build_workflow_fact` 或 `qualification_or_compliance_package_existence` 窄单元
+  - `H4` 长任务第四轮已落地：
+    - Lane 1 first-wave closeout 新增：
+      - `logs/h4-shared-b-first-wave-closeout.md`
+    - Lane 2 inherited secondary control 新增：
+      - `logs/h4-20-layer-secondary-standardization-control-note.md`
+    - Lane 3 second `22-layer` opening unit 新增：
+      - `logs/h4-22-layer-lot-or-build-workflow-fact-lane-note.md`
+    - 这一轮改变的是 seven-class shared `B` first-wave closeout precision、`20-layer` secondary standardization inheritance precision、以及 `22-layer` lot/build workflow intake control，不是 shared capability-table unlock，不是 acceptance/release proof，不是 qualification proof，也不是 readiness upgrade
+    - 下一轮应继续：Lane 3 开 `22-layer qualification_or_compliance_package_existence` 第三个 opening unit，并视需要补一张 `22-layer` supplier-lane mini-closeout，把 `status/listing`、`lot/build workflow`、`qualification/compliance package existence` 三单元统一到一个 intake surface
+  - `H4` 长任务第五轮已落地：
+    - Lane 3 third `22-layer` opening unit 新增：
+      - `logs/h4-22-layer-qualification-or-compliance-package-existence-lane-note.md`
+    - Lane 3 first mini-closeout 新增：
+      - `logs/h4-22-layer-supplier-lane-first-three-units-closeout.md`
+    - 这一轮改变的是 `22-layer` supplier-lane third-unit intake precision、以及 first-three-units mini-surface closeout precision，不是 qualification proof，不是 compliance proof，不是 approval/release proof，也不是 readiness upgrade
+    - 下一轮应继续：如需继续 supplier-lane，优先开 `accepted_lot_or_release_event_fact` 或 `program_specific_readiness_fact`，否则可回到 Lane 2 / Lane 1 做更高层 closeout and sequencing
+  - 当前 `H4` tranche 已收口，可暂停继续扩写：
+    - 新增 `logs/h4-current-tranche-closeout.md`
+    - 当前 tranche 已覆盖：
+      - Lane 1 first-wave routing/closeout
+      - Lane 2 first standardization cycle（`22-layer` primary + `20-layer` inherited secondary）
+      - Lane 3 first three-unit `22-layer` intake surface
+    - 这意味着下一步最有价值的不再是继续补 `H4` scaffold，而是直接判断哪些 `en` 博客可以先做 conservative rewrite
+  - `en` layer-count blog generation gate 已落地：
+    - 新增 `logs/en-layer-count-blog-generation-gate.md`
+    - 当前直接结论：
+      - `go_now_conservative`: `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer`
+      - `still_hold`: `20 / 22-layer`
+    - 因此后续最快路径应转成：
+      - 先生成 `6 / 8 / 10 / 12 / 16 / 14 / 18 / 24-layer` 的 conservative rewrite
+      - 暂不生成 `20-layer` 与 `22-layer`
+
+### Dynamic Facts Watchlist
+
+- status: `watch`
+- do not freeze as static facts without refresh:
+  - latest SVHC item counts
+  - exemption validity
+  - current certifications
+  - lead times
+  - pricing
+  - current market numbers
+
+### Industry Blog Ingestion
+
+- status: `watch`
+- note:
+  - 后续可以做参考层，但不是当前主线
+  - 只有在主源和内部能力层足够扎实时才值得引入
+
+## Current Corpus Snapshot
+
+- source records with IDs: `381`
+- internal source record files: `83`
+- fact cards with IDs: `171`
+- topic wiki pages: `27`
+- planning/control documents: `123`

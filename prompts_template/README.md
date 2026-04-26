@@ -71,15 +71,16 @@ APTPCB 的内链承接要优先落向：
 ## 推荐优先阅读
 
 1. `shared/technical-blog-standard.md`
-2. `shared/template-selection-and-pruning.md`
-3. `shared/keyword-cluster-design-standard.md`
-4. `shared/data-organization-standard.md`
-5. `shared/evidence-pack-template.md`
-6. `shared/fact-seed-repository-standard.md`
-7. `shared/pcb-industry-top-blog-analysis.md`
-8. `shared/topic-cluster-roadmap.md`
-9. `shared/blogs-directory-template-harvest.md`
-10. `shared/legacy-prompt-directory-cleanup-plan.md`
+2. `shared/blog-evaluation-rubric.md`
+3. `shared/template-selection-and-pruning.md`
+4. `shared/keyword-cluster-design-standard.md`
+5. `shared/data-organization-standard.md`
+6. `shared/evidence-pack-template.md`
+7. `shared/fact-seed-repository-standard.md`
+8. `shared/pcb-industry-top-blog-analysis.md`
+9. `shared/topic-cluster-roadmap.md`
+10. `shared/blogs-directory-template-harvest.md`
+11. `shared/legacy-prompt-directory-cleanup-plan.md`
 
 ## 这个目录现在负责什么
 
@@ -90,6 +91,21 @@ APTPCB 的内链承接要优先落向：
 - 固定参数事实库的使用边界与版本口径
 - 固定 HILPCB 与 APTPCB 的站点承接和内链方法
 - 固定 AI SEO / AI 可引用性写法，包括定义型摘要、内联来源归因、公开参考资料、FAQ query phrasing、作者与审核权威信号
+
+## 与 LLM Wiki 的边界
+
+`prompts_template/` 是写作执行层，不是事实主库。
+
+真实数据、来源登记、事实卡片、主题 wiki 现在统一放在：
+
+- `../llm_wiki/`
+
+执行博客写作时：
+
+- 在 `prompts_template/` 里组装证据与结构
+- 在 `llm_wiki/` 里读取来源、事实卡片、主题页
+
+不要把外部真实数据源登记、法规刷新记录、材料参数事实卡片继续堆回本目录。
 
 ## 兼容入口
 

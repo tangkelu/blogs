@@ -1,0 +1,356 @@
+# Phase Status
+
+Last updated: 2026-04-26
+
+## Overall
+
+- current_phase: `Phase 4`
+- current_focus: `H4 is now running as a controller-led multi-agent long task across shared B capability parameters, standards standardization, and supplier-scoped dated records while public reusable numeric readiness remains blocked`
+- previous_phase: `Phase 3`
+- next_phase: `Phase 5`
+
+## Phase Summary
+
+### Phase 1: Foundation And Inventory
+
+- status: `completed`
+- progress:
+  - `llm_wiki` directory structure initialized
+  - source governance established
+  - update log established
+  - first source/fact/wiki corpus built
+  - roadmap and backlog tracking added
+  - internal capability inventory added
+  - next batch list normalized from that scan
+
+### Phase 2: Internal Capability Layer Completion
+
+- status: `completed`
+- first planned batch:
+  - finish zoning
+  - cavity machining
+  - backdrill control
+- progress:
+  - first fabrication-control batch landed
+  - finish zoning and press-fit finish cards landed
+  - backplane-integration and validation-segmentation cards landed
+  - internal capability taxonomy normalized into `stackup / fabrication / finish / validation / integration`
+  - first process aggregation page landed: `rf-surface-finish-selection`
+  - first testing aggregation page landed: `rf-validation-and-test-coverage`
+  - first integration aggregation page landed: `backplane-execution-and-connector-integration`
+  - first stackup aggregation page landed: `hybrid-rf-stackup-strategy`
+  - first fabrication aggregation page landed: `rf-drilling-and-transition-control`
+  - second-layer process pages landed: `ptfe-processing-and-manufacturability`, `cavity-and-shield-feature-planning`
+  - second-layer testing page landed: `validation-ladder-from-e-test-to-si-verification`
+  - parallel sub-agent delivery pattern validated for independent topic pages
+  - closeout completed with no blocking internal capability gap
+
+### Phase 3: Official Source Expansion
+
+- status: `completed`
+- entry condition:
+  - Phase 2 has a stable internal capability map
+  - Phase 2 closeout confirms no blocking internal capability gap
+- progress:
+  - `P3-02 Finish Standard Metadata` completed with official IPC public metadata anchors and one conservative metadata fact card
+  - `P3-01 Taconic Official Coverage` completed conservatively with division-level official anchors and a source-gap fact; no product-parameter facts were written
+  - `P3-03 More High-Speed / RF Material Families` completed with official anchors and baseline facts for `Tachyon 100G`, `MEGTRON 8`, and `VT-464G`
+
+### Phase 4: Topic Wiki Expansion
+
+- status: `in_progress`
+- entry condition:
+  - materials and methods fact coverage are broad enough to aggregate reliably
+- current batch:
+  - `P4-11 Full Non-Blog Page Coverage Audit And Absorption` completed
+  - `P4-12 Layer-Count Blog Numeric Source Supplementation` now
+- progress:
+  - `high-speed-material-family-selection` landed as the first high-speed digital material-family selector page
+  - `rf-material-selector-by-application-band` landed as the application/band-oriented RF material shortlist page
+  - `finish-zoning-and-selective-multi-finish` landed as the selective-finish and zoning process page
+  - parallel sub-agent delivery pattern reused with main-agent review and tracking updates
+  - `internal-json-source-spine` defines the APT/HIL English non-blog JSON universe
+  - APT PCBA source coverage now includes FPT, IQC, FAI/FQI, NPI, small-batch, mass production, stencil, selective soldering, fine-pitch, cable/harness, IC programming, conformal coating, support, and BOM-related pages
+  - APT/HIL PCB source coverage now includes HDI, high-layer-count, impedance, advanced fabrication, high-thermal, metal-core, ceramic, rigid-flex, flex, high-speed, heavy copper, IC substrate, and volume assembly pages
+  - APT material source coverage now includes Arlon, Isola, Megtron, Taconic, Teflon/PTFE, spread-glass FR-4, and controlled-impedance stackups
+  - Remaining APT capabilities, industries, resources, materials, PCB, PCBA groups and remaining HIL products / service landings are covered by directory-level index records
+  - New internal fact cards cover PCBA stage gates, quality/traceability gates, FPT positioning, fine-pitch/stencil/selective-solder controls, cable/harness/programming integration, HDI, impedance/TDR, high-layer/backdrill, thermal platform selection, rigid-flex reliability, IC substrate build-up, and internal material-family coverage
+  - `pcba-quality-gates-and-test-strategy` landed as the PCBA inspection/test/release-gate aggregation page
+  - `pcba-npi-to-mass-production-flow` landed as the NPI, pilot, small-batch, mass-production, sourcing, assembly, and box-build handoff aggregation page
+  - `advanced-pcb-fabrication-and-stackup-planning` landed as the HDI, impedance, high-layer, thermal, rigid-flex, and IC-substrate planning aggregation page
+  - `internal-material-family-coverage-and-refresh-rules` landed as the internal material-family source-governance page
+  - `blog-write-readiness-sample` landed as the first prompt-consumption readiness sample across 8 representative blogs
+  - readiness sample result: `0 ready`, `4 mostly_ready`, `4 needs_sources`, `0 not_ready`
+  - sample exposed the next source-first gap-fill batch: assembly standards, HDI standards, conformal coating, FR-4, MCPCB/IMS, solder-profile, and phased-array context anchors
+  - P4-05 added official metadata/source anchors for IPC assembly standards, HDI/electrical-test/coating standards, FR-4, IMS/MCPCB, reflow profiling, conformal coating, and phased-array/phase-shifter context
+  - P4-05 added 6 conservative fact cards that connect the new official anchors to the blog-readiness gaps without freezing clause-level standard text or product-specific process windows
+  - P4-07 scanned APT/HIL English non-blog material mentions and added a site-material baseline coverage log
+  - P4-07 added official source anchors for Arlon directory / 85N / laminate guide, Isola 370HR / I-Speed / I-Tera MT40 / IS410, Panasonic MEGTRON lineup / MEGTRON 4, and Rogers RO4400 bondply
+  - P4-07 added 5 conservative material coverage and gap-control fact cards for site-mentioned material coverage
+  - P4-08 added official class-level anchors for ceramic/alumina/AlN, ABF, BT materials, flexible circuit-board materials, and LCP
+  - P4-08 added 4 conservative material fact cards and kept unresolved Taconic / Arlon grade-level data under gap-control
+  - P4-09 recovered official Arlon product-page anchors for 33N, 35N, 37N, 45N, 47N, 84N, and related controlled-flow / heavy-copper application pages
+  - P4-09 kept Taconic product-level data under gap-control because current official product URLs were not reachable/verified and third-party datasheet mirrors were excluded
+  - P4-10 added four material topic wiki pages for Arlon, ceramic/AlN/IMS, ABF/BT, and flex/LCP source-governance layers
+  - P4-11 upgraded the completion standard from directory/index coverage to full page-level source coverage plus `facts/wiki` absorption across both sites' English non-blog public pages
+  - P4-11 added APT application, capability, resources, PCB-service, PCBA-service, APT Rogers framing, and HIL baseline laminate/build-stage aggregation pages
+  - Final P4-11 audit passed with `internal_total 133` and `internal_unreferenced 0`
+  - Added `logs/layer-count-blog-readiness.md` to evaluate the 10 layer-count PCB manufacturing blogs against current `llm_wiki` support
+  - Initial layer-count readiness result: `6 mostly_ready`, `4 needs_sources`, `0 ready`, `0 not_ready`
+  - Numeric-gap audit confirmed the strongest current layer is official material-property cards and the weakest current layer is reusable numeric process-capability coverage for layer-count manufacturing
+  - P4-12 formalized the next source-first queue: `IPC-6012 / 6013 / IST` metadata follow-on, high-speed interface context anchors, broader FR-4 and low-loss datasheet anchors, and advanced microvia / sequential-lamination reliability anchors
+  - P4-12 explicitly keeps fabricator-specific capability windows, cost / yield / lead-time percentages, and unresolved Taconic / Arlon product parameters under gap-control
+  - P4-12 Batch N1 added public IPC anchors for `IPC-6012F`, `IPC-6013E`, and IPC's 2019 microvia-reliability warning, plus one conservative fact card for rigid / flex performance-specification metadata and microvia-reliability caution context
+  - P4-12 Batch N2 added public system-context anchors for `PCIe 4.0 / 5.0`, `DDR4 / DDR5`, and `112G / PAM4`, plus one conservative fact card that keeps those sources at board/system-context level rather than turning them into generic channel-budget or board-capability claims
+  - P4-12 Batch N3/N4 added public NASA and IPC anchors for microvia / stacked-microvia / IST-related reliability context and one conservative fact card for microvia-reliability caution framing
+  - P4-12 Batch N3 also added an Isola family-ladder fact card so layer-count drafts can move from mainstream FR-4 / high-Tg into lower-loss digital laminates without collapsing all FR-4-family materials into one table
+  - P4-12 Batch N3 second pass added official non-Isola laminate anchors from `Shengyi`, `ITEQ`, `Doosan`, and `EMC`, plus one conservative fact card to widen the supplier ladder from high-Tg FR-4 into lower-loss and very-low-loss digital materials
+  - P4-12 Batch N4 third pass added official metadata anchors for `AS9102C`, `ISO 13485:2016`, `MIL-PRF-31032`, `ASTM E595`, NASA's outgassing database, `IPC-2226A`, and legacy `IPC/JPCA-2315`, plus two conservative fact cards for hi-rel program metadata and current-vs-legacy HDI design-reference status
+  - P4-12 Batch N4 fourth pass added official FDA `QMSR` and `UDI` anchors and upgraded the hi-rel program metadata layer so medical-device quality-system and identification vocabulary no longer depends on `ISO 13485` alone
+  - P4-12 Batch N4 fourth pass also added official Panasonic `MEGTRON 6` family and ITEQ catalog / very-low-loss anchors plus one conservative build-up / HDI material-context fact card for `20-layer` material-family framing
+  - P4-12 Batch N4 fifth pass added official `IPC-1782B`, `AS5553E`, `AS6081A`, `AS6301A`, `AS6171A`, `AS6496A`, and `ARP6178A` metadata anchors plus two conservative fact cards for hi-rel traceability / counterfeit-control vocabulary and `20-layer` any-layer / `ELIC` gap-control
+  - P4-12 Batch N4 sixth pass added official FDA/eCFR metadata anchors for `21 CFR 820.50`, `820.65`, `820.181`, and `820.184` plus one conservative fact card for medical-device supplier-control, traceability, `DMR`, and `DHR` vocabulary
+  - P4-12 Batch N4 seventh pass added an official Panasonic `MEGTRON 6 - Halogen Free` family anchor and extended the `20-layer` build-up / HDI material-context layer with one more stable high-layer-count laminate example
+  - P4-12 Batch N4 eighth pass added official NASA configuration-management, `NASA-STD-0005`, NASA `GIDEP`, and DLA `CDAP` metadata anchors plus one conservative fact card for hi-rel configuration-control and problem-reporting vocabulary
+  - P4-12 Batch N4 ninth pass added official Ventec Ultrathin and Resonac `MCL-HS200 / HS20N` build-up-material anchors and extended the `20-layer` build-up / HDI material-context layer with guarded `ALIVH`, sequential-lamination, and build-up-construction vocabulary
+  - P4-12 Batch N4 tenth pass added official Resonac `MCL-E-700G` and `MCL-E-705G` build-up-material anchors and extended the `20-layer` build-up / HDI material-context layer with more guarded `HDI`/`PWB` build-up laminate examples
+  - P4-12 Batch N4 eleventh pass added a dedicated `20-layer` build-up-material boundary/non-claims fact card and tightened the layer-count readiness log so new build-up material anchors cannot be misread as process-window or capability evidence
+  - P4-12 Batch N4 twelfth pass added dedicated `20-layer` and `22-layer` rewrite-guardrail fact cards so blocked high-layer drafts are now explicitly split into `safe to keep`, `keep but downgrade`, and `must exclude` claim classes before any prompt-bridge work
+  - P4-12 Batch N4 thirteenth pass added official `IPC-6012EM`, NASA outgassing user-guide, and `IPC-TR-486` metadata anchors so `22-layer` medical/outgassing framing and `20-layer` `IST` method vocabulary are stronger without unlocking threshold tables or qualification numbers
+  - P4-12 Batch N4 fourteenth pass added direct official `IPC-6012EM` and `IPC-6012FS` product metadata plus `IPC-6012FS` TOC coverage, and one addendum-program metadata fact card, so `22-layer` can distinguish base rigid-board framing from medical and space/military addendum framing without treating addenda as reusable acceptance tables
+  - P4-12 Batch N4 fifteenth pass added official IAQG `9102` / SCMH workflow metadata and an official Isola processing-guide anchor, plus two conservative fact cards, so `22-layer` now has stronger public support for aerospace-style `FAI` workflow phrasing and high-layer rigid-board manufacturability context without unlocking numeric capability claims
+  - P4-12 Batch N4 sixteenth pass added official `AS9145`, `AS9103`, and IAQG `OASIS` metadata plus Panasonic `MEGTRON 7` very-high-layer-count family positioning, so `22-layer` now has a broader official workflow and supplier-side manufacturability context without unlocking certification, audit, or capability claims
+  - P4-12 long-task `Batch L1` added official IAQG certification-governance and IPC validation-services ecosystem anchors, so `22-layer` can more safely mention certification-record, oversight, and validation/listing ecosystem context without implying supplier status
+  - P4-12 long-task `Batch L2` added an official Ventec `VT-464 LT` process-guide anchor, so high-layer rigid-board manufacturability context now has a stronger cross-vendor process-discipline layer beyond Isola and Panasonic family positioning
+  - P4-12 long-task `Batch L3` completed with official IPC method-governance, IPC coupon-resource, and Doosan build-up-material anchors, so `20-layer` now has stronger method-development, representative-coupon, and `multiple lamination` vocabulary without unlocking thresholds or capability claims
+  - P4-12 long-task follow-on added an official Isola `Sequential Lamination in PCBs` note, so `20-layer` now has a stronger supplier-side stress-factor / failure-mode anchor for sequential-lamination context without unlocking lamination-count, reflow-cycle, or qualification claims
+  - P4-12 long-task additional follow-on added official IPC Validation Services FAQ and Standards Gap Analysis pages plus Panasonic `MEGTRON M`, so `22-layer` now has clearer qualification-boundary / pre-assessment governance wording and the material layer has one more condition-bound Panasonic product-grade anchor without changing readiness verdicts
+  - P4-12 long-task reliability-governance follow-on added official NASA workmanship metadata, so `20-layer` now has stronger public interconnect-quality / inspection / defect-criteria wording without unlocking acceptance thresholds or supplier-status claims
+  - P4-12 long-task reliability-and-governance follow-on added official NASA `NEPP` 2019, Mitsui `RCC`, `AS9100D`, `AS9101G`, and `AS9131D` source layers, so `20-layer` now has stronger assurance-hierarchy and `RCC` vocabulary while `22-layer` now has clearer baseline-`QMS`, audit-process, and contract-driven nonconformity-reporting boundaries without changing readiness verdicts
+  - P4-12 long-task `Batch L5` added official IPC `TM-650 2.6.26A` / `2.6.27B` / `2.6.7.2C`, AGC `fastRise` / `Bond Plies / Prepregs`, and IPC `6012` addendum taxonomy anchors, so `20-layer` now has stronger method and material-form vocabulary while `22-layer` now has a cleaner public base-vs-addendum hierarchy without unlocking thresholds, recipes, or supplier-status claims
+  - P4-12 `L6` scouting did not land a new accepted batch because the best remaining public candidates were either low-gain overlaps, access-unstable, or still unable to move `20-layer` / `22-layer` beyond blocked threshold/capability gaps
+  - P4-12 narrow follow-on added official IPC `QPL IPC-4101` and `FAR 44.303` anchors, so `20-layer` now has a clearer public base-material-vs-finished-board qualification boundary and `22-layer` now has a clearer purchasing-system / subcontract-management review layer without changing readiness verdicts
+  - P4-12 next narrow follow-on added official IPC `QPL IPC-4103` and `QML IPC-1791` anchors, so `20-layer` now has a clearer public high-speed/high-frequency material-listing boundary and `22-layer` now has a clearer organization-level trusted-source `QML` boundary without changing readiness verdicts
+  - P4-12 next reassessment follow-on added the official `J-STD-001S` Space/Military Addendum `QML` anchor, so `22-layer` now has a clearer public `EMS/OEM` assembly-process listing boundary without changing supplier-status, bare-board qualification, or readiness verdicts
+  - P4-12 next reassessment follow-on added official `IPC-A-600K` and `IPC-6011A` TOC anchors, so `22-layer` now has clearer public bare-board acceptability and generic `IPC-601X` hierarchy boundaries without changing readiness verdicts
+  - P4-12 long-task `L7` added official NASA 2021/2022 PCB-evaluation records, the official Isola `IS410` processing guide, and the official DLA `QML/QPL/QBL` listing page, so `20-layer` now has stronger inspection / failure-analysis / mainstream laminate-prepreg vocabulary while `22-layer` now has a clearer government-side qualification-listing hierarchy without changing readiness verdicts
+  - P4-12 long-task `L9` added official AGC `Meteorwave 1000NF` and Rogers `2929 Bondply` anchors on top of the existing AGC bond-ply category layer, so `20-layer` now has a clearer public material-form boundary for `bond ply`, `no-flow prepreg`, and `unreinforced bondply` without changing readiness verdicts
+  - P4-12 long-task `L10` added an official Ventec `VT-47LT` datasheet-page anchor, so `20-layer` now has a cleaner official prepreg-side boundary for `Any-layer HDI Designs`, `Sequential Laminations`, and `High Reliability for HDI Designs` without changing readiness verdicts
+  - Latest `P4-12` follow-on tightened `20-layer` evidence-pack intake behavior across `FRCC`, `RCC`, `bond ply`, `controlled-flow prepreg`, `no-flow prepreg`, ultrathin build-up, and supplier-page `any-layer HDI` wording, explicitly as prompt-safety tightening at the material-form boundary rather than as manufacturability proof or readiness expansion
+  - Latest `P4-12` material follow-on added official `MIL-PRF-55110` ASSIST detail metadata plus AGC `N7000-3F`, ITEQ `IT-602G`, and Rogers `RO4835T / RO4450T` anchors, so `22-layer` now has a clearer legacy-vs-current military rigid-board specification boundary while `20-layer` now has stronger product-grade material numerics and named-construction process context without changing readiness verdicts
+  - Latest `P4-12` high-speed follow-on added official JEDEC `DDR5` release-chronology anchors via `Business Wire` plus official `OIF CEI-112G` and `TE 112G` ecosystem pages, so high-speed interface context is broader across standards-release, interface, connector, and I/O vocabulary without turning those pages into channel-budget or capability claims
+  - Latest `P4-12` hierarchy/process follow-on added official `MIL-PRF-31032/1E`, official `IPC-6012FA` product-page / TOC metadata, and official Shengyi `S7439 / S7439B` processing guidance, so `22-layer` now has clearer military sheet-level and current automotive addendum hierarchy while `20-layer` now has one more mainstream supplier-side handling / drilling / desmear-sensitivity anchor without changing readiness verdicts
+  - Latest `P4-12` material follow-on added official TUC `ThunderClad 5Q` product-page coverage, so `20-layer` now has one more official very-low-loss product-grade anchor with explicit `high layer count` positioning without changing readiness verdicts
+  - Latest `P4-12` procurement-governance follow-on added official `DFARS 252.246-7008`, `DLAD 46.291`, and `FAR 52.246-11`, so `22-layer` now has clearer public source-hierarchy, contract-quality-flowdown, and production-lot-testing vocabulary without changing readiness verdicts
+  - Latest narrow-source reassessment confirms that adjacent audit/validation pages now have low marginal ceiling gain; the remaining blockers for `20-layer` and `22-layer` are still unsupported threshold tables, qualification-flow reconstruction, and fabricator-capability numbers
+  - Added `logs/p4-12-long-task-plan.md` to formalize the remaining `P4-12` execution into multi-agent long-task batches with explicit stop conditions before `P4-06`
+  - Added `logs/high-numeric-density-program-plan.md` to convert the layer-count mission from ad hoc supplementation into a fixed high-density readiness program with claim classes, workstreams, and `H0-H8` gates
+  - Completed `logs/h0-numeric-claim-inventory.md` across all 10 layer-count blogs and added cross-blog blocker synthesis for `A/B/C/D/E/F` classes
+  - Added `logs/h1-material-numeric-coverage-matrix.md` to convert the material layer into exact-product recovery batches before capability / standards / SI work
+  - Completed `H1 Batch 2` digital low-loss / very-low-loss cleanup with new exact-product cards for `Isola I-Speed`, `Isola I-Tera MT40`, and `ITEQ IT-602G`, plus initial readiness-gate cards for `ITEQ IT-150DA` and `ITEQ IT-968`
+  - Added a Panasonic ladder normalization card for `MEGTRON 4 / 6 / 7 / 8` so the material layer can use Panasonic-only progression without overstating `MEGTRON 4` as model-grade numeric-ready
+  - Reconciled the H1 matrix to actual source depth so `ITEQ IT-180A`, `Shengyi S1000-2 / S1000-2M`, and `Panasonic MEGTRON 4` are no longer overstated as fully covered product-grade rows
+  - Completed `H1 Batch 3` RF / hybrid cleanup with a Rogers RO3000 ladder card, an AGC-vs-Ventec commercial-antenna / compactness selector card, and a narrow `VTM1000i vs RO3010` compactness comparison card
+  - Kept `Taconic` and unresolved `Arlon` branches under explicit gap-control during `H1 Batch 3`, so the new RF/hybrid layer raises numeric-density writeability without weakening source discipline
+  - Started `H1 Batch 4` hi-rel / extreme-temp / special-material cleanup with new first-pass cards for `AGC N7000-3F`, `Rogers TMM 10i`, and `Arlon 85N`
+  - Kept `Arlon 85N` at readiness-only posture because the current official source layer still supports product identity but not datasheet-grade parameter extraction
+  - H1 Batch 4 follow-on corrected the Rogers `TMM 10i` member card to the official datasheet values, upgraded `AGC N7000-3F` to a condition-bound numeric baseline card, and added official Arlon `55NT` product-page / datasheet / processing-guide anchors plus an exact-product card
+  - H1 Batch 4 Arlon follow-on upgraded `85N` to exact-product numeric posture and added current official `85NT` source records plus an exact-product card, so the Arlon hi-rel branch now has `55NT`, `85N`, and `85NT` as product-grade anchors
+  - H1 Batch 4 Arlon normalization follow-on added an Arlon hi-rel branch normalization card so `55NT`, `85N`, and `85NT` remain distinct selector targets rather than collapsing into one generic branch row
+  - H1 Batch 5 first pass added exact-product numeric anchors for Rogers `RO4450F` / `RO4460G2`, Ventec `VT-4B7`, Panasonic `R-FR10`, and Panasonic `R-F705S`, so the build-up / flex / special-thermal boundary layer now has several real product rows instead of only family or form-factor framing
+  - H1 Batch 5 also kept `2929 Bondply`, generic `RCC/FRCC`, and generic rigid-flex `PI/Kapton/UPILEX` under boundary / gap-control, so narrow product exceptions do not silently become branch-level readiness upgrades
+  - H1 Batch 6 recovered mainstream exact-product rows for `ITEQ IT-180A`, `ITEQ IT-988GLSE`, `Shengyi S1000-2`, `Shengyi S1000-2M`, and `Panasonic MEGTRON 4 R-5725 / R-5620`, so the main `covered_family_only` block is now materially smaller before any `H2` capability-numeric work
+  - H1 Batch 6 left a residual ultra-low-loss ITEQ naming gap instead of flattening adjacent grades together
+  - H1 Batch 7 upgraded `ITEQ IT-150DA` and `ITEQ IT-968` from readiness-only to exact-product numeric posture by registering their linked official datasheets and normalizing their page-backed values into baseline cards
+  - H1 Batch 7 also registered a separate official `IT-968G` datasheet anchor and corrected the residual ultra-low-loss watchlist away from unconfirmed `IT-988SE` naming toward current official public names such as `IT-988GSE`
+  - H1 Batch 8 recovered `ITEQ IT-988GSE`, `IT-988GL`, `IT-988G`, and `IT-968SE` as exact-product ultra-low-loss rows with page-plus-datasheet source posture, so the ITEQ ultra-low-loss branch now has multiple separate product-grade anchors instead of one recovered row plus a naming watchlist
+  - H1 Batch 9 added an ITEQ ladder normalization card so the recovered `IT-180A / IT-150DA / IT-968 / IT-602G / IT-968SE / IT-988G / IT-988GL / IT-988GSE / IT-988GLSE` rows can now be written as a guarded branch ladder without collapsing them into one generic ITEQ average or reviving ambiguous suffix logic
+  - H1 Batch 10 added a cross-vendor high-speed digital material normalization card plus an H1 closeout summary, so `H1` is now complete and future work shifts to `H2` capability numerics while held branches remain explicitly under `gap_control`
+  - H2 kickoff governance is now landed through `logs/h2-capability-number-policy.md`, `logs/h2-capability-number-inventory.md`, and `logs/h2-dated-capability-source-schema.md`, so fabrication capability numerics are now governed as dated, scoped buckets instead of being harvested directly from prose or process pages
+  - H2 capability bucket recovery has now started with `impedance_tolerance` as the first execution bucket; current work is bucket intake, source mapping, and claim-splitting discipline, not reusable numeric recovery yet
+  - Existing impedance-related method and wiki pages remain usable for verification posture, stackup-planning posture, and non-claim boundaries, but impedance tolerance numerics themselves remain blocked until a `Tier 1` dated capability record exists
+  - H2 capability bucket recovery now also includes a first geometry-wave intake across `trace_space`, `drill_and_via_geometry`, and `aspect_ratio`, so the main geometry-style capability claims are now under bucket-level source maps and decision sheets rather than being left inside mixed blog prose
+  - Current geometry-wave work remains governance-only: existing HDI, drilling, high-layer, and IC-substrate pages support posture and non-claim boundaries, but reusable geometry numerics remain blocked until dated capability-source records exist
+  - H2 capability bucket recovery now also includes a second intake wave across `backdrill_and_stub`, `registration`, and `board_thickness`, so backdrill-control, alignment-control, and finished-thickness claim families are now under explicit bucket-governance and source-map control rather than staying mixed inside layer-count drafts
+  - Current second-wave work remains governance-only: existing internal drilling, multilayer, high-layer, rigid-flex, and stackup pages support posture and non-claim boundaries, but reusable numerics for `backdrill_and_stub`, `registration`, and `board_thickness` remain blocked until dated capability-source records exist
+  - H2 capability bucket recovery now also includes held-governance intake across `annular_ring`, `copper_plating_process_windows`, and `stackup_recipe_and_process_count_numbers`, so standards leakage, mixed plating/process-window claims, and stackup-recipe count leakage are now explicitly contained inside H2 governance rather than left in mixed layer-count drafts
+  - Current held-bucket work remains governance-only: `annular_ring` is governed but still blocked pending a dated capability record, `copper_plating_process_windows` remains `hold-until-split`, and `stackup_recipe_and_process_count_numbers` remains recipe-leakage containment rather than normal capability recovery
+  - H2 has now started splitting the held `copper_plating_process_windows` area into narrower child buckets, with `copper_weight_capability` added as the first governed child bucket so ounce-style capability claims are now separated from plating thickness, etch compensation, and heavy-copper process-balance language
+  - Current `copper_weight_capability` work remains governance-only: existing heavy-copper, thermal-platform, and special-process pages support posture and non-claim boundaries, but reusable copper-weight numerics remain blocked until a dated capability-source record exists
+  - H2 now also includes `plating_thickness_build_allowance` as the second governed child bucket from the held copper/plating cluster, so plated buildup claims are now separated from copper-weight capability, finish-stack wording, standards minima, and etch-compensation language
+  - Current `plating_thickness_build_allowance` work remains governance-only: existing heavy-copper, fabrication-process, finish, and standards-metadata pages support posture and non-claim boundaries, but reusable plating-thickness/build-allowance numerics remain blocked until a dated capability-source record exists
+  - H2 now also includes `etch_compensation` as the third governed child bucket from the held copper/plating cluster, so process-adjustment claims are now separated from copper-weight capability, plated buildup, geometry tables, and mixed heavy-copper process notes
+  - Current `etch_compensation` work remains governance-only: existing heavy-copper, advanced-process, and fabrication-process pages support posture and non-claim boundaries, but reusable etch-compensation numerics remain blocked until a dated capability-source record exists
+  - H2 now also includes `resin_fill_balance_heavy_copper_process_claims` as a containment-governed child area from the held copper/plating cluster, so resin-fill, balance, planarization, copper-coin, and related heavy-copper process notes are now explicitly contained instead of remaining mixed inside broader process language
+  - Current `resin_fill_balance_heavy_copper_process_claims` work remains containment-only: existing heavy-copper, advanced-process, and application pages support posture and non-claim boundaries, but this area is not a normal numeric-recovery bucket and does not authorize reusable process numerics
+  - H2 now also includes `standards_minima` as a containment-governed child area from the held copper/plating cluster, so finish minima, class-linked thresholds, addendum acceptance values, and similar standards-linked numbers are now explicitly contained instead of remaining mixed inside capability language
+  - Current `standards_minima` work remains containment-only: existing standards metadata, TOCs, and addendum pages support hierarchy and non-claim boundaries, but this area is not a normal numeric-recovery bucket and does not authorize reusable threshold numerics
+  - H2 now also includes `recipe_process_window_leakage` as a containment-governed child area from the held copper/plating cluster, so bake/cure windows, pressure/dwell ranges, route recipes, and similar process examples are now explicitly contained instead of remaining mixed inside capability language
+  - Current `recipe_process_window_leakage` work remains containment-only: existing internal process, heavy-copper, advanced-process, and supplier process-guide pages support workflow posture and non-claim boundaries, but this area is not a normal numeric-recovery bucket and does not authorize reusable process-window numerics
+  - The held `copper_plating_process_windows` split is now structurally complete for the current governance pass, but that completion only closes bucket taxonomy; it does not unlock any copper/plating/process numerics for reuse
+  - After the current H2 governance closeout, the next `P4-13` execution layer is now explicitly framed as `20-layer / 22-layer` blocker reduction rather than generic source expansion, with a dedicated control plan in `logs/p4-13-20-22-blocker-reduction-plan.md`
+  - Current long-task priority order is now explicit: `22-layer hi-rel acceptance-governance boundary batch` first, then `20-layer interconnect-reliability and process-window boundary batch`, then reassessment
+  - This planning shift does not change the readiness verdict: `20-layer` and `22-layer` still remain `needs_sources`, and `P4-06` remains blocked
+  - The first `22-layer hi-rel acceptance-governance boundary batch` is now landed through three narrower fact cards covering `acceptance workflow`, `qualification/listing/release authority`, and `contract flowdown / lot conformance`, plus a matching guardrail/readiness update
+  - This new split improves prompt-safe retrieval and makes future evidence-pack exclusions more explicit, but it still does not unlock thresholds, supplier approval, contract invocation proof, accepted-lot status, or outgassing acceptance numerics
+  - The next `22-layer Class-3 / addendum threshold-boundary batch` is now landed through three narrower fact cards covering `Class 3 and addendum threshold boundaries`, `clause-family visibility versus thresholds`, and `outgassing / screening acceptance boundaries`, plus a matching guardrail/readiness update
+  - This new `22-layer` threshold split improves prompt-safe retrieval and makes future evidence-pack exclusions more explicit, but it still does not unlock `Class 3 / 3A` thresholds, addendum technical tables, `PLT` sample plans, outgassing acceptance numerics, or accepted-lot proof
+  - The second `20-layer interconnect-reliability and process-window boundary batch` is now landed through three narrower fact cards covering `interconnect reliability workflow`, `process-window / recipe leakage`, and `method-versus-qualification`, plus a matching guardrail/readiness update
+  - This new `20-layer` split improves prompt-safe retrieval and makes future evidence-pack exclusions more explicit, but it still does not unlock `IST` thresholds, coupon plans, process-window numerics, stack recipes, qualification proof, or factory-capability claims
+  - The next `20-layer geometry-and-capability containment batch` is now landed through three narrower fact cards covering `geometry / factory-capability leakage`, `build-up material pages versus feature-size authority`, and `any-layer vocabulary versus shop capability`, plus a matching guardrail/readiness/control-note update
+  - This new `20-layer` geometry split improves prompt-safe retrieval and makes future evidence-pack exclusions more explicit, but it still does not unlock `trace/space`, drill/via, aspect-ratio, registration, yield, or factory-capability claims
+  - The dedicated `P4-13` control note now records that both the `22-layer` threshold split and the `20-layer` geometry-containment split have landed, and that the next step is reassessment rather than another immediate blocker-reduction batch
+  - The post-containment reassessment is now complete in a dedicated control note, and it confirms that both blocked drafts still remain source-blocked for narrower reasons than before
+  - `22-layer` is now primarily blocked by supplier-status / compliance / acceptance-assertion leakage rather than only by standards-threshold leakage
+  - `20-layer` is now primarily blocked by HIL-specific shop-capability / process-control / lead-time numerics rather than only by build-up-vocabulary leakage
+  - The next `22-layer` assertion-containment batch is now landed through three narrower fact cards covering `supplier-status marketing`, `compliance assertions`, and `qualification / acceptance assertions`, plus a matching guardrail/readiness update
+  - This new `22-layer` assertion split improves prompt-safe retrieval and makes future evidence-pack exclusions more explicit, but it still does not unlock supplier approval, compliance proof, qualification-package proof, or accepted-status claims
+  - The next `20-layer` assertion-containment batch is now landed through three narrower fact cards covering `HIL capability claims`, `HIL process-control numerics`, and `HIL production / lead-time claims`, plus a matching guardrail/readiness update
+  - This new `20-layer` assertion split improves prompt-safe retrieval and makes future evidence-pack exclusions more explicit, but it still does not unlock HIL-specific capability proof, process-control numerics, or commercial timing claims
+  - A second reassessment is now complete in `logs/p4-13-post-assertion-containment-reassessment.md`, and it confirms that both blocked drafts still remain source-blocked after the latest assertion-control layer
+  - A dedicated `P4-06` queue-control note now fixes the first safe bridge order into `prompts_template`: `6-layer`, `8-layer`, and `10-layer` first; `12-layer`, `16-layer`, and `14-layer` second; `18-layer` and `24-layer` deferred; `20-layer` and `22-layer` blocked
+  - First-wave `P4-06` bridge-prep execution is now landed for `6-layer`, `8-layer`, and `10-layer` through three dedicated control notes that fix template choice, candidate `fact_id/source_id` inputs, section-level pruning rules, refresh-required items, open gaps, and stop conditions
+  - This new first-wave bridge-prep layer does not unlock high-numeric-density reuse; it only creates governed entry notes for later evidence-pack assembly under `query` template discipline
+  - First-wave actual evidence-pack inputs are now also landed for `6-layer`, `8-layer`, and `10-layer`, so the prompt-consumption layer has concrete pack drafts rather than queue notes only
+  - These new evidence-pack drafts preserve conservative numeric discipline by keeping official exact-product / exact-condition facts, downgrading wiki/topic support to framing only, and excluding unsupported `B / C / D / E / F / G` numerics
+  - Second-wave bridge-prep execution is now also landed for `12-layer`, `16-layer`, and `14-layer` through three dedicated control notes that split their main blocker clusters before evidence-pack assembly
+  - The second-wave split is intentionally asymmetric: `12-layer` is governed around `B + D` leakage, `16-layer` around `B + D/E` power-thermal-process leakage, and `14-layer` around `C + B + E` standards and rigid-flex leakage
+  - Second-wave actual evidence-pack inputs are now also landed for `12-layer`, `16-layer`, and `14-layer`, so the prompt-consumption layer now has concrete pack drafts for both safe waves
+  - `H2` governance now also isolates `testing_and_verification_capability` so verification posture, numeric scope, and acceptance-style claims cannot be silently merged inside future evidence packs
+  - `H2` now also has full bucket-governance coverage for `testing_and_verification_capability` through a dedicated bucket decision and source map, not just a control note
+  - `NQ-1` shared `B` bucket governance is now formally closed through `logs/p4-06-nq-1-shared-b-buckets-closeout.md`, so all eight cross-blog `B` buckets now have bucket-decision plus source-map coverage
+  - This `NQ-1` closeout is governance completion only: reusable `impedance_tolerance`, `testing_and_verification_capability`, `trace_space`, `drill_and_via_geometry`, `aspect_ratio`, `registration`, `board_thickness`, and `backdrill_and_stub` numerics all remain blocked pending dated capability records
+  - `NQ-2` targeted `D` interpretation guardrails are now formally closed through `logs/p4-06-nq-2-d-interpretation-guardrails-closeout.md`, so `12-layer` high-speed context, `8 / 10 / 12-layer` impedance-to-geometry leakage, and `16-layer` PDN/thermal heuristics now have narrower retrieval-safe boundary cards
+  - This `NQ-2` closeout is guardrail completion only: reusable board-level SI, timing, skew, width/spacing implication, PDN, decoupling, backdrill-threshold, and thermal-outcome numerics all remain blocked
+  - `NQ-3` `14-layer` special-risk branch is now formally closed through `logs/p4-06-nq-3-14-layer-special-risk-closeout.md`, so `14-layer` standards-threshold leakage, rigid-flex reliability numerics, and flex-material exact-product generalization now have narrower retrieval-safe boundary cards
+  - This `NQ-3` closeout is containment completion only: reusable `Class 2 / Class 3`, annular-ring, registration, bend-life, bend-radius, transition-tolerance, and generic flex-material numerics all remain blocked
+  - `NQ-4` exact-product completion is now formally closed through `logs/p4-06-nq-4-final-closeout.md` after a bounded multi-agent exact-product cleanup and normalization pass
+  - The landed `NQ-4` batch adds exact-product Isola coverage through `facts/materials/isola-is410.md`, `facts/materials/isola-370hr.md`, `facts/materials/isola-fr408.md`, and `facts/materials/isola-fr408hr.md`, while `Arlon 85NT` is now carried into the `14-layer` pack as a guarded polyimide exact-product anchor
+  - The remaining named-product tail is now explicitly split: `Kapton HN`, `UPILEX-S`, `Shengyi S1150G`, and `Shengyi S1141` remain held, while `ITEQ IT-180GF`, `IT-140`, and `IT-158` are closed as not needed for the current safe-wave scope
+  - This `NQ-4` closeout improves safe-wave exact-product material granularity, but it does not unlock generic `FR-4`, generic flex-material, capability, standards, SI, or reliability numerics
+  - A new safe-wave control note now confirms that all six landed packs are conservative-draftable, while also fixing the next high-density supplementation order around shared `B` buckets first, then `D`, `C/E`, and remaining `A` polish
+  - High-layer reassessment now distinguishes `conservative rewrite support` from `current draft risk`
+  - Reassessment result remains unchanged after the latest `L3/L4` and follow-on source review: `18-layer` and `24-layer` stay `mostly_ready` for conservative rewrites, while `20-layer` and `22-layer` remain `needs_sources`
+  - A direct post-`NQ-4` blocked-draft reassessment through `logs/p4-13-blocked-draft-reassessment-and-next-pass.md` now confirms that `20-layer` and `22-layer` still fail for draft-structural reasons, not just abstract source thinness
+  - Draft-level blocker maps are now also landed through `logs/p4-13-20-layer-draft-blocker-map.md` and `logs/p4-13-22-layer-draft-blocker-map.md`, so the remaining blocked surface is now controlled at draft-section level rather than only at blocker-class level
+  - The next `P4-13` control layer is now also landed through `logs/p4-13-20-layer-bridge-exclusion-and-downgrade-map.md` and `logs/p4-13-22-layer-bridge-exclusion-and-downgrade-map.md`, so the immediate next step is a per-draft containment pass executed inside those notes rather than another abstract reassessment or a readiness-note-only refresh
+  - That per-draft containment pass is now also complete through `logs/p4-13-draft-containment-pass-closeout.md`, and the live `20-layer` / `22-layer` drafts have been materially reduced to conservative context versions
+  - This changes current draft posture more than numeric readiness: `20-layer` and `22-layer` are now closer to `mostly_ready` for conservative rewrites, but they still remain blocked for high-density numeric reuse and `P4-06` bridge
+  - `H2` shared capability-bucket governance is now formally closed through `logs/h2-capability-governance-closeout-summary.md`
+  - This `H2` closeout is governance completion only: shared `Class B` buckets now have decision/source-map coverage, but reusable capability numerics still remain blocked pending `Tier 1` dated capability records
+  - `H3` is now formally started through `logs/h3-threshold-and-acceptance-layer-kickoff.md` and `logs/h3-threshold-inventory-and-blacklist.md`
+  - `H3` current posture is conservative by default: public standards metadata may support identity and hierarchy, but threshold tables, acceptance numerics, supplier-status proof, and qualification/accepted-lot claims remain excluded unless a narrower public-threshold path is proven later
+  - `H3 Queue 1` for `22-layer` is now landed through `logs/h3-22-layer-threshold-and-acceptance-inventory.md` and `logs/h3-22-layer-source-policy-and-disposition-map.md`
+  - This first queue pass fixes the `22-layer` claim-family routing and source-policy split more explicitly: `public_threshold_available` remains `none`, metadata-only residual wording is narrower, and supplier-specific proof claims remain gated behind separate supplier evidence
+  - `H3` is now also formalized as a controller-led multi-agent long task through `docs/superpowers/plans/2026-04-26-h3-threshold-acceptance-long-task.md` and `logs/h3-long-task-multi-agent-plan.md`
+  - `H3 Queue 1` `22-layer` now also has an execution-grade blacklist/residual-wording layer in `logs/h3-22-layer-evidence-pack-blacklist-and-residual-wording.md`, which improves evidence-pack control without changing the blocked verdict
+  - `H3 Queue 2` `14-layer` intake is now landed through `logs/h3-14-layer-threshold-and-rigid-flex-intake.md`, hardening standards-threshold and rigid-flex control without reopening the existing conservative bridge as a numeric unlock
+  - `H3 Queue 3` `20-layer` intake is now landed through `logs/h3-20-layer-method-and-qualification-intake.md`, hardening method-vs-qualification and HIL-proof containment without unlocking geometry, process-window, or `IST` numerics
+  - `H3 Queue 2` `14-layer` now also has an execution-grade exclusion/hold layer in `logs/h3-14-layer-bridge-exclusion-and-supplier-hold-map.md`, which turns intake-only control into direct bridge-safe exclusion and supplier-hold decisions without changing the conservative-bridge verdict
+  - `H3 Queue 3` `20-layer` now also has an execution-grade control layer in `logs/h3-20-layer-execution-control-map.md`, which turns intake-only control into direct blacklist/residual/hold decisions without changing the blocked verdict
+  - `H3` has now also started live-draft alignment through `logs/h3-live-draft-alignment-closeout.md`: `14-layer` was materially rewritten to match the new control layer, while `20-layer` and `22-layer` passed read-only compliance audits with only residual wording edge cases remaining
+  - `H3` live-draft alignment has now been extended to the two deferred high-layer drafts through `logs/h3-18-layer-hybrid-execution-control-map.md` and `logs/h3-24-layer-high-speed-execution-control-map.md`
+  - The live `/code/hileap/frontendHIL/docs/hilpcb_blog_04.24/en/18-layer-pcb-manufacturing.md` draft is now reduced to hybrid RF/digital planning context, class-level material framing, transition planning, and workflow-level validation wording
+  - The live `/code/hileap/frontendHIL/docs/hilpcb_blog_04.24/en/24-layer-pcb-manufacturing.md` draft is now reduced to high-speed system context, stackup/material planning posture, transition/correlation risk framing, and workflow-level validation wording
+  - This improves current draft posture rather than evidence ceiling: `18-layer` and `24-layer` are now materially safer as conservative live drafts, but both remain blocked for high-density numeric reuse
+  - `H3` has now also fixed the post-cleanup mainline for the two still-blocked branches through `logs/h3-20-22-evidence-ceiling-and-source-lane-split.md`
+  - `20-layer` is now explicitly governed as an evidence-ceiling problem centered on HIL-specific capability/proof, geometry/process numerics, qualification authority, and process-window numerics
+  - `22-layer` is now explicitly governed as an evidence-ceiling problem centered on HIL-specific compliance/acceptance proof, threshold reconstruction, workflow-to-acceptance collapse, and lot/release implication
+  - Public-source follow-on is now narrowed to metadata/hierarchy/workflow tightening only; capability, qualification, compliance, accepted-status, and commercial claims are explicitly routed to a supplier-evidence-only lane
+  - This keeps both blocked branches under controlled persistence without pretending that more public-source rounds are likely to reopen high-density numeric reuse
+  - `H3` now also has a dedicated supplier-evidence governance layer for the two blocked branches in `logs/h3-20-22-supplier-evidence-governance.md`
+  - `20-layer` supplier-evidence handling is now explicitly split into permanently parked classes, narrow dated supplier-scoped unlock classes, and never-genericize classes
+  - `22-layer` supplier-evidence handling is now explicitly split into permanently parked classes, narrow dated supplier/lot-scoped unlock classes, and never-genericize classes
+  - Any future supplier evidence must now be interpreted as dated and scope-bound by default rather than as public reusable numeric support
+  - `H3` now also has an admissibility gate for future supplier or lot evidence in `logs/h3-20-22-dated-supplier-record-admissibility.md`
+  - Any future `20-layer` or `22-layer` supplier record must now pass minimum field requirements, bounded-context requirements, and hard rejection checks before it can even enter governed review
+  - This pushes the long task one layer deeper into governance: future supplier materials are no longer evaluated ad hoc, but against an explicit admissibility checklist before any unlock discussion begins
+  - `H3` now also has executable intake assets for that supplier-evidence lane in `logs/h3-20-22-supplier-record-intake-template.md` and `logs/h3-20-22-supplier-record-review-checklist.md`
+  - Future `20-layer` and `22-layer` supplier materials can now be captured in a standard stub with fixed required fields, warnings, and reviewer precheck fields before any governed review starts
+  - This moves the long task from abstract admissibility policy into a reusable intake workflow without changing any blocked-readiness verdict
+  - `H3` now also has controller-owned filled-example and execution-trigger assets for that supplier-evidence lane in `logs/h3-20-22-supplier-record-filled-examples.md` and `logs/h3-20-22-supplier-evidence-execution-trigger.md`
+  - The new examples intentionally model only governance-only filled stubs for one narrow `20-layer` process-control fact shape and one narrow `22-layer` build-workflow fact shape; they are not real supplier records and do not count as evidence landing
+  - The new trigger note now fixes `do not start unless a real dated-record path exists`, so the long task cannot drift from templates/examples straight into ad hoc supplier-evidence execution
+  - This pushes the supplier lane one step deeper into workflow control without changing public reusable numeric readiness or any blocked-branch verdict
+  - `H3` now also has branch-specific first-target intake packs for the supplier lane in `logs/h3-20-layer-supplier-first-target-intake-pack.md` and `logs/h3-22-layer-supplier-first-target-intake-pack.md`
+  - The `20-layer` pack now fixes first-target priority at `supplier_process_control_fact` before `supplier_capability_fact`, while the `22-layer` pack now fixes first-target priority at `lot_or_build_workflow_fact` before `supplier_status_or_listing_fact`
+  - `H3` now also has a shared reviewer decision matrix in `logs/h3-20-22-supplier-record-decision-matrix.md`, which constrains reviewer outputs to `reject_at_intake` versus `hold_for_governed_review` and reduces claim-family collapse risk across the two blocked branches
+  - This moves the supplier lane from shared workflow control into branch-specific intake execution without changing public reusable numeric readiness, supplier-evidence absence, or any blocked-branch verdict
+  - `H3` now also has execution handoff assets for the supplier lane in `logs/h3-20-22-supplier-record-intake-runbook.md` and `logs/h3-20-22-supplier-record-reviewer-handoff-checklist.md`
+  - The new runbook fixes controller-owned execution order after a real dated-record trigger opens, while the new handoff checklist fixes the minimum `controller -> reviewer` context package before intake review begins
+  - These two files keep trigger discipline, role separation, branch-pack routing, and label discipline aligned with the shared template, checklist, and decision matrix
+  - This moves the supplier lane from branch-specific intake execution into execution handoff hardening without changing supplier-evidence absence, public reusable numeric readiness, or any blocked-branch verdict
+  - `H3` now also has controller-owned sample handoff packets for the supplier lane in `logs/h3-20-layer-sample-reviewer-handoff-packet.md` and `logs/h3-22-layer-sample-reviewer-handoff-packet.md`
+  - The new `20-layer` and `22-layer` sample packets now demonstrate the narrowest first-target handoff shape without treating the sample itself as live evidence, live intake, admissibility passage, or branch unlock
+  - These sample packets keep the reviewer lane aligned to the handoff checklist, intake runbook, branch-specific pack, and branch boundary language while giving future controllers a direct packaging model
+  - This moves the supplier lane from execution handoff hardening into sample handoff packet hardening without changing supplier-evidence absence, admissibility status, public reusable numeric readiness, or any blocked-branch verdict
+  - `H3` supplier-lane hardening is now formally closed through `logs/h3-supplier-lane-hardening-closeout.md`
+  - This `H3` closeout is workflow-control completion only: governance, admissibility, template, review, handoff, and sample packet layers are now sufficient for future supplier-lane intake, but no real supplier evidence has landed and no numeric class was unlocked
+  - The next mainline is now formally reset through `logs/h4-numeric-parameters-and-standardization-kickoff.md`
+  - `H4` is explicitly organized around three separate axes: capability parameters, standards / qualification / acceptance handling, and supplier-scoped dated records
+  - `H4` priority now starts with `20-layer` and `22-layer`, then shared `Class B` capability-parameter classes, then shared standardization cards
+  - This `H4` kickoff is routing only, not a readiness upgrade: public reusable numeric readiness remains unchanged unless later work lands acceptable primary sources or dated supplier records
+  - `H4` now also has its first two execution-grade queue cards in `logs/h4-shared-b-capability-parameters-first-wave-queue.md` and `logs/h4-standards-standardization-first-card-queue.md`
+  - The first queue locks the `more numbers` path to seven first-wave shared `B` capability parameters, while the second queue locks the standardization path to `Class 3 / addendum / qualification / acceptance` boundary handling
+  - These two cards move the program from kickoff wording into actual queue execution without changing public reusable numeric readiness
+  - `H4` now also has two routing matrices in `logs/h4-shared-b-first-wave-parameter-routing-matrix.md` and `logs/h4-class3-addendum-qualification-acceptance-routing-matrix.md`
+  - The first matrix turns the seven first-wave shared `B` parameters into class-by-class routing posture, while the second turns the first standards-heavy branch into explicit `identity / threshold / qualification / acceptance / conformance` separation routing
+  - This moves `H4` one layer deeper from queue kickoff into execution routing without changing public reusable numeric readiness
+  - `H4` is now also formalized as a controller-led multi-agent long task through `docs/superpowers/plans/2026-04-26-h4-numeric-parameters-standardization-long-task.md` and `logs/h4-long-task-multi-agent-plan.md`
+  - The long-task structure fixes three disjoint lanes: Lane 1 shared `B` capability-parameter routing, Lane 2 standards / qualification / acceptance standardization, and Lane 3 supplier-scoped dated numeric/parameter records
+  - Lane 1 now has first-wave phase order across the seven shared `B` classes, Lane 2 now has a reusable card build order anchored on `22-layer`, and Lane 3 now uses the `H3` workflow substrate without reopening supplier-lane scaffolding
+  - This changes execution durability, not readiness: `H4` is now a long-running multi-agent program, but public reusable numeric readiness remains unchanged unless later acceptable evidence lands
+  - `H4` long-task first execution round is now landed across all three lanes
+  - Lane 1 Phase A now has single-class routing notes for `trace/space`, `minimum mechanical drill`, and `minimum laser via`
+  - Lane 2 Group A now has reusable separation cards for `standards-family vs threshold` and `qualification vs listing vs release-authority`
+  - Lane 3 now has opening units for `20-layer supplier_capability_fact` and `20-layer supplier_process_control_fact`
+  - This first round improves class-level routing precision, standards separation precision, and supplier-lane opening precision only; public reusable numeric readiness remains unchanged
+  - `H4` long-task second execution round is now also landed across all three lanes
+  - Lane 1 Phase B now has single-class routing notes for `aspect ratio` and `registration tolerance`
+  - Lane 2 Group B now has reusable separation cards for `acceptance-workflow vs acceptance-threshold` and `supplier-conformance assertion boundary`
+  - Lane 3 now also has a next opening unit for `20-layer supplier_qualification_package_existence`
+  - This second round improves routing precision and standards/supplier-boundary precision only; public reusable numeric readiness remains unchanged
+  - `H4` long-task third execution round is now also landed across all three lanes
+  - Lane 1 Phase C / D now has single-class routing notes for `impedance tolerance` and `annular ring`
+  - Lane 2 now also has the first `22-layer` branch-level final integration note in `logs/h4-22-layer-branch-routing-control-mapping.md`
+  - Lane 3 now also has the first `22-layer` opening unit for `supplier_status_or_listing_fact`
+  - This third round improves shared-parameter routing precision, `22-layer` standardization control precision, and `22-layer` supplier-lane intake precision only; public reusable numeric readiness remains unchanged
+  - `H4` long-task fourth execution round is now also landed across all three lanes
+  - Lane 1 now also has the first-wave closeout/control summary in `logs/h4-shared-b-first-wave-closeout.md`
+  - Lane 2 now also has the `20-layer` inherited secondary-control note in `logs/h4-20-layer-secondary-standardization-control-note.md`
+  - Lane 3 now also has the second `22-layer` opening unit for `lot_or_build_workflow_fact`
+  - This fourth round improves first-wave closeout precision, `20-layer` inherited standardization control precision, and `22-layer` supplier-lane intake precision only; public reusable numeric readiness remains unchanged
+  - `H4` long-task fifth execution round is now also landed
+  - Lane 3 now also has the third `22-layer` opening unit for `qualification_or_compliance_package_existence`
+  - Lane 3 now also has the first `22-layer` supplier-lane mini-closeout across the first three units in `logs/h4-22-layer-supplier-lane-first-three-units-closeout.md`
+  - This fifth round improves `22-layer` supplier-lane intake precision and mini-surface closeout precision only; public reusable numeric readiness remains unchanged
+  - The current `H4` tranche is now also formally closed enough to stop expanding for the moment through `logs/h4-current-tranche-closeout.md`
+  - That closeout confirms the controller now has enough Lane 1 / Lane 2 / Lane 3 control coverage to test a direct English blog-generation gate rather than continuing to add `H4` scaffolding by default
+  - `logs/en-layer-count-blog-generation-gate.md` now gives the direct generation verdict for the 10 English layer-count blogs
+  - Current practical generation gate is now: `go_now_conservative` for `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer`, `still_hold` for `20 / 22-layer`
+- next batch:
+  - generate conservative rewrites for `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` in the recommended order from `logs/en-layer-count-blog-generation-gate.md`
+  - keep `20-layer` and `22-layer` on hold for now
+  - if needed later, reopen `H4` only for a specific blocked branch rather than continuing generic lane expansion
+
+### Phase 5: Prompt Consumption And Evidence Packs
+
+- status: `queued`
+- entry condition:
+  - topic wiki coverage is sufficient for prompt-side consumption
+
+## Current Corpus Snapshot
+
+- source records with IDs: `381`
+- internal source record files: `83`
+- fact cards with IDs: `171`
+- topic wiki pages: `27`
+- planning/control documents: `123`
+
+## Discipline
+
+When a batch lands, update:
+
+1. `logs/update-log.md`
+2. `logs/backlog.md`
+3. `logs/phase-status.md`

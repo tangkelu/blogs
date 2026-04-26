@@ -3,17 +3,22 @@ import path from 'node:path'
 import OpenAI from '/code/chatbot/node_modules/openai/index.mjs'
 
 import {
+  assembleLlmWikiEvidenceContext,
   buildArtifactPaths,
   buildArticleFromEvidencePrompt,
   buildEvidencePrompt,
+  buildLlmWikiLookup,
   ensureDir,
   extractOutputTextFromResponsePayload,
+  loadLlmWikiIndex,
   loadKeywords,
   loadRuntimeConfig,
   loadSitePromptBundle,
   looksLikeCompleteBlog,
   parseCliArgs,
+  resolveLlmWikiEvidenceStrategy,
   sanitizeModelText,
+  shouldUseWebSearchForLlmWikiLookup,
   shouldRetryGenerationError,
   slugify,
   timestamp,
@@ -22,6 +27,7 @@ import {
 } from './codex_blog_generation_lib.mjs'
 
 const CONFIG = loadRuntimeConfig()
+const LLM_WIKI_INDEX = loadLlmWikiIndex()
 
 async function runStreamingRequest(client, input, options = {}) {
   const maxAttempts = options.maxAttempts || 3
@@ -161,16 +167,23 @@ async function generateOne(client, input) {
   const templateType = resolveTemplateType(input.keyword, input.template)
   const promptBundle = loadSitePromptBundle(input.site, templateType)
   const locale = input.locale || promptBundle.locale
+  const llmWikiLookup = buildLlmWikiLookup(input.keyword, LLM_WIKI_INDEX)
+  const localEvidenceContext = assembleLlmWikiEvidenceContext(llmWikiLookup)
+  const evidenceStrategy = resolveLlmWikiEvidenceStrategy(llmWikiLookup)
+  const useWebSearch = shouldUseWebSearchForLlmWikiLookup(llmWikiLookup)
 
   const evidencePrompt = buildEvidencePrompt({
     keyword: input.keyword,
     siteKey: input.site,
     locale,
-    templateType
+    templateType,
+    localEvidenceContext,
+    allowWebSearch: useWebSearch,
+    strategyMode: evidenceStrategy.mode
   })
 
   const evidenceResult = await runStreamingRequest(client, evidencePrompt, {
-    useWebSearch: true,
+    useWebSearch,
     maxAttempts: input.maxAttempts
   })
 
@@ -230,6 +243,15 @@ async function generateOne(client, input) {
             searchStarted: evidenceResult.searchStarted,
             searchQueries: evidenceResult.searchQueries,
             citations: evidenceResult.citations,
+            sourceMode: evidenceStrategy.mode,
+            coverageScore: evidenceStrategy.coverageScore,
+            localLlmWikiHits: llmWikiLookup.matches.map((entry) => ({
+              id: entry.id,
+              kind: entry.kind,
+              title: entry.title,
+              score: entry.score,
+              path: entry.path
+            })),
             evidencePath: artifactPaths.evidencePath
           },
           article: {
@@ -264,6 +286,15 @@ async function generateOne(client, input) {
           searchStarted: evidenceResult.searchStarted,
           searchQueries: evidenceResult.searchQueries,
           citations: evidenceResult.citations,
+          sourceMode: evidenceStrategy.mode,
+          coverageScore: evidenceStrategy.coverageScore,
+          localLlmWikiHits: llmWikiLookup.matches.map((entry) => ({
+            id: entry.id,
+            kind: entry.kind,
+            title: entry.title,
+            score: entry.score,
+            path: entry.path
+          })),
           evidencePath: artifactPaths.evidencePath
         },
         article: {
@@ -284,6 +315,9 @@ async function generateOne(client, input) {
     keyword: input.keyword,
     evidenceAttempts: evidenceResult.attempts,
     articleAttempts: articleResult.attempts,
+    evidenceSourceMode: evidenceStrategy.mode,
+    evidenceCoverageScore: evidenceStrategy.coverageScore,
+    localLlmWikiHits: llmWikiLookup.matches.length,
     evidenceSearchStarted: evidenceResult.searchStarted,
     evidenceSearchQueriesCount: evidenceResult.searchQueries.length,
     evidencePath: artifactPaths.evidencePath,

@@ -6,6 +6,7 @@
 
 - `query.md` 与 `pillar.md` 两个主骨架
 - 技术博客统一标准
+- 博客评估 rubric
 - 模板保留 / 裁剪规则
 - 关键词集群设计标准
 - 数据组织标准
@@ -30,14 +31,15 @@
 ## 建议阅读顺序
 
 1. `technical-blog-standard.md`
-2. `template-selection-and-pruning.md`
-3. `keyword-cluster-design-standard.md`
-4. `data-organization-standard.md`
-5. `evidence-pack-template.md`
-6. `query.md` 或 `pillar.md`
-7. `fact-seed-repository-standard.md`
-8. `legacy-prompt-directory-cleanup-plan.md`
-9. `competitive-keyword-source-standard.md`
+2. `blog-evaluation-rubric.md`
+3. `template-selection-and-pruning.md`
+4. `keyword-cluster-design-standard.md`
+5. `data-organization-standard.md`
+6. `evidence-pack-template.md`
+7. `query.md` 或 `pillar.md`
+8. `fact-seed-repository-standard.md`
+9. `legacy-prompt-directory-cleanup-plan.md`
+10. `competitive-keyword-source-standard.md`
 
 ## 新增共享资产
 
