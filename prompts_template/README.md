@@ -24,12 +24,13 @@
 ## 标准执行顺序
 
 1. 先读 `shared/technical-blog-standard.md`
-2. 再读 `shared/template-selection-and-pruning.md`，判断使用 `query` 还是 `pillar`
-3. 用 `shared/evidence-pack-template.md` 准备 facts / judgments / 禁写边界
-4. 选择目标站点 overlay
-5. 按站点内链策略分配产品页、服务页、工具页、次级博客页
-6. 如需数字型参数，先检查 `shared/fact-seed-repository-standard.md`
-7. 最终执行 `shared/query.md` 或 `shared/pillar.md`
+2. 再读 `shared/blog-rewrite-data-gap-contract.md`，先分析博客 / 主题关键点，判断是否需要补 `llm_wiki`
+3. 再读 `shared/template-selection-and-pruning.md`，判断使用 `query` 还是 `pillar`
+4. 用 `shared/evidence-pack-template.md` 准备 facts / judgments / 禁写边界
+5. 选择目标站点 overlay
+6. 按站点内链策略分配产品页、服务页、工具页、次级博客页
+7. 如需数字型参数，先检查 `shared/fact-seed-repository-standard.md`
+8. 最终执行 `shared/query.md` 或 `shared/pillar.md`
 
 ## HILPCB 使用路径
 
@@ -71,20 +72,22 @@ APTPCB 的内链承接要优先落向：
 ## 推荐优先阅读
 
 1. `shared/technical-blog-standard.md`
-2. `shared/blog-evaluation-rubric.md`
-3. `shared/template-selection-and-pruning.md`
-4. `shared/keyword-cluster-design-standard.md`
-5. `shared/data-organization-standard.md`
-6. `shared/evidence-pack-template.md`
-7. `shared/fact-seed-repository-standard.md`
-8. `shared/pcb-industry-top-blog-analysis.md`
-9. `shared/topic-cluster-roadmap.md`
-10. `shared/blogs-directory-template-harvest.md`
-11. `shared/legacy-prompt-directory-cleanup-plan.md`
+2. `shared/blog-rewrite-data-gap-contract.md`
+3. `shared/blog-evaluation-rubric.md`
+4. `shared/template-selection-and-pruning.md`
+5. `shared/keyword-cluster-design-standard.md`
+6. `shared/data-organization-standard.md`
+7. `shared/evidence-pack-template.md`
+8. `shared/fact-seed-repository-standard.md`
+9. `shared/pcb-industry-top-blog-analysis.md`
+10. `shared/topic-cluster-roadmap.md`
+11. `shared/blogs-directory-template-harvest.md`
+12. `shared/legacy-prompt-directory-cleanup-plan.md`
 
 ## 这个目录现在负责什么
 
 - 固定博客生产时真正使用的 prompt 入口
+- 固定博客分析 / 重写 / 生成前的 `分析关键点 -> 查 llm_wiki -> 补数据 -> 再写作` 契约
 - 固定 Query / Pillar 两套主结构
 - 固定关键词集群与数据组织方法
 - 固定 evidence-first 的技术博客写法

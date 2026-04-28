@@ -10,6 +10,8 @@ fact_ids:
   - "methods-surface-finish-selection-for-rf"
   - "methods-press-fit-finish-selection"
   - "standards-ipc-finish-standards-metadata"
+  - "standards-ipc-surface-finish-taxonomy-osp-hasl-extension"
+  - "standards-edge-contact-gold-finger-standards-metadata-boundary"
 source_ids:
   - "frontendapt-pcb-surface-finishes-page-en"
   - "frontendhil-pcb-surface-finish-landing-en"
@@ -24,7 +26,10 @@ source_ids:
   - "ipc-4552b-toc"
   - "ipc-4553a-chinese-toc"
   - "ipc-4554-am1-toc"
+  - "ipc-4555-toc"
   - "ipc-4556-toc"
+  - "ipc-6012f-toc"
+  - "ipc-a-600k-toc"
   - "ipc-status-of-standardization"
 tags: ["surface-finish", "selective-finish", "rf", "wire-bond", "press-fit", "edge-fingers", "processes"]
 ---
@@ -48,6 +53,9 @@ tags: ["surface-finish", "selective-finish", "rf", "wire-bond", "press-fit", "ed
 - The press-fit finish card treats `immersion tin` as the primary press-fit-oriented finish, but only inside a broader connector-and-hole-control workflow.
 - The finish-zone card ties finish choice to `storage exposure`, which means shelf life and packaging window are part of the decision even before assembly starts.
 - The IPC finish-standard card is a metadata anchor only: it is useful for document identity and revision status, but not for clause-level, thickness, or acceptance claims unless the licensed standard text is available.
+- The P4-37 finish-taxonomy extension adds `IPC-4555` as the OSP public anchor and clarifies that `IPC-4554` is immersion tin, not HASL.
+- HASL / Pb-free solder-coating discussion should be anchored through rigid-board surface-finish / solder-coating metadata such as `IPC-6012F` public TOC context unless a more specific primary source is added.
+- The P4-38 edge-contact boundary adds a dedicated metadata route for gold fingers and edge contacts through `IPC-6012F`, `IPC-A-600K`, `IPC-4552B`, and `IPC-4556`, while keeping thickness, bevel, insertion-cycle, contact-resistance, and acceptance claims blocked without licensed standards, drawings, or dated process records.
 
 ## Engineering Boundaries
 
@@ -57,7 +65,9 @@ tags: ["surface-finish", "selective-finish", "rf", "wire-bond", "press-fit", "ed
 - Do not ignore storage window or shelf life when a board may sit before assembly or shipping.
 - Do not collapse wire bonding, RF pads, edge fingers, and press-fit into one finish rule.
 - Do not use IPC metadata as a substitute for licensed standard text, clause interpretation, or thickness claims.
+- Do not map HASL to `IPC-4554`; that standard identity belongs to immersion tin in the current public metadata layer.
 - Do not write press-fit finish guidance without keeping hole control and connector integration in view.
+- Do not write gold-finger or edge-contact thickness, bevel, insertion durability, or contact-resistance claims from public IPC TOCs alone.
 
 ## Common Misreadings
 
@@ -67,6 +77,8 @@ tags: ["surface-finish", "selective-finish", "rf", "wire-bond", "press-fit", "ed
 - `ENEPIG` should not be treated as the default premium answer when wire bonding is not required.
 - `Immersion tin` for press-fit does not mean finish chemistry can compensate for weak drill control or connector mismatch.
 - IPC revision metadata is not the same thing as a process rule.
+- OSP being represented by an IPC public TOC does not authorize universal shelf-life, reflow-count, or cost-advantage claims.
+- A public IPC gold-finger / edge-contact metadata route does not mean the shop can manufacture or inspect every hard-gold edge-finger requirement.
 
 ## Must Refresh Before Publishing
 
@@ -74,6 +86,7 @@ tags: ["surface-finish", "selective-finish", "rf", "wire-bond", "press-fit", "ed
 - Any clause-level IPC claim or revision interpretation beyond public metadata
 - Any yield, cost, or masking-effort statement that depends on a specific fab workflow
 - Any claim about guaranteed compatibility between a finish choice and a specific wire-bond, RF, edge-finger, or press-fit implementation
+- Any exact gold-finger thickness, bevel geometry, insertion-cycle life, contact resistance, or edge-contact acceptance threshold
 
 ## Related Fact Cards
 
@@ -82,6 +95,8 @@ tags: ["surface-finish", "selective-finish", "rf", "wire-bond", "press-fit", "ed
 - `methods-surface-finish-selection-for-rf`
 - `methods-press-fit-finish-selection`
 - `standards-ipc-finish-standards-metadata`
+- `standards-ipc-surface-finish-taxonomy-osp-hasl-extension`
+- `standards-edge-contact-gold-finger-standards-metadata-boundary`
 
 ## Primary Sources
 
@@ -98,5 +113,8 @@ tags: ["surface-finish", "selective-finish", "rf", "wire-bond", "press-fit", "ed
 - https://www.ipc.org/TOC/IPC-4552B-toc.pdf
 - https://www.ipc.org/TOC/IPC-4553A-Chinese.pdf
 - https://www.ipc.org/TOC/IPC-4554Am1.pdf
+- https://www.ipc.org/TOC/IPC-4555_TOC.pdf
 - https://www.ipc.org/TOC/IPC-4556.pdf
+- https://www.ipc.org/TOC/IPC-6012F-TOC.pdf
+- https://www.electronics.org/TOC/IPC-A-600K-toc.pdf
 - https://www.ipc.org/Status

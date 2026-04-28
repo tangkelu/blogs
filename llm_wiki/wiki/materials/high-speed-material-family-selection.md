@@ -5,6 +5,7 @@ category: "materials"
 status: "draft"
 last_reviewed_at: "2026-04-24"
 fact_ids:
+  - "standards-high-frequency-printed-board-and-material-boundary"
   - "materials-panasonic-megtron-6"
   - "materials-panasonic-megtron-7"
   - "materials-panasonic-megtron-8"
@@ -14,6 +15,9 @@ fact_ids:
   - "materials-ventec-vt-464g"
   - "materials-ventec-vt-870"
 source_ids:
+  - "ipc-6018d-toc"
+  - "ipc-4103b-toc"
+  - "ipc-validation-services-qpl-ipc-4103-page"
   - "panasonic-megtron-6-r5775n"
   - "panasonic-megtron-6-datasheet"
   - "panasonic-megtron-7-r5785n"
@@ -53,6 +57,8 @@ tags: ["materials", "high-speed", "high-speed-digital", "multilayer", "signal-in
 - The Tachyon 100G registry card lists `Dk 3.02` and `Df 0.0021` in the headline property block, with the same Df value carried through the published `2 GHz`, `5 GHz`, and `10 GHz` table entries referenced there.
 - VT-464G is a Ventec tec-speed 5.0 laminate / prepreg system positioned for signal-integrity boards in servers, storage, switches, routers, and high-performance computing.
 - The VT-464G registry card lists `Dk 3.81 at 1 GHz` by the cited test method and `Df 0.0031 at 1 GHz`, with `Df 0.0050 at 10 GHz` by cavity resonator.
+- Public IPC metadata now adds a standards boundary: `IPC-6018` is the stronger high-frequency / microwave printed-board specification-scope anchor, while `IPC-4103` is the stronger high-speed / high-frequency base-material-scope anchor.
+- IPC `QPL IPC-4103` supports product / site listing vocabulary for high-speed / high-frequency base materials and bonding-layer products, but it does not qualify a finished PCB or channel result.
 
 ## Engineering Boundaries
 
@@ -62,6 +68,8 @@ tags: ["materials", "high-speed", "high-speed-digital", "multilayer", "signal-in
 - Use Tachyon 100G and VT-464G when the question is high-speed digital selection rather than microwave antenna selection.
 - Do not collapse frequency-specific Dk / Df numbers into one universal value.
 - Do not treat manufacturer positioning statements as design approval.
+- Do not use `IPC-4103` material scope as proof of finished-board RF qualification, channel performance, supplier stock, or supplier capability.
+- Do not use `IPC-6018` metadata as a substitute for licensed requirements, procurement documentation, or acceptance evidence.
 
 ## Common Misreadings
 
@@ -71,6 +79,7 @@ tags: ["materials", "high-speed", "high-speed-digital", "multilayer", "signal-in
 - Tachyon 100G is not automatically a microwave antenna laminate substitute.
 - VT-464G is not the same class of material as soft PTFE RF laminates, and the published values should be read in its signal-integrity context.
 - `VT-870` can be discussed as an RF-adjacent contrast, but it should not be the default high-speed digital choice in this page.
+- A material being listed or described under a high-speed / high-frequency material standard does not mean the final stackup, fabrication route, coupon strategy, or link budget is validated.
 
 ## Must Refresh Before Publishing
 
@@ -88,6 +97,7 @@ tags: ["materials", "high-speed", "high-speed-digital", "multilayer", "signal-in
 - `materials-isola-tachyon-100g`
 - `materials-ventec-vt-464g`
 - `materials-ventec-vt-870`
+- `standards-high-frequency-printed-board-and-material-boundary`
 
 ## Primary Sources
 
@@ -101,3 +111,6 @@ tags: ["materials", "high-speed", "high-speed-digital", "multilayer", "signal-in
 - https://www.ventec-group.com/products/tec-speed-signal-integrity/tec-speed-50-vt-464g/datasheet/
 - https://www.ventec-group.com/media/1957/180720tecspeed20-vt-870.pdf
 - https://www.ventec-group.com/products/tec-speed-rf/
+- https://www.ipc.org/TOC/IPC-6018D_TOC.pdf
+- https://www.ipc.org/TOC/IPC-4103B.pdf
+- https://www.electronics.org/ipc-validation-services-qualified-products-list-qpl-ipc-4103

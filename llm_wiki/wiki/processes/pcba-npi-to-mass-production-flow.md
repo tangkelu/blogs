@@ -6,6 +6,7 @@ status: "draft"
 last_reviewed_at: "2026-04-24"
 fact_ids:
   - "methods-pcba-npi-to-mass-production-gates"
+  - "methods-pcba-evt-dvt-pvt-gated-ramp-boundary"
   - "methods-pcba-mixed-technology-assembly-flow"
   - "methods-pcba-stencil-selective-solder-and-fine-pitch-controls"
   - "methods-pcba-bom-sourcing-and-traceability-posture"
@@ -67,6 +68,7 @@ tags: ["pcba", "npi", "pilot", "small-batch", "mass-production", "smt", "tht", "
 ## Stable Facts
 
 - Internal PCBA pages frame NPI, pilot, small-batch, and mass production as distinct stages with gates between them.
+- The internal NPI routing layer also uses `EVT / DVT / PVT` as gated ramp vocabulary, but those labels stay program-specific and do not replace the underlying review and validation content.
 - The HIL small-batch and large-volume assembly pages reinforce the same ramp split from prototype/NPI handling into statistically managed volume execution.
 - The mixed-technology assembly posture treats SMT, THT, selective solder, inspection, and electrical test as one coordinated flow, not as separate service islands.
 - The stencil and fine-pitch posture ties paste-print control, selective solder, and dense-package handling into one process-control chain.
@@ -84,6 +86,7 @@ tags: ["pcba", "npi", "pilot", "small-batch", "mass-production", "smt", "tht", "
 ## Engineering Boundaries
 
 - Keep NPI, pilot, small-batch, and mass production as gated stages, not as marketing synonyms.
+- Keep `EVT`, `DVT`, and `PVT` as program labels around those stages, not as universal pass-fail milestones with one fixed checklist.
 - Treat DFM, DFA, and DFT as launch inputs that influence gate readiness, not as a single checkbox.
 - Do not collapse BOM sourcing, line setup, stencil control, inspection, and traceability into one generic `production readiness` claim.
 - Keep SMT, THT, selective solder, X-ray, ICT/FCT, and functional validation as program-dependent steps within the flow.
@@ -93,6 +96,7 @@ tags: ["pcba", "npi", "pilot", "small-batch", "mass-production", "smt", "tht", "
 ## Common Misreadings
 
 - `NPI` does not mean the same thing as `mass production` with fewer units.
+- `EVT`, `DVT`, and `PVT` do not guarantee the same evidence package across all companies, products, or industries.
 - `Pilot` does not guarantee the final line configuration or the final test stack.
 - `Small-batch` does not imply the program is exempt from sourcing review, traceability, or first-article checks.
 - `SMT-only` language can hide THT, selective solder, cable, programming, and box-build dependencies that become critical at handoff.
@@ -111,6 +115,7 @@ tags: ["pcba", "npi", "pilot", "small-batch", "mass-production", "smt", "tht", "
 ## Related Fact Cards
 
 - `methods-pcba-npi-to-mass-production-gates`
+- `methods-pcba-evt-dvt-pvt-gated-ramp-boundary`
 - `methods-pcba-mixed-technology-assembly-flow`
 - `methods-pcba-stencil-selective-solder-and-fine-pitch-controls`
 - `methods-pcba-bom-sourcing-and-traceability-posture`

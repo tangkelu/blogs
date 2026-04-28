@@ -1,5 +1,210 @@
 # Update Log
 
+## 2026-04-28
+
+- Added `logs/p4-44-blog-learning-continuation-handoff.md` as the next-session entry point for continuing `/code/blogs/tmps` blog learning without relying on transient conversation context
+- Clarified the current tmps status: all `29` dated English `*/en` blog folders have deletion-safe claim-family / routing coverage, but the corpus is not fully source-backed learned until official-source records, fact cards, topic wiki pages, and prompt-consumption gates are added
+- Set the immediate next task to `P4-44 November 2025 Controller Integration`, using the four completed P4-40 November 2025 scout logs as inputs while keeping `/code/blogs/tmps/materias_pdf` paused
+- Completed P4-41 controller summary for December 2025 blog scouts, consolidating four `gpt-5.4` official-source recovery lanes into `logs/p4-41-source-recovery-controller-summary.md`
+- P4-41 scout outputs now cover:
+  - `logs/p4-41-2025-12-10-rf-ceramic-ro4003c-ro4350b-official-source-recovery-scout.md`
+  - `logs/p4-41-2025-12-17-solar-transparent-optical-official-source-recovery-scout.md`
+  - `logs/p4-41-2025-12-20-hdmi-solutions-official-source-recovery-scout.md`
+  - `logs/p4-41-2025-12-29-power-automotive-drone-wireless-assembly-official-source-recovery-scout.md`
+- P4-41 current result: December 2025 batches are deletion-safe at claim-family level and have partial routing through existing `llm_wiki` layers for Rogers / RF, ceramic, power-energy, procurement, HDMI, PCBA workflow, regulated application metadata, and wireless-interface boundaries; no new fact cards were created because fresh source-backed upgrades still require targeted official recovery or dated capability records
+- Started P4-42 next-batch `gpt-5.4` scouts for `2026.1.6`, `2026.1.13`, `2026.1.27`, and `2026.2.25` blog folders while keeping `/code/blogs/tmps/materias_pdf` paused
+- Completed P4-42 controller summary for early 2026 blog scouts in `logs/p4-42-source-recovery-controller-summary.md`
+- P4-42 scout outputs now cover:
+  - `logs/p4-42-2026-1-6-rf-high-frequency-official-source-recovery-scout.md`
+  - `logs/p4-42-2026-1-13-keyboard-mouse-hmi-audio-official-source-recovery-scout.md`
+  - `logs/p4-42-2026-1-27-led-industrial-consumer-application-official-source-recovery-scout.md`
+  - `logs/p4-42-2026-2-25-kingboard-material-blog-official-source-recovery-scout.md`
+- P4-42 current result: `2026.1.6` RF / high-frequency drafts and `2026.1.27` LED / industrial / consumer-application drafts have partial routing through existing facts and wiki pages; `2026.1.13` input-device / HMI / audio drafts are claim-family learned with limited boundary reuse; `2026.2.25` Kingboard drafts are strongly covered by existing exact-product source records and fact cards, with remaining work mostly rewrite governance and capability / commercial claim blocking
+- Completed P4-43 remaining English blog scout pass and controller summary in `logs/p4-43-source-recovery-controller-summary.md`
+- P4-43 scout outputs now cover:
+  - `logs/p4-43-2026-3-ro3003-ro3006-rogers-official-source-recovery-scout.md`
+  - `logs/p4-43b-2026-3-full-ro3003-ro3006-rogers-official-source-recovery-scout.md`
+  - `logs/p4-43-2026-4-1-two-layer-specialty-pcb-official-source-recovery-scout.md`
+  - `logs/p4-43-2026-4-24-layer-count-pcb-manufacturing-official-source-recovery-scout.md`
+- Added P4-43b corrective full-directory scout after finding that the original `2026.3` scout only recorded `ro3003-pcb-cost.md`; P4-43b inspected all `20` files under `/code/blogs/tmps/2026.3/en`
+- P4-43 current result: `2026.3` RO3003 / RO3006 drafts route through existing Rogers exact-product, RO3000 family, PTFE, hybrid-stackup, impedance, RF-validation, and service-boundary layers; `2026.4.1` two-layer specialty drafts inherit the APTPCB260401 boundary and surrounding material / finish / service support; `2026.4.24` layer-count manufacturing drafts route through existing layer-count gates and high-density governance, while all cost, lead-time, supplier capability, RF / thermal / SI performance, stackup default, process-window, yield, quality-rate, and certification claims remain blocked without stronger official sources or dated capability records
+- Completed P4-38 source-backed integration for the next blog re-learning slice, converting the strongest scout findings from `2025.7`, `2025.7.22`, and `2025.10.13` into reusable `llm_wiki` data instead of leaving them as scout-only notes
+- Added `logs/p4-38-source-backed-integration.md` as the controller integration record for international PCB shipping / customs boundaries, colored solder-resist boundaries, transparent / stretchable / biodegradable material-system boundaries, and gold-finger / edge-contact standards metadata
+- Added P4-38 official / official-candidate source records for ICC Incoterms, DHL customs documents, DHL duties/taxes, FedEx international transit notes, CBP import/export candidates, Peters ELPEPCB solder-resist / coating pages, Peters LED optical paper candidate, Jiva Soluboard technology, Corning Willow Glass, Henkel LOCTITE ECI 1501 E&C, and Qnity Activegrid products
+- Added P4-38 source-backed facts:
+  - `methods-international-pcb-shipping-customs-document-boundary`
+  - `materials-colored-solder-resist-product-specific-boundary`
+  - `materials-transparent-stretchable-biodegradable-electronics-material-system-boundary`
+  - `standards-edge-contact-gold-finger-standards-metadata-boundary`
+- Added topic wiki pages `wiki/materials/specialty-and-colored-pcb-material-boundaries.md` and `wiki/processes/international-pcb-procurement-shipping-boundaries.md`, and updated `wiki/processes/finish-zoning-and-selective-multi-finish.md` so these new facts are prompt-consumable
+- P4-38 current result: `2025.10.13` can now use official-source-backed shipping / customs document and transit caveats; colored PCB articles can use product-specific solder-resist boundaries; `2025.7.22` transparent / stretchable / biodegradable articles have named material-system anchors; gold-finger and edge-contact articles have IPC metadata routing, while all supplier-specific capability, exact pricing, lead time, MOQ, stock, delivery, customs outcome, quality-rate, yield, certification, process-window, finish-thickness, insertion-cycle, and optical / RF / thermal performance claims remain blocked without exact official sources or dated records
+- Started P4-40 next-batch official-source scouts through `gpt-5.4` lane agents for November 2025 blogs:
+  - `logs/p4-40-2025-11-3-consumer-rf-usb-ptfe-official-source-recovery-scout.md`
+  - `logs/p4-40-2025-11-10-ems-electronics-rf-tools-official-source-recovery-scout.md`
+  - `logs/p4-40-2025-11-17-ceramic-power-basics-official-source-recovery-scout.md`
+  - `logs/p4-40-2025-11-27-service-cost-medical-rf-quickturn-official-source-recovery-scout.md`
+- Completed P4-37 source-backed integration for the next pre-`2025.10.20` blog-learning batch after three `gpt-5.4` official-source scouts:
+  - `logs/p4-37-2025-8-12-rf-high-speed-official-source-recovery-scout.md`
+  - `logs/p4-37-2025-8-1-application-inspection-official-source-recovery-scout.md`
+  - `logs/p4-37-2025-7-23-specialty-materials-official-source-recovery-scout.md`
+- Added `logs/p4-37-source-backed-integration.md` as the controller integration record, converting the strongest P4-37 scout findings into reusable source records, fact cards, and topic wiki updates
+- Added P4-37 official source records for `IPC-6018D`, `IPC-4103B`, Keysight system impedance / S-parameter / power-integrity pages, Rohde & Schwarz OTA / RF chamber pages, HDMI 2.1b, IEEE 802.3 / P802.3dm, Bluetooth Core Specification, GPS.gov, ISO 26262, AEC documents, FDA MRI, FAA AC 20-152A, IPC-4555, IPC-4562B, JX / Tex copper foil pages, IPC TM-650 SIR, Dow protection families, MacDermid Alpha / Electrolube peelable coating mask, and KYOCERA LTCC
+- Added P4-37 source-backed facts:
+  - `standards-high-frequency-printed-board-and-material-boundary`
+  - `methods-rf-impedance-sparameter-pdn-ota-boundaries`
+  - `standards-interface-wireless-positioning-product-level-boundary`
+  - `standards-automotive-medical-aerospace-application-qualification-boundary`
+  - `materials-copper-foil-classes-and-roughness-boundary`
+  - `standards-ipc-surface-finish-taxonomy-osp-hasl-extension`
+  - `methods-insulation-coating-potting-peelable-mask-boundaries`
+  - `materials-ltcc-class-definition-and-nonclaims`
+- Updated topic wiki pages so P4-37 facts are prompt-consumable:
+  - `wiki/testing/rf-validation-and-test-coverage.md`
+  - `wiki/materials/high-speed-material-family-selection.md`
+  - `wiki/applications/industry-application-scenarios-and-boundaries.md`
+  - `wiki/processes/finish-zoning-and-selective-multi-finish.md`
+  - `wiki/processes/conformal-coating-protection-workflow-and-application-boundaries.md`
+  - `wiki/materials/ceramic-aln-ims-thermal-platforms.md`
+  - `wiki/materials/copper-foil-class-roughness-and-rf-boundaries.md`
+- P4-37 current result: `2025.8.12`, `2025.8.1`, and `2025.7.23` now have source-backed partial coverage for high-frequency printed-board / base-material standards, RF measurement / PDN / OTA vocabulary, interface and wireless standards boundaries, regulated application qualification boundaries, copper-foil classes, finish taxonomy, SIR / coating / potting / peelable-mask boundaries, and LTCC definition; still blocked are draft-originated impedance geometry, RF / OTA / antenna performance, interface compliance, medical / automotive / aerospace qualification, supplier capability, price, lead time, MOQ, stock, yield, quality rate, process windows, finish thickness / shelf life, copper roughness / loss tables, waterproof IP ratings, and LTCC process limits unless official sources or dated capability records are added
+- Started P4-36 re-learning for pre-`2025.10.20` blog batches after user clarified that trusted engineer-written drafts should drive official-source recovery rather than be skipped when they contain price, lead-time, capability, certification, process-window, material, quality, thermal, impedance, RF, legal, or IP-sensitive claims
+- Added three bounded `gpt-5.4` official-source scout logs:
+  - `logs/p4-36-2025-8-30-rf-microwave-official-source-recovery-scout.md`
+  - `logs/p4-36-2025-8-22-led-thermal-official-source-recovery-scout.md`
+  - `logs/p4-36-2025-7-28-testing-quality-official-source-recovery-scout.md`
+- Upgraded the strongest P4-36 testing / standards candidates into official source records:
+  - `ipc-tm650-2557a-tdr-characteristic-impedance`
+  - `ipc-tm650-25514-frequency-domain-loss-propagation`
+  - `ipc-tm650-2672c-thermal-shock-cycle-continuity`
+  - `ipc-tm650-269b-vibration-rigid-printed-wiring`
+  - `ipc-tm650-2414-solderability-metallic-surfaces`
+  - `ies-lm79-24-store-page`
+  - `ies-lm80-21-store-page`
+  - `ies-tm21-21-store-page`
+  - `iec-62471-photobiological-safety-page`
+  - `iso-14971-2019-page`
+  - `iec-60601-1-medical-electrical-equipment-page`
+  - `iatf-16949-overview-page`
+- Added P4-36 source-backed facts:
+  - `methods-pcb-impedance-and-rf-measurement-method-boundary`
+  - `methods-pcb-environmental-and-solderability-test-method-boundary`
+  - `standards-led-optical-lifetime-and-safety-boundary`
+  - `standards-medical-and-automotive-led-pcb-boundary`
+- Updated `wiki/testing/rf-validation-and-test-coverage.md` and `wiki/testing/pcba-quality-gates-and-test-strategy.md`, and added `wiki/testing/led-pcb-optical-thermal-and-regulated-test-boundaries.md`, so future blog-writing prompts can consume the new RF / impedance, environmental / solderability, and LED optical / safety / regulated-market boundaries
+- P4-36 current result: `2025.7.28`, `2025.8.22`, and `2025.8.30` are now source-backed partial for standards and method vocabulary, not just deletion-safe ingestion maps; still blocked are draft-originated commercial promises, supplier capability, exact process windows, exact impedance tolerances, LED lifetime values, regulated-market qualification, price, lead time, MOQ, stock, yield, throughput, and quality-rate claims unless official sources or dated capability records are added
+- Started P4-35 source-recovery mode for the blog batches after user clarification: trusted blog drafts should produce real data where official sources can verify them, not only ingestion maps
+- Added official source records for `IPC-2223E` flex / rigid-flex design-standard metadata and the FTC `Nixing the Fix` repair-restrictions report
+- Added `standards-ipc-2223e-flex-rigid-flex-design-metadata` so `/code/blogs/tmps/2025.10.20/en` flex / FPC / bendable / dynamic / rollable / foldable topics can cite real IPC design-standard context without inventing bend-radius, bend-cycle, stackup, or supplier-capability numbers
+- Added `standards-repair-restrictions-and-pcb-duplication-legal-boundary` so `/code/blogs/tmps/2025.10.1/en` repair / rework / copying / cloning / replication / reverse-engineering topics have an official FTC repair-policy boundary while still blocking legal-permission and IP-safe duplication claims pending legal-source recovery
+- Added official ECSS, KYOCERA, and KYOCERA package-substrate source records from the `2025.10.25` recovery scout:
+  - `ecss-q-st-70-12c-rev1-pcb-design-standard`
+  - `kyocera-thin-film-circuit-boards-page`
+  - `kyocera-thin-film-technology-page`
+  - `kyocera-fcbga-package-substrate-page`
+- Added source-backed facts for `2025.10.25`:
+  - `standards-ecss-via-hdi-microvia-definitions`
+  - `materials-thin-film-ceramic-circuit-technology-kyocera`
+  - `materials-package-substrate-boundary-kyocera-ajinomoto`
+- Reviewed the `2025.10.20` official-source recovery scout and confirmed the Minco flex / dynamic-bend lane is already source-backed in `methods-parameter-scope-rigid-flex-bend-guidance`; no duplicate fact card was created
+- Added `logs/p4-35-2025-10-20-official-source-recovery-scout.md`, `logs/p4-35-2025-10-25-official-source-recovery-scout.md`, and `logs/p4-35-commercial-legal-official-source-recovery-scout.md` as bounded `gpt-5.4` scout outputs for ongoing official-source upgrades
+- Updated the current P4-34 execution priority: continue deletion-safe learning for blog drafts under `/code/blogs/tmps/*/en`; pause `/code/blogs/tmps/materias_pdf` source recovery until the user reopens that lane
+- Added `logs/p4-34-2025-10-1-commercial-service-and-legal-sensitive-blog-ingestion-map.md` after auditing the 28 commercial / service / quote / supplier / repair / rework / copying / cloning / replication / reverse-engineering drafts under `/code/blogs/tmps/2025.10.1/en`
+- Added `methods-2025-10-1-commercial-service-legal-sensitive-draft-consumption-boundary` so future prompts route service-stage, prototype, production, sourcing, inspection, testing, and rework language to existing `llm_wiki` layers while keeping quote benchmarks, supplier proof, factory capability, legal conclusions, certifications, speed, quality, and commercial claims blocked
+- P4-34 current blog-learning result now includes dedicated deletion-safe coverage for `2025.10.1`; this is source-backed partial only for process routing and boundary vocabulary, not full commercial or legal-source learning
+- Added `logs/p4-34-2025-10-13-commercial-procurement-blog-ingestion-map.md` through a bounded `gpt-5.4` lane for the 38 commercial / procurement / logistics / FR-4 / colored-FR4 drafts under `/code/blogs/tmps/2025.10.13/en`
+- P4-34 `2025.10.13` result: commercial, procurement, supplier, pricing, lead-time, logistics, shipping, inventory, FR-4, layer-count, and colored-solder-mask topics are deletion-safe as claim inventory; reusable support is partial only for service routing, sourcing / traceability posture, FR-4 family boundaries, and fabrication / stackup framing
+- Blocked `2025.10.13` draft-originated price, quote, MOQ, stock, lead-time, shipping, logistics, supplier proof, certification, FR-4 property defaults, layer-count capability, colored-solder-mask performance, and HILPCB commercial / capability claims pending official sources or dated capability records
+- Added `logs/p4-34-2025-10-20-aluminum-flex-and-metal-core-blog-ingestion-map.md` through a bounded `gpt-5.4` lane for the 39 aluminum / metal-core / IMS / flex / FPC / polyimide drafts under `/code/blogs/tmps/2025.10.20/en`
+- P4-34 `2025.10.20` result: aluminum / IMS / MCPCB and flex / FPC / polyimide topics are deletion-safe at claim-family level, with partial source-backed reuse through existing Ventec IMS product cards, Kapton / UPILEX film examples, flex / rigid-flex boundaries, bend-guidance posture, and MCPCB assembly framing
+- Blocked `2025.10.20` draft-originated thermal-current numerics, board-level heat outcomes, bend-cycle / rollable / foldable life claims, connector-flex proof, certifications, supplier capability, price, lead time, MOQ, yield, throughput, quality-rate, and factory / manufacturer superiority claims
+- Added `logs/p4-34-2025-10-25-ceramic-rogers-hdi-and-ic-substrate-blog-ingestion-map.md` through a bounded `gpt-5.4` lane for the 30 ceramic / HTCC / thin-film / Rogers / HDI / microvia / IC-substrate-adjacent drafts under `/code/blogs/tmps/2025.10.25/en`
+- P4-34 `2025.10.25` result: ceramic class framing, Rogers family routing, TMM routing, HDI / microvia posture, ABF / BT substrate-class existence, and IC-substrate-adjacent boundaries are deletion-safe with partial routing through existing source-backed cards
+- Blocked `2025.10.25` draft-originated ceramic / Rogers / HDI / IC-substrate numeric properties, process windows, impedance / thermal / RF outcomes, HDI or IC-substrate capability thresholds, supplier proof, certifications, quality claims, price, lead time, MOQ, stock, yield, throughput, delivery, and application-readiness claims
+- Added `logs/p4-34-2025-7-22-specialty-materials-and-rogers-blog-ingestion-map.md` after auditing the 10 Rogers / FR-4 / edge plating / gold finger / transparent / stretchable / biodegradable drafts under `/code/blogs/tmps/2025.7.22/en`
+- Added `methods-2025-7-22-specialty-materials-rogers-draft-consumption-boundary` so future prompts route `RO4003C`, `RO4350B`, Rogers, and FR-4 content to existing source-backed material cards, while keeping edge plating, gold finger, transparent, stretchable, and biodegradable claims blocked unless official sources or dated capability records exist
+- Added three `gpt-5.4` P4-34 lane logs for follow-on blog batches:
+  - `logs/p4-34-2025-7-23-specialty-materials-and-structures-blog-ingestion-map.md`
+  - `logs/p4-34-2025-7-28-pcba-testing-quality-blog-ingestion-map.md`
+  - `logs/p4-34-2025-8-1-pcba-process-and-service-blog-ingestion-map.md`
+- P4-34 current blog-learning result: `2025.7.22`, `2025.7.23`, `2025.7.28`, and `2025.8.1` now have dedicated deletion-safe ingestion maps; source-backed reuse is partial and strictly routed through existing cards, while draft-originated numeric, capability, quality, compliance, commercial, application-readiness, and Highleap / HILPCB supplier claims remain blocked
+- Added three more bounded `gpt-5.4` P4-34 lane logs:
+  - `logs/p4-34-2025-8-12-rf-high-speed-impedance-blog-ingestion-map.md`
+  - `logs/p4-34-2025-8-22-led-power-application-blog-ingestion-map.md`
+  - `logs/p4-34-2025-8-30-rf-materials-and-pcb-types-blog-ingestion-map.md`
+- P4-34 follow-on result: `2025.8.12` RF / high-speed / impedance subset is deletion-safe at claim-family level with partial existing RF / impedance / validation routing; `2025.8.22` LED batch is deletion-safe at claim-family level with partial thermal-platform / PCBA-quality routing; `2025.8.30` RF materials and PCB-types batch is partial-routed through existing RF material, PTFE, hybrid stackup, impedance, assembly, and test layers
+- None of the P4-34 follow-on logs promoted draft-originated impedance formulas, LED thermal / optical values, RF performance, supplier certifications, commercial claims, quality rates, yields, lead times, MOQs, or HILPCB / Highleap capability claims into reusable facts
+- Added `logs/p4-33-full-tmps-learning-plan.md` as the long-task plan for learning the full `/code/blogs/tmps` corpus into `llm_wiki`
+- Baseline snapshot for P4-33: `/code/blogs/tmps` currently contains `1419` files, including `715` English markdown drafts under `*/en/*.md` across `29` dated batches, plus local material PDFs under `/code/blogs/tmps/materias_pdf`
+- Defined the execution boundary for the engineer-authored draft blogs: use them as expert claim inventory, outline structure, terminology, and source-gap signal; do not promote draft-originated numeric, supplier capability, certification, commercial, process-window, quality-rate, or application-readiness claims without official sources or dated capability records
+- Defined P4-33 workstreams for deletion-safe intake, topic taxonomy, material PDF source recovery, fabrication structures, PCBA/testing, RF/high-speed/impedance, applications, commercial/service claims, topic wiki aggregation, and prompt-consumption gates
+- Defined six `gpt-5.4` subagent lanes for future execution: materials/PDFs, PCBA/testing/quality, fabrication structures, RF/high-speed/impedance, applications, and commercial/service taxonomy
+- Completed the first P4-33 `gpt-5.4` lane-agent intake round:
+  - `logs/p4-33-lane-a-materials-pdf-and-draft-matching.md`
+  - `logs/p4-33-lane-b-pcba-testing-quality.md`
+  - `logs/p4-33-lane-c-fabrication-structures.md`
+  - `logs/p4-33-lane-d-rf-high-speed-impedance.md`
+  - `logs/p4-33-lane-e-applications.md`
+  - `logs/p4-33-lane-f-commercial-service-taxonomy.md`
+  - `logs/p4-33-lane-g-delta-2025-11-3-and-2025-11-17.md`
+- Added `logs/p4-33-full-tmps-source-manifest.md`, `logs/p4-33-full-tmps-master-ingestion-map.md`, and `logs/p4-33-full-tmps-source-gap-register.md` to consolidate the first-round P4-33 intake
+- P4-33 first-round result: all current dated English batches are now deletion-safe at manifest / lane-log level, but most remain `completed_at_claim_family_level` or `source_backed_fact_layer_partial`; no new source-backed fact cards were created in this pass
+- P4-33 next step is official-source / dated-record recovery from the new gap register, starting with material PDF provenance/extraction, testing and quality standards metadata, finish chemistry boundaries, RF/high-speed performance boundaries, and dynamic commercial / supplier capability gates
+- Started P4-33 source-backed recovery with `logs/p4-33-material-pdf-source-recovery-round-1.md`, extracting local AGC material PDFs and checking the corresponding official AGC PDF URLs
+- Added official AGC source records and exact-product fact cards for `RF-60TC`, `RF-35TC`, and `METEORWAVE 4000`, preserving frequency, test method, construction, temperature, and typical-value boundaries
+- Added `logs/p4-33-material-pdf-candidate-inventory-round-2.md` through a `gpt-5.4` subagent as candidate inventory only; the controller upgraded only the three verified AGC rows and kept the broader Rogers / Shengyi / Ventec / Taconic / AGC tail as future source-recovery work
+- Continued P4-33 material PDF source recovery with `logs/p4-33-material-pdf-source-recovery-round-2.md`, adding official AGC source records and exact-product fact cards for `METEORWAVE 8000`, `N4000-13 SI`, `N7000-3`, and `NF-30`
+- P4-33 AGC material PDF recovery now has `7` source-backed exact-product rows; all remain scoped to typical datasheet material parameters and do not unlock finished-board RF / SI / mmWave / severe-condition performance or supplier capability claims
+- Added `logs/p4-33-rogers-material-pdf-extraction-scout-round-3.md` through a `gpt-5.4` subagent as extraction scout only for `RO4360G2`, `RO4830 Plus`, `RO4835IND LoPro`, `RT/duroid 6002`, and `RT/duroid 6202`; controller review and official URL verification are still required before source/fact creation
+- Upgraded the Rogers scout into `logs/p4-33-material-pdf-source-recovery-round-3.md` after official Rogers PDF URL verification, adding source records and exact-product fact cards for `RO4360G2`, `RO4830 Plus`, `RO4835IND LoPro`, `RT/duroid 6002`, and `RT/duroid 6202`
+- P4-33 material PDF source-backed recovery now covers `12` exact-product rows total: `7` AGC rows and `5` Rogers rows, while Shengyi / Ventec / Taconic candidates remain open
+- Continued P4-33 material PDF source recovery with `logs/p4-33-material-pdf-source-recovery-round-4.md`, adding official Ventec source records and exact-product fact cards for `VT-901` and `VT-6880`
+- Added `logs/p4-33-shengyi-material-pdf-extraction-scout-round-4.md` through a `gpt-5.4` subagent as extraction scout only for `mmWaveG`, `AeroWave 300`, `LNB33C`, and `S1170G/S1170GB`; controller official-source verification and layout review are still required before source/fact creation
+- P4-33 material PDF source-backed recovery now covers `14` exact-product rows total: `7` AGC rows, `5` Rogers rows, and `2` Ventec rows; Taconic `RF-35` remains blocked pending official source
+- Upgraded Shengyi `AeroWave 300` from extraction scout into `logs/p4-33-material-pdf-source-recovery-round-5.md` after verifying the official Shengyi USA RF and Microwave page and `AEROWAVE 300-TDS` download endpoint
+- Added `shengyi-aerowave-300-datasheet` and `materials-shengyi-aerowave-300`, preserving source-scoped Dk / Df / thermal / mechanical / availability values and keeping `Thermal Coefficient of Dk` unitless because the official table's unit column is blank
+- After round 5, P4-33 material PDF source-backed recovery covered `15` exact-product rows total: `7` AGC rows, `5` Rogers rows, `2` Ventec rows, and `1` Shengyi row; Shengyi `mmWaveG`, `LNB33C`, and `S1170G/S1170GB` still needed follow-on verification at that checkpoint, and Taconic `RF-35` remained blocked pending official source
+- Added `logs/p4-33-shengyi-remaining-official-source-mapping-scout.md` through a `gpt-5.4` subagent as a bounded mapping scout for remaining Shengyi PDFs; the controller then verified official SYTECH English product pages beyond the Shengyi USA snapshot
+- Upgraded Shengyi `mmWave G`, `LNB33C`, and `S1170G` through `logs/p4-33-material-pdf-source-recovery-round-6.md`, adding three product-page source records and three exact-product fact cards
+- P4-33 material PDF source-backed recovery now covers `18` exact-product rows total: `7` AGC rows, `5` Rogers rows, `2` Ventec rows, and `4` Shengyi rows; `mmWaveGB` and `S1170GB` remain blocked as separate companion / prepreg identities, and Taconic `RF-35` remains blocked pending official source
+- Continued AGC METEORWAVE tail recovery through `logs/p4-33-material-pdf-source-recovery-round-7.md`, adding official source records and exact-product fact cards for `METEORWAVE 1000`, `METEORWAVE 1000NF`, `METEORWAVE 2000`, `METEORWAVE 3000`, and `METEORWAVE 4000M`
+- P4-33 material PDF source-backed recovery now covers `23` exact-product rows total: `12` AGC rows, `5` Rogers rows, `2` Ventec rows, and `4` Shengyi rows; the new AGC rows unlock source-scoped material parameters only, not finished-board high-speed/radar performance, lamination recipes, supplier capability, cost, lead time, stock, yield, or qualification claims
+- Added `logs/p4-32-2025-7-mixed-service-blog-ingestion-map.md` after auditing the five drafts under `/code/blogs/tmps/2025.7/en`
+- Added `methods-2025-7-mixed-service-draft-consumption-boundary` so future prompts route `Rogers PCB.md`, `pcba-service.md`, `smt-assembly.md`, and `through-hole-assembly.md` to existing Rogers / PCBA / SMT / THT source-backed layers while keeping `keyboard-pcb-types.md` at claim-family level only
+- Confirmed this batch does not add new Rogers material values, PCBA process parameters, SMT/THT capability claims, Highleap equipment / quality / sourcing / scale claims, keyboard market / performance claims, cost, lead time, yield, or commercial promises from draft prose
+- Added `logs/p4-31-aptpcb260401-2-layer-blog-ingestion-map.md` after auditing the 27 English 2-layer PCB drafts under `/code/blogs/tmps/APTPCB260401/en`
+- Added `methods-aptpcb260401-2-layer-draft-consumption-boundary` so future prompts consume this batch as 2-layer topic intent, outline shape, and blocked-claim inventory rather than universal design-rule, material-parameter, impedance, thermal, surface-finish chemistry, price, lead-time, supplier, qualification, or APTPCB capability evidence
+- Confirmed existing `llm_wiki` coverage can support conservative context for FR-4, Rogers, PTFE/RF processing, ceramic/alumina/AlN, flex/polyimide/LCP, IMS/MCPCB, surface-finish selection, PCBA flow, prototype/quick-turn routing, and RF validation, but draft-originated numeric and commercial claims remain blocked
+- Added `logs/p4-30-hilpcb-blog1-13-ingestion-map.md` after auditing the 40 English HILPCB input-device drafts under `/code/blogs/tmps/HILPCB-blog1-13/en`
+- Used four `gpt-5.4` lane agents to split the batch into keyboard-general, industrial/rugged/HMI keyboard, mouse/peripherals, and music/MIDI/audio claim inventories
+- Added `methods-hilpcb-blog1-13-input-device-draft-consumption-boundary` so future prompts consume this batch as topic intent, outline shape, and blocked-claim inventory rather than product-performance, protocol, certification, durability, regulated-sector, commercial, or HILPCB capability evidence
+- Confirmed current `llm_wiki` support is process/context-only for this batch: PCBA flow, inspection, NPI/FAI, flex/rigid-flex, HDI, USB-C vocabulary, industrial-control context, medical/hi-rel governance, and traceability posture can be reused only through existing source-backed cards
+- Blocked draft-originated keyboard, mouse, MIDI/audio, wireless, RF, battery, latency, DPI/CPI, RGB, hot-swap, IP-rating, MIL/medical, FCC/CE, Bluetooth, USB-IF, cost, lead-time, yield, and HILPCB capability claims pending official sources or dated capability records
+- Added `logs/p4-29-aptpcb-ro3003-ro3006-blog-ingestion-map.md` after auditing the 20 English RO3003 / RO3006 / Rogers drafts under `/code/blogs/tmps/APTPCB_blog2603/en`
+- Added `materials-aptpcb-ro3003-ro3006-blog-draft-consumption-boundary` so future prompts consume this batch as rewrite-intent and blocked-claim inventory, not as primary Rogers material-property evidence
+- Confirmed the reusable RO3003 / RO3006 numeric layer already exists through official Rogers source-backed cards; draft formulas, cost, lead time, stock, certification, capability, acceptance, and finished-board RF performance claims remain blocked pending separate source lanes
+
+## 2026-04-27
+
+- Completed `logs/p4-28-kingboard-residual-source-recovery.md` with `gpt-5.4` subagent lanes; all residual Kingboard products from P4-25 now have official KBLaminates source-backed exact-product facts
+- Added residual source records and fact cards for `KB-6160A`, `KB-6160F`, `KB-6160LC`, `KB-6160LC(C)`, `KB-6165C`, `KB-6165LE`, `KB-6167GMD`, `KB-6167GLD`, `KB-6168LE`, `KB-6169GT`, and `PI-515G`
+- Added `materials-kingboard-material-selection-boundaries`, `materials-kingboard-prepreg-construction-data-boundaries`, and `wiki-materials-kingboard-laminate-selection-and-boundaries` so prompts can consume Kingboard coverage through a selector and boundary layer instead of draft estimates
+- Updated P4-25 and P4-26 logs to clarify that no product remains blocked for lack of official KBLaminates source, while cost, lead time, inventory, HIL/APT capability, finished-board compliance, application qualification, and SI/channel claims remain blocked
+- Added `logs/p4-27-kingboard-remaining-content-completion-plan.md` as the long-task plan for finishing residual Kingboard source recovery, selector normalization, prepreg boundary coverage, and final `/tmps/en` completion status mapping
+- Added `logs/p4-26-kingboard-official-source-recovery.md` after recovering official KBLaminates source records for the Kingboard material draft batch
+- Registered official KBLaminates technical-information records for `KB-6150`, `KB-6160 / KB-6060`, `KB-6164 / KB-6064`, `KB-6165 / KB-6065`, `KB-6165F / KB-6065F`, `KB-6167F / KB-6067F`, `HF-140 / PP-HF140`, `HF-170 / PP-HF170`, `KB-3200G / PP-KB3200G`, and `PI-520G / PP-PI520G`
+- Registered the official `KB-6160 / KB-6060` processing guide as guarded process context rather than transferable fabrication recipe data
+- Added exact-product Kingboard material fact cards for `KB-6150`, `KB-6160`, `KB-6164`, `KB-6165`, `KB-6165F`, `KB-6167F`, `HF-140`, `HF-170`, `KB-3200G`, and `PI-520G`
+- Corrected draft-originated stale values where official KBLaminates PDFs differ, including `KB-6160` current `Tg 138 C`, `Td 310 C`, and `Dk 4.4 @ 1 GHz`, and resolved the `KB-6165` `Td` conflict to official `Td 348 C`
+- Kept `KB-6160A`, `KB-6160F`, `KB-6160LC`, `KB-6160LC(C)`, `KB-6165C`, `KB-6165LE`, `KB-6167GMD`, `KB-6167GLD`, `KB-6168LE`, `KB-6169GT`, and `PI-515G` blocked or needs-source
+- Added `logs/p4-25-kingboard-material-blog-ingestion-map.md` after auditing the 17 English Kingboard / HF / PI material drafts under `/code/blogs/tmps/en`
+- Used `gpt-5.4` subagents for independent mainstream FR-4 and high-speed / HF lanes, with controller integration for PI, compliance, commercial, and tracking rules
+- Confirmed current `llm_wiki` has no substantive Kingboard exact-product fact layer yet; existing mentions are only future-source gaps
+- Classified the batch as absorbed at claim-family disposition level, not product-parameter fact level
+- Marked `KB-6150`, `KB-6160`, `KB-6164`, `KB-6165`, `KB-6165F`, `KB-6167F`, `HF-140`, `HF-170`, and `PI-520G` as first-priority official-source recovery candidates
+- Marked `KB-6160A`, `KB-6160F`, `KB-6160LC`, `KB-6165C`, `KB-6165LE`, `KB-6168LE`, `KB-6169GT`, and `PI-515G` as blocked or needs-source because the drafts contain estimated or unverified values
+- Explicitly blocked draft-originated cost multipliers, lead time, inventory, APTPCB capability, qualification, compliance proof, SI/channel, PAM4/PCIe/USB/DDR/Ethernet, loss-budget, trace-length, and copper-roughness claims unless separate source-scoped evidence is later registered
+- No Kingboard material numeric facts were promoted in this pass because official Kingboard / KBLaminates source records were not yet attached
+
 ## 2026-04-24
 
 - Initialized `llm_wiki/` structure under `/code/blogs`
@@ -399,3 +604,126 @@
 - Added `logs/h4-current-tranche-closeout.md` to formally close the current `H4` tranche at the routing/control layer, confirming that Lane 1 first-wave closeout, Lane 2 first standardization cycle, and Lane 3 first three-unit `22-layer` intake surface are now complete enough to pause further `H4` expansion for the moment
 - Added `logs/en-layer-count-blog-generation-gate.md` as a direct go/no-go gate for the 10 English layer-count blogs, converting the current readiness corpus plus the landed `H4` control surface into a practical generation decision rather than another abstract readiness note
 - Updated `backlog` and `phase-status` so the repo now records the transition from tranche expansion to direct English blog-generation gating: `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` are now approved for conservative rewrites, while `20-layer` and `22-layer` remain on hold
+- Added `logs/p4-14-empty-image-rewrite-data-program.md` to convert the HILPCB empty-image rewrite priority list into a governed long-task data-supplement program with four lanes: PCBA test/review gates, coating and mixed-technology assembly, low-void BGA reflow / hidden-joint inspection, and RF / 5G / antenna / mmWave boundary handling
+- Used `gpt-5.4` subagents in parallel to land P4-14 fact-card support without editing global tracking files from worker lanes
+- Added PCBA test/review gate fact cards for DFM/DFT/DFA review positioning, boundary-scan / JTAG positioning, FAI versus high-speed validation boundary, and flying-probe versus ICT selection posture, plus one IEEE `P1149.1` source registry record
+- Added coating and mixed-technology assembly fact cards for conformal-coating application-context guardrails, masking / test-access / protection workflow, selective-wave-solder sequencing, and THT heavy-assembly context
+- Added low-void BGA boundary fact cards for solder-paste versus assembly capability separation, hidden-joint X-ray inspection boundaries, and DFM-to-process review flow
+- Added RF / 5G boundary fact cards for 5G RF system context versus PCB execution, beamforming / mmWave conservative generation, and 5G NR standards identity / revision handling
+- Verified the new P4-14 fact cards' `source_ids` resolve against the source registry; this improves conservative rewrite support for the empty-image P0/P1 families but does not unlock void-percentage limits, reflow recipes, X-ray thresholds, RF performance numerics, FR1/FR2 values, coating process windows, medical/automotive compliance proof, supplier-proof claims, or commercial numerics
+- Added `logs/p4-15-boundary-scan-jtag-blog-top-tier-gap-plan.md` after reviewing the first English `boundary-scan / JTAG` pilot as `safe_but_generic` rather than top-tier
+- Used `gpt-5.4` subagents to convert the pilot's quality defects into evidence-layer additions instead of continuing blind blog generation
+- Added JTAG-specific design-review support through `pcba-boundary-scan-jtag-chain-review-items`, `pcba-boundary-scan-jtag-bsdl-device-prerequisites`, and two XJTAG source records for chain topology and BSDL prerequisites
+- Added high-speed SI boundary support through `boundary-scan-does-not-prove-high-speed-channel-quality` and `high-speed-si-review-dimensions-remain-separate-from-boundary-scan`
+- Added PCBA test-method selection support through `pcba-test-method-selection-framework` and `pcba-test-method-input-package-boundary`
+- Added `boundary-scan-jtag-high-speed-rewrite-gate` so future drafts must include concrete JTAG review checks, SI boundary detail, method-selection logic, buyer action inputs, and generic-filler rejection
+- Verified the new P4-15 cards' `source_ids` resolve against the source registry; this improves top-tier rewrite support for the boundary-scan/JTAG pilot but does not unlock fault coverage, test throughput, cycle time, fixture payback, cost, yield, supplier qualification, high-speed pass/fail, BER, eye-mask, jitter, insertion-loss, or protocol-conformance claims
+- Rewrote `blogs/pilot/en/boundary-scan-jtag-high-speed-si.md` from a safe generic explainer into an engineering review checklist article using the P4-15 evidence additions
+- The rewritten pilot now includes concrete JTAG chain / BSDL review checks, a separate high-speed SI validation boundary table, a stronger method-selection matrix, and a DFT/test-access review file set before the HILPCB quote handoff
+- Verified the rewritten pilot passes public-blog leakage scan, high-risk claim scan, required `BlogQuickQuoteInline` component check, FAQ marker check, public-safe reviewer check, and `git diff --check`
+- Continued `P4-14` with a second-pass `gpt-5.4` lane supplement against the empty-image priority list, again using analysis-first data-gap discipline rather than direct blog generation
+- Added Lane A boundary cards for MES / medical-adjacent traceability, EVT / DVT / PVT ramp labels, and electrical-test versus reliability evidence, then tightened the PCBA NPI and PCBA quality-gate topic wiki pages
+- Added Lane B rewrite gates and topic wiki pages for conformal-coating protection workflow and mixed-technology solder-route selection, keeping coating and THT / selective-solder content away from compliance, process-window, and performance overclaims
+- Added Lane C low-void BGA conservative generation support plus a topic wiki page for low-void BGA reflow and hidden-joint inspection, limited to process-review and inspection-planning scope
+- Added Lane D RF isolator source records and a component-class versus PCB-execution boundary card, while keeping isolator and mmWave pages on hold for part-performance or RF-budget claims
+- Updated the `P4-14` control note with second-pass slug classifications and pilot ordering: strongest next pilots are `first-article-inspection-fai-high-speed-si`, `selective-wave-soldering-medical-imaging-wearable`, `traceability-mes-medical-imaging-wearable-2`, `dfm-dft-dfa-review-industrial-robotics-control`, and `npi-evt-dvt-pvt-high-speed-si`
+- Verified scoped P4-14 second-pass references and `git diff --check`; full-corpus reference validation still has a pre-existing unresolved `is410-processing-guide` reference in older `20-layer` method cards outside this P4-14 supplement
+- Generated the next P4-14 Lane A pilot at `blogs/pilot/en/first-article-inspection-fai-high-speed-si.md`, using the boundary-scan/JTAG pilot as the quality benchmark
+- Refreshed the public metadata checks for `AS9102C`, `IAQG 9102`, and `AS9145` source records before citing them in the FAI pilot
+- Verified the FAI pilot passes internal-leakage scan, high-risk claim scan, required `BlogQuickQuoteInline` component check, FAQ marker check, public-safe reviewer line, and `git diff --check`
+- Continued `P4-14` Lane B with a third-pass mixed-technology data supplement before drafting the next blog
+- Used three parallel `gpt-5.4` workers to add selective-solder access / fixture planning, manual-solder / touch-up / rework boundaries, and THT versus press-fit versus cable / harness route separation
+- Added `selective-solder-design-access-checks`, `manual-solder-rework-boundary-for-mixed-technology`, and `tht-pressfit-terminal-route-boundary` fact cards, plus three supporting topic wiki pages for access planning, rework control, and power-interface route selection
+- Added four internal-blog source registry records for selective-solder design, wave-solder fixture planning, hand-solder best practices, and through-hole soldering basics, with those sources constrained to qualitative framing rather than thresholds or numeric process data
+- Updated the `P4-14` control note so `selective-wave-soldering-medical-imaging-wearable` is now the strongest next Lane B pilot, while the two THT follow-ons remain ready under strict route-boundary wording
+- Verified the new third-pass Lane B `source_ids` and key `fact_ids` resolve in scoped validation; this does not unlock IPC acceptance thresholds, solder process windows, fixture dimensions, manual rework limits, medical compliance proof, inverter performance numerics, terminal-block-specific claims, cost, lead time, throughput, or yield claims
+- Continued the empty-image data program with a fourth-pass family supplement before drafting any new blog
+- Used three parallel `gpt-5.4` workers to add data support for power / inverter / charger, `5g-telecom` / `5g-6g-communication`, and AI server / optical module / high-speed empty-image families
+- Added fact cards and topic maps for `power-energy-inverter-charger-rewrite-boundary`, `5g-telecom-empty-image-rewrite-boundary`, and `ai-server-optical-high-speed-empty-image-boundary`
+- Updated the `P4-14` control note with fourth-pass slug posture: strongest candidates after this data round are `dfm-dft-dfa-review-renewable-energy-inverter`, `turnkey-a-5g-6g-communication`, and `dfm-dft-dfa-review-data-center-optical-module`; `type-c-charger` remains data-needed
+- Verified the fourth-pass `source_ids` and key `fact_ids` resolve in scoped validation; this does not unlock inverter / charger performance numerics, USB-C / PD protocol claims, RF budgets, 3GPP latest claims, antenna/mmWave performance, optical-module MSA / BER / jitter claims, void thresholds, reflow recipes, certification proof, cost, lead time, or yield claims
+- Continued the empty-image data program with `P4-16`, again delaying blog drafting until another data supplement round landed
+- Used three parallel `gpt-5.4` workers to supplement medical imaging / wearable manufacturing boundaries, industrial robotics / control review and test boundaries, and USB-C / charger protocol-manufacturing boundaries
+- Added medical-adjacent fact cards and a rewrite gate for `MES` / `DMR` / `DHR` / `UDI` traceability language plus coating / THT / low-void BGA manufacturing-control context
+- Added industrial robotics/control fact cards and a readiness map that separate review gates, process inspection, electrical test, low-void BGA planning, and reliability-proof language
+- Added USB-C / charger boundary cards and a readiness classification so `type-c-charger` is no longer pure `needs_data`; it is now boundary-ready only for conservative connector-zone, protection-placement context, controller / power-stage separation, inspection, and FCT handoff language
+- Verified scoped P4-16 `source_ids` and `fact_ids` resolve; this does not unlock medical compliance proof, FDA / ISO certification claims, USB-C / PD / PPS protocol tables, charger power or thermal numerics, industrial reliability / MTBF / DPPM claims, void thresholds, reflow recipes, test coverage, fixture payback, cost, lead time, or yield claims
+- Continued the empty-image data-first program with `P4-17`, still without drafting blogs
+- Added seven official USB-IF source records covering USB Type-C connector/cable scope, Type-C functional-test context, USB PD and Type-C compliance-update indexes, QbS program context, connector/cable QbS guidance, and Type-C language guidance
+- Updated the USB-C / PD / PPS protocol boundary card and the USB-C charger readiness topic so `type-c-charger` is now `boundary_ready_with_usb_if_vocabulary` rather than manufacturing-boundary-only
+- Rechecked medical / conformal-coating and RF / mmWave / isolator gaps: coating already has basic source support but still cannot make medical / sterilization / biocompatibility / coating-recipe claims, while RF/mmWave/isolator pages still cannot make RF-performance, band, antenna, part-selection, or supplier-qualification claims without narrower future sources
+- Continued the empty-image data-first program with `P4-18`, still without drafting blogs, and used `gpt-5.4` subagents for the two highest-risk application-boundary surfaces that were still weak after P4-17
+- Added conformal-coating application boundary cards for telecom/RF, optical-interface keepout, medical-regulated wording, and automotive/EV power wording, plus a readiness map for coating slugs
+- Added RF / mmWave / antenna / telecom-node boundary cards for antenna feed-network versus performance, mmWave routing sensitivity versus RF metric claims, and telecom-node board context versus radio coverage/capacity claims, plus a readiness map for five RF/5G empty-image slugs
+- `conformal-coating-5g-6g-communication`, `conformal-coating-5g-6g-communication-2`, `conformal-coating-data-center-optical-module`, `conformal-coating-medical-imaging-wearable`, and `conformal-coating-automotive-adas-ev-power` now have stronger conservative rewrite lanes, but still no biocompatibility, sterilization, ISO/FDA, ASIL, creepage, optical BER, RF/mmWave benefit, thickness/cure default, yield, cost, or lead-time unlock
+- `5g-isolator-5g-telecom`, `mmwave-5g-5g-telecom`, `antenna-system-5g-telecom`, `5g-base-station-5g-telecom`, and `5g-pico-cell-5g-telecom` now have conservative board-execution rewrite lanes, but still no RF budget, insertion loss, return loss, gain, isolation, antenna efficiency, EIRP, calibration, chamber/OTA result, FR1/FR2 numeric, coverage/capacity, deployment/operator, or supplier-qualification unlock
+- Shifted the next empty-image data pass into `P4-19` real-parameter supplementation rather than boundary-only supplementation after the user clarified that multi-agent work should also advance parameter values with scope
+- Used `gpt-5.4` subagents plus controller integration to add parameter/scope cards across four lanes: material datasheet values, PCBA process/product-level parameters, English public-site capability claims, and test/inspection method dimensions
+- Added material parameter-scope cards for Rogers RF laminates, Isola high-speed laminates, and Panasonic MEGTRON grades, preserving exact-product / exact-grade values such as Dk, Df, Tg, Td, CTE, thermal conductivity, moisture absorption, and test-frequency context only where already present in verified material cards and registry sources
+- Added PCBA parameter-scope cards for low-void BGA paste/profile context, conformal-coating family/application context, selective-solder/THT route context, and inspection-stack context, including source-scoped method dimensions and the APT page-scoped coating thickness range `1-5 mils / 25-127 microns`
+- Added public-capability parameter-scope cards for drilling/via geometry, impedance/validation, construction windows, and coating/fine-pitch assembly, explicitly marking extracted values as English `public website claim` rather than Tier 1 dated internal capability records
+- Added test/inspection parameter-scope cards for optical inspection dimensions, electrical-access methods, high-speed SI measurement dimensions, and launch/functional-test vocabulary, preserving terms such as SPI `volume/area/height`, JTAG chain/BSDL vocabulary, TDR/VNA scope, and USB-IF `VIF` / functional-test vocabulary without turning them into pass/fail thresholds
+- `P4-19` improves prompt access to real values with source and scope, but does not unlock generic HIL capability tables, supplier-independent proof, lot capability, qualification, acceptance thresholds, protocol certification, RF/SI/optical performance pass/fail, void thresholds, reflow recipes, yield, cost, or lead-time claims
+- Added `logs/p4-20-layer-count-claim-ingestion-contract.md` to define what it means for the 10 English layer-count PCB manufacturing blogs to be fully absorbed into `llm_wiki`
+- Added `logs/p4-20-layer-count-claim-coverage-map.md` after consolidating four `gpt-5.4` lane audits across material, fabrication/process, high-speed/test, and standards/commercial claim families
+- `P4-20` records that the layer-count blog family is substantially covered at claim-family level for audit, downgrade, and conservative rewrite, but old high-density numeric tables are not promoted as reusable facts
+- `P4-20` fixes the disposition model for old-blog claims: `source_scoped_fact`, `public_site_claim`, `workflow_context`, `architecture_example`, `audited_but_blocked`, `needs_source`, or `reject_or_delete`
+- Current P4-20 verdict: `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` are substantially covered for conservative rewrite, while `20-layer` and `22-layer` are covered for boundary control only until dated capability, supplier-status, qualification, or acceptance evidence is available
+- Updated `backlog` and `phase-status` so future prompt work must consume the P4-20 contract and coverage map before rewriting layer-count blogs; this closeout still does not unlock generic FR-4 averages, factory capability tables, IPC/Class/IST thresholds, channel budgets, supplier approval proof, accepted-lot proof, cost, yield, or lead-time claims
+- Started `P4-21` as a narrow source-recovery pass against the P4-20 material exact-product gaps rather than another broad boundary-only supplement
+- Added official source records for Shengyi `S1150G`, Isola `P95/P25`, and Isola `P95/P25` construction-sensitive `Dk/Df` tables
+- Added exact-product material cards for `Shengyi S1150G` and Isola `P95/P25`, preserving values as source-scoped material parameters with method, frequency, product-system, and non-generalization limits
+- Added `iteq-it-988se-naming-boundary` so old-blog `IT-988SE` references remain `needs_source` and cannot be silently substituted with verified `IT-988G`, `IT-988GL`, `IT-988GSE`, or `IT-988GLSE`
+- Added `logs/p4-21-layer-count-material-exact-product-supplement.md` and updated the P4-20 coverage map so these three material gaps now have current dispositions
+- `P4-21` improves material exact-product reuse for layer-count and high-temperature / hi-rel framing, but does not unlock generic FR-4 averages, capability tables, Class/acceptance thresholds, supplier approval, application compliance proof, cost, lead time, or yield
+- Continued source recovery with `P4-22 IMS Thermal Platform Exact-Product Supplement` against the P4-20 IMS / metal-core / thermally conductive dielectric gap
+- Added official Ventec source records for `VT-4BC` and `VT-4BD` IMS / metal-base laminate datasheets, extending the existing Ventec `VT-4B7` IMS anchor
+- Added exact-product material cards for `Ventec VT-4BC` and `Ventec VT-4BD`, plus `parameter-scope-ventec-ims-material-values` to constrain `VT-4B7 / VT-4BC / VT-4BD` values to datasheet-scoped IMS material parameters
+- Added `logs/p4-22-ims-thermal-platform-exact-product-supplement.md` and updated the P4-20 coverage map so the IMS lane is now partially closed at Ventec exact-product scope
+- `P4-22` improves MCPCB / metal-core / high-thermal / power-inverter material examples, but does not unlock finished-board thermal performance, LED lifetime, inverter reliability, power-module qualification, HIL/APT stocking or capability, base-metal/copper/thickness availability, cost, lead time, yield, or supplier-neutral IMS comparison tables
+- Continued source recovery with `P4-23 Rigid-Flex Flex-Material And Bend-Guidance Supplement` against the P4-20 rigid-flex numeric lane
+- Added DuPont `Kapton HN` official product-page and data-sheet source records plus a `materials-dupont-kapton-hn` exact-product fact card, so `Kapton HN` can be used as a source-scoped polyimide film example rather than a generic `Kapton` / `PI` substitute
+- Added Minco flex-circuit design-guide source records and `methods-parameter-scope-rigid-flex-bend-guidance`, constraining bend-ratio numbers to design-guide context, static-versus-dynamic bend separation, circuit thickness, layer count, and manufacturer review
+- Added `logs/p4-23-rigid-flex-flex-material-and-bend-guidance-supplement.md` and updated the P4-20 coverage map so the rigid-flex lane is partially closed at exact-product material plus design-guidance scope
+- `P4-23` improves rigid-flex / flex PCB writing support, but does not unlock bend-life tables, transition-zone tolerances, dynamic-flex guarantees, IPC acceptance thresholds, HIL/APT capability or warranty claims, released-lot proof, cost, lead time, or yield
+- Continued source recovery with `P4-24 UPILEX-S Exact-Product Flex-Material Supplement` against the remaining held UPILEX flex-material name
+- Added UBE official source records for `UPILEX` grade details and UPILEX family advantages, plus a `materials-ube-upilex-s` exact-product fact card
+- Updated the P4-20 coverage map so `UPILEX-S` can be used as a source-scoped UBE polyimide film example alongside `Kapton HN`, while generic `UPILEX`, generic `PI`, and generic flex-material substitution remain blocked
+- `P4-24` improves rigid-flex / flex-material examples, but does not unlock generic PI comparison tables, bend-radius tables, bend-life or cycle guarantees, transition-zone tolerances, dynamic-flex proof, IPC acceptance thresholds, HIL/APT availability or capability, cost, lead time, or yield
+- Continued `P4-33` material PDF source recovery with round 8 against four additional AGC tail rows
+- Added official AGC source records and exact-product fact cards for `METEORWAVE 8300`, `METEORWAVE M1`, `N4000-13`, and `N4000-13 EP`
+- P4-33 material PDF source-backed total is now `27` rows: `16` AGC, `5` Rogers, `2` Ventec, and `4` Shengyi
+- `P4-33` round 8 improves source-scoped material parameters for low-Dk / ultra-low-loss / mmWave / high-speed epoxy examples, but does not unlock finished-board high-speed, RF, radar, antenna, insertion-loss, impedance, channel performance, lead-free assembly proof, supplier lamination recipes, supplier capability, qualification, commercial values, or yield
+- Continued `P4-33` material PDF source recovery with round 9 against four additional AGC tail rows
+- Added official AGC source records and exact-product fact cards for `N4000-13 EP SI`, `N4000-29`, `N4000-29NF`, and `N7000-2HT`
+- P4-33 material PDF source-backed total is now `31` rows: `20` AGC, `5` Rogers, `2` Ventec, and `4` Shengyi
+- `P4-33` round 9 improves source-scoped material parameters for lead-free SI epoxy, high-Tg low-CTE epoxy, no-flow prepreg / bond-ply, and toughened polyimide examples, but does not unlock finished-board performance, lead-free assembly proof, CAF / IST / high-layer reliability, rigid-flex bonding success, heat-sink attachment success, supplier lamination recipes, supplier capability, qualification, commercial values, or yield
+- Continued `P4-33` material PDF source recovery with round 10 against four additional Ventec rows after official Ventec datasheet page / PDF checks
+- Added official Ventec source records and exact-product fact cards for `VT-481`, `VT-463H`, `VT-6735`, and `VT-770 / VT-770(LK)`
+- P4-33 material PDF source-backed total is now `35` rows: `20` AGC, `5` Rogers, `6` Ventec, and `4` Shengyi
+- `P4-33` round 10 improves source-scoped Ventec FR-4, ultra-low-loss SI, RF / microwave, and IC-packaging material examples, but does not unlock finished-board high-speed / RF / satellite / navigation / LTE / IC-packaging performance, lead-free assembly proof, CAF / IST / high-layer reliability, supplier process recipes, supplier capability, qualification, commercial values, or yield
+- Added `logs/p4-33-material-pdf-followon-scout-disposition-round-10.md` to preserve read-only `gpt-5.4` scout recommendations for Ventec and TUC follow-on candidates without marking scout-only rows as learned
+- Continued `P4-33` material PDF source recovery with round 11 against four more Ventec rows whose official Ventec datasheet pages returned `200 OK`
+- Added official Ventec source records and exact-product fact cards for `VT-462S`, `VT-464GS`, `VT-90H`, and `VT-4B5H`
+- P4-33 material PDF source-backed total is now `39` rows: `20` AGC, `5` Rogers, `10` Ventec, and `4` Shengyi
+- `P4-33` round 11 improves source-scoped Ventec SI, IC-packaging, polyimide, and IMS material examples, but does not unlock finished-board high-speed / RF / satellite / navigation / LTE / IC-packaging / aerospace / downhole / LED / motor-drive / power-module performance, supplier process recipes, supplier capability, qualification, commercial values, or yield
+- Continued `P4-33` material PDF source recovery with round 12 against three Ventec FR-4-family rows whose official Ventec datasheet pages returned `200 OK`
+- Added official Ventec source records and exact-product fact cards for `VT-441V`, `VT-441`, and `VT-42`
+- P4-33 material PDF source-backed total is now `42` rows: `20` AGC, `5` Rogers, `13` Ventec, and `4` Shengyi
+- `P4-33` round 12 improves source-scoped Ventec halogen-free mid-Tg FR-4 and standard FR-4 examples, but does not unlock finished-board automotive / LED / high-power / phone / communication-equipment / LCD / TV / instrumentation performance, CAF lifetime, generic FR-4 defaults, supplier process windows, supplier capability, qualification, commercial values, or yield
+- Continued `P4-33` material PDF source recovery with round 13 as the first TUC batch after `gpt-5.4` official URL binding and controller page checks
+- Added official TUC source records and exact-product fact cards for `TU-901`, `TU-787 LK`, and `TU-872 LK`
+- P4-33 material PDF source-backed total is now `45` rows: `20` AGC, `5` Rogers, `13` Ventec, `4` Shengyi, and `3` TUC
+- `P4-33` round 13 improves source-scoped TUC high-Tg halogen-free, mobile / telecom low-loss, and modified-epoxy FR-4 low-loss material examples, but does not unlock finished-board insertion loss, impedance, SI, RF, backplane, server, telecom, base-station, substrate, HDI, ELIC, aerospace, military, supplier capability, qualification, commercial values, or yield
+- Continued `P4-33` material PDF source recovery with round 14 against five additional AGC TSM / TLX / TLY rows whose official AGC PDF URLs returned `200 OK`
+- Added official AGC source records and exact-product fact cards for `TSM-DS3`, `TSM-DS3b`, `TSM-DS3M`, `TLX-8`, and `TLY-5`
+- P4-33 material PDF source-backed total is now `50` rows: `25` AGC, `5` Rogers, `13` Ventec, `4` Shengyi, and `3` TUC
+- `P4-33` round 14 improves source-scoped low-loss microwave, PTFE, outgassing, thermal, CTE, and thickness / sheet-size material examples, but does not unlock finished-board insertion loss, RF, mmWave, radar, antenna, aerospace, military, avionics, space, OEM-equivalence, supplier capability, qualification, commercial values, or yield
+- Continued `P4-33` material PDF source recovery with round 15 against five additional AGC TLY / TLE / TLC rows after official AGC PDF URL checks and `pypdf` text extraction
+- Added official AGC source records and exact-product fact cards for `TLY-3`, `TLY-5A`, `TLY-5Z`, `TLE-95`, and `TLC-32`
+- P4-33 material PDF source-backed total is now `55` rows: `30` AGC, `5` Rogers, `13` Ventec, `4` Shengyi, and `3` TUC
+- `P4-33` round 15 improves source-scoped very-low-Dk PTFE, microwave, high-speed digital, thermal, CTE, outgassing, dielectric-breakdown, arc-resistance, thickness, and sheet-size examples, but does not unlock 77 GHz / OEM drop-in, finished-board RF / microwave / satellite / cellular / aerospace / PTH / SMT reliability, supplier capability, qualification, commercial values, or yield
+- Continued `P4-33` material PDF source recovery with round 16 by integrating a scout-only AGC tail handoff after main-agent review
+- Added official AGC source records and material fact cards for `METEORWAVE ELL` and `TLF-35A`; `ELL` is modeled as one family card with explicit `ELL 101` versus `ELL 102 / 103` variant rows
+- P4-33 material PDF source-backed total is now `57` rows: `32` AGC, `5` Rogers, `13` Ventec, `4` Shengyi, and `3` TUC
+- `P4-33` round 16 improves source-scoped low-loss high-speed laminate / prepreg and Dk 3.5 RF laminate examples, but does not unlock 112 Gb, telecom, AI, cloud, router, automotive-radar, aerospace, PIMD, PTH, attenuation, price/performance, supplier capability, qualification, commercial values, or yield

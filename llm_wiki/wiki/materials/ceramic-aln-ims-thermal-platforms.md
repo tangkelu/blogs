@@ -6,12 +6,15 @@ status: "draft"
 last_reviewed_at: "2026-04-24"
 fact_ids:
   - "materials-ceramic-alumina-aln-class-source-coverage"
+  - "materials-ltcc-class-definition-and-nonclaims"
 source_ids:
   - "frontendhil-ceramic-pcb-product-page-en"
   - "frontendhil-high-thermal-pcb-product-page-en"
   - "frontendapt-pcb-ceramic-pcb-page-en"
   - "ceramtec-ceramic-substrates-page"
   - "maruwa-aln-substrates-page"
+  - "kyocera-ltcc-material-page"
+  - "kyocera-thin-film-technology-page"
   - "ventec-ims-family-overview"
 tags: ["materials", "ceramic", "alumina", "aln", "ims", "thermal-management"]
 ---
@@ -33,6 +36,8 @@ tags: ["materials", "ceramic", "alumina", "aln", "ims", "thermal-management"]
 - MARUWA provides an official Aluminum Nitride substrate page.
 - Ventec provides an official IMS / thermal-management family page for metal-base laminate context.
 - These sources are sufficient to frame ceramic/alumina/AlN as ceramic-substrate families and IMS as a separate thermal-management platform family.
+- KYOCERA's official LTCC page supports `LTCC = Low Temperature Co-Fired Ceramics`, frames LTCC as glass ceramics, and gives a source-scoped reason that lower firing temperature can enable copper conductors.
+- LTCC, alumina / AlN substrates, IMS, and KYOCERA thin-film ceramic technology should remain separate technology lanes unless an exact source connects the process and material stack.
 
 ## Engineering Boundaries
 
@@ -41,11 +46,13 @@ tags: ["materials", "ceramic", "alumina", "aln", "ims", "thermal-management"]
 - Treat thermal conductivity, dielectric strength, CTE, dielectric constant, thickness, metallization, and bonding-stack claims as refresh-required.
 - Do not infer manufacturability limits, metallization compatibility, or package suitability from class-level sources alone.
 - Use IMS sources to anchor the existence of metal-base thermal-management families, not to claim equivalence with ceramic substrates.
+- Use LTCC sources for class definition only; do not infer firing windows, shrinkage, cavity tolerances, hermeticity, conductor dimensions, or layer-count limits.
 
 ## Common Misreadings
 
 - `High thermal` does not mean ceramic and IMS are interchangeable.
 - `AlN` is not a synonym for the whole ceramic PCB category.
+- `LTCC` is not a synonym for all ceramic PCB.
 - A class-level ceramic source does not prove a specific direct-bond, active-metal-braze, or thick-film process.
 - Internal high-thermal service copy does not replace manufacturer-controlled material sources.
 
@@ -60,6 +67,7 @@ tags: ["materials", "ceramic", "alumina", "aln", "ims", "thermal-management"]
 ## Related Fact Cards
 
 - `materials-ceramic-alumina-aln-class-source-coverage`
+- `materials-ltcc-class-definition-and-nonclaims`
 
 ## Primary Sources
 
@@ -68,4 +76,6 @@ tags: ["materials", "ceramic", "alumina", "aln", "ims", "thermal-management"]
 - /code/hileap/frontendAPT/public/static/pcb/en/ceramic-pcb.json
 - https://www.ceramtec-group.com/en/ceramtec-us/substrates
 - https://www.maruwa-g.com/e/products/ceramic/000314.html
+- https://global.kyocera.com/prdct/semicon/search_material/detail/ltcc.html
+- https://global.kyocera.com/prdct/semicon/semi/technology/thin-film.html
 - https://www.ventec-group.com/products/tec-thermal-thermal-management-ims/

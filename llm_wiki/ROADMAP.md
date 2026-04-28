@@ -1,6 +1,6 @@
 # LLM Wiki Roadmap
 
-Last updated: 2026-04-24
+Last updated: 2026-04-27
 
 ## Objective
 
@@ -179,12 +179,15 @@ Exception:
 
 - Phase 2 内部能力层已完成收口
 - Phase 3 官方主源扩展已完成第一轮
-- Phase 4 topic wiki expansion 已启动
+- Phase 4 仍为当前阶段，且当前已进入 `H4` tranche closeout 后的 stop-expansion posture
 - 当前第一批 `P4-01 Topic Wiki Expansion` 已完成三张聚合页：`high-speed-material-family-selection`、`rf-material-selector-by-application-band`、`finish-zoning-and-selective-multi-finish`
 - `P4-02 Internal JSON Densification` 已补齐 APT/HIL 英文非博客 JSON 的 PCBA、PCB 制造能力、材料页主干来源和聚合 facts
 - `P4-03 Topic Wiki Aggregation For PCBA And Advanced Fabrication` 已把 PCBA、advanced fabrication、internal material coverage 上卷成可消费主题页
 - `P4-04 Prompt Consumption Bridge Planning` 已完成博客 readiness 抽样
 - `P4-05 External Source Gap Fill From Blog Readiness` 已补第一批博客抽样暴露的外部主源缺口
-- 下一批进入 `P4-06 Evidence-Pack Bridge To Prompt Templates`，为 Phase 5 evidence-pack 接线做准备
+- `P4-06` 不应再视为“尚未开始”的空白桥接：first-wave / second-wave evidence-pack inputs 已存在，但 high-density numeric readiness 仍 blocked
+- `H4` 当前 tranche 已 control-complete enough to pause expansion，下一实际动作是 direct conservative generation gate / prompt-consumption handoff
+- 当前英文 layer-count gate 已固定：`6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` 为 `go_now_conservative`，`20 / 22-layer` 仍为 `still_hold`
+- 上述 handoff 仅表示保守生成可控，不表示 numeric unlock、standards-threshold unlock 或 supplier-proof unlock
 - 后续批次继续使用主 agent 规划和审核、sub-agent 分主题页或分来源家族并行交付
 - 暂不把“行业博客采集”作为主任务

@@ -6,7 +6,7 @@ source_type: "standard"
 url: "https://iaqg.org/standard/9102-first-article-inspection-requirement/"
 jurisdiction: "global"
 published_at: ""
-checked_at: "2026-04-25"
+checked_at: "2026-04-27"
 trust_tier: "t1"
 stability: "dynamic"
 must_refresh: true

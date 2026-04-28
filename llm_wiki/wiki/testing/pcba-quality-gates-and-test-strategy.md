@@ -10,7 +10,11 @@ fact_ids:
   - "methods-pcba-fai-fqi-and-traceability-gates"
   - "methods-pcba-flying-probe-test-positioning"
   - "methods-pcba-bom-sourcing-and-traceability-posture"
+  - "methods-pcba-electrical-test-vs-reliability-evidence-boundary"
+  - "methods-pcba-mes-traceability-and-medical-documentation-boundary"
   - "methods-spi-aoi-ict-boundaries"
+  - "methods-pcb-environmental-and-solderability-test-method-boundary"
+  - "methods-pcb-impedance-and-rf-measurement-method-boundary"
 source_ids:
   - "frontendapt-pcba-spi-inspection-page-en"
   - "frontendapt-pcba-aoi-inspection-page-en"
@@ -33,6 +37,10 @@ source_ids:
   - "koh-young-spi-technology"
   - "koh-young-aoi-technology"
   - "keysight-ict-systems"
+  - "ipc-tm650-2672c-thermal-shock-cycle-continuity"
+  - "ipc-tm650-269b-vibration-rigid-printed-wiring"
+  - "ipc-tm650-2414-solderability-metallic-surfaces"
+  - "ipc-tm650-2557a-tdr-characteristic-impedance"
 tags: ["pcba", "testing", "quality-gates", "spi", "aoi", "x-ray", "ict", "fct", "flying-probe", "fai", "fqi", "traceability"]
 ---
 
@@ -54,7 +62,10 @@ tags: ["pcba", "testing", "quality-gates", "spi", "aoi", "x-ray", "ict", "fct", 
 - The FAI/FQI and traceability card treats incoming quality, first-article inspection, final inspection, BOM context, and traceability as distinct release gates rather than a single checkpoint.
 - The flying-probe card positions flying probe as fixture-free electrical verification for low-volume or changing builds, complementary to fixture-based `ICT`.
 - The BOM sourcing and traceability card ties component sourcing, lifecycle review, authenticity, and traceability into the turnkey assembly flow that sits upstream of final release.
+- The electrical-test versus reliability boundary card keeps defect screening, powered behavior, and broader reliability evidence in separate decision lanes.
+- The MES and medical-documentation boundary card keeps traveler-linked traceability, build history, and medical-adjacent documentation vocabulary from being rewritten as blanket compliance proof.
 - The SPI/AOI/ICT boundaries card makes the stage split explicit: `SPI` measures paste before reflow, `AOI` checks optical geometry and solder features, and `ICT` checks electrical faults on the assembled board.
+- IPC TM-650 public methods now provide board-level method anchors for TDR characteristic-impedance measurement, thermal shock / thermal cycle / continuity, rigid printed-wiring vibration, and metallic-surface solderability.
 - Taken together, the source set supports a quality strategy in which inspection, electrical coverage, functional validation, and release governance are related but not interchangeable.
 
 ## Engineering Boundaries
@@ -68,6 +79,10 @@ tags: ["pcba", "testing", "quality-gates", "spi", "aoi", "x-ray", "ict", "fct", 
 - `flying probe` answers fixture-free electrical coverage questions for prototypes, low-volume runs, or changing designs; it does not imply the same access model as `ICT`.
 - `FAI` and `FQI` answer release-readiness and final acceptance questions; they do not replace the underlying inspection and test evidence.
 - BOM sourcing and traceability answer component-risk and provenance questions; they do not by themselves certify board-level electrical or functional performance.
+- `MES`, lot history, and medical-documentation vocabulary answer build-record and control questions; they do not by themselves prove FDA applicability, qualification, or release authority.
+- Electrical test evidence and reliability evidence are related but not interchangeable; a board can pass defect screening and still need separate reliability evaluation.
+- Thermal cycling, thermal shock, vibration, and solderability method names do not carry universal severities, dwell times, cycle counts, G-levels, finish shelf-life, or acceptance thresholds.
+- PCB-level IPC method anchors should not be rewritten as PCBA burn-in, field-life prediction, automotive qualification, or medical release evidence.
 
 ## Common Misreadings
 
@@ -77,6 +92,8 @@ tags: ["pcba", "testing", "quality-gates", "spi", "aoi", "x-ray", "ict", "fct", 
 - `flying probe` is not simply a cheaper `ICT`; it is a different access and economics model that fits different build conditions.
 - `FAI` is not final shipment release by itself, and `FQI` is not a substitute for upstream inspection data.
 - Traceability does not guarantee quality on its own; it is a control and evidence layer, not a defect-detection method.
+- Reliability should not be inferred from a single electrical test label in a title or comparison table.
+- Solderability testing does not by itself prove a surface finish's storage life, black-pad immunity, or solder-joint acceptance on a populated assembly.
 
 ## Must Refresh Before Publishing
 
@@ -85,6 +102,7 @@ tags: ["pcba", "testing", "quality-gates", "spi", "aoi", "x-ray", "ict", "fct", 
 - Fixture scope, including bed-of-nails access, boundary-scan support, custom tooling, and whether flying probe is the fallback
 - Lead times for fixtures, test-program development, board access review, and first-article turnaround
 - Customer-facing guarantees about pass/fail confidence, yield, reliability, or acceptance criteria
+- Temperature ranges, ramp rates, cycle counts, vibration profiles, solderability criteria, and impedance tolerances unless tied to current standards access, customer drawings, or dated internal procedures
 
 ## Related Fact Cards
 
@@ -93,7 +111,11 @@ tags: ["pcba", "testing", "quality-gates", "spi", "aoi", "x-ray", "ict", "fct", 
 - `methods-pcba-fai-fqi-and-traceability-gates`
 - `methods-pcba-flying-probe-test-positioning`
 - `methods-pcba-bom-sourcing-and-traceability-posture`
+- `methods-pcba-electrical-test-vs-reliability-evidence-boundary`
+- `methods-pcba-mes-traceability-and-medical-documentation-boundary`
 - `methods-spi-aoi-ict-boundaries`
+- `methods-pcb-environmental-and-solderability-test-method-boundary`
+- `methods-pcb-impedance-and-rf-measurement-method-boundary`
 
 ## Primary Sources
 
@@ -118,3 +140,7 @@ tags: ["pcba", "testing", "quality-gates", "spi", "aoi", "x-ray", "ict", "fct", 
 - https://kohyoung.com/en/solder-paste-inspection-technology/
 - https://kohyoung.com/en/automated-optical-inspection-technology/
 - https://www.keysight.com/us/en/products/in-circuit-test-for-manufacturing/in-circuit-test-systems.html
+- https://www.ipc.org/sites/default/files/test_methods_docs/2.6.7.2c.pdf
+- https://www.ipc.org/sites/default/files/test_methods_docs/2.6.9b.pdf
+- https://www.ipc.org/sites/default/files/test_methods_docs/2.4.14.pdf
+- https://www.ipc.org/sites/default/files/test_methods_docs/2-5-5-7a.pdf

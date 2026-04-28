@@ -53,6 +53,68 @@
 
 如果 evidence pack 没有给出数字，就不要补数字；改写成条件判断、影响因素或验证方法。
 
+## 博客重写 / 生成前置契约
+
+在生成正文前，必须先按 `blog-rewrite-data-gap-contract.md` 执行一次前置判断。该判断是硬门槛，不是建议。
+
+默认流程：
+
+1. 先拆解博客或关键词的关键点：搜索意图、工程决策、必须解释的概念、需要的表格 / 检查表 / 选择框架、站点承接动作、不可写 claim。
+2. 检查 `llm_wiki` 是否已有足够 source / fact / wiki / gate 支撑顶尖稿。
+3. 如果状态是 `safe_but_generic`、`needs_data` 或 `hold`，不能直接写正文；必须先补 `llm_wiki` 或缩小文章承诺。
+4. 只有状态达到 `ready`，或数据缺口已补齐并形成 evidence pack 后，才能继续执行正文生成。
+5. 重写时必须消费新增数据，不能补了数据但正文仍停留在泛泛解释。
+
+禁止把“结构完整、没有明显错误”当作顶尖稿合格标准。Query 文章必须给出可执行的工程判断、选择逻辑、检查项或验证动作。
+
+## Evidence Pack 强制执行
+
+在生成正文前，必须按 `evidence-pack-consumption-contract.md` 执行一次 evidence pack 消费检查。该检查是硬门槛，不是建议。
+
+### 状态处理
+
+| Evidence status | 允许写法 | 禁止写法 |
+| --- | --- | --- |
+| `verified` | 可写成公开事实；数值只能在该 fact 自身已验证且不属于 hard refusal class 时使用 | 不得扩展成 pack 未授权的相邻参数、能力表或阈值 |
+| `framing_only` | 只能写成定性背景、风险语境、流程判断或项目级建议 | 不得升级成数字、标准阈值、能力上限、验收结论或供应商证明 |
+| `blocked` | 只能作为删除、拒写或内部 `DATA_GAP` 信号 | 不得进入正文、FAQ、表格、标题或 description |
+| `must_refresh` | 刷新前视为不可用 | 不得写入正文、表格、FAQ 或来源区 |
+| `supplier_scoped_dated_only` | 只能在保留供应商、日期和适用范围的专门语境中使用 | 不得提升为共享行业事实、HILPCB/ATPPCB 通用能力或可迁移供应商证明 |
+
+### Hard Refusal Classes
+
+以下 claim classes 默认禁止写入，除非当前 evidence pack 明确给出更窄的 `verified` 支撑，并且该支撑没有被标成 `supplier_scoped_dated_only`：
+
+- shared `B` capability numerics：`trace/space`、最小机械钻孔、最小激光孔、aspect ratio、annular ring、impedance tolerance、registration tolerance 及类似 capability table 数字
+- standards thresholds：`IPC Class 2 / 3 / 3A`、`IPC-6012 / 6013`、`IST`、`PLT`、coupon plan、plating minima、bow/twist limits、acceptance threshold 及类似验收阈值
+- supplier proof：supplier approval、qualification、compliance、release authority、accepted-lot status、可迁移工厂能力证明
+- process windows / recipes：lamination-count allowance、stack recipe、bake / press cycle、build-up default、manufacturability window
+- high-speed / RF budget numerics：channel-loss budget、insertion-loss table、Nyquist budget、RF geometry rule、性能预算表
+- dynamic commercial numerics：lead time、quick-turn window、yield、cost uplift、MOQ、区域或客户商业数字
+
+### 缺证据时的强制行为
+
+如果某个句子、表格行、FAQ、标题承诺或模块需要 `verified` 支撑但 evidence pack 没有提供，必须按顺序处理：
+
+1. 如果已有 `framing_only` 支撑，降级为定性判断、验证动作或项目级建议。
+2. 如果无法安全降级，删除该句子、表格行、FAQ 或模块。
+3. 如果缺口会影响文章结构完整性，在工作检查中标记 `DATA_GAP`，并缩小标题、description 或 H2 承诺。
+
+禁止用相邻事实、行业常识、标准名称、供应商页面、workflow 名称或旧稿数字补齐缺口。
+
+### 内部控制信息不得进入正文
+
+Evidence pack 里的 `Disposition`、`Prompt action`、`Current-blog section bridge map`、`Unsupported / Unclear`、`Not cleared`、`do not write`、`downgrade`、`delete`、`blocked`、`DATA_GAP` 等内容只能用于生成前判断，不能原样或改写后进入最终文章。
+
+最终正文应把这些控制信息转换为读者可用的工程表达：
+
+- 把“不要怎么写 / 不应写什么”改成“项目风险信号 / 需要确认什么 / 适用边界是什么”
+- 把“删除某类数字”改成“该参数需按具体 stackup、材料和 DFM 确认”
+- 把“blocked claim”改成不出现该 claim，或改成面向项目的验证动作
+- 表格列名不得出现 `不应怎么写`、`禁止写入`、`Prompt action`、`Disposition`、`Evidence status`、`DATA_GAP` 等内部审稿语义
+- H2 / H3 不得暴露“模板、审稿、策略、证据包、生成规则”这类内部流程
+- 作者与审核信息不得出现 `llm_wiki`、内部文件路径、内部数据层、内部审核 workflow 或任何仓库/提示词系统名称；应改成“工程内容审核团队”“制造工程团队”“材料与工艺审核团队”等对外可理解实体
+
 在开始写正文前，默认再做一次快速自检：
 
 - 标题承诺了什么
@@ -61,6 +123,10 @@
 - 哪些 claim 只能写成项目级判断
 - 哪些地方必须放正文内联来源归因
 - 哪些标准号、版本号、日期、频段或材料家族名称必须再核对一次
+- 哪些 claim 的 evidence status 不是 `verified`，需要降级、删除或标记 `DATA_GAP`
+- 是否存在 hard refusal class 被写入标题、description、表格、FAQ 或正文
+- 是否把 evidence pack 的内部控制语句误转成了正文栏目、表格列名或小标题
+- 作者与审核信息是否完全移除了 `llm_wiki`、内部路径、内部 workflow 和提示词系统名称
 
 ## 文章必须包含的结构
 
@@ -73,6 +139,7 @@
 - FAQ
 - 公开参考资料
 - 与站点解决路径相关的下一步
+- 目标站点 overlay 要求的内置表单、询盘或 RFQ 组件
 - 作者与审核信息
 
 ## Frontmatter
@@ -273,6 +340,7 @@ tags: {{tags}}
 - 优先导向目标站点的产品页或服务页，博客页只能作为次级补充
 - 内链分布要均衡，不要全部堆在开头或结尾
 - 内链锚文本要语义自然，不要机械精确匹配堆砌
+- 如果目标站点 overlay 定义了内置询盘、报价或 RFQ 组件，正文必须按 overlay 要求插入，不能只在文字里写“联系我们”或只放普通链接
 
 ### 8. 常见问题（FAQ）
 
@@ -401,6 +469,9 @@ FAQ 要求：
 - 是否把项目级判断误写成公开行业硬事实
 - 是否存在标准号、版本号、日期、频段定义、材料家族名、测试方法编号写错或过时
 - 是否因为缺数据而仍然硬补了数字、阈值或 capability
+- 是否已经按 `verified / framing_only / blocked / must_refresh / supplier_scoped_dated_only` 完成 evidence pack 状态处理
+- 是否已经删除或降级所有 hard refusal class，而不是把它们藏进表格、FAQ、卡片或 capability 模块
 - 如果某个 claim 无法核实，是否已降级成条件判断、验证动作或项目级建议
+- 目标站点 overlay 要求的内置表单、询盘或 RFQ 组件是否已经插入到正文合适位置，且没有放进 frontmatter、代码块、表格或 FAQ 包裹中
 
 现在开始生成最终 Markdown 文章。

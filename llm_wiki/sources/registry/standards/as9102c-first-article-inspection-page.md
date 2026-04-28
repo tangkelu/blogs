@@ -6,7 +6,7 @@ source_type: "standard"
 url: "https://saemobilus.sae.org/standards/as9102c-aerospace-series-first-article-inspection-requirements"
 jurisdiction: "global"
 published_at: "2023-06-28"
-checked_at: "2026-04-24"
+checked_at: "2026-04-27"
 trust_tier: "t1"
 stability: "dynamic"
 must_refresh: true

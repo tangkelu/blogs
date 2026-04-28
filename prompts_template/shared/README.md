@@ -6,6 +6,7 @@
 
 - `query.md` 与 `pillar.md` 两个主骨架
 - 技术博客统一标准
+- 博客分析 / 重写 / 生成前的数据缺口契约
 - 博客评估 rubric
 - 模板保留 / 裁剪规则
 - 关键词集群设计标准
@@ -31,15 +32,17 @@
 ## 建议阅读顺序
 
 1. `technical-blog-standard.md`
-2. `blog-evaluation-rubric.md`
-3. `template-selection-and-pruning.md`
-4. `keyword-cluster-design-standard.md`
-5. `data-organization-standard.md`
-6. `evidence-pack-template.md`
-7. `query.md` 或 `pillar.md`
-8. `fact-seed-repository-standard.md`
-9. `legacy-prompt-directory-cleanup-plan.md`
-10. `competitive-keyword-source-standard.md`
+2. `blog-rewrite-data-gap-contract.md`
+3. `blog-evaluation-rubric.md`
+4. `template-selection-and-pruning.md`
+5. `keyword-cluster-design-standard.md`
+6. `data-organization-standard.md`
+7. `evidence-pack-template.md`
+8. `evidence-pack-consumption-contract.md`
+9. `query.md` 或 `pillar.md`
+10. `fact-seed-repository-standard.md`
+11. `legacy-prompt-directory-cleanup-plan.md`
+12. `competitive-keyword-source-standard.md`
 
 ## 新增共享资产
 
@@ -49,3 +52,12 @@
 - `fact-seed-repository-template.csv`
 
 它们用于约束参数口径、来源引用、版本控制和 `DATA_GAP` 行为，不替代 `evidence-pack-template.md`，而是作为 evidence-first 体系的参数底座。
+
+另新增：
+
+- `evidence-pack-consumption-contract.md`
+- `blog-rewrite-data-gap-contract.md`
+
+它用于约束模板如何消费 evidence pack，尤其是 `verified / framing_only / blocked / must_refresh / supplier_scoped_dated_only` 的处理方式，以及缺失证据时的 `DATA_GAP` 行为。
+
+`blog-rewrite-data-gap-contract.md` 用于约束博客分析、重写、生成前的强制流程：先分析博客 / 主题关键点，再检查 `llm_wiki` 是否足够支撑顶尖稿；缺数据先补 source / fact / wiki / gate，再重写或生成博客，最后做内部泄漏、高风险 claim、组件、FAQ、审核署名和格式检查。
