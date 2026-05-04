@@ -2,8 +2,8 @@
 topic_id: "processes-usb-c-charger-readiness-classification"
 title: "USB-C Charger Readiness Classification"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-27"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-usb-c-pd-pps-protocol-context-boundary"
   - "methods-charger-pcb-pcba-manufacturing-boundary"
@@ -29,54 +29,69 @@ tags: ["usb-c", "charger", "type-c", "readiness", "power-energy", "fct", "bounda
 
 # Definition
 
-> This readiness classification maps what the current local source layer can and cannot support for the `type-c-charger` empty-image candidate and its adjacent charger or inverter slugs. It is designed to prevent protocol and power-performance drift while still unlocking conservative PCB and PCBA rewrite language.
+> This page classifies what the current local source and fact layer can safely support for `type-c-charger` and adjacent charger-language rewrites. It promotes the topic to active only at a manufacturing-boundary and controlled-vocabulary level, not as a protocol-detail or power-performance unlock.
 
-## Readiness Verdicts
+## Routing Guidance
 
-- `type-c-charger`
-  Verdict: `boundary_ready_with_usb_if_vocabulary`
-- `ultra-fast-charger-power-energy`
-  Verdict: `boundary_ready_with_blocked_performance_claims`
-- `central-inverter-power-energy`
-  Verdict: `adjacent_context_only`
+- Use this page when the article needs a go or no-go boundary for `type-c-charger` rewrite posture.
+- Route connector-zone planning, interface-side protection review, controller-versus-power-stage separation, assembly inspection, and powered functional handoff here.
+- Route `USB Type-C`, `USB-C`, `USB Power Delivery`, `PPS`, `VIF`, compliance-update, and QbS wording here only as controlled vocabulary.
+- Route ICT-versus-FCT framing here when the story needs to separate manufacturing-defect checks from powered bring-up checks.
+- Route exact protocol behavior, negotiation flow, connector mechanics, charger topology, certification, logo-use, and numeric performance claims elsewhere.
 
-## What Is Now Safe
+## Why This Topic Matters
 
-- `type-c-charger` can now be written as a compact charger-board manufacturing article focused on connector-zone planning, interface-side protection review, controller and power-stage vocabulary separation, assembly inspection, and powered FCT handoff.
-- USB-IF source coverage now supports controlled vocabulary such as `USB Type-C`, `USB-C`, `USB Power Delivery`, `PPS`, `VIF`, compliance updates, and QbS context.
-- `ultra-fast-charger-power-energy` can now reuse the same board-partition and validation workflow language, but only at the level of charger-board architecture, interface review, and test sequencing.
-- `central-inverter-power-energy` may borrow boundary wording only where it helps separate board-level power, control, connector, cable, and test vocabulary from unsupported charger-style protocol drift.
+- USB-C charger drafts become unsafe when connector language, protocol language, and power-board manufacturing language get collapsed into one claim set.
+- The current corpus is strong enough to support a conservative charger-board rewrite, but only when the page keeps USB-IF terms as context and keeps manufacturing claims at PCB and PCBA review level.
+- This classification gives writers one place to separate safe local facts from blocked charger-performance and compliance drift.
 
-## Blocked Claim Classes
+## Stable Facts
 
-- USB-C connector-role detail, CC behavior, cable-role logic, e-marker behavior, alternate mode, and exact interface behavior
-- PD and PPS revision detail, message sequencing, mode tables, output profiles, and negotiation specifics
-- QbS eligibility, USB-IF certification status, logo-use claims, or current compliance-program requirements without live refresh
-- Exact charger output power, voltage, current, charging speed, efficiency, thermal-rise, power density, or adapter claims
-- Exact ESD, surge, fuse, protection, safety, isolation, creepage, clearance, and compliance claims
-- Exact connector mechanical dimensions, retention numbers, footprint values, and routing or spacing prescriptions
-- Claims that any named controller topology, semiconductor choice, or protection stack is required by default
+- `type-c-charger` is active for a conservative charger-board manufacturing article focused on connector access, local protection review, controller-zone separation, assembly checks, and powered functional validation.
+- USB-IF source coverage supports controlled vocabulary for `USB Type-C`, `USB-C`, `USB Power Delivery`, `PPS`, `VIF`, compliance updates, and QbS program context.
+- USB-IF functional-test context supports the idea that Type-C and PD test applicability is implementation-dependent and should not be treated as one universal script.
+- The internal power-energy page supports generic charger and charging-electronics context inside a broader power-board, control-board, and interface-board story.
+- The internal PCBA quality and FCT pages support staged DFM, DFT, inspection, electrical validation, and final powered functional-test handoff after assembly.
+- The current internal interface-route facts support separating board-mounted connector retention from off-board cable or harness integration instead of assuming one universal charger interface route.
+- `ultra-fast-charger-power-energy` can reuse the same partitioning and validation posture at board-review level, but it remains blocked from performance proof.
+- `central-inverter-power-energy` is adjacent context only and may borrow only the board-partition and validation boundary, not charger-protocol language.
 
-## Rewrite Posture By Slug
+## Engineering Boundaries
 
-- `type-c-charger`
-  Preferred language: connector shell anchoring, compact interface layout review, nearby protection placement, controller-zone separation, solder-joint inspection, and powered functional bring-up.
-- `ultra-fast-charger-power-energy`
-  Preferred language: power-board and control-board partitioning, cable or connector handoff, heat-oriented platform choice as project-dependent, and staged inspection plus FCT workflow.
-- `central-inverter-power-energy`
-  Preferred language: interface vocabulary boundaries only, especially where writers might otherwise blur board-level connector or cable planning into charger-protocol language.
+- Keep `USB-C` and `USB Type-C` as connector-family and interface-context terms, not as proof of exact connector behavior, cable capability, or pin-level implementation.
+- Keep `PD`, `Power Delivery`, and `PPS` as protocol-context vocabulary only. They do not authorize negotiation-sequence detail, output-profile detail, or charger capability tables.
+- Keep charger-board language on connector shell anchoring, board-edge access, nearby protection review, controller and power-stage separation, inspection, and powered bring-up.
+- Keep interface-route wording generic: board-mounted connector retention, press-fit-versus-solder route choice, and cable or harness handoff stay design-dependent choices.
+- Keep validation wording split between ICT for electrical-connectivity and manufacturing-defect framing, and FCT for powered behavior and end-use simulation framing.
+- Keep thermal-platform, heavy-copper, and board-topology language project-dependent. The current corpus does not support a universal charger architecture.
 
-## Remaining Gaps
+## Blocked Claims
 
-- USB-IF source records now cover USB Type-C / USB-C vocabulary, Type-C functional-test context, compliance updates, QbS context, and language guidance.
-- No admissible current extraction for exact charger connector geometry, role behavior, PD / PPS values, cable-marker behavior, or protocol tables
-- No current support for fast-charge marketing claims, compliance claims, or power-performance numerics
+- protocol-detail and negotiation claims, including CC behavior, role logic, message sequence, mode tables, cable-marker behavior, and alternate-mode behavior
+- exact power, thermal, or compliance numerics, including output power, charging speed, efficiency, temperature rise, current, voltage, density, spacing, creepage, or clearance values
+- certification or logo-use claims, including USB-IF certification status, current compliance-program status, QbS eligibility outcomes, and trademark or logo authorization
+- universal charger-topology claims, including any statement that a named power stage, controller stack, protection topology, or thermal platform is required by default
+- exact connector mechanical, footprint, retention, drilling, or routing-prescription claims
+- exact safety, surge, fuse, isolation, ESD, or protection-stack performance claims
 
-## Publication Rule
+## Common Misreadings
 
-- Do not treat this note as a protocol-data unlock. It upgrades `type-c-charger` from manufacturing-boundary-only support to USB-IF-vocabulary-aware conservative rewrite posture, but exact protocol, connector, certification, power, thermal, and compliance claims remain blocked.
+- `USB-C charger` is not a permission to publish PD or PPS negotiation detail.
+- USB-IF vocabulary support is not certification proof.
+- QbS program context is not a no-test or auto-approval claim.
+- A powered FCT handoff is not the same thing as protocol compliance validation.
+- A charger-board rewrite is not evidence for exact charging speed, thermal behavior, or adapter compatibility.
+- Power-energy board partitioning does not prove one charger topology is universal.
 
-## Related Fact Cards
+## Must Refresh Before Publishing
+
+- Any exact PD, PPS, CC, role-detection, cable-marker, alternate-mode, or message-sequencing statement
+- Any exact power, current, voltage, charging-speed, efficiency, thermal-rise, density, or safety-spacing number
+- Any USB-IF certification, compliance-program, QbS eligibility, trademark, or logo-use statement
+- Any exact connector footprint, retention, pad geometry, mechanical dimension, or routing-rule claim
+- Any statement that moves from conservative board-review language into universal topology or compliance proof
+
+## Related Facts And Source Scope
 
 - `methods-usb-c-pd-pps-protocol-context-boundary`
 - `methods-charger-pcb-pcba-manufacturing-boundary`
@@ -84,18 +99,18 @@ tags: ["usb-c", "charger", "type-c", "readiness", "power-energy", "fct", "bounda
 - `methods-tht-pressfit-terminal-route-boundary`
 - `methods-pcba-ict-vs-fct-boundary`
 
-## Primary Sources
+## Source Scope
 
-- https://www.usb.org/sites/default/files/USB%20Type-C%20Spec%20R2.0%20-%20August%202019.pdf
-- https://www.usb.org/sites/default/files/USB%20Type%20C%20Functional%20Test%20Specification%202024%2003%2003.pdf
-- https://compliance.usb.org/index.asp?Format=Standard&UpdateFile=PowerDelivery
-- https://compliance.usb.org/index.asp?Format=Standard&UpdateFile=USBC
-- https://compliance.usb.org/QbS/ConnectorGuide.htm
-- https://compliance.usb.org/qbs/QbSInfo.php
-- https://www.usb.org/sites/default/files/usb_type-c_language_product_and_packaging_guidelines_20230320.pdf
-- /code/hileap/frontendAPT/public/static/industries/en/power-energy-pcb.json
-- /code/hileap/frontendAPT/public/static/pcba/en/quality-system.json
-- /code/hileap/frontendAPT/public/static/pcba/en/fct-test.json
-- /code/hileap/frontendHIL/public/static/products/en/through-hole-assembly.json
-- /code/hileap/frontendAPT/public/static/pcba/en/cable-assembly.json
-- /code/hileap/frontendAPT/public/static/pcba/en/harness-assembly.json
+- `usb-if-type-c-cable-connector-spec-r2-0`
+- `usb-if-type-c-functional-test-spec-2024-03-03`
+- `usb-if-pd-compliance-updates-page`
+- `usb-if-type-c-compliance-updates-page`
+- `usb-if-connector-qbs-guidelines-page`
+- `usb-if-qbs-information-page`
+- `usb-if-type-c-language-guidelines-2023`
+- `frontendapt-industry-power-energy-page-en`
+- `frontendapt-pcba-quality-system-page-en`
+- `frontendapt-pcba-fct-test-page-en`
+- `frontendhil-through-hole-assembly-product-page-en`
+- `frontendapt-pcba-cable-assembly-page-en`
+- `frontendapt-pcba-harness-assembly-page-en`

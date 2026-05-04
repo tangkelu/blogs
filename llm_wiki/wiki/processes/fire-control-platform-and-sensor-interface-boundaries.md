@@ -2,8 +2,8 @@
 topic_id: "processes-fire-control-platform-and-sensor-interface-boundaries"
 title: "Fire Control Platform And Sensor Interface Boundaries"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-30"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-fire-control-platform-interface-boundary"
   - "methods-laser-time-of-flight-pulsed-driver-and-safety-boundary"
@@ -52,7 +52,14 @@ tags: ["targeting", "fire-control", "mil-std-1553", "can", "ethernet", "gps", "s
 - GPS.gov supports GPS only at receiver-system context, not as positioning proof for a bare control board.
 - Existing laser timing, first-article, and qualification-boundary layers support separate discussion of pulsed-driver segregation, staged validation, and regulated-program boundary language.
 
-## Review Lanes
+## Routing Guidance
+
+- Route sensor-input, optical-path, or timing-path wording through subsystem context such as `sensor input`, `receiver path`, `laser timing path`, or `camera/display interface family`.
+- Route platform communication wording through guarded standards-owner nouns such as `MIL-STD-1553`, `CAN`, and `Ethernet` only when the copy stays at interface-family level.
+- Route GPS wording through receiver-system or positioning-context language only; do not convert it into navigation or targeting proof for a bare PCB.
+- Route launch, release, and harsh-program wording through staged validation, first-article, and regulated-application boundary cards rather than treating interface naming as qualification evidence.
+
+## Engineering Boundaries
 
 ### 1. Sensor Input And Receiver Context
 
@@ -85,6 +92,13 @@ tags: ["targeting", "fire-control", "mil-std-1553", "can", "ethernet", "gps", "s
 - Do not drift into:
   `MIL-STD-810`, `MIL-STD-461`, supplier qualification, deployment proof, or mission-program approval claims.
 
+## Blocked Claims
+
+- ballistic or weapon-system proof
+- interface speed and timing numerics
+- platform compliance or interoperability claims
+- defense-program approval claims
+
 ## Safe Draft Routing
 
 ### `targeting-pcb.md`
@@ -96,18 +110,21 @@ tags: ["targeting", "fire-control", "mil-std-1553", "can", "ethernet", "gps", "s
 - Keep out:
   ballistic computation proof, fire-control accuracy, lane counts, latency, named output-video standards, laser-designator authority, environmental test outcomes, and military-program claims.
 
-## Common Overclaims
+## Common Misreadings
 
 - `fire control computer board` used as if it proves weapon-system computation authority
 - `MIL-STD-1553` mention widened into compliance or platform-integration proof
 - `CAN bus` or `Ethernet` mention widened into interoperability or ruggedized-network proof
 - `GPS receiver input` widened into targeting accuracy or navigation-certification claims
+- `laser timing` wording widened into range, lethality, or designator authority proof
+- `FAI` or qualification vocabulary widened into deployment, airworthiness, or defense-prime approval proof
 
 ## Must Refresh Before Publishing
 
 - Any exact interface speed, timing, jitter, isolation, or redundancy numeric
 - Any claim about compliance, interoperability, or qualification for platform buses or networks
 - Any statement that moves from control-board interface review into weapon release, ballistic accuracy, or defense-program proof
+- Any version-specific or program-specific claim about interface stacks, validation scope, or regulated-application status
 
 ## Related Fact Cards
 
@@ -117,6 +134,12 @@ tags: ["targeting", "fire-control", "mil-std-1553", "can", "ethernet", "gps", "s
 - `standards-interface-wireless-positioning-product-level-boundary`
 - `methods-pcba-first-article-inspection-vs-high-speed-validation-boundary`
 - `standards-automotive-medical-aerospace-application-qualification-boundary`
+
+## Source Scope
+
+- Standards-owner or regulator coverage in this lane is limited to interface-family identity, receiver-system context, laser timing context, and regulated-application boundary framing.
+- Internal manufacturing coverage in this lane is limited to first-article, process-alignment, and validation-separation framing; it does not convert into fielded-system proof.
+- This page should be paired only with the fact cards listed above unless a future local source record lands narrower evidence for protocol timing, interoperability, or defense-program scope.
 
 ## Primary Sources
 

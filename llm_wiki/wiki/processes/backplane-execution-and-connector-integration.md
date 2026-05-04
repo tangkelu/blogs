@@ -2,8 +2,8 @@
 topic_id: "processes-backplane-execution-and-connector-integration"
 title: "Backplane Execution And Connector Integration"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-press-fit-and-backplane-integration-posture"
   - "methods-backdrill-control-capability"
@@ -21,6 +21,14 @@ tags: ["backplane", "press-fit", "connector", "backdrill", "high-speed", "proces
 # Definition
 
 > Backplane execution and connector integration is a coupled manufacturing problem in which stackup, drilling, backdrill, hole preparation, connector-zone design, finish choice, and validation must be planned as one system rather than treated as separate downstream tasks.
+
+## Routing Guidance
+
+- Route prompts to `integrated backplane execution` when the discussion spans press-fit readiness, drilling control, backdrill posture, connector zones, and validation in the same build.
+- Route prompts to `connector-zone review` when the real issue is hole preparation, finish choice, anti-pad space, or seating readiness around press-fit connectors.
+- Route prompts to `via and stub control` when the main concern is backdrill, long through-via behavior, or high-speed channel cleanup rather than connector selection alone.
+- Route prompts to `finish selection inside connector integration` when the question is about immersion tin or press-fit finish posture, but keep the answer tied to hole control and overall backplane planning.
+- Route any request for exact hole windows, residual-stub values, insertion-force criteria, or connector qualification scope to refresh-required engineering review rather than treating this wiki page as authority for numerics.
 
 ## Why This Topic Matters
 
@@ -43,7 +51,15 @@ tags: ["backplane", "press-fit", "connector", "backdrill", "high-speed", "proces
 - Do not separate `press-fit`, `backdrill`, and `hole control` into unrelated capabilities when discussing connector-heavy systems.
 - Treat `finish choice` for connector zones as a constrained sub-decision inside the larger connector-integration workflow, not as an isolated finish-menu preference.
 - Keep `connector vendor requirements`, `anti-pad geometry`, `stub strategy`, `hole tolerance`, and `validation scope` as separate review items.
+- Keep `backplane manufacturing posture` separate from any claim that one connector architecture or one press-fit scheme applies to all backplane programs.
 - If a page needs exact hole tolerances, residual-stub limits, insertion-force criteria, plating thickness, or qualification scope, refresh against current engineering practice before publishing.
+
+## Blocked Claims
+
+- exact hole-tolerance and residual-stub claims
+- connector qualification and insertion-force claims
+- universal backplane architecture claims
+- cost, lead-time, and yield claims
 
 ## Common Misreadings
 
@@ -52,12 +68,22 @@ tags: ["backplane", "press-fit", "connector", "backdrill", "high-speed", "proces
 - `Immersion tin` being preferred for press-fit does not mean finish chemistry can compensate for weak hole control or connector mismatch.
 - `Press-fit support` is not a standalone checkbox independent of SI review, drilling discipline, and validation planning.
 - `High-speed validation` should not be assumed identical across all backplane programs or channel lengths.
+- A source saying `press-fit readiness` does not authorize exact connector qualification scope or insertion-force commitments.
 
 ## Must Refresh Before Publishing
 
 - Any exact customer-facing drill tolerance, hole-size window, or residual-stub target
 - Any hard claim about standard-scope versus optional-scope connector qualification
 - Any exact insertion-force, plating, or finish-thickness value
+- Any claim that one backplane connector architecture is the default or universal route
+- Any cost, lead-time, yield, or production-rate statement for backplane connector builds
+
+## Related Facts And Source Scope
+
+- `methods-press-fit-and-backplane-integration-posture` is the main posture card showing that internal backplane pages already keep press-fit, drilling, backdrill, impedance, and validation in one workflow.
+- `methods-backdrill-control-capability` is the stub-control anchor for long-channel, high-speed, and RF-adjacent via-transition discussion inside backplane work.
+- `methods-press-fit-finish-selection` is the finish and hole-control anchor for connector-zone language, especially where immersion tin is mentioned.
+- The current source set supports an integration posture only. It does not establish exact hole windows, exact residual-stub outcomes, universal connector architectures, or program-wide qualification commitments.
 
 ## Related Fact Cards
 

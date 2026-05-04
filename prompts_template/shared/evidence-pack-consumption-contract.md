@@ -4,6 +4,8 @@ This contract defines how `prompts_template` may consume `llm_wiki` evidence pac
 
 It applies to both `query.md` and `pillar.md`.
 
+First-wave `6-layer / 8-layer / 10-layer` packs may be consumed only by recombining existing `verified` and `framing_only` units; no new claims may be inferred from missing enrichment.
+
 ## 1. What an Evidence Pack May Contribute
 
 An evidence pack may contribute only these input classes:

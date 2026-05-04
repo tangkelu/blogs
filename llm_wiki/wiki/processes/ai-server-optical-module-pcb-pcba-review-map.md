@@ -2,8 +2,8 @@
 topic_id: "processes-ai-server-optical-module-pcb-pcba-review-map"
 title: "AI Server And Optical Module PCB PCBA Review Map"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-27"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-ai-server-optical-high-speed-empty-image-boundary"
   - "methods-pcba-dfm-dft-dfa-review-gate-positioning"
@@ -33,14 +33,30 @@ tags: ["ai-server", "optical-module", "high-speed", "backplane", "pcba", "review
 
 # Definition
 
-> This review map converts the current internal evidence layer into a safe writing structure for AI-server, optical-module, and high-speed empty-image slugs. It tells future writers which engineering lane each topic belongs to, which companion facts to pull, and where the evidence boundary stops.
+> This review map routes AI-server motherboard, backplane, optical-module, and adjacent high-speed PCB/PCBA prompts into the correct board-review, assembly-governance, inspection, and validation-boundary lanes without overstating what the current source layer proves.
+
+## Routing Guidance
+
+- Route prompts to `AI server motherboard and backplane review` when the discussion centers on stackup planning, connector-heavy architecture, via-transition cleanup, controlled-impedance posture, and coordinated PCB plus PCBA intake.
+- Route prompts to `optical module PCBA review` when the real issue is compact package density, access planning, hidden-joint inspection, low-void planning, and first-build governance rather than optical standards language.
+- Route prompts to `high-speed SI review boundary` when the question mixes assembly workflow with channel-quality claims and needs a clear separation between board-review work, test access, and interface validation.
+- Route prompts to `inspection and launch gates` when the draft mainly needs FAI, X-ray, boundary-scan, or DFM/DFT/DFA positioning inside a larger quality flow.
+- Route any request for exact interface speeds, channel budgets, optical MSA scope, void thresholds, impedance thresholds, reflow recipes, or qualification commitments to refresh-required engineering review instead of treating this page as authority.
 
 ## Why This Topic Matters
 
-- These slugs cross three failure-prone vocabularies at once:
-  system context, high-speed board design, and dense hidden-joint assembly.
+- These slugs cross three failure-prone vocabularies at once: system context, high-speed board design, and dense hidden-joint assembly.
 - Without a map, drafts tend to overreach from board-review language into unsupported interface speeds, optical standards, reflow thresholds, or qualification claims.
-- The current corpus is good enough to produce conservative public explainers if each slug is kept inside the right review lane.
+- The current local fact set is already strong enough for conservative public explainers if each slug stays inside the correct review lane and keeps blocked claims explicit.
+
+## Stable Facts
+
+- The current local evidence supports writing AI-server motherboards and backplanes as dense digital hardware that needs coordinated stackup, connector, impedance, via-transition, and first-build review rather than isolated PCB-only language.
+- The same evidence supports writing compact optical-module boards as package-dense, inspection-sensitive PCBAs where DFM/DFT/DFA intake, hidden-joint visibility, low-void process planning, and early-build confirmation matter.
+- Existing high-speed SI boundary cards support a strict separation between stackup and impedance review, assembled-board test access, launch inspection, and later channel or protocol validation.
+- Existing X-ray and low-void cards support concealed-joint inspection and process-planning language, but they do not support acceptance thresholds, universal coverage rules, or reusable recipe claims.
+- Existing FAI and boundary-scan cards support launch-control and test-access wording, but they do not convert those gates into proof of channel quality, optical readiness, or production qualification.
+- Existing controlled-impedance and backplane posture cards support routing language around TDR-oriented verification and connector-heavy backplane integration without authorizing exact numeric commitments.
 
 ## Review Lanes
 
@@ -86,6 +102,14 @@ tags: ["ai-server", "optical-module", "high-speed", "backplane", "pcba", "review
 - Do not drift into:
   eye-mask, BER, jitter, insertion-loss, protocol-compliance, or interface enablement claims.
 
+## Engineering Boundaries
+
+- Keep `AI server`, `backplane`, `optical module`, and `high-speed SI` as related but separate routing lanes rather than collapsing them into one capability claim.
+- Keep `stackup and impedance review`, `assembly planning`, `inspection`, `boundary-scan`, and `first-build confirmation` as distinct layers inside the build flow.
+- Treat `X-ray`, `low-void BGA`, `FAI`, and `boundary-scan` as supporting gates, not as universal proof of signal quality or release readiness.
+- Treat `controlled impedance`, `TDR posture`, and `backplane connector integration` as board-review topics that still stop short of channel-pass or interoperability claims.
+- If a draft needs exact optical-module standards scope, interface numerics, defect thresholds, or recipe settings, refresh against stronger current authority before publication.
+
 ## Slug-by-Slug Map
 
 - `high-speed-ai-server-motherboard-ai-server-backplane`
@@ -104,6 +128,23 @@ tags: ["ai-server", "optical-module", "high-speed", "backplane", "pcba", "review
   Safe angle: explain how dense hidden-joint control supports high-speed build discipline while remaining separate from SI validation and protocol-level evidence.
   Must keep out: rate claims, jitter/eye/BER claims, impedance thresholds, reflow recipes, and proof that low-void work alone enables signal performance.
 
+## Blocked Claims
+
+- exact PCIe, CXL, Ethernet, optical-lane, PAM4, NRZ, or SerDes speed claims
+- optical-module MSA, transceiver interoperability, or standards-compliance claims
+- BER, jitter, eye mask, insertion loss, return loss, skew, timing-margin, or channel-pass claims
+- void thresholds, X-ray grading thresholds, impedance thresholds, TDR coverage guarantees, or reusable reflow recipes
+- yield, cost, lead time, reliability, supplier-qualification, or production-release claims
+- exact press-fit insertion-force, hole-window, connector-qualification, or backplane geometry claims
+
+## Common Misreadings
+
+- A page mentioning `AI server` or `backplane` does not prove any named interface speed, material table, or connector qualification outcome.
+- A page mentioning `optical module` does not authorize optical-lane, MSA, transceiver, or interoperability language.
+- `Boundary-scan` support does not collapse stackup review, TDR posture, channel measurement, or protocol validation into one gate.
+- `FAI` confirms early-build alignment and documentation posture, not high-speed channel quality.
+- `Low-void BGA` and `X-ray` language belong to process review and concealed-joint visibility, not to universal acceptance proof or guaranteed performance.
+
 ## Reusable Public Claim Shapes
 
 - `The board review usually starts with stackup, connector, package, and access constraints before test planning and first-build confirmation are finalized.`
@@ -112,14 +153,6 @@ tags: ["ai-server", "optical-module", "high-speed", "backplane", "pcba", "review
 - `Boundary-scan can support access and digital interconnect review on dense boards, but it is not the same thing as channel-quality proof.`
 - `Low-void BGA work is safer to describe as process planning and inspection discipline than as a guaranteed performance outcome.`
 
-## Blocked Claim Families
-
-- Any PCIe, CXL, Ethernet, optical-lane, PAM4, NRZ, or SerDes speed number
-- Any optical-module MSA, transceiver, or interoperability claim
-- Any BER, jitter, eye mask, insertion loss, return loss, skew, or timing-margin claim
-- Any void threshold, X-ray threshold, impedance threshold, or reflow profile recipe
-- Any yield, cost, lead time, reliability, or supplier-qualification claim
-
 ## Recommended Consumption Order
 
 1. Read `methods-ai-server-optical-high-speed-empty-image-boundary`
@@ -127,6 +160,14 @@ tags: ["ai-server", "optical-module", "high-speed", "backplane", "pcba", "review
 3. Add only the companion fact cards needed by that slug
 4. Keep the draft in checklist, process-review, and validation-boundary language
 5. Delete any numeric or qualification leakage before publication
+
+## Related Facts And Source Scope
+
+- `methods-ai-server-optical-high-speed-empty-image-boundary` is the top-level posture card that keeps AI-server, optical-module, and high-speed empty-image rewrites inside board-review and assembly-governance language.
+- `methods-pcba-dfm-dft-dfa-review-gate-positioning`, `methods-hidden-joint-xray-inspection-boundary`, and `methods-low-void-bga-conservative-generation-gate` anchor the compact-assembly and concealed-joint lane.
+- `methods-high-speed-si-review-dimensions-remain-separate-from-boundary-scan`, `methods-pcba-boundary-scan-jtag-positioning`, `methods-boundary-scan-does-not-prove-high-speed-channel-quality`, and `methods-pcba-first-article-inspection-vs-high-speed-validation-boundary` anchor the high-speed validation-boundary lane.
+- `methods-controlled-impedance-tdr-verification-posture` and `methods-press-fit-and-backplane-integration-posture` anchor the connector-heavy backplane and controlled-impedance review lane.
+- The current source set supports routing, inspection, and validation-boundary language only. It does not establish exact interface numerics, optical standards scope, acceptance thresholds, or qualification outcomes.
 
 ## Primary Sources
 

@@ -2,8 +2,8 @@
 topic_id: "processes-pcb-service-routing-from-prototype-to-special-process"
 title: "PCB Service Routing From Prototype To Special Process"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-pcb-prototype-quickturn-and-volume-routing"
   - "methods-pcb-stackup-special-process-and-baseline-families"
@@ -29,55 +29,102 @@ tags: ["pcb", "prototype", "quick-turn", "npi", "mass-production", "stackup", "s
 
 # Definition
 
-> PCB service routing from prototype to special process is the internal planning frame that decides both operating mode and board family: whether a build is handled as prototype, quick-turn, NPI/small-batch, or mass production, and whether the construction itself stays within baseline FR-4/high-Tg work or moves into heavy-copper, multilayer, or specialty-process routing.
+> PCB service routing from prototype to special process is a planning boundary that separates operating mode from construction family. It decides whether a build is handled as prototype, quick-turn, `NPI/small-batch`, or mass production, and whether the board remains in baseline `FR-4` or `high-Tg` routing or moves into heavy-copper, thermal-platform, multilayer-lamination, profiling, coating, or broader special-process routing. This lane does not authorize universal availability across every service route, exact capability numerics, certification or qualification proof, or customer-program approval claims.
+
+## Routing Guidance
+
+- Use this page when a draft mixes service posture and board-family wording into one flat `PCB manufacturing` claim.
+- Route `prototype`, `quick-turn`, `NPI/small-batch`, and `mass production` through the operating-posture fact card before discussing any board-family choice.
+- Route `FR-4`, `high-Tg`, heavy copper, multilayer stackup, lamination planning, and special-process board families through the stackup and baseline-family fact card rather than through speed or volume language.
+- Route metal-core, ceramic, and other heat-driven platform choices through the thermal-platform-selection fact card instead of treating `high thermal` as one interchangeable material route.
+- Route profiling and conformal-coating wording as downstream finishing or protection steps after the main board family and service posture are established.
+- Route industry-fit or market-segmentation language as context only, not as proof that a service route or board family is qualified for a specific customer program.
 
 ## Why This Topic Matters
 
-- Internal PCB pages become hard to reuse if `prototype`, `quick-turn`, `stackup`, `special PCB`, and `heavy copper` are all treated as one generic manufacturing claim.
-- The APT PCB corpus now separates operating-speed routes from construction-family routes, which is more useful for prompts and planning than a flat product list.
-- This topic page gives one stable frame for choosing the right service language before drafting customer-facing PCB manufacturing content.
+- Internal PCB pages become misleading when `prototype`, `quick-turn`, stackup class, thermal platform, profiling, and coating are all treated as one generic service promise.
+- The already-landed facts separate operating posture from material family, stackup planning, thermal-platform selection, and downstream protection steps.
+- This page turns that separation into an active routing surface so future rewrites can choose the right service lane without implying universal availability or qualification proof.
 
 ## Stable Facts
 
-- The internal PCB routing pages separate `prototype`, `quick-turn`, `NPI/small-batch`, and `mass production` as different operating postures with different ramp and scale language.
-- The PCB index page acts as the top-level taxonomy that keeps those routes inside one unified PCB portfolio.
-- The industry-solutions page adds application segmentation, connecting stackup and rollout framing to different end markets.
-- FR-4 acts as the baseline fabrication family while high-Tg adds a thermally stronger laminate posture for more demanding multilayer or lead-free contexts.
-- Heavy copper is treated as a separate power and thermal route rather than just a thicker version of standard FR-4.
-- Stackup and multilayer-lamination pages define construction planning, including multilayer sequencing and hybrid-material routing.
-- The special-PCB page widens the taxonomy to ceramic, metal-core, flex, rigid-flex, RF, carbon-ink, gold-finger, and other non-standard constructions.
-- Profiling and conformal coating extend the manufacturing route into edge-finish/singulation decisions and downstream protection steps.
+- The landed routing card separates `prototype`, `quick-turn`, `NPI/small-batch`, and `mass production` as distinct operating postures with different speed, release-readiness, scale-up, and industry-fit framing.
+- The PCB index page provides a top-level portfolio route that keeps these service postures inside one broader PCB offering.
+- The industry-solutions page adds application-fit context, but does not change the need to keep service route and board-family selection separate.
+- The landed stackup and special-process card treats `FR-4` and `high-Tg` as baseline laminate families, heavy copper as a separate current and thermal route, and multilayer stackup or sequential lamination as distinct planning layers.
+- The same landed card treats special-process routes such as ceramic, metal-core, flex, rigid-flex, RF, gold-finger, carbon-ink, and related non-standard constructions as separate board-family branches rather than interchangeable variants of standard rigid boards.
+- The landed thermal-platform card treats `MCPCB`, heavy copper, and ceramic as distinct thermal-path platforms with different tradeoff posture rather than as one merged `high thermal` family.
+- The landed conformal-coating card treats coating as a separate protection step with its own standards metadata, chemistry context, and internal process framing rather than as a bare-board material property.
+- Profiling and singulation choices such as `V-score`, tab routing, laser singulation, edge plating, and castellation belong to downstream manufacturing-route selection after the main construction path is chosen.
 
 ## Engineering Boundaries
 
-- Keep service speed or volume routing separate from board-family selection.
-- Do not treat FR-4, high-Tg, heavy copper, rigid-flex, ceramic, RF, and other special constructions as interchangeable substitutions.
-- Keep stackup planning, lamination route, profiling method, and protection chemistry as separate engineering decisions.
-- Treat industry-solution framing as support for application fit, not as proof of certification or customer qualification.
-- Refresh all exact values for layer count, copper weight, Tg/Td, turnaround, profiling tolerance, and coating chemistry before publication.
+### 1. Service-Posture Boundary
+
+- Safe wording: the build is being routed as `prototype`, `quick-turn`, `NPI/small-batch`, or `mass production` depending on validation, urgency, and release posture.
+- Safe companion fact: `methods-pcb-prototype-quickturn-and-volume-routing`.
+- Keep service posture separate from board-family identity, exact lead-time promises, and program-readiness claims.
+
+### 2. Baseline Versus Special-Process Family Boundary
+
+- Safe wording: the board stays in baseline `FR-4` or `high-Tg` routing, or escalates into heavy-copper, multilayer-lamination, or broader special-process routing.
+- Safe companion fact: `methods-pcb-stackup-special-process-and-baseline-families`.
+- Keep laminate family, stackup architecture, lamination sequence, and special-process family selection as separate planning layers.
+
+### 3. Thermal-Platform Boundary
+
+- Safe wording: thermal-driven builds should be routed by platform class such as heavy copper, `MCPCB`, or ceramic rather than by a generic `high thermal PCB` label.
+- Safe companion fact: `methods-thermal-pcb-platform-selection-posture`.
+- Keep thermal-platform selection separate from generic rigid-board stackup language and from claims that one thermal material solves every heat problem.
+
+### 4. Downstream Profiling And Protection Boundary
+
+- Safe wording: depaneling, profile finish, castellation, edge plating, and conformal coating are downstream route choices after the core build family is chosen.
+- Safe companion facts: `methods-pcb-stackup-special-process-and-baseline-families`, `methods-conformal-coating-source-coverage`.
+- Keep coating chemistry, masking, process planning, and profile method separate from laminate identity or qualification claims.
+
+## Blocked Claims
+
+- Universal availability claims remain blocked, including wording that every special-process family is available in every prototype, quick-turn, `NPI`, or volume route.
+- Exact capability numerics remain blocked, including lead times, quantity thresholds, copper weights, layer counts, `Tg/Td`, profiling tolerances, coating thickness, cure windows, or material-property figures.
+- Certification or qualification claims remain blocked, including industry certification, standards compliance, qualified-process, qualified-board, or approved-environment wording.
+- Customer-program or market-approval claims remain blocked, including sector-proven, deployment-proven, customer-approved, or program-qualified route language.
 
 ## Common Misreadings
 
-- `Quick-turn` does not mean every special-process family is available on the same delivery posture.
-- `Prototype` does not automatically mean low-control or non-production-like fabrication.
-- `High-Tg` does not replace the need to discuss actual stackup, lamination route, or thermal constraints.
-- `Heavy copper` is not just a material adjective; it changes current-path and manufacturability framing.
-- `Conformal coating` is not a substitute for laminate choice, stackup design, or environmental qualification planning.
+- `Quick-turn` is sometimes misread as proof that every special-process family inherits the same accelerated path; here it only supports a schedule posture that must remain separate from board-family complexity.
+- `Prototype` is sometimes misread as a low-control or non-production-like path; here it only supports a validation-stage service route.
+- `High-Tg` is sometimes misread as a complete thermal-platform answer; here it remains a baseline laminate-family decision that does not replace stackup or platform planning.
+- `Heavy copper` is sometimes misread as just a thicker version of standard rigid board work; here it remains a separate current and thermal route.
+- `Conformal coating` is sometimes misread as proof of environmental qualification or as a substitute for laminate and stackup choice; here it only supports downstream protection-process framing.
+
+## Safe Draft Routing
+
+### `pcb manufacturing` mixed-route drafts
+
+- Supported route: separate operating mode first, then baseline versus special-process family, then thermal-platform choice, then downstream profiling or coating steps.
+- Keep blocked: exact service thresholds, universal special-process availability, certification or qualification claims, and customer-program approval claims.
 
 ## Must Refresh Before Publishing
 
-- Lead-time claims for prototype, quick-turn, NPI, and mass-production routing
-- Exact unit-count or volume thresholds between service routes
-- Copper-weight, layer-count, Tg/Td, and impedance-tolerance claims
-- Special-process availability, profiling tolerances, and coating-process specifics
-- Industry certification, qualification, and experience claims
+- Any exact turnaround window, rush commitment, or unit-count threshold between prototype, quick-turn, `NPI`, and volume routing.
+- Any exact numeric for copper weight, layer count, `Tg/Td`, impedance tolerance, profile tolerance, coating thickness, cure schedule, or thermal performance.
+- Any statement that turns industry-solution or market-segmentation language into qualification, certification, or sector-acceptance proof.
+- Any statement that claims every special-process family is available under the same schedule, release, or production posture.
 
-## Related Fact Cards
+## Related Facts And Source Scope
 
 - `methods-pcb-prototype-quickturn-and-volume-routing`
 - `methods-pcb-stackup-special-process-and-baseline-families`
 - `methods-thermal-pcb-platform-selection-posture`
 - `methods-conformal-coating-source-coverage`
+
+## Source Scope
+
+- Service-posture authority comes from already-landed internal APT routing pages for prototype, quick-turn, `NPI/small-batch`, and mass-production framing.
+- Board-family, stackup, special-process, profiling, and coating-routing authority comes from already-landed internal APT PCB family and process pages referenced by the linked fact cards.
+- Thermal-platform separation comes from already-landed internal APT and HIL thermal board pages referenced by the linked thermal-platform fact card.
+- Outside current scope: exact capability commitments, universal service coverage across all board families, certification or qualification evidence, and customer-program approval proof.
 
 ## Primary Sources
 

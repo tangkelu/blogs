@@ -2,8 +2,8 @@
 topic_id: "processes-schematic-symbol-standards-boundaries"
 title: "Schematic Symbol Standards Boundaries"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-29"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "standards-schematic-symbol-standards-identity-boundary"
 source_ids:
@@ -14,53 +14,93 @@ tags: ["schematic-symbols", "iec-60617", "ieee-315", "ansi-y32-2", "diagram-stan
 
 # Definition
 
-> This boundary page exists to keep `schematic-symbols.md` anchored to real standards-owner metadata instead of drifting into unsupported universal drafting advice, public-domain symbol tables, or CAD-tool rankings. The current source layer supports standards identity; it does not support full tutorial authority.
+> Schematic-symbol writing is safe only at a narrow standards-identity boundary: `IEC 60617` may be described as the IEC-owned graphical-symbol database for electrotechnical diagrams, and `IEEE/ANSI 315-1975` may be described as a historical U.S.-side diagram-symbol and reference-designation standard page with inactive-reserved status. This lane does not authorize universal drafting pedagogy, exact symbol-shape instruction, CAD-tool recommendations, or claims that one standards reference makes all schematic libraries identical.
+
+## Routing Guidance
+
+- Use this page when `schematic-symbols.md` or adjacent drafts need standards-family identity rather than full tutorial authority.
+- Route `IEC 60617` through its safe posture as the IEC-owned database for graphical symbols used in electrotechnical diagrams.
+- Route `IEEE/ANSI 315-1975` through its safe posture as a historical IEEE/ANSI standard page for graphic symbols and reference designation letters, with inactive-reserved status when relevant.
+- Keep standards identity separate from symbol-library teaching, reading-order pedagogy, CAD workflow advice, and software comparisons.
+- If a draft needs exact symbol examples, reference-designator teaching, library governance, or tool-feature claims, stop and require narrower sources.
 
 ## Why This Topic Matters
 
-- `schematic-symbols.md` contains one high-value promotable lane:
-  symbol standards identity.
-- The current corpus did not previously have an official source-backed layer for `IEC 60617` and `IEEE 315`.
-- A narrow standards-identity page lets prompt consumers cite the existence and role of those standards families without pretending the full public teaching layer is already sourced.
+- Schematic-symbol drafts can safely name real standards families, but they often drift from standards identity into unsupported claims about universal reading conventions or software choice.
+- The landed fact card already supports exact IEC and IEEE SA metadata at identity level without supporting a full public tutorial layer.
+- This page gives prompt consumers a stable routing lane so standards naming stays conservative and source-backed.
 
 ## Stable Facts
 
-- `IEC 60617` is the IEC-owned database for graphical symbols used in electrotechnical diagrams.
-- The IEC page publicly describes broad symbol-domain coverage and database status, but not a free public symbol tutorial.
-- `IEEE/ANSI 315-1975` is an IEEE SA standard page for graphic symbols for electrical and electronics diagrams, including reference designation letters.
-- The IEEE SA page publicly shows that `IEEE/ANSI 315-1975` is inactive-reserved rather than a currently active standard page.
-- These sources support standards-family identity and historical context only.
+- Existing IEC-backed facts support `IEC 60617` as the official IEC database of graphical symbols for use in electrotechnical diagrams.
+- Existing IEC-backed facts support broad symbol-domain coverage in that database, including conductors, passive components, semiconductors, energy conversion, controlgear, measuring instruments, telecommunications equipment, and diagram-planning views.
+- Existing IEEE SA-backed facts support `IEEE/ANSI 315-1975` as a standard page for graphic symbols for electrical and electronics diagrams, including reference designation letters.
+- Existing IEEE SA-backed facts support lifecycle metadata showing `IEEE/ANSI 315-1975` as `Inactive-Reserved`, with historical approval, publication, reaffirmation, and later inactivation.
+- Together, the landed sources support standards-family identity and historical context only.
 
 ## Engineering Boundaries
 
-- Do not write as if a standards page by itself teaches every symbol a reader needs.
-- Do not write as if `IEEE/ANSI 315-1975` is a current active universal rule source.
-- Do not write as if the IEC and IEEE families make every symbol identical across every library, CAD tool, school, or industry document set.
-- Keep standards identity separate from drawing-style advice, educational flow, and software recommendations.
-- If the article moves into actual symbol examples, reference-designator pedagogy, or CAD workflows, stop and require narrower sources.
+### 1. Standards Identity Boundary
 
-## Common Overclaims To Block
+- Safe wording: `IEC 60617` is the IEC-owned graphical-symbol database for electrotechnical diagrams.
+- Safe wording: `IEEE/ANSI 315-1975` is a historical IEEE/ANSI standard page for graphic symbols and reference designation letters.
+- Keep this boundary at standards identity and metadata, not full tutorial instruction.
 
-- `These standards make schematics universally readable in exactly the same way everywhere`
-- `IEEE 315 is the current active U.S. standard engineers must follow`
-- `IEC 60617 provides the exact public symbol set you should copy into any CAD tool`
-- `All schematic tools use the same symbols because of IEC 60617`
-- `A standards reference is enough to choose the best CAD software for schematic capture`
+### 2. Lifecycle Boundary
+
+- Safe wording: `IEEE/ANSI 315-1975` carries inactive-reserved historical status in the currently landed IEEE SA metadata.
+- Safe wording: standards references provide document-family context, not proof that every current team or tool follows one live universal rule set.
+- Keep lifecycle wording separate from any claim that a historical standard is the current active mandatory rule.
+
+### 3. Symbol-Teaching Boundary
+
+- Safe wording: standards can be cited as symbol-family references for diagrams and documentation context.
+- Safe extension: explain that standards identity does not by itself teach every symbol meaning, drawing convention, or library choice.
+- Keep actual symbol-shape instruction, reference-designator pedagogy, and beginner teaching outside this lane.
+
+### 4. Tool And Workflow Boundary
+
+- Safe wording: standards identity can coexist with many libraries, CAD tools, and documentation practices.
+- Safe extension: describe standards references as context, not as proof of tool superiority or universal library equivalence.
+- Keep CAD-tool recommendations, workflow rankings, ERC/DRC advice, and schematic-layout best practices outside this lane.
+
+## Blocked Claims To Preserve
+
+- Universal drafting-pedagogy claims remain blocked, including one mandatory left-to-right, top-to-bottom, or power-at-top reading rule for all schematics.
+- Exact symbol-shape instruction remains blocked, including claims that the current source layer provides the exact public symbol set to copy into any CAD tool.
+- CAD-tool recommendation claims remain blocked, including any statement that standards identity proves the best schematic-capture tool or library workflow.
+- Universal-equivalence claims remain blocked, including claims that `IEC 60617`, `IEEE 315`, all CAD tools, and all schematic libraries use exactly the same symbols everywhere.
+- Current-active-standard claims remain blocked for `IEEE/ANSI 315-1975`, beyond the already-landed historical and inactive-reserved metadata.
+
+## Common Misreadings
+
+- Naming `IEC 60617` is sometimes misread as proof that the full public symbol library is freely provided for direct CAD reuse; here it only supports official database identity.
+- Naming `IEEE/ANSI 315-1975` is sometimes misread as proof of a current active universal U.S. rule; here it only supports historical standard identity plus inactive-reserved lifecycle metadata.
+- Combining IEC and IEEE references is sometimes misread as proof that all symbol sets are interchangeable across industries and tools; here it only supports standards-family context.
+- Referencing standards pages is sometimes misread as enough authority for teaching every symbol or drafting practice; this lane does not support that tutorial layer.
+
+## Safe Draft Routing
+
+### `schematic-symbols.md`
+
+- Supported route: standards-family identity, historical context, guarded standards metadata, and conservative language about symbol-reference families.
+- Keep blocked: exact symbol teaching, universal drafting rules, CAD-tool rankings, library-completeness claims, and current-active-standard claims beyond the landed metadata.
 
 ## Must Refresh Before Publishing
 
-- Current edition and lifecycle wording for `IEC 60617`
-- Current lifecycle wording for `IEEE/ANSI 315-1975`
-- Any claim that uses `current`, `latest`, `official source`, or `active standard`
-- Any exact symbol-shape, library, or drafting-rule claim
+- Any claim that uses `current`, `latest`, `active standard`, or similar lifecycle wording beyond the already-landed fact card.
+- Any exact symbol-shape, category-definition, stroke-rule, reference-designator-instruction, or public-library claim.
+- Any statement that turns standards identity into universal reading conventions or tool-selection advice.
 
-## Supported Draft Families
-
-- `/code/blogs/tmps/2025.11.10/en/schematic-symbols.md`
-
-## Related Fact Cards
+## Related Facts
 
 - `standards-schematic-symbol-standards-identity-boundary`
+
+## Source Scope
+
+- Standards identity comes only from the already-landed IEC and IEEE SA source records referenced by the linked fact card.
+- This page does not add educational, tool-owner, CAD-workflow, or symbol-library-governance sources.
+- Outside current scope: exact symbol tutorials, drafting pedagogy, CAD workflow recommendations, and software feature comparisons.
 
 ## Primary Sources
 

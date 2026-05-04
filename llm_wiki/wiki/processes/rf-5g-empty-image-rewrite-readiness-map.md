@@ -2,12 +2,12 @@
 topic_id: "processes-rf-5g-empty-image-rewrite-readiness-map"
 title: "RF 5G Empty-Image Rewrite Readiness Map"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-27"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-5g-telecom-empty-image-rewrite-boundary"
   - "methods-5g-rf-system-context-vs-pcb-execution-boundary"
-  - "standards-5g-nr-identity-and-revision-boundary"
+  - "5g-nr-standards-identity-and-revision-boundary"
   - "methods-rf-isolator-component-class-vs-pcb-execution-boundary"
   - "methods-beamforming-mmwave-conservative-generation-gate"
   - "methods-antenna-system-feed-network-vs-performance-boundary"
@@ -35,18 +35,21 @@ source_ids:
   - "frontendhil-large-volume-assembly-product-page-en"
   - "frontendhil-high-frequency-product-page-en"
   - "frontendhil-rogers-product-page-en"
-tags: ["rf", "5g", "telecom", "empty-image", "rewrite-readiness", "mmwave", "antenna-system", "isolator", "base-station", "pico-cell"]
+tags: ["rf", "5g", "telecom", "empty-image", "rewrite-readiness", "mmwave", "antenna-system", "isolator", "base-station", "pico-cell", "active-routing"]
 ---
 
 # Definition
 
-> This readiness map classifies the current evidence layer for the five RF/5G empty-image slugs requested in the supplement round. It exists to show what can be written now in conservative PCB/PCBA language, what must stay blocked, and where the evidence ceiling still stops short of RF-performance or qualification claims.
+> This readiness map is active for RF/5G empty-image rewrites that must stay in telecom hardware context and PCB/PCBA execution scope. It routes system nouns into board-level review, validation, and handoff language while blocking RF-performance, band, coverage, qualification, and deployment claims.
 
-## Why This Topic Matters
+## Routing Guidance
 
-- These slugs look like system, antenna, or RF-performance topics, but the available source layer is strongest at component-class identity, telecom hardware context, board execution, and validation-planning boundaries.
-- Without one readiness map, drafts drift from `RF hardware context` into unsupported claims about bands, gain, coverage, EIRP, loss budgets, chamber results, or supplier qualification.
-- The current evidence layer is good enough for conservative manufacturing-focused rewrites if each slug stays inside its assigned lane.
+- Start with telecom hardware context, then move immediately into PCB or PCBA execution scope.
+- Use `5g-nr-standards-identity-and-revision-boundary` for standards identity only, and treat revision-sensitive wording as hold-worthy unless refreshed.
+- Use `5g-rf-system-context-vs-pcb-execution-boundary` for base-station, pico-cell, and telecom-node board execution framing.
+- Use `rf-isolator-component-class-vs-pcb-execution-boundary` when an isolator or circulator appears as a component-class context rather than a PCB proof.
+- Use `beamforming-mmwave-conservative-generation-gate`, `antenna-system-feed-network-vs-performance-boundary`, `mmwave-routing-sensitivity-vs-metric-claims-boundary`, `telecom-node-board-context-vs-radio-coverage-claims`, `hybrid-rf-stackup-capability`, `backdrill-control-capability`, `cavity-machining-capability`, and `rf-validation-capability` as the execution and validation spine.
+- Keep every RF noun at the level of context, routing sensitivity, or validation planning unless a narrower source explicitly authorizes metrics.
 
 ## Readiness Statuses
 
@@ -126,13 +129,23 @@ tags: ["rf", "5g", "telecom", "empty-image", "rewrite-readiness", "mmwave", "ant
 - Rewrite note:
   `pico cell` is safe only as compact telecom-node context with manufacturing and validation consequences.
 
-## Shared Blocked Claim Families
+## Blocked Claims
 
-- RF budgets, link budgets, throughput, capacity, range, coverage, latency, or protocol-compliance claims
-- insertion loss, return loss, gain, isolation, antenna efficiency, EIRP, phase error, calibration, chamber results, or OTA claims
-- FR1 / FR2 values, named band support, launch geometry, spacing rules, via-stub targets, or stackup numerics
-- supplier qualification, operator approval, deployment success, field uptime, reliability improvement, or environmental qualification claims
-- exact test frequency ceilings, standard revision recency claims, or certification claims without a fresh dated check
+- RF budgets, link budgets, throughput, capacity, range, coverage, latency, or protocol-compliance claims remain blocked.
+- insertion loss, return loss, gain, isolation, antenna efficiency, EIRP, phase error, calibration, chamber results, or OTA claims remain blocked.
+- FR1 / FR2 values, named band support, launch geometry, spacing rules, via-stub targets, or stackup numerics remain blocked unless a narrower source explicitly refreshes them.
+- supplier qualification, operator approval, deployment success, field uptime, reliability improvement, or environmental qualification claims remain blocked.
+- exact test frequency ceilings and current standards-revision claims remain blocked unless separately dated and refreshed.
+- component metrics, part-selection rankings, and named radio-module qualification claims remain blocked when the page only has system or board context.
+
+## Common Misreadings
+
+- `5G` or `NR` wording proves current band support or deployed radio capability
+- `base station` or `pico cell` wording proves coverage, capacity, or operator approval
+- `mmWave` wording proves FR2 numerics, chamber results, or performance outcome
+- `isolator` wording proves insertion loss or isolation numbers without part datasheets
+- `antenna system` wording proves gain, efficiency, or OTA behavior
+- `turnkey` or `validation` wording proves deployment success or supplier qualification
 
 ## Recommended Consumption Order
 
@@ -141,6 +154,22 @@ tags: ["rf", "5g", "telecom", "empty-image", "rewrite-readiness", "mmwave", "ant
 3. Pull the slug-specific companion fact cards only
 4. Keep the rewrite in board execution, assembly control, and validation-handoff language
 5. Remove any metrics, standards-recency, performance, or qualification leakage before drafting
+
+## Must Refresh Before Publishing
+
+- Any statement framed as latest standards identity, current band support, or current NR revision posture.
+- Any RF performance metric, coverage metric, deployment claim, or supplier qualification statement.
+- Any exact geometry, launch, spacing, via-stub, or stackup numeric that is not separately refreshed.
+- Any chamber, OTA, calibration, or validation-result statement.
+
+## Related Facts And Source Scope
+
+- `methods-5g-telecom-empty-image-rewrite-boundary` is the top-level telecom-to-board execution gate.
+- `methods-5g-rf-system-context-vs-pcb-execution-boundary` handles base-station and pico-cell board execution context.
+- `5g-nr-standards-identity-and-revision-boundary` handles standards identity and revision sensitivity only.
+- `methods-rf-isolator-component-class-vs-pcb-execution-boundary` handles isolator and circulator component-class context.
+- `methods-beamforming-mmwave-conservative-generation-gate`, `methods-antenna-system-feed-network-vs-performance-boundary`, `methods-mmwave-routing-sensitivity-vs-metric-claims-boundary`, `methods-telecom-node-board-context-vs-radio-coverage-claims`, `methods-hybrid-rf-stackup-capability`, `methods-backdrill-control-capability`, `methods-cavity-machining-capability`, and `methods-rf-validation-capability` form the downstream execution and validation spine.
+- Source scope for this page is limited to the already-landed local records listed in frontmatter; no URL-only refreshes belong in this lane.
 
 ## Primary Sources
 

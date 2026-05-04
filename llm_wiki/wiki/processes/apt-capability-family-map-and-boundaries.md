@@ -2,8 +2,8 @@
 topic_id: "processes-apt-capability-family-map-and-boundaries"
 title: "APT Capability Family Map And Boundaries"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-internal-capability-family-map"
   - "methods-hdi-microvia-and-vippo-process-posture"
@@ -39,13 +39,27 @@ tags: ["processes", "internal-source", "capabilities", "pcb", "hdi", "flex", "ri
 - `Rigid-flex PCB` combines mechanical integration and bend-zone concerns with multilayer stackup and often HDI-adjacent complexity.
 - `Metal-core PCB` and `Ceramic PCB` are both thermal-platform families, but they should not be treated as interchangeable because the internal pages frame different material systems, process routes, and application posture.
 
+## Routing Use
+
+- Choose the capability family before discussing stackup details, materials, validation, or assembly posture.
+- Split cross-family work explicitly when more than one frame is present, such as `HDI + rigid-flex` or `thermal platform + assembly integration`.
+- Use the capability pages as taxonomy and routing support, then move to deeper process or material cards before publishing exact engineering claims.
+
 ## Engineering Boundaries
 
 - Choose the capability family before discussing parameters.
 - Keep `HDI` separate from `rigid-flex`; they can coexist, but one is not a synonym for the other.
 - Keep `thermal platform` work separate from standard rigid-board language; MCPCB and ceramic should not be collapsed into generic high-power multilayer wording.
 - Treat trust-bar figures, FAQ windows, and table limits on the capability pages as refresh-sensitive internal claims.
-- Use deeper process or material sources before publishing exact stackups, material properties, or validation promises.
+- Use deeper process or material sources before publishing exact stackups, material properties, validation promises, or reflow guidance.
+
+## Blocked Claims
+
+- Exact layer-count, copper-weight, drill, line/space, and impedance-limit claims remain blocked unless refreshed against current engineering data.
+- Bend-radius, bend-life, cycle-count, and rigid-flex mechanical durability claims remain blocked unless refreshed from current process support.
+- Ceramic conductivity, dielectric, material-property, and ceramic-process numeric claims remain blocked unless tied to current product-level sources.
+- MCPCB or IMS assembly claims remain blocked when they imply a universal reflow profile, paste window, or thermal-resistance rule.
+- Lead-time, volume, prototype-availability, certification, quality-system, and sector-approval claims remain blocked unless separately refreshed.
 
 ## Common Misreadings
 
@@ -60,6 +74,7 @@ tags: ["processes", "internal-source", "capabilities", "pcb", "hdi", "flex", "ri
 - Layer-count, copper-weight, drill, line/space, and impedance-limit claims
 - Bend-radius, flex-life, and rigid-flex mechanical claims
 - Thermal-conductivity, dielectric, or ceramic-process numeric claims
+- IMS material-property, thermal-resistance, and solder-paste-specific reflow-profile claims
 - Lead-time, volume, or prototype-availability language
 - Any certification, quality-system, or sector-approval statement
 

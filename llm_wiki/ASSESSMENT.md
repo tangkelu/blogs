@@ -1,7 +1,7 @@
 # LLM Wiki Knowledge Base Assessment And Handoff
 
-> Last updated: 2026-05-04 (repository-verified through P4-255)
-> Current status: Phase 4 indexing, routing, and first-pass fact coverage remain complete for the current English business JSON scope. The 14 current application families have dedicated evidence packs, and `P4-203` to `P4-255` normalization has now landed. Material-draft cleanup remains closed, and the current active frontier is continued process-draft promotion using already-landed local facts.
+> Last updated: 2026-05-04 (repository-verified through P4-280)
+> Current status: Phase 4 indexing, routing, and first-pass fact coverage remain complete for the current English business JSON scope. The 14 current application families have dedicated evidence packs, and `P4-203` to `P4-280` normalization has now landed. Material, process, and application draft cleanup are closed. The current frontier is no longer draft promotion; it is optional deeper official-source supplementation and explicit hard-hold maintenance.
 
 This file is the main handoff surface for parallel AI execution.
 It reflects repository truth, not chat claims.
@@ -40,7 +40,7 @@ Exclude `nav` and `i18n` JSON from the indexing target.
 | `sources/registry/` | 836 | official, internal published, and dated support records |
 | `facts/` | 520 | atomic facts and boundary cards |
 | `wiki/` | 135 | topic pages, routing pages, and evidence packs |
-| `logs/` | 520 | execution records, lane logs, and controller notes |
+| `logs/` | 545 | execution records, lane logs, and controller notes |
 | `policies/` | 6 | governance and execution rules |
 
 ### Data JSON Index Scope
@@ -98,7 +98,7 @@ Repository-verified complete work through `P4-202`:
   - `civil-aerospace`
 - Matching lane logs for P4-181 to P4-202 are present in `logs/`.
 
-Repository-verified complete work through `P4-255`:
+Repository-verified complete work through `P4-280`:
 
 - `P4-203` landed `wiki/materials/high-speed-material-family-selection.md`
 - `P4-204` landed `wiki/materials/ceramic-aln-ims-thermal-platforms.md`
@@ -157,6 +157,37 @@ Repository-verified complete work through `P4-255`:
 - `P4-254` landed `wiki/processes/sensor-and-display-serial-interface-review-boundaries.md`
 - `P4-255` landed `wiki/processes/rigid-flex-handling-lane.md`
 - Matching lane logs for `P4-249` to `P4-255` are present in `logs/`.
+- `P4-256` landed `wiki/processes/eo-ir-detector-owner-identity-review-boundaries.md`
+- `P4-257` landed `wiki/processes/backplane-execution-and-connector-integration.md`
+- `P4-258` landed `wiki/processes/fire-control-platform-and-sensor-interface-boundaries.md`
+- `P4-259` landed `wiki/processes/navigation-sensor-technology-review-boundaries.md`
+- `P4-260` landed `wiki/processes/usb-connector-and-capability-taxonomy-boundaries.md`
+- `P4-261` landed `wiki/processes/international-pcb-procurement-shipping-boundaries.md`
+- `P4-262` landed `wiki/processes/electrical-formula-identity-boundaries.md`
+- `P4-263` landed `wiki/processes/sonar-and-ultrasonic-transducer-front-end-boundaries.md`
+- Matching lane logs for `P4-256` to `P4-263` are present in `logs/`.
+- `P4-264` landed `wiki/processes/radio-altimeter-rf-front-end-boundaries.md`
+- `P4-265` landed `wiki/processes/remote-control-and-drone-control-stack-boundaries.md`
+- `P4-266` landed `wiki/processes/laser-time-of-flight-and-pulsed-driver-boundaries.md`
+- `P4-267` landed `wiki/processes/usb-c-charger-readiness-classification.md`
+- Matching lane logs for `P4-264` to `P4-267` are present in `logs/`.
+- `P4-268` landed `wiki/processes/hybrid-rf-stackup-strategy.md`
+- `P4-269` landed `wiki/processes/schematic-symbol-standards-boundaries.md`
+- `P4-270` landed `wiki/processes/pcb-service-routing-from-prototype-to-special-process.md`
+- `P4-271` landed `wiki/processes/conformal-coating-application-readiness-map.md`
+- Matching lane logs for `P4-268` to `P4-271` are present in `logs/`.
+- `P4-272` landed `wiki/processes/ai-server-optical-module-pcb-pcba-review-map.md`
+- `P4-273` landed `wiki/processes/apt-capability-family-map-and-boundaries.md`
+- `P4-274` landed `wiki/processes/apt-resource-layer-for-dfm-faq-and-download-retrieval.md`
+- `P4-275` landed `wiki/processes/public-capability-parameter-consumption-map.md`
+- Matching lane logs for `P4-272` to `P4-275` are present in `logs/`.
+- `P4-276` landed `wiki/processes/industrial-robotics-control-rewrite-readiness-map.md`
+- `P4-277` landed `wiki/processes/medical-imaging-wearable-empty-image-rewrite-gate.md`
+- `P4-278` landed `wiki/processes/neuromorphic-pcb-review-boundaries.md`
+- `P4-279` landed `wiki/processes/rf-5g-empty-image-rewrite-readiness-map.md`
+- Matching lane logs for `P4-276` to `P4-279` are present in `logs/`.
+- `P4-280` landed `wiki/applications/industry-application-scenarios-and-boundaries.md`
+- Matching lane logs for `P4-280` are present in `logs/`.
 
 Do not treat a task as complete unless its files exist locally in the expected `sources/`, `facts/`, `wiki/`, and `logs/` paths.
 
@@ -174,8 +205,8 @@ The program is no longer blocked on:
 Current remaining distance:
 
 - 0 material wiki pages are still `draft`
-- 24 process wiki pages are still `draft`
-- 1 application wiki page is still `draft`
+- 0 process wiki pages are still `draft`
+- 0 application wiki pages are still `draft`
 - standards/compliance coverage is usable but still conservative
 - some material families remain `recovered` or `partial` rather than official exact-product complete
 - hard-hold lanes remain closed and should stay closed
@@ -185,9 +216,10 @@ Practical assessment:
 - upstream knowledge-base coverage is now strong
 - downstream prompt-ready consumption is strong for layer-count and application lanes
 - the next bottleneck is not “missing application packs”
-- the next bottleneck is “existing facts exist, but many process wiki routes are still not normalized into active consumption surfaces”
+- the next bottleneck is no longer draft normalization
+- the remaining optional work is deeper official-source supplementation in selected regulated or exact-product lanes
 
-In short: the repository is close to the intended knowledge-base shape, and the remaining work is concentrated in the remaining 24 process drafts plus explicit hold maintenance.
+In short: the repository has reached the intended first-complete knowledge-base shape for the current indexed English business scope. Remaining work is no longer draft closure; it is selective depth improvement and explicit hold maintenance.
 
 ---
 
@@ -283,7 +315,7 @@ A lane is not `completed` unless:
 | Domain | Status | Main gap |
 |---|---|---|
 | Material wiki promotion | strong | current material-draft set is closed; remaining work is governance depth, not draft cleanup |
-| Process wiki promotion | medium | 31 process wiki pages still remain `draft`; many still have enough fact support for promotion lanes |
+| Process wiki promotion | closed | the process-draft set is closed for the current scope |
 | Regulated official-source depth | medium | current standards-depth cards are usable but still conservative |
 | Exact-product official anchors | weak-medium | Taconic and some Arlon RF/PTFE lanes remain governance-first rather than current official exact-product complete |
 | High-density numeric claims | weak | `20-layer` and `22-layer` remain hard holds |
@@ -389,231 +421,37 @@ These tasks are already complete and must not be reassigned:
 - `P4-253` output video and machine vision interface review boundaries
 - `P4-254` sensor and display serial interface review boundaries
 - `P4-255` rigid-flex handling lane
+- `P4-256` EO/IR detector owner identity review boundaries
+- `P4-257` backplane execution and connector integration
+- `P4-258` fire-control platform and sensor interface boundaries
+- `P4-259` navigation sensor technology review boundaries
+- `P4-260` USB connector and capability taxonomy boundaries
+- `P4-261` international PCB procurement shipping boundaries
+- `P4-262` electrical formula identity boundaries
+- `P4-263` sonar and ultrasonic transducer front-end boundaries
+- `P4-264` radio altimeter RF front-end boundaries
+- `P4-265` remote-control and drone control-stack boundaries
+- `P4-266` laser time-of-flight and pulsed driver boundaries
+- `P4-267` USB-C charger readiness classification
+- `P4-268` hybrid RF stackup strategy
+- `P4-269` schematic symbol standards boundaries
+- `P4-270` PCB service routing from prototype to special process
+- `P4-271` conformal coating application readiness map
+- `P4-272` AI server and optical module PCB/PCBA review map
+- `P4-273` APT capability family map and boundaries
+- `P4-274` APT resource layer for DFM FAQ and download retrieval
+- `P4-275` public capability parameter consumption map
 
 ### Next Assignable Queue
 
-The next queue should continue process-draft normalization where strong local fact support already exists and no new source-recovery lane is required.
+There is no default draft-promotion queue remaining for the current indexed English business scope.
 
-#### `p4-256-eo-ir-detector-owner-identity-review-boundaries`
+Any future queue should be opened only for one of these reasons:
 
-```yaml
-task_id: p4-256-eo-ir-detector-owner-identity-review-boundaries
-status: queued
-owner: unassigned
-lane: EO/IR detector owner identity review boundary promotion
-input_paths:
-  - /code/blogs/llm_wiki/wiki/processes/eo-ir-detector-owner-identity-review-boundaries.md
-  - /code/blogs/llm_wiki/facts/methods/eo-ir-detector-owner-identity-and-interface-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/fire-control-platform-interface-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md
-  - /code/blogs/llm_wiki/facts/methods/pcba-first-article-inspection-vs-high-speed-validation-boundary.md
-  - /code/blogs/llm_wiki/facts/standards/automotive-medical-aerospace-application-qualification-boundary.md
-output_paths:
-  - /code/blogs/llm_wiki/wiki/processes/eo-ir-detector-owner-identity-review-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-256-eo-ir-detector-owner-identity-review-boundaries.md
-write_scope:
-  - /code/blogs/llm_wiki/wiki/processes/eo-ir-detector-owner-identity-review-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-256-eo-ir-detector-owner-identity-review-boundaries.md
-blocked_claims:
-  - detector-performance proof
-  - optics authority claims
-  - military-program and deployment claims
-  - qualification or supplier-readiness claims
-goal: Promote EO/IR detector owner identity into an active review-boundary page.
-reviewer: main-agent
-```
-
-#### `p4-257-backplane-execution-and-connector-integration`
-
-```yaml
-task_id: p4-257-backplane-execution-and-connector-integration
-status: queued
-owner: unassigned
-lane: backplane execution and connector integration promotion
-input_paths:
-  - /code/blogs/llm_wiki/wiki/processes/backplane-execution-and-connector-integration.md
-  - /code/blogs/llm_wiki/facts/methods/press-fit-and-backplane-integration-posture.md
-  - /code/blogs/llm_wiki/facts/methods/backdrill-control-capability.md
-  - /code/blogs/llm_wiki/facts/methods/press-fit-finish-selection.md
-output_paths:
-  - /code/blogs/llm_wiki/wiki/processes/backplane-execution-and-connector-integration.md
-  - /code/blogs/llm_wiki/logs/p4-257-backplane-execution-and-connector-integration.md
-write_scope:
-  - /code/blogs/llm_wiki/wiki/processes/backplane-execution-and-connector-integration.md
-  - /code/blogs/llm_wiki/logs/p4-257-backplane-execution-and-connector-integration.md
-blocked_claims:
-  - exact hole-tolerance and residual-stub claims
-  - connector qualification and insertion-force claims
-  - universal backplane architecture claims
-  - cost, lead-time, and yield claims
-goal: Promote backplane execution and connector integration into an active process-boundary page.
-reviewer: main-agent
-```
-
-#### `p4-258-fire-control-platform-and-sensor-interface-boundaries`
-
-```yaml
-task_id: p4-258-fire-control-platform-and-sensor-interface-boundaries
-status: queued
-owner: unassigned
-lane: fire-control platform and sensor interface boundary promotion
-input_paths:
-  - /code/blogs/llm_wiki/wiki/processes/fire-control-platform-and-sensor-interface-boundaries.md
-  - /code/blogs/llm_wiki/facts/methods/fire-control-platform-interface-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/laser-time-of-flight-pulsed-driver-and-safety-boundary.md
-  - /code/blogs/llm_wiki/facts/standards/embedded-imaging-serial-interface-boundary.md
-  - /code/blogs/llm_wiki/facts/standards/interface-wireless-positioning-product-level-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/pcba-first-article-inspection-vs-high-speed-validation-boundary.md
-  - /code/blogs/llm_wiki/facts/standards/automotive-medical-aerospace-application-qualification-boundary.md
-output_paths:
-  - /code/blogs/llm_wiki/wiki/processes/fire-control-platform-and-sensor-interface-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-258-fire-control-platform-and-sensor-interface-boundaries.md
-write_scope:
-  - /code/blogs/llm_wiki/wiki/processes/fire-control-platform-and-sensor-interface-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-258-fire-control-platform-and-sensor-interface-boundaries.md
-blocked_claims:
-  - ballistic or weapon-system proof
-  - interface speed and timing numerics
-  - platform compliance or interoperability claims
-  - defense-program approval claims
-goal: Promote fire-control platform and sensor interface review into an active boundary page.
-reviewer: main-agent
-```
-
-#### `p4-259-navigation-sensor-technology-review-boundaries`
-
-```yaml
-task_id: p4-259-navigation-sensor-technology-review-boundaries
-status: queued
-owner: unassigned
-lane: navigation sensor technology review boundary promotion
-input_paths:
-  - /code/blogs/llm_wiki/wiki/processes/navigation-sensor-technology-review-boundaries.md
-  - /code/blogs/llm_wiki/facts/methods/navigation-sensor-technology-owner-identity-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md
-  - /code/blogs/llm_wiki/facts/methods/pcba-first-article-inspection-vs-high-speed-validation-boundary.md
-  - /code/blogs/llm_wiki/facts/standards/automotive-medical-aerospace-application-qualification-boundary.md
-output_paths:
-  - /code/blogs/llm_wiki/wiki/processes/navigation-sensor-technology-review-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-259-navigation-sensor-technology-review-boundaries.md
-write_scope:
-  - /code/blogs/llm_wiki/wiki/processes/navigation-sensor-technology-review-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-259-navigation-sensor-technology-review-boundaries.md
-blocked_claims:
-  - drift and heading-accuracy claims
-  - navigation-system authority claims
-  - qualification or deployment claims
-  - supplier-proof claims
-goal: Promote navigation sensor technology identity into an active review-boundary page.
-reviewer: main-agent
-```
-
-#### `p4-260-usb-connector-and-capability-taxonomy-boundaries`
-
-```yaml
-task_id: p4-260-usb-connector-and-capability-taxonomy-boundaries
-status: queued
-owner: unassigned
-lane: USB connector and capability taxonomy boundary promotion
-input_paths:
-  - /code/blogs/llm_wiki/wiki/processes/usb-connector-and-capability-taxonomy-boundaries.md
-  - /code/blogs/llm_wiki/facts/standards/usb-connector-and-certified-capability-taxonomy-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/usb-c-pd-pps-protocol-context-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/charger-pcb-pcba-manufacturing-boundary.md
-output_paths:
-  - /code/blogs/llm_wiki/wiki/processes/usb-connector-and-capability-taxonomy-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-260-usb-connector-and-capability-taxonomy-boundaries.md
-write_scope:
-  - /code/blogs/llm_wiki/wiki/processes/usb-connector-and-capability-taxonomy-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-260-usb-connector-and-capability-taxonomy-boundaries.md
-blocked_claims:
-  - generic speed and wattage tables
-  - universal compatibility claims
-  - Thunderbolt equivalence claims
-  - market-adoption claims
-goal: Promote USB connector and capability taxonomy into an active boundary page.
-reviewer: main-agent
-```
-
-#### `p4-261-international-pcb-procurement-shipping-boundaries`
-
-```yaml
-task_id: p4-261-international-pcb-procurement-shipping-boundaries
-status: queued
-owner: unassigned
-lane: international PCB procurement and shipping boundary promotion
-input_paths:
-  - /code/blogs/llm_wiki/wiki/processes/international-pcb-procurement-shipping-boundaries.md
-  - /code/blogs/llm_wiki/facts/methods/international-pcb-shipping-customs-document-boundary.md
-output_paths:
-  - /code/blogs/llm_wiki/wiki/processes/international-pcb-procurement-shipping-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-261-international-pcb-procurement-shipping-boundaries.md
-write_scope:
-  - /code/blogs/llm_wiki/wiki/processes/international-pcb-procurement-shipping-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-261-international-pcb-procurement-shipping-boundaries.md
-blocked_claims:
-  - customs-clearance guarantees
-  - delivery-date guarantees
-  - tariff-outcome claims
-  - factory lead-time claims from shipping sources
-goal: Promote international procurement and shipping into an active boundary page.
-reviewer: main-agent
-```
-
-#### `p4-262-electrical-formula-identity-boundaries`
-
-```yaml
-task_id: p4-262-electrical-formula-identity-boundaries
-status: queued
-owner: unassigned
-lane: electrical formula identity boundary promotion
-input_paths:
-  - /code/blogs/llm_wiki/wiki/processes/electrical-formula-identity-boundaries.md
-  - /code/blogs/llm_wiki/facts/methods/electrical-formula-identity-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/power-energy-inverter-charger-rewrite-boundary.md
-output_paths:
-  - /code/blogs/llm_wiki/wiki/processes/electrical-formula-identity-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-262-electrical-formula-identity-boundaries.md
-write_scope:
-  - /code/blogs/llm_wiki/wiki/processes/electrical-formula-identity-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-262-electrical-formula-identity-boundaries.md
-blocked_claims:
-  - full tutorial and calculator claims
-  - AC or three-phase formula teaching
-  - PCB design-rule consequence claims
-  - capability or service claims
-goal: Promote electrical formula identity into an active boundary page.
-reviewer: main-agent
-```
-
-#### `p4-263-sonar-and-ultrasonic-transducer-front-end-boundaries`
-
-```yaml
-task_id: p4-263-sonar-and-ultrasonic-transducer-front-end-boundaries
-status: queued
-owner: unassigned
-lane: sonar and ultrasonic transducer front-end boundary promotion
-input_paths:
-  - /code/blogs/llm_wiki/wiki/processes/sonar-and-ultrasonic-transducer-front-end-boundaries.md
-  - /code/blogs/llm_wiki/facts/methods/sonar-ultrasonic-transducer-front-end-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/hydrophone-and-generic-beamforming-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/current-carrying-trace-width-and-copper-boundary.md
-  - /code/blogs/llm_wiki/facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md
-  - /code/blogs/llm_wiki/facts/standards/automotive-medical-aerospace-application-qualification-boundary.md
-output_paths:
-  - /code/blogs/llm_wiki/wiki/processes/sonar-and-ultrasonic-transducer-front-end-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-263-sonar-and-ultrasonic-transducer-front-end-boundaries.md
-write_scope:
-  - /code/blogs/llm_wiki/wiki/processes/sonar-and-ultrasonic-transducer-front-end-boundaries.md
-  - /code/blogs/llm_wiki/logs/p4-263-sonar-and-ultrasonic-transducer-front-end-boundaries.md
-blocked_claims:
-  - naval or combat-system proof
-  - beamforming implementation claims
-  - acoustic-performance numerics
-  - qualification or deployment claims
-goal: Promote sonar and ultrasonic transducer front-end review into an active boundary page.
-reviewer: main-agent
-```
+- deeper official-source supplementation in regulated or standards-sensitive lanes
+- exact-product manufacturer-source recovery for governance-first material families
+- intentional expansion when a new English business JSON subtree appears
+- explicit reopen of a hard-hold lane after stronger authority is recovered
 
 ### Watch-Only, Not Assignable
 
@@ -679,9 +517,8 @@ If another AI reads only one file, it should read this one.
 
 Recommended next action:
 
-1. Pick one task from `P4-256` to `P4-263`.
-2. Check whether its lane log already exists.
-3. If not claimed, create the lane log with `status: in_progress` and your `owner`.
-4. Land exactly one wiki page inside the declared `write_scope`.
-5. Do not edit shared files.
-6. Return the lane log plus the landed wiki path for main-agent review.
+1. Treat draft-promotion work as closed for the current indexed English business scope.
+2. Before opening any new lane, verify that the need is real local knowledge expansion rather than URL refresh or tracker churn.
+3. Prefer regulated-depth supplementation, exact-product recovery, or new-scope indexing only when explicit source-backed gaps remain.
+4. Do not reopen completed draft-promotion lanes by default.
+5. Do not edit shared files unless the task is explicitly assigned to the main agent.

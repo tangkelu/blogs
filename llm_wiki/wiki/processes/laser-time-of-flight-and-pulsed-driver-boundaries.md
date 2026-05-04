@@ -2,8 +2,8 @@
 topic_id: "processes-laser-time-of-flight-and-pulsed-driver-boundaries"
 title: "Laser Time Of Flight And Pulsed Driver Boundaries"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-30"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-laser-time-of-flight-pulsed-driver-and-safety-boundary"
   - "methods-current-carrying-trace-width-and-copper-boundary"
@@ -26,90 +26,103 @@ tags: ["laser", "time-of-flight", "lidar", "rangefinder", "targeting", "altimete
 
 # Definition
 
-> Laser-bearing PCB writing is only safe when it stays inside subsystem review boundaries: time-of-flight timing path, pulsed-driver section, isolation and current-path review, safety-control vocabulary, and staged validation plus release gates. The current corpus does not support turning this lane into military rangefinder proof, targeting authority, or exact range and accuracy claims.
+> Laser-bearing PCB writing is safe only at a narrow subsystem boundary: time-of-flight timing-path identity, pulsed-driver section review, current-path and thermal-consequence review, laser-safety control vocabulary, and staged release-gate language. This lane does not authorize exact timing, current, range, or accuracy numerics, laser-safety certification claims, military or targeting authority claims, or product approval claims.
+
+# Routing Guidance
+
+- Use this page when a draft needs guarded `laser time-of-flight`, `ToF`, `lidar`, `pulsed laser driver`, or `laser safety control` wording without drifting into finished-system performance or approval language.
+- Route timing-chain wording through `START` and `STOP` pulse measurement identity, pulse-launch timing, return-path timing capture, and control-path synchronization only.
+- Route pulsed-driver wording through current-path, copper, isolation, thermal, and layout-review posture rather than through optical-output or mission-performance claims.
+- Route first-build and release wording through staged verification, documentation, and launch-gate language rather than through subsystem performance proof.
+- Route automotive, medical, aerospace, avionics, or defense-sensitive mention through application-boundary framing only.
 
 ## Why This Topic Matters
 
-- The `2026.4.27/en` targeting draft leans on laser rangefinder and designator language, while the `altimeter` draft can also drift into laser-altimeter vocabulary.
-- Existing `llm_wiki` layers already support current-path review, first-article release, and qualification boundaries, but they previously lacked a clean official lane for laser time-of-flight and pulsed-driver identity.
-- This page creates that narrow route so future rewrites can keep laser language at subsystem timing and safety level without importing unsupported mission-system claims.
+- Laser-bearing drafts can reuse `rangefinder`, `designator`, or `altimeter` language in ways that overstate what the current source layer actually proves.
+- The landed fact set already supports a narrower lane for time-of-flight timing identity, pulsed-driver review, current-path review, and safety-control vocabulary.
+- This page turns that landed material into a stable routing boundary so future rewrites keep valid subsystem language without importing unsupported targeting, qualification, or approval claims.
 
 ## Stable Facts
 
 - Official NOAA material supports lidar as a laser-pulse distance-measurement context based on round-trip travel time.
-- Official TI `TDC7200` material supports the identity of a `time-to-digital converter` that measures elapsed time between `START` and `STOP` pulses in time-of-flight contexts.
-- Official TI `LMH13000` material supports pulsed laser-driver vocabulary, fast-edge control-path context, and thermal-protection awareness for lidar / time-of-flight hardware.
+- Official TI `TDC7200` material supports `time-to-digital converter` identity and elapsed-time measurement between `START` and `STOP` pulses in time-of-flight contexts.
+- Official TI `LMH13000` material supports pulsed laser-driver identity, fast-edge timing context, and thermal-protection vocabulary for lidar and time-of-flight subsystems.
 - Official FDA laser material supports hazard-class, labeling, engineering-control, and risk-communication boundary language.
-- Existing current-carrying, first-article, and qualification-boundary layers support separate discussion of pulse-path copper review, launch-gate discipline, and regulated-program boundary language.
+- Existing current-carrying, first-article, and application-qualification fact layers support separate discussion of pulse-path copper review, launch-gate discipline, and regulated-program boundary language.
 
-## Review Lanes
+## Engineering Boundaries
 
-### 1. Time-Of-Flight Timing Path
+### 1. Time-Of-Flight Timing Path Boundary
 
-- Safe posture:
-  describe the board as handling pulse launch timing, return-path timing capture, control-path synchronization, and measurement-chain review.
-- Do not drift into:
-  exact range, altitude accuracy, ballistic accuracy, jitter budgets, or mission-performance proof.
+- Safe wording: the board handles pulse-launch timing, return-path timing capture, elapsed-time measurement, control-path synchronization, and timing-chain review.
+- Safe extension: describe measurement hardware and subsystem timing posture at board level.
+- Keep this boundary at timing identity and review language, not range, altitude, accuracy, or mission-performance proof.
 
-### 2. Pulsed Laser Driver Section
+### 2. Pulsed Driver And Current-Path Boundary
 
-- Safe posture:
-  describe the board as containing a pulsed-current driver section that raises isolation, current-path, thermal, and layout-discipline review needs.
-- Safe companion layers:
-  `methods-current-carrying-trace-width-and-copper-boundary`,
-  `methods-pcba-first-article-inspection-vs-high-speed-validation-boundary`.
-- Do not drift into:
-  exact pulse-current, pulse-width, optical power, eye-safe classification, or guaranteed driver outcome claims.
+- Safe wording: the board contains a pulsed-current laser-driver section whose copper, isolation, thermal, and layout consequences require explicit review.
+- Safe companion facts: `methods-laser-time-of-flight-pulsed-driver-and-safety-boundary`, `methods-current-carrying-trace-width-and-copper-boundary`.
+- Keep driver discussion at board-review posture, not exact pulse current, pulse width, optical output, or range outcome.
 
-### 3. Safety And Release Boundary
+### 3. Safety-Control Boundary
 
-- Safe posture:
-  describe safety-control, hazard-class awareness, labeling/governance context, first-build confirmation, and design-assurance boundary language.
-- Safe companion layers:
-  `standards-automotive-medical-aerospace-application-qualification-boundary`.
-- Do not drift into:
-  product certification, military approval, export-control clearance, or supplier qualification proof.
+- Safe wording: use hazard awareness, labeling, engineering controls, and safety-governance language at a general boundary level.
+- Safe extension: describe laser-safety control posture and review responsibility without asserting class-specific certification or compliance completion.
+- Keep this boundary separate from any claim that a product, subsystem, or PCB is certified safe or approved for field use.
+
+### 4. First-Build And Qualification Boundary
+
+- Safe wording: first-build review, inspection planning, documentation discipline, and staged validation are release-gate activities for the board and assembly.
+- Safe companion facts: `methods-pcba-first-article-inspection-vs-high-speed-validation-boundary`, `standards-automotive-medical-aerospace-application-qualification-boundary`.
+- Keep this boundary at review-gate and application-context level, not product approval, military qualification, or supplier-proof language.
+
+## Blocked Claims To Preserve
+
+- Exact timing, current, range, or accuracy numerics remain blocked, including pulse width, pulse current, timing resolution, distance range, altitude accuracy, jitter budgets, and similar performance figures.
+- Laser-safety certification claims remain blocked, including eye-safe certification, class-specific compliance completion, certified-safe product wording, or any statement that a PCB alone proves laser-safety status.
+- Military or targeting authority claims remain blocked, including rangefinder authority, designator authority, fire-control linkage, weapon readiness, ballistic outcome proof, or military qualification wording.
+- Product approval claims remain blocked, including approved product, fielded product, customer-approved subsystem, export-cleared system, or program-qualified release language.
+
+## Common Misreadings
+
+- `ToF` timing hardware is sometimes misread as proof of exact range or accuracy; here it only supports timing-chain identity and review posture.
+- Pulsed-driver discussion is sometimes misread as proof of system range or optical output; here it only supports board-level current-path, isolation, and thermal review language.
+- General FDA laser-safety context is sometimes misread as proof of class-specific certification; here it only supports safety-control and labeling boundary language.
+- Combining laser timing nouns with defense vocabulary is sometimes misread as proof of targeting or military authority; here those claims remain explicitly blocked.
+- First-build or qualification-boundary wording is sometimes misread as proof of product approval; here it only supports staged review and regulated-application context.
 
 ## Safe Draft Routing
 
 ### `targeting-pcb.md`
 
-- Status:
-  `ready_for_narrow_laser_timing_reframe`
-- Safe angle:
-  laser timing/control-board context, pulsed-driver segregation, optical sensor interface adjacency, staged validation, and release-governance language.
-- Keep out:
-  fire-control computation authority, weapon-system proof, rangefinding accuracy, laser-designator authority, and military qualification claims.
+- Supported route: laser timing/control-board context, pulsed-driver segregation, optical-interface adjacency, staged validation, and release-governance language.
+- Keep blocked: fire-control authority, weapon-system proof, exact rangefinding accuracy, laser-designator authority, and military qualification or approval claims.
 
 ### `altimeter-pcb.md`
 
-- Status:
-  `partial_support_for_laser_altimeter_subset_only`
-- Safe angle:
-  only the laser time-of-flight or control-board subset, with timing path, isolation, and review workflow language.
-- Keep out:
-  radar-altimeter authority, aviation qualification, altitude performance, or aircraft-program proof.
-
-## Common Overclaims
-
-- `nanosecond timing proves targeting accuracy`
-- `laser driver current defines system range`
-- `eye-safe by design` or `laser-safe PCB` without product-level evidence
-- `military targeting board` or `weapon-ready control board` from subsystem timing sources
-- `ToF lidar wording` reused as if it proves defense, aviation, or fire-control performance
+- Supported route: only the laser time-of-flight or control-board subset, with timing-path, isolation, current-path, and review-workflow language.
+- Keep blocked: altitude numerics, aviation qualification, aircraft-program proof, or any claim that laser timing identity proves deployed altimeter performance.
 
 ## Must Refresh Before Publishing
 
-- Any exact timing, current, range, altitude, or accuracy value
-- Any class-specific laser-safety claim beyond the general FDA boundary
-- Any claim that moves from subsystem review into product approval, military use, or fielded performance
+- Any exact timing, current, range, altitude, or accuracy value.
+- Any class-specific laser-safety or certification claim beyond the general FDA boundary.
+- Any claim that turns subsystem timing or pulsed-driver wording into military, targeting, approval, or fielded-performance authority.
+- Any statement that names qualification, approval, certification, customer acceptance, or supplier capability for a specific program.
 
-## Related Fact Cards
+## Related Facts And Source Scope
 
 - `methods-laser-time-of-flight-pulsed-driver-and-safety-boundary`
 - `methods-current-carrying-trace-width-and-copper-boundary`
 - `methods-pcba-first-article-inspection-vs-high-speed-validation-boundary`
 - `standards-automotive-medical-aerospace-application-qualification-boundary`
+
+## Source Scope
+
+- Laser time-of-flight, pulsed-driver, and safety-control authority comes from the already-landed NOAA, TI, and FDA source records referenced by the linked fact card.
+- Current-path and thermal-consequence review authority comes from the already-landed current-carrying and internal PCB process records referenced by the linked fact card.
+- First-build and application-boundary authority comes from the already-landed PCBA workflow, standards, and regulator records referenced by the linked fact cards.
+- Outside current scope: fresh performance numerics, class-specific laser-certification evidence, targeting-system proof, military approval evidence, and product approval evidence.
 
 ## Primary Sources
 

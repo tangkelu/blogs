@@ -2,8 +2,8 @@
 topic_id: "processes-eo-ir-detector-owner-identity-review-boundaries"
 title: "EO/IR Detector Owner Identity Review Boundaries"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-30"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-eo-ir-detector-owner-identity-and-interface-boundary"
   - "methods-fire-control-platform-interface-boundary"
@@ -26,13 +26,21 @@ tags: ["eo-ir", "night-vision", "thermal-imaging", "surveillance", "targeting", 
 
 # Definition
 
-> EO/IR-adjacent PCB writing is only safe when it stays inside owner-backed detector-review boundaries: named detector-family identity, guarded detector-chain and optical-sensor-interface vocabulary, compact packaging and isolation pressure, processing-board context, and staged validation plus release gates. The current corpus does not support turning this lane into detector-performance proof, optics authority, video-chain proof, or military-program claims.
+> EO/IR-adjacent PCB writing is safe only at owner-backed detector identity and review-boundary level: named detector families, guarded detector-chain and optical-sensor-interface vocabulary, compact packaging and isolation pressure, processing-board context, and staged validation plus release gates. The current corpus does not support turning this lane into detector-performance proof, optics authority, military-program or deployment proof, or qualification or supplier-readiness claims.
 
 ## Why This Topic Matters
 
 - The `2026.4.27/en` imaging and defense drafts repeatedly mix real detector nouns with unsupported performance, military, surveillance, and supplier-proof claims.
 - Existing `llm_wiki` layers already support board-review workflow, release gates, qualification boundaries, and targeting platform-interface posture, but they previously lacked a clean owner-backed lane for exact EO/IR detector-family naming.
 - This page creates that route so future rewrites can retain exact detector nouns conservatively without importing unsupported optics, mission-system, or qualification proof.
+
+## Routing Guidance
+
+- Route `image intensifier tube`, `STARVIS`, security-image-sensor, cooled infrared detector, uncooled infrared detector, infrared detector array, and `microbolometer` language through owner identity only.
+- Route board discussion through reviewable engineering nouns: detector power, interface, readout, conditioning, processing-board context, compact packaging, isolation, thermal segregation, and staged validation.
+- Route targeting-adjacent wording through `methods-fire-control-platform-interface-boundary` only when the text needs guarded platform-bus or sensor-input context.
+- Route release and build-governance wording through `methods-pcba-dfm-dft-dfa-review-gate-positioning`, `methods-pcba-first-article-inspection-vs-high-speed-validation-boundary`, and `standards-automotive-medical-aerospace-application-qualification-boundary`.
+- Stop and refresh sources before any sentence tries to move from detector naming into performance proof, optics authority, deployment history, or readiness claims.
 
 ## Stable Facts
 
@@ -41,7 +49,7 @@ tags: ["eo-ir", "night-vision", "thermal-imaging", "surveillance", "targeting", 
 - Lynred provides an owner-backed route for `cooled infrared detector`, `uncooled infrared detector`, `infrared detector array`, and `microbolometer` vocabulary in thermal-imaging contexts.
 - Existing DFM, first-article, and qualification-boundary cards separately support discussion of review workflow, first-build confirmation, and regulated-program boundary language.
 
-## Review Lanes
+## Engineering Boundaries
 
 ### 1. Image Intensifier Detector Chain Identity
 
@@ -82,7 +90,18 @@ tags: ["eo-ir", "night-vision", "thermal-imaging", "surveillance", "targeting", 
 - Do not drift into:
   supplier readiness, military qualification, program approval, or deployment proof.
 
-## Safe Draft Routing
+## Blocked Claims
+
+- Detector-performance proof:
+  exact sensitivity, `QE`, lux, `NETD`, range, resolution, frame-rate, dynamic range, gain, jitter, or any statement that implies detector-family naming proves imaging results.
+- Optics authority claims:
+  lens, optical stack, image-registration, video-chain, display-output, or cryocooler / detector-material claims not separately sourced for this lane.
+- Military-program and deployment claims:
+  named program participation, field deployment, mission success, fire-control authority, target-recognition outcomes, or customer / defense-prime proof.
+- Qualification or supplier-readiness claims:
+  `qualified`, `approved`, `certified`, supplier-ready, production-ready, defense-ready, or regulated-program-ready wording tied to a board, PCBA, supplier, or lot.
+
+## Draft Routing
 
 ### `night-vision-pcb.md`
 
@@ -111,7 +130,7 @@ tags: ["eo-ir", "night-vision", "thermal-imaging", "surveillance", "targeting", 
 - Keep out:
   surveillance mission proof, target-tracking outcomes, fire-control authority, program history, and qualification claims used as supplier proof.
 
-## Common Overclaims
+## Common Misreadings
 
 - `EO/IR` or `night vision` used as if exact detector-family naming proves optics or system performance
 - `image intensifier` or `microbolometer` mention widened into voltage, gain, `NETD`, or detector-material proof
@@ -124,13 +143,29 @@ tags: ["eo-ir", "night-vision", "thermal-imaging", "surveillance", "targeting", 
 - Any statement about cryocoolers, detector materials, optical stack, image registration, or video-output standards
 - Any claim that moves from detector-family identity into military qualification, mission-system performance, or supplier proof
 
-## Related Fact Cards
+## Related Facts
 
 - `methods-eo-ir-detector-owner-identity-and-interface-boundary`
 - `methods-fire-control-platform-interface-boundary`
 - `methods-pcba-dfm-dft-dfa-review-gate-positioning`
 - `methods-pcba-first-article-inspection-vs-high-speed-validation-boundary`
 - `standards-automotive-medical-aerospace-application-qualification-boundary`
+
+## Source Scope
+
+- Detector owner identity and detector-chain vocabulary:
+  `exosens-image-intensifier-tube-page`,
+  `sony-starvis-technology-page`,
+  `sony-security-camera-image-sensor-products-page`,
+  `lynred-about-our-technologies-page`
+- Platform-interface boundary support:
+  `mil-std-1553-data-bus-page`,
+  `mil-hdbk-1553-multiplex-application-handbook-page`,
+  `bosch-can-protocols-page`
+- Build-review and release-boundary support:
+  `frontendapt-pcba-first-article-inspection-page-en`,
+  `faa-ac-20-152a-page`,
+  `as9102c-first-article-inspection-page`
 
 ## Primary Sources
 

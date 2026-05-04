@@ -9,6 +9,8 @@
 - 哪些不能写成硬事实
 - 哪些段落值得放正文锚点
 
+凡是能直接支撑正文、FAQ、表格或锚点的行，都尽量补齐 `fact_id`、`source_id` 和 `status`。
+
 ## 1. Topic Summary
 
 - 主题：
@@ -60,33 +62,36 @@
 
 只能放“能被一级来源直接支撑”的内容。
 
-| Claim | Why it matters | Source type | Verification status |
-| --- | --- | --- | --- |
-|  |  | standard / consortium / datasheet / whitepaper / regulator | pending |
+| Claim | fact_id | source_id | Why it matters | Source type | Status |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | standard / consortium / datasheet / whitepaper / regulator | verified / must_refresh |
 
 ### B. Project-Level Judgments
 
 这些内容可以写，但必须带适用范围，不能伪装成统一行业硬标准。
 
-| Judgment / control point | Scope | Safe wording |
-| --- | --- | --- |
-|  |  | 作为项目级 DFM 目标 / 试产拦截项 / 量产评审关注点 |
+默认 `framing_only`。
+
+| Judgment / control point | fact_id | source_id | Scope | Safe wording | Status |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | 作为项目级 DFM 目标 / 试产拦截项 / 量产评审关注点 | framing_only |
 
 ### C. Site-Specific Capability References
 
-这些内容只能在 capability 模块或站点承接段落中使用。
+这些内容默认 `supplier_scoped_dated_only`。如果只是 site CTA / 承接页引用，才用 `framing_only`，且不要升格为共享能力事实。
 
-| Capability | Site path / source | Allowed wording |
-| --- | --- | --- |
-|  |  | 仅作为站点公开能力写入 |
+| Capability | fact_id | source_id | Site path / source | Allowed wording | Status |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | 仅作为站点公开能力写入 | supplier_scoped_dated_only |
 
 ### D. Unsupported / Unclear
 
-这些内容默认不能写成硬事实。
+这些内容默认不能写成硬事实。请明确拆成两类：
 
-| Claim | Why unclear | Downgrade method |
-| --- | --- | --- |
-|  |  | 删除 / 改为定性风险 / 改成项目级判断 |
+| Claim | fact_id | source_id | Why unclear | Downgrade method | Status |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | 明显缺证据或无法安全降级 | 删除 / 改为定性风险 / 改成项目级判断 | blocked |
+|  |  |  | 可能过期、需要刷新后才能使用 | 刷新来源后再写 | must_refresh |
 
 ## 5. Primary Sources
 
@@ -121,9 +126,9 @@
 
 这里只放已经核实、可安全进入文章的事实。
 
-| Fact | Source type | How to write it safely |
-| --- | --- | --- |
-|  |  | 根据 xx 官方资料 / 从 xx 公布的语境看 / 按 xx 框架 |
+| Fact | fact_id | source_id | Source type | Status | How to write it safely |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | verified | 根据 xx 官方资料 / 从 xx 公布的语境看 / 按 xx 框架 |
 
 ## 7. Article Data Targets
 
@@ -184,6 +189,7 @@
 
 | Claim cluster | Inline citation handle | Source URL | Safe sentence pattern |
 | --- | --- | --- | --- |
+|  |  |  |  |
 |  | 例如：根据 USB-IF 规范 / NXP layout guide 指出 / Rogers datasheet 给出 |  | 例如：根据 xx 规范，… |
 
 要求：
@@ -196,13 +202,13 @@
 
 先准备作者与审核信息所需的权威素材。
 
-| Field | Content |
-| --- | --- |
-| Author entity | 真实作者 / 技术团队 / 内容团队实体 |
-| Reviewer entity | 审核人 / 工程评审团队 / SI 或制造审核团队 |
-| Credentials or scope | 职能边界、审核责任、专题覆盖范围 |
-| Public profile / entity URL | 如有可公开实体页则填入 |
-| Safe fallback wording | 如果没有真实姓名，最终如何安全表述 |
+| Field | fact_id | source_id | Content | Status |
+| --- | --- | --- | --- | --- |
+| Author entity |  |  | 真实作者 / 技术团队 / 内容团队实体 | framing_only |
+| Reviewer entity |  |  | 审核人 / 工程评审团队 / SI 或制造审核团队 | framing_only |
+| Credentials or scope |  |  | 职能边界、审核责任、专题覆盖范围 | framing_only |
+| Public profile / entity URL |  |  | 如有可公开实体页则填入 | verified / framing_only |
+| Safe fallback wording |  |  | 如果没有真实姓名，最终如何安全表述 | framing_only |
 
 要求：
 
@@ -214,9 +220,9 @@
 
 先把 FAQ 的高频问法按真实搜索语言写出来。
 
-| User query style | Mapped FAQ question | Source / evidence basis |
-| --- | --- | --- |
-|  |  |  |
+| User query style | fact_id | source_id | Mapped FAQ question | Source / evidence basis | Status |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  | framing_only |
 
 要求：
 

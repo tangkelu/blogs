@@ -2,8 +2,8 @@
 topic_id: "processes-hybrid-rf-stackup-strategy"
 title: "Hybrid RF Stackup Strategy"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-hybrid-rf-stackup-capability"
   - "methods-ptfe-processing-capability"
@@ -15,53 +15,68 @@ source_ids:
 tags: ["hybrid-stackup", "rf", "ptfe", "fr4", "stackup", "processes"]
 ---
 
-# Definition
+# Routing Summary
 
-> Hybrid RF stackup strategy means placing premium RF laminate only where the electrical path needs it, while using FR-4 or other structural materials elsewhere, with lamination, registration, transition control, and validation planned around that mixed-material architecture.
+> Route `hybrid RF stackup` drafts as mixed-material stackup-planning and manufacturability-review work, not as a generic material label. The stable local boundary supports premium RF laminate on signal-critical layers, FR-4 or other structural materials elsewhere, and a linked process posture around lamination control, registration, transition review, and downstream validation. This lane does not prove universal manufacturability, exact process windows, or commercial guarantees.
 
-## Why This Topic Matters
+## Hybrid RF Routing Map
 
-- Hybrid stackups are one of the most reusable technical themes across your RF, microwave, and high-frequency content.
-- Your internal non-blog pages already describe a stable hybrid-build posture, but the logic was split across Rogers, high-frequency, and microwave service pages.
-- This topic page gives later blog writing and prompt generation one controlled explanation of why hybrid stackups exist and where their engineering boundaries are.
+| Draft signal | Safe route | Block if draft asks for |
+| --- | --- | --- |
+| `Rogers plus FR-4` | selective RF-laminate placement with structural layers elsewhere | arbitrary material-mixing claims |
+| `hybrid RF cost` | internal cost/performance tradeoff posture only | numeric savings or quote promises |
+| `PTFE hybrid build` | stackup strategy plus PTFE handling discipline | generic FR-4-equivalent process language |
+| `mixed RF and digital layers` | split electrical-path material choice from structural-layer planning | universal build-readiness claims |
+| `hybrid microwave PCB` | tie stackup choice to lamination, registration, transition, and validation review | exact process-window or capability-table claims |
 
-## Stable Facts
+# Stable Facts
 
-- Internal HIL and APT pages consistently present `hybrid Rogers/PTFE + FR-4` stackups as a normal supported build style rather than an exception.
-- The current internal posture frames hybrid construction as a `cost/performance` strategy: premium RF material stays on signal-critical layers while less expensive structural material can remain on other layers.
-- Existing internal pages also connect hybrid stackups to manufacturability, not only to material selection, by repeatedly tying them to lamination control, registration, transition review, and later validation.
-- Internal PTFE-processing posture already treats plasma or surface activation, staged lamination, low-profile copper handling, cavity work, and backdrill or transition management as part of the same mixed-material execution problem.
-- Across the current corpus, hybrid builds are framed as an engineering tradeoff between RF performance, manufacturability, and total stack cost rather than as a marketing synonym for "high-end material."
+- Internal HIL and APT product pages repeatedly present `hybrid Rogers/PTFE + FR-4` stackups as a normal supported build style.
+- The current local corpus frames hybrid construction as a cost/performance strategy in which premium RF laminate stays on signal-critical layers while FR-4 or other structural materials remain elsewhere.
+- Internal pages connect hybrid stackups to manufacturability review, not just to laminate naming, by linking them to lamination control, registration, transition review, and later validation.
+- The local PTFE-processing card supports a distinct RF process posture that includes surface activation, staged or controlled lamination, low-profile copper handling, cavity-oriented work, and backdrill or transition management.
+- Across the landed local facts, hybrid builds are framed as an engineering tradeoff among RF performance intent, manufacturability, and total stack cost rather than as a synonym for premium material.
 
-## Engineering Boundaries
+# Engineering Boundaries
 
-- Do not describe hybrid stackups as simply "Rogers plus FR-4" without also addressing lamination and transition-control implications.
-- Keep `electrical-path material choice`, `structural-layer choice`, `lamination process`, `registration`, and `validation` as separate design decisions.
-- Do not freeze generic cost-saving claims unless they can be backed by stronger project-specific evidence.
-- Avoid implying every RF design should use a hybrid stackup; some designs need all-RF-laminate builds, while others do not justify premium material at all.
-- If a page needs exact lamination window, adhesion treatment, roughness, or tolerance limits, refresh from official material/process sources before publication.
+- Do not describe hybrid stackups as only `Rogers plus FR-4`; the safe route also requires lamination, registration, transition, and validation framing.
+- Keep electrical-path material choice, structural-layer choice, lamination process, registration control, and validation posture as separate design decisions.
+- Treat PTFE-oriented handling as a distinct RF process discipline, not as generic FR-4 fabrication with a different laminate name.
+- Keep cost/performance discussion at internal routing-posture level only; do not turn it into numeric savings or quoting claims.
+- Do not imply every RF design should use a hybrid stackup; some designs need all-RF-laminate builds, and others do not justify premium material at all.
 
-## Common Misreadings
+# Blocked Claims
 
-- `Hybrid stackup` does not mean arbitrary mixing of any RF laminate with any FR-4 system.
-- Using premium laminate on a few layers does not automatically guarantee RF performance if launch, via, and return-path design are weak.
-- Cost optimization is one driver, but hybrid builds are not only about cost reduction.
-- PTFE-oriented processing should not be described as generic FR-4 fabrication with a different laminate name.
+- exact process-window claims
+- universal manufacturability guarantees
+- supplier-proof claims
+- cost/lead-time/yield claims
+- numeric cost-reduction or performance-improvement claims
+- customer-facing production-readiness claims without engineering review
 
-## Must Refresh Before Publishing
+# Common Misreadings
 
-- Any numeric cost-reduction claim
-- Any exact lamination-process or adhesion-treatment claim
-- Any customer-facing statement that a specific hybrid stackup is production-ready without engineering review
+- `Hybrid stackup` does not mean any RF laminate can be mixed with any FR-4 system without case-specific review.
+- Using premium laminate on a few layers does not by itself guarantee RF performance if launches, vias, return paths, and transitions are weak.
+- Cost optimization is one driver, but hybrid builds are not only a cost-reduction story.
+- PTFE-oriented process steps should not be rewritten as ordinary FR-4 fabrication with a premium laminate swapped in.
+- Repeated internal capability wording does not prove all listed process controls apply by default on every order.
 
-## Related Fact Cards
+# Must Refresh Before Publishing
+
+- Any numeric cost-reduction, performance-improvement, or yield claim
+- Any exact lamination-process, adhesion-treatment, roughness, or tolerance claim
+- Any statement that a specific hybrid stackup is production-ready without engineering review
+- Any wording that turns internal routing posture into universal manufacturability proof
+
+# Related Fact Cards
 
 - `methods-hybrid-rf-stackup-capability`
 - `methods-ptfe-processing-capability`
 
-## Primary Sources
+# Source Scope
 
-- /code/hileap/frontendHIL/public/static/products/en/rogers-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/high-frequency-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/high-frequency-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/microwave-pcb.json
+- `frontendhil-rogers-product-page-en`
+- `frontendhil-high-frequency-product-page-en`
+- `frontendapt-high-frequency-pcb-page-en`
+- `frontendapt-microwave-pcb-page-en`
