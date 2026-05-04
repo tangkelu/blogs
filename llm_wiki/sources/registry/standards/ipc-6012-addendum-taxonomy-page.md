@@ -6,7 +6,7 @@ source_type: "standard"
 url: "https://shop.electronics.org/taxonomy/term/792"
 jurisdiction: "global"
 published_at: ""
-checked_at: "2026-04-25"
+checked_at: "2026-05-02"
 trust_tier: "t1"
 stability: "dynamic"
 must_refresh: true
@@ -21,7 +21,7 @@ notes: "Official IPC taxonomy/listing page. Use for public IPC-6012 addendum-fam
 
 - Official IPC taxonomy/listing page for the `IPC-6012` addendum family
 - Public overview that the base rigid-board specification sits alongside multiple addendum branches
-- Public current-listing context for medical, space/military, and automotive addendum branches
+- Public current-listing context for medical, automotive, and space/military addendum branches
 
 ## Why It Matters
 

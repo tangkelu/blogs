@@ -6,7 +6,7 @@ source_type: "standard"
 url: "https://www.ipc.org/TOC/IPC-J-STD-001J_TOC.pdf"
 jurisdiction: "global"
 published_at: ""
-checked_at: "2026-04-24"
+checked_at: "2026-05-03"
 trust_tier: "t1"
 stability: "dynamic"
 must_refresh: true

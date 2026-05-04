@@ -1,5 +1,8 @@
 # PCB / PCBA LLM Wiki
 
+Start here: [policies/ai-execution-contract.md](policies/ai-execution-contract.md).
+This file is an overview; the contract file is the execution authority.
+
 本目录承载博客生产上游的 `真实数据知识库`，不直接承载博客成稿。
 
 最终目标：让写作 AI 能优先基于 `llm_wiki` 写出真实、专业、可追溯的 PCB / PCBA 博客。`llm_wiki` 应尽可能直接提供材料参数、工艺能力、制造流程、测试与检验、质量控制、标准 / 合规边界、应用场景和工程判断依据。只有当 `llm_wiki` 找不到所需数据时，才去网络上的官方网站、标准组织、监管机构或原厂资料补源，并把补到的数据沉淀回 `llm_wiki`。
@@ -7,13 +10,13 @@
 它与 `prompts_template/` 的关系是：
 
 - `llm_wiki/` 负责真实数据、来源治理、事实卡片、主题 wiki
-- `prompts_template/` 负责博客写作执行、证据包组装、结构化产出
+- `prompts_template/` 只读取已完成的事实层，不定义 `llm_wiki` 的主流程
 
 换句话说：
 
 - 先把真实数据建设进 `llm_wiki/`
-- 再由 `prompts_template/` 和写作 AI 消费这些数据
-- 如果写作 AI 发现 `llm_wiki` 缺数据，应先触发官方补源和入库，而不是直接把未入库的网页内容当成长期事实层
+- 再由下游读取已完成的事实层
+- 如果写作 AI 发现 `llm_wiki` 缺数据，应先触发官方补源和入库，而不是直接把未入库内容当成长期事实层
 
 ## 目标与边界
 
@@ -26,7 +29,7 @@
 - 测试与质量真实数据：SPI、AOI、X-ray、ICT、FCT、FAI / FQI、NPI gates、traceability、DFM / DFT / DFA、inspection vs reliability 的边界
 - 标准与合规数据：IPC、ISO、FDA、RoHS、REACH、USB-IF、MIL / aerospace / medical 等可公开引用的元数据、适用边界和 refresh 规则
 - 能力边界：APT / HIL 内部公开页面或 dated capability record 能支持的能力描述，以及明确不能支持的数值、承诺和认证证明
-- 写作可消费的主题聚合：把原子事实组织成可供 evidence pack 和博客 prompt 调用的 topic wiki
+- 可复用的主题知识聚合：把原子事实组织成 topic wiki
 
 不应进入 `llm_wiki` 作为事实的内容包括：
 
@@ -114,6 +117,33 @@
 6. 博客写作时若 `llm_wiki` 缺乏稳定主源，应先补官方来源并入库；无法及时补源时，必须明确该 claim 不可写或只能写成待确认边界。
 7. `tmps/` 草稿只能作为需求输入和 claim inventory，不能作为真实参数、能力、价格、认证或质量数据的来源。
 
+## 防偏航规则
+
+后续 AI 继续本目录时，默认主线不是下游呈现。
+
+默认顺序固定为：
+
+1. `claim inventory`
+2. `source gap`
+3. `official source recovery`
+4. `source records`
+5. `fact cards`
+6. `topic wiki`
+7. `consumer compatibility check`
+
+必须明确区分：
+
+- `completed_at_claim_family_level` 不等于完整学习
+- `conservative rewrite ready` 不等于事实层完整
+- `prompt consumable` 不等于 source-backed complete
+- `logs/` 不等于 `sources/`、`facts/`、`wiki/`
+
+如果 `phase-status`、`backlog` 或某个 batch log 提到历史完成词，默认只表示执行层动作完成，不表示知识层已经学完。
+
+长期执行约束见：
+
+- `policies/execution-priority-and-anti-drift.md`
+
 ## 临时草稿与完整学习
 
 `/code/blogs/tmps/...` 下的源 md 可能最终被移除，因此每个草稿批次至少要在 `llm_wiki` 留下 deletion-safe 学习记录。
@@ -135,7 +165,7 @@
 4. `source records`：把来源登记到 `sources/registry/`
 5. `fact cards`：把可复用真实数据沉淀到 `facts/`
 6. `topic wiki`：把跨卡片知识聚合到 `wiki/`
-7. `prompt consumption gate`：明确写作 AI 可用、必须降级、必须排除、必须刷新或必须继续补源的内容
+7. `consumer compatibility check`：明确下游可用、必须降级、必须排除、必须刷新或必须继续补源的内容
 
 如果只完成第 1-2 步，该批次只能标记为 `completed_at_claim_family_level`，不能标记为真实数据完整学习。
 
@@ -159,7 +189,70 @@
 5. 在 `facts/` 提取原子事实卡片
 6. 在 `wiki/` 建立主题聚合页
 7. 在 `logs/` 记录新增、变更、缺口和阻断项
-8. 在博客写作时由 `prompts_template/` 调用这些事实
+8. 在下游需要时再读取这些事实
+
+## Subagent 使用策略
+
+`llm_wiki` 支持多 agent 并行推进，但不同复杂度任务应使用不同强度的 subagent。原则是：低风险任务下放，高风险收口保留给主 agent 或更强模型。
+
+### `mini`
+
+模型约定：
+
+- `mini` 固定指 `gpt-5.4-mini`
+- 不用 `low reasoning` 代替 `mini`
+
+适合：
+
+- 文件清点
+- 草稿 claim inventory
+- 本地 `llm_wiki` 覆盖复核
+- deletion-safe scout
+- safe / blocked claim 初筛
+- 下一步 source lane 候选整理
+
+不适合：
+
+- 官方源恢复后的最终事实提升
+- 高争议术语收口
+- `sources/`、`facts/`、`wiki/` 最终落盘判断
+- tracker 状态判定
+
+### `medium`
+
+模型约定：
+
+- `medium` 默认使用主线同代的常规模型档位
+- 需要时再单独调 `reasoning_effort: medium`
+
+适合：
+
+- 中等复杂度多文件交叉阅读
+- 某个 lane 的局部归纳
+- 已有 `sources/`、`facts/`、`wiki/` 的拼接判断
+- 候选外部 source lane 排序
+
+### `high`
+
+模型约定：
+
+- `high` 用于更强模型或更高推理强度的收口任务
+- 主要服务于官方补源、多源冲突收口、术语边界和最终升格判断
+
+适合：
+
+- 官方源恢复
+- 高争议术语或标准边界
+- 多源冲突收口
+- 是否升级成 `sources/`、`facts/`、`wiki/` 的最终判断
+- tracker 更新前的最终审查
+
+### 主 agent 保留职责
+
+- 最终集成
+- 事实提升与阻断判断
+- `logs/update-log.md`、`logs/backlog.md`、`logs/phase-status.md` 更新
+- 引用校验、`git diff --check`、状态核验
 
 ## 规划与推进
 
@@ -167,21 +260,23 @@
 - `logs/phase-status.md` 记录当前阶段状态
 - `logs/backlog.md` 记录当前批次、下一批和排队项
 - `policies/internal-capability-taxonomy.md` 定义内部能力类 facts 的归类与聚合边界
+- `policies/execution-priority-and-anti-drift.md` 定义默认执行优先级，防止把下游呈现误当主线
 
 ## 当前进度
 
 - 当前阶段：`Phase 4`
 - 当前主线：`/code/blogs/tmps/*/en` 博客数据学习与官方补源
 - 当前焦点：全部当前英文 `tmps/*/en` 批次已经 deletion-safe 到 claim-family / routing level；下一步不是继续证明“有没有学过”，而是把高价值 claim 通过官方来源或 dated capability record 升格为 `sources/`、`facts/`、`wiki/` 中可复用真实数据
-- 下次续接入口：`logs/p4-44-blog-learning-continuation-handoff.md`
+- 当前默认续接规则：除非用户明确要求下游呈现，否则默认继续做高价值 claim 的官方补源、source record、fact card、topic wiki 升格
+- 下次续接入口：`logs/p4-55-source-backed-integration.md`
 
 当前 tmps 博客学习结论：
 
-- `/code/blogs/tmps` 当前有 `29` 个 dated English `*/en` 博客目录
+- `/code/blogs/tmps` 当前有 `30` 个 dated English `*/en` 博客目录
 - 这些英文博客目录都已有 deletion-safe 学习记录或 P4-33 全局 lane 覆盖，源 md 删除后不会丢失文件清单、主题意图、claim family、阻断项和下一步补源方向
-- 但这不等于所有数据都已经完整升格为事实层；完整学习仍要求官方来源 / dated record、source record、fact card、topic wiki 和 prompt consumption gate
+- 但这不等于所有数据都已经完整升格为事实层；完整学习仍要求官方来源 / dated record、source record、fact card、topic wiki 和 consumer compatibility check
 - `/code/blogs/tmps/materias_pdf` 继续暂停，除非后续明确重启
-- 立即下一步是 `P4-44 November 2025 Controller Integration`：从 P4-40 已完成的四个 November 2025 scout log 中挑选可由官方来源或 dated record 支撑的内容，升格为真实数据层
+- 立即下一步是：从 `logs/p4-48-parallel-scout-controller-summary.md` 和最新 `P4-50 / P4-55` 收口结果出发，挑选下一个证据密度最高的 residual lane；只有在公开/官方来源不足以跨过升格阈值时，才重开 dated capability evidence
 
 当前已完成的阶段性结果：
 
@@ -232,6 +327,7 @@
 - `P4-06 Evidence-Pack Bridge To Prompt Templates` 不应再表述为“未开启”；当前更准确的状态是：evidence-pack 输入面已形成，但仍未跨过高数字密度 numeric readiness gate
 - `20-layer` 与 `22-layer` 相关 blocker 仍未解除前，不应把高数字密度博客写作视为 ready
 - 当前 closeout 不是 numeric unlock、standards-threshold unlock、supplier-proof unlock
+- `H4` closeout、generation gate、prompt-consumption handoff 都只是次级消费层能力，不覆盖本目录“先补源、后升格、再消费”的主优先级
 
 建议把以下文件当作当前总入口：
 

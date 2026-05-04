@@ -26,7 +26,7 @@ Lower-priority sources must not override higher-priority sources.
 
 - Treat price, lead time, capacity, certification status, market numbers, exemption status, and current regulatory cutoffs as dynamic.
 - Mark any dynamic item `must_refresh: true`.
-- Record both `published_at` and `checked_at` whenever available.
+- Require `published_at` and `checked_at` for any dynamic item that is used in the pack.
 - Before publishing, re-check official sources for any dynamic item or any value that depends on a live revision, status, or cutoff.
 - If refresh cannot be completed, downgrade the claim, label it as unverified, or reject it.
 
@@ -49,6 +49,7 @@ Lower-priority sources must not override higher-priority sources.
 
 - Every claim used by the prompt must map to at least one `fact_id`.
 - Every `fact_id` must map back to one or more `source_id`s.
+- If factual support is claimed, the pack must carry traceable `fact_id` + `source_id` pairs.
 - Use stable IDs only. Do not invent temporary labels in the prompt output.
 - If a claim has no valid `fact_id`, it is not eligible for publication.
 - If a source is used, cite the source ID alongside the fact ID in the evidence pack.
@@ -67,4 +68,6 @@ Reject the evidence pack if any of the following are true:
 
 ## Minimum Acceptance Rule
 
-If the pack does not support a claim with traceable facts, governed sources, and current refresh status, do not use it to write the blog.
+The pack is not prompt-consumable unless every claim, judgment, and capability unit has a canonical status label.
+
+If the pack does not support a unit with traceable facts, governed sources, and current refresh status, do not use it to write the blog.

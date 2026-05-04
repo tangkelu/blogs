@@ -2,8 +2,8 @@
 topic_id: "processes-pcba-npi-to-mass-production-flow"
 title: "PCBA NPI To Mass Production Flow"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-03"
 fact_ids:
   - "methods-pcba-npi-to-mass-production-gates"
   - "methods-pcba-evt-dvt-pvt-gated-ramp-boundary"
@@ -83,6 +83,39 @@ tags: ["pcba", "npi", "pilot", "small-batch", "mass-production", "smt", "tht", "
 - The hyphenated APT X-ray page variant reinforces concealed-joint inspection and CT analysis as quality-gate tools for dense assemblies.
 - The APT PCB routing pages show that board fabrication itself is also segmented into prototype, quick-turn, NPI/small-batch, and mass-production paths before the assembly ramp is even considered.
 
+## Ramp Stages
+
+### NPI
+
+- `NPI` is the launch-control stage where DFM/DFA/DFT review, BOM-risk review, incoming controls, stencil/process setup, and first-run verification are still being stabilized.
+- At this stage, the point is to expose setup and manufacturability issues early, not to imply that the line is already in a fully repeatable release mode.
+- `EVT` language may sit here when the build is primarily about engineering validation, but the actual gate contents remain program-dependent.
+
+### Pilot
+
+- `Pilot` is the transition stage where the build begins testing whether the earlier launch controls hold together under more complete process coordination.
+- FAI, inspection, traceability, sourcing posture, and process-control evidence can accumulate here as staged release inputs.
+- `DVT` and early `PVT` labels may sit around this phase, but the labels do not by themselves prove final release readiness.
+
+### Small-Batch
+
+- `Small-batch` is a pre-volume production posture, not merely `NPI with more units`.
+- The local fact layer supports treating this stage as a distinct execution mode with controlled assembly, inspection, test, sourcing, and traceability carried forward from launch gates.
+- Mixed-technology assembly, selective solder, BGA/X-ray handling, cable or harness integration, and firmware/programming dependencies can still materially shape the flow here.
+
+### Mass Production
+
+- `Mass production` is the later-stage, more repeatable execution mode in the internal routing layer.
+- The local sources support a stronger handoff into repeat execution, but they do not collapse the need for inspection, test, traceability, sourcing control, or integration decisions.
+- This stage can extend into turnkey or box-build scope when the program requires enclosure integration, firmware, system test, pack-out, and logistics.
+
+## Gate Logic Across The Ramp
+
+- Gate confidence accumulates across incoming quality control, first-article confirmation, in-process inspection, final inspection, electrical or functional test, and traceability evidence.
+- BOM review, authenticity checks, lifecycle review, and sourcing control remain part of the flow from NPI into later production stages rather than disappearing after the first build.
+- SMT, THT, selective solder, dense-package controls, rework posture, and integration work should be treated as connected process modules, not separate sales labels.
+- PCB fabrication route selection can sit upstream of the PCBA ramp, so prototype/quick-turn/NPI-volume board posture may already constrain the downstream assembly ramp.
+
 ## Engineering Boundaries
 
 - Keep NPI, pilot, small-batch, and mass production as gated stages, not as marketing synonyms.
@@ -93,12 +126,21 @@ tags: ["pcba", "npi", "pilot", "small-batch", "mass-production", "smt", "tht", "
 - Treat cable harness, device programming, and box-build handoff as integration decisions that depend on the project scope.
 - Avoid exact claims about yield, DPPM, line balance, or release timing unless they are refreshed against a live program plan.
 
+## Explicit Non-Claims
+
+- This page does not make ramp-throughput guarantees.
+- It does not make quality pass guarantees.
+- It does not prove supplier-proof or production-readiness claims.
+- It does not support cost, lead-time, or yield claims.
+- It does not define one universal sample size, line model, or stage-exit checklist for every program.
+
 ## Common Misreadings
 
 - `NPI` does not mean the same thing as `mass production` with fewer units.
 - `EVT`, `DVT`, and `PVT` do not guarantee the same evidence package across all companies, products, or industries.
 - `Pilot` does not guarantee the final line configuration or the final test stack.
 - `Small-batch` does not imply the program is exempt from sourcing review, traceability, or first-article checks.
+- `Mass production` does not mean sourcing risk, inspection, traceability, or integration dependencies disappear.
 - `SMT-only` language can hide THT, selective solder, cable, programming, and box-build dependencies that become critical at handoff.
 - `Box build` is not a generic upsell step; it is a separate integration scope with its own test and traceability implications.
 

@@ -2,8 +2,8 @@
 topic_id: "materials-rogers-ro3000-family"
 title: "Rogers RO3000 Family"
 category: "materials"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-03"
 fact_ids:
   - "materials-rogers-ro3003"
   - "materials-rogers-ro3006"
@@ -31,6 +31,15 @@ tags: ["rogers", "ro3000", "materials", "rf", "mmwave"]
 - Engineers often confuse family-level statements with product-level numeric facts.
 - This page gives one place to separate `RO3003 low-loss positioning`, `RO3006 higher-Dk compactness`, and `RO3000 process guidance`.
 
+## Routing Guidance
+
+- Route `RO3003` when the prompt needs the lowest-loss member in the current landed RO3000 set, especially for low-loss RF and mmWave framing where stable dielectric behavior matters.
+- Route `RO3035` when the prompt needs a moderate-Dk family member between RO3003 and the higher-Dk compactness-focused options, especially for broadband or 5G-oriented framing already supported by the product card.
+- Route `RO3006` when the prompt is really about higher-Dk compact RF structures and the tradeoff is explicit, not when the draft is asking for a universal "best Rogers material."
+- Route `RO3010` when the prompt is about very high-Dk miniaturization and compact circuit structures, with the warning that higher Dk is not equal to lower loss.
+- Route family-level process wording through `materials-rogers-ro3000-processing`; keep handling, bonding, and desmear language in PTFE-compatible process context rather than in generic FR-4 process shorthand.
+- Keep this page as an RF-material family router first, and move to the individual product cards before freezing any numeric grade-specific claim.
+
 ## Stable Facts
 
 - Rogers describes RO3000 materials as ceramic-filled PTFE composites intended for commercial microwave and RF use.
@@ -47,24 +56,44 @@ tags: ["rogers", "ro3000", "materials", "rf", "mmwave"]
 - Keep `process Dk`, `design Dk`, `Df`, and `TcDk` with their measurement conditions.
 - Compactness claims for higher-Dk materials must be balanced against loss and tolerance implications.
 - Manufacturing guidance belongs to process notes, not to promotional shorthand.
+- Keep family-level routing separate from exact grade claims.
+- Treat PTFE-compatible handling guidance as source-scoped process context, not as a shop-neutral build recipe.
+
+## Blocked Claims
+
+- supplier-capability claims
+- channel-performance guarantees
+- stackup-specific process windows
+- cost, lead-time, and yield claims
 
 ## Common Misreadings
 
 - "RO3000" is not a single material with one Dk and one loss number.
 - "Higher Dk" does not automatically mean "better for mmWave."
 - "PTFE-based" does not mean every shop that runs RF boards handles the family equally well.
+- A Rogers family page does not prove final antenna, filter, radar, or transmission-line behavior in a finished board.
 
 ## Must Refresh Before Publishing
 
 - Any claim about the current latest Rogers product-page wording
 - Any claim about newly added family members or revised data-sheet editions
+- Any claim that depends on stackup-specific bonding, drilling, desmear, or multilayer process detail
+- Any claim about current supplier preference, current stocking, channel readiness, or commercial availability
+- Any claim that turns material-family framing into insertion-loss, phase-stability, or channel-performance guarantees
+
+## Related Facts And Source Scope
+
+- `materials-rogers-ro3003`, `materials-rogers-ro3035`, `materials-rogers-ro3006`, and `materials-rogers-ro3010` are the grade-level anchors for Dk, Df, TcDk, and application framing. Use them before publishing product-specific numbers.
+- `materials-rogers-ro3000-processing` is the process-context anchor for PTFE-compatible handling, support, bonding, and desmear boundary language.
+- Use this page for family routing and tradeoff framing; move to the product cards for numeric claims and to process facts for fabrication guidance.
+- The current corpus supports Rogers-controlled family and grade framing, not supplier-neutral RF ranking and not finished-board performance proof.
 
 ## Related Fact Cards
 
 - `materials-rogers-ro3003`
+- `materials-rogers-ro3035`
 - `materials-rogers-ro3006`
 - `materials-rogers-ro3010`
-- `materials-rogers-ro3035`
 - `materials-rogers-ro3000-processing`
 
 ## Primary Sources

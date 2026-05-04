@@ -15,7 +15,7 @@
 
 ## Current Topic Coverage
 
-As of 2026-04-24, active topic pages include:
+As of 2026-04-30, active topic pages include:
 
 - `materials/rogers-ro3000-family.md`
 - `materials/high-speed-material-family-selection.md`
@@ -30,6 +30,12 @@ As of 2026-04-24, active topic pages include:
 - `processes/cavity-and-shield-feature-planning.md`
 - `processes/pcba-npi-to-mass-production-flow.md`
 - `processes/advanced-pcb-fabrication-and-stackup-planning.md`
+- `processes/compute-infrastructure-pcb-review-boundaries.md`
+- `processes/defense-ew-surveillance-targeting-pcb-review-boundaries.md`
+- `processes/laser-time-of-flight-and-pulsed-driver-boundaries.md`
+- `processes/radio-altimeter-rf-front-end-boundaries.md`
+- `processes/sensor-navigation-imaging-pcb-review-boundaries.md`
+- `processes/sonar-and-ultrasonic-transducer-front-end-boundaries.md`
 - `testing/rf-validation-and-test-coverage.md`
 - `testing/validation-ladder-from-e-test-to-si-verification.md`
 - `testing/pcba-quality-gates-and-test-strategy.md`

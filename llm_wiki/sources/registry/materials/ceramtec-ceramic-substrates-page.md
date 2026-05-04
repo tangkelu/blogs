@@ -6,13 +6,13 @@ source_type: "official_product_page"
 url: "https://www.ceramtec-group.com/en/ceramtec-us/substrates"
 jurisdiction: "global"
 published_at: ""
-checked_at: "2026-04-24"
+checked_at: "2026-04-30"
 trust_tier: "t1"
 stability: "dynamic"
 must_refresh: true
 topic_tags: ["ceramic", "alumina", "aluminum nitride", "substrates", "thermal pcb", "materials"]
 status: "active"
-notes: "Official CeramTec substrate page. Use as a class-level anchor for ceramic substrates; refresh before citing current material lineups or values."
+notes: "Official CeramTec substrate page. Use as a class-level anchor for ceramic substrates and as a source-owner-specific alumina-vs-AlN comparison example; refresh before citing current material lineups or values."
 ---
 
 # Source Summary
@@ -21,6 +21,7 @@ notes: "Official CeramTec substrate page. Use as a class-level anchor for cerami
 
 - Ceramic substrates for electronic applications
 - Material classes including alumina and aluminium nitride / aluminum nitride
+- One source-owner-specific comparison table for `Al2O3`, `AlN`, `ZTA`, and `Si3N4`
 - Ceramic circuit-carrier source discovery
 
 ## Why It Matters
@@ -30,7 +31,8 @@ notes: "Official CeramTec substrate page. Use as a class-level anchor for cerami
 ## Extraction Notes
 
 - Safe for class-level claims that ceramic substrates include alumina and aluminum nitride options.
-- Do not extract numeric thermal, dielectric, CTE, or dimensional values without a specific current CeramTec datasheet.
+- Safe for carefully attributed CeramTec-only comparison examples between `Al2O3` and `AlN` when the fact card clearly states the table is source-owner-specific rather than vendor-neutral.
+- Do not generalize page-level thermal, dielectric, CTE, or strength values into universal ceramic defaults.
 - Do not infer HIL/APT manufacturing limits from this source.
 
 ## Refresh Notes

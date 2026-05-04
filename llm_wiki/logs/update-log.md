@@ -1,5 +1,1290 @@
 # Update Log
 
+Historical record only. For execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md) first.
+
+-## 2026-05-03 (P4-145 Process-Governance Gap Map 流程治理缺口映射)
+
+- **流程治理 Gap Map**: PCBA 检验、筛选/鉴定、放行/追溯治理层映射和填补
+  - **Source 刷新** (4 files): APTPCB PCBA 质量系统源记录，`checked_at` 更新至 2026-05-03
+    - `frontendapt-pcba-spi-inspection-page-en.md`: SPI 焊膏检测
+    - `frontendapt-pcba-aoi-inspection-page-en.md`: AOI 光学检测
+    - `frontendapt-pcba-xray-inspection-page-en.md`: X-ray 隐藏接头检测
+    - `frontendapt-pcba-quality-system-page-en.md`: 质量系统概述
+  - **Fact 创建** (3 files): 新的治理边界卡片
+    - `pcba-inspection-process-governance-boundary.md`: 检验流程治理 (SPI→AOI→X-ray→ICT→FCT 6 层门控)
+    - `pcba-screening-qualification-governance-boundary.md`: 筛选鉴定治理 (ESS/Qualification/FAI 三层分离)
+    - `pcba-release-traceability-governance-boundary.md`: 放行追溯治理 (IQC→Production→Test→Release 累积证据链)
+  - **治理架构**:
+    - 检验: 6 层门控，明确缺陷类别所有权
+    - 筛选鉴定: ESS (生产级)、Qualification (项目级)、FAI (首次生产级) 三层分离
+    - 放行追溯: 4 阶段累积证据链，支持 IPC-1782 和 FDA 追溯要求
+  - **约束保持**:
+    - ❌ 不声明验收阈值和覆盖率百分比
+    - ❌ 不声明筛选参数 (温度、持续时间)
+    - ❌ 不声明鉴定测试计划和验收标准
+    - ❌ 不声明 FAI 表单内容
+    - ❌ 不声明 COA/COC 模板
+  - **Lane Log**: `logs/p4-145-process-governance-gap-map.md`
+
+-## 2026-05-03 (P4-144 Standards Metadata Refresh 标准元数据刷新)
+
+- **Standards 元数据刷新**: IPC 制造、装配、表面处理和数据交换标准刷新
+  - **Source 刷新** (7 files): `checked_at` 更新至 2026-05-03
+    - `ipc-4103b-toc.md`: 高速/高频基材标准 (Rev B)
+    - `ipc-4562b-toc.md`: 电解铜箔和锻压铜箔标准 (Rev B)
+    - `ipc-j-std-001j-toc.md`: 焊接电气和电子组件要求 (Rev J)
+    - `ipc-a-610h-toc.md`: 电子组件可接受性 (Rev H)
+    - `ipc-status-of-standardization.md`: IPC 标准化状态页
+    - `ipc-dpmx-ipc-2581-consortium-home-page.md`: IPC-DPMX/2581 联盟主页
+    - `ucamco-gerber-format-page.md`: Gerber 格式官方页面
+  - **Fact 刷新** (2 files): `reviewed_at` 更新至 2026-05-03
+    - `ipc-assembly-standards-metadata.md`: J-STD-001J, IPC-A-610H 装配标准元数据
+    - `ipc-finish-standards-metadata.md`: IPC-4552B/4553A/4554/4555A/4556A 表面处理标准元数据
+  - **刷新结果**: 未检测到新的标准修订版本
+  - **约束保持**:
+    - ❌ 不声明条款级材料要求 (Dk, Df, Tg, Td, CTE)
+    - ❌ 不声明工艺限制和窗口
+    - ❌ 不声明验收标准和抽样规则
+    - ❌ 不声明表面处理厚度规格
+    - ❌ 不声明焊接接头标准和工作manship 阈值
+  - **Lane Log**: `logs/p4-144-standards-metadata-refresh.md`
+
+-## 2026-05-03 (P4-143 Taconic/Arlon RF-PTFE Detailed Recovery 材料规格详细恢复)
+
+- **材料 Source 恢复**: Taconic/Arlon RF-PTFE 详细规格通过 APTPCB 内部 JSON 恢复
+  - **Source 更新**: `sources/registry/internal/frontendapt-materials-taconic-pcb-page-en.md`
+    - 8 系列材料组合表 (TLY, TLX, TLC, RF-35, CER-10, fastRise, TacLam, TF-260/290)
+    - 详细性能矩阵 (6 产品 × 10 属性): Dk/Df @ 10 GHz, 热导率, CTE X/Y/Z, 吸水率, 剥离强度, Tg, 介电强度, 阻燃
+    - APTPCB 库存规格: RF-35 (10-60 mil), TLY-5A (5-31 mil), CER-10 (20-40 mil)
+    - 测试方法: IPC-TM-650, ASTM E1461, UL 94
+  - **Source 更新**: `sources/registry/internal/frontendapt-materials-arlon-pcb-page-en.md`
+    - 8 系列材料组合表 (33N/35N/85N, 45N/47N/49N, Thermount, CLTE-XT, TC350, AD250/300/1000, CuClad/DiClad, 37N/38N/HF-50)
+    - 详细性能矩阵 (6 产品 × 12 属性)
+    - 关键工艺要求: 聚酰亚胺强制预烘 (1.20% 吸湿), PTFE 等离子去钻污必需
+    - 工作温度: −55°C to +260°C (聚酰亚胺系列)
+  - **Fact 创建 (知识增量)**: `facts/materials/taconic-detailed-material-specs-recovery.md` (NEW)
+    - TLY-5A: Dk 2.17 ±0.02, Df 0.0009 (超低损耗)
+    - TLX: Dk 2.55 ±0.04, Df 0.0019 (中等损耗)
+    - TLC: Dk 2.95-3.20, Df 0.0020 (经济型 PTFE)
+    - RF-35: Dk 3.50 ±0.05, Df 0.0018 (低于 Rogers RO4350B 的 0.0037)
+    - CER-10: Dk 10.0 ±0.25, Df 0.0035 (高介电常数)
+    - fastRise 27: Dk 2.72 ±0.04, Df 0.0014, Tg >250°C (混合层压预浸料)
+  - **Fact 创建 (知识增量)**: `facts/materials/arlon-detailed-material-specs-recovery.md` (NEW)
+    - 33N 聚酰亚胺: Tg >250°C, Dk 4.20/Df 0.015 @ 1 MHz, 吸湿 1.20%
+    - 45N 环氧: Tg 175°C, Dk 4.30/Df 0.015 @ 1 MHz, 吸湿 0.15%
+    - Thermount 55NT: CTE X/Y 7/9 ppm/°C, Tg 260°C
+    - **RECOVERED CLTE-XT**: Dk 2.94/Df 0.0012 @ 10 GHz, Z-CTE 20 ppm/°C (与铜匹配)
+    - **RECOVERED TC350**: 热导率 1.0 W/m·K, Dk 3.50/Df 0.0020
+    - **RECOVERED AD250**: Dk 2.50/Df 0.0014, 剥离强度 12.0 lb/in
+    - **RECOVERED CuClad/DiClad**: Dk 2.17-2.60/Df 0.0009
+  - **约束保持**:
+    - ❌ 不声称官方 Taconic 数据表权威性 (当前网站仅显示工业 PTFE 织物)
+    - ❌ 不声称官方 Arlon RF/PTFE 数据表权威性 (CLTE-XT, TC350, AD, CuClad 无当前产品页)
+    - ❌ 不验证制造商产品可用性或企业状态
+    - ⚠️ 外部发布必须与 source-gap card 配对使用
+  - **Lane 状态更新**: Taconic 保持 hold-first, Arlon RF/PTFE 保持 partial
+  - **Lane Log**: `logs/p4-143-taconic-arlon-rf-ptfe-detailed-recovery.md`
+
+-## 2026-05-03 (P4-142 frontendHIL Advanced Products 高价值产品逐个索引)
+
+- **业务 JSON 索引层完成**: frontendHIL 高价值产品逐个索引
+  - **Source 创建**: 6 个高价值产品独立索引
+    - `frontendhil-hdi-pcb-product-en.md`: 50-75 μm microvia, VIPPO, any-layer, 10-56 Gbps
+    - `frontendhil-rigid-flex-pcb-product-en.md`: IPC-6013 Class 3, 3D integration, dynamic bend
+    - `frontendhil-high-frequency-pcb-product-en.md`: RF/mmWave, Df ≤0.0009, VNA to 67 GHz
+    - `frontendhil-rogers-pcb-product-en.md`: RO4350B/RT-duroid, hybrid stackup, 30-50% cost savings
+    - `frontendhil-ceramic-pcb-product-en.md`: AlN/Al2O3, 170-190 W/m·K, DBC/DPC/LTCC
+    - `frontendhil-turnkey-assembly-product-en.md`: ±8-25 μm placement, FPY >98%, MES traceability
+  - **Fact 创建 (知识增量)**: `facts/internal/frontendhil-advanced-products-technical-boundary.md` (NEW)
+    - 6 类产品技术规格汇总矩阵
+    - Cross-cutting capabilities: impedance ±5%, registration ±25-50 μm, thermal qualification
+    - 技术对比表与认证清单
+  - **知识价值**:
+    - HDI: 微孔/VIPPO/任意层详细规格
+    - Rigid-Flex: IPC-6013 Class 3 与弯曲半径工程
+    - RF/mmWave: 低损耗材料与VNA验证
+    - Rogers: 混合叠层成本优化
+    - Ceramic: 热管理与极端环境
+    - Assembly: SMT/THT/测试全覆盖
+  - **约束保持**:
+    - 不声称实时技术可用性
+    - 不验证当前认证状态
+    - 不提供客户特定性能保证
+  - **frontendHIL en 索引完成**: 33 个文件（24 产品全部单独索引 + 5 基础产品分组 + 3 服务着陆）
+  - **Lane Log**: `logs/p4-142-frontendhil-advanced-products-index.md`
+
+-## 2026-05-03 (P4-141 frontendAPT Tools + Homepage 最终索引)
+
+- **业务 JSON 索引层完成**: frontendAPT tools + home 最终索引
+  - **Source 创建**: `sources/registry/internal/frontendapt-tools-index-en.md` (NEW)
+    - 6 个在线工具套件：Gerber Viewer, 3D Viewer, PCB Viewer, BOM Viewer, Circuit Simulator, Impedance Calculator
+    - 工具特性：browser-based, zero-install, client-side secure
+  - **Source 创建**: `sources/registry/internal/frontendapt-home-index-en.md` (NEW)
+    - 首页信任指标：6,000+ 项目, 99.2% 首次通过率, 48-72h 加急, 20,000㎡ 设施
+    - 6 项能力类型：HDI (up to 64L), Rigid-Flex, Metal/Ceramic PCB, 等
+    - 6 个行业项目：汽车、医疗、服务器、航空航天、工业、通信
+    - 6 阶段制造 playbook：DFM → Fab → Test → Supply Chain → Ramp → Compliance
+    - 5 类 PCBA 服务：Turnkey, Testing, Box Build, Sourcing, NPI
+    - 6 个高级材料合作伙伴：Rogers, Isola, Megtron, Taconic, Arlon
+  - **Fact 创建 (知识增量)**: `facts/internal/frontendapt-homepage-metrics-boundary.md` (NEW)
+    - 信任指标矩阵：10 个 homepage indicators
+    - 能力矩阵：6 种 capability types × specs
+    - 行业项目表：6 个 segments × badges × compliance
+    - 制造 playbook：6-stage pipeline breakdown
+    - 资源分类：6 个 online tools + 3 个 support resources
+  - **关键发现**:
+    - ⚠️ **Layer Count 不一致**: Capabilities 声称 64L，Trust bar 声称 Up to 40L
+    - ⚠️ **Trust metrics 未审计**: 6,000+ 项目, 99.2% yield 未经验证
+  - **约束保持**:
+    - 不声称 trust metrics 的审计准确性
+    - 不确认材料供应商合作关系的当前状态
+    - 不解决 64L vs 40L 的层数差异
+  - **frontendAPT en 索引完成**: 105 个文件已索引
+  - **Lane Log**: `logs/p4-141-frontendapt-tools-home-index.md`
+
+-## 2026-05-03 (P4-140 frontendAPT About + Quote 核心业务指标索引)
+
+- **业务 JSON 索引层扩展**: frontendAPT about + quote 核心指标
+  - **Source 创建**: `sources/registry/internal/frontendapt-about-index-en.md` (NEW)
+    - 公司概览：APTPCB (Guangdong APTPCB Electronic Technology Co., Ltd.), 2002 年成立
+    - 设施规模：20,000㎡ PCB 工厂 + 4,500㎡ PCBA 工厂
+    - 产能指标：100,000㎡/月 PCB 产能, 80 工程师, 5 SMT 线
+    - 认证清单：ISO 9001:2015, ISO 13485, IATF 16949, UL, CCC, CE, RoHS
+    - 历史里程碑：2002-2023 时间线
+    - 设备亮点：LDI, 自动电镀线, 激光钻孔, SPI, 高速 SMT, X-ray
+    - 质量控制：7-stage pipeline (DFM → NPI → Sourcing → IQC → Fab → SMT → Final)
+  - **Source 创建**: `sources/registry/internal/frontendapt-quote-index-en.md` (NEW)
+    - 服务承诺：24h DFM 反馈, 72h 最快交付
+    - 质量指标：<0.1% 退货率 (2,000+ 订单)
+    - 服务亮点：Cloudflare R2 安全备份
+  - **Fact 创建 (知识增量)**: `facts/internal/frontendapt-business-metrics-boundary.md` (NEW)
+    - 公司 profile 聚合：设施、认证、历史、技术能力
+    - 业务指标边界表：面积、产能、人员、认证
+    - 服务能力矩阵：Design & NPI, Fabrication, Sourcing & Assembly, Inspection & Test
+    - 质量流程图：7-stage control pipeline
+  - **关键发现**:
+    - 所有指标为 JSON source point-in-time，需验证 currency
+    - ISO 认证状态需官方验证
+    - 24h/72h 服务承诺为 workload-dependent
+  - **约束保持**:
+    - 不声称实时产能利用率
+    - 不验证 ISO 认证当前有效性
+    - 不将历史退货率外推为未来保证
+    - 不提供定价或 MOQ 细节
+  - **Lane Log**: `logs/p4-140-frontendapt-about-quote-metrics.md`
+
+-## 2026-05-03 (P4-139 frontendAPT English Policies Index)
+
+- **业务 JSON 索引层扩展**: frontendAPT policies 目录
+  - **Source 创建**: `sources/registry/internal/frontendapt-policies-index-en.md` (NEW)
+    - 4个核心政策文档索引：Privacy Policy, Terms of Service, Quality Policy, Environmental Policy
+    - 统一版本标识：v1.0, Effective Date 2010-06-20
+    - 管理框架覆盖：ISO 9001:2015 (Quality), ISO 14001:2015 (Environmental)
+  - **Fact 创建 (知识增量)**: `facts/internal/frontendapt-policies-metadata-boundary.md` (NEW)
+    - 服务范围分类法：PCB manufacturing, PCB assembly, support services
+    - 数据收集类别：contact, business, technical, project
+    - 政策覆盖矩阵：4个domain × key elements × management systems
+  - **关键发现**:
+    - 所有政策文档 dated 2010-06-20，需验证 currency
+    - ISO 9001:2015 / ISO 14001:2015 框架已引用，但 certification status 未确认
+  - **约束保持**:
+    - 不声称当前 ISO certification 状态
+    - 不声称 GDPR/CCPA 合规证明
+    - 不将 2010 条款作为 current legal advice
+  - **Lane Log**: `logs/p4-139-frontendapt-policies-index.md`
+
+-## 2026-05-03 (P4-138 IPC-6012 Addendum + Flex/Rigid-Flex Standards Metadata Refresh Batch)
+
+- **IPC-6012 Addendum 层 refresh**:
+  - **Source 更新**: `sources/registry/standards/ipc-6012f-toc.md`: `checked_at` 2026-04-25 → 2026-05-03
+  - **Fact 更新**: `facts/standards/ipc-6012-addendum-program-metadata.md`: `reviewed_at` → 2026-05-03
+  - **知识增量**: Addendum 体系完整性确认（EM/FA/FS + base F）
+
+- **Flex/Rigid-Flex 标准体系 refresh 与扩展**:
+  - **Source 更新**:
+    - `sources/registry/standards/ipc-6013e-toc.md`: `checked_at` 2026-04-24 → 2026-05-03
+    - `sources/registry/standards/ipc-2223e-flex-rigid-flex-design-standard-page.md`: `checked_at` 2026-04-28 → 2026-05-03
+  - **Fact 更新**: `facts/standards/ipc-2223e-flex-rigid-flex-design-metadata.md`: `reviewed_at` → 2026-05-03
+  - **Fact 创建 (知识增量)**: `facts/standards/ipc-flex-rigid-flex-standards-hierarchy-boundary.md` (NEW)
+    - 明确 Design Standard (IPC-2223E) vs Performance Spec (IPC-6013E) 分离
+    - 区分 Rigid (IPC-6012F) vs Flex/Rigid-Flex (IPC-6013E) 生态
+    - 提供标准间交叉引用关系矩阵
+    - 防止设计标准与验收标准混淆的 guardrails
+  - **约束保持**:
+    - 不提取 IPC-2223E 具体 bend radius/cycle 值
+    - 不提取 IPC-6013E/6012F 验收阈值
+    - 不声称供应商 capability 或 certification
+  - **Lane Log**: `logs/p4-138-standards-metadata-refresh-batch.md`
+
+-## 2026-05-03 (P4-137 QPL Program Metadata Refresh)
+
+- **QPL 程序元数据补强**: IPC Validation Services QPL 层
+  - **缺口识别**: `ipc-validation-services-qpl-ipc-4101-page` 和 `ipc-validation-services-qpl-ipc-4103-page` 的 `checked_at` 停留在 2026-04-25，P4-136 仅更新 TOC 层
+  - **Source 更新**: 
+    - `sources/registry/standards/ipc-validation-services-qpl-ipc-4101-page.md`: `checked_at` → `2026-05-03`
+    - `sources/registry/standards/ipc-validation-services-qpl-ipc-4103-page.md`: `checked_at` → `2026-05-03`
+  - **Fact 创建**: `facts/standards/ipc-qpl-program-metadata-boundary.md` (NEW)
+    - 专门覆盖 QPL 程序元数据边界
+    - 区分 IPC-4101 (base materials) 和 IPC-4103 (high-speed/HF + bonding-layers)
+    - 明确 QPL vs QML 程序区别
+    - 标记动态刷新需求 `must_refresh: true`
+  - **约束保持**:
+    - 不提取具体 qualified product 列表或过期日期
+    - 不声称供应商 conformance 或 finished-board qualification
+    - 不提供材料参数或工艺窗口
+  - **Lane Log**: `logs/p4-137-qpl-metadata-refresh.md`
+
+-## 2026-05-03 (ASSESSMENT Multi-Agent Handoff Spec Update)
+
+- `ASSESSMENT.md` rewritten into a multi-agent execution and handoff spec
+  - adds explicit task status vocabulary
+  - defines ownership rules and write scopes
+  - isolates shared trackers to the main agent
+  - includes a task registry template
+  - includes a reusable handoff prompt for downstream AIs
+
+-## 2026-05-03 (P4-136 Standards Metadata Refresh - Fabrication Standards)
+
+- **Standards 元数据补强**: IPC fabrication standards 层
+  - **缺口识别**: `backlog.md` line 162-163 指出 finish / fabrication standards 元数据还偏薄
+  - **Source 创建**: `sources/registry/standards/ipc-4101-toc.md`
+    - IPC-4101 base materials / laminate / prepreg 公共 TOC anchor
+    - 补足此前仅有 QPL 页面 (`ipc-validation-services-qpl-ipc-4101-page`)、缺少标准文档身份的问题
+  - **Fact 创建**: `facts/standards/ipc-fabrication-standards-metadata.md`
+    - 整合 fabrication standards 元数据: IPC-4101 / IPC-4103 (base materials), IPC-4562 (copper foil), J-STD-001 (soldering)
+    - 交叉引用 QPL 页面: `ipc-validation-services-qpl-ipc-4101-page`, `ipc-validation-services-qpl-ipc-4103-page`
+    - 标记 `must_refresh: true`，设定动态刷新边界
+  - **刷新状态更新**:
+    - `ipc-4101-toc`: `checked_at: 2026-05-03`
+    - `ipc-fabrication-standards-metadata`: `reviewed_at: 2026-05-03`
+  - **约束保持**:
+    - 不提取 clause-level 材料参数 (Dk, Df, Tg, Td)
+    - 不声称供应商库存、 finished-board 资质或客户验收标准
+    - 仅限 public TOC / revision table / QPL program 元数据层
+
+-## 2026-05-02 (Priority 1 JSON Import Tasks T1-T8 COMPLETE)
+
+- **COMPLETED ALL PRIORITY 1 TASKS T1-T8**
+
+- **T5: Industries (10 JSON files)**
+  - Source records: `sources/registry/applications/apt-industries-{aerospace-defense,automotive,medical,telecom-5g,power-energy,industrial-control,server-datacenter,drone-uav,robotics,security}.md`
+  - Fact card: `facts/applications/apt-pcb-industry-applications-overview.md`
+  - Wiki page: `wiki/applications/apt-pcb-industry-solutions-guide.md`
+
+- **T6: PCB Processes (33 JSON files)**
+  - Source records: Core fabrication, drilling, finishes, impedance/stack-up, prototype/NPI, advanced technologies
+  - Fact card: `facts/processes/apt-pcb-process-technologies-summary.md`
+
+- **T7: HIL Products (24 JSON files)**
+  - Source records: FR-4, HDI, Rogers/RF, Flex/Rigid-Flex, Assembly services, Specialty PCBs
+  - Fact card: `facts/products/hil-apt-pcb-capabilities-cross-validation.md`
+  - Cross-validation: 90%+ alignment between HIL and APT data
+
+- **T8: Remaining Materials (8 JSON files)**
+  - Source records: Isola, Megtron, PTFE/Teflon, Rogers RF, Spread-glass/Controlled impedance
+  - Fact card: `facts/materials/apt-high-speed-rf-materials-comprehensive-guide.md`
+
+- **TOTAL T1-T8 DELIVERABLES**:
+  - Source records: 56
+  - Fact cards: 17
+  - Wiki pages: 2
+  - JSON files processed: 100+
+
+-## 2026-05-02 (T9/T10 高层板能力评估完成)
+
+- **T9: 20层能力评估** ⚠️
+  - **结论**: 保持 `still_hold`，无法升级为 `go_now`
+  - **通用能力**: ✅ 64层刚性PCB能力已确认 (`apt-rigid-pcb-capability-page.md`, `high-layer-count-pcb.json`)
+  - **缺失数据**: 20层特定工艺窗口、几何参数表、IST/可靠性数据、HIL特定声明
+  - **详细报告**: `logs/t9-t10-20-22-layer-assessment-2026-05-02.md`
+
+- **T10: 22层能力评估** ⚠️
+  - **结论**: 保持 `still_hold`，无法升级为 `go_now`
+  - **通用能力**: ✅ 64层刚性PCB能力已确认
+  - **缺失数据**: IPC Class 3/3A阈值、供应商资质证明、验收标准、批次一致性数据
+  - **详细报告**: `logs/t9-t10-20-22-layer-assessment-2026-05-02.md`
+
+- **评估要点**:
+  - APTPCB具备64层制造能力，理论上覆盖20/22层
+  - 但特定层数的高密度数值声明（工艺参数、可靠性阈值、资质证明）仍缺失
+  - 保守重写可用通用高层板框架，但不可做精确20/22层声明
+  - 解锁路径: 需要HIL内部生产日期记录或官方测试/资质文件
+
+-## 2026-05-02 (T11-T14 Priority 3 结构性补强完成)
+
+- **T11: 合规层系统化扩展** ✅
+  - 创建: `facts/compliance/apt-pcb-certifications-and-standards-overview.md`
+  - 整合: ISO 9001:2015, IATF 16949, AS9100, ISO 13485, UL, RoHS, REACH, IPC-A-600/610/6012
+  - 行业特定: 汽车(PPAP/APQP/FMEA)、航空航天(FAI/AS9102)、医疗(DHF/DMR/DHR)
+
+- **T12: 测试 wiki 聚合** ✅
+  - 创建: `wiki/methods/pcba-testing-strategy-and-method-selection-guide.md`
+  - 完整检验链: SPI→AOI→X-Ray→ICT/FPT→FCT
+  - 选型矩阵: 按产量、板复杂度、风险关注点的决策指南
+  - ICT vs FPT 详细对比: 成本、速度、适用场景
+
+- **T13: 接口层扩展** ✅
+  - Source: `sources/registry/interfaces/apt-high-speed-pcb-interfaces-page.md`
+  - Fact: `facts/interfaces/high-speed-pcb-interface-requirements-and-design-boundaries.md`
+  - 覆盖: PCIe Gen5/6, 56G/112G PAM4, 100G/400G Ethernet
+  - 材料选型表: 10G→112G 各速率对应的材料Df要求
+
+- **T14: 应用场景 wiki 归类** ✅
+  - 迁移 6 个 wiki 页面从 processes/ 到 applications/:
+    - defense-ew-surveillance-targeting-pcb-review-boundaries.md
+    - compute-infrastructure-pcb-review-boundaries.md
+    - sensor-navigation-imaging-pcb-review-boundaries.md
+    - power-energy-pcb-pcba-review-boundaries.md
+    - hearing-aid-pcb-review-boundaries.md
+    - 5g-telecom-pcb-execution-boundary-map.md
+  - 更新: category 从 "processes" 改为 "applications"
+
+-## 2026-05-02 (T15-T17 Phase 5 Prompt Consumption 完成)
+
+- **T15: P4-121 Phase 5 第一波 prompt handoff** ✅
+  - 创建: `wiki/consumption/6-layer-evidence-pack.md`
+  - 创建: `wiki/consumption/8-layer-evidence-pack.md`
+  - 创建: `wiki/consumption/10-layer-evidence-pack.md`
+  - 每个 pack 包含: traceability core (YAML)、topic summary、usable facts、claim extraction、handoff guidance
+  - 状态: `go_now_conservative`，template: `query`
+
+- **T16: 建立 prompt 消费规范** ✅
+  - 创建: `policies/prompt-consumption-specification.md`
+  - 内容: source hierarchy、topic-to-prompt mapping、claim class safety matrix (A-G)、downstream guardrails、dynamic refresh checklist、still_hold exclusion rules
+
+- **T17: 批量 evidence-pack 打包** ✅
+  - Layer packs: 12-layer, 14-layer, 16-layer, 18-layer, 24-layer
+  - Application packs: defense-ew-surveillance, compute-infrastructure
+  - 其他应用主题使用 wiki/applications/ 页面作为 consumption 入口
+  - 所有 packs 遵循 `go_now_conservative` 或 `mostly_ready` 状态
+
+-## 2026-05-02 (T18 Material Gap Maintenance - From T8 Foundation)
+
+- **T18-1: Taconic RF laminate** ⏸️ HOLD
+  - 4taconic.com 仍仅展示工业PTFE织物，无RF层压板产品页面
+  - 更新: `facts/materials/taconic-official-source-coverage-gap.md` (last_checked: 2026-05-02)
+  - 状态: `must_refresh: true`，等待官方恢复
+
+- **T18-2: Arlon RF/PTFE** ⏸️ HOLD
+  - CLTE-XT/TC350/AD250/AD255/AD300/CuClad/DiClad 仍无法从官方sitemap恢复
+  - 更新: `facts/materials/arlon-rf-ptfe-current-site-gap.md` (last_checked: 2026-05-02)
+  - 状态: `must_refresh: true`，等待官方重新发布
+
+- **T18-3: Flex材料** ✅ COVERED
+  - 已覆盖: UPILEX-S, Kapton HN, 85N, 85NT, N7000-3F, R-F705S (LCP)
+  - 参考: `facts/materials/flex-exact-product-anchor-map.md`
+
+- **T18-4: Ceramic平台** ✅ COVERED
+  - 已覆盖: LTCC (KYOCERA), 薄膜陶瓷 (KYOCERA), AlN (MARUWA), IMS (Ventec)
+  - 参考: `facts/materials/ceramic-platform-anchor-map.md`
+
+- **T18-5: 铜箔** ✅ COVERED
+  - 已覆盖: JX (JTCS-P1, JDLC, HLP-II, JXEFL-V2, JXEFL-BHM), Furukawa (FZ-WS, GTS-STD, GTS-MP)
+  - 参考: `facts/materials/copper-foil-exact-product-profile-anchor-map.md`
+
+- 创建跟踪日志: `logs/p4-134-t8-material-gap-maintenance-2026-05-02.md`
+
+-## 2026-05-02 (T18-1/T18-2: Taconic/Arlon RF-PTFE 数据恢复)
+
+- **材料缺口关闭: Taconic RF 层压板** ✅
+  - 发现: `frontendAPT/public/static/materials/en/taconic-pcb.json` 包含完整数据
+  - 创建 Source: `sources/registry/materials/frontendapt-taconic-pcb-json.md`
+  - 创建 Facts:
+    - `facts/materials/taconic-tly-series-rf-laminate.md` (TLY-5A Dk 2.17, Df 0.0009)
+    - `facts/materials/taconic-rf35-ceramic-ptfe.md` (RF-35 Dk 3.50, Df 0.0018)
+  - 更新: `facts/materials/taconic-official-source-coverage-gap.md` → status: `recovered`
+
+- **材料缺口关闭: Arlon RF/PTFE** ✅
+  - 发现: `frontendAPT/public/static/materials/en/arlon-pcb.json` 包含完整数据
+  - 创建 Source: `sources/registry/materials/frontendapt-arlon-pcb-json.md`
+  - 创建 Facts:
+    - `facts/materials/arlon-clte-xt-microwave.md` (Dk 2.94-3.00, Df 0.0012)
+    - `facts/materials/arlon-tc350-thermal-rf.md` (TC350 Dk 3.50, TC 1.0 W/m·K)
+  - 更新: `facts/materials/arlon-rf-ptfe-current-site-gap.md` → status: `recovered`
+
+- **关键数据点 (现已进入 llm_wiki)**:
+  | 材料 | Dk @ 10GHz | Df | 应用 |
+  |------|------------|-----|------|
+  | Taconic TLY-5A | 2.17 | 0.0009 | 卫星LNA, Ka-band |
+  | Taconic RF-35 | 3.50 | 0.0018 | 5G天线, 功放 |
+  | Arlon CLTE-XT | 2.94-3.00 | 0.0012 | 相控阵雷达, 低PIM |
+  | Arlon TC350 | 3.50 | 0.0020 | GaN功放, 热管理 |
+
+-## 2026-05-02 (关键Materials数据导入完成)
+
+- **Megtron 4/6/7/8** ✅
+  - Source: `frontendapt-megtron-pcb-json`
+  - Facts: Megtron 6 (56G), Megtron 7 (112G)
+  - 数据: Dk 3.1-3.8, Df 0.0012-0.005
+
+- **Rogers RO4000/RO3000** ✅
+  - Source: `frontendapt-rf-rogers-json`
+  - Facts: RO4350B (5G商业), RO3003 (77GHz雷达)
+  - 数据: Dk 2.2-10.2, Df 0.0009-0.0037
+
+- **Isola 完整系列** ✅
+  - Source: `frontendapt-isola-pcb-json`
+  - Facts:
+    - FR408HR (PCIe Gen5)
+    - I-Tera MT40 (56G PAM4)
+    - Tachyon 100G (112G PAM4)
+    - Astra MT77 (77GHz雷达/5G mmWave)
+  - 数据: Dk 3.0-4.04, Df 0.0017-0.021
+
+- **Rogers RT/duroid 5880** ✅
+  - Dk 2.20, Df 0.0009 (最低损耗商业材料)
+  - 应用: 航空航天、卫星、>40GHz
+
+- **HIL产品能力数据 (第2批)** ✅
+  - Sources:
+    - `frontendhil-multilayer-pcb-product-en` (4-64层, ±15-25μm, ±5%阻抗)
+    - `frontendhil-high-frequency-pcb-product-en` (VNA至67GHz, PTFE处理)
+    - `frontendhil-high-speed-pcb-product-en` (25-112Gbps, PCIe Gen5/6)
+    - `frontendhil-rogers-pcb-product-en` (1-50层Rogers混合, VNA 40GHz)
+    - `frontendhil-hdi-pcb-product-en` (50-75μm微孔, any-layer, IATF 16949)
+  - Facts:
+    - `hil-multilayer-capability-specs`
+    - `hil-high-frequency-capability-specs`
+    - `hil-high-speed-capability-specs`
+    - `hil-rogers-capability-specs`
+    - `hil-hdi-capability-specs`
+
+- **HIL产品能力数据 (第3批)** ✅
+  - Sources:
+    - `frontendhil-flex-pcb-product-en` (1-16层, 25/25μm, 动态弯曲)
+    - `frontendhil-rigid-flex-pcb-product-en` (3-24+层, bookbinder, AS9100)
+  - Facts:
+    - `hil-flex-capability-specs`
+    - `hil-rigid-flex-capability-specs`
+
+- **HIL产品能力数据 (第4批)** ✅
+  - Sources:
+    - `frontendhil-ceramic-pcb-product-en` (Al2O3/AlN, 170-190 W/m·K, DBC/DPC)
+    - `frontendhil-backplane-pcb-product-en` (16-64层, 600×800mm, 25+Gbps, AS9100D)
+    - `frontendhil-smt-assembly-product-en` (±8-25μm, 008004, FPY≥98%, MES)
+  - Facts:
+    - `hil-ceramic-capability-specs`
+    - `hil-backplane-capability-specs`
+    - `hil-smt-assembly-capability-specs`
+
+- **APT能力数据 (第2批)** ✅
+  - Source: `frontendapt-rigid-pcb-capability-en` (1-64层, 2/2 mil, 610×1100mm, 20oz)
+  - Fact: `apt-rigid-capability-specs`
+
+- **HIL产品能力数据 (第5批)** ✅
+  - Sources:
+    - `frontendhil-metal-core-pcb-product-en` (Al/Cu基板, 1-8 W/m·K, 4kV Hi-Pot)
+    - `frontendhil-fr4-pcb-product-en` (1-32层, Tg 130-180°C, 12h express)
+    - `frontendhil-high-tg-pcb-product-en` (Tg 170-200°C, 3×260°C, IATF 16949)
+  - Facts:
+    - `hil-metal-core-capability-specs`
+    - `hil-fr4-capability-specs`
+    - `hil-high-tg-capability-specs`
+
+- **APT能力数据 (第3批)** ✅
+  - Source: `frontendapt-rigid-flex-pcb-capability-en` (1-32层, 0.025mm核心, 2.5/2.5 mil)
+  - Fact: `apt-rigid-flex-capability-specs`
+
+- **HIL产品能力数据 (第6批)** ✅
+  - Sources:
+    - `frontendhil-heavy-copper-pcb-product-en` (3-20 oz, IPC-2152, 30-50A, 2-32层)
+    - `frontendhil-halogen-free-pcb-product-en` (<900ppm, Tg 170-200°C, 56G PAM4)
+    - `frontendhil-through-hole-assembly-product-en` (wave/selective, press-fit 10-50N, Class 3)
+    - `frontendhil-turnkey-assembly-product-en` (BOM lifecycle, FPY >98%, MES追溯)
+  - Facts:
+    - `hil-heavy-copper-capability-specs`
+    - `hil-halogen-free-capability-specs`
+    - `hil-through-hole-assembly-capability-specs`
+    - `hil-turnkey-assembly-capability-specs`
+
+- **HIL产品能力数据 (第7批)** ✅
+  - Sources:
+    - `frontendhil-high-thermal-pcb-product-en` (MCPCB Al/Cu 1-3 W/m·K, AlN 150-170 W/m·K)
+    - `frontendhil-ic-substrate-pcb-product-en` (SAP 15-20μm, ABF/BT, flip-chip, 4-50层)
+  - Facts:
+    - `hil-high-thermal-capability-specs`
+    - `hil-ic-substrate-capability-specs`
+
+- **HIL产品能力数据 (第8批 - 最终)** ✅
+  - Sources:
+    - `frontendhil-box-build-assembly-product-en` (PCBA→成品, 机箱/线束/固件, ESS测试)
+    - `frontendhil-large-volume-assembly-product-en` (1000万+产能, SPC Cpk≥1.33, FPY 98-99.5%)
+    - `frontendhil-single-double-layer-pcb-product-en` (1-2层, 24-48h快转, 150/150μm)
+    - `frontendhil-small-batch-assembly-product-en` (10-5000件, 3-10天, NPI专用)
+    - `frontendhil-teflon-pcb-product-en` (PTFE Df<0.001, 40+GHz, 混合叠层)
+  - Facts:
+    - `hil-box-build-assembly-capability-specs`
+    - `hil-large-volume-assembly-capability-specs`
+    - `hil-single-double-layer-capability-specs`
+    - `hil-small-batch-assembly-capability-specs`
+    - `hil-teflon-pcb-capability-specs`
+
+-## 2026-05-02 (T21: Claim-Inventory-First 工作流建立)
+
+- **T21: 新博客 claim-inventory-first 工作流** ✅
+  - 创建: `workflows/claim-inventory-to-consumption.md`
+  - 定义 7 阶段流程: Claim Inventory → Source Gap → Recovery → Fact → Wiki → Consumption → Prompt Execution
+  - 包含: Claim Class Matrix (A-G)、Source Gap Analysis 模板、Fact Creation 规则、Evidence Pack 质量门
+  - 集成: 与 `policies/prompt-consumption-specification.md` 对齐
+  - 目的: 确保新博客请求必须经过 claim inventory → source gap → recovery → facts → wiki → consumption 的完整流程
+
+-## 2026-05-02 (T24: 动态数据刷新机制建立)
+
+- **T24: 动态数据刷新机制** ✅
+  - 创建: `policies/source-refresh-schedule.md`
+  - 定义刷新规则:
+    - 材料数据表: 2年最大有效期，年度审查
+    - 商业/动态claims: 1个月最大有效期，月度检查
+    - 能力/工艺claims: 6个月最大有效期，季度审查
+    - Gap跟踪: Taconic月度检查，Arlon季度检查
+  - 创建示例刷新周期: `logs/refresh-cycles/2026-05-02-material-source-refresh.md`
+  - 实际执行: 检查了50个material facts，45个URL live，更新了2个，维护了3个gap
+  - 集成: 与 evidence pack pre-flight checks 对齐
+
+-## 2026-05-02 (Priority 1 JSON Import Tasks T1-T4 Complete)
+
+- Completed Priority 1 JSON import tasks T1-T4 (split into T4A and T4B)
+
+- **T4A: PCBA Testing Methods (3 files)** - Created source records and comparison fact card:
+  - `sources/registry/methods/apt-ict-testing-page.md`
+  - `sources/registry/methods/apt-flying-probe-testing-page.md`
+  - `sources/registry/methods/apt-xray-inspection-page.md`
+  - `facts/methods/pcba-electrical-testing-methods-comparison.md`
+
+- **T4B: PCBA Assembly & Process Methods (29 files)** - Created 12 aggregated source records and 5 fact cards:
+  - `sources/registry/methods/apt-pcba-inspection-methods-aoi-spi.md` (aoi-inspection.json, spi-inspection.json)
+  - `sources/registry/methods/apt-pcba-functional-test-fct.md` (fct-test.json)
+  - `sources/registry/processes/apt-npi-new-product-introduction.md` (npi-assembly.json, small-batch.json)
+  - `sources/registry/processes/apt-selective-soldering-conformal-coating.md` (pcb-selective-soldering.json, pcb-conformal-coating.json)
+  - `sources/registry/processes/apt-smt-assembly-processes.md` (smt-tht.json, turnkey-assembly.json, mass-production.json)
+  - `sources/registry/methods/apt-quality-control-processes.md` (first-article-inspection.json, incoming-quality-control.json, final-quality-inspection.json, quality-system.json)
+  - `sources/registry/methods/apt-bga-qfn-fine-pitch-services.md` (bga-qfn-fine-pitch.json, bga-reballing.json)
+  - `sources/registry/processes/apt-flex-rigid-flex-assembly.md` (flex-rigid-flex.json)
+  - `sources/registry/processes/apt-cable-harness-box-build.md` (cable-assembly.json, harness-assembly.json, box-build-assembly.json)
+  - `sources/registry/processes/apt-component-sourcing-bom-ic-programming.md` (component-sourcing.json, components-bom.json, ic-programming.json)
+  - `sources/registry/processes/apt-pcba-stencil-support-services.md` (pcb-stencil.json, support-services.json, testing-quality.json)
+  - `sources/registry/processes/apt-pcba-production-models.md` (index.json + other aggregated capabilities)
+  - Fact cards: `apt-aoi-spi-inspection-capabilities.md`, `apt-fct-functional-test-capabilities.md`, `apt-npi-process-capabilities.md`, `apt-assembly-process-overview.md`, `apt-quality-control-process-summary.md`
+
+- **T4 Summary**: Added 15 source records, 6 fact cards covering all 32 PCBA JSON files
+- All PCBA testing and assembly processes now have source-backed documentation in llm_wiki
+
+- Completed Priority 1 JSON import tasks T1-T4 from `/code/hileap/frontendAPT/public/static/`
+- **T1: APT Manufacturing Capabilities Import** - Created 6 source records for capabilities JSON files:
+  - `sources/registry/capabilities/apt-rigid-pcb-capability-page.md`
+  - `sources/registry/capabilities/apt-flex-pcb-capability-page.md`
+  - `sources/registry/capabilities/apt-hdi-pcb-capability-page.md`
+  - `sources/registry/capabilities/apt-metal-pcb-capability-page.md`
+  - `sources/registry/capabilities/apt-rigid-flex-pcb-capability-page.md`
+  - `sources/registry/capabilities/apt-ceramic-pcb-capability-page.md`
+- Added 6 fact cards with capability parameters:
+  - `facts/methods/apt-pcb-capability-parameters-rigid.md`
+  - `facts/methods/apt-pcb-capability-parameters-flex.md`
+  - `facts/methods/apt-pcb-capability-parameters-hdi.md`
+  - `facts/methods/apt-pcb-capability-parameters-metal-core.md`
+  - `facts/methods/apt-pcb-capability-parameters-rigid-flex.md`
+  - `facts/methods/apt-pcb-capability-parameters-ceramic.md`
+- Added wiki aggregation: `wiki/processes/apt-pcb-manufacturing-capabilities.md`
+- **T2: Taconic Material Data Import** - Created source record and fact card:
+  - `sources/registry/materials/apt-taconic-materials-page.md`
+  - `facts/materials/taconic-ptfe-laminate-family-parameters.md`
+- **T3: Arlon Material Data Import** - Created source record and fact card:
+  - `sources/registry/materials/apt-arlon-materials-page.md`
+  - `facts/materials/arlon-laminate-family-parameters.md`
+- **T4: Test Methods Data Import** - Created 3 source records and comparison fact card:
+  - `sources/registry/methods/apt-ict-testing-page.md`
+  - `sources/registry/methods/apt-flying-probe-testing-page.md`
+  - `sources/registry/methods/apt-xray-inspection-page.md`
+  - `facts/methods/pcba-electrical-testing-methods-comparison.md`
+- T1-T4 Result: Added 12 source records, 9 fact cards, 1 wiki page from APT frontendHIL/APT JSON data
+- Source type: internal_published_page (Tier-2 authority)
+- Updated ASSESSMENT.md to mark T1, T2, T3, T4 as completed
+
+-## 2026-05-02
+
+- Completed `P4-133` as a narrow source-backed integration for owner-scoped copper-foil exact-product profile anchors under `P4-125 Lane B`
+- Added source records:
+  - `sources/registry/materials/jx-rigid-ed-copper-foil-page.md`
+  - `sources/registry/materials/jx-jxefl-fpc-ed-copper-foil-page.md`
+  - `sources/registry/materials/furukawa-fz-ws-copper-foil-page.md`
+  - `sources/registry/materials/furukawa-gts-std-gts-mp-copper-foil-page.md`
+- Added `facts/materials/copper-foil-exact-product-profile-anchor-map.md`
+- Added `logs/p4-133-2026-5-2-copper-foil-exact-product-profile-source-backed-integration.md`
+- P4-133 current result: the `P4-125 Lane B` copper-foil branch now has official owner-scoped exact-product anchors for selected JX and Furukawa rows with page-level `Rz` / profile support, while supplier-neutral roughness tables, `ED` versus rolled rankings, RF-loss claims, and finished-board performance claims remain blocked
+
+- Completed `P4-132` as a narrow source-backed integration for the `HILPCB Blog1-13` `MIDI / USB-MIDI / BLE-MIDI` compatibility boundary
+- Added source records:
+  - `sources/registry/standards/midi-specifications-page.md`
+  - `sources/registry/standards/midi-usb-midi-page.md`
+  - `sources/registry/standards/midi-ble-midi-page.md`
+- Added `facts/standards/midi-usb-midi-ble-midi-compatibility-boundary.md`
+- Added `logs/p4-132-2026-5-2-midi-usb-midi-ble-midi-compatibility-source-backed-integration.md`
+- P4-132 current result: the third `P4-129` lane now has official-source-backed support for `MIDI` protocol-family identity, `USB-MIDI` transport wording, `BLE-MIDI` transport wording, and Bluetooth terminology / qualification-entry boundary, while DAW support, host-support proof, no-driver proof, latency/jitter, audio-performance, wireless-performance, certification proof, and `HILPCB` capability claims remain blocked
+- Completed `P4-131` as a narrow source-backed integration for the `HILPCB Blog1-13` mouse sensor / switch / wireless boundary
+- Added source records:
+  - `sources/registry/methods/pixart-optical-navigation-products-page.md`
+  - `sources/registry/methods/pixart-paw3399dm-t4qu-product-page.md`
+  - `sources/registry/methods/omron-d2fc-mouse-switch-page.md`
+- Added `facts/standards/mouse-sensor-switch-wireless-and-compliance-boundary.md`
+- Added `logs/p4-131-2026-5-2-mouse-sensor-switch-wireless-source-backed-integration.md`
+- P4-131 current result: the second `P4-129` lane now has official-source-backed support for PixArt sensor identity, Omron switch identity, Bluetooth terminology, FCC equipment-authorization entry context, and EU `RED` entry context, while DPI / CPI, latency, switch-life proof, battery/range/coexistence, certification proof, and `HILPCB` capability claims remain blocked
+
+- Completed `P4-130` as a narrow source-backed integration for the `HILPCB Blog1-13` keyboard firmware / wireless / consumer-compliance boundary
+- Added source records:
+  - `sources/registry/methods/qmk-firmware-documentation-page.md`
+  - `sources/registry/methods/qmk-info-json-reference-page.md`
+  - `sources/registry/methods/via-configuring-qmk-page.md`
+  - `sources/registry/methods/via-keyboard-definition-specification-page.md`
+  - `sources/registry/standards/bluetooth-qualification-process-page.md`
+  - `sources/registry/standards/fcc-equipment-authorization-page.md`
+  - `sources/registry/standards/eu-radio-equipment-directive-page.md`
+- Added `facts/standards/keyboard-qmk-via-wireless-and-consumer-compliance-boundary.md`
+- Added `logs/p4-130-2026-5-2-keyboard-firmware-wireless-compliance-source-backed-integration.md`
+- P4-130 current result: the first `P4-129` keyboard lane now has official-source-backed support for `QMK` identity, `VIA` identity, configuration-dependent `QMK` / `VIA` compatibility wording, Bluetooth terminology, FCC equipment-authorization entry context, and EU `RED` entry context, while `NKRO`, RGB behavior, battery/range/latency, Bluetooth qualification proof, FCC / CE proof, hot-swap durability, and `HILPCB` capability claims remain blocked
+- Completed `P4-129` as a bounded next-batch source-recovery queue definition for the `HILPCB Blog1-13` `source_recovery_now` remainder
+- Added `logs/p4-129-2026-5-2-hilpcb-blog1-13-source-recovery-queue-note.md`
+- P4-129 current result: the remaining `HILPCB Blog1-13` external-source queue is now explicitly ordered as `keyboard firmware / hot-swap / wireless / consumer-compliance boundary`, `mouse sensor / switch / wireless boundary`, then `MIDI / USB-MIDI / BLE-MIDI compatibility boundary`; each lane is restricted to official protocol-owner, regulator, or exact vendor sources and still stops short of performance numerics, audio-quality claims, battery/range/latency claims, and `HILPCB` capability proof
+- Completed `P4-128` as a residual closure-controller pass for `2026.4.27/en`
+- Added `logs/p4-128-2026-5-2-2026-4-27-residual-closure-controller.md`
+- P4-128 current result: `2026.4.27/en` no longer has a mixed residual state; no batch-wide `source_recovery_now` reopen is justified, only article-triggered single-noun identity cleanup remains `tracker_only`, and compute numerics, `quantum`, sensor/imaging performance numerics, qualification/pass-status, deployment/program proof, supplier-readiness, and `HILPCB` capability proof remain `hold_only`
+- Completed controller-only closure ranking for `APTPCB260401` `2-layer`
+- Added `logs/p4-127-2026-5-2-aptpcb260401-2-layer-closure-controller-note.md`
+- Current `APTPCB260401` `2-layer` closure result: `material exact-value families` plus `finish chemistry identity families` are now isolated as the only `source_recovery_now` portion; impedance and thermal calculation families remain `tracker_only`; universal `2-layer` design-rule numerics, cost/lead-time, supplier proof, and `APTPCB` capability proof remain `hold_only`
+- Completed controller-only closure ranking for `HILPCB Blog1-13` input-device residuals
+- Added `logs/p4-127-2026-5-2-hilpcb-blog1-13-input-device-closure-controller.md`
+- Current `HILPCB Blog1-13` closure result: keyboard firmware / hot-swap / wireless / consumer-compliance, mouse sensor / switch / wireless, and `MIDI / USB-MIDI / BLE-MIDI` compatibility are now isolated as the only `source_recovery_now` families; rugged / HMI / harsh-environment stays `tracker_only`; `HILPCB` capability / quality / inspection / lead-time / regulated-program claims stay `hold_only`
+- Completed `P4-127` as a current-site recheck for the `Taconic / Arlon RF-PTFE recovery` lane
+- Added source records:
+  - `sources/registry/materials/arlon-current-product-sitemap.md`
+  - `sources/registry/materials/taconic-usa-industrial-materials-homepage.md`
+- Added `facts/materials/arlon-rf-ptfe-current-site-gap.md`
+- Updated `facts/materials/taconic-official-source-coverage-gap.md`
+- Added `logs/p4-126-2026-5-2-taconic-arlon-rf-ptfe-current-site-recheck.md`
+- P4-127 current result: the current public Taconic and Arlon site posture now has tighter official blocker evidence, but no new exact-product Taconic or Arlon RF / PTFE anchors were justified; Taconic remains blocked behind missing current public ADD laminate pages, and Arlon RF / PTFE families such as `CLTE-XT`, `TC350`, `AD250`, `AD255`, `AD300`, `CuClad`, and `DiClad` remain blocked because they are not exposed in the current official live product inventory
+- Completed `P4-125` as a knowledge-base distance assessment and subagent-roadmap pass
+- Added `logs/p4-125-2026-5-2-knowledge-base-distance-and-subagent-roadmap.md`
+- P4-125 current result: overall `llm_wiki` maturity is now explicitly assessed as `medium`, with materials judged `high`, standards / process governance judged `medium`, and closure completeness still limited by partial, claim-family-only, and hold-only lanes; `P4-121` remains the active mainline, while the next source-backed queue is now ranked as `Taconic / Arlon RF-PTFE recovery`, `standards metadata refresh`, `process-governance gap map`, `flex / copper-foil / ceramic-platform recovery`, and a later closure-controller pass
+- Completed `P4-124` as a narrow FPGA platform and high-speed-IO identity integration for `fpga-pcb.md`
+- Added source records:
+  - `sources/registry/interfaces/amd-versal-adaptive-soc-page.md`
+  - `sources/registry/interfaces/amd-kintex-ultrascale-page.md`
+  - `sources/registry/interfaces/intel-agilex-fpga-page.md`
+- Added `facts/interfaces/fpga-platform-and-high-speed-io-identity-boundary.md`
+- Added `wiki/processes/fpga-pcb-review-boundaries.md`
+- Added `logs/p4-124-2026-5-2-fpga-platform-and-high-speed-io-identity-source-backed-integration.md`
+- P4-124 current result: `fpga-pcb.md` now has owner-backed exact `Versal`, `Kintex UltraScale`, and `Agilex` platform nouns plus guarded `PCIe` / `DDR5` / `LVDS` context, while board-level capability, validation, programming, supplier-readiness, and deployment-readiness claims remain blocked
+- Completed `P4-123` as a narrow ODB++ official-source augmentation for the CAM / file-package boundary
+- Added source records:
+  - `sources/registry/standards/siemens-odb-plus-plus-page.md`
+  - `sources/registry/standards/siemens-odb-plus-plus-resources-faq.md`
+- Updated `facts/methods/cam-data-exchange-format-boundary.md` and `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+- Added `logs/p4-123-2026-5-2-odb-plus-plus-official-source-augmentation.md`
+- P4-123 current result: the CAM / file-package boundary for `buying-pcb.md` and adjacent handoff drafts now includes official ODB++ owner-scoped authority alongside Gerber and IPC-DPMX / IPC-2581, while supplier acceptance, file-package completeness, CAM-review depth, and commercial outcomes remain blocked
+- Completed `P4-122` as a secondary residual-candidate recheck after `P4-121`
+- Added `logs/p4-122-2026-5-2-secondary-residual-candidates-no-promotion-recheck.md`
+- P4-122 current result: `buying-pcb`, `electronics-assembly`, and `rf-antenna` do not currently justify new fact/wiki promotion or a new source-recovery lane; `P4-121` remains the active mainline, and the three secondary candidates stay paused unless exact new authority appears
+- Started `P4-121` as the controller activation for `P4-06` Phase 5 Batch 1
+- Added `logs/p4-121-2026-5-2-p4-06-phase-5-batch-1-controller-note.md`
+- P4-121 current result: `P4-06` Phase 5 Batch 1 is now controller-active for first-wave prompt handoff only across `6-layer`, `8-layer`, and `10-layer`; execution stays on existing bridge-prep and evidence-pack artifacts under query-family consumption rules only, and no new fact/wiki/source promotion or blocked-numeric unlock is implied
+- Completed `P4-120` as a ranked long-task plan after the post-`P4-118` residual closeout
+- Added `logs/p4-120-2026-5-2-phase-5-first-wave-and-residual-long-task-plan.md`
+- P4-120 current result: the default continuation now shifts from residual-lane scouting to `P4-06` Phase 5 first-wave prompt handoff for `6-layer`, `8-layer`, and `10-layer`; `buying-pcb`, `electronics-assembly`, and `rf-antenna` remain secondary residual candidates only, and explicit holds stay closed
+- Completed `P4-119` as a post-`P4-118` residual-lane recheck
+- Added `logs/p4-119-2026-5-2-post-p4-118-residual-lane-recheck.md`
+- P4-119 current result: `2026.4.27/en` and `2026.4.29/en` currently expose no new exact non-held lane; `medical role-boundary` and `compact imaging inspection planning` remain already covered, `audio-amplifier` and `wearable compact access` remain closed as landed narrow lanes, and the default continuation returns to tracker-only waiting for exact new authority
+- Controller-accepted `P4-118` as a narrow wearable compact-access and closure lane; the new fact/wiki pair keeps wearable boards at access, closure, inspection visibility, and rework-reach level only
+- Controller-accepted the `P4-116` execution split in `logs/p4-116-2026-5-2-execution-controller-note.md`
+- Completed `P4-116` Batch A as a source-first recovery wave:
+  - grounding / return-path landed `sources/registry/methods/analog-devices-mixed-signal-pcb-layout-guidelines.md`, `sources/registry/methods/ti-high-speed-layout-guidelines.md`, and `facts/methods/ground-and-return-path-boundary-stays-at-reference-plane-and-routing-continuity.md`
+  - optical contamination-control narrowed to IEC-backed connector-endface inspection and cleaning through `facts/methods/optical-connector-endface-inspection-and-cleaning-boundary.md`
+  - Taconic product-grade recovery remained hold-only because no verified current Taconic-controlled product-grade datasheet anchor was recovered
+  - Arlon product-grade recovery landed one additional exact-product branch through `sources/registry/materials/arlon-86hp-product-page.md`, `sources/registry/materials/arlon-86hp-datasheet.md`, and `facts/materials/arlon-86hp-exact-product.md`
+- Completed the `P4-116` Batch B closeout as narrow controller/log promotion only: compute remains on the existing compute-infrastructure boundary page, while the electrical lane remains split across the existing formula-identity, current-carrying, and conservative-generation-gate artifacts; no new Batch B capability fact was added
+- Added residual exact-claim inventory logs:
+  - `logs/p4-116-2026-5-2-2026-4-27-claim-inventory.md`
+  - `logs/p4-116-2026-5-2-2026-4-29-claim-inventory.md`
+- Added `logs/p4-116-2026-5-2-biological-computing-hold-maintenance.md`, confirming that `biological-computing-pcb.md` still has no current authority for reopening and remains hold-only
+- Added `logs/p4-116-2026-5-2-quantum-computing-hold-maintenance.md`, confirming that `quantum-computing-pcb.md` still has no current authority for reopening and remains hold-only
+- Added `logs/p4-116-2026-5-2-20-layer-hold-maintenance.md`, confirming that `20-layer` still has no current authority for reopening and remains hold-only
+- Added `logs/p4-116-2026-5-2-22-layer-hold-maintenance.md`, confirming that `22-layer` still has no current authority for reopening and remains hold-only
+- P4-116 current result: the second-half wave is now controller-closed as `Batch A source-first recovery -> Batch B tracker-only promotion -> residual claim-inventory routing`, with `biological-computing`, `quantum-computing`, `20-layer`, `22-layer`, and `tmps/materias_pdf` still closed and broad rewrite continuation explicitly non-default
+- Completed `P4-117` as a narrow source-backed audio-amplifier board-review boundary integration
+- Added source records:
+  - `sources/registry/methods/ti-managing-emi-in-class-d-audio-applications.md`
+  - `sources/registry/methods/ti-tpa3118d2evm-user-guide.md`
+- Added `facts/methods/audio-amplifier-pcb-review-boundary.md`
+- Added `wiki/processes/audio-amplifier-pcb-review-boundaries.md`
+- Added `logs/p4-117-2026-5-2-audio-amplifier-board-review-boundary-source-backed-integration.md`
+- P4-117 current result: `audio-amplifier-pcb.md` now has narrow source-backed support for mixed-signal partitioning, speaker/output path caution, connector access, and bring-up preparation, while audio-performance, EMI-compliance, thermal, and supplier-readiness claims remain blocked
+
+## 2026-05-01
+
+- Completed `P4-116` as a controller-level second-half knowledge-promotion plan
+- Added `logs/p4-116-2026-5-1-second-half-knowledge-promotion-plan.md`
+- P4-116 current result: remaining work is now bucketed into high-value source-gap lanes, partial fact-layer promotions, large deletion-safe corpus lanes, and explicit holds; the next default move is Batch A narrow source recovery plus Batch B partial-fact promotion rather than any rewrite-layer continuation
+- Batch A follow-up audit: `grounding-and-return-path-execution-boundary`, `optical-module-handling-contamination-control`, `Taconic product-grade official datasheet anchors`, and `Arlon product-grade official datasheet anchors` all remain `source-only`; no new source-backed facts were landed in this pass
+- Batch B follow-up audit: compute can support only a narrow boundary aggregation, while `ohms-law` / `watts-to-amps` can only stitch existing formula and current-carrying boundary pages together; no new capability facts were added
+- Added a narrow compute-infrastructure boundary refinement so `deployment` is explicitly staged-release / ramp language unless a separate dated capability record exists, and `liquid cooling` remains blocked as capability proof without a source-backed cooling architecture lane
+
+- Completed `P4-115` as a reusable fact / wiki promotion pass for the strongest residual lanes from `P4-114`
+- Added reusable fact cards:
+  - `facts/methods/shield-aware-test-access-and-service-access.md`
+  - `facts/methods/pcba-validation-handoff-package.md`
+  - `facts/methods/avl-and-alternate-control-posture.md`
+  - `facts/methods/inspection-planning-around-connector-and-shield-obstructions.md`
+- Added reusable wiki pages:
+  - `wiki/processes/compact-closure-and-rework.md`
+  - `wiki/processes/rigid-flex-handling-lane.md`
+  - `wiki/processes/compact-imaging-assembly-inspection-planning.md`
+  - `wiki/processes/validation-handoff-npi-governance.md`
+- Added `logs/p4-115-2026-5-1-compact-closure-rigid-flex-imaging-validation-governance.md`
+- P4-115 current result: the strongest residual lanes from the four-draft claim-family absorption pass are now reusable at fact and wiki level, while `grounding-and-return-path-execution-boundary` and `optical-module-handling-contamination-control` remain the two explicit source-gap hold lanes
+- Added `policies/execution-priority-and-anti-drift.md` so future agents must default to `claim inventory -> source gap -> official source recovery -> source records -> fact cards -> topic wiki -> prompt consumption gate`, rather than drifting into rewrite / normalization-first execution
+- Updated `README.md`, `ROADMAP.md`, `logs/phase-status.md`, and `logs/backlog.md` so `completed_at_claim_family_level`, conservative rewrite readiness, prompt-consumable status, and `logs/` summaries are explicitly separated from source-backed fact-layer completion
+- Completed `P4-114` as a claim-family absorption pass for `tmps/2025.12.29/en/5g-pcb-assembly.md`, `tmps/2025.12.29/en/medical-device-pcb-assembly.md`, `tmps/2025.12.29/en/wearable-tech-pcb-assembly.md`, and `tmps/2025.12.17/en/optical-pcb-manufacturing.md`
+- Added lane logs:
+  - `logs/p4-114a-2026-5-1-5g-pcb-assembly-claim-family-absorption.md`
+  - `logs/p4-114b-2026-5-1-medical-wearable-assembly-claim-family-absorption.md`
+  - `logs/p4-114c-2026-5-1-optical-pcb-manufacturing-claim-family-absorption.md`
+- Added `logs/p4-114-2026-5-1-5g-medical-wearable-optical-claim-family-absorption.md`
+- P4-114 current result: the four input drafts are now absorbed into `llm_wiki` at `completed_at_claim_family_level`, with explicit reusable claim families for telecom execution flow, component-mix / traceability / rework / release workflow, compact wearable handling, and compact optical-module review plus validation handoff; no draft-originated numerics, compliance proof, performance proof, or supplier-proof language was promoted
+- Parallel multi-agent result after `P4-114`: the current gaps are no longer broad batch-coverage gaps but narrow source lanes around telecom grounding/access, AVL and validation-handoff detail, wearable compact closure and rigid-flex handling, medical role boundary, and optical contamination-control or compact imaging inspection authority
+- Landed a four-draft conservative rewrite batch for `tmps/2025.12.29/en/5g-pcb-assembly.md`, `tmps/2025.12.29/en/medical-device-pcb-assembly.md`, `tmps/2025.12.29/en/wearable-tech-pcb-assembly.md`, and `tmps/2025.12.17/en/optical-pcb-manufacturing.md`
+- Batch result: the `5g` draft now stays at telecom-hardware PCB-to-PCBA execution flow only, the `medical-device` draft now stays at manufacturing-control workflow only, the `wearable` draft now stays at compact-assembly and rigid-flex handling workflow only, and the `optical` draft now stays at compact optical/imaging board-review and validation-handoff level only
+- Blocked certification, standards-threshold, clinical, wireless-performance, optical-performance, numeric, and supplier-proof classes were stripped from the draft layer; this is not a new authority or readiness unlock
+- Landed the `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` English conservative rewrite batch under `logs/en-layer-count-blog-generation-gate.md`
+- Batch result: `6 / 8 / 10 / 12 / 14 / 16-layer` consumed existing `P4-06` evidence packs, `18 / 24-layer` consumed the existing `H3` containment maps, blocked numeric / standards-threshold / supplier-proof / commercial classes were stripped from the draft layer, and this is not a readiness unlock
+- `20-layer` and `22-layer` remain explicitly held under `P4-113`
+- Completed `P4-113` as the `20-layer` / `22-layer` blocker closure sheets and permanent exclusion path controller integration
+- Added `logs/p4-113-2026-5-1-20-22-layer-blocker-closure-sheets-and-permanent-exclusion-path.md`
+- P4-113 current result: the reentered `20-layer` / `22-layer` blocked mainline is now aligned to `high-numeric-density-program-plan.md` `Workstream 5 / 6` through one controller-owned closure-path decision, with both branches explicitly marked `closure_sheet_ready` but still blocked for conservative generation, high-density numeric reuse, and `P4-06`
+- Parallel multi-agent result after `P4-113`: `20-layer` and `22-layer` no longer need more generic H3/H4 scaffolding by default; future reopening is now limited to exact primary authority or narrow dated supplier evidence that genuinely raises the current evidence ceiling
+- Completed `P4-112` as the `20-layer` / `22-layer` H3/H4 controller reentry and blocked-mainline reset
+- Added `logs/p4-112-2026-5-1-20-22-layer-h3-h4-controller-reentry-and-blocked-mainline-reset.md`
+- P4-112 current result: the next residual family after `P4-111` is now explicitly reset to the blocked layer-count mainline, with the landed `20-layer` reliability/process-window boundaries and `22-layer` hi-rel governance boundaries surfaced as the active Phase 4 control layer rather than leaving the tracker anchored only on the finished `2026.4.27` normalization batches
+- Parallel multi-agent result after `P4-112`: `20-layer` and `22-layer` now have an explicit post-`P4-111` continuation point at boundary/guardrail/supplier-intake level only; both remain blocked for high-density numeric reuse, and `P4-06` remains blocked for those two branches
+- Completed `P4-111` as the `2026.4.27` defense / EW / surveillance / targeting normalization batch controller integration
+- Added `logs/p4-111-2026-5-1-2026-4-27-defense-ew-surveillance-targeting-normalization-batch.md`
+- P4-111 current result: `electronic-warfare-pcb.md`, `surveillance-pcb.md`, and `targeting-pcb.md` are now explicitly normalized into conservative board-review drafts that keep only system-context labels, guarded detector/interface nouns, RF partitioning, shielding, packaging, staged validation, and release-governance posture
+- Parallel multi-agent result after `P4-111`: the highest-value `2026.4.27` defense-adjacent normalization work is now landed; execution-layer only, not source-backed complete
+- Completed `P4-110` as the `2026.4.27` sensor / navigation / imaging normalization batch controller integration
+- Added `logs/p4-110-2026-5-1-2026-4-27-sensor-navigation-imaging-normalization-batch.md`
+- P4-110 current result: `accelerometer-pcb.md`, `gyroscope-pcb.md`, and `compass-pcb.md` are now explicitly normalized into conservative board-review drafts, `thermal-imaging-pcb.md` was tightened to stay inside the landed detector/interface boundary, and `altimeter-pcb.md`, `sonar-pcb.md`, and `night-vision-pcb.md` were confirmed already compliant with the current conservative route set
+- Parallel multi-agent result after `P4-110`: the `2026.4.27` sensor / navigation / imaging slice is now controller-normalized at draft layer; execution-layer only, not source-backed complete
+- Completed `P4-109` as the Phase 4 low-intervention batch roadmap
+- Added `logs/p4-109-2026-5-1-phase-4-low-intervention-batch-roadmap.md`
+- P4-109 current result: Phase 4 is now explicitly set to batch-mode subagent execution; execution-layer only, not source-backed complete
+- Completed `P4-108` as the neuromorphic lane-consumption controller integration pass
+- Added `logs/p4-108-2026-5-1-neuromorphic-lane-consumption-controller-integration.md`
+- P4-108 current result: `neuromorphic-computing-pcb.md` is now explicitly recorded as consuming the landed `P4-89` neuromorphic identity lane into a conservative board-review article, with interface-behavior, architecture, deployment, performance, and supplier-proof claims still blocked
+- Parallel multi-agent result after `P4-108`: the highest-value `2026.4.29` normalization work is now sufficiently explicit; execution-layer only, not source-backed complete
+- Completed `P4-107` as the EV-charger lane-consumption controller integration pass
+- Added `logs/p4-107-2026-5-1-ev-charger-lane-consumption-controller-integration.md`
+- P4-107 current result: `ev-charger-pcb.md` is now explicitly recorded as consuming the landed `P4-86` EV charger control-stack and protocol-identity lane into a conservative board-review article, with power, safety, EMC, certification, payment, interoperability, and supplier-proof claims still blocked
+- Parallel multi-agent result after `P4-107`: EV-charger no longer needs another implicit-consumption check; execution-layer only, not source-backed complete
+- Completed `P4-106` as the smart-meter lane-consumption controller integration pass
+- Added `logs/p4-106-2026-5-1-smart-meter-lane-consumption-controller-integration.md`
+- P4-106 current result: `smart-meter-pcb.md` is now explicitly recorded as consuming the landed `P4-84` standards/metrology lane and `P4-85` communication-identity lane into a conservative board-review article, with compliance, interoperability, performance, and supplier-proof claims still blocked
+- Parallel multi-agent result after `P4-106`: smart-meter no longer needs another implicit-consumption check; execution-layer only, not source-backed complete
+- Completed `P4-105` as a controller integration pass for the strip-first execution outcomes
+- Added `logs/p4-105-2026-5-1-dna-landed-biological-held-controller-integration.md`
+- P4-105 current result: `dna-computing-pcb.md` is now landed as a conservative rewrite, while `biological-computing-pcb.md` remains on hold because strip-first removal leaves too little distinct public-article value
+- Parallel multi-agent result after `P4-105`: the `2026.4.29` expert batch now has twelve landed conservative rewrites and one explicit hold draft
+- Completed `P4-104` as the biological-computing strip-first value test
+- Added `logs/p4-104-2026-5-1-biological-strip-first-value-test.md`
+- P4-104 current result: `biological-computing-pcb.md` remains hold-preferred after strip-first review; owner, material, wet-zone, biointerface, and HILPCB readiness stripping leaves too little article value
+- Completed `P4-103` as the dna-computing strip-first rewrite eligibility pass
+- Rewritten draft:
+  - `tmps/2026.4.29/en/dna-computing-pcb.md`
+- Added `logs/p4-103-2026-5-1-dna-strip-first-rewrite-eligibility-pass.md`
+- P4-103 current result: `dna-computing-pcb.md` is now prompt-usable as a conservative subsystem and documentation-aware build-flow article after strip-first removal of owner, compute-stack, regulator, and HILPCB readiness language
+- Completed `P4-102` as a controller integration pass for the owner-platform, material, and HILPCB capability decision lanes
+- Added `logs/p4-102-2026-5-1-owner-material-capability-controller-integration.md`
+- P4-102 current result: broader authority recovery is no longer the default next move; execution-layer only, not source-backed complete
+- Parallel multi-agent result after `P4-102`: current local evidence supports a default `strip` decision for all HILPCB-specific life-science, diagnostics, medical-device, neural-interface, and bioelectronic readiness language unless dated internal capability records are intentionally recovered
+- Completed `P4-101` as the HILPCB life-science capability decision scout
+- Added `logs/p4-101-2026-5-1-hilpcb-life-science-capability-decision.md`
+- P4-101 current result: HILPCB-specific life-science, diagnostics, medical-device, neural-interface, and bioelectronic manufacturing-readiness language should be stripped from public rewrite scope unless dated internal capability records are recovered first
+- Completed `P4-100` as the biological-computing owner-platform and material scout
+- Added `logs/p4-100-2026-5-1-biological-computing-owner-material-scout.md`
+- P4-100 current result: `biological-computing-pcb.md` can keep only generic application, packaging-pressure, and manufacturing-control context if owner nouns, material-suitability nouns, wet-zone framing, and HILPCB life-science readiness language are stripped
+- Completed `P4-99` as the dna-computing owner-platform scout
+- Added `logs/p4-99-2026-5-1-dna-computing-owner-platform-scout.md`
+- P4-99 current result: `dna-computing-pcb.md` can move toward a generic strip-first rewrite if all named platform, compute-stack, regulator, and HILPCB readiness nouns are removed; owner-platform recovery is optional unless publication requires exact nouns
+- Completed `P4-98` as a controller integration pass for the first two post-`P4-95` authority-split lanes
+- Added `logs/p4-98-2026-5-1-dna-biological-split-lane-controller-integration.md`
+- P4-98 current result: `dna-computing-pcb.md` and `biological-computing-pcb.md` remain on hold, but their reusable floor is now narrower and explicit: `dna-computing` keeps only documentation-control vocabulary, while `biological-computing` keeps only packaging-pressure and manufacturing-control vocabulary
+- Parallel multi-agent result after `P4-98`: the next highest-value work is no longer regulator-language splitting, but owner-platform, material, and HILPCB capability decision lanes if public scope still requires exact nouns
+- Completed `P4-97` as a regulated-biointerface split scout for the blocked `biological-computing` draft
+- Added `logs/p4-97-2026-5-1-biological-computing-regulated-biointerface-split.md`
+- P4-97 current result: `biological-computing-pcb.md` may keep only manufacturing-control and packaging-pressure vocabulary; wet-zone, implantable, biocompatibility, material-suitability, owner-platform, and HILPCB life-science claims remain blocked
+- Completed `P4-96` as a regulator-and-standards split scout for the blocked `dna-computing` draft
+- Added `logs/p4-96-2026-5-1-dna-computing-regulator-and-standards-split.md`
+- P4-96 current result: `dna-computing-pcb.md` may keep only documentation and manufacturing-control vocabulary; compliance-proof, safety-proof, platform-linked, and supplier-support language remains blocked
+- Completed `P4-95` as a controller integration pass for the remaining `2026.4.29` expert-batch continuation state
+- Rewritten draft:
+  - `tmps/2026.4.29/en/audio-amplifier-pcb.md`
+- Added `logs/p4-95-2026-5-1-audio-conservative-rewrite-and-dna-biological-hold-integration.md`
+- P4-95 current result: `audio-amplifier-pcb.md` is now prompt-usable as a conservative mixed-signal board-review draft, and the `P4-94` hold state for `dna-computing-pcb.md` plus `biological-computing-pcb.md` is now controller-integrated into the active batch status
+- Parallel multi-agent result after `P4-95`: the `2026.4.29` batch now has eleven landed conservative rewrites, while `dna-computing` and `biological-computing` remain explicitly held for narrower owner, regulator, standards, and biointerface authority recovery before any rewrite attempt
+- Completed `P4-94` as an authority-recovery scout for the two remaining blocked `2026.4.29` expert drafts
+- Reviewed drafts:
+  - `tmps/2026.4.29/en/dna-computing-pcb.md`
+  - `tmps/2026.4.29/en/biological-computing-pcb.md`
+- Added `logs/p4-94-2026-5-1-dna-biological-authority-recovery-scout.md`
+- P4-94 current result: `dna-computing-pcb.md` and `biological-computing-pcb.md` remain deletion-safe at claim-family level only and should not enter conservative rewrite consumption until narrower owner, regulator, standards, material, and capability authority is recovered
+- Completed `P4-93` as a conservative rewrite consumption batch for two additional `2026.4.29` expert drafts on top of the existing `P4-83` route set
+- Rewritten drafts:
+  - `tmps/2026.4.29/en/endoscope-pcb.md`
+  - `tmps/2026.4.29/en/gaming-pcb.md`
+- Added `logs/p4-93-2026-4-29-conservative-rewrite-consumption-batch-4.md`
+- P4-93 current result: `endoscope-pcb.md` and `gaming-pcb.md` are now prompt-usable as conservative board-review drafts that keep only existing medical-manufacturing-control, conformal-coating workflow, and generic consumer-input review posture while removing blocked compliance, qualification, numeric, wireless, ecosystem, and supplier-proof claims
+- Parallel multi-agent result after `P4-93`: the `2026.4.29` batch now has ten landed conservative rewrites, so the next preference is to test `audio-amplifier` only if it can be narrowed to generic mixed-signal or interface-board review posture while keeping `dna-computing` and `biological-computing` out of the rewrite queue until narrower authority exists
+- Completed `P4-92` as a conservative rewrite consumption batch for three additional `2026.4.29` expert drafts on top of the existing `P4-83` route set
+- Rewritten drafts:
+  - `tmps/2026.4.29/en/inverter-pcb.md`
+  - `tmps/2026.4.29/en/lidar-pcb.md`
+  - `tmps/2026.4.29/en/fpga-pcb.md`
+- Added `logs/p4-92-2026-4-29-conservative-rewrite-consumption-batch-3.md`
+- P4-92 current result: `inverter-pcb.md`, `lidar-pcb.md`, and `fpga-pcb.md` are now prompt-usable as conservative board-review drafts that keep only existing power-energy, lidar timing and pulsed-driver, and compute/high-speed review posture while removing blocked compliance, qualification, exact platform-proof, numeric, and supplier-proof claims
+- Parallel multi-agent result after `P4-92`: the `2026.4.29` batch now has eight landed conservative rewrites, so the next preference is to attempt `endoscope` and possibly `gaming` under heavier stripping while keeping `dna-computing` and `biological-computing` out of the rewrite queue until narrower authority exists
+- Completed `P4-91` as a conservative rewrite consumption batch for four additional `2026.4.29` expert drafts on top of `P4-84` through `P4-88`
+- Rewritten drafts:
+  - `tmps/2026.4.29/en/smart-meter-pcb.md`
+  - `tmps/2026.4.29/en/ev-charger-pcb.md`
+  - `tmps/2026.4.29/en/hearing-aid-pcb.md`
+  - `tmps/2026.4.29/en/satellite-pcb.md`
+- Added `logs/p4-91-2026-4-29-conservative-rewrite-consumption-batch-2.md`
+- P4-91 current result: `smart-meter-pcb.md`, `ev-charger-pcb.md`, `hearing-aid-pcb.md`, and `satellite-pcb.md` are now prompt-usable as conservative board-review drafts that keep only their landed standards, protocol, wireless, and metadata identity nouns while removing blocked performance, qualification, interoperability, compliance-proof, and supplier-proof claims
+- Parallel multi-agent result after `P4-91`: the `2026.4.29` batch now has five landed conservative rewrites including neuromorphic, and next work should continue similar consumption for remaining safely-routed drafts before opening any new authority-recovery lane
+- Completed `P4-90` as a conservative neuromorphic draft rewrite pass on top of `P4-89`
+- Rewritten draft:
+  - `tmps/2026.4.29/en/neuromorphic-computing-pcb.md`
+- Added `logs/p4-90-neuromorphic-conservative-rewrite-consumption.md`
+- P4-90 current result: `neuromorphic-computing-pcb.md` is now prompt-usable as a conservative board-review draft that keeps exact `Loihi 2`, `Akida`, `Speck`, `Xylo`, `DVS`, and `PMBus` only at identity level while removing blocked deployment, numeric, interface-behavior, and supplier-proof claims
+- Completed `P4-89` as a narrow source-backed integration for neuromorphic event-io and platform identity inside the `2026.4.29` `neuromorphic` subset
+- Added source records:
+  - `sources/registry/standards/intel-neuromorphic-computing-page.md`
+  - `sources/registry/standards/intel-loihi-2-technology-brief-page.md`
+  - `sources/registry/standards/brainchip-akida-page.md`
+  - `sources/registry/standards/synsense-speck-page.md`
+  - `sources/registry/standards/synsense-xylo-page.md`
+  - `sources/registry/standards/synsense-dvs-page.md`
+  - `sources/registry/standards/pmbus-about-page.md`
+  - `sources/registry/standards/pmbus-current-specifications-page.md`
+- Added `facts/interfaces/neuromorphic-event-io-and-platform-identity-boundary.md`
+- Added `wiki/processes/neuromorphic-pcb-review-boundaries.md`
+- Added `logs/p4-89-neuromorphic-event-io-and-platform-identity-source-backed-integration.md`
+- P4-89 current result: `neuromorphic-computing-pcb.md` now has a narrower prompt-consumable route at exact `Loihi 2`, `Akida`, `Speck`, `Xylo`, `DVS`, and `PMBus` identity level only; exact `AER`, `STDP`, `silicon cochlea`, interface-behavior, performance, deployment, qualification, and supplier-proof claims remain blocked
+- Parallel multi-agent result after `P4-89`: the neuromorphic lane is now source-backed at identity-only noun level, and the remaining `2026.4.29` work should stay on conservative rewrites or split narrower residual exact-noun lanes only if publication still requires them
+- Completed `P4-88` as a narrow source-backed aggregation for satellite space-material, outgassing, and `Class 3A` metadata inside the `2026.4.29` `satellite` subset
+- Reused existing source records:
+  - `sources/registry/standards/astm-e595-15r21-page.md`
+  - `sources/registry/methods/nasa-vacuum-outgassing-database-page.md`
+  - `sources/registry/methods/nasa-outgassing-user-guide-page.md`
+  - `sources/registry/standards/ipc-6012fs-space-military-addendum-page.md`
+  - `sources/registry/standards/ipc-6012fs-toc.md`
+  - `sources/registry/standards/ipc-cc-830c-toc.md`
+- Added `facts/standards/space-material-outgassing-and-class-3a-metadata-boundary.md`
+- Added `logs/p4-88-satellite-space-material-outgassing-and-class-3a-metadata-integration.md`
+- P4-88 current result: `satellite-pcb.md` now has a narrower prompt-consumable route at guarded `ASTM E595`, NASA outgassing screening, `IPC-6012FS`, and `Class 3 / Class 3A` metadata level only; exact thresholds, launch-environment numerics, coating subtype claims, qualification, and supplier-proof claims remain blocked
+- Parallel multi-agent result after `P4-88`: the `satellite` lane now has a reusable metadata aggregation card, and `neuromorphic` event-io identity is the strongest remaining `2026.4.29` exact-noun recovery target
+- Completed `P4-87` as a narrow source-backed integration for hearing-aid wireless and telecoil identity inside the `2026.4.29` `hearing-aid` subset
+- Added source records:
+  - `sources/registry/standards/bluetooth-le-audio-page.md`
+  - `sources/registry/standards/bluetooth-le-audio-hearing-page.md`
+  - `sources/registry/standards/bluetooth-auracast-page.md`
+  - `sources/registry/standards/iec-60118-4-2014-a1-2017-csv-page.md`
+  - `sources/registry/standards/nidcd-hearing-aids-page.md`
+- Added `facts/standards/hearing-aid-wireless-and-telecoil-identity-boundary.md`
+- Added `wiki/processes/hearing-aid-pcb-review-boundaries.md`
+- Added `logs/p4-87-hearing-aid-wireless-and-telecoil-identity-source-backed-integration.md`
+- P4-87 current result: `hearing-aid-pcb.md` now has a narrower prompt-consumable route at guarded `LE Audio`, `Auracast`, `telecoil`, `IEC 60118-4`, and `induction loop systems` identity level only; exact interoperability, antenna/audio numerics, telecoil thresholds, regulatory approval, and supplier-proof claims remain blocked
+- Parallel multi-agent result after `P4-87`: `hearing-aid` proved to be the best next narrow lane, while `satellite` and `neuromorphic` are now the strongest remaining `2026.4.29` residual candidates
+- Completed `P4-86` as a narrow source-backed integration for EV charger control-stack and protocol identity inside the `2026.4.29` `ev-charger` subset
+- Added source records:
+  - `sources/registry/standards/iec-61851-1-2017-product-page.md`
+  - `sources/registry/standards/iec-61851-23-2023-product-page.md`
+  - `sources/registry/standards/iec-61851-24-2023-product-page.md`
+  - `sources/registry/standards/iso-15118-1-2019-page.md`
+  - `sources/registry/standards/iso-15118-20-2022-page.md`
+  - `sources/registry/standards/sae-j1772-202401-recommended-practice-page.md`
+  - `sources/registry/standards/sae-j3400-2-202505-recommended-practice-page.md`
+  - `sources/registry/standards/charin-iso-iec-15118-communication-standard-page.md`
+  - `sources/registry/standards/open-charge-alliance-ocpp-protocols-page.md`
+- Added `facts/standards/ev-charger-control-stack-and-protocol-identity-boundary.md`
+- Updated `wiki/processes/power-energy-pcb-pcba-review-boundaries.md`
+- P4-86 current result: `ev-charger-pcb.md` now has a narrower prompt-consumable route at guarded `IEC 61851-1`, `IEC 61851-23`, `IEC 61851-24`, `ISO 15118`, `SAE J1772`, `CCS`, `NACS`, and `OCPP` identity level only; exact interoperability, payment, EMC, creepage/clearance, certification, and supplier-proof claims remain blocked
+- Parallel multi-agent result after `P4-86`: the next strongest residual authority lanes inside `2026.4.29` remain satellite and hearing-aid, but EV charger is the best current reuse/recovery fit for the active power-energy mainline
+- Completed `P4-85` as a narrow source-backed integration for smart-meter communication protocol identity inside the `2026.4.29` `smart-meter` subset
+- Added source records:
+  - `sources/registry/standards/dlms-core-specifications-page.md`
+  - `sources/registry/standards/iec-62056-5-3-2023-product-page.md`
+  - `sources/registry/standards/iec-62056-6-2-2017-product-page.md`
+  - `sources/registry/standards/prime-alliance-advanced-metering-page.md`
+  - `sources/registry/standards/g3-alliance-g3-technologies-page.md`
+  - `sources/registry/standards/wi-sun-fan-page.md`
+  - `sources/registry/standards/3gpp-the-cellular-internet-of-things-page.md`
+  - `sources/registry/standards/3gpp-nb-iot-complete-page.md`
+- Reused `sources/registry/standards/csa-zigbee-faq.md`
+- Added `facts/standards/smart-meter-communication-protocol-identity-boundary.md`
+- Added `logs/p4-85-smart-meter-communication-protocol-identity-source-backed-integration.md`
+- Updated `wiki/processes/power-energy-pcb-pcba-review-boundaries.md`
+- P4-85 current result: `smart-meter-pcb.md` now has a narrower prompt-consumable route at guarded `DLMS/COSEM`, `IEC 62056`, `PRIME`, `G3-PLC`, `Wi-SUN`, `Zigbee`, `NB-IoT`, and `LTE-M` identity level only; exact interoperability, communication behavior, RF or PLC bands, head-end integration, long-life, and supplier-proof claims remain blocked
+- Parallel multi-agent result after `P4-85`: the combined `P4-84` plus `P4-85` smart-meter lanes are now strong enough for conservative smart-meter rewrites, and the remaining `2026.4.29` priority shifts back to non-smart-meter authority gaps
+- Completed `P4-84` as a narrow source-backed integration for smart-meter standards and metrology identity inside the `2026.4.29` `smart-meter` subset
+- Added source records:
+  - `sources/registry/standards/iec-62052-11-2020-product-page.md`
+  - `sources/registry/standards/iec-62052-31-2015-product-page.md`
+  - `sources/registry/standards/iec-62053-21-2020-product-page.md`
+  - `sources/registry/standards/iec-62053-22-2020-product-page.md`
+  - `sources/registry/standards/iec-62053-23-2020-product-page.md`
+  - `sources/registry/standards/eurlex-2014-32-eu-measuring-instruments-directive-page.md`
+  - `sources/registry/standards/ansi-blog-c12-1-2026-code-for-electricity-metering.md`
+  - `sources/registry/standards/ansi-blog-c12-20-2015-accuracy-classes-page.md`
+  - `sources/registry/standards/nist-nistir-7823-ami-release-announcement.md`
+- Added `facts/standards/smart-meter-standards-and-metrology-identity-boundary.md`
+- Added `logs/p4-84-smart-meter-standards-and-metrology-identity-source-backed-integration.md`
+- Updated `wiki/processes/power-energy-pcb-pcba-review-boundaries.md`
+- P4-84 current result: `smart-meter-pcb.md` now has a narrower prompt-consumable route at guarded `IEC 62052-11`, `IEC 62052-31`, `IEC 62053-21/22/23`, `MID` / `MI-003`, historical `ANSI C12.20`, and `AMI` identity level only; exact compliance, metrology-performance, safety-threshold, communication-protocol, long-life, and supplier-proof claims remain blocked
+- Parallel multi-agent result after `P4-84`: the strongest next residual candidate inside `2026.4.29` is now a separate smart-meter communication-protocol identity lane only if future rewrites must retain exact `DLMS/COSEM`, `IEC 62056`, `PRIME`, `G3-PLC`, `Wi-SUN`, `NB-IoT`, or related utility-network nouns
+- Completed `P4-83` as a deletion-safe controller intake for the new expert-written `/code/blogs/tmps/2026.4.29/en` batch
+- Added `logs/p4-83-2026-4-29-expert-batch-controller-summary.md`
+- P4-83 current result: the `2026.4.29/en` batch is now deletion-safe at claim-family level and partially routed through existing power-energy, high-speed-compute, medical-manufacturing-control, lidar, and hi-rel outgassing/workflow layers; exact smart-meter standards, medical-device authority, neuromorphic, audio-performance, and space-qualification claims remain blocked
+- Parallel multi-agent result after `P4-83`: the strongest next residual candidate inside `2026.4.29` is now a narrower `smart-meter` standards and metrology identity lane around guarded `IEC 62052`, `IEC 62053`, `ANSI C12`, `MID`, and AMI-adjacent nouns
+- Completed `P4-82` as a narrow source-backed integration for guarded `hydrophone`, receive-side `hydrophone array`, and generic `beamforming` identity inside the `2026.4.27` `sonar` subset
+- Added source records:
+  - `sources/registry/methods/noaa-hydrophone-page.md`
+  - `sources/registry/methods/mathworks-isotropic-hydrophone-system-object-page.md`
+  - `sources/registry/methods/mathworks-beamforming-overview-page.md`
+- Added `facts/methods/hydrophone-and-generic-beamforming-boundary.md`
+- Added `logs/p4-82-sonar-hydrophone-and-generic-beamforming-source-backed-integration.md`
+- P4-82 current result: the `sonar` subset now has a narrower prompt-consumable route at guarded hydrophone receive-element, receive-side hydrophone-array, and generic beamforming identity level only; naval-program framing, exact array architecture, implementation proof, performance numerics, and supplier-proof claims remain blocked
+- Added `/code/blogs/tmps/2026.4.29/en` to the next learning queue; the corpus now has `31` dated English `*/en` blog folders, but the new `2026.4.29` batch is not yet deletion-safe
+- Completed `P4-81` as a narrow source-backed integration for `DO-160G`, `DO-254`, and `DO-155` standards metadata inside the `2026.4.27` `altimeter` subset
+- Added source records:
+  - `sources/registry/standards/faa-ac-21-16g-do160-acceptability-page.md`
+  - `sources/registry/standards/rtca-do-160g-product-page.md`
+  - `sources/registry/standards/rtca-do-254-product-page.md`
+  - `sources/registry/standards/rtca-do-155-product-page.md`
+- Added `facts/standards/aviation-altimeter-standards-metadata-boundary.md`
+- Added `wiki/processes/altimeter-aviation-standards-and-assurance-boundaries.md`
+- Added `logs/p4-81-altimeter-aviation-standards-metadata-source-backed-integration.md`
+- P4-81 current result: the `altimeter` subset now has a narrower prompt-consumable route at guarded `DO-160G`, `DO-254`, and radar-altimeter-only `DO-155` document-family and assurance-boundary level only; `with DO-160 qualification`, `must comply`, section numerics, `DAL-A/B` chains, `TSO`, airworthiness, and supplier-proof claims remain blocked
+- Parallel scout result after `P4-81`: the best next residual lane inside `2026.4.27` is now the `sonar` `hydrophone` plus generic `beamforming` identity pass, still kept separate from naval-program, acoustic-performance, and mission-proof claims
+- Completed `P4-80` as a narrow source-backed integration for `MIL-STD-461` and `MIL-STD-810` standards-context vocabulary across the `2026.4.27` `electronic-warfare`, `night-vision`, `thermal-imaging`, `sonar`, and `compass` subsets
+- Added source records:
+  - `sources/registry/standards/mil-std-461-emi-control-standard-page.md`
+  - `sources/registry/standards/mil-std-810-environmental-engineering-tests-page.md`
+- Added `facts/standards/military-environmental-and-emi-qualification-boundary.md`
+- Added `wiki/processes/military-environmental-and-emi-standards-boundaries.md`
+- Added `logs/p4-80-military-environmental-and-emi-standards-source-backed-integration.md`
+- P4-80 current result: the `2026.4.27` defense, imaging, sonar, and compass subsets now have a narrower prompt-consumable route at guarded `MIL-STD-461` and `MIL-STD-810` standards-context level only; exact methods, section claims, severity numerics, pass-status claims, supplier qualification, and program-history claims remain blocked
+- Parallel scout result after `P4-80`: `hydrophone` plus generic `beamforming` remains a possible future `partial_only` sonar lane, while `DO-160` / `DO-254` / `DO-155` remains a separate future aviation-standards metadata lane for `altimeter-pcb.md`
+- Completed `P4-79` as a narrow source-backed integration for navigation-sensor technology identity across the `2026.4.27` `gyroscope` and `compass` subsets
+- Added source records:
+  - `sources/registry/methods/honeywell-hg1930-mems-imu-page.md`
+  - `sources/registry/methods/honeywell-hg2802-fiber-optic-gyro-imu-page.md`
+  - `sources/registry/methods/honeywell-gg1320an-digital-ring-laser-gyroscope-page.md`
+  - `sources/registry/methods/bosch-bmm350-magnetometer-product-page.md`
+  - `sources/registry/methods/bartington-mag03-fluxgate-magnetometer-page.md`
+- Added `facts/methods/navigation-sensor-technology-owner-identity-boundary.md`
+- Added `wiki/processes/navigation-sensor-technology-review-boundaries.md`
+- Added `logs/p4-79-navigation-sensor-technology-owner-source-backed-integration.md`
+- P4-79 current result: the `gyroscope` and `compass` subsets now have a narrower prompt-consumable route at guarded `MEMS gyroscope`, `FOG`, `ring laser gyroscope`, `magnetometer`, and `fluxgate magnetometer` owner-identity level only; exact drift, heading accuracy, calibration, qualification, deployment, and supplier-proof claims remain blocked
+- Parallel scout result after `P4-79`: the combined `RS-170/STANAG 3350` phrasing in `thermal-imaging-pcb.md` remains blocked; if revisited later, `STANAG 3350` and `RS-170` must be treated as separate identity-only questions rather than one mixed output-format lane
+
+## 2026-04-30
+
+- Completed `P4-78` as a narrow source-backed integration for exact output-video and machine-vision interface identity inside the `2026.4.27` `thermal-imaging` subset
+- Added source records:
+  - `sources/registry/standards/itu-r-bt470-conventional-analogue-television-systems-page.md`
+  - `sources/registry/standards/hdmi-specifications-and-programs-page.md`
+  - `sources/registry/standards/smpte-top-standards-page.md`
+  - `sources/registry/standards/a3-gige-vision-standard-page.md`
+  - `sources/registry/standards/a3-usb3-vision-standard-page.md`
+- Added `facts/standards/output-video-and-machine-vision-interface-boundary.md`
+- Added `wiki/processes/output-video-and-machine-vision-interface-review-boundaries.md`
+- Added `logs/p4-78-thermal-imaging-output-video-and-machine-vision-interface-source-backed-integration.md`
+- P4-78 current result: the `thermal-imaging` subset now has a narrower prompt-consumable route at guarded legacy analogue-video wording adjacent to `PAL/NTSC`, guarded `HDMI` and `SDI` digital-video-interface nouns, and guarded `GigE Vision` and `USB3 Vision` machine-vision transport nouns only; exact `RS-170`, `STANAG 3350`, subtype, bitrate, interoperability, compliance, and program-history claims remain blocked
+- Completed `P4-77` as a narrow source-backed integration for embedded imaging serial-interface identity across the `2026.4.27` `night-vision`, `thermal-imaging`, and optical-sensor `targeting` subsets
+- Added source records:
+  - `sources/registry/standards/mipi-csi-2-spec-page.md`
+  - `sources/registry/standards/mipi-d-phy-spec-page.md`
+  - `sources/registry/standards/mipi-dsi-2-spec-page.md`
+  - `sources/registry/standards/mipi-display-command-set-page.md`
+  - `sources/registry/standards/ti-lvds-overview-page.md`
+- Added `facts/standards/embedded-imaging-serial-interface-boundary.md`
+- Added `wiki/processes/sensor-and-display-serial-interface-review-boundaries.md`
+- Added `logs/p4-77-embedded-imaging-serial-interface-source-backed-integration.md`
+- P4-77 current result: the imaging subset of `night-vision`, `thermal-imaging`, `surveillance`, and the optical-sensor subset of `targeting` now have a narrower prompt-consumable route at `MIPI CSI-2`, `D-PHY`, `DSI-2`, `Display Command Set`, `LVDS`, and generic sensor/display serial-interface vocabulary level only; exact lane counts, bitrates, latency, output-video standards, compliance, and program-history claims remain blocked
+- Completed `P4-76` as a narrow source-backed integration for owner-published `EO/IR detector` identity across the `2026.4.27` `night-vision`, `thermal-imaging`, and optical-sensor `targeting` subsets
+- Added source records:
+  - `sources/registry/methods/exosens-image-intensifier-tube-page.md`
+  - `sources/registry/methods/sony-starvis-technology-page.md`
+  - `sources/registry/methods/sony-security-camera-image-sensor-products-page.md`
+  - `sources/registry/methods/lynred-about-our-technologies-page.md`
+- Added `facts/methods/eo-ir-detector-owner-identity-and-interface-boundary.md`
+- Added `wiki/processes/eo-ir-detector-owner-identity-review-boundaries.md`
+- Added `logs/p4-76-eo-ir-detector-owner-source-backed-integration.md`
+- P4-76 current result: the imaging subset of `night-vision`, `thermal-imaging`, `surveillance`, and the optical-sensor subset of `targeting` now have a narrower prompt-consumable route at owner-published EO/IR detector identity and detector-interface vocabulary level only; exact detector performance, optics, video-chain, qualification, and program-history claims remain blocked
+- Completed `P4-75` as a narrow source-backed integration for the `fire control` / platform-interface subset inside the `2026.4.27` `targeting` lane
+- Added source records:
+  - `sources/registry/standards/mil-std-1553-data-bus-page.md`
+  - `sources/registry/standards/mil-hdbk-1553-multiplex-application-handbook-page.md`
+  - `sources/registry/methods/bosch-can-protocols-page.md`
+- Added `facts/methods/fire-control-platform-interface-boundary.md`
+- Added `wiki/processes/fire-control-platform-and-sensor-interface-boundaries.md`
+- Added `logs/p4-75-fire-control-platform-interface-source-backed-integration.md`
+- P4-75 current result: the platform-interface subset of `targeting-pcb.md` now has a narrower prompt-consumable route at `MIL-STD-1553`, `CAN`, `Ethernet`, and GPS receiver-system context level only; ballistic computation, weapon authority, compliance, interoperability, and HIL capability claims remain blocked
+- Completed `P4-74` as a narrow source-backed integration for the `barometric altimeter` pressure-sensor subset inside the `2026.4.27` `altimeter` lane
+- Added source records:
+  - `sources/registry/methods/bosch-bmp390-product-page.md`
+  - `sources/registry/methods/te-ms5611-product-page.md`
+  - `sources/registry/methods/infineon-dps310-datasheet.md`
+- Added `facts/methods/barometric-pressure-sensor-owner-identity-and-interface-boundary.md`
+- Added `wiki/processes/barometric-altimeter-pressure-sensor-boundaries.md`
+- Added `logs/p4-74-barometric-pressure-sensor-owner-source-backed-integration.md`
+- P4-74 current result: the barometric subset of `altimeter-pcb.md` now has a narrower prompt-consumable route at owner-published pressure-sensor identity, pressure-plus-temperature, guarded `24-bit`, calibration, and sensor-interface level only; aviation qualification, exact altitude numerics, pressure-port doctrine, and HIL capability claims remain blocked
+- Completed `P4-73` as a narrow source-backed integration for the `radio altimeter` / `radar altimeter` identity, RF-band, and subsystem-boundary subset inside the `2026.4.27` `altimeter` lane
+- Added source records:
+  - `sources/registry/methods/faa-pcg-radio-altimeter-glossary-page.md`
+  - `sources/registry/methods/faa-aim-radio-radar-altimeter-anomalies-section.md`
+  - `sources/registry/methods/faa-eb-107-5g-c-band-aero-studies.md`
+  - `sources/registry/methods/faa-ac-20-199-draft-radio-altimeter-installation.md`
+- Added `facts/methods/radio-altimeter-rf-front-end-and-integration-boundary.md`
+- Added `wiki/processes/radio-altimeter-rf-front-end-boundaries.md`
+- Added `logs/p4-73-radio-altimeter-rf-front-end-source-backed-integration.md`
+- P4-73 current result: the radio-altimeter subset of `altimeter-pcb.md` now has a narrower prompt-consumable route at identity, `4.2-4.4 GHz`, and transceiver / antenna / interface-boundary level only; aviation qualification, exact architecture, barometric-sensor authority, and HIL capability claims remain blocked
+- Completed `P4-72` as a narrow source-backed integration for the sonar identity, transducer-drive, receive-path, and echo-qualification subset inside the `2026.4.27` `sonar` lane
+- Added source records:
+  - `sources/registry/methods/noaa-sonar-basics-page.md`
+  - `sources/registry/methods/ti-tuss4440-product-page.md`
+  - `sources/registry/methods/ti-tdc1000-product-page.md`
+- Added `facts/methods/sonar-ultrasonic-transducer-front-end-boundary.md`
+- Added `wiki/processes/sonar-and-ultrasonic-transducer-front-end-boundaries.md`
+- Added `logs/p4-72-sonar-transducer-front-end-source-backed-integration.md`
+- P4-72 current result: `sonar-pcb.md` now has a narrower prompt-consumable route at sonar identity and transducer-front-end level only; hydrophone, beamforming, naval qualification, performance numerics, and HIL capability claims remain blocked
+- Completed `P4-71` as a narrow source-backed integration for the laser time-of-flight, pulsed-driver, and safety-control subset inside the `2026.4.27` `targeting` lane
+- Added source records:
+  - `sources/registry/methods/ti-tdc7200-product-page.md`
+  - `sources/registry/methods/ti-lmh13000-product-page.md`
+  - `sources/registry/methods/noaa-lidar-basics-page.md`
+  - `sources/registry/standards/fda-laser-products-and-instruments-page.md`
+- Added `facts/methods/laser-time-of-flight-pulsed-driver-and-safety-boundary.md`
+- Added `wiki/processes/laser-time-of-flight-and-pulsed-driver-boundaries.md`
+- Added `logs/p4-71-targeting-laser-tof-and-pulsed-driver-source-backed-integration.md`
+- P4-71 current result: `targeting-pcb.md` now has a narrower prompt-consumable route at laser timing/control-board level only, and the laser-altimeter subset of `altimeter-pcb.md` now has a narrow ToF identity lane; fire-control, weapon, radar-altimeter, qualification, and HIL capability claims remain blocked
+- Completed `P4-70` as a defense / EW / surveillance / targeting topic aggregation pass on top of `P4-67`, converting the remaining `2026.4.27/en` reuse lane into a prompt-consumable review-boundary page with explicit `go_now_conservative` and `needs_refresh_then_go` classifications
+- Added `logs/p4-70-defense-ew-surveillance-targeting-topic-aggregation.md`
+- Added `wiki/processes/defense-ew-surveillance-targeting-pcb-review-boundaries.md`
+- P4-70 current result: the `2026.4.27/en` defense lane now has a reusable board-review aggregation layer for `electronic warfare`, `surveillance`, and `targeting` drafts; exact mission-system authority, qualification proof, performance numerics, and HIL capability claims remain blocked
+- Completed `P4-69` as a sensor/navigation/imaging topic aggregation pass on top of `P4-67`, converting the next strongest `2026.4.27/en` reuse lane into a prompt-consumable review-boundary page with explicit `go_now_conservative`, `needs_refresh_then_go`, and `hold_for_new_sources` classifications
+- Added `logs/p4-69-sensor-navigation-imaging-topic-aggregation.md`
+- Added `wiki/processes/sensor-navigation-imaging-pcb-review-boundaries.md`
+- P4-69 current result: the `2026.4.27/en` sensor/navigation/imaging lane now has a reusable board-review aggregation layer for `accelerometer`, `gyroscope`, `compass`, `altimeter`, `night vision`, `thermal imaging`, and `sonar` drafts; exact sensor technologies, performance numerics, qualification proof, and HIL capability claims remain blocked
+- Completed `P4-68` as a compute-infrastructure topic aggregation pass on top of `P4-67`, converting the strongest `2026.4.27/en` reuse lane into a prompt-consumable topic page without adding new source records or fact cards
+- Added `logs/p4-68-compute-infrastructure-topic-aggregation.md`
+- Added `wiki/processes/compute-infrastructure-pcb-review-boundaries.md`
+- P4-68 current result: the `2026.4.27/en` compute lane now has a reusable board-review aggregation layer for `cloud`, `cluster`, `distributed`, `edge`, `fog`, `grid`, `HPC`, `parallel`, `supercomputing`, and `quantum-computing` drafts; exact interface numerics, power/thermal outcomes, deployment proof, and HIL capability claims remain blocked
+- Completed `P4-67` as a deletion-safe controller summary for the new `/code/blogs/tmps/2026.4.27/en` application batch covering compute-infrastructure, inertial/navigation, imaging, surveillance, targeting, and EW drafts
+- Added `logs/p4-67-2026-4-27-application-computing-sensor-defense-controller-summary.md`
+- P4-67 current result: the `2026.4.27/en` batch is now deletion-safe at claim-family level with partial routing through existing application, server/data-center, high-speed/backplane, RF, validation, and protection layers; exact interface numerics, sensor technologies, qualification claims, defense-program claims, and supplier-specific capability claims remain blocked pending narrower authority
+- Completed `P4-66` as a rewrite-governance closeout for the remaining `2025.11.10` `watts‑to‑amps` residual after `P4-65`
+- Added deletion-safe rewrite-governance logs:
+  - `logs/p4-66a-2025-11-10-watts-to-amps-line-to-lane-rewrite-map.md`
+  - `logs/p4-66b-2025-11-10-watts-to-amps-generation-gate-scout.md`
+  - `logs/p4-66-rewrite-governance-closeout.md`
+- Added `methods-watts-to-amps-conservative-generation-gate` so future prompts consume `watts‑to‑amps.md` as a lane-separated conservative rewrite target rather than reopening generic source recovery by default
+- P4-66 current result: `watts‑to‑amps.md` is now prompt-consumable at conservative generation-gate level only; AC / three-phase instruction, calculator packs, safety-margin rules, standards shorthand, and outcome claims remain unresolved and blocked
+- Completed `P4-65` as a targeted regulator-current-field integration pass plus residual-map closeout for the remaining `2025.11.10` `watts‑to‑amps` broad `component ratings` residue after `P4-64`
+- Added deletion-safe scout and integration logs:
+  - `logs/p4-65a-2025-11-10-watts-to-amps-post-connector-residual-map.md`
+  - `logs/p4-65b-2025-11-10-regulator-current-limit-official-source-scout.md`
+  - `logs/p4-65-source-backed-integration.md`
+- Added official regulator source records:
+  - `ti-tps7a47-product-page`
+  - `ti-tps63027-product-page`
+  - `ti-tps631000-product-page`
+  - `analog-devices-lt1763-product-page`
+- Added `methods-regulator-current-field-selection-boundary` and `wiki/processes/regulator-current-field-selection-boundaries.md` so `watts‑to‑amps.md` can reference regulator current-related fields only at official field-check level, with `Output Current` or `Iout (max)` kept separate from `Current Limit` or `Switch Current Limit`
+- P4-65 current result: `watts‑to‑amps.md` is now source-backed partial at regulator current-field selection boundary level only; safety-margin language, generic component-rating claims, and outcome claims remain unresolved
+- Completed `P4-64` as a targeted connector-rating integration pass for the remaining `2025.11.10` `watts‑to‑amps` connector residual after `P4-63`
+- Added deletion-safe and integration logs:
+  - `logs/p4-64a-2025-11-10-connector-rating-split.md`
+  - `logs/p4-64b-2025-11-10-connector-rating-local-coverage-recheck.md`
+  - `logs/p4-64c-2025-11-10-connector-rating-official-source-scout.md`
+  - `logs/p4-64-source-backed-integration.md`
+- Added official connector source records:
+  - `te-power-systems-connectors-in-power-systems`
+  - `te-economy-power-2-5-connectors-page`
+  - `molex-extreme-lphpower-page`
+  - `phoenix-contact-hv-m5-1-nff-1056835-page`
+- Added `methods-connector-current-rating-selection-boundary` and `wiki/processes/connector-current-rating-selection-boundaries.md` so `watts‑to‑amps.md` can reference connector current-related fields only at official page or datasheet field-check level without importing safety-margin, component-generalization, or outcome claims
+- P4-64 current result: `watts‑to‑amps.md` is now source-backed partial at connector current-field selection boundary level only; regulator-current, safety-margin, and outcome claims remained unresolved until `P4-65`
+- Completed `P4-63` as a targeted named-simulation-tool integration pass for the remaining `2025.11.10` `watts‑to‑amps` simulator residual after `P4-62`
+- Added deletion-safe split and integration logs:
+  - `logs/p4-63a-2025-11-10-simulation-tool-split.md`
+  - `logs/p4-63-source-backed-integration.md`
+- Added official tool source record:
+  - `hilpcb-circuit-simulator-tool-page`
+- Added `methods-named-simulation-tool-entry-identity-boundary` and `wiki/processes/named-simulation-tool-boundaries.md` so `watts‑to‑amps.md` can reference the HILPCB circuit simulator only at tool-entry and feature-identity level without importing capability, validation-outcome, or production-transition claims
+- P4-63 current result: `watts‑to‑amps.md` is now source-backed partial at named simulation-tool entry identity level only; simulator capability claims, connector-rating claims, and outcome claims remain unresolved
+- Completed `P4-62` as a targeted validation-workflow integration pass for the remaining `2025.11.10` `watts‑to‑amps` verification residual after `P4-61`
+- Added deletion-safe split and integration logs:
+  - `logs/p4-62a-2025-11-10-watts-to-amps-validation-split.md`
+  - `logs/p4-62-source-backed-integration.md`
+- Added `methods-pre-fabrication-validation-workflow-boundary` and `wiki/processes/pre-fabrication-validation-and-prototype-boundaries.md` so `watts‑to‑amps.md` can route through prototype / NPI / DFM / FAI / staged validation handoff language without importing named simulator claims, manufacturability proof, or production-readiness claims
+- P4-62 current result: `watts‑to‑amps.md` is now source-backed partial at pre-fabrication validation workflow boundary level only; named simulator claims, connector-rating claims, and broad outcome claims remain unresolved
+- Completed `P4-61` as a targeted PCB-consequence source-recovery and integration pass for the remaining `2025.11.10` `watts‑to‐amps` board-design residual after `P4-60`
+- Added deletion-safe split and integration logs:
+  - `logs/p4-61a-2025-11-10-watts-to-amps-pcb-consequence-split.md`
+  - `logs/p4-61-source-backed-integration.md`
+- Added official and public PCB-consequence source records:
+  - `ipc-2152-current-carrying-capacity-toc`
+  - `analog-devices-an136-pcb-layout-nonisold-switching-supplies`
+  - `analog-devices-layout-considerations-for-high-power-circuits`
+- Added `methods-current-carrying-trace-width-and-copper-boundary` and `wiki/processes/current-carrying-and-high-current-layout-boundaries.md` so `watts‑to‐amps.md` can route through a separate conductor-sizing and high-current-layout boundary without importing generic trace-width tables, connector-rating claims, simulation proof, or `IPC-2221` shorthand
+- P4-61 current result: `watts‑to‐amps.md` is now source-backed partial at current-carrying and high-current-layout boundary level only; connector-rating, simulation, testing, manufacturability, and numeric conductor-sizing claims remain unresolved
+- Completed `P4-60` as a targeted formula-lane source-recovery and integration pass for the remaining `2025.11.10` `ohms-law` and `watts‑to‐amps` residuals after `P4-59`
+- Added formula-lane logs:
+  - `logs/p4-60a-2025-11-10-formula-lane-local-recheck.md`
+  - `logs/p4-60c-2025-11-10-watts-to-amps-institutional-authority-scout.md`
+  - `logs/p4-60-source-backed-integration.md`
+- Added official and institutional formula source records:
+  - `nist-guide-si-chapter-4-units-and-prefixes`
+  - `nist-ampere-introduction`
+  - `openstax-university-physics-v2-ohms-law`
+  - `openstax-university-physics-v2-electrical-energy-and-power`
+- Added `methods-electrical-formula-identity-boundary` and `wiki/processes/electrical-formula-identity-boundaries.md` so `ohms-law.md` and `watts‑to‐amps.md` can route through SI unit identity, guarded `Ohm's law`, guarded `power equals current times voltage`, and narrow `A = W / V` algebraic restatement without importing AC-power, worked-example, or PCB-consequence claims
+- P4-60 current result: `ohms-law.md` and `watts‑to‐amps.md` are now source-backed partial at formula-identity boundary level only; AC / three-phase teaching, calculator content, and PCB trace / thermal / connector consequence claims remain unresolved
+- Completed `P4-59` as a targeted multi-subagent source-recovery and integration pass for the remaining `2025.11.10` `RF cable`, formula, and `encoder‑circuit` residual lanes after `P4-58`
+- Added deletion-safe prep and authority-scout logs:
+  - `logs/p4-59a-2025-11-10-formula-split-and-local-coverage-prep.md`
+  - `logs/p4-59b-2025-11-10-rf-cable-official-source-recovery-scout.md`
+  - `logs/p4-59c-2025-11-10-digital-priority-encoder-official-source-recovery-scout.md`
+- Completed `logs/p4-59-source-backed-integration.md`, converting the strongest two `2025.11.10` residual lanes into narrow source-backed partial layers while keeping the formula lane as prep-only
+- Added official RF cable identity source records:
+  - `amphenol-rf-coaxial-cable-guide`
+  - `times-microwave-semi-rigid-coaxial-cables-page`
+  - `te-connectivity-bnc-connectors-page`
+- Added `methods-rf-cable-coaxial-identity-and-impedance-boundary` and `wiki/processes/rf-cable-and-coaxial-identity-boundaries.md` so `radio-frequency-cable.md` can use coaxial structure identity, semi-rigid and micro-coax family naming, and `50 ohm` / `75 ohm` ecosystem existence without importing broad taxonomy, performance, application, or supplier claims
+- Added official digital priority-encoder source records:
+  - `ti-sn74ls148-product-page`
+  - `ti-sn74ls148-datasheet`
+  - `onsemi-mc14532b-datasheet`
+- Added `methods-digital-priority-encoder-identity-boundary` and `wiki/processes/digital-priority-encoder-boundaries.md` so `encoder‑circuit.md` can route through split-first digital priority-encoder identity and narrow example-device framing without importing mechanical encoder content, broad truth-table pedagogy, or generic application claims
+- P4-59 current result: `radio-frequency-cable.md` is now source-backed partial at coaxial-centered identity level only, `encoder‑circuit.md` is now source-backed partial at digital priority-encoder identity level only, and `ohms-law.md` plus `watts‑to‐amps.md` remain prep-only pending institution-source formula recovery and a separate PCB consequence lane
+- Completed `P4-58` as a new multi-subagent scout-only controller pass for the remaining `2025.11.10` blockers that were still unresolved after `P4-44` and `P4-53`
+- Added deletion-safe residual-authority scout logs:
+  - `logs/p4-58a-2025-11-10-rf-cable-authority-scout.md`
+  - `logs/p4-58b-2025-11-10-formula-pedagogy-authority-scout.md`
+  - `logs/p4-58c-2025-11-10-encoder-circuit-authority-scout.md`
+- Completed `logs/p4-58-parallel-scout-controller-summary.md`, narrowing the next targeted source-recovery queue inside `2025.11.10` to:
+  - an official RF cable / connector identity lane
+  - a split-first digital priority-encoder lane
+  - an institutional electrical-fundamentals formula lane
+- P4-58 current result: `radio-frequency-cable.md` and `encoder‑circuit.md` are both now better-bounded and close to recoverable only at narrow identity level, while `ohms-law.md` and `watts‑to‐amps.md` remain scout-only until an institution-source formula lane is recovered and separated from PCB trace / thermal consequence claims
+- Continued the multi-subagent residual-authority program with `P4-57`, using bounded worker lanes for `CPW` residual triage and the `small-fountain-pump` application scout while keeping tracker ownership under the main agent
+- Completed `logs/p4-57-source-backed-integration.md`, upgrading the `2026.1.6` `CPW` residual lane into a conservative structure-identity boundary rather than leaving it fully blocked
+- Added official/public `CPW` structure source records:
+  - `ansys-coplanar-waveguide-driven-terminal`
+  - `ansys-coplanar-waveguide-with-ground-driven-terminal`
+  - `cadence-rf-pcb-design-guidelines`
+- Added `methods-cpw-and-grounded-cpw-topology-boundary` and updated `wiki/processes/rf-transmission-line-structure-boundaries.md` so the `2026.1.6` RF drafts can use guarded `CPW` and `grounded CPW` structure identity without importing topology rankings, probing claims, via-fence claims, or supplier-capability language
+- Preserved `logs/p4-57b-2025-11-17-filament-circuit-authority-scout.md` as deletion-safe scout-only output; the filament draft still remains blocked pending equipment-owner and component-owner authority for filament-drive, cathode/emission, and tube-life claims
+- Preserved `logs/p4-57c-2025-11-17-small-fountain-pump-authority-scout.md` as deletion-safe scout-only output; the pump draft still remains blocked pending pump-owner, semiconductor-owner, and product-level ingress sources
+- P4-57 current result: `CPW` is now source-backed partial at structure-identity level only; exact geometry, target-ohm recipes, probing/MMIC language, via-fence behavior, and RF-capability claims remain unresolved
+- Completed P4-56 targeted external-authority recovery in `logs/p4-56-source-backed-integration.md`, upgrading the remaining `2025.11.17` ceramic residual lane into a conservative alumina-versus-`AlN` owner-scoped comparison boundary
+- Tightened the existing official ceramic source records `ceramtec-ceramic-substrates-page` and `maruwa-aln-substrates-page` after rechecking the current pages on `2026-04-30`, making the CeramTec side-by-side `Al2O3` / `AlN` table and MARUWA AlN grade/process-family coverage explicit in `llm_wiki`
+- Added `materials-alumina-vs-aln-owner-scoped-comparison-boundary` and updated `wiki/materials/ceramic-aln-ims-thermal-platforms.md` so the `2025.11.17` ceramic drafts can distinguish alumina from `AlN` with source-backed owner-scoped directionality without turning one vendor page into a market-wide property table
+- P4-56 current result: `al2o3-ceramic-substrate.md`, `al2o3-pcb.md`, `aln-ceramic-substrate.md`, and adjacent `2025.11.17` ceramic drafts are now source-backed partial at owner-scoped comparison-boundary level only; purity ladders, generic ceramic property tables, universal `DBC` / `AMB` availability, turnkey/manufacturer-selection claims, and HIL/APT capability claims remain unresolved
+
+## 2026-04-29
+
+- Completed P4-55 targeted external-authority recovery in `logs/p4-55-source-backed-integration.md`, upgrading the `2026.1.6` RF / high-frequency transmission-line residual lane into a conservative structure-vocabulary boundary
+- Added `methods-rf-transmission-line-structure-vocabulary-boundary` and `wiki/processes/rf-transmission-line-structure-boundaries.md` so `high-frequency-printed-circuit-board.md`, `rf-high-frequency-pcb.md`, `high-frequency-multilayer-pcb.md`, and related `2026.1.6` RF drafts can use source-backed `microstrip` / `stripline` structure vocabulary without importing formulas, geometry examples, dB claims, or supplier-capability language
+- P4-55 current result: `2026.1.6` RF / high-frequency drafts are now source-backed partial at transmission-line structure vocabulary level only; `CPW` reusable guidance, impedance formulas, exact geometry numerics, isolation / loss comparisons, mmWave-superiority claims, and supplier precision claims remain unresolved
+- Completed P4-54 targeted external-authority recovery in `logs/p4-54-source-backed-integration.md`, upgrading the `4-layer-pcb-manufacturing` and `double-sided-pcb-manufacturer` residual lane into a conservative rigid-board family boundary
+- Added `standards-rigid-board-family-identity-boundary` and `wiki/processes/rigid-board-family-and-layer-boundaries.md` so `4-layer-pcb-manufacturing.md` and `double-sided-pcb-manufacturer.md` can distinguish baseline rigid-board versus multilayer rigid-board family identity without claiming stackup recipes, supplier rankings, or commercial manufacturer-selection guidance
+- P4-54 current result: `2025.11.17` `4-layer-pcb-manufacturing` and `double-sided-pcb-manufacturer` are now source-backed partial at family-identity level only; stackup numerics, impedance / EMI outcomes, manufacturer-selection language, lead time, MOQ, and quality claims remain unresolved
+- Completed P4-53 targeted external-authority recovery in `logs/p4-53-source-backed-integration.md`, upgrading the `schematic-symbols` residual lane into a conservative standards-identity boundary
+- Added official standards source records for schematic-symbol standards identity:
+  - `iec-60617-database-page`
+  - `ieee-ansi-315-1975-standard-page`
+- Added `standards-schematic-symbol-standards-identity-boundary` and `wiki/processes/schematic-symbol-standards-boundaries.md` so `schematic-symbols.md` can cite IEC and IEEE symbol-standard family identity without claiming exact symbol definitions, universal reading conventions, or CAD-tool recommendations
+- P4-53 current result: `2025.11.10` `schematic-symbols` is now source-backed partial at standards-identity level only; exact symbol tables, drawing pedagogy, current active-U.S.-standard wording, and software-recommendation claims remain unresolved
+- Completed P4-52 targeted external-authority recovery in `logs/p4-52-source-backed-integration.md`, upgrading the remaining narrow `pca-vs-pcb` terminology lane into a conservative bare-board versus assembled-board stage boundary
+- Added `methods-bare-board-vs-assembled-board-stage-boundary` and `wiki/processes/pcb-and-assembled-board-stage-boundaries.md` so `pca-vs-pcb.md` can distinguish bare-board fabrication scope from later component-populated assembly scope without claiming `PCA` normalization, hidden IPC definitions, cleaning causality, SMT / THT decision rules, or prototype-to-volume guidance
+- P4-52 current result: `2025.11.17` `pca-vs-pcb` is now source-backed partial at stage-boundary level only; `PCA = PCBA`, `PCA = printed circuit assembly`, public IPC term preference, reliability / cleaning claims, and manufacturing-economics claims remain unresolved
+- Completed P4-51 targeted external-authority recovery in `logs/p4-51-source-backed-integration.md`, upgrading the remaining `P4-48C` BOM / HDI / cost-reduction residual lane into a conservative source-backed complexity boundary
+- Added `methods-bom-and-hdi-complexity-boundary` and `wiki/processes/bom-and-hdi-complexity-boundaries.md` so `bom-cost.md`, `hdi-pcb-cost.md`, and `pcb-cost-reduction.md` can distinguish BOM governance, HDI build-up complexity, sequential-lamination caution context, finish taxonomy, and traceability / sourcing-risk posture without claiming pricing, savings, lead time, yield, or supplier-optimization outcomes
+- P4-51 current result: `2025.11.17` and `2025.11.27` BOM / HDI / cost-reduction drafts are now source-backed partial at complexity-boundary level only; prices, savings percentages, panelization outcomes, finish-cost rankings, supplier leverage, yield / FPY, and case-study business outcomes remain unresolved
+- Completed P4-50 targeted external-authority recovery in `logs/p4-50-source-backed-integration.md`, upgrading the strongest remaining `P4-48` remote-control residual lane into a conservative source-backed control-stack boundary
+- Added official source records for remote-control and drone control-stack identity:
+  - `vishay-ir-receiver-modules-page`
+  - `px4-basic-concepts-guide`
+  - `mavlink-overview-page`
+  - `expresslrs-getting-started`
+- Added `methods-remote-control-and-drone-control-stack-boundary` and `wiki/processes/remote-control-and-drone-control-stack-boundaries.md` so `remote-control-circuits.md`, `remote-control-car-circuits.md`, and `diy-drone.md` can distinguish IR receiver identity, RC link identity, autopilot / flight-controller role, actuator-output context, and telemetry / command-protocol identity without claiming universal RF bands, FHSS / latency, compatibility, AI, or autonomy performance
+- P4-50 current result: `2025.11.3` remote-control and drone drafts are now source-backed partial at architecture and control-stack boundary level only; RF band defaults, range / latency / telemetry claims, RC protocol rankings, ESC electrical claims, Bluetooth / Wi-Fi app-control language, and autonomous-flight feature claims remain unresolved
+- Completed P4-49 targeted external-authority recovery in `logs/p4-49-source-backed-integration.md`, upgrading the strongest `P4-48` electronics-basics follow-on into a conservative source-backed workflow boundary
+- Added official and authoritative source records for beginner workflow and prototyping-stage language:
+  - `ipc-t50-terms-and-definitions-toc`
+  - `kicad-getting-started-guide`
+  - `sparkfun-breadboard-guide`
+  - `adafruit-breadboards-for-beginners`
+- Added `methods-first-board-and-breadboard-prototyping-boundary` and `wiki/processes/first-board-and-prototyping-workflow-boundaries.md` so `first-circuit-board.md` and `protoboard-vs-breadboard.md` can use a source-backed staged beginner workflow while still blocking universal naming, universal laddering, and numeric performance claims
+- P4-49 current result: `2025.11.17` beginner-workflow and prototyping-stage language is now source-backed partial at workflow-boundary level only; `pca-vs-pcb.md` remains blocked for standards-grade `PCA` terminology conclusions, and `protoboard/perfboard/stripboard` synonym claims remain unresolved
+- Completed P4-48 parallel residual-blocker scouts and controller summary in `logs/p4-48-parallel-scout-controller-summary.md`
+- Dispatched three independent multi-agent scout lanes for the strongest remaining P4-44 blockers:
+  - `logs/p4-48a-remote-control-protocol-authority-scout.md`
+  - `logs/p4-48b-electronics-basics-authority-scout.md`
+  - `logs/p4-48c-hdi-bom-cost-driver-evidence-scout.md`
+- P4-48 controller result: all three lanes are now deletion-safe and more sharply bounded, but none were strong enough for immediate source-backed promotion into new `sources/`, `facts/`, or `wiki/` layers
+- P4-48 narrowed the highest-value next source-recovery queue to:
+  - IPC terminology metadata plus KiCad/SparkFun/Adafruit beginner-authority lane
+  - Vishay / PX4 / MAVLink / ExpressLRS remote-control protocol lane
+  - HDI / BOM cost-driver official-source or dated internal capability lane
+- Completed P4-47 targeted residual official-source recovery in `logs/p4-47-source-backed-integration.md`, upgrading the `2025.11.17` `IGBT vs MOSFET` lane from blocker-only to conservative source-backed device-boundary coverage
+- Added official ST and Infineon source records for MOSFET and IGBT device-class identity:
+  - `st-power-mosfets-page`
+  - `infineon-igbt-discretes-page`
+  - `infineon-bjt-mosfet-igbt-difference-page`
+- Added `methods-igbt-vs-mosfet-device-identity-boundary` and `wiki/processes/igbt-and-mosfet-device-boundaries.md` so `igbt-vs-mosfet.md` can distinguish MOSFET versus IGBT device identity, terminal naming, body-diode versus anti-parallel-diode boundary, and exact-part-dependent substitution limits without claiming universal voltage, current, switching-frequency, efficiency, EMI, thermal, or replacement rules
+- P4-47 current result: `2025.11.17` `IGBT vs MOSFET` is now source-backed partial at device-identity and packaging-boundary level only; selection windows, switching and conduction loss claims, SOA and protection claims, and universal recommendations remain unresolved
+- Completed P4-46 targeted residual official-source recovery in `logs/p4-46-source-backed-integration.md`, upgrading the `2025.11.3` USB taxonomy lane from blocker-only to conservative source-backed boundary coverage
+- Added official USB-IF source records for cable-and-connector compliance updates, USB logo usage guidance, and the USB4 Version 2.0 / `USB 80Gbps` announcement:
+  - `usb-if-cables-and-connectors-compliance-updates-page`
+  - `usb-if-usb-logo-usage-guidelines-2024`
+  - `usb-if-usb4-v2-80gbps-announcement`
+- Added `standards-usb-connector-and-certified-capability-taxonomy-boundary` and `wiki/processes/usb-connector-and-capability-taxonomy-boundaries.md` so `types-of-usb-ports.md` and adjacent `type-c-charger` drafts can distinguish connector shape, protocol generation, and certified capability branding without claiming universal speed, power, Thunderbolt, adapter, certification, or market-adoption outcomes
+- P4-46 current result: `2025.11.3` USB taxonomy and charger-adjacent drafts are now source-backed partial at taxonomy and compliance-boundary level only; exact speed/power tables, Thunderbolt, video/Alt Mode, adapter capability, and market-adoption claims remain unresolved
+- Completed P4-45 targeted residual official-source recovery in `logs/p4-45-source-backed-integration.md`, upgrading the `2025.11.3` ESP32 / Raspberry Pi / smart-home protocol lane from blocker-only to conservative source-backed identity coverage
+- Added official Espressif source records for ESP32-C6, ESP32-H2, ESP-IDF, and ESP-Matter; added official Raspberry Pi source records for Raspberry Pi 5, Compute Module 5, RP2040, Pico, and Pico 2; added standards-owner source records for CSA Matter, Thread Group Thread, and CSA Zigbee
+- Added `methods-maker-platform-official-identity-boundary`, `standards-smart-home-protocol-identity-boundary`, and `wiki/applications/maker-and-smart-home-platform-boundaries.md` so `esp32-projects.md`, `raspberry-pi-projects.md`, and `smart-home-diy-automation.md` can cite official product / protocol identity while blocking project rankings, ecosystem compatibility, AI/performance, certification, compliance, supplier capability, production-readiness, price, lead-time, yield, and quality claims
+- P4-45 current result: `2025.11.3` maker / smart-home drafts are source-backed partial at identity and boundary level only; broader USB taxonomy, remote-control protocol specifics, drone firmware, rankings, general electronics education, IGBT vs MOSFET, HDI / BOM / cost, and supplier-specific commercial / capability claims remain unresolved
+- Completed P4-44 November 2025 controller integration in `logs/p4-44-source-backed-integration.md`, converting the strongest P4-40 scout candidates into reusable source-backed data while keeping draft-originated commercial, supplier, performance, certification, and ranking claims blocked
+- Added official CAM / data-exchange source records for Ucamco Gerber and IPC-DPMX / IPC-2581:
+  - `ucamco-gerber-format-page`
+  - `ucamco-gerber-downloads-page`
+  - `ipc-dpmx-ipc-2581-consortium-home-page`
+  - `ipc-dpmx-ipc-2581-consortium-about-page`
+- Added `methods-cam-data-exchange-format-boundary` so `cam-files.md`, `buying-pcb.md`, and adjacent file-package drafts can use official Gerber / IPC-DPMX vocabulary without claiming format superiority, CAM correction success, supplier acceptance, yield, cost, or lead-time outcomes
+- Added official software-vendor source records for KiCad and Autodesk EAGLE / Fusion:
+  - `kicad-official-pcb-design-suite-page`
+  - `autodesk-eagle-fusion-features-page`
+  - `autodesk-eagle-subscription-faq`
+  - `autodesk-fusion-pcb-design-software-page`
+- Added `methods-pcb-design-tool-official-feature-identity-boundary` and `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md` so `kicad-vs-eagle.md` and `pcb-design-tools.md` can cite official feature identity while blocking tool rankings, pricing, feature-parity, and recommendation claims; EAGLE support / sales status is explicitly dated and refresh-required after `2026-06-07`
+- Added official Murata ferrite-bead FAQ source records:
+  - `murata-ferrite-bead-effective-use-faq`
+  - `murata-ferrite-bead-impedance-frequency-faq`
+  - `murata-ferrite-bead-impedance-curve-faq`
+- Added `methods-ferrite-bead-vendor-guidance-boundary` and `wiki/processes/emi-noise-suppression-component-boundaries.md` so `ferrite-bead.md` has source-backed Murata-scoped EMI / impedance-curve vocabulary while universal placement, part selection, EMI reduction, and compliance claims remain blocked
+- P4-44 current result: November 2025 drafts are now source-backed partial for CAM / data-exchange, PCB design-tool feature identity, and ferrite-bead vendor guidance; existing partial routes still cover PTFE / Rogers / USB-C charger, ceramic / AlN / alumina, service routing, controlled impedance, rigid-flex, Rogers, Ventec IMS, and medical traceability boundaries
+- P4-44 residual blockers remain: broader USB taxonomy, ESP32, Raspberry Pi, Matter / Thread / Zigbee, remote-control protocols, consumer / EMS / Taiwan rankings, general electronics education, IGBT vs MOSFET operating windows, HDI / BOM / PCB cost, fast-turn / turnkey commercial promises, supplier capability, current certifications, process windows, yield, quality rate, and finished-board electrical / RF / thermal performance without official sources or dated capability records
+
 ## 2026-04-28
 
 - Added `logs/p4-44-blog-learning-continuation-handoff.md` as the next-session entry point for continuing `/code/blogs/tmps` blog learning without relying on transient conversation context

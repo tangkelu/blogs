@@ -2,10 +2,12 @@
 topic_id: "materials-high-speed-material-family-selection"
 title: "High-Speed Material Family Selection"
 category: "materials"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-03"
 fact_ids:
   - "standards-high-frequency-printed-board-and-material-boundary"
+  - "materials-parameter-scope-panasonic-megtron-values"
+  - "materials-panasonic-megtron-site-mentioned-coverage"
   - "materials-panasonic-megtron-6"
   - "materials-panasonic-megtron-7"
   - "materials-panasonic-megtron-8"
@@ -33,7 +35,7 @@ tags: ["materials", "high-speed", "high-speed-digital", "multilayer", "signal-in
 
 # Definition
 
-> High-speed material family selection is the process of choosing between process-friendly low-loss multilayer systems and RF-oriented laminates by matching loss, heat resistance, stackup complexity, and fabrication comfort to the actual application rather than to a generic "lowest Dk wins" rule.
+> High-speed material family selection should route designs first by material family role: process-friendly high-speed digital multilayer systems, networking-focused ultra-low-loss options, and RF/microwave contrast laminates. The page exists to prevent those families from being flattened into one generic "low-loss" bucket.
 
 ## Why This Topic Matters
 
@@ -41,6 +43,15 @@ tags: ["materials", "high-speed", "high-speed-digital", "multilayer", "signal-in
 - Panasonic MEGTRON 6, 7, and 8 sit in the high-speed digital / networking lane, where HDI, layer-count, and thermal behavior are part of the selection problem.
 - Isola Tachyon 100G and Ventec VT-464G are also high-speed digital options, but they are described with different process and electrical tradeoffs.
 - Astra MT77 is a useful contrast because it is RF/microwave-oriented and has frequency-aware Dk / Df tables, which helps separate "high-speed digital" from "RF default" behavior.
+
+## Routing Guidance
+
+- Route `MEGTRON 6` and `MEGTRON 7` into process-friendly high-speed multilayer and networking discussions where public facts already support HDI, high-layer-count, and heat-resistance framing.
+- Route `MEGTRON 8` into next-generation networking context when the question is about a newer Panasonic ultra-low-loss family, but keep every number tied to the named `N` or `U` variant.
+- Route `Tachyon 100G` into very-high-speed digital backplane, daughter-card, and stable-electrical-behavior discussions rather than into generic microwave laminate recommendations.
+- Route `VT-464G` into signal-integrity multilayer selection for servers, storage, switches, routers, and high-performance-computing framing.
+- Route `Astra MT77` as an RF/microwave contrast family when the question is frequency-aware dielectric behavior plus FR-4-compatible processing, not when the prompt merely asks for "best high-speed material."
+- Keep `VT-870` as an RF-adjacent contrast only; it is not a default member of the same high-speed digital bucket as `MEGTRON`, `Tachyon 100G`, or `VT-464G`.
 
 ## Stable Facts
 
@@ -67,9 +78,17 @@ tags: ["materials", "high-speed", "high-speed-digital", "multilayer", "signal-in
 - Use Astra MT77 as an RF/microwave contrast point when the question is about frequency-aware electrical behavior and FR-4-compatible processing.
 - Use Tachyon 100G and VT-464G when the question is high-speed digital selection rather than microwave antenna selection.
 - Do not collapse frequency-specific Dk / Df numbers into one universal value.
-- Do not treat manufacturer positioning statements as design approval.
+- Keep every numeric property attached to the named grade, variant, frequency, and cited method.
+- Treat family positioning statements as routing help, not as a substitute for stackup-specific SI modeling or procurement approval.
 - Do not use `IPC-4103` material scope as proof of finished-board RF qualification, channel performance, supplier stock, or supplier capability.
 - Do not use `IPC-6018` metadata as a substitute for licensed requirements, procurement documentation, or acceptance evidence.
+
+## Blocked Claims
+
+- process windows
+- supplier-capability claims
+- channel-performance guarantees
+- cost, lead-time, and yield claims
 
 ## Common Misreadings
 
@@ -85,10 +104,23 @@ tags: ["materials", "high-speed", "high-speed-digital", "multilayer", "signal-in
 
 - Any claim about newly published Panasonic, Isola, or Ventec grades beyond the currently captured registry cards
 - Any claim that depends on a more specific grade, copper style, or stackup than the registry card supports
+- Any claim about current product availability, channel access, supplier recommendation, or approved vendor status
+- Any attempt to freeze insertion-loss, BER, jitter, eye-diagram, or other channel outcomes from material-family cards alone
+- Any comparison table that tries to rank families with universal process-window or manufacturability statements
 - Any claim about `VT-870` if this page is later expanded beyond the current RF-adjacent contrast note
+
+## Related Facts And Source Scope
+
+- `materials-parameter-scope-panasonic-megtron-values` keeps MEGTRON 6 and 7 numeric claims tied to the exact public grades rather than to the full family name.
+- `materials-panasonic-megtron-site-mentioned-coverage` is the coverage map for what the current corpus can safely say about the broader MEGTRON lineup.
+- `materials-isola-astra-mt77`, `materials-isola-tachyon-100g`, `materials-ventec-vt-464g`, and `materials-ventec-vt-870` provide product-family anchors, but they do not prove final-board performance or factory readiness.
+- `standards-high-frequency-printed-board-and-material-boundary` separates board-specification scope from base-material scope so prompts do not misuse `IPC-6018` or `IPC-4103`.
+- Use the linked source records for product-family framing and parameter scope; move to stackup-, coupon-, or qualification-level evidence before publishing finished-board claims.
 
 ## Related Fact Cards
 
+- `materials-parameter-scope-panasonic-megtron-values`
+- `materials-panasonic-megtron-site-mentioned-coverage`
 - `materials-panasonic-megtron-6`
 - `materials-panasonic-megtron-7`
 - `materials-panasonic-megtron-8`

@@ -2,8 +2,8 @@
 topic_id: "materials-rf-selector-by-application-band"
 title: "RF Material Selector by Application Band"
 category: "materials"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-03"
 fact_ids:
   - "materials-rf-selector-by-application"
   - "materials-rogers-ro3003"
@@ -17,6 +17,18 @@ fact_ids:
   - "materials-agc-rf-30a"
   - "materials-agc-rf-10"
   - "materials-agc-rf-35htc"
+  - "materials-taconic-tly-series-rf-laminate"
+  - "materials-taconic-rf35-ceramic-ptfe"
+  - "materials-taconic-cer-series-high-dk"
+  - "materials-taconic-tlx-moderate-loss-ptfe"
+  - "materials-taconic-tlc-economy-ptfe"
+  - "materials-taconic-bonding-materials"
+  - "taconic_ptfe_laminate_family_parameters"
+  - "materials-taconic-official-source-coverage-gap"
+  - "materials-arlon-clte-xt-microwave"
+  - "materials-arlon-tc350-thermal-rf"
+  - "materials-arlon-ad-series-antenna"
+  - "materials-arlon-official-source-coverage"
 source_ids:
   - "rogers-ro4003c-product-page"
   - "rogers-ro4350b-product-page"
@@ -37,7 +49,9 @@ source_ids:
   - "agc-rf-10-datasheet"
   - "agc-rf-35htc-datasheet"
   - "agc-rf-microwave-laminates-page"
-tags: ["rf-materials", "selector", "application", "frequency-band", "materials"]
+  - "frontendapt-taconic-pcb-json"
+  - "frontendapt-arlon-pcb-json"
+tags: ["rf-materials", "selector", "application", "frequency-band", "materials", "taconic", "arlon"]
 ---
 
 # Definition
@@ -52,6 +66,8 @@ tags: ["rf-materials", "selector", "application", "frequency-band", "materials"]
 
 ## Stable Facts
 
+### Official-Source-Backed Entries (Tier 1)
+
 - `Mixed digital + RF, sub-6 GHz, cost-sensitive` usually starts with `RO4003C`, `RO4350B`, `Astra MT77`, `MEGTRON 6`, or `VT-870`.
 - `High-speed digital + RF hybrid` usually starts with `MEGTRON 6`, `MEGTRON 7`, `Astra MT77`, or `RO4350B`.
 - `Sub-6 to low tens of GHz, low-loss but still manufacturable at scale` usually starts with `RO3003`, `RO3035`, `Astra MT77`, `VT-870`, or `RF-30A`.
@@ -61,6 +77,36 @@ tags: ["rf-materials", "selector", "application", "frequency-band", "materials"]
 - `High-volume antennas, passive RF, and PIM-sensitive commercial builds` usually starts with `RF-30A`, `VT-870`, or `RO4350B`.
 - `Satellite communications, GPS antennas, filters, and couplers` usually starts with `VTM1000i`, `RO3010`, `RF-10`, or the `TMM` family.
 - `High-power RF where heat spreading matters` usually starts with `RF-35HTC` or the `TMM` family.
+
+### Taconic Additions — Tier-2 Internal Only
+
+> All Taconic entries below are sourced from APTPCB internal JSON (`frontendapt-taconic-pcb-json`). Official Taconic RF laminate product pages are not currently confirmed recoverable. Do not publish these values externally without explicit source-gap pairing.
+
+- `Ultra-low-loss: satellite LNA, Ka-band phased array, EW receivers, VNA calibration substrates` — `Taconic TLY-5A` (Dk 2.17, Df 0.0009) or `TLY-3` (Dk 2.33, Df 0.0009).
+- `Lower-loss PTFE with compact trace geometry: base station duplexers, GPS patch arrays, T/R modules` — `Taconic TLX-8` (Dk 2.55, Df 0.0019).
+- `Cost-entry PTFE for Wi-Fi 6/7, Bluetooth, ISM band, automotive V2X` — `Taconic TLC` (Dk 2.95–3.20, Df 0.0020).
+- `Sub-6 GHz 5G antennas, PA pallets, WLAN enterprise AP, general commercial RF` — `Taconic RF-35A2` (Dk 3.50 ±0.05, Df 0.0018; ~51% lower loss than RO4350B; PTFE plasma required).
+- `Miniaturized antennas, cavity filters, DRA` — `Taconic CER-10` (Dk 10.0) or `CER-20/30` (Dk 20–30).
+- `High-power 5G base station PA, GaN amplifiers` — `Taconic TF-260` (Dk 2.60) or `TF-290` (Dk 2.90); thermally optimized PTFE.
+- `Hybrid Taconic/FR-4 multilayer bonding` — `fastRise 27` (Dk 2.72, Df 0.0014); also compatible with Rogers RO4350B cores.
+- `All-PTFE stripline for satellite transponders, defense radar panels` — `TacLam` (Dk 2.10–2.35, Df 0.0008).
+
+### Arlon Additions — Tier-2 Internal Only (RF/PTFE Families)
+
+> Arlon CLTE-XT, TC350/600, AD250/300/1000 are sourced from APTPCB internal JSON (`frontendapt-arlon-pcb-json`). No current official Arlon product pages confirmed for these families. Do not publish externally without source-gap pairing. Arlon N-series (33N–85N) and 86HP are official-backed; see `arlon-material-family-source-governance.md`.
+
+- `Low-PIM phased-array radar and cellular base station feeds` — `Arlon CLTE-XT` (Dk 2.94–3.00, Df 0.0012; Z-axis CTE copper-matched for PTH reliability).
+- `High-power amplifiers, GaN/GaAs device mounting, tower-mounted amplifiers` — `Arlon TC350` (Dk 3.50, Df 0.0020, thermal conductivity 1.0 W/m·K) or `TC600` (Dk 6.15).
+- `GPS/GNSS patch antennas, DRA, broadband base station antennas` — `Arlon AD250` (Dk 2.50) or `AD300` (~3.00); Df 0.0014.
+- `Extreme miniaturization: GPS L1/L2 patches, miniaturized filters, compact cavity` — `Arlon AD1000` (Dk 10.2, Df 0.0014; ~3× size reduction vs FR-4).
+
+## Source Tier Governance
+
+| Tier | Entries | External Publishable? |
+|------|---------|-----------------------|
+| **Tier 1 — Official** | Rogers, Isola, Panasonic, Ventec, AGC | ✅ With standard citation |
+| **Tier 2 — Internal only** | Taconic (APTPCB JSON), Arlon RF/PTFE families (APTPCB JSON) | ⚠️ Internal use only; must pair source-gap note if published |
+| **Tier 1 — Official (Arlon non-RF)** | Arlon N-series (33N–85N), 86HP | ✅ With standard citation |
 
 ## Engineering Boundaries
 
@@ -79,6 +125,8 @@ tags: ["rf-materials", "selector", "application", "frequency-band", "materials"]
 - `Lower loss` does not remove the need to check tuning, transition design, and real assembly conditions.
 - `FR-4-compatible processing` does not mean all RF laminates are interchangeable in fabrication.
 - `Commercial antenna material` does not mean the same laminate is the best choice for every antenna geometry or power level.
+- `Taconic RF-35A2 and Rogers RO4350B have matched Dk` does not mean they are drop-in substitutes; RF-35A2 requires PTFE plasma desmear while RO4350B uses FR-4 chemistry — fabrication routes differ.
+- `Tier-2 Taconic/Arlon entries appear in selector` does not mean they are officially validated; they require source-gap pairing before external publication.
 
 ## Must Refresh Before Publishing
 
@@ -99,6 +147,17 @@ tags: ["rf-materials", "selector", "application", "frequency-band", "materials"]
 - `materials-agc-rf-30a`
 - `materials-agc-rf-10`
 - `materials-agc-rf-35htc`
+- `materials-taconic-tly-series-rf-laminate` [Tier-2]
+- `materials-taconic-rf35-ceramic-ptfe` [Tier-2]
+- `materials-taconic-cer-series-high-dk` [Tier-2]
+- `materials-taconic-tlx-moderate-loss-ptfe` [Tier-2]
+- `materials-taconic-tlc-economy-ptfe` [Tier-2]
+- `materials-taconic-bonding-materials` [Tier-2]
+- `materials-arlon-clte-xt-microwave` [Tier-2]
+- `materials-arlon-tc350-thermal-rf` [Tier-2]
+- `materials-arlon-ad-series-antenna` [Tier-2]
+- `wiki/materials/taconic-material-family-source-governance.md` (Taconic tier map)
+- `wiki/materials/arlon-material-family-source-governance.md` (Arlon tier map)
 
 ## Primary Sources
 

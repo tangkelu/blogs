@@ -6,7 +6,7 @@ category: "standards"
 status: "verified"
 confidence: "high"
 must_refresh: true
-reviewed_at: "2026-04-24"
+reviewed_at: "2026-05-03"
 source_ids:
   - "ipc-document-revision-table"
   - "ipc-j-std-001j-toc"

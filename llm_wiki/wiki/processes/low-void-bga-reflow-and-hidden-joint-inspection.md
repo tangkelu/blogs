@@ -2,16 +2,13 @@
 topic_id: "processes-low-void-bga-reflow-and-hidden-joint-inspection"
 title: "Low-Void BGA Reflow And Hidden-Joint Inspection"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-27"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-low-void-bga-dfm-to-process-review"
   - "methods-low-void-bga-reflow-paste-vs-assembly-boundary"
   - "methods-hidden-joint-xray-inspection-boundary"
-  - "methods-low-void-bga-conservative-generation-gate"
   - "methods-pcba-fai-fqi-and-traceability-gates"
-  - "methods-pcba-first-article-inspection-vs-high-speed-validation-boundary"
-  - "methods-internal-application-scenario-coverage-map"
 source_ids:
   - "indium-reflow-profile-to-paste-spec"
   - "indium-8-9hf-solder-paste-pds"
@@ -28,43 +25,94 @@ source_ids:
   - "frontendapt-industry-industrial-control-page-en"
   - "frontendapt-industry-robotics-page-en"
   - "frontendapt-industry-medical-page-en"
-tags: ["low-void", "bga", "reflow", "x-ray", "hidden-joint", "pcba", "processes", "inspection"]
+tags: ["low-void", "bga", "reflow", "x-ray", "hidden-joint", "pcba", "process-boundary", "inspection"]
 ---
 
 # Definition
 
-> Low-void BGA reflow and hidden-joint inspection are best treated as one controlled process chain: dense-package review defines what is void-sensitive, stencil and paste decisions shape transfer behavior, measured profiling verifies how the real assembly heats, and X-ray or AXI adds concealed-joint visibility before the build is released. The current evidence base supports this workflow framing, not universal thresholds or guaranteed outcome claims.
+> Low-void BGA reflow and hidden-joint inspection are a staged process-planning boundary, not a paste marketing page and not a quality promise. The current local source layer supports a controlled chain in which DFM review shapes the process, print control and profiling shape the reflow behavior, hidden-joint inspection adds visibility for dense packages, and FAI / traceability closes the release gate. It does not support universal void thresholds, guaranteed outcomes, or board-level performance proof from reflow language alone.
 
 ## Why This Topic Matters
 
-- `Low-void BGA` topics become unsafe when paste guidance, assembly capability, and application outcomes get blended into one marketing promise.
-- Dense BGA, QFN, and similar hidden-joint packages create an inspection gap that optical inspection alone cannot close.
-- Future rewrites need one reusable frame that explains what can be said safely about low-void planning across optical, high-speed, robotics, and medical-adjacent contexts.
+- Low-void language becomes unsafe when paste selection, assembly execution, inspection coverage, and end-use performance are collapsed into one claim.
+- Dense BGA, QFN, and similar hidden-joint packages create inspection gaps that require a layered process view.
+- This page gives future AI workers one reusable planning boundary for low-void work across optical, high-speed, industrial, and medical-adjacent boards.
+
+## Staged Workflow Model
+
+### Stage 1: DFM Review
+
+- package review defines whether the joint is void-sensitive
+- DFM / DFT review sets the process posture before print or reflow
+- application context only adds review pressure; it does not prove outcome
+
+### Stage 2: Print Control
+
+- stencil and paste planning govern transfer behavior
+- SPI feedback belongs upstream of reflow
+- paste selection must stay tied to the actual assembly context
+
+### Stage 3: Profiling
+
+- measured profiling verifies the actual board / paste combination
+- reflow should be matched to the paste specification, not reused by slogan
+- profiling is part of process control, not a standalone proof of assembly success
+
+### Stage 4: Hidden-Joint Inspection
+
+- X-ray or AXI adds visibility for concealed solder joints
+- dense-package inspection belongs in the layered quality flow
+- hidden-joint inspection does not replace process control or release governance
+
+### Stage 5: FAI And Traceability
+
+- first-article confirmation closes the early-release loop
+- traceability and quality gates accumulate evidence rather than acting as one magic step
+- final release still remains a separate governance decision
 
 ## Stable Facts
 
-- The low-void DFM-to-process-review card supports a staged workflow from package review through print control, profiling, hidden-joint inspection, and first-build confirmation.
+- The DFM-to-process-review card supports a staged workflow from package review through print control, profiling, hidden-joint inspection, and first-build confirmation.
 - The paste-versus-assembly boundary card keeps vendor paste guidance and board-specific process proof separate.
 - The hidden-joint X-ray boundary card supports X-ray or AXI as the visibility layer for concealed solder features without turning it into universal acceptance proof.
 - The FAI and traceability gate card supports release language as a stack of quality gates rather than one inspection event.
 - The first-article-versus-high-speed-validation boundary card keeps assembled-board launch confirmation separate from SI validation.
 - The internal application-scenario coverage card supports scenario-level context for server/data-center, high-speed digital, industrial/robotics, and medical/wearable hardware.
 
+## Active Process Guidance
+
+### Use This Page For
+
+- low-void BGA planning language
+- dense-package inspection planning
+- separating paste guidance from assembly execution
+- explaining why hidden-joint packages need layered review
+
+### Safe Vocabulary
+
+- `DFM review`
+- `print control`
+- `measured profiling`
+- `hidden-joint inspection`
+- `first-article confirmation`
+- `traceability gates`
+- `layered quality flow`
+
+### Recommended Flow
+
+- Start with package review and DFM / DFT intake.
+- Plan stencil and paste behavior.
+- Profile the real board.
+- Add X-ray or AXI for concealed-joint visibility.
+- Close with FAI and traceability before release.
+
 ## Engineering Boundaries
 
-- Keep `low-void` as a process-planning and validation term, not as a generic performance label.
+- Keep `low-void` as process-planning language, not as a generic performance label.
 - Keep `X-ray`, `AXI`, or `CT` in the inspection lane; they do not replace SPI, AOI, electrical test, or functional validation.
 - Keep paste guidance tied to the chosen paste family and measured profile on the actual board.
 - Keep first-build confirmation and traceability as release-governance layers, not as proof that all downstream performance questions are closed.
-- If the article uses application framing, keep the application as context for review pressure only:
-  optical modules raise compact thermal-path and hidden-joint concerns, high-speed boards raise SI-validation separation concerns, industrial robotics raises mixed-technology and harsh-environment concerns, and medical/wearable builds raise documentation and role-boundary concerns.
-
-## Application Notes For Lane C Slugs
-
-- `low-void-bga-reflow-data-center-optical-module` can safely explain compact thermal-path planning, dense-package inspection access, and first-build review discipline. It cannot claim optical-module power classes, MSA thermal compliance, yield improvement, or void thresholds.
-- `low-void-bga-reflow-high-speed-si` can safely explain why hidden-joint quality belongs in the broader high-speed build review while keeping channel validation separate. It cannot claim loss, jitter, BER, eye results, or that low-void work alone enables a link rate.
-- `low-void-bga-reflow-industrial-robotics-control` can safely explain process discipline for dense control boards and mixed-technology assembly context. It cannot claim SIL, PL, diagnostic coverage, fault-reaction outcomes, or safety-certification support.
-- `low-void-bga-reflow-medical-imaging-wearable` can safely explain documentation-aware process planning for dense medical-adjacent electronics. It cannot claim biocompatibility, FDA applicability, device safety proof, wearable flex-life outcomes, or release authority.
+- Keep application labels as context for review pressure only.
 
 ## Common Misreadings
 
@@ -76,22 +124,19 @@ tags: ["low-void", "bga", "reflow", "x-ray", "hidden-joint", "pcba", "processes"
 
 ## Must Refresh Before Publishing
 
-- Any void-percentage threshold, X-ray threshold, or IPC class-specific accept/reject statement
-- Any reflow recipe numbers such as ramp, soak, peak, TAL, cooling, or vacuum settings
-- Any claim about yield improvement, defect escape reduction, or quantified reliability gain
-- Any SI, optical, thermal, or safety performance result attributed directly to low-void soldering
-- Any medical, regulatory, certification, or release-authority claim
-- Any claim that a named supplier or program always uses one exact inspection coverage rule
+- any void-percentage threshold, X-ray threshold, or IPC class-specific accept/reject statement
+- any reflow recipe numbers such as ramp, soak, peak, TAL, cooling, or vacuum settings
+- any claim about yield improvement, defect escape reduction, or quantified reliability gain
+- any SI, optical, thermal, or safety performance result attributed directly to low-void soldering
+- any medical, regulatory, certification, or release-authority claim
+- any claim that a named supplier or program always uses one exact inspection coverage rule
 
 ## Related Fact Cards
 
 - `methods-low-void-bga-dfm-to-process-review`
 - `methods-low-void-bga-reflow-paste-vs-assembly-boundary`
 - `methods-hidden-joint-xray-inspection-boundary`
-- `methods-low-void-bga-conservative-generation-gate`
 - `methods-pcba-fai-fqi-and-traceability-gates`
-- `methods-pcba-first-article-inspection-vs-high-speed-validation-boundary`
-- `methods-internal-application-scenario-coverage-map`
 
 ## Primary Sources
 

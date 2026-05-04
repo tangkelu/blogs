@@ -1,6 +1,44 @@
 # Backlog
 
-Last updated: 2026-04-28
+Historical execution record only. For current execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md).
+
+Last updated: 2026-05-03
+
+- controller_rule: Before continuing, read `../policies/execution-priority-and-anti-drift.md`; backlog completion items do not override the default source-backed promotion priority.
+- source_refresh_rule: rechecking a source and updating `URL` or `checked_at` is not the same as landing knowledge locally
+- landed_rule: only updates that add or improve reusable `sources/`, `facts/`, or `wiki/` content count as landed knowledge
+- `done`: the `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` conservative rewrite batch has landed under the `2026-04-26` generation gate; keep `20-layer` and `22-layer` on hold, and only backfill `18 / 24-layer` into `P4-06`-style evidence-pack packaging later if uniform packaging is needed
+- `done`: `5g-pcb-assembly.md`, `medical-device-pcb-assembly.md`, `wearable-tech-pcb-assembly.md`, and `optical-pcb-manufacturing.md` have landed as conservative rewrite consumption only; keep them in draft-layer execution / manufacturing-control posture and do not treat them as standards, certification, performance, or supplier-readiness unlocks
+- `done`: `P4-114` has absorbed `5g-pcb-assembly.md`, `medical-device-pcb-assembly.md`, `wearable-tech-pcb-assembly.md`, and `optical-pcb-manufacturing.md` into `llm_wiki` at claim-family level; reusable knowledge is now explicit for telecom execution flow, medical/wearable manufacturing-control, and compact optical-module review, while narrower source lanes remain queued for grounding/access, compact closure handling, rigid-flex handling, and optical contamination-control gaps
+- `done`: `P4-115` has promoted the strongest `P4-114` residual lanes into reusable facts and wiki aggregations; keep `grounding-and-return-path-execution-boundary` and `optical-module-handling-contamination-control` as the remaining high-value source-gap hold lanes
+- `done`: `P4-116` Batch A source-first execution is integrated: `grounding-and-return-path-execution-boundary` landed as a narrow fact-partial lane, `optical-module-handling-contamination-control` landed only as connector-endface inspection / cleaning fact-partial, `Taconic` product-grade recovery remains hold-only, and `Arlon` landed one additional exact-product branch through `86HP`; no broad wiki expansion was justified
+- `done`: `P4-116` residual exact-claim sweeps for `2026.4.27/en` and `2026.4.29/en` are now logged as inventory-only routing maps, not rewrite continuation
+- `done`: `P4-116` hold-maintenance rechecked `biological-computing` and confirmed no new current authority; the lane remains hold-only and should not reenter rewrite consumption without new owner, regulator, material, or HILPCB capability evidence
+- `done`: `P4-116` hold-maintenance rechecked `quantum-computing` and confirmed no new current authority; the lane remains hold-only and should not reenter rewrite consumption without new owner, standards, cryogenic, or HILPCB capability evidence
+- `done`: `P4-116` hold-maintenance rechecked `20-layer` and `22-layer` and confirmed both remain hold-only under the current closure-sheet ceiling
+- `done`: `P4-117` upgraded `audio-amplifier-pcb.md` from conservative-rewrite-only status to a narrow source-backed board-review boundary through TI official audio EMI and EVM-board documentation sources
+- `done`: `P4-118` upgraded the wearable compact-access residual into a narrow source-backed access-and-closure boundary, giving `wearable-tech-pcb-assembly.md` compact access, closure, inspection visibility, and rework reach language only
+- `done`: `P4-119` rechecked the post-`P4-118` residual state and found no new exact non-held lane in `2026.4.27/en` or `2026.4.29/en`; `medical role-boundary` and `compact imaging inspection planning` stay covered, while `audio-amplifier` and `wearable compact access` stay closed as landed lanes
+- `done`: `P4-120` ranked the next long-task mainline and moved the default continuation from residual scouting to `P4-06` Phase 5 first-wave prompt handoff for `6-layer`, `8-layer`, and `10-layer`
+- `done`: `P4-124` upgraded `fpga-pcb.md` from generic compute-boundary reuse to a narrow owner-backed FPGA platform and guarded high-speed-IO identity lane; exact `Versal`, `Kintex UltraScale`, and `Agilex` nouns are now source-backed at identity level only, while validated-interface, numeric, and supplier-proof claims remain blocked
+- `done`: controller-only closure ranking is now explicit for `HILPCB Blog1-13` input-device residuals and `APTPCB260401` `2-layer`; `HILPCB Blog1-13` keeps only keyboard firmware / hot-swap / wireless / consumer-compliance, mouse sensor / switch / wireless, and `MIDI / USB-MIDI / BLE-MIDI` as future `source_recovery_now` families, while `APTPCB260401` `2-layer` keeps only material exact-value and finish-chemistry identity families as future `source_recovery_now`
+- `done`: `P4-128` closed the remaining `2026.4.27/en` partials into an explicit ranked residual state; no batch-wide reopen is justified, only article-triggered single-noun cleanup remains `tracker_only`, and compute numerics, `quantum`, performance numerics, qualification/pass-status, deployment/program proof, supplier-readiness, and `HILPCB` capability proof remain `hold_only`
+- `done`: `P4-129` turned the `HILPCB Blog1-13` `source_recovery_now` remainder into an official-only three-lane queue: `keyboard firmware / hot-swap / wireless / consumer-compliance`, `mouse sensor / switch / wireless`, then `MIDI / USB-MIDI / BLE-MIDI`; all three remain boundary-reduction-only and do not unlock performance numerics, audio-quality, battery/range/latency, or supplier-proof claims
+- `done`: `P4-130` converted the first `HILPCB Blog1-13` queue lane into a reusable boundary card for `QMK`, `VIA`, Bluetooth terminology, FCC equipment-authorization entry context, and EU `RED` entry context; keyboard performance, wireless performance, certification proof, hot-swap durability, and `HILPCB` capability proof remain blocked
+- `done`: `P4-131` converted the second `HILPCB Blog1-13` queue lane into a reusable boundary card for PixArt sensor identity, Omron switch identity, Bluetooth terminology, FCC equipment-authorization entry context, and EU `RED` entry context; DPI / CPI, latency, switch-life proof, battery/range/coexistence, certification proof, and `HILPCB` capability proof remain blocked
+- `done`: `P4-132` converted the third `HILPCB Blog1-13` queue lane into a reusable boundary card for `MIDI`, `USB-MIDI`, `BLE-MIDI`, and Bluetooth terminology / qualification-entry boundary; DAW support, host-support proof, no-driver proof, latency/jitter, audio-performance, wireless-performance, certification proof, and `HILPCB` capability proof remain blocked
+- `done`: the ranked `HILPCB Blog1-13` official-only source queue from `P4-129` is now exhausted at its current boundary-reduction ceiling; further input-device reopening should be triggered only by exact new authority for a narrower remaining lane
+- `done`: `P4-133` converted the `P4-125 Lane B` copper-foil branch from class-vocabulary-only posture into a narrow exact-product micro-lane for owner-scoped `Rz` / profile rows across selected JX and Furukawa products; supplier-neutral roughness tables, `ED` versus rolled rankings, RF-loss claims, and finished-board performance claims remain blocked
+- `done`: `P4-127` tightened the current official blocker evidence for the `Taconic / Arlon RF-PTFE recovery` lane; Taconic still lacks recoverable current public ADD laminate product pages or datasheets, and Arlon's current live product inventory still does not expose `CLTE-XT`, `TC350`, `AD250`, `AD255`, `AD300`, `CuClad`, or `DiClad`, so the lane remains partial rather than exact-product complete
+- `done`: `P4-143` completed detailed material specification recovery via APTPCB internal JSON for Taconic (TLY, TLX, TLC, RF-35, CER-10, fastRise) and Arlon (CLTE-XT, TC350, AD250/1000, CuClad/DiClad); detailed Dk/Df, thermal, mechanical properties now available in recovered fact cards while maintaining blocked-claims discipline; lane status remains hold-first for Taconic and partial for Arlon RF/PTFE
+- `done`: `P4-144` completed standards metadata refresh for IPC fabrication standards (IPC-4103B, IPC-4562B), assembly standards (J-STD-001J, IPC-A-610H), finish standards (IPC-4552B, 4553A, 4554, 4555A, 4556A), and data-exchange standards (IPC-DPMX/2581, Gerber); updated `checked_at` timestamps for 7 source records and `reviewed_at` for 2 fact cards; no new revisions detected
+- `done`: `P4-145` completed process-governance gap map by refreshing 4 APTPCB PCBA quality source records and creating 3 new governance boundary cards: inspection process governance (SPI→AOI→X-ray→ICT→FCT), screening/qualification governance (ESS/Qualification/FAI three-layer separation), and release/traceability governance (IQC→Production→Test→Release evidence chain); maintained blocked-claims discipline for all thresholds and supplier proofs
+- `now`: `P4-121` is active as the controller note for `P4-06` Phase 5 Batch 1; keep the batch locked to first-wave handoff scope only, and keep blocked numerics, supplier-proof, standards-threshold, and process-window claims out of prompt consumption
+- `queued`: after `P4-121`, execute the ranked `P4-125` source-backed queue in bounded subagent lanes: `Taconic / Arlon RF-PTFE recovery`, `standards metadata refresh`, `process-governance gap map`, `flex / copper-foil / ceramic-platform recovery`, then a closure-controller pass for claim-family-only families
+- `next`: after Batch 1, keep `buying-pcb`, `electronics-assembly`, and `rf-antenna` paused unless exact new authority appears or one lane clearly reopens as a narrow source-backed promotion
+- `next`: preserve the existing compute boundary aggregation plus the split electrical boundary pages as the Batch B ceiling unless exact new authority appears
+- `watch`: keep `biological-computing`, `quantum-computing`, `20-layer`, `22-layer`, and `tmps/materias_pdf` closed unless exact new authority appears
+- `audit`: Batch B is controller/log-only: compute stays boundary-level only through `wiki/processes/compute-infrastructure-pcb-review-boundaries.md`, and electrical stays split across `methods-electrical-formula-identity-boundary`, `methods-current-carrying-trace-width-and-copper-boundary`, and `methods-watts-to-amps-conservative-generation-gate`; blocked interface, cooling, deployment-proof, AC, and three-phase claims remain blocked
 
 ## Status Legend
 
@@ -11,11 +49,22 @@ Last updated: 2026-04-28
 
 ## Coverage Snapshot
 
+Interpretation rule:
+
+- `done` / `landed` / `ready` / `absorbed` may only indicate routing, claim-family intake, partial source backing, or conservative consumption
+- they do not imply full learning unless the affected lane was explicitly promoted into `sources/`, `facts/`, and `wiki/`
+
 Current covered areas:
 
 - Standards metadata:
   - IPC document revision metadata
   - 3GPP 38-series / TS 38.104 indexing
+  - Ucamco Gerber and IPC-DPMX / IPC-2581 data-exchange identity boundaries
+  - USB connector / capability / certified-branding taxonomy boundaries
+  - military environmental and EMI standards boundary for guarded `MIL-STD-461` and `MIL-STD-810` vocabulary
+  - aviation altimeter standards metadata boundary for guarded `DO-160G`, `DO-254`, and radar-altimeter-only `DO-155` vocabulary
+  - embedded imaging serial-interface boundary for `MIPI CSI-2` / `D-PHY` / `DSI-2` / `DCS` and `LVDS` family vocabulary
+  - thermal-imaging output-video and machine-vision interface boundary for guarded `PAL/NTSC`, `HDMI`, `SDI`, `GigE Vision`, and `USB3 Vision` vocabulary
 - Compliance:
   - RoHS / REACH / SVHC baseline handling
 - Materials:
@@ -31,12 +80,17 @@ Current covered areas:
   - Ventec VT-4B7 / VT-4BC / VT-4BD exact-product IMS material values
   - Arlon official discovery anchors plus 55NT / 85N / 85NT exact-product coverage and hi-rel branch normalization
   - Rogers RO4400 / RO4450F / RO4460G2 bondply anchors
-  - Ceramic / alumina / AlN class-level anchors via CeramTec and MARUWA
+  - Ceramic / alumina / AlN class-level anchors via CeramTec and MARUWA, plus one owner-scoped alumina-versus-AlN comparison boundary through current CeramTec and MARUWA pages
   - ABF and BT substrate-material class-level anchors via Ajinomoto / AFT and MGC
   - Flexible circuit-board / LCP material class-level anchors via Panasonic FELIOS
   - internal APT material-family coverage for Arlon, Isola, Megtron, Taconic, Teflon/PTFE, spread-glass FR-4, and controlled-impedance stackups
 - Methods:
   - SPI / AOI / ICT boundaries
+  - barometric pressure-sensor owner identity and interface boundary
+  - EO/IR detector owner identity and interface boundary
+  - navigation sensor technology owner identity boundary
+  - fire-control platform interface boundary
+  - hydrophone and generic beamforming identity boundary
   - internal hybrid stackups
   - internal RF validation
   - PTFE processing support
@@ -45,9 +99,21 @@ Current covered areas:
   - internal PCBA gates from NPI through mass production
   - internal PCBA quality gates, FPT, fine-pitch/stencil/selective-solder controls, cable/harness, and IC programming integration
   - internal HDI, impedance/TDR, high-layer/backdrill, thermal-platform, rigid-flex, and IC-substrate manufacturing postures
+  - CAM / manufacturing-data exchange boundaries for Gerber and IPC-DPMX / IPC-2581
+  - PCB design-tool feature-identity boundaries for KiCad and Autodesk EAGLE / Fusion
+  - Murata-scoped ferrite-bead EMI / impedance-curve guidance boundaries
+  - `CPW` and grounded-`CPW` structure identity boundary
   - layer-count claim-family disposition coverage for the 10 English layer-count PCB manufacturing blogs
 - Wiki pages:
   - Rogers RO3000 family
+  - altimeter aviation standards and assurance boundaries
+  - barometric altimeter pressure sensor boundaries
+  - EO/IR detector owner identity review boundaries
+  - fire control platform and sensor interface boundaries
+  - military environmental and EMI standards boundaries
+  - navigation sensor technology review boundaries
+  - sensor and display serial interface review boundaries
+  - output video and machine vision interface review boundaries
   - RF surface finish selection
   - RF validation and test coverage
   - backplane execution and connector integration
@@ -59,12 +125,43 @@ Current covered areas:
   - high-speed material family selection
   - RF material selector by application band
   - finish zoning and selective multi-finish
+  - PCB design data exchange and tool boundaries
+  - EMI noise-suppression component boundaries
+  - USB connector and capability taxonomy boundaries
+  - RF transmission line structure boundaries with guarded `CPW` identity
 
 Main structural gaps:
 
 - topic wiki 已可供 prompt 初步消费，但 evidence-pack 规范还没接到 `prompts_template/`
 - current P4-34 priority is blog-draft learning under `/code/blogs/tmps/*/en`; `/code/blogs/tmps/materias_pdf` source recovery is intentionally paused until the user reopens that lane
 - full `/code/blogs/tmps` corpus now has first-round deletion-safe manifest and lane-log coverage through P4-33, but most of the `715` English markdown drafts still need official-source recovery, fact extraction, topic wiki aggregation, and prompt gates before they are source-backed complete
+- `2026.4.27/en` is now deletion-safe at claim-family level through `P4-67`, and its compute, sensor/navigation/imaging, and defense lanes are now prompt-consumable through `P4-68` through `P4-70`; exact interface, sensor, mission-system, qualification, and supplier-capability claims still need narrower owner or standards authority before fact promotion
+- the `2026.4.27/en` compute-infrastructure slice is now prompt-consumable through `P4-68`, but exact interface, cooling, and deployment claims remain blocked pending narrower authority lanes
+- the `2026.4.27/en` sensor/navigation/imaging slice is now prompt-consumable through `P4-69`, `P4-71` adds a narrow laser-altimeter subset lane, `P4-72` adds a narrow sonar transducer-front-end lane, `P4-73` adds a narrow radio-altimeter identity / RF-front-end lane, `P4-74` adds owner-backed barometric pressure-sensor identity coverage, `P4-76` adds owner-backed EO/IR detector identity coverage, `P4-77` adds embedded imaging serial-interface identity coverage, `P4-78` adds a thermal-imaging-only output-video and machine-vision interface lane for guarded `PAL/NTSC`, `HDMI`, `SDI`, `GigE Vision`, and `USB3 Vision`, `P4-79` adds a gyroscope-and-compass navigation-sensor technology lane for guarded `MEMS gyroscope`, `FOG`, `ring laser gyroscope`, `magnetometer`, and `fluxgate magnetometer`, `P4-80` adds guarded `MIL-STD-461` / `MIL-STD-810` standards-context vocabulary, `P4-81` adds guarded `DO-160G`, `DO-254`, and radar-altimeter-only `DO-155` standards metadata, and `P4-82` adds guarded `hydrophone`, receive-side `hydrophone array`, and generic `beamforming` identity vocabulary; pressure-port doctrine, exact RF architecture, array implementation, detector-performance claims, and the combined `RS-170/STANAG 3350` phrasing remain blocked
+- the `2026.4.27/en` defense / EW / surveillance / targeting slice is now prompt-consumable through `P4-70`, `P4-71` adds a narrower laser timing/control-board lane for `targeting`, `P4-75` adds a narrower fire-control platform-interface lane, `P4-76` adds a narrower optical-sensor detector-identity lane, `P4-77` adds a narrower optical-sensor serial-interface lane, and `P4-80` adds guarded `MIL-STD-461` / `MIL-STD-810` standards-context vocabulary; weapon authority, EO/IR performance, exact video standards, qualification, and supplier-proof claims remain blocked
+- `2026.4.29/en` is now deletion-safe at claim-family level through `P4-83`, `P4-84` adds narrow source-backed support for the `smart-meter` standards / metrology lane around guarded `IEC 62052-11`, `IEC 62052-31`, `IEC 62053-21/22/23`, `MID` / `MI-003`, historical `ANSI C12.20`, and `AMI`, `P4-85` adds narrow source-backed support for the smart-meter communication identity lane around guarded `DLMS/COSEM`, `IEC 62056`, `PRIME`, `G3-PLC`, `Wi-SUN`, `Zigbee`, `NB-IoT`, and `LTE-M`, `P4-86` adds narrow source-backed support for the EV-charger control-stack identity lane around guarded `IEC 61851-1`, `IEC 61851-23`, `IEC 61851-24`, `ISO 15118`, `SAE J1772`, `CCS`, `NACS`, and `OCPP`, `P4-87` adds narrow source-backed support for the hearing-aid identity lane around guarded `LE Audio`, `Auracast`, `telecoil`, and `induction loop systems`, `P4-88` adds narrow source-backed support for the satellite space-material lane around guarded `ASTM E595`, NASA outgassing, `IPC-6012FS`, and `Class 3 / Class 3A` hierarchy vocabulary, `P4-89` adds narrow source-backed support for the neuromorphic identity lane around exact `Loihi 2`, `Akida`, `Speck`, `Xylo`, `DVS`, and `PMBus`, and `P4-117` adds narrow source-backed support for the `audio-amplifier` board-review lane around mixed-signal partitioning, speaker/output path caution, connector access, and bring-up preparation; exact smart-meter interoperability, EV-charger payment/compliance proof, hearing-aid interoperability/regulatory proof, neuromorphic interface-behavior / concept-family claims, audio-performance, and satellite qualification or launch-environment claims still need narrower authority
+- `P4-90` consumed the neuromorphic lane directly into `tmps/2026.4.29/en/neuromorphic-computing-pcb.md`, which is now conservative-rewrite ready at identity-only neuromorphic board-review level; the remaining `2026.4.29` work should preferentially reuse landed lanes for similar rewrite containment before reopening new authority recovery
+- `P4-91` consumed the already-landed smart-meter, EV-charger, hearing-aid, and satellite lanes directly into `tmps/2026.4.29/en/smart-meter-pcb.md`, `tmps/2026.4.29/en/ev-charger-pcb.md`, `tmps/2026.4.29/en/hearing-aid-pcb.md`, and `tmps/2026.4.29/en/satellite-pcb.md`; execution-layer only, not source-backed complete
+- `P4-92` consumed the existing power-energy, lidar, and compute/high-speed routes directly into `tmps/2026.4.29/en/inverter-pcb.md`, `tmps/2026.4.29/en/lidar-pcb.md`, and `tmps/2026.4.29/en/fpga-pcb.md`; execution-layer only, not source-backed complete
+- `P4-93` consumed the existing medical-manufacturing-control, conformal-coating workflow, and generic consumer-input routes directly into `tmps/2026.4.29/en/endoscope-pcb.md` and `tmps/2026.4.29/en/gaming-pcb.md`; ten `2026.4.29` drafts are now conservative-rewrite ready, and the next preference is to test `audio-amplifier` only if it can be narrowed to generic mixed-signal or interface-board review posture while leaving `dna-computing` and `biological-computing` behind the next authority-recovery gate
+- `P4-94` formalized `dna-computing-pcb.md` and `biological-computing-pcb.md` as hold-only drafts pending narrower owner, regulator, standards, material, and capability authority recovery; they remain deletion-safe at claim-family level only and should not enter conservative rewrite consumption yet
+- `P4-95` tightened and accepted `tmps/2026.4.29/en/audio-amplifier-pcb.md` as a conservative mixed-signal board-review draft; the `2026.4.29` expert batch now has eleven conservative-rewrite-ready drafts and two explicit hold drafts, so further progress depends on narrower authority recovery rather than more direct consumption
+- `P4-96` split the `dna-computing` lane and confirmed that only documentation-control vocabulary is currently reusable; regulator, standards, owner-platform, and supplier-support language remains blocked pending narrower authority
+- `P4-97` split the `biological-computing` lane and confirmed that only packaging-pressure and manufacturing-control vocabulary is currently reusable; wet-zone, biointerface, material-suitability, owner-platform, and supplier-support language remains blocked pending narrower authority
+- `P4-98` controller-integrated those two split lanes, so the active continuation state is now owner-platform, material, and HILPCB capability decision work rather than more regulator-language separation
+- `P4-99` showed that `dna-computing` does not need owner-platform recovery by default; if generic rewrite is acceptable, exact platform, compute-stack, regulator, and HILPCB readiness nouns should be stripped instead
+- `P4-100` showed that `biological-computing` loses most of its value once owner, material, wet-zone, and HILPCB life-science readiness nouns are stripped, so hold may still be preferable unless a very narrow packaging-pressure article is worthwhile
+- `P4-101` set the default HILPCB capability decision to `strip`; current local evidence does not support public life-science, diagnostics, medical-device, neural-interface, or bioelectronic manufacturing-readiness claims without dated internal records
+- `P4-102` controller-integrated those three lanes, making strip-first eligibility testing the active continuation state instead of more authority recovery by default
+- `P4-103` completed the `dna-computing` strip-first rewrite and landed it as a conservative subsystem and documentation-aware build-flow article without reopening owner-platform, regulator, or HILPCB capability recovery
+- `P4-104` confirmed that `biological-computing` remains hold-preferred after strip-first review because too little distinct article value survives once owner, material, wet-zone, and HILPCB readiness language is stripped
+- `P4-105` controller-integrated those two outcomes, bringing the `2026.4.29` expert batch to twelve landed conservative rewrites and one explicit hold draft
+- `P4-106` explicitly recorded that `smart-meter-pcb.md` has already consumed `P4-84` and `P4-85` into a conservative board-review article, so smart-meter no longer needs another implicit-consumption check unless a reusable review-boundary artifact is intentionally created
+- `P4-107` explicitly recorded that `ev-charger-pcb.md` has already consumed `P4-86` into a conservative board-review article, so EV-charger no longer needs another implicit-consumption check unless a reusable review-boundary artifact is intentionally created
+- `P4-108` explicitly recorded that `neuromorphic-computing-pcb.md` has already consumed `P4-89` into a conservative board-review article, so neuromorphic no longer needs another implicit-consumption check unless a residual exact-noun lane is intentionally reopened
+- `P4-109` switched Phase 4 into low-intervention batch mode; execution-layer only, not source-backed complete
+- `P4-110` landed that long-running `2026.4.27` sensor / navigation / imaging normalization batch at draft layer; execution-layer only, not source-backed complete
+- `P4-111` landed the `2026.4.27` defense / EW / surveillance / targeting normalization batch at draft layer; execution-layer only, not source-backed complete
 - 高频材料主源仍可继续扩展，尤其 Taconic 与更多 Arlon 产品级官方 datasheet anchors
 - generic material-class anchors 已补到官方类别级；下一步缺口集中在产品级 datasheet / grade anchors
 - finish / fabrication standards 元数据还偏薄，不能替代付费标准正文
@@ -77,22 +174,482 @@ Main structural gaps:
 ## Next Session Entry
 
 - status: `now`
-- entry file: `logs/p4-44-blog-learning-continuation-handoff.md`
-- immediate task: `P4-44 November 2025 Controller Integration`
+- entry file: `logs/p4-117-2026-5-2-audio-amplifier-board-review-boundary-source-backed-integration.md`
+- immediate task: Keep `biological-computing` on hold unless there is strong publication pressure for a very thin manufacturing-control article; preserve the already-normalized `2026.4.27` slices; keep `20-layer` and `22-layer` in hold-maintenance / closure-sheet-ready mode; and only reopen another residual lane if one exact non-held claim family still lacks its own source-backed fact/wiki layer
 - inputs:
+  - `logs/p4-117-2026-5-2-audio-amplifier-board-review-boundary-source-backed-integration.md`
+  - `logs/p4-116-2026-5-2-2026-4-27-claim-inventory.md`
+  - `logs/p4-116-2026-5-2-2026-4-29-claim-inventory.md`
+  - `logs/phase-status.md`
+  - `logs/backlog.md`
+  - `logs/update-log.md`
+- expected output:
+  - preserve the already-normalized `2026.4.27` drafts without reopening them
+  - keep `biological-computing-pcb.md` as the only explicit hold draft in `2026.4.29/en`
+  - keep `20-layer` and `22-layer` in hold-maintenance mode unless exact new authority appears
+  - do not reopen already-consumed `smart-meter`, `ev-charger`, `neuromorphic`, or `audio-amplifier` lanes unless a new reusable fact-layer artifact is intentionally required
+  - keep qualification, supplier-proof, deployment, performance, and HILPCB capability claims blocked unless exact new evidence lanes are intentionally opened
+- current corpus status:
+  - `31` dated English `tmps/*/en` folders currently exist
+  - all current English `tmps/*/en` folders are deletion-safe at claim-family / routing level through `P4-83`
+  - `/code/blogs/tmps/2026.4.29/en` is deletion-safe and now partially source-backed in the `smart-meter` standards / metrology lane, the `smart-meter` communication-identity lane, the `EV-charger` control-stack identity lane, the `hearing-aid` wireless / telecoil identity lane, the `satellite` space-material / outgassing metadata lane, the `neuromorphic` identity lane, the `audio-amplifier` board-review lane, the power-energy inverter boundary, the lidar timing and pulsed-driver boundary, the compute/high-speed review boundary, the medical-manufacturing-control `endoscope` rewrite lane, the generic consumer-input `gaming` rewrite lane, and the strip-first `dna-computing` rewrite lane; twelve drafts are conservative-rewrite ready, one draft is on explicit hold, and the batch is not source-backed complete
+  - not all claim families are source-backed fact-layer complete
+  - `/code/blogs/tmps/materias_pdf` remains paused
+
+### P4-59 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/radio-frequency-cable.md`
+  - `/code/blogs/tmps/2025.11.10/en/encoder‑circuit.md`
+  - `/code/blogs/tmps/2025.11.10/en/ohms-law.md`
+  - `/code/blogs/tmps/2025.11.10/en/watts‑to‐amps.md`
+  - `logs/p4-58-parallel-scout-controller-summary.md`
+  - `logs/p4-59a-2025-11-10-formula-split-and-local-coverage-prep.md`
+  - `logs/p4-59b-2025-11-10-rf-cable-official-source-recovery-scout.md`
+  - `logs/p4-59c-2025-11-10-digital-priority-encoder-official-source-recovery-scout.md`
+- controller integration:
+  - `logs/p4-59-source-backed-integration.md`
+- result:
+  - `2025.11.10` `radio-frequency-cable.md` now has source-backed partial coverage at coaxial-centered identity and impedance-boundary level only.
+  - `2025.11.10` `encoder‑circuit.md` now has source-backed partial coverage at split digital priority-encoder identity level only.
+  - `2025.11.10` `ohms-law.md` and `watts‑to‐amps.md` remain prep-only and still need institution-source formula authority plus a separate PCB consequence lane.
+  - broad RF cable taxonomy, application, performance, sourcing, and HIL capability claims remain blocked.
+  - mixed mechanical encoder content, broad encoder pedagogy, and broad application claims remain blocked.
+
+### P4-60 Targeted Formula Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/ohms-law.md`
+  - `/code/blogs/tmps/2025.11.10/en/watts‑to‐amps.md`
+  - `logs/p4-58b-2025-11-10-formula-pedagogy-authority-scout.md`
+  - `logs/p4-59a-2025-11-10-formula-split-and-local-coverage-prep.md`
+  - `logs/p4-60a-2025-11-10-formula-lane-local-recheck.md`
+  - `logs/p4-60c-2025-11-10-watts-to-amps-institutional-authority-scout.md`
+- controller integration:
+  - `logs/p4-60-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-electrical-formula-identity-boundary`
+  - `wiki/processes/electrical-formula-identity-boundaries.md`
+- result:
+  - `2025.11.10` `ohms-law.md` now has source-backed partial coverage at SI-unit and guarded formula-identity level only.
+  - `2025.11.10` `watts‑to‐amps.md` now has source-backed partial coverage at SI-vocabulary plus narrow `A = W / V` algebraic-conversion level only.
+  - historical, calculator, AC / three-phase, and broad formula-teaching claims remain blocked.
+  - PCB trace-width, copper-weight, connector-loading, thermal, simulation, `IPC-2221`, and supplier-capability claims remain blocked pending a separate evidence lane.
+
+### P4-61 Targeted PCB Consequence Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/watts‑to‐amps.md`
+  - `/code/blogs/tmps/2025.11.10/en/ohms-law.md`
+  - `logs/p4-61a-2025-11-10-watts-to-amps-pcb-consequence-split.md`
+  - `facts/methods/electrical-formula-identity-boundary.md`
+  - existing thermal / power-energy boundary layers
+- controller integration:
+  - `logs/p4-61-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-current-carrying-trace-width-and-copper-boundary`
+  - `wiki/processes/current-carrying-and-high-current-layout-boundaries.md`
+- result:
+  - `2025.11.10` `watts‑to‐amps.md` now has source-backed partial coverage at conductor-sizing and high-current-layout boundary level only.
+  - `2025.11.10` `ohms-law.md` does not participate in this PCB consequence lane.
+  - numeric trace-width tables, exact copper-ounce choices, connector ratings, simulation claims, testing claims, and `IPC-2221` shorthand remain blocked pending narrower evidence lanes.
+
+### P4-62 Targeted Validation Workflow Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/watts‑to‑amps.md`
+  - `logs/p4-62a-2025-11-10-watts-to-amps-validation-split.md`
+  - existing prototype / NPI / DFM / FAI / FCT workflow facts and wiki pages
+- controller integration:
+  - `logs/p4-62-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-pre-fabrication-validation-workflow-boundary`
+  - `wiki/processes/pre-fabrication-validation-and-prototype-boundaries.md`
+- result:
+  - `2025.11.10` `watts‑to‑amps.md` now has source-backed partial coverage at generic pre-fabrication validation workflow level only.
+  - named simulator claims, connector-rating claims, manufacturability proof, and broad quality or commercial claims remain blocked.
+
+### P4-63 Targeted Named Simulation Tool Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/watts‑to‑amps.md`
+  - `logs/p4-63a-2025-11-10-simulation-tool-split.md`
+  - official HILPCB circuit-simulator tool page
+- controller integration:
+  - `logs/p4-63-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-named-simulation-tool-entry-identity-boundary`
+  - `wiki/processes/named-simulation-tool-boundaries.md`
+- result:
+  - `2025.11.10` `watts‑to‑amps.md` now has source-backed partial coverage at named simulation-tool entry identity level only.
+  - simulator capability claims, validation-outcome claims, and connector-rating claims remain blocked.
+
+### P4-64 Targeted Connector Current-Field Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/watts‑to‑amps.md`
+  - `logs/p4-64a-2025-11-10-connector-rating-split.md`
+  - `logs/p4-64b-2025-11-10-connector-rating-local-coverage-recheck.md`
+  - `logs/p4-64c-2025-11-10-connector-rating-official-source-scout.md`
+  - existing connector-route and current-carrying boundary files
+- controller integration:
+  - `logs/p4-64-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-connector-current-rating-selection-boundary`
+  - `wiki/processes/connector-current-rating-selection-boundaries.md`
+- result:
+  - `2025.11.10` `watts‑to‑amps.md` now has source-backed partial coverage at connector current-field selection boundary level only.
+  - connector review may now say `check the owner-published current field on the official page or datasheet` after current is known.
+  - safety-margin, regulator-current, generic component-rating, and outcome claims remained blocked pending a separate narrower lane.
+
+### P4-65 Targeted Regulator Current-Field Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/watts‑to‑amps.md`
+  - `logs/p4-65a-2025-11-10-watts-to-amps-post-connector-residual-map.md`
+  - `logs/p4-65b-2025-11-10-regulator-current-limit-official-source-scout.md`
+  - `facts/methods/connector-current-rating-selection-boundary.md`
+- controller integration:
+  - `logs/p4-65-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-regulator-current-field-selection-boundary`
+  - `wiki/processes/regulator-current-field-selection-boundaries.md`
+- result:
+  - `2025.11.10` `watts‑to‑amps.md` now has source-backed partial coverage at regulator current-field selection boundary level only.
+  - regulator review may now say `check the owner-published Output Current or Iout (max) field` after load current is known, while keeping `Current Limit` or `Switch Current Limit` separate unless the owner documentation defines the mapping.
+  - safety-margin language, generic component-rating generalization, simulation-as-proof, and outcome claims remain blocked and should be rewritten out rather than widened into new source recovery by default.
+
+### P4-66 Watts-To-Amps Rewrite-Governance Closeout
+
+- status: `rewrite_governance_ready`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/watts‑to‑amps.md`
+  - `logs/p4-66a-2025-11-10-watts-to-amps-line-to-lane-rewrite-map.md`
+  - `logs/p4-66b-2025-11-10-watts-to-amps-generation-gate-scout.md`
+  - all landed `P4-60` through `P4-65` fact cards
+- controller closeout:
+  - `logs/p4-66-rewrite-governance-closeout.md`
+- upgraded prompt-consumption fact:
+  - `methods-watts-to-amps-conservative-generation-gate`
+- result:
+  - `2025.11.10` `watts‑to‑amps.md` is now prompt-consumable only through a conservative generation gate.
+  - future rewrites must keep formula identity, conductor review, connector-field review, regulator-field review, and validation workflow separate.
+  - AC / three-phase instruction, calculator packs, safety-margin rules, standards shorthand, simulator-outcome claims, and production-outcome claims remain blocked unless exact new lanes are intentionally opened.
+
+## Recent Intake
+
+### P4-58 Parallel Residual-Blocker Scouts
+
+- status: `completed_parallel_scouts_no_new_fact_promotion`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/radio-frequency-cable.md`
+  - `/code/blogs/tmps/2025.11.10/en/ohms-law.md`
+  - `/code/blogs/tmps/2025.11.10/en/watts‑to‐amps.md`
+  - `/code/blogs/tmps/2025.11.10/en/encoder‑circuit.md`
+  - `logs/p4-40-2025-11-10-ems-electronics-rf-tools-official-source-recovery-scout.md`
+  - `logs/p4-44-source-backed-integration.md`
+  - `logs/p4-53-source-backed-integration.md`
+- controller integration:
+  - `logs/p4-58-parallel-scout-controller-summary.md`
+- scout outputs:
+  - `logs/p4-58a-2025-11-10-rf-cable-authority-scout.md`
+  - `logs/p4-58b-2025-11-10-formula-pedagogy-authority-scout.md`
+  - `logs/p4-58c-2025-11-10-encoder-circuit-authority-scout.md`
+- result:
+  - `2025.11.10` remaining blockers are now re-cut into three narrower source-recovery lanes instead of one vague general-education bucket.
+  - `radio-frequency-cable.md` is now sharply bounded and appears closest to a narrow source-backed identity recovery through cable-manufacturer, connector-owner, and measurement-owner sources.
+  - `encoder‑circuit.md` is now sharply bounded and appears recoverable only if split into a digital priority-encoder identity lane separate from mechanical encoder claims.
+  - `ohms-law.md` and `watts‑to‐amps.md` remain scout-only and still need institution-source formula authority plus a separate evidence lane for PCB current / thermal consequence claims.
+
+### P4-56 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.17/en/al2o3-ceramic-circuit-board.md`
+  - `/code/blogs/tmps/2025.11.17/en/al2o3-ceramic-pcb-manufacturer.md`
+  - `/code/blogs/tmps/2025.11.17/en/al2o3-ceramic-substrate.md`
+  - `/code/blogs/tmps/2025.11.17/en/al2o3-pcb.md`
+  - `/code/blogs/tmps/2025.11.17/en/aln-ceramic-circuit-board.md`
+  - `/code/blogs/tmps/2025.11.17/en/aln-ceramic-substrate.md`
+  - `/code/blogs/tmps/2025.11.17/en/aln-pcb.md`
+  - `logs/p4-40-2025-11-17-ceramic-power-basics-official-source-recovery-scout.md`
+  - existing ceramic / thermal-platform fact and wiki layers
+- controller integration:
+  - `logs/p4-56-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `materials-alumina-vs-aln-owner-scoped-comparison-boundary`
+  - `wiki/materials/ceramic-aln-ims-thermal-platforms.md`
+- result:
+  - the `2025.11.17` ceramic draft family now has source-backed partial coverage at alumina-versus-`AlN` owner-scoped comparison-boundary level.
+  - these drafts can distinguish alumina from `AlN` through one current official side-by-side comparison source plus one current `AlN` supplier-family source without pretending the result is a vendor-neutral ceramic property table.
+  - purity ladders, cross-supplier property tables, generic `DBC` / `AMB` availability, turnkey claims, and supplier-capability claims remain blocked.
+
+### P4-57 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2026.1.6/en/high-frequency-printed-circuit-board.md`
+  - `/code/blogs/tmps/2026.1.6/en/rf-high-frequency-pcb.md`
+  - `/code/blogs/tmps/2026.1.6/en/rf-microwave-pcb.md`
+  - `logs/p4-57a-2026-1-6-cpw-residual-scout.md`
+  - `logs/p4-57b-2025-11-17-filament-circuit-authority-scout.md`
+  - `logs/p4-57c-2025-11-17-small-fountain-pump-authority-scout.md`
+  - existing RF structure, measurement, and standards layers
+- controller integration:
+  - `logs/p4-57-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-cpw-and-grounded-cpw-topology-boundary`
+  - `wiki/processes/rf-transmission-line-structure-boundaries.md`
+- result:
+  - the `2026.1.6` RF draft family now has source-backed partial coverage at guarded `CPW` structure-identity level.
+  - the drafts can mention `CPW` as a real transmission-line family and `grounded CPW` as a distinct variant without pretending that the current source layer proves geometry rules, probing advantage, `MMIC` fit, or supplier execution.
+  - exact geometry, target-ohm recipes, via-fence behavior, and performance/commercial claims remain blocked.
+  - the `2025.11.17` `filament-circuit` and `pump-for-small-fountain-pcb` lanes were preserved as scout-only deletion-safe logs and remain blocked pending narrower equipment-owner, component-owner, or product-owner sources.
+
+### P4-55 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2026.1.6/en/high-frequency-printed-circuit-board.md`
+  - `/code/blogs/tmps/2026.1.6/en/rf-high-frequency-pcb.md`
+  - `/code/blogs/tmps/2026.1.6/en/high-frequency-multilayer-pcb.md`
+  - `/code/blogs/tmps/2026.1.6/en/microwave-rf-pcb.md`
+  - `logs/p4-42-2026-1-6-rf-high-frequency-official-source-recovery-scout.md`
+  - existing public IPC metadata and internal RF structure / validation layers
+- controller integration:
+  - `logs/p4-55-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-rf-transmission-line-structure-vocabulary-boundary`
+  - `wiki/processes/rf-transmission-line-structure-boundaries.md`
+- result:
+  - `2026.1.6` RF / high-frequency drafts now have source-backed partial coverage at transmission-line structure vocabulary level.
+  - `microstrip` and `stripline` can now route through conservative structure and layer-position language without forcing formulas, dB comparisons, or geometry-specific impedance examples.
+  - `CPW`, exact impedance numerics, topology-performance rankings, supplier precision claims, and mmWave-superiority language remain blocked.
+
+### P4-54 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.17/en/4-layer-pcb-manufacturing.md`
+  - `/code/blogs/tmps/2025.11.17/en/double-sided-pcb-manufacturer.md`
+  - `logs/p4-40-2025-11-17-ceramic-power-basics-official-source-recovery-scout.md`
+  - existing public rigid-board standards metadata and internal baseline-versus-multilayer process layers
+- controller integration:
+  - `logs/p4-54-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `standards-rigid-board-family-identity-boundary`
+  - `wiki/processes/rigid-board-family-and-layer-boundaries.md`
+- result:
+  - `2025.11.17` `4-layer-pcb-manufacturing` and `double-sided-pcb-manufacturer` now have source-backed partial coverage at rigid-board family identity level.
+  - `4-layer-pcb-manufacturing.md` can now route through multilayer rigid-board family identity without forcing advanced-feature or default-stackup claims.
+  - `double-sided-pcb-manufacturer.md` can now route through baseline rigid-board family identity without forcing supplier-selection, MOQ, lead-time, or quality claims.
+
+### P4-53 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.10/en/schematic-symbols.md`
+  - `logs/p4-40-2025-11-10-ems-electronics-rf-tools-official-source-recovery-scout.md`
+  - official IEC and IEEE standards-owner pages for `IEC 60617` and `IEEE/ANSI 315-1975`
+- controller integration:
+  - `logs/p4-53-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `standards-schematic-symbol-standards-identity-boundary`
+  - `wiki/processes/schematic-symbol-standards-boundaries.md`
+- result:
+  - `2025.11.10` `schematic-symbols` now has source-backed partial coverage at standards-identity level.
+  - `schematic-symbols.md` can now route through IEC and IEEE symbol-standard family identity without claiming public symbol-table instruction or universal drafting rules.
+  - exact symbol definitions, universal reading conventions, `current active U.S. standard` language, and CAD-tool recommendations remain blocked.
+
+### P4-52 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.17/en/pca-vs-pcb.md`
+  - `logs/p4-48b-electronics-basics-authority-scout.md`
+  - `logs/p4-49-source-backed-integration.md`
+  - existing IPC terminology metadata, bare-board electrical-test metadata, and internal PCB / PCBA workflow layers
+- controller integration:
+  - `logs/p4-52-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-bare-board-vs-assembled-board-stage-boundary`
+  - `wiki/processes/pcb-and-assembled-board-stage-boundaries.md`
+- result:
+  - `2025.11.17` `pca-vs-pcb` now has source-backed partial coverage at bare-board versus assembled-board stage-boundary level.
+  - `pca-vs-pcb.md` can now route through fabrication / bare-board-test scope versus assembly / inspection / validation scope without forcing a settled `PCA` normalization.
+  - `PCA = PCBA`, `PCA = printed circuit assembly`, hidden IPC-definition claims, cleaning / reliability causality, SMT / THT decision rules, and prototype-to-volume cost / supplier guidance remain blocked.
+
+### P4-51 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.17/en/bom-cost.md`
+  - `/code/blogs/tmps/2025.11.27/en/hdi-pcb-cost.md`
+  - `/code/blogs/tmps/2025.11.27/en/pcb-cost-reduction.md`
+  - `logs/p4-48c-hdi-bom-cost-driver-evidence-scout.md`
+  - existing BOM sourcing, traceability, HDI, microvia-reliability, finish-taxonomy, and hi-rel metadata layers
+- controller integration:
+  - `logs/p4-51-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-bom-and-hdi-complexity-boundary`
+  - `wiki/processes/bom-and-hdi-complexity-boundaries.md`
+- result:
+  - `2025.11.17` and `2025.11.27` BOM / HDI / cost-reduction drafts now have source-backed partial coverage at BOM-governance and HDI-complexity level.
+  - `bom-cost.md` can now route through BOM structure, sourcing / lifecycle / traceability posture, and separated component / PCB / assembly / tooling input layers.
+  - `hdi-pcb-cost.md` can now route through microvia, build-up, sequential-lamination, and finish / inspection complexity language.
+  - `pcb-cost-reduction.md` can now route through guarded heuristics such as avoiding over-specification and separating sourcing, fabrication, assembly, and release planning.
+  - prices, savings percentages, panelization outcomes, finish-cost rankings, supplier leverage, lead time, yield / FPY, and case-study business outcomes remain blocked.
+
+### P4-50 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.3/en/remote-control-circuits.md`
+  - `/code/blogs/tmps/2025.11.3/en/remote-control-car-circuits.md`
+  - `/code/blogs/tmps/2025.11.3/en/diy-drone.md`
+  - `logs/p4-48-parallel-scout-controller-summary.md`
+  - `logs/p4-48a-remote-control-protocol-authority-scout.md`
+- controller integration:
+  - `logs/p4-50-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-remote-control-and-drone-control-stack-boundary`
+  - `wiki/processes/remote-control-and-drone-control-stack-boundaries.md`
+- result:
+  - `2025.11.3` remote-control and drone drafts now have source-backed partial coverage through official Vishay, PX4, MAVLink, and ExpressLRS sources plus existing internal drone / UAV scenario framing.
+  - `remote-control-circuits.md` can now route through a conservative control-architecture layer covering IR receiver-module identity and generic transmitter / receiver signal-chain roles.
+  - `remote-control-car-circuits.md` can now route through conservative transmitter / receiver / ESC / servo architecture and guarded named RC-link identity.
+  - `diy-drone.md` can now route through conservative autopilot, telemetry / command protocol, and RC-link identity separation.
+  - RF band defaults, FHSS / DSSS, range / latency / telemetry-quality, ESC electrical claims, Bluetooth / Wi-Fi app-control claims, and AI / autonomy claims remain blocked.
+
+### P4-48 Parallel Residual-Blocker Scouts
+
+- status: `completed_parallel_scouts_no_new_fact_promotion`
+- inputs:
+  - `/code/blogs/tmps/2025.11.3/en/remote-control-circuits.md`
+  - `/code/blogs/tmps/2025.11.3/en/remote-control-car-circuits.md`
+  - `/code/blogs/tmps/2025.11.3/en/diy-drone.md`
+  - `/code/blogs/tmps/2025.11.17/en/first-circuit-board.md`
+  - `/code/blogs/tmps/2025.11.17/en/pca-vs-pcb.md`
+  - `/code/blogs/tmps/2025.11.17/en/protoboard-vs-breadboard.md`
+  - `/code/blogs/tmps/2025.11.17/en/bom-cost.md`
+  - `/code/blogs/tmps/2025.11.27/en/hdi-pcb-cost.md`
+  - `/code/blogs/tmps/2025.11.27/en/pcb-cost-reduction.md`
+- controller summary:
+  - `logs/p4-48-parallel-scout-controller-summary.md`
+- scout outputs:
+  - `logs/p4-48a-remote-control-protocol-authority-scout.md`
+  - `logs/p4-48b-electronics-basics-authority-scout.md`
+  - `logs/p4-48c-hdi-bom-cost-driver-evidence-scout.md`
+- result:
+  - the strongest remaining P4-44 residual lanes are now deletion-safe and more sharply bounded through parallel multi-agent scouting
+  - none of the three lanes were strong enough for immediate source-backed promotion
+  - the next highest-value recovery order is:
+    - IPC terminology metadata plus KiCad/SparkFun/Adafruit beginner-authority lane
+    - Vishay / PX4 / MAVLink / ExpressLRS remote-control protocol lane
+    - HDI / BOM cost-driver official-source or dated capability lane
+
+### P4-49 Targeted External Authority Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.17/en/first-circuit-board.md`
+  - `/code/blogs/tmps/2025.11.17/en/pca-vs-pcb.md`
+  - `/code/blogs/tmps/2025.11.17/en/protoboard-vs-breadboard.md`
+  - `logs/p4-48-parallel-scout-controller-summary.md`
+  - `logs/p4-48b-electronics-basics-authority-scout.md`
+- controller integration:
+  - `logs/p4-49-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-first-board-and-breadboard-prototyping-boundary`
+  - `wiki/processes/first-board-and-prototyping-workflow-boundaries.md`
+- result:
+  - `2025.11.17` beginner-workflow and prototyping-stage drafts now have source-backed partial coverage through public IPC terminology-family metadata, official KiCad getting-started workflow, and authoritative SparkFun / Adafruit breadboard education sources.
+  - `first-circuit-board.md` can now route through a conservative staged workflow from temporary exploration into schematic, layout, checks, fabrication-output handoff, assembly choice, bring-up, and iteration.
+  - `protoboard-vs-breadboard.md` can now route only through a temporary solderless prototyping versus more permanent soldered-transfer boundary.
+  - `pca-vs-pcb.md` remains blocked for standards-grade `PCA` terminology conclusions, and universal `protoboard / perfboard / stripboard` synonym claims remain blocked.
+
+### P4-47 Targeted Residual Official-Source Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.17/en/igbt-vs-mosfet.md`
+- controller integration:
+  - `logs/p4-47-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-igbt-vs-mosfet-device-identity-boundary`
+  - `wiki/processes/igbt-and-mosfet-device-boundaries.md`
+- result:
+  - `2025.11.17` `IGBT vs MOSFET` now has official-source-backed boundary coverage for MOSFET versus IGBT device identity, terminal naming, body-diode versus anti-parallel-diode boundary, and broad application-family context through ST and Infineon sources.
+  - The new layer supports conservative rewrite posture that separates device identity from selection heuristics and exact performance claims.
+  - Remaining blockers include universal voltage/current/frequency windows, efficiency and loss claims, SOA / protection claims, thermal and EMI claims, direct replacement rules, and market or cost comparison language.
+
+### P4-46 Targeted Residual Official-Source Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.3/en/types-of-usb-ports.md`
+  - `/code/blogs/tmps/2025.11.3/en/type-c-charger.md`
+  - `/code/blogs/tmps/2025.11.3/en/type-c-charger-pcb.md`
+- controller integration:
+  - `logs/p4-46-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `standards-usb-connector-and-certified-capability-taxonomy-boundary`
+  - `wiki/processes/usb-connector-and-capability-taxonomy-boundaries.md`
+- result:
+  - `2025.11.3` USB taxonomy and charger-adjacent drafts now have official-source-backed boundary coverage for connector families, USB4 family identity, certified USB branding, and dynamic compliance-program context through USB-IF sources.
+  - The new layer supports conservative rewrite posture that separates physical connector shape from protocol generation and certification/logo language.
+  - Remaining blockers include universal speed and power tables, Thunderbolt comparisons, Alt Mode and adapter capability claims, current ecosystem adoption, exact certification claims, and consumer recommendation language.
+
+### P4-45 Targeted Residual Official-Source Recovery
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.3/en/esp32-projects.md`
+  - `/code/blogs/tmps/2025.11.3/en/raspberry-pi-projects.md`
+  - `/code/blogs/tmps/2025.11.3/en/smart-home-diy-automation.md`
+- controller integration:
+  - `logs/p4-45-source-backed-integration.md`
+- upgraded source-backed facts / wiki:
+  - `methods-maker-platform-official-identity-boundary`
+  - `standards-smart-home-protocol-identity-boundary`
+  - `wiki/applications/maker-and-smart-home-platform-boundaries.md`
+- result:
+  - `2025.11.3` ESP32 / Raspberry Pi / smart-home drafts now have official-source-backed identity coverage through Espressif, Raspberry Pi, CSA Matter, Thread Group, and CSA Zigbee sources.
+  - The new layer supports product / protocol vocabulary for ESP32-C6, ESP32-H2, ESP-IDF, ESP-Matter, Raspberry Pi 5, Compute Module 5, RP2040, Pico, Pico 2, Matter, Thread, and Zigbee.
+  - Remaining blockers include project rankings, popularity, beginner recommendations, AI / performance claims, Apple Home / Google Home / Amazon Alexa / Home Assistant compatibility, product certification, local-control / privacy / security guarantees, RF range / latency / battery life, supplier capability, price, lead time, yield, and quality claims.
+
+### P4-44 November 2025 Source-Backed Controller Integration
+
+- status: `source_backed_fact_layer_partial`
+- inputs:
+  - `/code/blogs/tmps/2025.11.3/en`
+  - `/code/blogs/tmps/2025.11.10/en`
+  - `/code/blogs/tmps/2025.11.17/en`
+  - `/code/blogs/tmps/2025.11.27/en`
+- source scout inputs:
   - `logs/p4-40-2025-11-3-consumer-rf-usb-ptfe-official-source-recovery-scout.md`
   - `logs/p4-40-2025-11-10-ems-electronics-rf-tools-official-source-recovery-scout.md`
   - `logs/p4-40-2025-11-17-ceramic-power-basics-official-source-recovery-scout.md`
   - `logs/p4-40-2025-11-27-service-cost-medical-rf-quickturn-official-source-recovery-scout.md`
-- expected output:
+- controller integration:
   - `logs/p4-44-source-backed-integration.md`
-  - source records, fact cards, and wiki updates only where official sources or dated capability records support promotion
-- current corpus status:
-  - all current `29` dated English `tmps/*/en` folders are deletion-safe at claim-family / routing level
-  - not all claim families are source-backed fact-layer complete
-  - `/code/blogs/tmps/materias_pdf` remains paused
-
-## Recent Intake
+- upgraded source-backed facts / wiki:
+  - `methods-cam-data-exchange-format-boundary`
+  - `methods-pcb-design-tool-official-feature-identity-boundary`
+  - `methods-ferrite-bead-vendor-guidance-boundary`
+  - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+  - `wiki/processes/emi-noise-suppression-component-boundaries.md`
+- result:
+  - `2025.11.10` now has official-source-backed partial coverage for CAM / fabrication-data exchange via Ucamco Gerber and IPC-DPMX / IPC-2581, PCB design-tool feature identity via KiCad and Autodesk pages, and ferrite-bead vendor guidance via Murata FAQ pages.
+  - `2025.11.3`, `2025.11.17`, and `2025.11.27` retain existing source-backed partial routing through PTFE / Rogers / USB-C charger, ceramic / AlN / alumina, service routing, controlled impedance, rigid-flex, Rogers / Ventec IMS, and medical traceability layers.
+  - Remaining blockers are broader USB taxonomy, ESP32 / Raspberry Pi / smart-home protocols, remote-control protocols, rankings, general electronics education, IGBT vs MOSFET operating windows, HDI / BOM / PCB cost, supplier capability, current certifications, process windows, yield, quality rate, and finished-board performance claims.
 
 ### P4-43 Remaining English Blog Official-Source Scouts
 
@@ -159,7 +716,7 @@ Main structural gaps:
 
 ### P4-40 November 2025 Blog Official-Source Scouts
 
-- status: `scout_completed_pending_controller_integration`
+- status: `source_backed_fact_layer_partial`
 - inputs:
   - `/code/blogs/tmps/2025.11.3/en`
   - `/code/blogs/tmps/2025.11.10/en`
@@ -172,7 +729,7 @@ Main structural gaps:
   - `logs/p4-40-2025-11-27-service-cost-medical-rf-quickturn-official-source-recovery-scout.md`
 - result:
   - `2025.11.3` has source-backed partial routing for PTFE / low-loss and USB-C charger topics; ESP32, Raspberry Pi, smart-home protocol, remote-control protocol, satellite, and ranking claims need official sources or dated records.
-  - `2025.11.10` is claim-family mapped for EMS, electronics assembly, CAM/design tools, RF antenna/cable/ferrite, formulas, purple PCB, and basic electronics drafts; controller integration is still pending.
+  - `2025.11.10` is now partially source-backed through P4-44 for CAM / Gerber / IPC-DPMX, PCB design-tool feature identity, and Murata ferrite-bead guidance; EMS ranking, RF cable, formulas, purple PCB performance, and general electronics education remain blocked pending stronger sources.
   - `2025.11.17` has source-backed partial routing for ceramic and `4-layer` branches; BOM cost, manufacturer, IGBT/MOSFET, PCA/PCB, protoboard/breadboard, filament, and pump-PCB branches remain blocked pending official sources or dated records.
   - `2025.11.27` has source-backed partial routing for service flow, Rogers, Ventec IMS, rigid-flex bend guidance, controlled impedance, and medical traceability boundaries; HDI cost, general cost-reduction, current service promises, and medical regulatory claims remain blocked.
 
@@ -1024,11 +1581,11 @@ Main structural gaps:
   - 即使未来进入 `P4-06`，`20-layer` 与 `22-layer` 也必须先服从专门 rewrite guardrail，再决定是否能进入 evidence-pack 选择层
 - current queue:
   - safe-wave 下一步：如果需要写作，按 six-pack evidence-pack 进入 conservative draft execution
-  - high-density program 下一步：`NQ-4` 已总收口；如果继续治理，回到 `P4-13` blocked-readiness 主线
+  - high-density program 下一步：`P4-113` 已把 `20-layer` / `22-layer` 主线进一步收口为 closure-sheet-ready permanent-exclusion path；如果继续治理，只能靠 exact new authority 或 narrow dated supplier evidence 改变 ceiling，而不是重开抽象 reassessment 或继续堆 generic scaffolding
   - `18-layer` / `24-layer` 暂缓，不进 first-wave
-  - `20-layer` / `22-layer` 继续 blocked
+  - `20-layer` / `22-layer` 继续 blocked，并且当前只允许沿着已落地的 boundary / guardrail / supplier-intake lanes 继续推进
   - `NQ-4` 已通过 `logs/p4-06-nq-4-final-closeout.md` 总收口，不再作为 active queue 继续展开
-  - `P4-13` 已完成对 `20-layer` / `22-layer` draft 本体的直查 reassessment：当前不是简单改 readiness note，而是仍需一轮新的 surviving-blocker containment pass
+  - `P4-112` 已完成 post-`P4-111` controller reentry，`P4-113` 又把这条主线收束成 blocker closure sheets and permanent exclusion path：当前不是回到 `2026.4.27` 草稿规范化，也不是继续泛化 blocker review，而是默认保持 `20-layer` / `22-layer` blocked，直到精确新证据真正改变 ceiling
 
 ### P4-07 Site-Material Baseline Coverage
 

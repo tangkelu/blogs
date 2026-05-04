@@ -2,8 +2,8 @@
 topic_id: "processes-finish-zoning-and-selective-multi-finish"
 title: "Finish Zoning And Selective Multi-Finish"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-03"
 fact_ids:
   - "methods-finish-zoning-by-assembly-sequence-and-storage-exposure"
   - "methods-selective-multi-finish-strategy"
@@ -31,62 +31,112 @@ source_ids:
   - "ipc-6012f-toc"
   - "ipc-a-600k-toc"
   - "ipc-status-of-standardization"
-tags: ["surface-finish", "selective-finish", "rf", "wire-bond", "press-fit", "edge-fingers", "processes"]
+tags: ["surface-finish", "selective-finish", "multi-finish", "rf", "wire-bond", "edge-fingers", "press-fit", "storage-window", "process-boundary"]
 ---
 
 # Definition
 
-> Finish zoning and selective multi-finish is the board-level practice of assigning different finishes to different areas based on assembly sequence, storage exposure, RF performance, wire-bond need, connector wear, and press-fit behavior instead of forcing one finish onto the whole board.
+> Finish zoning and selective multi-finish is a process-planning topic, not a single-finish comparison table. The current local source layer is strong enough to support a board-level zoning posture in which different areas are assigned different finishes based on RF behavior, wire-bond need, edge-contact wear, press-fit insertion, assembly sequence, and storage exposure. It is not strong enough to support exact thickness, durability, yield, or qualification claims from finish names alone.
 
 ## Why This Topic Matters
 
-- Mixed-function boards routinely combine RF pads, digital pads, wire-bond areas, edge fingers, and press-fit connector zones that do not share the same finish requirement.
-- Your internal non-blog pages already support a zoning posture, but the logic is split across finish-selection, RF, press-fit, and standards metadata cards.
-- This topic page gives one stable aggregation point for later wiki use without turning IPC references into process claims.
+- Mixed-function boards often combine RF pads, digital/control pads, wire-bond areas, edge fingers, and press-fit connector zones with different finish demands.
+- The landed facts already support a real zoning workflow, but the logic was scattered across RF-finish, press-fit, selective-finish, and storage-exposure cards.
+- This page turns that into one active process boundary so future AI workers can describe multi-finish planning as a routing problem instead of falling back to one-finish-for-the-whole-board copy.
+
+## Multi-Finish Boundary Model
+
+### Layer 1: Functional Zoning
+
+| Zone | Safe routing posture | What it does not prove |
+|---|---|---|
+| **RF pads / RF paths** | Zone finish by RF-specific signal and contact needs | Universal lowest loss, PIM target, or exact high-GHz performance |
+| **General digital / control pads** | May use a different general-purpose planar finish than RF or bond zones | Lowest cost or universal best default |
+| **Wire-bond areas** | Separate zone when soldering and wire bonding must coexist | Bond success or exact finish-stack authority |
+| **Edge fingers / edge contacts** | Separate zone for repeated insertion or connector-contact duty | Thickness, insertion-cycle, contact-resistance, or durability proof |
+| **Press-fit connector zones** | Separate zone tied to immersion-tin-first posture plus hole-control review | Guaranteed press-fit success from finish chemistry alone |
+
+### Layer 2: Process Sequence
+
+| Process factor | Safe meaning |
+|---|---|
+| **Precision masking** | Selective multi-finish depends on masking and regional process control |
+| **Sequential processing** | Multi-finish is a manufacturing sequence decision, not just a material menu choice |
+| **Assembly behavior** | Finish choice should follow soldering, bonding, insertion, and contact-use path |
+| **Inspection / release** | More finish regions can add planning and review burden even when technically justified |
+
+### Layer 3: Storage And Exposure
+
+| Factor | Safe meaning |
+|---|---|
+| **Storage window** | Shelf-life and exposure before use are part of finish selection |
+| **Packaging / delay risk** | A board that sits before assembly may need a different finish posture than an immediately assembled board |
+| **Repeated contact duty** | Connector and insertion zones should not be treated as ordinary solder-pad zones |
 
 ## Stable Facts
 
-- The internal finish pages explicitly support `selective finish application` when one finish cannot satisfy the whole board.
-- The same internal pages give concrete mixed-finish examples such as `ENIG on SMD pads plus hard gold on edge fingers` and `OSP on general pads with ENEPIG on wire-bond areas`.
-- The selective-finish posture is tied to `precision masking` and `sequential processing`, which means finish zoning is a process-planning decision, not just a material preference.
-- The RF finish cards consistently separate `immersion silver`, `ENIG`, and `ENEPIG` by actual use case, so RF pads are one zone while digital or control areas can remain on a different finish.
-- The press-fit finish card treats `immersion tin` as the primary press-fit-oriented finish, but only inside a broader connector-and-hole-control workflow.
-- The finish-zone card ties finish choice to `storage exposure`, which means shelf life and packaging window are part of the decision even before assembly starts.
-- The IPC finish-standard card is a metadata anchor only: it is useful for document identity and revision status, but not for clause-level, thickness, or acceptance claims unless the licensed standard text is available.
-- The P4-37 finish-taxonomy extension adds `IPC-4555` as the OSP public anchor and clarifies that `IPC-4554` is immersion tin, not HASL.
-- HASL / Pb-free solder-coating discussion should be anchored through rigid-board surface-finish / solder-coating metadata such as `IPC-6012F` public TOC context unless a more specific primary source is added.
-- The P4-38 edge-contact boundary adds a dedicated metadata route for gold fingers and edge contacts through `IPC-6012F`, `IPC-A-600K`, `IPC-4552B`, and `IPC-4556`, while keeping thickness, bevel, insertion-cycle, contact-resistance, and acceptance claims blocked without licensed standards, drawings, or dated process records.
+- Internal finish pages explicitly support `selective finish application` and `selective multi-finish combinations` when one finish cannot satisfy the whole board.
+- The same internal layer gives concrete mixed-finish examples such as `ENIG on SMD pads plus hard gold on edge fingers` and `OSP on general pads with ENEPIG on wire-bond areas`.
+- The selective-finish posture is tied to `precision masking` and `sequential processing`, which makes multi-finish planning a process decision rather than a simple chemistry preference.
+- Internal RF finish-selection pages consistently separate `immersion silver`, `ENIG`, and `ENEPIG` by actual RF use case instead of treating one finish as the universal RF answer.
+- Internal RF pages also support zoning logic in which RF pads and digital/control areas may sit on different finish postures when the application justifies it.
+- The press-fit finish card supports `immersion tin` as the primary press-fit-oriented finish posture, but only inside a broader hole-control, connector-fit, and backplane-integration workflow.
+- The storage-exposure card ties finish selection to storage window and assembly timing, which means finish planning starts before soldering or bonding actually begins.
+- Public IPC metadata remains useful for finish-family identity and taxonomy anchoring, but not for clause-level interpretation, exact thickness, acceptance, or durability claims without licensed text.
+- The edge-contact boundary supports a separate metadata route for gold fingers and edge contacts while keeping bevel, thickness, insertion-cycle, contact-resistance, and acceptance claims blocked without stronger evidence.
+
+## Active Process Guidance
+
+### Use This Page For
+
+- boards mixing RF, digital, wire-bond, edge-contact, and press-fit zones
+- selective multi-finish planning language
+- finish choice tied to assembly order and storage exposure
+- explaining why one board may need more than one finish family
+
+### Safe Vocabulary
+
+- `finish zoning`
+- `selective multi-finish`
+- `functional area routing`
+- `precision masking`
+- `sequential finish processing`
+- `storage-window-sensitive finish choice`
+- `press-fit zone`
+- `edge-contact zone`
+
+### Recommended Routing Flow
+
+- Start with **functional zones** on the board.
+- Check **assembly sequence**: soldering, wire bonding, insertion, repeated contact.
+- Check **storage exposure** and release timing.
+- Then decide whether one finish is enough or selective multi-finish is justified.
+- Keep **IPC references** at taxonomy / metadata level unless stronger text exists.
 
 ## Engineering Boundaries
 
-- Do not treat masking as a minor implementation detail; selective multi-finish depends on it.
-- Do not separate process sequence from finish choice; the order of operations is part of the manufacturing decision.
-- Do not assume selective multi-finish is automatically good for yield or cost; it can add complexity, inspection burden, and quoting risk.
-- Do not ignore storage window or shelf life when a board may sit before assembly or shipping.
-- Do not collapse wire bonding, RF pads, edge fingers, and press-fit into one finish rule.
-- Do not use IPC metadata as a substitute for licensed standard text, clause interpretation, or thickness claims.
-- Do not map HASL to `IPC-4554`; that standard identity belongs to immersion tin in the current public metadata layer.
-- Do not write press-fit finish guidance without keeping hole control and connector integration in view.
-- Do not write gold-finger or edge-contact thickness, bevel, insertion durability, or contact-resistance claims from public IPC TOCs alone.
+- Do not treat selective finish as a cosmetic add-on; it depends on process sequence and masking discipline.
+- Do not collapse RF pads, wire-bond zones, edge fingers, press-fit holes, and ordinary SMT pads into one finish rule.
+- Do not let RF finish language override wire-bond, edge-contact, or storage-window needs without explicit zoning logic.
+- Do not write as if finish chemistry alone solves connector wear, press-fit insertion, bonding success, or RF loss behavior.
+- Keep IPC metadata separate from clause-level or acceptance-level process claims.
 
 ## Common Misreadings
 
-- `Selective finish supported` does not mean every finish combination is cheap or easy to mask.
-- `RF finish choice` does not automatically override wire-bond or edge-contact requirements.
-- `ENIG` being a common default does not make it the correct choice for every RF pad, connector finger, or storage window.
-- `ENEPIG` should not be treated as the default premium answer when wire bonding is not required.
-- `Immersion tin` for press-fit does not mean finish chemistry can compensate for weak drill control or connector mismatch.
-- IPC revision metadata is not the same thing as a process rule.
-- OSP being represented by an IPC public TOC does not authorize universal shelf-life, reflow-count, or cost-advantage claims.
-- A public IPC gold-finger / edge-contact metadata route does not mean the shop can manufacture or inspect every hard-gold edge-finger requirement.
+- `Selective multi-finish means any finish combination is easy or neutral to manufacture.`
+- `ENIG is the default answer for every RF, connector, and bond zone.`
+- `ENEPIG should be used everywhere once wire bonding appears anywhere on the board.`
+- `Immersion tin by itself guarantees press-fit reliability.`
+- `Gold-finger or edge-contact metadata proves durability or qualification.`
+- `Storage-window concerns disappear once the finish family is named.`
 
 ## Must Refresh Before Publishing
 
-- Any exact shelf-life, storage-window, or finish-thickness value
-- Any clause-level IPC claim or revision interpretation beyond public metadata
-- Any yield, cost, or masking-effort statement that depends on a specific fab workflow
-- Any claim about guaranteed compatibility between a finish choice and a specific wire-bond, RF, edge-finger, or press-fit implementation
-- Any exact gold-finger thickness, bevel geometry, insertion-cycle life, contact resistance, or edge-contact acceptance threshold
+- any exact thickness, durability, bevel, insertion-cycle, or contact-resistance claim
+- any IPC clause-level or acceptance-level claim without licensed standard text
+- any shelf-life, storage-window, or reflow-count claim stated as exact authority
+- any qualification or pass-status claim for wire-bond, RF, edge-contact, or press-fit execution
+- any yield, masking-effort, cost, or lead-time statement tied to selective multi-finish
 
 ## Related Fact Cards
 

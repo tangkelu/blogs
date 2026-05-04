@@ -6,10 +6,10 @@ category: "standards"
 status: "verified"
 confidence: "high"
 must_refresh: true
-reviewed_at: "2026-04-28"
+reviewed_at: "2026-05-03"
 source_ids:
-  - "ipc-2223e-flex-rigid-flex-design-standard-page"
-  - "ipc-6013e-toc"
+  - "ipc-2223e-flex-rigid-flex-design-standard-page"  # refreshed 2026-05-03
+  - "ipc-6013e-toc"  # refreshed 2026-05-03
   - "ipc-document-revision-table"
 tags: ["ipc-2223", "ipc-6013", "flex", "rigid-flex", "fpc", "design-standard", "metadata", "2025-10-20"]
 ---

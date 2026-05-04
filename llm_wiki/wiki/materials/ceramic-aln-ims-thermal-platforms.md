@@ -1,12 +1,17 @@
 ---
-topic_id: "materials-ceramic-aln-ims-thermal-platforms"
-title: "Ceramic, AlN, And IMS Thermal Platforms"
+wiki_id: "wiki-materials-ceramic-aln-ims-thermal-platforms"
+title: "Ceramic, AlN, and IMS thermal-platform routing"
+topic: "Ceramic / AlN / IMS thermal-platform selection"
 category: "materials"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+reviewed_at: "2026-05-03"
 fact_ids:
   - "materials-ceramic-alumina-aln-class-source-coverage"
+  - "materials-alumina-vs-aln-owner-scoped-comparison-boundary"
   - "materials-ltcc-class-definition-and-nonclaims"
+  - "materials-thin-film-ceramic-circuit-technology-kyocera"
+  - "materials-ceramic-platform-anchor-map"
+  - "materials-parameter-scope-ventec-ims-material-values"
 source_ids:
   - "frontendhil-ceramic-pcb-product-page-en"
   - "frontendhil-high-thermal-pcb-product-page-en"
@@ -14,68 +19,123 @@ source_ids:
   - "ceramtec-ceramic-substrates-page"
   - "maruwa-aln-substrates-page"
   - "kyocera-ltcc-material-page"
+  - "kyocera-thin-film-circuit-boards-page"
   - "kyocera-thin-film-technology-page"
   - "ventec-ims-family-overview"
-tags: ["materials", "ceramic", "alumina", "aln", "ims", "thermal-management"]
+tags: ["materials", "ceramic", "alumina", "aln", "ltcc", "thin-film", "ims", "thermal-management"]
 ---
 
-# Definition
+# Use This Page For
 
-> Ceramic, AlN, and IMS thermal-platform selection should start with platform class, not with isolated conductivity numbers. The first question is whether the design needs a ceramic substrate family, an AlN-specific ceramic option, or an insulated metal substrate path for thermal management.
+- Routing drafts that say `ceramic PCB`, `alumina substrate`, `AlN substrate`, `LTCC`, `thin-film ceramic`, `IMS`, `MCPCB`, or generic `high thermal PCB`.
+- Separating ceramic-substrate families from metal-base thermal-management families before any product-level selection is made.
+- Preventing unsupported cross-vendor conductivity, metallization, suitability, cost, or lead-time claims from entering public copy.
 
-## Why This Topic Matters
+# Core Routing Rule
 
-- HIL/APT public pages already talk about ceramic PCB and high-thermal contexts, so the wiki needs a clean thermal-platform framing layer.
-- Current official anchors support class-level explanations for ceramic, alumina, AlN, and IMS, but they do not yet justify a frozen cross-vendor property table.
-- Without a governance page, it is easy to flatten ceramic and metal-base platforms into one generic "high thermal PCB" claim.
+- Start with platform class, not with one conductivity row.
+- `Ceramic substrate`, `AlN substrate`, `LTCC`, `thin-film ceramic`, and `IMS` are adjacent thermal-platform lanes, not interchangeable synonyms.
+- If a draft cannot say which lane it means, rewrite the draft before adding product or process detail.
 
-## Stable Facts
+# Platform Boundaries
 
-- HIL/APT non-blog pages mention ceramic PCB and high-thermal platform contexts.
-- CeramTec provides an official ceramic substrate page covering ceramic substrate classes, including alumina and aluminum nitride.
-- MARUWA provides an official Aluminum Nitride substrate page.
-- Ventec provides an official IMS / thermal-management family page for metal-base laminate context.
-- These sources are sufficient to frame ceramic/alumina/AlN as ceramic-substrate families and IMS as a separate thermal-management platform family.
-- KYOCERA's official LTCC page supports `LTCC = Low Temperature Co-Fired Ceramics`, frames LTCC as glass ceramics, and gives a source-scoped reason that lower firing temperature can enable copper conductors.
-- LTCC, alumina / AlN substrates, IMS, and KYOCERA thin-film ceramic technology should remain separate technology lanes unless an exact source connects the process and material stack.
+## Ceramic Substrates: the broad class
 
-## Engineering Boundaries
+- Use `ceramic substrate` when the source support is class-level and includes families such as alumina and aluminum nitride.
+- CeramTec gives the local anchor that ceramic substrates include alumina and `AlN`.
+- Do not collapse the whole ceramic class into `AlN`, `LTCC`, or `thin-film`.
 
-- Use ceramic-family sources for class framing, not for vendor-neutral numeric rankings.
-- Keep `alumina`, `AlN`, and `IMS` as distinct thermal-platform buckets unless a current datasheet comparison is attached.
-- Treat thermal conductivity, dielectric strength, CTE, dielectric constant, thickness, metallization, and bonding-stack claims as refresh-required.
-- Do not infer manufacturability limits, metallization compatibility, or package suitability from class-level sources alone.
-- Use IMS sources to anchor the existence of metal-base thermal-management families, not to claim equivalence with ceramic substrates.
-- Use LTCC sources for class definition only; do not infer firing windows, shrinkage, cavity tolerances, hermeticity, conductor dimensions, or layer-count limits.
+## Alumina vs AlN: same class, different family direction
 
-## Common Misreadings
+- Use `alumina` and `AlN` as distinct ceramic-substrate families.
+- The current wiki only supports a guarded family-direction statement:
+  one official owner-scoped comparison shows alumina as the cost/performance example and `AlN` as the higher-thermal example.
+- Do not turn that owner-scoped comparison into a vendor-neutral default table.
 
-- `High thermal` does not mean ceramic and IMS are interchangeable.
-- `AlN` is not a synonym for the whole ceramic PCB category.
-- `LTCC` is not a synonym for all ceramic PCB.
-- A class-level ceramic source does not prove a specific direct-bond, active-metal-braze, or thick-film process.
-- Internal high-thermal service copy does not replace manufacturer-controlled material sources.
+## LTCC: process family, not the whole ceramic category
 
-## Must Refresh Before Publishing
+- Use `LTCC` only when the draft really means low-temperature co-fired ceramics.
+- LTCC stays separate from generic ceramic substrates, alumina thick-film circuits, `AlN` substrates, and `IMS` unless a source explicitly connects them.
+- LTCC class definition is supported; universal firing, shrinkage, hermeticity, layer-count, and RF-performance claims are not.
 
-- Any thermal conductivity value
-- Any dielectric or CTE comparison
-- Any statement about exact metallization system or layer build
-- Any claim that one thermal platform is universally better than another
-- Any specific substrate grade, thickness, or process window
+## Thin-Film Ceramic: precision process lane
 
-## Related Fact Cards
+- Use `thin-film ceramic` when the draft needs process vocabulary such as vacuum deposition or sputtering on ceramic substrates.
+- Keep thin-film ceramic separate from LTCC, generic alumina boards, and `IMS`.
+- Thin-film ceramic source support is process-framing support, not supplier-capability proof.
+
+## IMS / MCPCB: metal-base thermal-management lane
+
+- Use `IMS` or `MCPCB` when the draft means insulated metal substrate or metal-base laminate context.
+- `IMS` is a separate thermal-management platform family, not a ceramic-substrate synonym.
+- Ventec exact-product IMS cards can support material-parameter examples, but they do not prove finished-board thermal outcomes.
+
+# Safe Selection Language
+
+- Say `ceramic substrates include alumina and AlN families` when the draft needs class framing.
+- Say `AlN is a ceramic-substrate family` rather than `AlN is the default ceramic PCB`.
+- Say `LTCC is a distinct ceramic process family` rather than `all ceramic PCBs are LTCC`.
+- Say `IMS is a metal-base thermal-management platform` rather than `IMS is a ceramic board`.
+- Use owner-scoped wording when referencing alumina-versus-`AlN` directionality.
+- Use exact-product IMS values only when the draft preserves product name, thickness context, and material-scope limits.
+
+# Unsafe Selection Language
+
+- Do not publish a vendor-neutral thermal-conductivity ranking across ceramic, alumina, `AlN`, LTCC, and `IMS` from the current fact base.
+- Do not claim `DBC`, `AMB`, `DPC`, thin film, or thick film are universally available across ceramic suppliers.
+- Do not claim direct-bond copper, metallization stack, brazing path, or package compatibility from class-level sources alone.
+- Do not claim one platform is universally best for power, RF, LED, automotive, aerospace, medical, or semiconductor work.
+- Do not convert IMS material examples into board-level heat-spreading, junction-temperature, or reliability proof.
+- Do not write cost, lead-time, or yield guidance on this page.
+
+# When To Route To Each Lane
+
+| Draft signal | Route to | Reason |
+| --- | --- | --- |
+| `ceramic PCB` used generically | ceramic substrate framing first | the draft may still mean alumina or `AlN`, not LTCC or `IMS` |
+| `best cost/performance ceramic` | alumina vs `AlN` boundary review | current support is owner-scoped, not universal |
+| `co-fired ceramic`, `glass ceramic`, `copper conductors in ceramic` | LTCC lane | local support exists only at class-definition level |
+| `vacuum deposition`, `sputtering`, `fine ceramic patterns` | thin-film ceramic lane | these are process-family signals |
+| `metal core`, `MCPCB`, `insulated metal substrate`, `LED heat sink board` | `IMS` lane | this is metal-base thermal-management framing |
+
+# Numeric-Claim Discipline
+
+- The current local corpus supports boundary framing first and owner-scoped examples second.
+- It does not support a permanent cross-vendor ceramic comparison table.
+- If a draft truly needs numeric material examples, route to the matching fact card and keep the owner and scope attached.
+- If the draft does not need exact numbers, prefer platform-selection wording and remove speculative numerics.
+
+# Blocked Claims
+
+- thermal conductivity comparisons
+- direct-bond and metallization proofs
+- substrate suitability guarantees
+- cost, lead-time, and yield claims
+
+# Must Refresh Before Publishing
+
+- Any conductivity, dielectric, CTE, dielectric-strength, thickness, or metallization number used outside the current owner-scoped fact context
+- Any claim that compares ceramic families across multiple suppliers
+- Any claim that connects `LTCC`, `thin-film`, `DBC`, `AMB`, `DPC`, and `IMS` into one universal process ladder
+- Any statement about HIL/APT ceramic manufacturing capability, qualification, or supply posture
+
+# Related Fact Cards
 
 - `materials-ceramic-alumina-aln-class-source-coverage`
+- `materials-alumina-vs-aln-owner-scoped-comparison-boundary`
 - `materials-ltcc-class-definition-and-nonclaims`
+- `materials-thin-film-ceramic-circuit-technology-kyocera`
+- `materials-ceramic-platform-anchor-map`
+- `materials-parameter-scope-ventec-ims-material-values`
 
-## Primary Sources
+# Local Source Records
 
-- /code/hileap/frontendHIL/public/static/products/en/ceramic-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/high-thermal-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/ceramic-pcb.json
-- https://www.ceramtec-group.com/en/ceramtec-us/substrates
-- https://www.maruwa-g.com/e/products/ceramic/000314.html
-- https://global.kyocera.com/prdct/semicon/search_material/detail/ltcc.html
-- https://global.kyocera.com/prdct/semicon/semi/technology/thin-film.html
-- https://www.ventec-group.com/products/tec-thermal-thermal-management-ims/
+- `frontendhil-ceramic-pcb-product-page-en`
+- `frontendhil-high-thermal-pcb-product-page-en`
+- `frontendapt-pcb-ceramic-pcb-page-en`
+- `ceramtec-ceramic-substrates-page`
+- `maruwa-aln-substrates-page`
+- `kyocera-ltcc-material-page`
+- `kyocera-thin-film-circuit-boards-page`
+- `kyocera-thin-film-technology-page`
+- `ventec-ims-family-overview`

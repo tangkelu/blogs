@@ -1,16 +1,18 @@
 # LLM Wiki Roadmap
 
-Last updated: 2026-04-27
+Authoritative execution contract: [policies/ai-execution-contract.md](policies/ai-execution-contract.md).
+
+Last updated: 2026-05-03
 
 ## Objective
 
-把 `/code/blogs/llm_wiki/` 建成博客生产上游的 `真实数据层`，让后续写作优先消费：
+把 `/code/blogs/llm_wiki/` 建成博客生产上游的 `真实数据层`，让后续工作优先复用：
 
 - 可追溯的官方来源
 - 条件明确的工程事实
 - 与你们自身公开能力相匹配的内部支持层
 
-不把它做成“素材堆”，而是做成可持续扩展、可复核、可被 prompt 消费的知识底座。
+不把它做成“素材堆”，而是做成可持续扩展、可复核、可复用的知识底座。
 
 ## Operating Rules
 
@@ -22,6 +24,12 @@ Last updated: 2026-04-27
    - `logs/update-log.md`
 4. 新主题进入 wiki 前，至少先有主源记录和原子事实卡片。
 5. 动态内容只记录“查询规则”和“刷新要求”，不固化为长期静态事实。
+6. 下游呈现只能作为后置步骤，不是默认续接主线。
+7. `done`、`landed`、`ready`、`absorbed` 默认不表示 source-backed complete，除非明确写出 `sources/`、`facts/`、`wiki/` 已完成升级。
+
+See also:
+
+- `policies/execution-priority-and-anti-drift.md`
 
 ## Phase Plan
 
@@ -112,18 +120,18 @@ Done when:
 ## Phase 5: Prompt Consumption And Evidence Packs
 
 Goal:
-让 `prompts_template/` 稳定消费 `llm_wiki/`，用于博客写作、重写、对比和事实核对。
+让 `prompts_template/` 只读取已完成事实层，用于对比和事实核对。
 
 Scope:
 
-- topic-level evidence-pack conventions
-- blog drafting guardrails
-- pre-publish refresh checklist for dynamic claims
+- topic-level reuse conventions
+- downflow guardrails
+- pre-use refresh checklist for dynamic claims
 
 Done when:
 
-- 写博客不再靠人工临时找数据
-- prompt 模板可直接引用 wiki facts / wiki pages / must-refresh instructions
+- 下游不再靠人工临时找数据
+- 下游可直接引用 wiki facts / wiki pages / must-refresh instructions
 
 ## Execution Order
 
@@ -177,7 +185,9 @@ Exception:
 
 当前 focus 固定为：
 
-- Phase 2 内部能力层已完成收口
+- 默认续接优先级仍然是 `claim inventory -> source gap -> official source recovery -> source records -> fact cards -> topic wiki -> prompt consumption gate`
+- `generation gate` / `handoff` 只能说明下游呈现可控，不能覆盖知识升格优先级
+- Phase 2 内部能力层已完成收口 ✅ 所有 frontendAPT/frontendHIL JSON 已内部化（60 sources, 75 facts）
 - Phase 3 官方主源扩展已完成第一轮
 - Phase 4 仍为当前阶段，且当前已进入 `H4` tranche closeout 后的 stop-expansion posture
 - 当前第一批 `P4-01 Topic Wiki Expansion` 已完成三张聚合页：`high-speed-material-family-selection`、`rf-material-selector-by-application-band`、`finish-zoning-and-selective-multi-finish`
@@ -189,5 +199,6 @@ Exception:
 - `H4` 当前 tranche 已 control-complete enough to pause expansion，下一实际动作是 direct conservative generation gate / prompt-consumption handoff
 - 当前英文 layer-count gate 已固定：`6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` 为 `go_now_conservative`，`20 / 22-layer` 仍为 `still_hold`
 - 上述 handoff 仅表示保守生成可控，不表示 numeric unlock、standards-threshold unlock 或 supplier-proof unlock
+- 如果后续 AI 需要继续推进，默认不是扩张下游呈现批次，而是把仍停留在 claim-family / routing level 的高价值 lane 升格进 `sources/`、`facts/`、`wiki/`
 - 后续批次继续使用主 agent 规划和审核、sub-agent 分主题页或分来源家族并行交付
 - 暂不把“行业博客采集”作为主任务

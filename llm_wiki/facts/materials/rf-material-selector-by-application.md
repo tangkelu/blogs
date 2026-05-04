@@ -6,7 +6,7 @@ category: "materials"
 status: "verified"
 confidence: "medium"
 must_refresh: false
-reviewed_at: "2026-04-24"
+reviewed_at: "2026-05-03"
 source_ids:
   - "rogers-ro4003c-product-page"
   - "rogers-ro4350b-product-page"
@@ -27,7 +27,9 @@ source_ids:
   - "agc-rf-10-datasheet"
   - "agc-rf-35htc-datasheet"
   - "agc-rf-microwave-laminates-page"
-tags: ["rf-materials", "selector", "application", "frequency-band", "materials"]
+  - "frontendapt-taconic-pcb-json"
+  - "frontendapt-arlon-pcb-json"
+tags: ["rf-materials", "selector", "application", "frequency-band", "materials", "taconic", "arlon"]
 ---
 
 # Canonical Summary
@@ -44,11 +46,18 @@ tags: ["rf-materials", "selector", "application", "frequency-band", "materials"]
 - RO3006, RO3010, VTM1000i, and RF-10 are the current higher-Dk options in the registry for compact RF structures.
 - RO3035 sits between the lower-Dk low-loss materials and the higher-Dk compactness materials.
 - The TMM family is the current thermoset-microwave option in the registry when dimensional stability, plated-through-hole behavior, and in some grades higher thermal conductivity matter.
+- **[Tier-2 internal only]** Taconic TLY series (Dk ~2.17–2.33, Df 0.0009 @ 10 GHz) is the lowest-loss Taconic family; recovered via APTPCB internal JSON; no current official Taconic product pages confirmed.
+- **[Tier-2 internal only]** Taconic RF-35A2 (Dk 3.50 ±0.05, Df 0.0018) offers ~51% lower loss than RO4350B at matched Dk and cost; requires PTFE plasma desmear (different from RO4350B's FR-4 chemistry).
+- **[Tier-2 internal only]** Taconic CER-10 (Dk 10.0) and CER-20/30 (Dk 20–30) are the highest-Dk compact-structure options in the registry for dielectric resonator antennas and miniaturized cavity filters.
+- **[Tier-2 internal only]** Arlon CLTE-XT (Dk ~2.94–3.00, Df 0.0012) adds a low-PIM PTFE/ceramic path for phased-array radar and cellular base station feeds; no current official Arlon product page.
+- **[Tier-2 internal only]** Arlon TC350 (Dk 3.50, Df 0.0020, thermal conductivity 1.0 W/m·K) adds a thermally enhanced PTFE path for high-power amplifiers, GaN mounting, and tower-mounted amplifiers.
+- **[Tier-2 internal only]** Arlon AD series (AD250 Dk 2.50, AD300 ~3.00, AD1000 Dk 10.2; Df 0.0014 across grades) adds antenna-grade PTFE across a wide Dk range; AD1000 enables 3× size reduction vs. FR-4.
 
 ## Application Mapping
 
 - `Mixed digital + RF, sub-6 GHz, cost-sensitive`
   Most likely starting points: `RO4003C`, `RO4350B`, `Astra MT77`, `MEGTRON 6`, `VT-870`
+  Also consider [Tier-2]: `Taconic RF-35A2` (lower Df than RO4350B, PTFE processing required)
   Reason: these options preserve a more production-friendly process posture than soft PTFE families while still improving RF loss behavior over generic FR-4, though `VT-870` is more explicitly RF-oriented than the Panasonic multilayer families.
 
 - `High-speed digital + RF hybrid, server / router / data-heavy backplane context`
@@ -57,34 +66,42 @@ tags: ["rf-materials", "selector", "application", "frequency-band", "materials"]
 
 - `Sub-6 to low tens of GHz, low-loss but still manufacturable at scale`
   Most likely starting points: `RO3003`, `RO3035`, `Astra MT77`, `VT-870`, `RF-30A`
+  Also consider [Tier-2]: `Taconic TLX-8` (Df 0.0019, Dk 2.55), `Arlon CLTE-XT` (Df 0.0012, low-PIM)
   Reason: these options offer lower-loss RF paths than generic FR-4-style materials, while `VT-870` stays in the hydrocarbon-ceramic manufacturing posture and `RF-30A` adds reinforced PTFE behavior for volume antenna and passive-RF builds.
 
 - `24 GHz to 40 GHz RF front ends, insertion loss and phase control matter`
   Most likely starting points: `RO3003`, `RO3035`, `RT/duroid 5880`
+  Also consider [Tier-2]: `Taconic TLY-5A` (Df 0.0009, Dk 2.17)
   Reason: low published Df and RF-oriented positioning make them stronger candidates when path loss and phase behavior start dominating.
 
 - `77 GHz class radar and very low-loss mmWave routing`
   Most likely starting points: `RO3003`, `RT/duroid 5880`
+  Also consider [Tier-2]: `Taconic TLY-5A` (Df 0.0009 matches RT/duroid 5880 class)
   Reason: the current registry positions RO3003 explicitly around 77 GHz / ADAS framing, while RT/duroid 5880 carries the lowest published loss in the current set.
 
 - `Compact resonators, miniaturized RF structures, constrained enclosure`
   Most likely starting points: `RO3006`, `RO3010`, `VTM1000i`, `RF-10`
+  Also consider [Tier-2]: `Taconic CER-10` (Dk 10.0), `Taconic CER-20/30` (Dk 20–30), `Arlon AD1000` (Dk 10.2)
   Reason: higher Dk lets physical structures shrink, but the loss, tolerance, and temperature budget still need review.
 
 - `High-volume antennas, passive RF, and PIM-sensitive commercial builds`
   Most likely starting points: `RF-30A`, `VT-870`, `RO4350B`
+  Also consider [Tier-2]: `Arlon CLTE-XT` (low-PIM posture, cellular feeds), `Taconic RF-35A2` (sub-6 GHz 5G small-cell antennas)
   Reason: these options are the current registry entries most explicitly aligned with antenna volume, passive RF, or PIM-aware commercial deployment tradeoffs.
 
 - `Satellite communications, GPS antennas, filters, couplers`
   Most likely starting points: `VTM1000i`, `RO3010`, `RF-10`, `TMM family`
+  Also consider [Tier-2]: `Taconic TLY-5A` (satellite LNA boards, Ka-band phased-array), `Taconic CER-10` (miniaturized GPS L1/L2 patches), `Arlon AD250/300` (GPS/GNSS patch antennas)
   Reason: these options are the current registry entries most explicitly aligned with compact or high-Dk microwave structures where electrical size control matters.
 
 - `Power RF, beamforming hardware, or microwave structures where thermally stronger thermoset options matter`
   Most likely starting points: `TMM family`, especially thermally enhanced grades such as `TMM 10i`
+  Also consider [Tier-2]: `Arlon TC350` (thermal conductivity 1.0 W/m·K, GaN and GaAs PA mounting), `Taconic TF-260/290` (thermally optimized PTFE for 5G base station PA)
   Reason: the family datasheet explicitly provides thermoset-microwave framing, plated-through-hole suitability, and stronger thermal-conductivity options in the `i` variants.
 
 - `High-power RF where dielectric heat spreading is a first-order concern`
   Most likely starting points: `RF-35HTC`, `TMM family`
+  Also consider [Tier-2]: `Arlon TC350` (Dk 3.50, Df 0.0020, 1.0 W/m·K, tower-mounted amplifiers), `Taconic TF-260/290` (thermally optimized PTFE)
   Reason: `RF-35HTC` is the current registry entry most explicitly centered on very high thermal conductivity for filters, couplers, dividers, and power amplifiers, while `TMM` remains the thermoset-microwave alternative when plated-through-hole and dimensional-stability tradeoffs matter.
 
 ## Conditions And Methods
@@ -97,12 +114,15 @@ tags: ["rf-materials", "selector", "application", "frequency-band", "materials"]
 
 - This card does not claim any listed material is the universal best choice for a frequency band.
 - Frequency band alone is not enough; path length, phase sensitivity, enclosure size, assembly route, and cost target also matter.
-- This first version still does not include Taconic alternatives.
+- **[Tier-2 governance boundary]** All Taconic entries in this card are sourced from APTPCB internal JSON (`frontendapt-taconic-pcb-json`), not from official Taconic product pages or datasheets. Current official Taconic RF laminate product pages are not confirmed recoverable (as of 2026-05-02). Do not publish Taconic Dk/Df values externally without explicit Tier-2 source-gap pairing.
+- **[Tier-2 governance boundary]** Arlon CLTE-XT, TC350, and AD series entries are sourced from APTPCB internal JSON (`frontendapt-arlon-pcb-json`); no current official Arlon product pages or datasheets confirmed for these families. Do not publish these values externally without explicit source-gap pairing. Arlon N-series and 86HP are official-backed and are not affected by this boundary.
+- Taconic TLY and Arlon CLTE-XT both require PTFE plasma desmear; fabricator PTFE capability is a selection constraint, not a secondary concern.
 
 ## Open Questions
 
-- Add a second version including `Taconic` options
-- Add an application card focused on `antenna arrays`, `power amplifiers`, `high-speed + RF hybrids`, and `satcom front ends`
+- Confirm whether official Taconic RF laminate product pages (TLY, TLX, RF-35) become accessible under new URLs
+- Confirm current Arlon/AGC product-line continuity for CLTE-XT, TC350, and AD series under official domain
+- Add a dedicated application card for `antenna arrays`, `high-speed + RF hybrids`, and `satcom front ends` once official source anchors improve
 
 ## Source Links
 

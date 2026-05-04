@@ -1,10 +1,14 @@
 # P4-44 Blog Learning Continuation Handoff
 
-Last updated: 2026-04-28
+Last updated: 2026-04-29
+
+Status: superseded by `logs/p4-45-source-backed-integration.md`
 
 ## Purpose
 
 This file is the next-session entry point for continuing `/code/blogs/tmps` blog learning into `/code/blogs/llm_wiki`.
+
+P4-44 and P4-45 have now been executed. Use `logs/p4-45-source-backed-integration.md` as the current entry point for residual official-source recovery.
 
 The durable goal is not to preserve temporary markdown files. The goal is to turn trusted engineer-written PCB / PCBA drafts into:
 
@@ -59,7 +63,8 @@ The current corpus is only partially source-backed:
 
 - P4-35 through P4-38 converted several scout findings into reusable official-source records, fact cards, and wiki pages.
 - P4-41 through P4-43 mostly added scout/controller coverage and did not add many new reusable facts.
-- P4-40 November 2025 scouts are completed but still need controller integration before their strongest findings are promoted.
+- P4-44 controller-integrated the strongest P4-40 November 2025 scout findings for CAM / data exchange, PCB design-tool identity, and ferrite-bead vendor guidance.
+- P4-45 added a targeted source-backed identity layer for the `2025.11.3` ESP32 / Raspberry Pi / Matter / Thread / Zigbee maker and smart-home lane.
 
 ## Do Not Promote Without Evidence
 
@@ -73,9 +78,9 @@ Do not promote draft-originated claims into facts for:
 
 Use official sources or dated APT / HIL capability records first. If the source cannot be recovered, keep the claim blocked or rewrite it as a boundary / question / source gap.
 
-## Immediate Next Session Task
+## Completed P4-44 Task
 
-Start with `P4-44 November 2025 Controller Integration`.
+This handoff originally pointed to `P4-44 November 2025 Controller Integration`. That task has now been executed in `logs/p4-44-source-backed-integration.md`.
 
 Inputs:
 
@@ -92,14 +97,26 @@ Expected output:
 - topic wiki updates only when prompt consumption benefits
 - tracker updates in `logs/update-log.md`, `logs/backlog.md`, and `logs/phase-status.md`
 
-## P4-44 Priority Lanes
+## Completed P4-45 Task
 
-1. November 2025 controller integration from the completed P4-40 scouts.
-2. Commercial / supplier capability lane: dated APT / HIL capability records for price, lead time, MOQ, stock, quality, certification, equipment, and capacity claims.
-3. RF / high-speed lane: exact official boundaries for impedance validation, S-parameters, mmWave / antenna / radar / phased-array context, and test-method limits.
-4. Input-device lane: QMK / VIA, mouse sensor / switch vendors, MIDI / BLE-MIDI / DAW, HMI / industrial protocol, rugged / IP / medical / military standards boundaries.
-5. Power / solar / interface lane: inverter, MPPT, BMS, gate-driver, HDMI, USB, Qi, Wi-Fi, automotive network, drone ecosystem official-source boundaries.
-6. Specialty 2-layer / finish / flex lane: copper-core sources, finish chemistry, polyimide exact products, bend / reliability boundaries, and two-layer specialty manufacturing limits.
+P4-45 targeted the `2025.11.3` ESP32 / Raspberry Pi / smart-home blocker lane and wrote `logs/p4-45-source-backed-integration.md`.
+
+New reusable outputs:
+
+- `methods-maker-platform-official-identity-boundary`
+- `standards-smart-home-protocol-identity-boundary`
+- `wiki/applications/maker-and-smart-home-platform-boundaries.md`
+
+This enables conservative product / protocol identity language only. It does not unlock project rankings, ecosystem compatibility, AI / performance, certification, compliance, supplier capability, price, lead time, yield, or quality claims.
+
+## P4-46 Priority Lanes
+
+1. Broader USB taxonomy lane: USB-IF sources for USB-A/B/Mini/Micro/USB4/Thunderbolt-adjacent wording, speed / power tables, cable and Alt Mode boundaries.
+2. Remote-control / RC protocol lane: official or vendor primary sources for IR, RF control modules, spread-spectrum, telemetry, and range / latency boundaries.
+3. Drone firmware ecosystem lane: official PX4 / ArduPilot / Betaflight sources for firmware identity only, not flight performance.
+4. Power / electronics-basics lane: official semiconductor and educational sources for IGBT vs MOSFET, schematic-symbol, and electronics-basics claims.
+5. HDI / BOM / cost-driver lane: official source evidence for cost drivers, not supplier quotes or current prices.
+6. Commercial / supplier capability lane: dated APT / HIL capability records for price, lead time, MOQ, stock, quality, certification, equipment, and capacity claims.
 
 ## Subagent Strategy
 
@@ -124,7 +141,7 @@ The main agent owns:
 ## Verification To Run Before Reporting Completion
 
 - `find tmps -mindepth 2 -maxdepth 2 -type d -name en | sort | wc -l`
-- `rg -n "P4-44|p4-44|p4-40|2025.11" llm_wiki/logs llm_wiki/facts llm_wiki/wiki llm_wiki/sources`
+- `rg -n "P4-45|p4-45|maker-platform|smart-home|ESP32|Raspberry|Matter|Thread|Zigbee" llm_wiki/logs llm_wiki/facts llm_wiki/wiki llm_wiki/sources`
 - source-ID checks for any new fact cards
 - fact/wiki reference checks for touched topic pages
 - `git diff --check -- <touched files>`

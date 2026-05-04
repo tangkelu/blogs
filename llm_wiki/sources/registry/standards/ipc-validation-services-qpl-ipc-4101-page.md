@@ -6,7 +6,7 @@ source_type: "program"
 url: "https://www.electronics.org/validation-services-qualified-products-list-qpl-ipc-4101"
 jurisdiction: "global"
 published_at: "2023-03-26"
-checked_at: "2026-04-25"
+checked_at: "2026-05-03"
 trust_tier: "t1"
 stability: "dynamic"
 must_refresh: true

@@ -1,9 +1,9 @@
 ---
-topic_id: "processes-rf-drilling-and-transition-control"
-title: "RF Drilling And Transition Control"
+wiki_id: "wiki-processes-rf-drilling-and-transition-control"
+title: "RF drilling and transition control"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-backdrill-control-capability"
   - "methods-ptfe-processing-capability"
@@ -18,62 +18,100 @@ source_ids:
   - "frontendhil-high-speed-product-page-en"
   - "frontendhil-high-frequency-product-page-en"
   - "frontendhil-rogers-product-page-en"
-tags: ["rf", "drilling", "backdrill", "transition", "via-stub", "processes"]
+tags: ["rf", "drilling", "backdrill", "transition", "via-stub", "processes", "controlled-depth"]
 ---
 
-# Definition
+# Use This Page For
 
-> RF drilling and transition control is the process discipline that manages drilled structures, residual stubs, launch features, controlled-depth work, and adjacent cavity-style geometry so that RF and high-speed transitions behave as intended after fabrication.
+- Routing RF and high-speed drilling language into transition-control planning rather than generic hole-making claims.
+- Separating backdrill, controlled-depth drilling, launch review, via-stub management, and adjacent cavity-style features into related but non-identical controls.
+- Keeping transition-control discussion at process-boundary level instead of publishing geometry, tolerance, or performance proof.
 
-## Why This Topic Matters
+# Core Process Rule
 
-- RF and high-speed failures often come from transitions, vias, stubs, launch geometry, or drilled features, not only from laminate choice.
-- Your internal non-blog pages already describe a repeated drilling-and-transition posture, but the signals were split across drilling, microwave, antenna, Rogers, and high-speed pages.
-- This topic page gives one reusable frame for future content about why drilling control belongs inside RF execution rather than being treated as generic mechanical fabrication.
+- Start with transition behavior, not with drill count or machine language.
+- In the current local corpus, drilling matters because drilled features affect RF and high-speed transitions.
+- The safe local claim is that drilled structures, residual stubs, launch-adjacent features, and cavity-style geometry belong inside one RF execution review lane.
 
-## Stable Facts
+# RF Transition-Control Structure
 
-- Internal APT and HIL pages already present `backdrill` as a standard engineering control for high-speed channels, RF launches, and long through-via structures where residual stubs degrade performance.
-- Current internal drilling posture links `controlled-depth backdrilling` directly to via-stub resonance control, signal-integrity cleanup, and verification to the target layer.
-- Internal PTFE and microwave-processing posture also ties drilling to a broader RF transition workflow that includes plasma or surface activation, staged lamination, controlled-depth work, and launch review.
-- Existing antenna and microwave pages place `cavity machining`, plated slots, via fences, and similar drilled or machined features next to RF launch and validation planning, showing these are adjacent transition-control concerns rather than isolated mechanical steps.
-- Across the current corpus, drilling is treated as part of RF/high-speed structure execution, not as a neutral commodity process disconnected from SI outcome.
+## Backdrill As Stub-Control Discipline
 
-## Engineering Boundaries
+- Route `backdrill` language through transition cleanup and via-stub management.
+- Backdrill is presented locally as a normal engineering control for long through-via structures, RF launches, and high-speed channels where residual stubs matter.
+- Do not rewrite backdrill as a default requirement for every RF or high-speed board.
 
-- Do not describe RF drilling as only "hole making" when the actual concern is transition behavior.
-- Keep `backdrill`, `controlled-depth drilling`, `launch review`, `via-stub management`, and `adjacent cavity features` as distinct but related controls.
-- Avoid collapsing antenna cavities, shield structures, plated slots, and general backdrill into one identical process claim; they are related, not interchangeable.
-- Do not publish exact residual-stub, oversize, or depth-control values without current engineering confirmation.
-- If a page needs machine-level tolerance, target-layer verification method, or plated-feature geometry rules, refresh from current process reality before publishing.
+## Controlled-Depth Drilling
 
-## Common Misreadings
+- Route `controlled-depth drilling` language through target-layer, residual-stub, and transition-review context.
+- Controlled-depth work belongs to process control around transition behavior, not to generic marketing language for all RF manufacturability.
+- Do not publish exact depth-control, oversize, or verification numbers from this boundary page.
 
-- `Backdrill capability` does not mean every RF or high-speed board should automatically be backdrilled.
-- A good laminate choice does not compensate for poor transition or via-structure execution.
-- `Cavity machining` is adjacent to transition control, but it is not the same thing as generic backdrill.
-- `Controlled-depth drilling` should not be treated as a marketing synonym for all RF manufacturability.
+## Launch Review And Via-Transition Management
 
-## Must Refresh Before Publishing
+- Use launch and via-transition language when the draft is really about RF or high-speed signal transfer across drilled structures.
+- Safe framing:
+  drilling control is one part of transition quality, alongside stackup, return path, launch geometry, and later validation.
+- Do not let launch review absorb exact impedance, spacing, resonance, or SI threshold claims without narrower evidence.
 
-- Any exact residual-stub or depth-control target
-- Any exact drill oversize or verification rule
-- Any hard customer-facing claim about default transition-control scope
+## Adjacent Cavity And Machined Features
 
-## Related Fact Cards
+- Keep cavity machining, plated slots, via fences, and similar machined or drilled RF features as adjacent transition-control concerns.
+- These features can appear in the same RF workflow, but they are not identical to backdrill.
+- Do not collapse cavity, shield, slot, and backdrill language into one interchangeable capability claim.
+
+# Safe Routing Map
+
+| Draft signal | Safe route | Block if draft asks for |
+| --- | --- | --- |
+| `backdrill for RF board` | via-stub and transition-control planning | exact stub targets, default inclusion claims |
+| `controlled-depth drilling` | drilling-control posture inside RF execution | exact depth windows, verification thresholds |
+| `RF launch transition` | launch and drilled-transition review | geometry rules, impedance guarantees, performance proof |
+| `antenna cavity` or `microwave cavity` | adjacent cavity-feature planning | plated geometry guarantees, universal cavity availability |
+| `RF drilling capability` | process-boundary vocabulary | machine-spec guarantees, quote-level commitments |
+
+# Safe Selection Language
+
+- Write `transition control` instead of `generic drilling capability`.
+- Write `backdrill as a targeted control` instead of `every RF board needs backdrill`.
+- Write `controlled-depth work as part of drilled-transition review` instead of `universal RF manufacturability`.
+- Write `adjacent cavity features` instead of treating cavity machining as a synonym for backdrill.
+
+# Unsafe Selection Language
+
+- Do not describe RF drilling as only commodity mechanical drilling when the issue is transition quality.
+- Do not merge backdrill, cavity machining, plated slots, via fences, and launch features into one identical process claim.
+- Do not publish exact residual-stub targets, backdrill oversize, depth-control windows, or verification thresholds from this boundary page.
+- Do not claim drilled-transition control alone proves RF performance, SI closure, or final manufacturability.
+
+# Blocked Claims
+
+- geometry and tolerance guarantees
+- transition-performance proof
+- universal manufacturability guarantees
+- cost, lead-time, and yield claims
+
+# Must Refresh Before Publishing
+
+- Any exact residual-stub, oversize, depth-control, or target-layer verification rule
+- Any launch geometry, spacing, resonance, or SI threshold claim
+- Any hard customer-facing statement about default transition-control scope
+- Any current throughput, quote, supplier-capability, cost, lead-time, or yield claim
+
+# Related Fact Cards
 
 - `methods-backdrill-control-capability`
 - `methods-ptfe-processing-capability`
 - `methods-cavity-machining-capability`
 
-## Primary Sources
+# Local Source Records
 
-- /code/hileap/frontendAPT/public/static/pcb/en/pcb-drilling.json
-- /code/hileap/frontendAPT/public/static/pcb/en/backplane-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/antenna-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/high-frequency-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/microwave-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/backplane-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/high-speed-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/high-frequency-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/rogers-pcb.json
+- `frontendapt-pcb-drilling-page-en`
+- `frontendapt-backplane-pcb-page-en`
+- `frontendapt-antenna-pcb-page-en`
+- `frontendapt-high-frequency-pcb-page-en`
+- `frontendapt-microwave-pcb-page-en`
+- `frontendhil-backplane-product-page-en`
+- `frontendhil-high-speed-product-page-en`
+- `frontendhil-high-frequency-product-page-en`
+- `frontendhil-rogers-product-page-en`

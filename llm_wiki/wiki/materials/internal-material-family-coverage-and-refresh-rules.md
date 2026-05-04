@@ -1,9 +1,9 @@
 ---
-topic_id: "materials-internal-material-family-coverage-and-refresh-rules"
-title: "Internal Material Family Coverage And Refresh Rules"
+wiki_id: "wiki-materials-internal-material-family-coverage-and-refresh-rules"
+title: "Internal material family coverage and refresh rules"
 category: "materials"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-03"
 fact_ids:
   - "materials-internal-material-family-coverage-map"
   - "materials-apt-rogers-internal-framing"
@@ -11,6 +11,9 @@ fact_ids:
   - "materials-ptfe-rf-material-processing-posture"
   - "methods-spread-glass-and-controlled-impedance-planning"
   - "methods-internal-json-coverage-boundary"
+  - "materials-taconic-official-source-coverage-gap"
+  - "materials-arlon-official-source-coverage"
+  - "materials-flex-exact-product-anchor-map"
 source_ids:
   - "frontendapt-materials-index-en"
   - "frontendapt-materials-rf-rogers-page-en"
@@ -31,58 +34,122 @@ source_ids:
   - "frontendhil-rogers-product-page-en"
   - "frontendapt-materials-remaining-index-en"
   - "frontendapt-resources-index-en"
-tags: ["materials", "internal", "refresh", "ptfe", "high-speed", "rf", "source-governance"]
+tags: ["materials", "internal", "refresh", "governance", "ptfe", "high-speed", "rf", "source-governance"]
 ---
 
-# Definition
+# Use This Page For
 
-> Internal material family coverage is the set of APT/HIL non-blog pages that describe which material families the sites can discuss or process. It is useful for topic discovery, service framing, and prompt evidence packs, but it must not be treated as official material-property truth unless paired with manufacturer datasheets or other primary sources.
+- Governing how future agents consume internal material-family pages from APT and HIL.
+- Separating `internal framing`, `official exact-product truth`, and `internal-only recovery` before any draft or fact card is promoted.
+- Deciding when a material family is ready for routing only, exact-product use, or still requires stronger official anchors.
 
-## Why This Topic Matters
+# Core Governance Rule
 
-- The internal corpus now covers many material families, including Arlon, Isola, Megtron, Taconic, Teflon/PTFE, Rogers-related RF pages, spread-glass FR-4, and controlled-impedance stackup references.
-- These pages are valuable because they show how your own sites frame material selection and manufacturing support.
-- They are risky if used incorrectly: internal pages can describe service posture, but official material parameters require manufacturer or standards sources.
+- Internal material-family coverage is a discovery and routing layer, not default datasheet truth.
+- A material family mentioned in APT or HIL proves topic coverage and service framing first.
+- Exact product properties, final comparisons, and publishable numeric claims require official manufacturer-controlled anchors unless the lane is explicitly marked internal-only.
 
-## Stable Facts
+# Coverage Tiers
 
-- The APT material pages provide a broad internal map across high-temperature, RF/microwave, high-speed digital, PTFE, spread-glass, and stackup-planning families.
-- The APT Rogers pages add a more specific internal frame: Rogers is presented as a manufacturing and hybrid-stackup service lane rather than as a standalone datasheet library.
-- The Arlon page supports internal framing for polyimide, epoxy, Thermount, and microwave PTFE families.
-- The Isola page supports internal framing for FR-4, high-speed, and RF/microwave Isola material families.
-- The Megtron page supports internal framing for high-speed digital stackups, spread-glass selection, low-profile copper, and SI validation.
-- The Taconic and Teflon/PTFE pages support internal framing for RF/microwave PTFE processing, hybrid stackups, and validation posture.
-- The spread-glass and controlled-impedance pages connect material selection to stackup, skew, coupon, TDR, and VNA planning.
-- The HIL baseline product pages split internal laminate framing across `single/double-layer`, `FR-4`, `high-Tg`, `halogen-free`, and `multilayer`, which is useful for routing drafts to the right baseline family before discussing specialty materials.
-- Directory-level index records cover remaining material/resource pages so the source universe is known even when a page has not been promoted into a dedicated fact card.
+## Tier 1: Internal Family Framing
 
-## Engineering Boundaries
+- Use APT and HIL material pages to identify which laminate families, stackup families, and process-adjacent material topics are already represented in the local corpus.
+- This tier is valid for:
+  topic discovery, routing, service framing, prompt evidence-pack support, and draft scope control.
+- This tier is not valid for:
+  final Dk/Df/Tg/CTE/thermal values, stock claims, qualification claims, or product-grade equivalence.
 
-- Use internal material pages to decide what topics your sites can support, not to finalize technical parameters.
-- Use official manufacturer datasheets for Dk, Df, Tg, CTE, thermal conductivity, copper-clad thickness, resin system, and processing limits.
-- Treat internal claims about inventory, stocking, rapid prototype availability, tolerance, frequency range, lead time, and validation scope as refresh-required.
-- Keep material-family selection separate from fabrication readiness; a material being mentioned does not prove every stackup using it is manufacturable.
-- When a material page mentions a comparison, verify the compared values from official sources before turning it into a public table.
+## Tier 2: Official Exact-Product Truth
 
-## Common Misreadings
+- Promote a family into exact-product writing only when a local fact card is anchored by manufacturer-controlled pages or datasheets.
+- Current examples now include:
+  parts of Arlon N-series and 86HP, plus flex-adjacent exact-product anchors such as `UPILEX-S`, `Kapton HN`, `85N`, `85NT`, `N7000-3F`, and Panasonic `R-F705S`.
+- This tier allows source-scoped exact-product language, but not generic finished-board or qualification inflation.
 
-- Internal material coverage does not mean every listed material is currently stocked.
-- A service page mentioning a laminate does not replace a datasheet.
-- PTFE processing posture is not the same as proof of a universal PTFE process recipe.
-- Spread-glass discussion does not prove a universal skew reduction number for every routing geometry.
-- Controlled-impedance reference stackups are planning aids, not guaranteed stackups for every design.
-- Directory-level source records prove inventory coverage, not full fact extraction.
+## Tier 3: Internal-Only Recovery
 
-## Must Refresh Before Publishing
+- Some families remain usable only through internal JSON recovery or internal framing.
+- Taconic RF laminate families are currently governed as recovered through internal APT JSON, not as official public datasheet truth.
+- Arlon RF/PTFE families such as `CLTE-XT`, `TC350`, `AD250/300/1000`, and `CuClad/DiClad/IsoClad` remain internal-only even though adjacent Arlon families have official anchors.
+- This tier is valid for internal planning and controlled routing only, not for public numeric publication as official vendor truth.
 
-- Any Dk, Df, Tg, CTE, thermal conductivity, dielectric thickness, or copper weight values
-- Any stocking, inventory, lead-time, MOQ, or rapid-prototype claims
-- Any material comparison table that includes numerical properties
-- Any frequency ceiling, insertion-loss, impedance, skew, or validation-scope claim
-- Any claim that a specific material is approved for a regulated industry or customer qualification
-- Any Taconic or Arlon product-level parameter until stronger official product datasheet anchors are registered
+# How To Read Material Family Coverage
 
-## Related Fact Cards
+## Baseline Families
+
+- HIL baseline pages such as `single/double-layer`, `FR-4`, `high-Tg`, `halogen-free`, and `multilayer` are routing aids for standard laminate posture.
+- Use them to decide whether a draft belongs in baseline laminate framing before escalating into specialty material lanes.
+
+## Specialty RF / PTFE / High-Speed Families
+
+- APT material pages for Rogers, Taconic, Arlon, Teflon/PTFE, Megtron, spread-glass, and controlled-impedance planning are strong for internal framing.
+- They are not interchangeable with official material catalogs.
+- Family mentions plus stackup/planning language support routing and topic decomposition, not automatic product-grade publication.
+
+## Flex And Adjacent Narrow Anchors
+
+- Flex material coverage now has some narrow exact-product anchors, which means future agents should not flatten all flex/polyimide/LCP discussion into one generic lane.
+- Keep generic `polyimide`, `adhesiveless flex`, and `LCP` family language separate from exact-product rows unless the specific product source is attached.
+
+# Refresh And Promotion Rules
+
+## Safe To Promote Without New Source Recovery
+
+- Internal material family routing pages
+- Topic-scope governance
+- Service-posture summaries that stay non-numeric
+- Draft cleanup that replaces unsupported numbers with family-level framing
+
+## Must Stop And Recheck Before Promotion
+
+- Any exact material parameter row
+- Any cross-brand comparison table
+- Any claim that a family is complete, current, or fully sourced across all products
+- Any claim that a material is stocked, low-cost, fast-turn, approved, or qualification-ready
+- Any attempt to turn internal JSON recovery into official vendor authority
+
+## Family-Specific Governance Notes
+
+- Taconic:
+  treat current RF laminate coverage as internal recovery plus governance, not public official exact-product completeness.
+- Arlon:
+  split between officially anchored N-series / 86HP branches and internal-only RF/PTFE recovery branches.
+- Flex:
+  exact-product anchors exist, but they do not authorize generic bend-life, rigid-flex reliability, or supplier capability claims.
+
+# Decision Rules For Future Agents
+
+| If the draft asks for | Use | Do not infer |
+| --- | --- | --- |
+| broad family coverage | internal APT/HIL family framing | exact product values or current stock posture |
+| exact product identity with official local anchor | exact-product fact card | generic family equivalence |
+| Taconic RF parameters | internal-only recovery posture | official Taconic datasheet authority |
+| Arlon RF/PTFE parameters | internal-only recovery posture | official live RF/PTFE product continuity |
+| flex PI/LCP example | narrow exact-product anchor if present | universal flex-material performance |
+
+# Blocked Claims
+
+- exact-product completeness claims
+- supplier-capability claims
+- performance guarantees
+- cost/lead-time/yield claims
+
+# Common Failure Modes
+
+- Treating internal material index coverage as if every family has exact-product closure.
+- Publishing internal JSON recovery as official vendor-controlled numeric truth.
+- Merging baseline laminate routing, RF/PTFE families, and flex exact-product anchors into one undifferentiated material layer.
+- Converting family-level site framing into guaranteed manufacturing capability or qualification posture.
+
+# Must Refresh Before Publishing
+
+- Any Dk, Df, Tg, CTE, thermal conductivity, dielectric thickness, or copper-weight row
+- Any current stocking, inventory, MOQ, lead-time, prototype-speed, or sourcing claim
+- Any material ranking, insertion-loss, skew, impedance, or validation-scope claim
+- Any statement that a family is fully complete, currently available, or approved for regulated or customer-qualified use
+- Any Taconic or Arlon RF/PTFE product-level parameter presented as official manufacturer truth
+
+# Related Fact Cards
 
 - `materials-internal-material-family-coverage-map`
 - `materials-apt-rogers-internal-framing`
@@ -90,25 +157,28 @@ tags: ["materials", "internal", "refresh", "ptfe", "high-speed", "rf", "source-g
 - `materials-ptfe-rf-material-processing-posture`
 - `methods-spread-glass-and-controlled-impedance-planning`
 - `methods-internal-json-coverage-boundary`
+- `materials-taconic-official-source-coverage-gap`
+- `materials-arlon-official-source-coverage`
+- `materials-flex-exact-product-anchor-map`
 
-## Primary Sources
+# Local Source Records
 
-- /code/hileap/frontendAPT/public/static/materials/en/index.json
-- /code/hileap/frontendAPT/public/static/materials/en/rf-rogers.json
-- /code/hileap/frontendAPT/public/static/materials/en/rogers-pcb-manufacturing.json
-- /code/hileap/frontendAPT/public/static/materials/en/arlon-pcb.json
-- /code/hileap/frontendAPT/public/static/materials/en/isola-pcb.json
-- /code/hileap/frontendAPT/public/static/materials/en/megtron-pcb.json
-- /code/hileap/frontendAPT/public/static/materials/en/taconic-pcb.json
-- /code/hileap/frontendAPT/public/static/materials/en/teflon-pcb.json
-- /code/hileap/frontendAPT/public/static/materials/en/spread-glass-fr4.json
-- /code/hileap/frontendAPT/public/static/materials/en/controlled-impedance-stackups.json
-- /code/hileap/frontendHIL/public/static/products/en/fr4-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/halogen-free-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/high-tg-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/multilayer-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/single-double-layer-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/teflon-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/rogers-pcb.json
-- /code/hileap/frontendAPT/public/static/materials/en
-- /code/hileap/frontendAPT/public/static/resources/en
+- `frontendapt-materials-index-en`
+- `frontendapt-materials-rf-rogers-page-en`
+- `frontendapt-materials-rogers-pcb-manufacturing-page-en`
+- `frontendapt-materials-arlon-pcb-page-en`
+- `frontendapt-materials-isola-pcb-page-en`
+- `frontendapt-materials-megtron-pcb-page-en`
+- `frontendapt-materials-taconic-pcb-page-en`
+- `frontendapt-materials-teflon-pcb-page-en`
+- `frontendapt-materials-spread-glass-fr4-page-en`
+- `frontendapt-materials-controlled-impedance-stackups-page-en`
+- `frontendhil-fr4-pcb-product-page-en`
+- `frontendhil-halogen-free-pcb-product-page-en`
+- `frontendhil-high-tg-pcb-product-page-en`
+- `frontendhil-multilayer-pcb-product-page-en`
+- `frontendhil-single-double-layer-pcb-product-page-en`
+- `frontendhil-teflon-pcb-product-page-en`
+- `frontendhil-rogers-product-page-en`
+- `frontendapt-materials-remaining-index-en`
+- `frontendapt-resources-index-en`

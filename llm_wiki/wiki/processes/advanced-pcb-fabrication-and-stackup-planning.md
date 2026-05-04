@@ -2,17 +2,18 @@
 topic_id: "processes-advanced-pcb-fabrication-and-stackup-planning"
 title: "Advanced PCB Fabrication And Stackup Planning"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-03"
 fact_ids:
   - "methods-hdi-microvia-and-vippo-process-posture"
   - "methods-controlled-impedance-tdr-verification-posture"
-  - "methods-high-layer-count-backdrill-and-registration-posture"
+  - "methods-high-layer-rigid-board-manufacturability-context"
   - "methods-thermal-pcb-platform-selection-posture"
   - "methods-rigid-flex-stackup-and-bend-reliability-posture"
   - "methods-ic-substrate-fine-line-build-up-posture"
   - "methods-spread-glass-and-controlled-impedance-planning"
   - "methods-pcb-stackup-special-process-and-baseline-families"
+  - "methods-hybrid-rf-stackup-capability"
 source_ids:
   - "frontendapt-pcb-hdi-pcb-page-en"
   - "frontendapt-pcb-advanced-pcb-manufacturing-page-en"
@@ -46,100 +47,120 @@ source_ids:
   - "frontendapt-pcb-special-pcb-manufacturing-page-en"
   - "frontendapt-pcb-pcb-profiling-page-en"
   - "frontendapt-pcb-pcb-conformal-coating-page-en"
-tags: ["advanced-pcb", "stackup", "hdi", "impedance", "backdrill", "thermal", "rigid-flex", "ic-substrate"]
+  - "frontendhil-rogers-product-page-en"
+  - "frontendhil-high-frequency-product-page-en"
+  - "frontendapt-high-frequency-pcb-page-en"
+  - "frontendapt-microwave-pcb-page-en"
+tags: ["advanced-pcb", "stackup", "routing", "hdi", "impedance", "high-layer", "thermal", "rigid-flex", "ic-substrate"]
 ---
 
-# Definition
+# Routing Summary
 
-> Advanced PCB fabrication and stackup planning is the process of turning dense routing, high-speed, thermal, mechanical, and packaging requirements into a manufacturable stackup and process route. It covers HDI build-up, controlled impedance, high-layer registration, backdrill, thermal platform choice, rigid-flex bend reliability, and IC-substrate-style fine-line build-up as separate but connected decisions.
+> Advanced PCB fabrication should be routed as a stackup-planning problem first, not as one flat capability label. The active posture is to separate baseline laminate family, HDI build-up, high-layer manufacturability, hybrid RF material mixing, thermal platform choice, rigid-flex mechanics, IC-substrate build-up, and downstream profiling/protection into explicit branches before any capability wording is drafted.
 
-## Why This Topic Matters
+## Process Routing Matrix
 
-- Advanced PCB content becomes unreliable when every difficult board is described with the same generic "complex PCB" vocabulary.
-- The internal JSON corpus now separates several distinct planning problems: HDI density, impedance verification, high-layer registration, thermal-path selection, rigid-flex mechanics, and IC substrate build-up.
-- This page gives prompt consumers a controlled way to select the right engineering frame before drafting or rewriting advanced PCB content.
+| Situation | Primary Route | Next Decision Layer |
+|---|---|---|
+| baseline rigid multilayer | stackup architecture + laminate family | FR-4 vs high-Tg vs special-process branch |
+| dense interconnect | HDI build-up route | microvia / VIPPO / sequential lamination planning |
+| high-speed or impedance-sensitive | impedance planning route | stackup, glass style, coupon/TDR validation posture |
+| high layer count | registration-sensitive route | lamination sequence, dimensional control, backdrill review |
+| RF + digital mixed build | hybrid RF stackup route | selective RF laminate vs structural layers |
+| thermal or power board | thermal platform route | heavy copper vs MCPCB vs ceramic |
+| bendable or folded structure | rigid-flex route | stackup mechanics, coverlay, bend-region planning |
+| package-adjacent fine-line build | IC substrate route | SAP, stacked microvias, ABF/BT, warpage posture |
+| edge / protection finishing | downstream route | profiling, edge finish, coating as separate steps |
 
-## Stable Facts
+## What This Page Governs
 
-- Internal HDI pages repeatedly frame microvias, sequential or any-layer build-up, and VIPPO as core HDI process elements.
-- The internal fabrication-process page adds DFM/CAM ingestion, material incoming checks, photolithography, lamination, plating, profiling, and electrical-test framing as the broader process backbone around those advanced decisions.
-- Internal impedance pages connect controlled-impedance design intent to TDR-style verification and coupon or measurement language.
-- Internal high-layer-count pages treat registration, sequential lamination, and backdrill as a coupled control problem rather than isolated capabilities.
-- Internal thermal pages separate MCPCB, heavy copper, and ceramic as different thermal-platform choices instead of one generic "high thermal PCB" category.
-- Internal rigid-flex pages connect stackup choice to bend reliability, coverlay, copper type, and 3D integration.
-- The HIL IC substrate page frames SAP, stacked microvias, ABF/BT build-up, flip-chip readiness, warpage, and impedance as a separate advanced packaging substrate posture.
-- Internal spread-glass and controlled-impedance material pages connect fabric style, resin system, copper profile, reference stackup, and TDR/VNA planning.
-- The newly absorbed APT PCB service pages add a second layer of manufacturing-route vocabulary: FR-4 and high-Tg as baseline laminate families, heavy copper as a power/thermal route, multilayer lamination as construction planning, special PCB as taxonomy expansion, profiling as edge-finish routing, and conformal coating as downstream protection.
+- Use this page when a draft says `advanced PCB`, `complex PCB`, or `stackup planning` without saying which engineering branch is actually in play.
+- Treat advanced fabrication as a routing layer that connects board intent to the correct process family.
+- Keep stackup architecture, material family, fabrication route, validation posture, and downstream finishing separate.
+- Escalate to narrower facts when the draft starts implying exact capability or acceptance outcomes.
 
-## Engineering Boundaries
+## Core Routing Branches
 
-- Do not treat HDI, high-layer-count, rigid-flex, ceramic, MCPCB, and IC substrate work as interchangeable advanced-PCB labels.
-- Keep stackup architecture, material family, fabrication route, validation plan, and assembly constraints as separate decisions.
-- Treat internal numeric capabilities such as layer count, microvia size, impedance tolerance, conductivity, bend cycle, line/space, or warpage as refresh-sensitive.
-- Pair any official material-property claim with manufacturer datasheets; internal pages are support for capability context, not material truth.
-- If a design combines multiple advanced requirements, plan the interaction explicitly: for example, HDI plus impedance, rigid-flex plus bend life, or thermal platform plus isolation.
+### Baseline Stackup And Laminate Family
 
-## Common Misreadings
+- Start with whether the board is still baseline rigid multilayer or already needs a special-process branch.
+- `FR-4` and `high-Tg` stay in the baseline laminate-family lane.
+- Heavy copper, flex, rigid-flex, ceramic, metal-core, RF, and substrate work are separate branches, not variants of the same default stackup.
 
-- A high layer count does not automatically imply HDI, and HDI does not automatically imply every-layer interconnect.
-- Controlled impedance is not just a target number; the evidence layer is usually coupon, TDR, or project-specific validation.
-- Backdrill is not needed on every multilayer board, but it becomes relevant when via stubs interact with signal speed and channel length.
-- A thermal PCB should not be selected only by a thermal-conductivity number; isolation, CTE, copper weight, assembly route, and cost also matter.
-- Rigid-flex reliability is not guaranteed by using polyimide alone; bend region layout, copper type, coverlay, stiffeners, and assembly constraints matter.
-- IC substrate wording should not be casually applied to standard HDI unless fine-line build-up, package interface, warpage, and clean-process requirements are actually in scope.
+### HDI Build-Up
 
-## Must Refresh Before Publishing
+- Route into HDI when density and interconnect structure become the dominant problem.
+- The current local corpus supports microvia, any-layer or sequential build-up, and VIPPO as normal HDI planning nouns.
+- Keep exact microvia geometry, via-fill windows, and lamination counts out of generic routing language.
 
-- Exact layer-count, line/space, microvia, backdrill, residual-stub, or registration limits
-- Exact impedance tolerance, TDR coverage, coupon requirements, or VNA scope
-- Thermal conductivity, dielectric isolation, Hi-Pot, thermal-cycle, and thermal-resistance claims
-- Copper weight, Tg/Td, profiling tolerance, coating chemistry performance, and special-process availability claims
-- Rigid-flex bend cycle, bend-radius, material-stack, and IPC class claims
-- IC substrate line/space, SAP, warpage, ABF/BT, and flip-chip readiness claims
-- Any lead time, MOQ, volume, yield, or process-availability statement
+### Controlled Impedance And High-Speed Planning
+
+- Route into impedance planning when signal integrity and channel control drive stackup choices.
+- Current local facts support coupling stackup intent with coupon/TDR-style verification posture.
+- Spread-glass, resin system, copper profile, and reference stackup selection belong in the same planning branch.
+
+### High-Layer Manufacturability
+
+- Route high-layer boards as process-sensitive rigid constructions, not as ordinary multilayer boards with more layers.
+- The safe language here is registration-sensitive execution, lamination-planning intensity, dimensional-movement control, drilling/desmear sensitivity, and backdrill review.
+- Keep official processing-guide posture separate from transferable shop thresholds.
+
+### Hybrid RF Stackup
+
+- Use the hybrid route when RF-critical layers and structural or digital layers are intentionally split across different laminate families.
+- Hybrid RF stackups remain a stackup-strategy lane, not proof that every mixed-material build is ready to manufacture unchanged.
+- Cost/performance tradeoff may be discussed only as internal routing posture, not as a numeric claim.
+
+### Thermal Platform Selection
+
+- Route thermal builds by platform class:
+  - heavy copper
+  - metal-core / IMS
+  - ceramic
+- Do not flatten these into one `high thermal PCB` label.
+- Thermal platform choice must stay separate from generic multilayer stackup language.
+
+### Rigid-Flex Stackup
+
+- Route rigid-flex as a mechanical-plus-electrical stackup branch.
+- Bend-region layout, coverlay, copper type, adhesive system, stiffeners, and assembly interaction belong here.
+- Do not use rigid-flex wording as a shortcut for flex-material identity or bend reliability proof.
+
+### IC Substrate Build-Up
+
+- Route SAP, stacked microvias, ABF/BT, flip-chip readiness, and warpage-sensitive fine-line work into the substrate branch.
+- Do not let ordinary HDI language absorb IC-substrate posture.
+- Substrate routing is package-adjacent build-up planning, not a generic PCB upgrade adjective.
+
+### Profiling And Protection
+
+- Profiling, edge plating, castellation, V-score, tab routing, laser singulation, and conformal coating are downstream route choices.
+- They should be attached after the main stackup/process family is chosen.
+- Coating is a protection step, not a bare-board capability proof.
+
+## Safe Prompting Rules
+
+- If the prompt says `advanced PCB`, first classify which process branch is actually driving the board.
+- If the prompt mixes HDI, high-speed, thermal, and rigid-flex claims, split them into separate planning layers before writing.
+- If the prompt asks for stackup advice, route it into architecture + material family + validation posture, not just fabrication nouns.
+- If the prompt needs capability wording, keep it at planning and route-selection level unless stronger local evidence exists.
+
+## Non-Claims And Stop Lines
+
+- This page does not prove current capability guarantees.
+- This page does not provide exact manufacturing thresholds.
+- This page does not prove qualification pass-status.
+- This page does not support cost, lead-time, or yield claims.
+- This page does not convert internal routing language into universal shop recipes or public capability tables.
 
 ## Related Fact Cards
 
+- `methods-pcb-stackup-special-process-and-baseline-families`
 - `methods-hdi-microvia-and-vippo-process-posture`
 - `methods-controlled-impedance-tdr-verification-posture`
-- `methods-high-layer-count-backdrill-and-registration-posture`
+- `methods-spread-glass-and-controlled-impedance-planning`
+- `methods-high-layer-rigid-board-manufacturability-context`
+- `methods-hybrid-rf-stackup-capability`
 - `methods-thermal-pcb-platform-selection-posture`
 - `methods-rigid-flex-stackup-and-bend-reliability-posture`
 - `methods-ic-substrate-fine-line-build-up-posture`
-- `methods-spread-glass-and-controlled-impedance-planning`
-- `methods-pcb-stackup-special-process-and-baseline-families`
-
-## Primary Sources
-
-- /code/hileap/frontendAPT/public/static/pcb/en/hdi-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/advanced-pcb-manufacturing.json
-- /code/hileap/frontendAPT/public/static/pcb/en/pcb-fabrication-process.json
-- /code/hileap/frontendHIL/public/static/products/en/hdi-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/pcb-impedance-control.json
-- /code/hileap/frontendAPT/public/static/pcb/en/high-speed-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/multilayer-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/high-layer-count-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/high-speed-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/high-thermal-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/metal-core-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/ceramic-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/high-thermal-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/metal-core-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/ceramic-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/heavy-copper-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/rigid-flex-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/flex-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/rigid-flex-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/flex-pcb.json
-- /code/hileap/frontendHIL/public/static/products/en/ic-substrate-pcb.json
-- /code/hileap/frontendAPT/public/static/materials/en/spread-glass-fr4.json
-- /code/hileap/frontendAPT/public/static/materials/en/controlled-impedance-stackups.json
-- /code/hileap/frontendAPT/public/static/materials/en/megtron-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/fr4-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/high-tg-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/heavy-copper-pcb.json
-- /code/hileap/frontendAPT/public/static/pcb/en/pcb-stack-up.json
-- /code/hileap/frontendAPT/public/static/pcb/en/multi-layer-laminated-structure.json
-- /code/hileap/frontendAPT/public/static/pcb/en/special-pcb-manufacturing.json
-- /code/hileap/frontendAPT/public/static/pcb/en/pcb-profiling.json
-- /code/hileap/frontendAPT/public/static/pcb/en/pcb-conformal-coating.json

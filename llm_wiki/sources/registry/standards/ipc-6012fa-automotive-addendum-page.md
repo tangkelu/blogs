@@ -6,7 +6,7 @@ source_type: "standard"
 url: "https://shop.electronics.org/ipc-6012/ipc-6012-addendum/Revision-f/english-0"
 jurisdiction: "global"
 published_at: "2025-12-01"
-checked_at: "2026-04-25"
+checked_at: "2026-05-02"
 trust_tier: "t1"
 stability: "dynamic"
 must_refresh: true

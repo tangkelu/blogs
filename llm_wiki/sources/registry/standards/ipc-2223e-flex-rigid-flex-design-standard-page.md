@@ -6,7 +6,7 @@ source_type: "standard"
 url: "https://shop.electronics.org/ipc-2223/ipc-2223-standard-only/Revision-e/english"
 jurisdiction: "global"
 published_at: "2024-03"
-checked_at: "2026-04-28"
+checked_at: "2026-05-03"
 trust_tier: "t1"
 stability: "dynamic"
 must_refresh: true

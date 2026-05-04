@@ -2,8 +2,8 @@
 topic_id: "processes-hand-solder-touchup-and-rework-control"
 title: "Hand Solder Touch-Up And Rework Control"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-27"
+status: "active"
+last_reviewed_at: "2026-05-04"
 fact_ids:
   - "methods-manual-solder-rework-boundary-for-mixed-technology"
   - "methods-pcba-mixed-technology-assembly-flow"
@@ -31,29 +31,63 @@ tags: ["manual-solder", "hand-solder", "rework", "touch-up", "mixed-technology",
 
 # Definition
 
-> Hand solder touch-up and rework control is the mixed-technology workflow that treats manual soldering as a bounded intervention after initial assembly planning, not as a substitute for route selection. The key question is not `can a skilled operator solder this`, but `when should manual intervention be used, how is it recorded, and what must be rechecked before release`.
+> Hand solder touch-up and rework control is a bounded manual-intervention workflow, not a craftsmanship guide. The safe question is when manual completion, touch-up, or rework is allowed; how it is recorded; and what must be rechecked before any later release decision.
 
 ## Why This Topic Matters
 
-- Mixed-technology articles weaken when they blur together planned solder route, casual bench correction, and formal rework.
-- The current corpus supports a safer frame: SMT, THT, selective or wave solder, inspection, cleaning, and functional validation stay in one coordinated flow, and any manual intervention should reconnect to that flow.
-- This is especially important for compact medical imaging and wearable boards, where localized residue, thermal disturbance, and access limits matter more than generic `hand solder is flexible` language.
+- Mixed-technology articles weaken when they blur together planned solder route, touch-up, and formal rework.
+- The current corpus supports a safer frame: SMT, THT, selective or wave solder, inspection, cleaning, traceability, and functional validation stay in one coordinated flow, and any manual intervention must reconnect to that flow.
+- This is especially important for compact mixed-technology boards, where localized residue, thermal disturbance, access limits, and revalidation effort matter more than generic `hand solder is flexible` language.
 
 ## Stable Facts
 
-- Manual solder can be safely written as part of prototype, low-count completion, touch-up, and rework scenarios.
+- Manual solder can be safely written as a controlled path for prototype completion, touch-up, low-count completion, and rework scenarios.
 - Selective and wave solder remain the primary production-route comparators for mixed-technology boards with recurring through-hole content.
-- Inspection after manual intervention is part of the same broader quality chain, which may include visual review, X-ray for hidden-joint contexts, electrical test, functional retest, cleaning review, and final inspection.
-- First-article, final-inspection, and traceability sources support the idea that deviations and release gates should be documented.
-- Medical and wearable application pages support compact-layout, mixed-signal, sensing, interface, and quality-flow context, but not device-approval claims.
+- Inspection after manual intervention belongs to the same broader quality chain, which may include visual review, X-ray for hidden-joint contexts, electrical test, functional retest, cleaning review, and final inspection.
+- First-article, final-inspection, and traceability facts support the idea that deviations and release gates should be documented, not hidden inside ad hoc bench work.
+- The mixed-technology, selective-wave, and FAI/FQI facts already provide enough local basis to define manual intervention as an exception path with post-rework validation, not a default production route.
+
+## Control Framework
+
+### Planned Manual Completion
+
+- Use this label when the build intentionally allows a small amount of manual finishing or completion after the main assembly route.
+- The control question is whether the manual step is part of the planned build record and whether its scope is explicit.
+- Do not describe planned manual completion as proof of workmanship quality.
+
+### Touch-Up
+
+- Use this label for localized correction after inspection finds a small, bounded issue.
+- Touch-up remains inside the same recorded quality flow and should be followed by the appropriate recheck.
+- Do not treat touch-up as a visual-only closure event.
+
+### Rework
+
+- Use this label when a defect, escape, or assembly issue requires a controlled manual correction.
+- Rework should be tied to what changed, why it changed, which unit or lot was affected, and what was revalidated.
+- Do not present rework as a no-cost or no-risk recovery step.
+
+### Post-Rework Validation
+
+- Rework must reconnect to the inspection and validation chain, which may include visual review, continuity check, functional retest, or other program-specific evidence.
+- A single visual check does not close the issue by itself.
+- The control goal is recorded release evidence, not a blanket claim that the board is fully restored.
 
 ## Engineering Boundaries
 
 - Do not describe hand solder as the default recurring route for mixed-technology volume production unless stronger program-specific evidence exists.
 - Separate `planned manual completion` from `touch-up after a visible defect` and from `rework after failure analysis or test escape`.
-- Keep manual solder risk language tied to access, residue, local heating, neighboring parts, and repeatability rather than unsupported workmanship thresholds.
+- Keep manual solder risk language tied to access, residue, local heating, nearby part disturbance, and repeatability rather than unsupported workmanship thresholds.
 - Treat post-rework validation as defect- and product-dependent; do not collapse it into a claim that one visual check closes the issue.
 - Keep IPC references at family or standards-anchor level only.
+
+## Explicit Non-Claims
+
+- This page does not support universal workmanship guarantees.
+- It does not support final release guarantees from visual check alone.
+- It does not support medical-approval or qualification claims.
+- It does not support cost, lead-time, or yield claims.
+- It does not convert manual touch-up into proof of production readiness.
 
 ## Practical Control Frames For Blog Support
 
@@ -65,6 +99,8 @@ tags: ["manual-solder", "hand-solder", "rework", "touch-up", "mixed-technology",
   what was changed, why it was changed, which board or lot was affected, what inspection was repeated, and whether continuity or functional behavior was rechecked.
 - `What should be rechecked`:
   visible joint condition, nearby component disturbance, residue or contamination status, electrical continuity where relevant, and functional behavior when the edited area affects powered operation or interfaces.
+- `What should be logged`:
+  the intervention type, board or lot identity, reason for intervention, inspection repeated, and whether the result returned to the recorded release flow.
 
 ## Medical Imaging And Wearable Framing
 

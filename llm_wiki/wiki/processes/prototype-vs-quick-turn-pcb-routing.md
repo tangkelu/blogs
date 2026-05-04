@@ -1,66 +1,134 @@
 ---
 topic_id: "processes-prototype-vs-quick-turn-pcb-routing"
-title: "Prototype Vs Quick-Turn PCB Routing"
+title: "Prototype Vs Quick Turn PCB Routing"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-03"
 fact_ids:
-  - "materials-hil-base-laminate-and-build-stage-family-map"
-  - "methods-pcba-npi-to-mass-production-gates"
+  - "methods-pcb-prototype-quickturn-and-volume-routing"
+  - "methods-pcba-dfm-dft-dfa-review-gate-positioning"
+  - "processes-hil-single-double-layer-capability-specs"
+  - "processes-hil-multilayer-capability-specs"
+  - "processes-hil-fr4-capability-specs"
+  - "processes-inspection-governance-navigation-map"
 source_ids:
   - "frontendhil-pcb-prototype-landing-en"
   - "frontendhil-quick-turn-pcb-landing-en"
-  - "frontendhil-single-double-layer-pcb-product-page-en"
-  - "frontendhil-multilayer-pcb-product-page-en"
-  - "frontendhil-fr4-pcb-product-page-en"
-tags: ["prototype", "quick-turn", "pcb", "routing", "npi", "single-double-layer", "multilayer", "internal"]
+  - "frontendhil-single-double-layer-pcb-product-en"
+  - "frontendhil-multilayer-pcb-product-en"
+  - "frontendhil-fr4-pcb-product-en"
+  - "frontendapt-pcb-pcb-prototype-page-en"
+  - "frontendapt-pcb-quick-turn-pcb-page-en"
+  - "frontendapt-pcb-npi-small-batch-pcb-manufacturing-page-en"
+  - "frontendapt-pcb-mass-production-pcb-manufacturing-page-en"
+tags: ["prototype", "quick-turn", "production", "pcb", "routing", "dfm", "npi", "fr4", "multilayer", "hil", "apt"]
 ---
 
 # Definition
 
-> Prototype and quick-turn are related but different routing decisions in the internal HIL corpus. `Prototype` is primarily a build-stage posture for validation and iteration, while `quick-turn` is primarily a schedule posture for urgent, engineering-gated fabrication. The two often overlap, but they should not be treated as synonyms.
+> `Prototype`, `quick-turn`, and `production` are separate routing axes in the local PCB corpus. `Prototype` is a build-purpose posture for validation and iteration. `Quick-turn` is a schedule-compression posture for approved jobs. `Production` is a repeatability and release-governance posture tied to staged scale-up, not merely a larger quantity of the same prototype order.
 
 ## Why This Topic Matters
 
-- Internal manufacturing pages often get flattened into one vague `fast PCB` story, which loses the distinction between `why the board is being built` and `how fast it must move`.
-- The HIL landing pages already separate prototype validation flow from quick-turn schedule compression.
-- The related product pages show that low-layer boards are the natural quick-turn baseline, while multilayer and more advanced material choices raise routing, stackup, and review complexity.
+- Early-stage PCB copy often collapses `prototype`, `quick-turn`, and `production` into one vague service promise.
+- The landed APT and HIL records already separate those ideas by intent, complexity, and release readiness.
+- This page provides one conservative routing surface so future AI workers do not convert urgent builds into production claims or convert prototype work into lead-time promises.
+
+## Routing Model
+
+### Axis 1: Build Purpose
+
+| Route | Primary question | Safe framing |
+|---|---|---|
+| **Prototype** | "Are we validating the design, stackup, or manufacturability?" | First-build, iteration, engineering review, validation continuity |
+| **Production** | "Is the build entering repeatable release and scale-up governance?" | NPI, staged ramp, repeatability, release-gated execution |
+
+### Axis 2: Schedule Posture
+
+| Route | Primary question | Safe framing |
+|---|---|---|
+| **Standard schedule** | "Can the board follow the normal engineering and fabrication queue?" | Baseline fabrication path |
+| **Quick-turn** | "Is there an urgent schedule requiring compressed handling?" | Accelerated handling after engineering review, not universal eligibility |
+
+### Axis 3: Board Complexity
+
+| Family | What it supports | Routing consequence |
+|---|---|---|
+| **1-2 layer / baseline FR-4** | Simpler routing, lower fabrication complexity, common early validation | Natural starting point for prototype and the clearest quick-turn baseline |
+| **Multilayer / tighter stackup control** | Registration control, impedance planning, denser via strategy | Quick-turn becomes more conditional and review-dependent |
+| **Advanced materials or structures** | High-Tg, RF, HDI, specialty stackups | Do not inherit the same urgent-routing assumptions as baseline FR-4 boards |
 
 ## Stable Facts
 
-- The HIL prototype landing page frames prototype work around engineering validation, rapid iteration, material or stackup verification, and a path into small-batch follow-on builds.
-- The HIL quick-turn landing page frames quick-turn work around urgent schedules, engineering review before release, and accelerated handling for approved jobs.
-- The two landing pages overlap on early-stage and low-volume work, but they describe different primary concerns: validation continuity versus schedule compression.
-- The HIL single/double-layer page gives the clearest low-complexity path for common quick-turn work because it is framed around simpler routing and faster manufacturing flow.
-- The HIL multilayer page shows why urgent builds become more conditional as stackup complexity, registration control, via strategy, and impedance demands increase.
-- The HIL FR-4 page provides the mainstream laminate baseline that most urgent or prototype decisions branch from before moving into more constrained variants such as high-Tg or halogen-free.
+- The APT routing fact card already separates `prototype`, `quick-turn`, `NPI/small-batch`, and `mass production` as distinct internal service postures rather than one undifferentiated fabrication promise.
+- The HIL prototype landing page frames prototype work around engineering validation, rapid iteration, and build continuity into later small-batch follow-on work.
+- The HIL quick-turn landing page frames quick-turn as urgent schedule handling with engineering review before release, not as the default route for every board family.
+- The HIL single/double-layer capability card gives the clearest low-complexity quick-turn baseline because 1-2 layer boards are the simplest landed product family for accelerated fabrication.
+- The HIL multilayer capability card shows why urgent routing becomes more conditional as stackup complexity, registration control, impedance requirements, and via structure become more demanding.
+- The HIL FR-4 capability card provides the mainstream base-material posture that many prototype and quick-turn discussions start from before escalating into tighter thermal, RF, or HDI constraints.
+- The DFM/DFT/DFA gate-positioning card supports treating early engineering review as an intake gate that shapes downstream routing rather than as a quoting formality.
+- The inspection-governance map supports a later first-build and release chain, which prevents `prototype complete` from being miswritten as `production proven`.
+
+## Conservative Routing Guidance
+
+### Use Prototype Routing When
+
+- the job is primarily about design validation or iteration
+- material choice, layer plan, or manufacturability still needs confirmation
+- the build may feed NPI or a later production handoff, but has not reached that posture yet
+
+### Use Quick-Turn Routing When
+
+- the job has genuine schedule urgency
+- the board family and stackup are simple enough to enter an accelerated lane
+- engineering review has not been skipped just because the schedule is compressed
+
+### Use Production Routing When
+
+- the discussion is about repeatability, gated ramp, or release continuity
+- the board is being framed in `NPI / small-batch / mass production` terms rather than just first-build language
+- inspection, traceability, and later release gates matter more than raw turnaround wording
+
+### Use Combined Routing When
+
+- a project is both validation-oriented and urgent
+- a first build needs to be described as `prototype + quick-turn` instead of pretending the two labels are interchangeable
+- the copy needs to explain a path from early validation into later production governance without promising parity
 
 ## Engineering Boundaries
 
-- Do not write `prototype` and `quick-turn` as if they always describe the same service.
-- Keep `build purpose`, `schedule urgency`, `layer complexity`, and `material family` as separate axes in intake or wiki drafting.
-- Treat published turnaround windows, no-MOQ language, and rush-scope claims as refresh-required internal commitments.
-- Do not imply that multilayer, HDI, or specialty-material jobs inherit the same quick-turn path as common 1-2 layer FR-4 boards.
-- When a project is both urgent and validation-oriented, describe both axes explicitly instead of collapsing them into one label.
+- Keep `build purpose`, `schedule urgency`, and `release stage` as separate dimensions.
+- Do not write `prototype` and `quick-turn` as synonyms.
+- Do not treat `quick-turn` as proof that multilayer, HDI, RF, or specialty-material boards follow the same accelerated lane as common 1-2 layer FR-4 boards.
+- Do not treat `prototype` as proof that the board is already production-ready or production-equivalent.
+- Treat DFM/DFT/DFA as early routing inputs, not as proof that downstream inspection, validation, or release gates are complete.
+- Keep first-build confirmation and later release governance separate from fabrication-speed wording.
 
 ## Common Misreadings
 
 - `Prototype` does not automatically mean the fastest possible schedule.
-- `Quick-turn` does not remove engineering review, manufacturability gating, or inspection checkpoints.
-- `Single/double-layer` is not the same thing as `prototype`; it is a lower-complexity product family that often supports prototype and quick-turn routing.
-- `Multilayer quick-turn` should be treated as review-dependent, not assumed from the standard 1-2 layer lane.
+- `Quick-turn` does not remove engineering review, manufacturability gating, or inspection planning.
+- `Production` does not simply mean `prototype with more units`.
+- `1-2 layer` does not equal `prototype`; it is a lower-complexity board family that often supports prototype or quick-turn routing.
+- `FR-4 express` language does not authorize the same schedule assumptions for specialty materials, tighter impedance work, or denser multilayer builds.
 
 ## Must Refresh Before Publishing
 
-- Exact prototype and quick-turn lead-time windows
-- No-MOQ or low-volume threshold claims
-- Which material families or advanced structures are currently allowed in accelerated lanes
-- Any promise about same-day, 24-hour, or 48-hour scope without current ops confirmation
+- exact turnaround windows or same-day / 24-hour / 48-hour promises
+- cost, MOQ, or low-volume commercial claims
+- statements that prototype and production share identical process outcomes
+- yield, reliability, or pass-rate claims
+- supplier-proof, certification, or release-authorization claims
+- claims that any one board family is always eligible for an accelerated lane
 
 ## Related Fact Cards
 
-- `materials-hil-base-laminate-and-build-stage-family-map`
-- `methods-pcba-npi-to-mass-production-gates`
+- `methods-pcb-prototype-quickturn-and-volume-routing`
+- `methods-pcba-dfm-dft-dfa-review-gate-positioning`
+- `processes-hil-single-double-layer-capability-specs`
+- `processes-hil-multilayer-capability-specs`
+- `processes-hil-fr4-capability-specs`
+- `processes-inspection-governance-navigation-map`
 
 ## Primary Sources
 
@@ -69,3 +137,7 @@ tags: ["prototype", "quick-turn", "pcb", "routing", "npi", "single-double-layer"
 - /code/hileap/frontendHIL/public/static/products/en/single-double-layer-pcb.json
 - /code/hileap/frontendHIL/public/static/products/en/multilayer-pcb.json
 - /code/hileap/frontendHIL/public/static/products/en/fr4-pcb.json
+- /code/hileap/frontendAPT/public/static/pcb/en/pcb-prototype.json
+- /code/hileap/frontendAPT/public/static/pcb/en/quick-turn-pcb.json
+- /code/hileap/frontendAPT/public/static/pcb/en/npi-small-batch-pcb-manufacturing.json
+- /code/hileap/frontendAPT/public/static/pcb/en/mass-production-pcb-manufacturing.json

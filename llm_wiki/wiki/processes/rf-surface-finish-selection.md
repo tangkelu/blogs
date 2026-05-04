@@ -2,8 +2,8 @@
 topic_id: "processes-rf-surface-finish-selection"
 title: "RF Surface Finish Selection"
 category: "processes"
-status: "draft"
-last_reviewed_at: "2026-04-24"
+status: "active"
+last_reviewed_at: "2026-05-03"
 fact_ids:
   - "methods-surface-finish-selection-for-rf"
   - "methods-selective-multi-finish-strategy"
@@ -24,7 +24,7 @@ tags: ["rf", "surface-finish", "enig", "enepig", "immersion-silver", "press-fit"
 
 # Definition
 
-> RF surface finish selection is a board-level engineering decision that separates RF loss, wire-bond compatibility, contact wear, storage window, and connector insertion needs instead of treating finish as a default menu item.
+> RF surface finish selection is a board-level boundary decision, not a finish ranking exercise. The safe posture is to separate RF pad loss, wire-bond compatibility, contact wear, storage window, assembly sequence, and connector insertion needs instead of turning one finish into a universal default.
 
 ## Why This Topic Matters
 
@@ -42,6 +42,39 @@ tags: ["rf", "surface-finish", "enig", "enepig", "immersion-silver", "press-fit"
 - Finish planning is repeatedly tied to assembly route, storage exposure, contact behavior, and connector mechanics, not only to nominal electrical category.
 - `Press-fit` finish choice is an adjacent but important boundary case: the current internal posture places `immersion tin` first for press-fit insertion behavior, but only when hole control and connector integration are handled together.
 
+## Decision Axes
+
+### RF Pad Loss Boundary
+
+- Safe internal routing treats RF pad finish as a loss-sensitive decision axis rather than a generic cosmetic or solderability choice.
+- `Immersion silver` belongs to the low-loss / PIM-aware lane when RF conductor-surface behavior matters most.
+- `ENIG` belongs to the broader planar assembly lane when the board needs a more general solderability and handling posture.
+- Do not convert either finish into a universal `best RF finish` statement.
+
+### Wire-Bond Boundary
+
+- `ENEPIG` is the guarded route when soldering and wire bonding must coexist on the same board.
+- Wire-bond need is a separate reason to zone finish locally rather than a reason to apply a premium finish everywhere.
+- Do not present wire-bond-ready finishes as universal high-frequency defaults when wire bonding is absent.
+
+### Contact Wear And Repeated Insertion Boundary
+
+- Edge-contact and repeated-insertion duties belong to a different finish-selection lane from ordinary RF pads.
+- Hard-gold or similar contact-duty zones should be treated as localized wear-interface planning, not as proof that the whole RF board should inherit the same finish.
+- Contact-duty logic is about connector wear and interface life, not direct RF path loss ranking.
+
+### Storage Window And Assembly Sequence Boundary
+
+- Storage exposure and assembly order are separate finish-choice drivers, especially when one region sits longer before assembly or when one finish must survive a different route through fabrication and assembly.
+- Selective finish is safe as a zoning strategy only when it is explicitly tied to storage window, solderability, contact behavior, and process sequence.
+- Do not reduce finish planning to one headline chemistry if the board includes multiple duty zones.
+
+### Press-Fit Adjacency Boundary
+
+- Press-fit finish logic is adjacent to RF finish selection but must remain a separate lane.
+- The internal posture places `immersion tin` first for press-fit insertion behavior only when hole control, connector compatibility, and backplane-style integration are considered together.
+- Do not merge press-fit chemistry into the default rule set for RF pads or wire-bond areas.
+
 ## Engineering Boundaries
 
 - Do not write "best finish for RF PCB" as if one finish fits all RF assemblies.
@@ -49,6 +82,14 @@ tags: ["rf", "surface-finish", "enig", "enepig", "immersion-silver", "press-fit"
 - Treat selective multi-finish as a process-planning tool, not as a free option without masking, yield, and cost implications.
 - Keep press-fit logic adjacent to RF finish discussions, but do not merge them into the same default rule set.
 - If a page needs exact plating thickness, nickel-stack detail, shelf-life values, or IPC acceptance language, refresh from official standards or manufacturer/process documents first.
+
+## Explicit Non-Claims
+
+- This page does not support exact plating-thickness and shelf-life claims.
+- It does not support universal finish recommendations.
+- It does not support yield and cost guarantees.
+- It does not support cost, lead-time, or yield claims.
+- It does not convert selective finish support into a claim that any finish mix is process-neutral.
 
 ## Common Misreadings
 

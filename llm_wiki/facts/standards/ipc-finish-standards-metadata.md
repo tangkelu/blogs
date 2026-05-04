@@ -6,15 +6,16 @@ category: "standards"
 status: "verified"
 confidence: "high"
 must_refresh: true
-reviewed_at: "2026-04-24"
+reviewed_at: "2026-05-03"
 source_ids:
   - "ipc-document-revision-table"
   - "ipc-4552b-toc"
   - "ipc-4553a-chinese-toc"
   - "ipc-4554-am1-toc"
+  - "ipc-4555-toc"
   - "ipc-4556-toc"
   - "ipc-status-of-standardization"
-tags: ["ipc", "surface-finish", "enig", "immersion-silver", "immersion-tin", "enepig", "revision-control"]
+tags: ["ipc", "surface-finish", "enig", "immersion-silver", "immersion-tin", "osp", "enepig", "revision-control"]
 ---
 
 # Canonical Summary
@@ -26,6 +27,7 @@ tags: ["ipc", "surface-finish", "enig", "immersion-silver", "immersion-tin", "en
 - The public IPC revision table lists `IPC-4552 Specification for Electroless Nickel/Immersion Gold (ENIG) Plating for Printed Circuit Boards` as `Rev B 5/21` at the time of this review.
 - The public IPC revision table lists `IPC-4553 Specification for Immersion Silver Plating for Printed Circuit Boards` as `No Longer Maintained`, with `Rev A 5/09` and original publication `6/05` shown in its history at the time of this review.
 - The public IPC revision table lists `IPC-4554 Specification for Immersion Tin Plating for Printed Circuit Boards` as `No Longer Maintained`, with `Amend 1 9/11` and original publication `2/07` shown in its history at the time of this review.
+- The public IPC revision table lists `IPC-4555 Specification for High Temperature Organic Solderability Preservatives (OSP) for Printed Boards` as `Rev A 12/17` at the time of this review, and the public TOC remains available as an identity anchor only.
 - The public IPC revision table lists `IPC-4556 Specification for Electroless Nickel/Electroless Palladium/Immersion Gold (ENEPIG) Plating for Printed Circuit Boards` as `Rev A 7/25` at the time of this review.
 - Public IPC table-of-contents PDFs can anchor document identity and section structure, but they do not replace the licensed standards.
 
@@ -47,7 +49,6 @@ tags: ["ipc", "surface-finish", "enig", "immersion-silver", "immersion-tin", "en
 
 - Confirm which IPC finish standards are licensed internally before extracting clause-level requirements.
 - Re-check whether IPC publishes a newer public TOC for `IPC-4556 Rev A`.
-- Decide whether `IPC-4555 OSP` should be added to the finish-standard metadata set.
 
 ## Source Links
 
@@ -55,5 +56,6 @@ tags: ["ipc", "surface-finish", "enig", "immersion-silver", "immersion-tin", "en
 - https://www.ipc.org/TOC/IPC-4552B-toc.pdf
 - https://www.ipc.org/TOC/IPC-4553A-Chinese.pdf
 - https://www.ipc.org/TOC/IPC-4554Am1.pdf
+- https://www.ipc.org/TOC/IPC-4555_TOC.pdf
 - https://www.ipc.org/TOC/IPC-4556.pdf
 - https://www.ipc.org/Status

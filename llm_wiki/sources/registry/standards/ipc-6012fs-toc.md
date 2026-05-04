@@ -6,7 +6,7 @@ source_type: "standard"
 url: "https://www.electronics.org/TOC/IPC-6012FS_TOC.pdf"
 jurisdiction: "global"
 published_at: "2024-02-01"
-checked_at: "2026-04-25"
+checked_at: "2026-05-02"
 trust_tier: "t1"
 stability: "semi_stable"
 must_refresh: false
