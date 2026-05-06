@@ -2,6 +2,521 @@
 
 Historical record only. For execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md) first.
 
+## 2026-05-06 (Thermal Cycling Public Parameter Boundary)
+
+- **Thermal cycling 参数层补强**: 为 `thermal-cycling-test-for-pcb-reliability` 补入可公开复用的 IPC 方法参数边界，并区分 method-scoped example 与 universal rule
+  - **Source 更新** (2 files):
+    - `sources/registry/methods/ipc-tm650-2626a-dc-current-induced-thermal-cycling-page.md`
+      - 补强 Method A / B 的公共参数说明，允许后续博客在明确标注 method-scoped 的前提下引用 `150 °C`、`10%`、`250 cycles`、`190 °C`、`230 / 245 / 260 °C` 等公开示例条件
+    - `sources/registry/standards/ipc-tm650-2672c-thermal-shock-cycle-continuity.md`
+      - 补强 board-level thermal shock / thermal cycle / continuity 的公共参数说明，允许后续博客在明确标注 qualification / conformance example 的前提下引用 `6 h bake`、`6 reflow simulations`、`100 cycles`、`15 min dwell`、`5% resistance change`
+  - **Fact 创建** (1 file):
+    - `facts/methods/thermal-cycling-public-parameter-boundary.md`
+      - 固化 thermal-cycling 文章可复用的参数边界：参数可写，但必须保持 method-scoped / application-scoped 语义，不能升格成 universal default
+  - **Wiki 创建** (1 file):
+    - `wiki/testing/thermal-cycling-public-parameter-path.md`
+      - 固化热循环写作路径：参数表、qualification / conformance 示例、AABUS 边界、以及 thermal shock 与 thermal cycle 的分离规则
+  - **Next step**
+    - 将 `/code/blogs/blogs/1206-p0-rewrite/en/thermal-cycling-test-for-pcb-reliability.md` 重写为带参数与边界说明的版本，再视效果决定是否上提 `prompts_template` 标准要求
+
+## 2026-05-06 (P4-204 5G Combiner Board Boundary And Measurement Vocabulary)
+
+- **5G combiner board 证据链补强**: 为 `5g combiner pcb` 补入更直接的板级执行与测量边界，并回收 VNA / S-parameter 语义
+  - **Source 创建** (1 file):
+    - `sources/registry/methods/keysight-vna-measurement-parameters-and-system-impedance.md`
+      - 固化 Keysight VNA system-impedance 与 measurement-parameter 帮助页，用于 `50 ohm`、`S11`、`S21`、return loss、insertion loss 的安全测量语义
+  - **Fact 创建** (1 file):
+    - `facts/methods/5g-combiner-board-execution-and-measurement-boundary.md`
+      - 固化 5G combiner board 的执行边界：board execution / combiner-device / VNA measurement 三层分离
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/5g-combiner-board-evidence-pack.md`
+      - 固化 `5g combiner pcb` 文章的可复用消费包
+  - **Next step**
+    - 该批次将继续用于修正 `/en/` 重写链的 locale / prompt 语言偏置，再重跑英文版对比稿
+
+-## 2026-05-06 (P4-203 Flex Bend, LED MCPCB Reflow, And PSA Stiffener Review Boundaries)
+
+- **Flex / MCPCB / PSA 三篇继续收敛**: 按 `先查 llm_wiki -> 不足补官方来源 -> 回写 llm_wiki -> 再写正文` 流程，完成 `flex-pcb-bend-radius-rules`、`led-mcpcb-assembly-and-reflow`、`psa-and-stiffener-bonding-process` 三篇英文重写
+  - **Source 创建** (2 files):
+    - `sources/registry/processes/3m-adhesive-transfer-tape-467mp.md`
+      - 固化 3M 官方 PSA transfer tape datasheet，用于 PSA wet-out、dwell、bond development 的安全表述
+    - `sources/registry/processes/molex-fpc-stiffener-application-specification.md`
+      - 固化 Molex 官方 FPC connector application spec，用于 backside stiffener、warpage、connector-fit 与 stress-control 的安全表述
+  - **Fact 创建** (1 file):
+    - `facts/methods/psa-and-stiffener-bonding-review-boundary.md`
+      - 固化 PSA/stiffener 文章的 connector-fit / deformation-control / dwell boundary
+  - **Wiki 创建** (1 file):
+    - `wiki/processes/psa-and-stiffener-bonding-boundary.md`
+      - 固化 PSA/stiffener 主题消费边界
+  - **Blog Rewrite 创建** (3 files):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/flex-pcb-bend-radius-rules.md`
+      - 改写为 `How to Review Flex PCB Bend Radius Before Release`
+      - 不再写成泛化 bend table，而是静态/动态/rigid-flex 分流与 stackup-freeze 结构
+    - `/code/blogs/blogs/1206-p0-rewrite/en/led-mcpcb-assembly-and-reflow.md`
+      - 改写为 `How to Review LED MCPCB Assembly and Reflow Before Release`
+      - 不再写成通用工艺参数表，而是 thermal-platform / stencil-window / profile-chain 结构
+    - `/code/blogs/blogs/1206-p0-rewrite/en/psa-and-stiffener-bonding-process.md`
+      - 改写为 `How to Review PSA and Stiffener Bonding Before Release`
+      - 不再写成 adhesive checklist，而是 wet-out / thickness / connector-fit / warpage-control 结构
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - 将上述 3 个条目从 `pending` 更新为 `done`
+
+-## 2026-05-06 (P4-202 Antenna Tuning And Trimming Review Boundary 天线调谐与修整审查边界)
+
+- **Antenna tuning and trimming 源优先收敛**: 将 `antenna-tuning-and-trimming` 从 `quick answer / specs / troubleshooting` 模板稿收敛为 measurement-driven antenna release-review boundary
+  - **Source 创建** (2 files):
+    - `sources/registry/methods/silabs-an1275-impedance-matching-network-architectures.md`
+      - 固化 Silicon Labs `AN1275`，用于 matching-network architecture、feed-side tuning placeholder 与 measured tuning workflow 的安全表述
+    - `sources/registry/methods/ti-swra416-miniature-helical-and-pcb-antenna-guide.md`
+      - 固化 TI `SWRA416`，用于 compact antenna measurement-driven tuning、physical adjustment posture 与 enclosure-sensitive retuning 的安全表述
+  - **Fact 创建** (1 file):
+    - `facts/methods/antenna-tuning-and-trimming-review-boundary.md`
+      - 固化安全消费边界：antenna-region discipline、matching placeholder、feed / launch review、enclosure-aware retuning、staged validation
+      - 明确 blocked classes：universal keep-out dimensions、fixed trim-step tables、range / efficiency / certification claims、supplier tuning-service claims
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/antenna-tuning-and-trimming-evidence-pack.md`
+      - 固化 antenna-tuning 文章的可复用消费包
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/antenna-tuning-and-trimming.md`
+      - 改写为 `How to Review Antenna Tuning and Trimming Before Release`
+      - 不再写成泛化的 VSWR / return-loss / rule-table 模板稿
+      - 重点转为 protected antenna region、reserved matching path、enclosure-aware retuning、feed-handoff review、validation layering
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `antenna-tuning-and-trimming` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-201 Water Treatment Board Review Boundary 水处理板审查边界)
+
+- **Water treatment 源优先收敛**: 将 `water-treatment` 从 `design specs / corrosion protection / troubleshooting` 模板稿收敛为 industrial monitoring-and-control board release-review boundary
+  - **Source 创建** (3 files):
+    - `sources/registry/applications/epa-online-water-quality-monitoring-resources-page.md`
+      - 固化 EPA `Online Water Quality Monitoring Resources` 页面，用于在线水质监测、远程监测站、通信系统场景身份
+    - `sources/registry/applications/epa-smart-sewer-technologies-page.md`
+      - 固化 EPA `Smart Sewer Technologies` 页面，用于废水系统 remote sensors、RTDSS、SCADA、pump / valve / gate control 场景身份
+    - `sources/registry/applications/usgs-national-water-monitoring-network-page.md`
+      - 固化 USGS `National Water Monitoring Network` 页面，用于 fixed-location automated sensing 与 continuous data transmission 场景身份
+  - **Fact 创建** (1 file):
+    - `facts/methods/water-treatment-board-review-boundary.md`
+      - 固化安全消费边界：board role、sensor chain versus pump/valve control split、protected-versus-accessible regions、connector / enclosure handoff、contamination and condensation workflow、staged validation
+      - 明确 blocked classes：waterproof / corrosion-proof guarantees、sensor accuracy / drift / calibration claims、protocol interoperability、qualification / field-life claims
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/water-treatment-evidence-pack.md`
+      - 固化 water-treatment 文章的可复用消费包
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/water-treatment.md`
+      - 改写为 `How to Review a Water Treatment PCB Before Release`
+      - 不再写成 universal corrosion / coating / waterproof checklist 模板稿
+      - 重点转为 monitoring board role、sensor-versus-actuation split、protection workflow、connector and enclosure handoff、validation layering
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `water-treatment` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-200 Hurricane Monitoring Board Review Boundary 飓风监测板审查边界)
+
+- **Hurricane monitor 源优先收敛**: 将 `hurricane-monitor-pcb` 从 `manufacturing specs / reliability checklist / troubleshooting` 模板稿收敛为 remote environmental monitoring board release-review boundary
+  - **Source 创建** (2 files):
+    - `sources/registry/applications/noaa-national-data-buoy-center-page.md`
+      - 固化 NOAA `National Data Buoy Center` 官方页面，用于 weather-buoy / coastal observation 场景身份
+    - `sources/registry/applications/noaa-hurricane-observation-instruments-page.md`
+      - 固化 NOAA AOML `Hurricane Observation Instruments` 页面，用于 dropsonde / storm-observation 平台场景身份
+  - **Fact 创建** (1 file):
+    - `facts/methods/hurricane-monitor-board-review-boundary.md`
+      - 固化安全消费边界：deployment context、sensor and telemetry split、protected-versus-accessible regions、connector / enclosure handoff、contamination and corrosion workflow、staged validation
+      - 明确 blocked classes：storm-survival、saltwater immersion、MIL-STD / IPC Class 3 proof、RF authorization、qualification / field-readiness claims
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/hurricane-monitor-pcb-evidence-pack.md`
+      - 固化 hurricane-monitor 文章的可复用消费包
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/hurricane-monitor-pcb.md`
+      - 改写为 `How to Review a Hurricane Monitoring PCB Before Release`
+      - 不再写成 universal rugged board / Category 5 survival / saltwater immersion 模板稿
+      - 重点转为 deployment split、protection workflow、connector and enclosure handoff、sensor vs telemetry ownership、validation layering
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `hurricane-monitor-pcb` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-199 Gantry Control Board Review Boundary 龙门控制板审查边界)
+
+- **Gantry control 源优先收敛**: 将 `gantry-control-pcb` 从 `design specs / synchronization rules / troubleshooting` 模板稿收敛为 paired-axis gantry board release-review boundary
+  - **Source 创建** (3 files):
+    - `sources/registry/methods/beckhoff-gantry-operation-page.md`
+      - 固化 Beckhoff 官方 `gantry operation` 文档，用于 difference monitoring、homing posture、correction behavior 的安全表述
+    - `sources/registry/methods/kollmorgen-gantry-mode-page.md`
+      - 固化 Kollmorgen 官方 `gantry mode` 文档，用于 master/slave command ownership、shared limits、coordinated stop 的安全表述
+    - `sources/registry/methods/siemens-gantry-axes-page.md`
+      - 固化 Siemens 官方 `gantry axes` 文档，用于 paired-axis fault handling 与 supervised gantry behavior 的安全表述
+  - **Fact 创建** (1 file):
+    - `facts/methods/gantry-control-board-review-boundary.md`
+      - 固化安全消费边界：machine-axis ownership、feedback route、homing posture、coordinated stop/fault handling、moving-cable stress、staged validation
+      - 明确 blocked classes：universal skew / latency / torque / accuracy / safety / reliability claims
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/gantry-control-pcb-evidence-pack.md`
+      - 固化 gantry-control 文章的可复用消费包
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/gantry-control-pcb.md`
+      - 改写为 `How to Review a Gantry Control PCB Before Release`
+      - 不再写成通用 dual-drive specs 与 troubleshooting 模板
+      - 重点转为 paired-axis ownership、feedback and homing posture、coordinated stop behavior、moving-cable stress、validation layering
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `gantry-control-pcb` 状态从 `pending` 更新为 `done`
+
+- **CO2 tracker correction**:
+  - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+    - 将 `co2-control-pcb` 的 rewrite 路径从源站路径纠正为 `/code/blogs/blogs/1206-p0-rewrite/en/co2-control-pcb.md`
+
+-## 2026-05-05 (P4-198 CO2 Control Board Review Boundary CO2 控制板审查边界)
+
+- **CO2 control 源优先收敛**: 将 `co2-control-pcb` 从 `Quick Answer / specs / troubleshooting` 模板稿收敛为 CO2 control board-review boundary
+  - **Source 创建** (1 file):
+    - `sources/registry/products/sensirion-scd4x-co2-sensor-page.md`
+      - 固化 `SCD4x` 作为官方 CO2 / NDIR 传感器家族身份来源
+  - **Fact 创建** (1 file):
+    - `facts/methods/co2-control-board-review-boundary.md`
+      - 固化安全消费边界：sensor identity、airflow、heat separation、contamination control、calibration ownership、staged validation
+      - 明确 blocked classes：ppm / drift / warm-up / interval numerics、washability universalization、compliance / field-performance proof
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/co2-control-pcb-evidence-pack.md`
+      - 固化 CO2 control 文章的可复用消费包
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/co2-control-pcb.md`
+      - 改写为 `How to Review a CO2 Control PCB Before Release`
+      - 不再写成泛化的传感器参数表、长尾词拼盘与通用 FAQ 模板
+      - 重点转为 airflow、thermal separation、contamination control、wash/coating decision、validation layering
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `co2-control-pcb` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-197 RF Front-End Low-Noise Review Boundary 射频前端低噪声审查边界)
+
+- **RF front-end low-noise 源优先收敛**: 将 `rf-front-end-low-noise-pcb-compliance` 从 `specs / checklist / troubleshooting` 模板稿收敛为 RF front-end board-review and pre-compliance boundary
+  - **Fact 创建** (1 file):
+    - `facts/methods/rf-front-end-low-noise-board-review-boundary.md`
+      - 固化安全消费边界：receive-path ownership、RF/digital/power partitioning、return-path continuity、shield / cavity posture、RF handoff、staged validation
+      - 明确 blocked classes：universal RF rule tables、exact material / impedance / roughness numerics、first-pass compliance promises、finished-product performance proof、commercial numerics
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/rf-front-end-low-noise-pcb-compliance-evidence-pack.md`
+      - 固化 RF front-end low-noise 文章的可复用消费包，绑定 return-path、RF validation、RF finish、shield planning 与 FCC / module host-integration boundary 的本地路径
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/rf-front-end-low-noise-pcb-compliance.md`
+      - 改写为 `How to Review an RF Front-End PCB Before Pre-Compliance Testing`
+      - 不再写无证据的材料、阻抗、公差、cleanliness 与合规承诺大表
+      - 重点转为 receive-side sensitivity、partitioning、return-path continuity、shield posture、RF handoff、validation layering、freeze points
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `rf-front-end-low-noise-pcb-compliance` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-196 CoWoS-Adjacent Package Substrate Review Boundary CoWoS 邻接封装基板审查边界)
+
+- **Industrial-grade CoWoS carrier substrate 源优先收敛**: 将 `industrial-grade-cowos-carrier-substrate` 从 `specs / design rules / troubleshooting` 模板稿收敛为 CoWoS-adjacent package-substrate release-review boundary
+  - **Source 创建** (1 file):
+    - `sources/registry/materials/tsmc-cowos-technology-page.md`
+      - 固化 TSMC 官方 `CoWoS` 平台身份、`CoWoS-S / R / L` 的 interposer-family 语境，以及 advanced-packaging 归属
+  - **Fact 创建** (1 file):
+    - `facts/methods/cowos-package-substrate-review-boundary.md`
+      - 固化安全消费边界：CoWoS platform identity、interposer vs substrate ownership split、ABF/build-up posture、assembly-stress posture、staged validation
+      - 明确 blocked classes：universal substrate numerics、HBM/chiplet/performance claims、supplier-readiness proof、cost/lead-time/yield claims
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/industrial-grade-cowos-carrier-substrate-evidence-pack.md`
+      - 固化 package-substrate release-review 消费包，绑定 `TSMC CoWoS`、`KYOCERA FC-BGA`、`Ajinomoto ABF`、`IC substrate` 本地消费路径
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/industrial-grade-cowos-carrier-substrate.md`
+      - 改写为 `How to Review a CoWoS-Adjacent Package Substrate Before Release`
+      - 不再写无证据的 warpage / line-space / reliability / lead-time 模板表
+      - 重点转为 package definition、ownership split、ABF/build-up posture、assembly-stress handoff、validation layering、freeze points
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `industrial-grade-cowos-carrier-substrate` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-195 Display Controller Board Review Boundary 显示控制板审查边界)
+
+- **Display controller 源优先收敛**: 将 `display-controller-pcb` 从 `specs / routing rules / troubleshooting` 模板稿收敛为 display-path handoff and controller-board release-review boundary
+  - **Fact 创建** (1 file):
+    - `facts/methods/display-controller-board-review-boundary.md`
+      - 固化安全消费边界：controller-board role、display-interface-family handoff、connector / FPC exit、local power partitioning、layered validation
+      - 明确 blocked classes：generic impedance / skew / eye tables、panel-behavior proof、MIPI/LVDS/HDMI compliance claims
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/display-controller-pcb-evidence-pack.md`
+      - 固化 display-controller 文章的可复用消费包，绑定 `MIPI DSI-2`、`Display Command Set`、`LVDS`、`HDMI` 与 staged review / validation 的本地路径
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/display-controller-pcb.md`
+      - 改写为 `How to Review a Display Controller PCB Before Release`
+      - 不再写无证据的 routing-rule 和 troubleshooting 参数表
+      - 重点转为 board role、interface handoff、connector/FPC exit、power partitioning、freeze points
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `display-controller-pcb` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-194 Transparent OLED Board Review Boundary 透明 OLED 板级审查边界)
+
+- **Transparent OLED 源优先收敛**: 将 `transparent-oled-pcb` 从 `manufacturing specs / design rules / troubleshooting` 模板稿收敛为 transparent-display module and interconnect release-review boundary
+  - **Fact 创建** (1 file):
+    - `facts/methods/transparent-oled-board-review-boundary.md`
+      - 固化安全消费边界：visible transparent zone、hidden driver board、flex-tail / rigid-flex handoff、material-system posture、assembly / validation layering
+      - 明确 blocked classes：transparent multilayer capability、optical / haze / sheet-resistance tables、generic bend-life / yield / field-life claims
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/transparent-oled-pcb-evidence-pack.md`
+      - 固化 display-adjacent board-review 消费包，绑定 `Willow Glass`、conductive ink、PI / LCP、display-interface 与 staged validation 的本地消费路径
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/transparent-oled-pcb.md`
+      - 改写为 `How to Review a Transparent OLED PCB Before Release`
+      - 不再写无证据的 optical / resistance / layer-count 参数表
+      - 重点转为 module split、hidden driver board、flex-tail handoff、material-system boundary、assembly route、freeze points
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `transparent-oled-pcb` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-193 Hub Motor Inverter Release Review Boundary 轮毂电机逆变器放行审查边界)
+
+- **Hub motor inverter 源优先收敛**: 将 `hub-motor-inverter-pcb` 从 heavy-copper / thermal / troubleshooting 模板稿收敛为 inverter board release-review boundary
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/hub-motor-inverter-pcb-evidence-pack.md`
+      - 固化安全消费边界：board role、power-stage vs control partitioning、sensing path separation、thermal route choice、assembly route、validation layering
+      - 明确 blocked classes：current / trace / thermal / clearance numeric tables、efficiency / switching / field-life claims、cost / lead-time / yield claims
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/hub-motor-inverter-pcb.md`
+      - 改写为 `How to Review a Hub Motor Inverter PCB Before Release`
+      - 重点转为 board role、path separation、thermal route、assembly and validation boundary、freeze points
+  - **本地知识库消费路径**:
+    - `wiki/applications/automotive-ev-pcb-pcba-boundary-map.md`
+    - `wiki/applications/power-energy-pcb-pcba-review-boundaries.md`
+    - `wiki/processes/current-carrying-and-high-current-layout-boundaries.md`
+    - `wiki/processes/power-interface-connector-assembly-route-selection.md`
+    - `facts/methods/current-carrying-trace-width-and-copper-boundary.md`
+    - `facts/methods/thermal-pcb-platform-selection-posture.md`
+    - `facts/methods/power-energy-inverter-charger-rewrite-boundary.md`
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning` (via linked governance lane)
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `hub-motor-inverter-pcb` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-192 Backplane Release Review Boundary 背板放行审查边界)
+
+- **Redundant PSU backplane 源优先收敛**: 将 `redundant-psu-backplane-impedance-control` 从高风险参数表/排障模板稿收敛为 power-and-signal backplane release-review boundary
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/redundant-psu-backplane-impedance-control-evidence-pack.md`
+      - 固化安全消费边界：board role、power-path vs impedance-path separation、connector-zone review、press-fit / backdrill posture、stackup intent、validation layering
+      - 明确 blocked classes：current / copper / PDN / layer-count / stub numeric tables、connector-rating claims、cost/lead-time/yield claims
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/redundant-psu-backplane-impedance-control.md`
+      - 改写为 `How to Review a Power and Signal Backplane Before Release`
+      - 不再写成 `specs, rules, troubleshooting` 模板稿
+      - 重点转为 board role、path split、connector-zone hold、stackup and transition cleanup、validation boundary、freeze points
+  - **本地知识库消费路径**:
+    - `wiki/processes/backplane-execution-and-connector-integration.md`
+    - `wiki/testing/validation-ladder-from-e-test-to-si-verification.md`
+    - `wiki/processes/power-interface-connector-assembly-route-selection.md`
+    - `facts/methods/press-fit-and-backplane-integration-posture.md`
+    - `facts/methods/controlled-impedance-tdr-verification-posture.md`
+    - `facts/methods/current-carrying-trace-width-and-copper-boundary.md`
+    - `facts/methods/thermal-pcb-platform-selection-posture.md`
+    - `facts/methods/pcba-first-article-inspection-vs-high-speed-validation-boundary.md`
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `redundant-psu-backplane-impedance-control` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-191 Quick-Turn Routing Boundary And Blockchain Node Review 快转路径与区块链节点板审查边界)
+
+- **Quick-turn 与 standard lead time 源优先收敛**: 将 `quick-turn-pcb-vs-standard-lead-time-what-changes-in-fab` 从单一 lead-time 承诺式旧稿收敛为 routing-boundary 文章
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/quick-turn-pcb-vs-standard-lead-time-what-changes-in-fab-evidence-pack.md`
+      - 固化三时钟模型：`quote / DFM intake`、`factory routing`、`shipping / customs`
+      - 明确 blocked classes：固定 turnaround promises、rush premium、stock / refund / customs-clearance guarantees、carrier transit 反推工厂交期
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/quick-turn-pcb-vs-standard-lead-time-what-changes-in-fab.md`
+      - 改写为 `Quick-Turn PCB vs Standard Lead Time: What Changes in Fab`
+      - 重点转为 intake clarity、factory routing certainty、shipping boundary、EQ hold pattern、freeze points
+  - **本地知识库消费路径**:
+    - `facts/methods/pcb-quickturn-lead-time-clock-separation.md`
+    - `facts/methods/pcb-prototype-quickturn-and-volume-routing.md`
+    - `facts/methods/international-pcb-shipping-customs-document-boundary.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `facts/methods/pre-fabrication-validation-workflow-boundary.md`
+    - `wiki/processes/quick-turn-pcb-lead-time-review-boundary.md`
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `quick-turn-pcb-vs-standard-lead-time-what-changes-in-fab` 状态从 `pending` 更新为 `done`
+
+- **Blockchain node PCB 源优先收敛**: 将 `blockchain-node-pcb` 从关键词拼盘旧稿收敛为 compute-infrastructure board-review boundary
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/blockchain-node-pcb-evidence-pack.md`
+      - 固化安全消费边界：node board role、high-speed interface pressure、power-path discipline、thermal-platform choice、staged validation
+      - 明确 security-sensitive transaction hardware 只作为边界案例，不与 validator / storage / edge node 混写
+      - 明确 blocked classes：throughput / uptime / tamper-efficacy / compliance / thermal-outcome guarantees
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/blockchain-node-pcb.md`
+      - 改写为 `How to Review a Blockchain Node PCB Before Release`
+      - 重点转为 compute role、interface pressure、power and thermal route、security boundary、validation layering
+  - **本地知识库消费路径**:
+    - `wiki/applications/compute-infrastructure-pcb-review-boundaries.md`
+    - `wiki/applications/security-equipment-pcb-pcba-boundary-map.md`
+    - `facts/methods/high-speed-interface-system-context.md`
+    - `facts/methods/controlled-impedance-tdr-verification-posture.md`
+    - `facts/methods/current-carrying-trace-width-and-copper-boundary.md`
+    - `facts/methods/thermal-pcb-platform-selection-posture.md`
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `blockchain-node-pcb` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-189 Smart Lock EMC FCC Review Boundary 智能门锁 EMC/FCC 审查边界)
+
+- **Lock EMC/FCC 源优先收敛**: 将 `lock-emc-fcc-compliance` 从 `first-pass certification` 风格旧稿收敛为 smart-lock board review boundary，可复用于后续 access-control / smart-lock / compact wireless hardware 重写
+  - **Source 创建** (2 files):
+    - `sources/registry/standards/ecfr-47-cfr-15-212-modular-transmitters-page.md`
+      - 固化 FCC `modular transmitter` 的 host-device 责任边界：模块授权不等于宿主产品自动放行
+    - `sources/registry/methods/silabs-an1088-designing-with-pcb-antenna.md`
+      - 固化天线区域、附近金属/铜箔/机械环境对 compact wireless board 的影响边界
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/lock-emc-fcc-compliance-evidence-pack.md`
+      - 固化 smart-lock EMC/FCC-preparation 的安全消费边界：actuator-noise partitioning、return-path continuity、edge-entry ESD review、antenna/enclosure coexistence、module-integration boundary、staged validation
+      - 明确 blocked classes：FCC pass/first-pass claims、UL 294 / EN 60839 compliance proof、exact EMC/ESD numerics、wireless-range guarantees、ecosystem compatibility、commercial numerics
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/lock-emc-fcc-compliance.md`
+      - 不再写成 `spec table + certification promise` 式模板稿
+      - 改写为 `How to Review a Smart Lock PCB Before EMC and FCC Testing`
+      - 重点转为 noise-source partitioning、return-path continuity、entry-point protection、antenna/enclosure interaction、validation ownership、freeze points
+  - **本地知识库消费路径**:
+    - `wiki/consumption/security-equipment-evidence-pack.md`
+    - `wiki/consumption/maker-smart-home-evidence-pack.md`
+    - `wiki/consumption/industrial-control-evidence-pack.md`
+    - `facts/methods/ground-and-return-path-boundary-stays-at-reference-plane-and-routing-continuity.md`
+    - `facts/methods/pcba-validation-handoff-package.md`
+    - `wiki/processes/cavity-and-shield-feature-planning.md`
+    - `sources/registry/standards/fcc-equipment-authorization-page.md`
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `lock-emc-fcc-compliance` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-190 PCB DFM Review Boundary PCB 可制造性审查边界)
+
+- **PCB Design For Manufacturing 源优先收敛**: 将 `pcb-design-for-manufacturing-2` 从 `spec table + generic checklist` 旧稿收敛为 release-review boundary，可复用于后续 DFM / CAM / release-package 主题重写
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/pcb-design-for-manufacturing-2-evidence-pack.md`
+      - 固化 DFM 的安全消费边界：stackup intent、process branch、profile route、file-package clarity、test-access ownership、staged validation
+      - 明确 blocked classes：trace/space / annular / drill / mask 数值表、IPC acceptance thresholds、panelization economics、CAM-correction guarantees、commercial numerics
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/pcb-design-for-manufacturing-2.md`
+      - 不再写成 `complete specs / checklist / troubleshooting` 式模板稿
+      - 改写为 `How to Review PCB Design for Manufacturing Before Release`
+      - 重点转为 release burden、stackup/process branch、file-package clarity、profile route、test-access ownership、freeze points
+  - **本地知识库消费路径**:
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `facts/methods/pre-fabrication-validation-workflow-boundary.md`
+    - `facts/methods/pcba-release-traceability-governance-boundary.md`
+    - `facts/methods/pcb-stackup-special-process-and-baseline-families.md`
+    - `facts/methods/pcba-flying-probe-vs-ict-selection-posture.md`
+    - `sources/registry/standards/ucamco-gerber-format-page.md`
+    - `sources/registry/standards/ipc-dpmx-ipc-2581-consortium-home-page.md`
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `pcb-design-for-manufacturing-2` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-188 Ground Power PCB Review Boundary 地面电力板审查边界)
+
+- **Ground Power PCB 源优先收敛**: 将 `ground-power-pcb` 从高风险参数表/排障模板稿收敛为 board-review boundary，可复用于后续高电流/地面电力设备板类重写
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/ground-power-pcb-evidence-pack.md`
+      - 固化 `ground power PCB` 的安全消费边界：board role、current-path geometry、thermal-platform choice、connector/harness handoff、staged validation
+      - 明确 blocked classes：universal copper/current/clearance numerics、Hi-Pot/compliance proof、connector-rating guarantees、commercial numerics
+      - 绑定本地可复用卡片：power-energy boundary、current-carrying boundary、thermal-platform posture、THT/press-fit/harness route split
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/ground-power-pcb.md`
+      - 不再写成 `manufacturing specs / design rules / troubleshooting` 式模板稿
+      - 改写为 `How to Review a Ground Power PCB Before Release`
+      - 重点转为 board role、current path、thermal route、interface handoff、validation ownership、freeze points
+  - **本地知识库消费路径**:
+    - `wiki/consumption/power-energy-evidence-pack.md`
+    - `wiki/applications/power-energy-pcb-pcba-review-boundaries.md`
+    - `wiki/processes/current-carrying-and-high-current-layout-boundaries.md`
+    - `facts/methods/current-carrying-trace-width-and-copper-boundary.md`
+    - `facts/methods/thermal-pcb-platform-selection-posture.md`
+    - `facts/methods/tht-pressfit-terminal-route-boundary.md`
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `ground-power-pcb` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-187 Anti-Jamming PCB Board-Review Boundary 收敛为板级审查边界)
+
+- **Anti-Jamming PCB 源优先收敛**: 将 `anti-jamming-pcb` 从高风险 mission-level 旧稿收敛为 board-review boundary，可复用于后续 defense/RF 干扰相关重写
+  - **Wiki 创建** (1 file):
+    - `wiki/consumption/anti-jamming-pcb-evidence-pack.md`
+      - 固化 `anti-jamming PCB` 的安全消费边界：RF/数字分区、return-path continuity、shield/cavity planning、transition review、staged validation
+      - 明确 blocked classes：anti-jamming effectiveness、GNSS anti-jam authority、EW/radar performance numerics、MIL-STD compliance proof、commercial numerics
+      - 绑定本地可复用卡片：defense application boundary、MIL-STD context boundary、ground/return-path boundary、shield/cavity planning
+  - **官方来源显式复核**:
+    - `analog-devices-mixed-signal-pcb-layout-guidelines`
+    - `ti-high-speed-layout-guidelines`
+    - `mil-std-461-emi-control-standard-page`
+    - `mil-std-810-environmental-engineering-tests-page`
+    - 用于收紧 mixed-signal partitioning、return-current continuity 与 standards-context 说法
+  - **Blog Rewrite 创建** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/anti-jamming-pcb.md`
+      - 不再写成 `design rules / material specs / troubleshooting` 式高风险泛化稿
+      - 改写为 `How to Review an Anti-Jamming PCB Before Release`
+      - 重点转为 board role、partitioning、reference continuity、shield posture、validation ownership、freeze points
+  - **Tracker 更新** (1 file):
+    - `/code/hileap/frontendAPT/docs/APTPCB_低质量博客重写清单_2026-05-04.md`
+      - `anti-jamming-pcb` 状态从 `pending` 更新为 `done`
+
+-## 2026-05-05 (P4-186 PCIe Gen6 Source-First Repair PCIe Gen6 源优先修复)
+
+- **PCIe Gen6 重写链路修复**: 将 `pcie-gen6-si-checklist-mass-production` 从“保守但偏空”的重写状态修回到 `llm_wiki -> 官方来源核对 -> 回写 -> 正文` 的源优先链路
+  - **Fact 创建** (1 file):
+    - `facts/methods/pcie-gen6-board-review-boundary.md`
+      - 固化 `PCIe 6.0 FAQ` 的 `64.0 GT/s`、`PAM4`、`FEC`、flit system-context 边界
+      - 将 `MEGTRON 7`、`Tachyon 100G`、`112G` connector/cable ecosystem 只路由为材料和互连压力语境，不升级成 finished-board capability proof
+      - 明确可写重心：board ownership、stackup/material direction、launch/via/backdrill posture、validation layering
+      - 明确禁区：BER、eye-mask、channel budget、通用残桩阈值、通用 `Gen6-ready` 证明
+  - **Wiki 创建** (1 file):
+    - `wiki/processes/pcie-gen6-si-review-and-release-boundary.md`
+      - 聚合 `board role -> stackup/material -> local transition -> layered validation` 四段式 review spine
+      - 固化典型 release burden：ownership 不清、材料语言强于结构语言、launch/via posture 含糊、validation labels 混写
+  - **Blog Rewrite 更新** (1 file):
+    - `/code/blogs/blogs/1206-p0-rewrite/en/pcie-gen6-si-checklist-mass-production.md`
+      - 不再把文章写成泛化 checklist
+      - 增加更强的场景化 release blocker / EQ burden / local transition explanation
+      - 保留 `PCIe Gen6` 特异性，同时避免无证据 SI 数字表
+  - **Prompt Contract 更新** (2 files):
+    - `prompts_template/shared/blog-rewrite-data-gap-contract.md`
+    - `prompts_template/shared/query.md`
+      - 强制写作前显式列出本次消费的 `fact_id` / `wiki` 页面和外部补源缺口
+      - 如果只有“看过本地卡片”但正文没有消费其检查项与边界，视为未真正使用 `llm_wiki`
+  - **根因结论**:
+    - 前一版问题不是 `llm_wiki` 无内容，而是执行链路把本地卡片当成背景而不是主数据层
+    - 高风险 SI 数字被删除后，没有补回 source-backed 的失效模式、卡点评审和 release burden，导致文章退化成 skeleton
+
+-## 2026-05-05 (P4-146 PCB Cost Driver Review And Quote Preparation 成本驱动评审与报价准备)
+
+- **成本主题治理补强**: 为 `pcb-cost-drivers-and-how-to-reduce-them` 及同类 cost/query 稿件补充可发布边界
+  - **Fact 创建** (1 file):
+    - `facts/methods/pcb-cost-driver-review-and-quote-preparation-boundary.md`
+      - 将 `cost driver` 重路由为 `complexity review + quote preparation`
+      - 明确可安全写入的层次：BOM 完整度、stackup/lamination、HDI/特殊工艺、finish family、tooling/validation
+      - 明确禁区：价格表、百分比、普适成本排序、panelization economics、yield/FPY、供应链优化结果
+  - **Wiki 创建** (1 file):
+    - `wiki/processes/pcb-cost-driver-review-and-quote-preparation.md`
+      - 聚合 quote input、structure/process family、tooling/validation 三层模型
+      - 提供后续 cost 类重写可复用的 CTA 与写作路径
+  - **复用 Source 层**:
+    - `frontendapt-quote-index-en`
+    - BOM / turnkey / quality system internal JSON
+    - stackup / multilayer / HDI internal JSON
+    - `apt_pcb_surface_finishes_guide`
+    - `apt_pcb_impedance_stackup_design`
+    - `isola-sequential-lamination-in-pcbs-note`
+    - IPC finish taxonomy metadata
+  - **约束保持**:
+    - ❌ 不生成任何 cost uplift、cost reduction 百分比或统一价格规则
+    - ❌ 不把 `24h DFM` 改写成价格或交付保证
+    - ❌ 不把 ENIG/OSP/HASL/HDI 等写成通用成本排序
+    - ❌ 不把 panelization、yield、scrap、supplier leverage 写成可复用公开事实
+  - **用途**:
+    - 为当前 `pcb-cost-drivers-and-how-to-reduce-them` 英文重写提供本地知识库消费入口
+    - 为后续 `pcb-cost-reduction`、`pcb-price-breakdown-material-vs-process-vs-testing` 等主题提供同类 guardrail
+
 -## 2026-05-03 (P4-145 Process-Governance Gap Map 流程治理缺口映射)
 
 - **流程治理 Gap Map**: PCBA 检验、筛选/鉴定、放行/追溯治理层映射和填补
@@ -2012,3 +2527,24 @@ Historical record only. For execution, read [../policies/ai-execution-contract.m
 - Added official AGC source records and material fact cards for `METEORWAVE ELL` and `TLF-35A`; `ELL` is modeled as one family card with explicit `ELL 101` versus `ELL 102 / 103` variant rows
 - P4-33 material PDF source-backed total is now `57` rows: `32` AGC, `5` Rogers, `13` Ventec, `4` Shengyi, and `3` TUC
 - `P4-33` round 16 improves source-scoped low-loss high-speed laminate / prepreg and Dk 3.5 RF laminate examples, but does not unlock 112 Gb, telecom, AI, cloud, router, automotive-radar, aerospace, PIMD, PTH, attenuation, price/performance, supplier capability, qualification, commercial values, or yield
+- Added official Keysight ICT and SEICA flying-probe source records plus `pcba-ict-boundary-and-flying-probe-method-identity`, `pcba-ict-fixture-introduction-gate`, and `wiki/processes/ict-fixture-introduction-and-method-selection.md`; then rewrote `blogs/1206-p0-rewrite/en/ict-fixture-introduction.md` against the strengthened local method-selection lane without introducing coverage, cost, throughput, or fixture-payback claims
+- Added `facts/methods/flux-free-soldering-vacuum-sensitive-assembly-boundary.md` to keep `flux-free soldering` inside residue-control, outgassing-screening, finish-selection, and inspection-handoff language rather than unsupported quantum-performance claims; then rewrote `blogs/1206-p0-rewrite/en/flux-free-soldering-quantum-pcb.md` as a vacuum-sensitive assembly review article using NASA / ASTM / IPC / Indium anchors without introducing cryogenic, coherence, vacuum-threshold, or supplier-capability claims
+- Rewrote `blogs/1206-p0-rewrite/en/programmable-logic-controller.md` as a PLC board-family release review using existing industrial-control boundary pages, keeping IEC 61131 / fieldbus / functional-safety / EMC vocabulary at identity or context level only and avoiding compliance, interoperability, uptime, or certification claims
+- 2026-05-05: Added `methods-pcb-quickturn-lead-time-clock-separation` and `processes-quick-turn-pcb-lead-time-review-boundary` so quick-turn blog rewrites can separate quote/DFM, factory routing, and shipping/customs clocks instead of publishing unsupported one-number lead-time promises.
+- 2026-05-05: Added `wiki/consumption/thermal-imaging-pcb-evidence-pack.md` to give `thermal-imaging-pcb` a dedicated consumption lane grounded in the existing sensor-navigation-imaging, EO/IR detector, serial-interface, and MIL-STD boundary pages.
+- 2026-05-05: Rewrote `blogs/1206-p0-rewrite/en/thermal-imaging-pcb.md` as a thermal-imaging board review article focused on detector-board boundary, power and thermal zoning, interface-family identity, release-hold patterns, and layered validation, without drifting into NETD, optics authority, compliance proof, or deployment claims.
+- 2026-05-05: Added `wiki/consumption/extended-reality-pcb-evidence-pack.md` so `extended-reality` can be rewritten from a local llm_wiki-first lane instead of drifting into unsupported HDI-default, wearable-temperature, or wireless-performance claims.
+- 2026-05-05: Rewrote `blogs/1206-p0-rewrite/en/extended-reality.md` as a wearable XR board review article centered on board role, compact access before closure, display versus sensor interface separation, conditional rigid-flex routing, and layered validation handoff.
+- 2026-05-05: Added `wiki/consumption/assembly-solutions-evidence-pack.md` so `assembly-solutions` can be rewritten from a local llm_wiki-first lane centered on package completeness, layered inspection, test-method selection, mixed-technology flow, and validation handoff.
+- 2026-05-05: Rewrote `blogs/1206-p0-rewrite/en/assembly-solutions.md` as an assembly-package release review article focused on BOM and placement consistency, inspection-gate ownership, flying-probe versus ICT selection, mixed-technology sequencing, and evidence-based validation handoff.
+- 2026-05-05: Added `sources/registry/methods/lpkf-insulated-metal-substrates-page.md` and `sources/registry/methods/lpkf-technical-cleanliness-page.md` so MCPCB / IMS singulation and edge-cleanliness articles can use official public process anchors instead of generic depaneling language.
+- 2026-05-05: Added `facts/methods/mcpcb-depanelization-method-selection-boundary.md` and `facts/methods/depanelization-cleanliness-and-edge-risk-boundary.md` to keep `depanelization of mcpcb` rewrites inside method-selection, edge-risk, and debris-control language rather than unsupported settings tables.
+- 2026-05-05: Added `wiki/consumption/depanelization-of-mcpcb-evidence-pack.md` so `depanelization-of-mcpcb` can be rewritten from a local llm_wiki-first lane centered on singulation-method choice, edge cleanliness, and NPI validation.
+- 2026-05-05: Rewrote `blogs/1206-p0-rewrite/en/depanelization-of-mcpcb.md` as an MCPCB singulation review article focused on route selection, edge condition, process holds, and first-build validation instead of generic depaneling numerics.
+- 2026-05-05: Added `wiki/consumption/pcb-price-breakdown-material-vs-process-vs-testing-evidence-pack.md` so `pcb-price-breakdown-material-vs-process-vs-testing` can be rewritten from a local llm_wiki-first lane centered on quote-preparation, BOM readiness, stackup family, finish scope, tooling, and validation.
+- 2026-05-05: Rewrote `blogs/1206-p0-rewrite/en/pcb-price-breakdown-material-vs-process-vs-testing.md` as a quote-preparation article focused on complexity reduction instead of unsupported price tables or fixed savings claims.
+- 2026-05-05: Added `wiki/consumption/mining-rig-pcb-evidence-pack.md` and rewrote `blogs/1206-p0-rewrite/en/mining-rig-pcb.md` as a board-review article centered on hashboard / GPU riser / PSU breakout boundaries, current-path discipline, thermal-route choice, connector handoff, and layered validation.
+- 2026-05-05: Added `sources/registry/standards/nibib-computed-tomography-ct-page.md` and `sources/registry/methods/siemens-healthineers-photon-counting-ct-page.md`, plus `facts/methods/ct-detector-array-board-release-boundary.md` and `wiki/consumption/ct-detector-array-board-evidence-pack.md`, to give CT detector-array rewrites a local medical-imaging release boundary.
+- 2026-05-05: Added `sources/registry/processes/apt-pcb-quote-intake-page.md`, plus `facts/methods/pcb-cost-driver-review-and-quote-preparation-boundary.md` and `wiki/consumption/pcb-cost-drivers-yield-evidence-pack.md`, then rewrote `how-to-reduce-pcb-cost-without-sacrificing-yield` into a quote-preparation article that blocks universal savings and yield claims.
+- 2026-05-05: Added `sources/registry/standards/ul-nurse-call-emergency-call-systems-page.md`, `sources/registry/applications/ascom-nurse-call-solutions-page.md`, and `sources/registry/applications/austco-tacera-nurse-call-page.md`, plus `facts/methods/nurse-call-pcb-release-boundary.md` and `wiki/consumption/nurse-call-pcb-evidence-pack.md`, to give `nurse-call-pcb` a local llm_wiki-first lane grounded in nurse-call system identity, bedside-device vocabulary, and medical boundary control.
+- 2026-05-05: Rewrote `blogs/1206-p0-rewrite/en/nurse-call-pcb.md` as a bedside and room-signaling board-review article focused on board role, bedside exposure, mixed audio and digital partitioning, cleaning workflow, cable or handset handoff, and layered validation, without drifting into UL 1069 or IEC 60601-1 PCB-compliance claims.

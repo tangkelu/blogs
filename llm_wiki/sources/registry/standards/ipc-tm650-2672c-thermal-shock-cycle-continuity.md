@@ -12,7 +12,7 @@ stability: "semi_stable"
 must_refresh: false
 topic_tags: ["ipc", "tm-650", "thermal-shock", "thermal-cycle", "continuity", "printed-boards"]
 status: "active"
-notes: "Official IPC public test-method PDF. Use for board-level method scope and thermal-shock / thermal-cycle distinction, not universal cycle counts."
+notes: "Official IPC public test-method PDF. Use for board-level method scope, thermal-shock / thermal-cycle distinction, and clearly labeled qualification / quality-conformance example parameters such as 6-hour bake, 6 reflow cycles, 100 cycles, 15-minute dwell, and 5% resistance change."
 ---
 
 # Source Summary
@@ -21,6 +21,7 @@ notes: "Official IPC public test-method PDF. Use for board-level method scope an
 
 - IPC TM-650 method identity for thermal shock, thermal cycle, and continuity on printed-board specimens
 - Board-test method framing for interconnect quality, qualification, conformance, or lot-acceptance contexts when project requirements call for it
+- Public qualification and quality-conformance example conditions, including conditioning, reflow simulation count, cycle count, dwell posture, sample change rate, and resistance-change criterion
 
 ## Why It Matters
 
@@ -28,8 +29,8 @@ notes: "Official IPC public test-method PDF. Use for board-level method scope an
 
 ## Extraction Notes
 
-- Safe for method identity, board-level scope, and distinction between thermal-shock and thermal-cycle method vocabulary.
-- Do not use to publish universal temperature ranges, ramp rates, dwell times, cycle counts, or sector-specific acceptance criteria.
+- Safe for method identity, board-level scope, distinction between thermal-shock and thermal-cycle method vocabulary, and clearly labeled method-scoped example conditions.
+- Do not use to publish those example conditions as universal rules or sector-independent acceptance criteria.
 
 ## Refresh Notes
 

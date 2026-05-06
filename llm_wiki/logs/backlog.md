@@ -1,5 +1,6 @@
 # Backlog
-
+- `done`: `thermal-cycling-test-for-pcb-reliability` 已补入 IPC 热循环公共参数边界，下一步要把博客正文改成带参数、带 method-scoped 注释的版本
+- 继续按清单推进下一批 `pending` 英文 rewrite，当前已完成 `flex-pcb-bend-radius-rules`、`led-mcpcb-assembly-and-reflow`、`psa-and-stiffener-bonding-process`，下一个入口从 `thermal-cycling-test-for-pcb-reliability` 开始。
 Historical execution record only. For current execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md).
 
 Last updated: 2026-05-03
@@ -7,6 +8,12 @@ Last updated: 2026-05-03
 - controller_rule: Before continuing, read `../policies/execution-priority-and-anti-drift.md`; backlog completion items do not override the default source-backed promotion priority.
 - source_refresh_rule: rechecking a source and updating `URL` or `checked_at` is not the same as landing knowledge locally
 - landed_rule: only updates that add or improve reusable `sources/`, `facts/`, or `wiki/` content count as landed knowledge
+- `done`: `P4-202` converted `antenna-tuning-and-trimming` from a generic RF rule-table article into a reusable measurement-driven antenna review boundary with Silicon Labs and TI official source support, a dedicated fact card, and an evidence pack; future antenna-tuning, feed-handoff, or enclosure-detuning drafts should reuse this lane instead of reopening unsupported universal return-loss or trimming tables
+- `done`: `P4-197` converted `rf-front-end-low-noise-pcb-compliance` from a generic RF specs-and-troubleshooting article into a reusable RF front-end board-review and pre-compliance boundary with a dedicated fact card and evidence pack; future low-noise RF, receive-path, antenna-handoff, or pre-compliance drafts should reuse this lane instead of reopening unsupported impedance, material, or compliance tables
+- `done`: `P4-196` converted `industrial-grade-cowos-carrier-substrate` from a generic advanced-packaging hype article into a reusable CoWoS-adjacent package-substrate review boundary with a TSMC CoWoS source record, a dedicated fact card, and an evidence pack; future CoWoS, HBM-interposer, or package-substrate drafts should reuse this ownership-split route instead of reopening unsupported rule tables or supplier-readiness claims
+- `done`: `P4-195` converted `display-controller-pcb` from a generic display-routing template into a reusable controller-board handoff boundary with a dedicated fact card and evidence pack; future display-controller, display-interface, or compact HMI drafts should reuse this board-side handoff route instead of reopening unsupported impedance and troubleshooting tables
+- `done`: `P4-194` converted `transparent-oled-pcb` from a generic transparent-display template article into a reusable display-module board-review boundary with a dedicated fact card and evidence pack; future transparent-display, display-controller, or OLED-tail drafts should reuse the visible-zone versus hidden-driver split instead of reopening unsupported optical or transparent-multilayer claim tables
+- `done`: `P4-186` repaired the `PCIe Gen6` rewrite lane by adding a dedicated board-review boundary card and process aggregation page, then redoing the article as a source-first release-review guide; future `PCIe Gen6 / 112G / backplane / launch` drafts should reuse these local cards first instead of reopening a generic high-speed rewrite path
 - `done`: the `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` conservative rewrite batch has landed under the `2026-04-26` generation gate; keep `20-layer` and `22-layer` on hold, and only backfill `18 / 24-layer` into `P4-06`-style evidence-pack packaging later if uniform packaging is needed
 - `done`: `5g-pcb-assembly.md`, `medical-device-pcb-assembly.md`, `wearable-tech-pcb-assembly.md`, and `optical-pcb-manufacturing.md` have landed as conservative rewrite consumption only; keep them in draft-layer execution / manufacturing-control posture and do not treat them as standards, certification, performance, or supplier-readiness unlocks
 - `done`: `P4-114` has absorbed `5g-pcb-assembly.md`, `medical-device-pcb-assembly.md`, `wearable-tech-pcb-assembly.md`, and `optical-pcb-manufacturing.md` into `llm_wiki` at claim-family level; reusable knowledge is now explicit for telecom execution flow, medical/wearable manufacturing-control, and compact optical-module review, while narrower source lanes remain queued for grounding/access, compact closure handling, rigid-flex handling, and optical contamination-control gaps
@@ -2825,6 +2832,7 @@ Main structural gaps:
 - note:
   - 后续可以做参考层，但不是当前主线
   - 只有在主源和内部能力层足够扎实时才值得引入
+  - `mining-rig-pcb` 已转入已落地 rewrite lane；后续同类 mining 主题继续按 hashboard / riser / PSU-breakout 分流，不回退到 hash-rate / uptime 模板文
 
 ## Current Corpus Snapshot
 

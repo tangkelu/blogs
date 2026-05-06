@@ -6,9 +6,15 @@ Last updated: 2026-05-03
 
 ## Overall
 
+- `P4-206` landed a public thermal-cycling parameter boundary: IPC TM-650 `2.6.26A` and `2.6.7.2C` now have reusable source notes plus a fact card/wiki path that distinguish method-scoped example parameters from universal rules; next step is to consume those parameters in the thermal-cycling rewrite and then decide whether to lift the requirement into `prompts_template`
 - controller_rule: Read `../policies/execution-priority-and-anti-drift.md` before continuing; default continuation is source-backed knowledge promotion, not rewrite / normalization expansion
 - source_refresh_rule: updating `URL` or `checked_at` is source refresh only; it is not landed knowledge unless reusable local facts are written back into `sources/`, `facts/`, and if needed `wiki/`
 - landed_rule: a lane is only landed when the local knowledge layer changes and the promotion is recorded in `logs/update-log.md`
+- `P4-202` added a reusable `antenna tuning and trimming` review boundary plus a dedicated evidence pack, so future antenna-tuning or compact RF-feed writing can stay on antenna-region discipline, reserved matching path, enclosure-aware retuning, and staged validation instead of falling back to unsupported VSWR / return-loss / trimming-step tables
+- `P4-196` added a reusable `CoWoS-adjacent package substrate` review boundary plus a dedicated evidence pack, so future CoWoS / HBM-interposer / package-substrate writing can stay on platform identity, ownership split, ABF/build-up posture, and staged validation instead of falling back to unsupported parameter tables or capability claims
+- `P4-195` added a reusable `display controller` board-review boundary plus a dedicated evidence pack, so compact display-control writing can now stay on controller-board burden, interface handoff, connector/FPC exit, and staged validation instead of falling back to unsupported design-rule tables
+- `P4-194` added a reusable `transparent OLED` board-review boundary plus a dedicated evidence pack, so transparent-display writing can now stay on module split, hidden driver board, interconnect handoff, and staged validation rather than falling back to unsupported transparent-PCB parameter tables
+- `P4-186` repaired the `PCIe Gen6` article lane after a thin conservative rewrite exposed workflow drift: the lane now has a dedicated `PCIe Gen6` board-review boundary fact, a reusable process aggregation page, and a prompt-side requirement to explicitly enumerate consumed `fact_id` / `wiki` inputs before drafting
 - current_phase: `Phase 4`
 - current_focus: `P4-121` remains the active mainline as a controller-active first-wave prompt handoff for `6-layer`, `8-layer`, and `10-layer`, while `P4-122` records that `buying-pcb`, `electronics-assembly`, and `rf-antenna` do not currently justify promotion and stay paused
 - next_session_entry: `logs/p4-121-2026-5-2-p4-06-phase-5-batch-1-controller-note.md`
@@ -209,6 +215,8 @@ Last updated: 2026-05-03
   - `P4-64 Targeted Connector Current-Field Recovery` completed as source-backed partial for the remaining `2025.11.10` `watts‑to‑amps` connector-selection lane
   - `P4-65 Targeted Regulator Current-Field Recovery` completed as source-backed partial for the remaining `2025.11.10` `watts‑to‑amps` regulator-selection lane
   - `P4-66 Watts-To-Amps Rewrite-Governance Closeout` completed as prompt-consumption control for the remaining `2025.11.10` `watts‑to‑amps` residue
+- `P4-197` converted `rf-front-end-low-noise-pcb-compliance` into a reusable RF front-end board-review and pre-compliance lane with a dedicated fact card, an evidence pack, and a source-first rewrite that stays inside receive-path ownership, return-path continuity, shield posture, RF handoff, and staged validation language
+- `P4-203` completed the next APT rewrite batch for `flex-pcb-bend-radius-rules`, `led-mcpcb-assembly-and-reflow`, and `psa-and-stiffener-bonding-process`, including official-source recovery for PSA/stiffener bonding and new reusable process boundary coverage.
 - progress:
   - P4-66 converted the remaining `watts‑to‑amps` unsafe residue into a direct conservative generation gate instead of treating it as an open-ended source-recovery problem
   - P4-66 added `methods-watts-to-amps-conservative-generation-gate`, allowing future prompts to consume the topic only when formula identity, conductor review, connector-field review, regulator-field review, and validation workflow remain separate
@@ -798,6 +806,7 @@ Last updated: 2026-05-03
   - generate conservative rewrites for `6 / 8 / 10 / 12 / 14 / 16 / 18 / 24-layer` in the recommended order from `logs/en-layer-count-blog-generation-gate.md` plus the P4-20 coverage map, or start another P4-14 empty-image pilot from Lane A / Lane B low-risk topics
   - keep `20-layer` and `22-layer` on hold for now
   - if needed later, reopen `H4` only for a specific blocked branch rather than continuing generic lane expansion
+  - `mining-rig-pcb` is now landed with a dedicated consumption pack and a release-review rewrite; reuse that lane for future mining-board variants instead of numeric spec-table rewrites
 
 ### Phase 5: Prompt Consumption And Evidence Packs
 
@@ -809,8 +818,8 @@ Last updated: 2026-05-03
 
 - source records with IDs: `486`
 - internal source record files: `137`
-- fact cards with IDs: `325`
-- topic wiki pages: `43`
+- fact cards with IDs: `326`
+- topic wiki pages: `44`
 - planning/control documents: `208`
 
 ## Discipline

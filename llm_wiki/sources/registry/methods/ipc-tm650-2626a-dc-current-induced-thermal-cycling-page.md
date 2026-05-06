@@ -12,7 +12,7 @@ stability: "dynamic"
 must_refresh: true
 topic_tags: ["ipc", "tm-650", "2.6.26a", "thermal-cycling", "interconnect", "ist", "methods", "metadata"]
 status: "active"
-notes: "Official IPC TM-650 method PDF. Use for current-method identity and guarded interconnect thermal-cycling / resistance-change evaluation vocabulary only."
+notes: "Official IPC TM-650 method PDF. Use for current-method identity, guarded interconnect thermal-cycling / resistance-change evaluation vocabulary, and clearly labeled method-scoped parameter examples such as default 150 C / 10% / 250 cycles and Method B reflow-style conditions."
 ---
 
 # Source Summary
@@ -22,6 +22,7 @@ notes: "Official IPC TM-650 method PDF. Use for current-method identity and guar
 - Official IPC TM-650 method identity for `2.6.26A`
 - Public method title tying `D.C. current induced thermal cycling` to `interconnect evaluation`
 - Public method-level context for coupon-based thermal-cycling / resistance-change evaluation language
+- Public example conditions for Method A and Method B, including sample count, temperature, resistance-change thresholds, cycle count, ramp rate, and dwell time
 
 ## Why It Matters
 
@@ -29,8 +30,8 @@ notes: "Official IPC TM-650 method PDF. Use for current-method identity and guar
 
 ## Extraction Notes
 
-- Safe for method identity, `thermal cycling`, `interconnect evaluation`, coupon-based evaluation wording, and guarded resistance-change assessment vocabulary
-- Do not infer required cycle counts, pass/fail thresholds, qualification status, or supplier capability from this page alone
+- Safe for method identity, `thermal cycling`, `interconnect evaluation`, coupon-based evaluation wording, guarded resistance-change assessment vocabulary, and clearly labeled method-scoped example parameters
+- Do not infer that published example conditions are universal requirements, supplier capability, or qualification proof
 
 ## Refresh Notes
 

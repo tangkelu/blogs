@@ -6,7 +6,7 @@ source_type: "dataset"
 url: "https://etd.gsfc.nasa.gov/capabilities/capabilities-listing/vacuum-outgassing-database/"
 jurisdiction: "US"
 published_at: "2026-02-17"
-checked_at: "2026-04-24"
+checked_at: "2026-05-04"
 trust_tier: "t1"
 stability: "dynamic"
 must_refresh: true
@@ -21,7 +21,7 @@ notes: "Official NASA landing page for the Goddard vacuum outgassing database an
 
 - Official NASA description of the Goddard vacuum outgassing database
 - High-level explanation that testing is performed in accordance with `ASTM E595`
-- Framing for use of database results in assessing material suitability for spaceflight environments
+- Framing for using database results in spaceflight-material screening context
 
 ## Why It Matters
 
