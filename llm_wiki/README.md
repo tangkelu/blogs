@@ -43,6 +43,7 @@ This file is an overview; the contract file is the execution authority.
 
 - `sources/`
 - `facts/`
+- `pdf_evidence/`
 - `wiki/`
 - `policies/`
 - `logs/`
@@ -75,6 +76,30 @@ This file is an overview; the contract file is the execution authority.
 - 某个测试方法的适用边界
 - 某项法规的合规逻辑
 
+其中允许存在多种 authority layer，而不再只假定“只有官方 fact 才能消费”：
+
+- `facts/` 下的传统事实层：官方来源、标准来源、原厂来源、内部能力边界来源
+- `facts/local_pdf/`：来自 repo 明确接纳的本地 PDF 批次、可直接用于博客正文、但不能冒充官方标准或原厂 datasheet 的本地事实层
+
+`facts/local_pdf/` 的目标不是降低标准，而是把“博客确实会使用、且 `tmps/` 删除后仍需保留”的本地 PDF 数字、公式、图示结论沉淀成受治理的可消费知识。
+
+### `pdf_evidence/`
+
+存放页级 / 图表级 / 公式级原始证据。
+
+这一层不等于直接可发布事实，但必须能在 `tmps/` 删除后继续提供：
+
+- 原始 PDF 的页级 provenance
+- 图、表、公式、段落的局部证据索引
+- 候选 claim 与后续 promotion 入口
+- 对 `facts/local_pdf/` 或传统 `facts/` 的可追溯支持
+
+这一层的目录名必须使用业务语义，例如：
+
+- `pdf_evidence/pcb_ziliao/`
+
+而不是使用 `deletion-safe` 这类状态词作为层名。`deletion_safe: true` 只应作为 metadata 或 tracker status。
+
 ### `wiki/`
 
 存放主题聚合页。
@@ -100,6 +125,7 @@ This file is an overview; the contract file is the execution authority.
 - 冲突处理规则
 - 动态数据禁写规则
 - internal capability taxonomy
+- 多 authority layer 的消费与 promotion 规则
 
 ### `logs/`
 
@@ -116,6 +142,53 @@ This file is an overview; the contract file is the execution authority.
 5. 主题 wiki 只能汇总事实，不能替代来源。
 6. 博客写作时若 `llm_wiki` 缺乏稳定主源，应先补官方来源并入库；无法及时补源时，必须明确该 claim 不可写或只能写成待确认边界。
 7. `tmps/` 草稿只能作为需求输入和 claim inventory，不能作为真实参数、能力、价格、认证或质量数据的来源。
+8. `sources/`、`facts/`、`wiki/` 统一使用英文作为 canonical storage / retrieval language；中文来源只作为 provenance 和 intake 输入，不单独形成并行知识索引。见 `policies/language-normalization-and-indexing.md`。
+9. 若某批本地 PDF 的数字、公式、图示会被博客稳定消费，且用户明确接受它们作为 repo 内受信任知识源，则这些内容不应只停留在 `logs/` 或 `tmps/`；它们应沉淀进 `pdf_evidence/` 与必要的 `facts/local_pdf/`。
+10. `local_pdf` 可用于博客正文，但必须保留其 authority scope，不能改写成“官方标准明确要求”“原厂 datasheet 证明”或“供应商能力承诺”。
+
+## 统一权威模型
+
+`llm_wiki` 的长期目标不是单一事实层，而是统一的多权威知识模型。
+
+推荐的长期分层如下：
+
+1. `official_fact`
+   - 官方、标准组织、监管机构、原厂 datasheet / product page / app note 支撑
+   - 可作为强证据进入博客正文
+2. `local_pdf_fact`
+   - 来自 repo 接纳的本地 PDF 批次，经主线程或受控 agent 整理后进入 `facts/local_pdf/`
+   - 可进入博客正文
+   - 但不能冒充标准原文、原厂参数承诺、认证状态或厂商能力证明
+3. `blocked_evidence`
+   - 保留 provenance、候选 claim、待补源入口
+   - 不得直接作为正文事实消费
+
+这意味着：
+
+- 不是所有可消费正文内容都必须来自官方 source
+- 但不同 authority layer 必须在 metadata、prompt consumption、tracker 中显式区分
+- 下游写作 agent 必须知道“能不能写”和“该怎么写”是两个不同判断
+
+## `PCB资料` 首批落地切口
+
+全库长期模型按上面的统一权威模型推进，但当前首批实现切口只限：
+
+- `/code/blogs/tmps/PCB资料`
+
+不包含：
+
+- `/code/blogs/tmps/materias_pdf`
+
+当前切口的目标不是一次性重构全库，而是先把 `PCB资料` 做成第一个完整样板：
+
+1. 把页级 / 图表级 / 公式级原始证据沉淀进 `pdf_evidence/pcb_ziliao/`
+2. 把用户确认“可直接写博客”的本地 PDF 数字、公式、图示结论沉淀进 `facts/local_pdf/`
+3. 更新 prompt consumption 与相关 policy，让 downstream agent 能同时消费：
+   - `official_fact`
+   - `local_pdf_fact`
+4. 保留 blocked 边界，不把动态能力、认证状态、交期、价格、品牌 UI / 品牌规则直接升格
+
+这一切口完成后，后续其他 PDF 批次可复用同一模型，而不是再次发明新规则。
 
 ## 防偏航规则
 
@@ -146,7 +219,7 @@ This file is an overview; the contract file is the execution authority.
 
 ## 临时草稿与完整学习
 
-`/code/blogs/tmps/...` 下的源 md 可能最终被移除，因此每个草稿批次至少要在 `llm_wiki` 留下 deletion-safe 学习记录。
+`/code/blogs/tmps/...` 下的源 md 或 PDF 可能最终被移除，因此每个临时批次至少要在 `llm_wiki` 留下 deletion-safe 学习记录；若该批次中的数字、公式、图示会进入长期博客生产，还应继续沉淀为 `pdf_evidence/` 与必要的 `facts/local_pdf/`。
 
 最低要求：
 

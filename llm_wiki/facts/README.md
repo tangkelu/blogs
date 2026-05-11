@@ -8,6 +8,7 @@
 - 卡片只表达经来源支持的事实
 - 推断和判断要单独标注
 - 动态数据必须标记刷新要求
+- reusable fact cards use English canonical identifiers, English titles, and English body text; Chinese source terms may appear only as provenance or intake notes, not as parallel fact-layer indexing keys
 
 建议子目录：
 

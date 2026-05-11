@@ -60,4 +60,20 @@
 
 它用于约束模板如何消费 evidence pack，尤其是 `verified / framing_only / blocked / must_refresh / supplier_scoped_dated_only` 的处理方式，以及缺失证据时的 `DATA_GAP` 行为。
 
-`blog-rewrite-data-gap-contract.md` 用于约束博客分析、重写、生成前的强制流程：先分析博客 / 主题关键点，再检查 `llm_wiki` 是否足够支撑顶尖稿；缺数据先补 source / fact / wiki / gate，再重写或生成博客，最后做内部泄漏、高风险 claim、组件、FAQ、审核署名和格式检查。
+`blog-rewrite-data-gap-contract.md` 用于约束博客分析、重写、生成前的强制流程：先分析博客 / 主题关键点，再检查内部证据库是否足够支撑顶尖稿；缺数据先补 source / fact / wiki / gate，再重写或生成博客，最后做内部泄漏、高风险 claim、组件、FAQ、审核署名和格式检查。
+
+## 4 步硬流程摘要
+
+在进入正文前，统一按以下顺序执行：
+
+1. 先查 `llm_wiki`。
+2. 不足则补官方公开来源。
+3. 补完后回写 `llm_wiki`。
+4. 再写正文。
+
+执行默认顺序还应再加一条硬规则：
+
+- `llm_wiki` 优先于外部检索。先消费本地 `sources/registry/`、`facts/`、`wiki/` 和相关 gate。
+- 只有当本地知识库无法支撑当前文章的关键承诺，或只能支撑一篇“安全但薄”的保守稿时，才允许补外部来源。
+- 外部补充完成后，不得只留在当前对话；必须先写回 `llm_wiki`，再继续正文生成。
+- 任何 `safe_but_generic` 状态都不能直接进入发布稿写作；必须先补官方来源并回填 `llm_wiki`，或明确缩小题目承诺后重新判定。

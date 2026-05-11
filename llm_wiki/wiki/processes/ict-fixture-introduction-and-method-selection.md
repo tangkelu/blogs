@@ -1,10 +1,16 @@
 ---
 title: "ICT fixture introduction and method selection"
 status: "active"
-last_updated: "2026-05-04"
+last_updated: "2026-05-10"
 fact_ids:
   - "pcba-ict-boundary-and-flying-probe-method-identity"
   - "pcba-ict-fixture-introduction-gate"
+  - "methods-pcba-flying-probe-vs-ict-selection-posture"
+source_ids:
+  - "keysight-in-circuit-test-systems-page"
+  - "seica-flying-probe-page"
+  - "frontendapt-pcba-ict-test-page-en"
+  - "frontendapt-pcba-flying-probe-testing-page-en"
 ---
 
 # ICT Fixture Introduction And Method Selection
@@ -23,4 +29,5 @@ ICT fixture introduction is a readiness decision that sits at the intersection o
 - Coverage percentages
 - Fixture payback
 - Universal cycle-time claims
+- Locator-hole count or diameter guidance
 - Supplier capability or acceptance claims

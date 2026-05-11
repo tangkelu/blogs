@@ -3,14 +3,16 @@ topic_id: "processes-mixed-technology-solder-route-selection"
 title: "Mixed-Technology Solder Route Selection"
 category: "processes"
 status: "active"
-last_reviewed_at: "2026-05-03"
+last_reviewed_at: "2026-05-10"
 fact_ids:
+  - "methods-ipc-stencil-guideline-family-and-upstream-print-control-boundary"
   - "methods-pcba-mixed-technology-assembly-flow"
   - "methods-selective-wave-solder-and-mixed-technology-sequencing"
   - "methods-tht-heavy-assemblies-power-and-medical-context"
   - "methods-mixed-technology-lane-b-rewrite-gate"
   - "methods-parameter-scope-pcba-selective-solder-tht-route-context"
 source_ids:
+  - "ipc-7525c-toc"
   - "frontendapt-pcba-pcb-selective-soldering-page-en"
   - "frontendapt-pcba-smt-tht-page-en"
   - "frontendhil-through-hole-assembly-product-page-en"
@@ -48,6 +50,7 @@ tags: ["mixed-technology", "selective-solder", "wave-solder", "tht", "medical", 
 
 ## Stable Facts
 
+- IPC public `IPC-7525C` metadata anchors stencil work as a named stencil-guideline family and keeps stencil / solder-paste layer / aperture-list / step-stencil / fiducial language inside upstream print-control scope rather than downstream acceptability claims.
 - The current internal PCBA source layer frames stencil and paste engineering, SMT placement, through-hole insertion, selective or wave solder, inspection, and electrical test as one coordinated assembly flow.
 - The current source layer supports selective solder as a targeted route for mixed-technology boards when localized heating and nearby SMD sensitivity matter.
 - The current source layer supports wave solder as a route that can fit THT-dense populations when board layout and board population permit it.
@@ -102,6 +105,7 @@ tags: ["mixed-technology", "selective-solder", "wave-solder", "tht", "medical", 
 
 ## Related Fact Cards
 
+- `methods-ipc-stencil-guideline-family-and-upstream-print-control-boundary`
 - `methods-pcba-mixed-technology-assembly-flow`
 - `methods-selective-wave-solder-and-mixed-technology-sequencing`
 - `methods-tht-heavy-assemblies-power-and-medical-context`
@@ -110,6 +114,7 @@ tags: ["mixed-technology", "selective-solder", "wave-solder", "tht", "medical", 
 
 ## Primary Sources
 
+- https://www.ipc.org/TOC/IPC-7525C_TOC.pdf
 - /code/hileap/frontendAPT/public/static/pcba/en/pcb-selective-soldering.json
 - /code/hileap/frontendAPT/public/static/pcba/en/smt-tht.json
 - /code/hileap/frontendHIL/public/static/products/en/through-hole-assembly.json

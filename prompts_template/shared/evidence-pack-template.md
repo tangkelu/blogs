@@ -23,6 +23,22 @@
 - 站点：
   - HILPCB / APTPCB
 
+## 1.5 Local Consumption Inventory
+
+先列出本次会直接消费的本地资料，避免证据只做“存在记录”而没有进入正文。
+
+| Local item | fact_id / wiki / source_id | Will support which section | Consumption note |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
+## 1.6 Data Gaps Needing Official Sources
+
+只写本地知识库目前不足以支撑的点。
+
+| Gap | Why local is insufficient | Official source to seek | After lookup, what to backfill |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
 ## 2. Source Facts
 
 先从原始博客、简稿、技术 memo 里抽出已有硬信息。
@@ -197,6 +213,7 @@
 - 至少准备 3 组 inline citation handles
 - 优先覆盖数字、标准目标、材料参数、测试方法、典型设计约束
 - 句柄必须自然，能直接嵌入正文，不要只保留裸链接
+- 这些句柄用于正文内联归因，不得转成 Markdown 脚注语法，例如 `[^1]`、`[^validation]`
 
 ### C. Authority / Reviewer Inputs
 

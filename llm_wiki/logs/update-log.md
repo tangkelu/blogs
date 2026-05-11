@@ -2,6 +2,5124 @@
 
 Historical record only. For execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md) first.
 
+## 2026-05-11 (P4-504 D5 Reset Quiet-Routing And Local Filter Boundary)
+
+- **这轮没有把 handbook 里 `RESETn`、`nPOR`、`滤波电容靠近管脚`、`远离 DCDC / RF`、`远离板边和金属接插件` 这组说法误判成一个足够独立的新 lane，而是先做了重叠核查并把它压回 no-reopen**: subagent 复核后确认，这条 candidate 虽然没有一个现成同名 fact，但它当前能从主源恢复出来的 substantive pieces，仍然主要落在现有 `entry-path`、`quiet sense routing`、`switching-noise avoidance`、以及 `near-pin passive placement` 这些已落库边界上；剩下最 reset-specific 的部分则仍太接近 handbook recipe territory，没有超过当前 reopen bar
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-504-2026-5-11-d5-reset-quiet-routing-and-local-filter-boundary.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再因为 repo 里暂时没有同名 `RESETn / nPOR` fact，就误判这条线还完全空白
+    - future AI 不应把当前这组主源碎片强行拼成一个新的 reusable fact card
+    - 当前 handbook ceiling 仍然保持 `four D3 routes + five D5 routes`
+
+## 2026-05-11 (P4-503 Completion Audit Successor After Handbook Nine-Route State)
+
+- **这轮没有把 `P4-501 / P4-502` 之后的 handbook 提升误读成“接近 fully learned”，而是只把 completion wording 按最新真实状态再刷新了一次**: 全局 completion threshold 没变，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`；真正变化的是 handbook-side wording：当前 repo 已不再能停在 `P4-500` 里的旧说法，而必须更新成 `194页 handbook = four D3 routes + five D5 routes`，同时 package/doctrine 三条主 residual 的 no-reopen filter 仍保持不变
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-503-2026-5-11-completion-audit-successor-after-handbook-nine-route-state.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-500` 当成最新 completion wording 入口
+    - future AI 不应再把 `194页 handbook` 误写成仍停在旧的 `four D3 + four D5` 快照
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but still below `full_corpus_closed_without_open_residual_authority_gaps`
+
+## 2026-05-11 (P4-501 D5 Differential-Pair Symmetry And Common-Mode Conversion Boundary)
+
+- **这轮没有把 handbook 里 `差分等长`、`紧密耦合`、`保证对称性`、`避免转化成共模信号` 这组说法继续混回 generic return-path、generic plane-split、或 broad high-speed checklist，而是把 `194页 handbook D5` 真正拆出了一条更窄的 pair-balance EMC lane**: 当前 repo 现在可以把 handbook 中差分对的 `parallel / matched / balanced through discontinuity` 说法安全接到一条新的 `differential-pair symmetry and common-mode-conversion` boundary：它只支持 `pair members stay parallel and matched`、`localized unavoidable asymmetry kept short`、`mismatch as common-mode current or common-mode noise risk`、以及 `asymmetry as differential-to-common-mode conversion risk`。这个提升仍然不到 universal skew budget、universal `100 ohm` doctrine、exact spacing/via/meander recipe、或任何 SI / jitter / EMI-pass claim
+  - **新增 Source Record** (3 files):
+    - `sources/registry/methods/ti-tm4c-differential-pair-symmetry-and-common-mode-noise.md`
+    - `sources/registry/methods/microchip-vsc7420-differential-pair-mismatch-and-common-mode-current.md`
+    - `sources/registry/methods/microchip-polarfire-differential-length-asymmetry-mode-conversion.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/differential-pair-symmetry-and-common-mode-conversion-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-501-2026-5-11-d5-differential-pair-symmetry-and-common-mode-conversion-boundary.md`
+  - **新增 Handbook Successor Log** (1 file):
+    - `logs/p4-502-2026-5-11-194-page-handbook-nine-route-successor-no-write-closeout.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 handbook 的 pair-symmetry / common-mode-conversion 说法误读成已被 pure return-path continuity 或 generic high-speed checklist fully covered
+    - future AI 不应再把这条 lane 写成 universal skew-budget doctrine 或 universal `100 ohm` doctrine
+    - future AI 可以把当前 handbook 更准确地写成 `four D3 routes + five D5 routes`
+
+## 2026-05-11 (P4-500 Completion Audit Successor After Handbook Eight-Route State)
+
+- **这轮没有把 `P4-498 / P4-499` 之后的 handbook 提升误读成“接近 fully learned”，而是只把 completion wording 按最新真实状态再刷新了一次**: 全局 completion threshold 没变，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`；真正变化的是 handbook-side wording：当前 repo 已不再能停在 `P4-497` 里的旧说法，而必须更新成 `194页 handbook = four D3 routes + four D5 routes`，同时 package/doctrine 三条主 residual 的 no-reopen filter 仍保持不变
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-500-2026-5-11-completion-audit-successor-after-handbook-eight-route-state.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-497` 当成最新 completion wording 入口
+    - future AI 不应再把 `194页 handbook` 误写成仍停在旧的 `three D3 + four D5` 快照
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but still below `full_corpus_closed_without_open_residual_authority_gaps`
+
+## 2026-05-11 (P4-498 D3 Power-Pin And Decoupling Dedicated Plane Connection Boundary)
+
+- **这轮没有把 handbook 里 `power pin`、`去耦电容`、`过孔不要共用`、`电容焊盘与过孔间不要再拖一段 trace` 这组说法继续混回 generic current-carrying、generic via vocabulary、或纯 placement，而是把 `194页 handbook D3` 真正拆出了一条更窄的 local plane-entry authority lane**: 当前 repo 现在可以把 handbook 中 `power / GND pin` 和去耦电容端子的局部连 plane 说法安全接到一条新的 `power-pin and decoupling dedicated plane connection` boundary：它只支持 `dedicated plane entry`、`dedicated vias for decoupling terminals`、`avoid shared vias where they add spreading inductance`、以及 `direct land-to-via connection`。这个提升仍然不到 exact via count、exact via geometry、universal one-via-per-pin、exact copper-width sufficiency、或 RK3588 rail-specific closure claim
+  - **新增 Source Record** (2 files):
+    - `sources/registry/methods/intel-pdn-dedicated-power-ground-pin-connections.md`
+    - `sources/registry/methods/amd-ug583-dedicated-via-and-land-connection-boundary.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/power-pin-and-decoupling-dedicated-plane-connection-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-498-2026-5-11-d3-power-pin-and-decoupling-dedicated-plane-connection-boundary.md`
+  - **新增 Handbook Successor Log** (1 file):
+    - `logs/p4-499-2026-5-11-194-page-handbook-eight-route-successor-no-write-closeout.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 handbook 的 local plane-entry / non-shared-via 说法误读成已被 pure placement 或 generic current-carrying fully covered
+    - future AI 不应再把这条 lane 写成 universal one-via-per-pin doctrine
+    - future AI 可以把当前 handbook 更准确地写成 `four D3 routes + four D5 routes`
+
+## 2026-05-11 (P4-497 Completion Audit Successor After Handbook Seven-Route State)
+
+- **这轮没有把 `P4-495 / P4-496` 之后的 handbook 提升误读成“接近 fully learned”，而是只把 completion wording 按最新真实状态再刷新了一次**: 全局 completion threshold 没变，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`；真正变化的是 handbook-side wording：当前 repo 已不再能停在 `P4-493` 里的旧说法，而必须更新成 `194页 handbook = three D3 routes + four D5 routes`，同时 package/doctrine 三条主 residual 的 no-reopen filter 仍保持不变
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-497-2026-5-11-completion-audit-successor-after-handbook-seven-route-state.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-493` 当成最新 completion wording 入口
+    - future AI 不应再把 `194页 handbook` 误写成仍停在旧的 `one D3 + four D5` 或 `two D3 + four D5` 快照
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but still below `full_corpus_closed_without_open_residual_authority_gaps`
+
+## 2026-05-11 (P4-495 D3 Exposed-Pad Ground Tie And Local Thermal Spreading Boundary)
+
+- **这轮没有把 handbook 里的 `thermal-pad grounding serves thermal and impedance goals` 继续留在 claim-family 口径，也没有把它混回 generic ground-return、switcher hot-loop、或 package vocabulary，而是把 `194页 handbook D3` 真正拆出了一条更窄的 exposed-pad authority lane**: 当前 repo 现在可以把 handbook 中 exposed pad / thermal pad 相关说法安全接到一条新的 `exposed pad ground tie and local thermal spreading` boundary：它只支持 `封装级 board attach`、`向 PCB 的局部热扩散路径`、以及 `只有当 owner package / datasheet 明确指定时才成立的 grounded low-impedance tie`。这个提升仍然不到 universal `EPAD = GND`、exact via array、exact paste-window / stencil、或确定性的 thermal / EMI / reliability outcome claim
+  - **新增 Source Record** (2 files):
+    - `sources/registry/methods/analog-devices-exposed-pads-brief-introduction.md`
+    - `sources/registry/methods/ti-powerpad-thermally-enhanced-package.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/exposed-pad-ground-tie-and-local-thermal-spreading-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-495-2026-5-11-d3-exposed-pad-ground-tie-and-local-thermal-spreading-boundary.md`
+  - **新增 Handbook Successor Log** (1 file):
+    - `logs/p4-496-2026-5-11-194-page-handbook-seven-route-successor-no-write-closeout.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 handbook 的 exposed-pad / thermal-pad grounding 误读成已被 generic ground-return 或 local decoupling 全覆盖
+    - future AI 不应再把 exposed-pad net tie 写成 universal `EPAD = GND`
+    - future AI 可以把当前 handbook 更准确地写成 `three D3 routes + four D5 routes`
+
+## 2026-05-11 (P4-494 D3 Processor Power-Pin Local Decoupling Capacitor Placement Boundary)
+
+- **这轮没有把 handbook 里的去耦相关说法继续混回 generic capacitor role、broad current-carrying、或 switcher input-loop，而是把 `194页 handbook D3` 真正拆出了一条更窄的 load-side local-decoupling authority lane**: 当前 repo 现在可以把 handbook 中 `去耦电容靠近被去耦电源脚或器件`、`局部电流路径要短`、`减少 mounting inductance`、以及 owner-scoped `underside / via-field / periphery` package-shadow placement 这类说法，安全接到一条新的 `processor power-pin local decoupling capacitor placement` boundary。这个提升仍然只到 `near-device transient-current support + local package-side placement` 层，不到任何 exact capacitor count/value、exact via recipe、universal backside doctrine、RK3588 rail-specific sufficiency、或 PDN / transient / EMI outcome claim
+  - **新增 Source Record** (3 files):
+    - `sources/registry/methods/amd-ug583-decoupling-capacitor-placement-background.md`
+    - `sources/registry/methods/intel-fpga-general-rules-for-capacitor-and-power-plane-placement.md`
+    - `sources/registry/methods/intel-agilex-7-board-decoupling-capacitors-guide.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/processor-power-pin-local-decoupling-capacitor-placement-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-494-2026-5-11-d3-processor-power-pin-local-decoupling-capacitor-placement-boundary.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `194页 handbook` 的 `load-side local decoupling` 误读成只有 generic capacitor-role vocabulary
+    - future AI 不应再把这条 handbook 子面混回现有 `switcher hot-loop` 或 broad `current-carrying` lane
+    - future AI 可以把当前 handbook 更准确地写成 `two D3 routes + four D5 routes`
+
+## 2026-05-11 (P4-493 Completion Audit Successor After All Three Residual Filters Tightened)
+
+- **这轮没有把 `P4-492` 之后的状态误读成“虽然 `0.75 mm` 没新 landing，但 completion wording 无需再刷新”，而是把 package/doctrine 三条主 residual 都已被重新复核过这件事正式收进了最新完成判断入口**: `PCB资料` 的全局完成阈值没有变化，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`。但 `P4-493` 之后，当前 repo 的完成表述已经不只是说现有 ceiling 是什么，而是还必须带上一个更强的 continuation truth：`1.50 mm`、`0.75 mm`、以及 doctrine lane 的当前 near-hit classes 都已经被再次复查并压回 `no reopen`，所以后续 AI 不应再把它们当成 still-open unreviewed gaps
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-493-2026-5-11-completion-audit-successor-after-all-three-residual-filters-tightened.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再拿 `P4-491` 当成唯一最新 completion wording 入口
+    - future AI 不应再把 package/doctrine 三条主 residual 的当前 near-hit 误读成 still-open unreviewed gaps
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but still below `full_corpus_closed_without_open_residual_authority_gaps`
+
+## 2026-05-11 (P4-492 0.75 mm Owner And Standards Candidate Scout No-Reopen Successor)
+
+- **这轮没有把 `0.75 mm` residual 当成“还差一次 owner / standards 复查”的未压实线，而是把它在当前 ceiling 之上的 near-hit 也一起再压实了一层**: 两个 subagent 分别复查后确认，owner side 新近最接近命中的是 Infineon 当前公开 `PG-TFBGA` package pages，它们已经公开给出真实 `0.75 mm` package identity 和 `Footprint Drawing` 入口，但仍没有在同一 public owner surface 上露出足够强的 printed PCB land-pattern geometry；NXP processor package sections 虽然给了真实 `0.75 mm` identity 和 ball-matrix context，但也没有超过当前 stack 的 printed geometry 强度；ST 那个 `0.80/0.75 mm` design-rule table 则在同一文档里落到 `0.8 mm` package context，不是真正的 `0.75 mm` package hit。standards side 新近最接近命中的是 `IPC-7351B TOC`，但仍然只有 TOC/framing，没有公开可见的 `0.75 mm` geometry row；IEC pages 也仍是 metadata/family framing。也就是说，这轮没有新的 owner 或 standards 公共面超过当前 `Microchip + Renesas + NXP + Intel` ceiling
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-492-2026-5-11-0p75mm-owner-and-standards-candidate-scout-no-reopen-successor.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把当前 Infineon `PG-TFBGA` page class 误读成已超过 `0.75 mm` 现有 owner stack
+    - future AI 不应再把 NXP processor package identity pages 误读成 stronger `0.75 mm` land-pattern authority
+    - future AI 不应再把 ST `0.80/0.75 mm` table 误判为真正的 `0.75 mm` package hit
+    - future AI 不应再把 `IPC-7351B` TOC 误写成已公开 `0.75 mm` geometry table
+
+## 2026-05-11 (P4-491 Completion Audit Successor After Package And Doctrine Candidate Tightening)
+
+- **这轮没有把 `P4-489` 和 `P4-490` 之后的状态误读成“虽然没新事实，但 completion wording 不用更新”，而是把最新的完成判断入口也一起收紧了**: `PCB资料` 的全局完成阈值没有变化，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`。但 `P4-491` 之后，当前 repo 的完成表述已经不只是复述 `P4-488` 的 package/doctrine ceiling，而是还必须带上一个更强的 continuation truth：`1.50 mm` 与 doctrine lane 的当前 near-hit classes 都已经被再次复查并压回 `no reopen`，所以后续 AI 不应再把 Lattice、Intel package-support、onsemi surfaced hits、IPC TOC/front-matter、Hirose、TE、IPC-7351 TOC/scope、IEC `61188-6-1` preview、IEC `61191-1` metadata、或 Altium/Cadence layer guidance 当成还没复核的空白区
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-491-2026-5-11-completion-audit-successor-after-package-and-doctrine-candidate-tightening.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再拿 `P4-488` 当成唯一最新 completion wording 入口
+    - future AI 不应再把当前 package/doctrine near-hit classes 误读成 still-open unreviewed gaps
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but still below `full_corpus_closed_without_open_residual_authority_gaps`
+
+## 2026-05-11 (P4-490 Doctrine Owner And Installation-Mark Candidate Scout No-Reopen Successor)
+
+- **这轮没有把 doctrine residual 继续误当成“已有更强权威只是还没落库”，而是把 `connector-origin` 和 `board-level installation-mark geometry` 两边当前公共面的上限一起再压实了一层**: 两个 subagent 分别复查后确认，`connector-origin` 侧新近最接近命中的是 Hirose 当前公开跨家族 owner-hosted `2D + ECAD footprint` 资产面，TE 当前 product pages 也公开写了 `Use the Product Drawing for all design activity`；但这些都仍是 per-part / per-family owner asset support，不是明确写出 recommended PCB layout origin / datum / universal `pin-1` handling 的 cross-family doctrine。`installation-mark geometry` 侧新近最接近命中的是 `IPC-7351` 的 public TOC/scope surface，它确实公开露出了 `marking`、`zero component orientations`、`courtyard`、`orientation`、`fiducials` 等章节，以及 mounting-condition family，但仍没有公开条文、图则或规范 wording 可安全落成 universal board-level installation-mark geometry doctrine。也就是说，这轮没有新的 connector-owner、CAD-owner、或 standards-side 公共面超过当前 doctrine ceiling
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-490-2026-5-11-doctrine-owner-and-installation-mark-candidate-scout-no-reopen-successor.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 Hirose 跨家族 owner ECAD 资产面误读成 universal connector-origin doctrine
+    - future AI 不应再把 TE product-page drawing/CAD access 误读成已经达到 doctrine reopen gate
+    - future AI 不应再把 `IPC-7351` TOC/scope public surface 误写成已公开 board-level installation-mark geometry authority
+    - future AI 不应再把 Altium 或 Cadence 的 layer-object guidance 误升格成 standards-owner 级别的 universal marking doctrine
+
+## 2026-05-11 (P4-489 1.50 mm Owner And Standards Candidate Scout No-Reopen Successor)
+
+- **这轮没有把 `P4-488` 之后的 `1.50 mm` 残余继续误当成“再搜一轮也许就能 reopen”，而是把 owner-side 和 standards-side 两边当前公共面的上限一起再压实了一层**: 两个 subagent 分别复查后确认，owner side 新近最接近命中的是 Lattice 当前公开 BGA layout note，它确实有真实 board-geometry rows，但只覆盖 `0.4 / 0.5 / 0.8 / 1.0 mm`，没有 `1.50 mm`；Intel 当前 package-support pages 只有 package identity，没有 printed PCB land-pattern exact row；onsemi 当前 surfaced package drawings 仍停在非目标 package class。standards side 新复查的 `IEC 61188-6-1`、`IEC 60191-6`、IPC public TOC/front-matter surfaces 和当前环境下不可稳定回收的 JEDEC lane，也都没有给出高于现有 `IEC 60191-6-18 + IEC 61188-5-8 / 61188-6-2` ceiling 的 public `1.50 mm` geometry surface。也就是说，这轮没有新的 owner 或 standards 公共面超过 `P4-488` 的 current ceiling
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-489-2026-5-11-1p50mm-owner-and-standards-candidate-scout-no-reopen-successor.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把当前 Lattice BGA layout note 误读成已有 `1.50 mm` owner exact row
+    - future AI 不应再把 Intel package-support identity pages 误读成已经达到 `1.50 mm` reopen gate
+    - future AI 不应再把 IPC TOC/front-matter public surfaces 误写成 public `1.50 mm` geometry authority
+    - future AI 不应在没有 recoverable current-public official primary surface 的前提下，假设 JEDEC 已经把 `1.50 mm` 标准侧继续抬高
+
+## 2026-05-11 (P4-488 Completion Audit Successor After IEC Square-BGA Family Raise)
+
+- **这轮没有把 `P4-487` 误读成 `1.50 mm` closeout，而是只把 completion wording 按新的 IEC standards-side ceiling 再刷新了一次**: `P4-487` 之后，全局 completion threshold 没变，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`；真正变化的是 `1.50 mm` residual wording：当前 repo 已不再停在 `IEC 60191-6-2 + IEC 61188-5-8 / 61188-6-2 + NXP + Renesas + AMD`，而是必须更新成再加上一条 `IEC 60191-6-18` square-BGA `1 mm or larger` package-family boundary
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-488-2026-5-11-completion-audit-successor-after-iec-square-bga-family-raise.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-484` 当成最新的 completion wording surface
+    - future AI 不应再把 `1.50 mm` 的 standards-side ceiling 误写成 still only `IEC 60191-6-2 + IEC 61188-5-8 / 61188-6-2`
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but with a stronger `1.50 mm` standards-side stack than before
+
+## 2026-05-11 (P4-487 IEC Square-BGA 1 mm-Or-Larger Family Boundary)
+
+- **这轮没有继续在 `1.50 mm` 上重复硬搜 owner exact row，而是把标准侧一个真正高于当前 ceiling 的 IEC public metadata surface 落进来了**: 在 `P4-486` 之后，当前 `1.50 mm` lane 的 owner side 仍停在 `NXP + Renesas + AMD`，但 subagent 带回了一个更窄的 standards-owner public surface：官方 `IEC 60191-6-18:2010` 页面不只是标题存在，而是公开写到了 `all square ball grid array packages (BGA), whose terminal pitch is 1 mm or larger`，以及 `standard outline drawings, dimensions, and recommended variations`。repo 因此现在可以更准确地说：`1.50 mm` 的 standards-side framing 已不再只有 `IEC 60191-6-2` 的 coarse-pitch existence 加 `IEC 61188-5-8 / 61188-6-2` 的 area-array land-pattern family，还多了一条 square-BGA package-family boundary；但这仍然不等于 public exact `1.50 mm` PCB land-pattern row
+  - **新增 Source Record** (1 file):
+    - `sources/registry/standards/iec-60191-6-18-square-bga-design-guide-page.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/iec-square-bga-1mm-or-larger-outline-and-variation-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-487-2026-5-11-iec-square-bga-1mm-or-larger-family-boundary.md`
+  - **更新 Route / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `1.50 mm` 的标准侧误写成 only `IEC 60191-6-2` existence plus generic `IEC 61188` family framing
+    - future AI 可以把当前 standards-side ceiling 更准确地写成多了一条 `IEC 60191-6-18` square-BGA family boundary
+    - 但 future AI 仍不应把这层 raise 误写成 public exact geometry row 或 package closeout
+
+## 2026-05-11 (P4-486 Microchip TI ADI 1.50 mm Candidate-Class Scout No-Reopen)
+
+- **这轮没有把另外三类 owner 候选继续当成“可能只差一步就命中”的 reopen 面，而是把它们在当前 surfaced 公共面上的上限也压实了**: 在 `P4-485` 把 Infineon package-portal near-hit 压回 false positive 之后，subagent 又把另外三类公开 owner-source class 压了一轮，主线复核后确认：当前 surfaced 的 Microchip 官方 BGA rule-table 只有 `1.0 / 0.8 / 0.5`，TI 当前复核的 `MicroStar BGA Packaging Reference Guide` 也只到 `0.5 / 0.8 / 1.0`，而当前 surfaced 的 ADI BGA guideline class 仍只是 generic package/process guidance 或坐标命中噪音，不是新的 `1.50 mm` owner exact row。也就是说，这三类当前公共面都还没有越过 `NXP + Renesas + AMD` 的现有 `1.50 mm` ceiling
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-486-2026-5-11-microchip-ti-adi-1p50mm-candidate-class-scout-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把当前 surfaced 的 Microchip rule-table class 误读成有 `1.50 mm` row
+    - future AI 不应再把当前复核过的 TI MicroStar guide 当成潜在 `1.50 mm` exact-row source
+    - future AI 不应再把当前 surfaced 的 ADI generic BGA guideline class 误读成 package-exact closure
+
+## 2026-05-11 (P4-485 Infineon Package Portal 1.50 mm Candidate False-Positive No-Reopen)
+
+- **这轮没有把“有 package portal、有 footprint drawing”误读成已经命中新的 `1.50 mm` owner exact row，而是把这类近命中的 false-positive filter 又收紧了一层**: 当前 `1.50 mm` residual 在 `P4-479` 之后已经到 `NXP + Renesas + AMD` 多 owner stack，但仍未 close。subagent 这轮把 `official package portal with attached footprint drawing` 压成了下一跳最该查的候选类，因为它结构上最像会再给出一条 owner-scoped current-public exact row；主线复核后确认，这个类本身还不能直接当 reopen。当前 Infineon `PG-BGA` 近命中虽然有 package portal、image/documents 区和 footprint-drawing 结构，但已复核的 `PG-BGA-165-807` 公开 `Min. Terminal Pitch` 是 `1.0`，不是 `1.50`，因此它仍只是结构上像 near-hit 的 false positive，不是新的 `1.50 mm` owner exact row
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-485-2026-5-11-infineon-package-portal-1p50mm-candidate-false-positive-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `official package portal + footprint drawing` 结构本身误读成已经达到 `1.50 mm` reopen gate
+    - future AI 不应把当前 Infineon `PG-BGA` near-hit 误写成新的 `1.50 mm` owner exact row
+    - future AI 应继续维持更强过滤条件：同一 owner public surface 里必须同时出现真实 `1.50 mm` pitch identity 和 printed PCB land-pattern geometry
+
+## 2026-05-11 (P4-484 Completion Audit Successor After Altium CAD-Owner Doctrine Raise)
+
+- **这轮没有把 `P4-483` 误读成 doctrine closeout，而是只把 completion wording 按新的 CAD-owner doctrine ceiling 再刷新了一次**: `P4-483` 之后，全局 completion threshold 没变，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`；真正变化的是 doctrine residual wording：当前 repo 已不再只能停在 `KiCad + owner drawings + IEC` 的老 snapshot，而是必须更新成 doctrine lane 里另有一条 `KiCad + Altium` 的 cross-tool CAD-owner footprint-construction boundary
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-484-2026-5-11-completion-audit-successor-after-altium-cad-owner-doctrine-raise.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-482` 当成最新的 completion wording surface
+    - future AI 不应再把 doctrine residual 的 CAD-owner 面误写成 still only `KiCad/KLC`
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but with a stronger CAD-owner doctrine stack than before
+
+## 2026-05-11 (P4-483 Altium CAD-Owner Footprint Reference Point And Layer Boundary)
+
+- **这轮没有继续停留在 `P4-475` 的 no-reopen wording，而是把一个真正超过当前 `KLC-only` CAD-owner ceiling 的官方 Altium surface 落进来了**: 当前 repo 之前对 doctrine residual 的 CAD-owner 面只能稳定写到 `KiCad/KLC` library convention；这轮新增了官方 Altium `Creating a PCB Footprint` 页面，并把其中 footprint 建立在受控 `reference point` 上、可用 `Set Reference` 调整 reference、以及 visible overlay、mechanical/body-or-courtyard documentation、`Designator and Comment` object 分层职责，一起落成一张 cross-tool CAD-owner boundary card。repo 因此现在可以更准确地说：footprint origin 与 visible/documentation mark 的一部分治理，已经不只由 `KiCad/KLC` 单点支撑，而是又多了一条 current-public Altium CAD-owner route；但这仍然不等于 universal connector-origin doctrine、mandatory `pin-1` origin、或 board-level installation-mark geometry law
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/altium-designer-pcb-footprint-reference-point-and-layer-boundary.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/cad-owner-footprint-reference-point-and-layer-role-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-483-2026-5-11-altium-cad-owner-footprint-reference-point-and-layer-boundary.md`
+  - **更新 Route / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 doctrine residual 的 CAD-owner 面误读成 still only `KiCad/KLC`
+    - future AI 可以把当前 CAD-owner doctrine ceiling 更准确地写成 `KiCad + Altium`
+    - 但 future AI 仍不应把这层 cross-tool CAD-owner coverage 误写成 universal connector-origin 或 board-level installation-mark law
+
+## 2026-05-11 (P4-482 Completion Audit Successor After Intel Fourth-Owner 0.75 mm Raise)
+
+- **这轮没有把 `P4-481` 误读成全局 closeout，而是只把 completion wording 按新的 `0.75 mm` ceiling 再刷新了一次**: `P4-481` 之后，全局 completion threshold 没变，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`；真正变化的是 `0.75 mm` residual wording：当前 repo 已不再停在 `three Microchip exact rows + one Renesas second-owner exact-data page + one NXP third-owner exact-data page`，而是必须更新成再加上一条 Intel-hosted `.75mm µBGA CSP Package` fourth-owner exact table
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-482-2026-5-11-completion-audit-successor-after-intel-fourth-owner-0p75mm-raise.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-480` 当成最新的 completion wording surface
+    - future AI 不应再把 `0.75 mm` 误写成仍缺第四个 materially independent owner exact row
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but with a stronger `0.75 mm` owner-exact stack than before
+
+## 2026-05-11 (P4-481 Intel Fourth-Owner 0.75 mm µBGA CSP Guidelines Table Landing)
+
+- **这轮没有继续停留在 `P4-474` 的 negative scout wording，而是把一个真正超过当前 ceiling 的 `0.75 mm` fourth-owner current-public exact table 落进来了**: 当前 repo 之前对 `0.75 mm` 的最强口径还是 `three Microchip exact rows + one Renesas second-owner exact-data page + one NXP third-owner exact-data page`；这轮新增了 Intel-hosted `Packaging Chapter 15 Databook`，并把其中 `.75mm µBGA CSP Package` 同一表里的 `Soldermask Opening Dia 0.375-0.425`、`Pad Diameter 0.325-0.375`、`Via Diameter 0.25-0.30`、和 `Number of Traces Between Pads 1` 一起落成一张 owner-scoped exact-data card。repo 因此现在可以更准确地说：`0.75 mm` 已经不只由 `Microchip + Renesas + NXP` 支撑，而是又多了一条 Intel-hosted fourth-owner exact-data route；但这仍然不等于 universal cross-vendor `0.75 mm pitch -> land pattern` law
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/intel-0p75mm-ubga-csp-pcb-design-guidelines-table.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/intel-0p75mm-ubga-csp-pcb-design-guidelines-table.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-481-2026-5-11-intel-fourth-owner-0p75mm-ubga-csp-guidelines-table-landing.md`
+  - **更新 Route / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `0.75 mm` 误读成 still waiting on a fourth-owner exact row
+    - future AI 可以把当前 `0.75 mm` ceiling 更准确地写成 `Microchip x3 + Renesas + NXP + Intel`
+    - 但 future AI 仍不应把这层 multi-owner exact-data coverage 误写成 universal cross-vendor pitch law
+
+## 2026-05-11 (P4-480 Completion Audit Successor After AMD Third-Owner 1.50 mm Raise)
+
+- **这轮没有把 `P4-479` 误读成全局 closeout，而是只把 completion wording 按新的 `1.50 mm` ceiling 再刷新了一次**: `P4-479` 之后，全局 completion threshold 没变，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`；真正变化的是 `1.50 mm` residual wording：当前 repo 已不再停在 `IEC family boundary + one NXP exact row + one Renesas named-package drawing + one Renesas exact row`，而是必须更新成再加上一条 AMD-hosted `BG225 / BGG225` third-owner exact row
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-480-2026-5-11-completion-audit-successor-after-amd-third-owner-1p50mm-raise.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-478` 当成最新的 completion wording surface
+    - future AI 不应再把 `1.50 mm` 误写成仍缺第三个 materially independent owner exact row
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but with a stronger `1.50 mm` owner-exact stack than before
+
+## 2026-05-11 (P4-479 AMD Third-Owner 1.50 mm BGA Footprint Row Landing)
+
+- **这轮没有继续停留在 `P4-473` 的 negative scout wording，而是把一个真正超过当前 ceiling 的 `1.50 mm` third-owner current-public exact row 落进来了**: 当前 repo 之前对 `1.50 mm` 的最强口径还是 `IEC existence + IEC family boundary + one NXP exact row + one Renesas named-package drawing + one Renesas exact row`；这轮新增了 AMD-hosted `UG112 Device Package User Guide`，并把其中 `BG225 / BGG225` 同一表里的 `Pitch 1.50`、`Component Land 0.63`、`Solder Land (NSMD) 0.58`、`Stencil Opening 0.68`、`Line Width 0.300`、`Distance 1.06`、`Via Land 0.65`、和 `Through Hole 0.356` 一起落成一张 owner-scoped exact-data card。repo 因此现在可以更准确地说：`1.50 mm` 已经不只由 `NXP + Renesas` 支撑，而是又多了一条 AMD-hosted third-owner exact-data route；但这仍然不等于 universal cross-vendor `1.50 mm pitch -> land pattern` law
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/amd-ug112-bg225-bgg225-1p50mm-bga-footprint-row.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/amd-bg225-bgg225-1p50mm-bga-footprint-row.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-479-2026-5-11-amd-third-owner-1p50mm-bga-footprint-row-landing.md`
+  - **更新 Route / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `1.50 mm` 误读成 still waiting on a third-owner exact row
+    - future AI 可以把当前 `1.50 mm` ceiling 更准确地写成 `IEC existence + IEC family boundary + NXP exact row + Renesas drawing + Renesas exact row + AMD third-owner exact row`
+    - 但 future AI 仍不应把这层 multi-owner exact-data coverage 误写成 universal cross-vendor pitch law
+
+## 2026-05-11 (P4-478 Completion Audit Successor After P4-477 Handbook Five-Route State)
+
+- **这轮没有把 `P4-477` 误读成全局 closeout，而是只把 completion wording 按新真值再收紧了一次**: `P4-477` 之后，全局 completion threshold 没变，`program_level_strong_complete` 仍然 `achieved`，`full_corpus_closed_without_open_residual_authority_gaps` 仍然 `not achieved`；真正变化的是 residual wording：`194页 handbook` 已不再停留在 `one D3 + three D5`，也不再是当前 watch-only residual 主体，而是被推进到 `one D3 + four D5 routes`，因此当前 major residual ranking 更准确地回到 `1.50 mm -> 0.75 mm -> doctrine residuals`
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-478-2026-5-11-completion-audit-successor-after-p4-477-handbook-five-route-state.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-476` 里的 `one D3 + three D5` handbook wording 当成当前最新 completion snapshot
+    - future AI 不应再把 `194页 handbook` 当成当前 major watch-only residual block 的一部分
+    - 当前对外最准确的完成表述仍然是 `program-level strong_complete`, but with residual ranking now led by package and doctrine lanes
+
+## 2026-05-11 (P4-477 D5 Switch-Mode Power EMC Placement And Hot-Loop Boundary)
+
+- **这轮没有继续在 `194页 handbook` 上做 broad reread，也没有把 generic high-current / feedback / return-path 卡硬说成新 lane，而是把 `P4-471` 明确留下的 `D5 switch-mode power EMC placement` 真正落成了一条新的 owner-backed 窄边界**: 先通过 subagent 审核确认现有本地 `source record` 单独看还不够，会和 `current-carrying`、`remote-feedback`、`audio class-D` 等现有卡发生 scope overlap；然后补进了更直接的一手 owner 文档，把这条 lane 收在更窄也更安全的层级：`switching power stage versus small-signal control separation`、`compact local input/output current loops`、`input bypass or local input capacitor close to the power loop / pins`、`minimize hot loop circumference`、`minimize switch-node area`、以及 `avoid routing sensitive traces under the supply`。这个提升仍然只到 switching-power layout / EMI-aware placement posture，不到任何 exact filter values、exact analog/clock keepout distances、exact loop geometry、或 EMI/EMC pass claim
+  - **新增 Source Records** (3 files):
+    - `sources/registry/methods/analog-devices-an136-switching-power-placement-and-hot-loop-boundary.md`
+    - `sources/registry/methods/analog-devices-basic-switching-regulator-layout-techniques.md`
+    - `sources/registry/methods/ti-sszt090-switch-mode-power-supply-emi-layout-tips.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/switch-mode-power-emc-placement-and-hot-loop-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-477-2026-5-11-d5-switch-mode-power-emc-placement-and-hot-loop-boundary.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `194页 handbook D5 switch-mode power EMC placement` 误读成只有 claim-family inventory 或 watch-only reopen candidate
+    - future AI 可以把当前 handbook 更准确地写成 `one D3 route + four D5 routes`
+    - future AI 不应把这条新 lane 误写成 universal regulator recipe、exact filter placement rule、或 EMI/EMC pass proof
+
+## 2026-05-11 (P4-476 Completion Audit Successor After Watch-Only Residual Convergence)
+
+- **这轮没有误把“当前没有可开的新候选”写成“已经 fully learned”，而是把 completion wording 刷到了更诚实的 watch-only residual 状态**: 在 `P4-471` 到 `P4-475` 之后，repo 现在可以更准确地说：`PCB资料` 仍然满足 `program_level_strong_complete`，但仍不满足 `full_corpus_closed_without_open_residual_authority_gaps`。不同的是，当前 major residual block 已不再处于“可继续默认 reopen”的状态，而是被收紧成 watch-only：`194页 handbook` 已有一条 `D3` 加三条 `D5` route，不应 broad reread；`1.50 mm`、`0.75 mm`、以及 doctrine residual 都仍理论 open，但在当前 candidate surface 上都没有新 authority 候选可开
+  - **新增 Completion Successor Log** (1 file):
+    - `logs/p4-476-2026-5-11-completion-audit-successor-after-watch-only-residual-convergence.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `P4-467` 之后的 negative scouts 忽略掉，继续把 major residuals 误读成 active reopen lanes
+    - future AI 不应因为当前没有候选就误报 `full_corpus_closed_without_open_residual_authority_gaps`
+    - 当前对外最准确的完成表述应保持为 `program-level strong_complete`, with watch-only residuals still open in theory
+
+## 2026-05-11 (P4-475 Doctrine Residual Candidate Scout No-Reopen Successor)
+
+- **这轮把剩余 doctrine residual 也做成了 candidate-gated negative scout，而不是继续把 `connector-origin` 或 `installation-mark` 当成还能在当前 source 面上硬抬的 open lane**: 当前 repo 对这组 residual 的 ceiling 仍然是 `P4-463` / `P4-467` 的口径：`connector-origin = KiCad + Molex + Samtec + Amphenol layered support`，`installation-mark / component-marking = layered support + IEC zero-orientation + IEC pin-1 / polarity route`。这次再查之后，结论还是没有更强新主源：当前 `IEC` 仍只是 orientation/marking framing，`KiCad/KLC` 仍只是 CAD-owner convention，named-series connector-owner 文档和 TE 公开面也都仍只是 family-specific guidance，不是 cross-family doctrine 或 board-level geometry rule。所以这两条 residual 现在也只能记成“理论上仍 open，但在当前候选面上不应重开”
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-475-2026-5-11-doctrine-residual-candidate-scout-no-reopen-successor.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应继续把当前 doctrine residual 当成“已知还有一条没写出来的新 authority”
+    - future AI 不应把 current IEC framing、`KiCad/KLC`、TE named-family guidance、或其他 same-layer source 误读成高于 `P4-463` ceiling 的 doctrine authority
+    - 当前主要 residual 块现在都已经被压到 watch-only state；没有 genuinely stronger authority 前，不应继续在同一残面上空转
+
+## 2026-05-11 (P4-474 0.75 mm Candidate-Gated Scout No-Reopen Successor)
+
+- **这轮没有把 `0.75 mm` 当成第二优先就继续硬搜，而是先按 candidate gate 做了一次 negative scout**: 当前 repo 对 `0.75 mm` 的最强口径仍然是 `P4-467` 写死的 `Microchip x3 + Renesas + NXP` multi-owner ceiling。要重开，至少要出现 `fourth materially stronger current-public owner exact row`，或 `legitimately public standards geometry surface`。这次都没有。当前 `NXP` general-BGA guidance 仍不含可用 `0.75 mm` row；当前 `IEC` public surface 仍只是 family-boundary metadata；当前 `Renesas` common-pitch material 也没有高到足以超过已落的 multi-owner ceiling。所以当前最真实状态是：`0.75 mm` 仍 open，但在现有候选面上也不应重开
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-474-2026-5-11-0p75mm-candidate-gated-scout-no-reopen-successor.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `0.75 mm` 当成“只差再搜一下就能继续落”的 residual
+    - future AI 不应把当前 NXP / IEC / Renesas 候选类误读成足够高的新 authority
+    - 当前 continuation 更准确地变成：`1.50 mm` 与 `0.75 mm` 都继续观察，但在现有候选面上都不应重开
+
+## 2026-05-11 (P4-473 1.50 mm Candidate-Gated Scout No-Reopen Successor)
+
+- **这轮没有因为 `P4-472` 把 `1.50 mm` 直接重开，而是先按 candidate gate 做了一次 negative scout 并把结果写死**: 当前 repo 虽然已经把 `1.50 mm` 升到第一优先 residual，但 reopen 条件仍然只有两类: `third materially independent current-public owner exact row`，或 `legitimately public official geometry surface`。这次 scout 没有拿到任何一个。当前 `IEC 61188-5-8 / 61188-6-2` 仍只是 metadata / standards-family framing，不是 public geometry row；当前 `Infineon` 候选仍只是 package-page near-hit，没有同页 public exact land-pattern row；当前 `ADI` 候选则仍属于 `1.50` false-positive 类，真实 pitch 并不是 `1.50`。所以当前最真实状态是：`1.50 mm` 仍是第一优先 residual，但在现有候选面上仍不应重开
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-473-2026-5-11-1p50mm-candidate-gated-scout-no-reopen-successor.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应因为 `P4-472` 就把 `1.50 mm` 当成已经有可开的候选
+    - future AI 不应把当前 IEC metadata、Infineon near-hit、或 ADI false-positive 当成足够落库的新 authority
+    - 当前 continuation 更准确地变成：继续观察 `1.50 mm`，但没有新候选前不要重开；并行把压力转到 `0.75 mm` 的 candidate gate 检查
+
+## 2026-05-11 (P4-472 Post-P4-471 Residual Rerank Toward 1.50 mm Candidate-Gated Recovery)
+
+- **这轮没有把 `1.50 mm` 重新当成 blind search，也没有把 article residual 或 `194页 handbook` 再拉回默认入口，而是把 restart priority 收到更精确的 residual 顺序**: 在 `P4-471` 收口 handbook 四路 ceiling 之后，当前 repo 里最值得继续观察的 reopen 候选已经变成 `1.50 mm package exact-geometry lane`，因为它仍只差 `third materially independent current-public owner exact row` 或 `legitimately public official geometry surface` 就可能明显抬高 ceiling；相比之下，`0.75 mm` 已经到 `Microchip x3 + Renesas + NXP`，而 article residual 与当前 non-BGA doctrine residual 也都已经在现有 authority layer 被 re-audit closed。这个 rerank 仍不等于允许盲搜 `1.50 mm`，也不等于 package residual closeout
+  - **新增 Rerank Log** (1 file):
+    - `logs/p4-472-2026-5-11-post-p4-471-residual-rerank-toward-1p50mm-candidate-gated-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 broad article residual、broad `194页 handbook` reread、或 generic package blind search 当成默认 continuation class
+    - future AI 应把 `1.50 mm` 视为当前第一 reopen candidate，但必须先满足 candidate gate
+    - future AI 应把 `0.75 mm` 与 `connector-origin / installation-mark` 明确降到后续观察位，而不是和 `1.50 mm` 混成同一优先级
+
+## 2026-05-11 (P4-471 194-Page Handbook Four-Route Successor No-Write Closeout)
+
+- **这轮没有再硬开一个新的 `194页 handbook` lane，而是把 handbook residual 的真实边界收口到了当前四路 ceiling**: `P4-386` 还把这本 handbook 写成“尚未到 narrow-route admission”的 residual，但在 `P4-402`、`P4-404`、`P4-468`、`P4-469`、`P4-470` 之后，这个口径已经过时。当前 repo 现在应明确写成：这本 handbook 已有 `one D3 route + three D5 routes landed`，分别覆盖 `remote feedback / quiet sense-point`、`connector-adjacent ESD entry-path`、`surface-ground continuity / exposed-zone isolation`、以及 `clock source-end termination / crystal-routing EMC`。这个 closeout 仍然不等于 full handbook、full `D3`、或 full `D5` closeout，也仍不能把任何 `RK3588`-specific numerics、recipes、tables、exact distances/values、timing/jitter/SI/EMC outcome 写成 reusable authority
+  - **新增 Successor Log** (1 file):
+    - `logs/p4-471-2026-5-11-194-page-handbook-four-route-successor-no-write-closeout.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-386` 当成当前 `194页 handbook` 的 residual truth
+    - future AI 不应继续在同一 source set 上重开 `remote feedback`、当前 `D5 clock`、或 generic return-path repackaging，期待还藏着一个已存在但未记录的新 route
+    - 当前 handbook 默认 continuation 应改成：只在出现 materially stronger 且不重复的新主源时，才 source-first 重开仍未落独立面的 residual，优先仅限类似 `D5 switch-mode power EMC placement` 的 handbook-specific 子面
+
+## 2026-05-11 (P4-470 D5 Clock-Routing Boundary Successor SiTime TI Strengthening)
+
+- **这轮没有重开一个新的 handbook lane，而是把刚落下的 `194页 handbook D5 clock` route 收敛到更干净的 `SiTime + TI` authority 组合**: 当前 repo 现在不只是能写 `series termination close to source`，还可以更稳地写 `clock source close to load`、`short/direct clock routing`、`avoid bend or branch-first routing`、`avoid board-edge and noisy high-current regions`、以及 `continuous ground plane under signal layers`。这个提升仍然只到 clock-owner-backed routing posture，不到任何 resistor value、impedance/spacing numeric、jitter/timing-closure proof、或 EMC-pass claim
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/sitime-an10006-best-design-and-layout-practices.md`
+  - **加强 Fact Card** (1 file):
+    - `facts/methods/clock-source-termination-and-crystal-routing-emc-boundary.md`
+  - **新增 Successor Log** (1 file):
+    - `logs/p4-470-2026-5-11-d5-clock-routing-boundary-successor-sitime-ti-strengthening.md`
+  - **更新 Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-469` 理解成只有一个偏处理器板级的单一 owner surface
+    - future AI 可以把当前 `194页 handbook D5 clock` 更准确地写成 `SiTime + TI` 共同支撑的 clock-specific route
+    - 但 future AI 仍不应把这条 route 误写成 clock timing closure、jitter proof、或 universal EMC recipe
+
+## 2026-05-11 (P4-469 D5 Clock Source-Termination And Crystal Routing EMC Boundary)
+
+- **这轮把 `194页 handbook D5` 再推进了一条真正不和现有 entry-path / return-path 卡重复的 clock-specific 窄边界**: 当前 repo 现在可以把 handbook 中 `所有时钟串接匹配电阻靠近 CPU 源端`、`时钟线要走在稳定参考之上`、`晶振和相关 IC 要靠近`、`晶振下面不要走其它线`、以及 `时钟线避免跨分割并保持最短路径` 这类说法安全接到一条新的 owner-backed `clock-routing EMC` boundary。这个提升仍然只到 `series termination close to source + crystal/clock-source keepout + stable reference` 层，不到任何 resistor values、exact clock lengths / spacing、shielding-via recipes、timing-closure proof、或 EMC-pass claims
+  - **新增 Source Records** (2 files):
+    - `sources/registry/methods/ti-clock-source-series-termination-and-ground-plane-layout.md`
+    - `sources/registry/methods/microchip-crystal-layout-short-trace-and-no-under-routing.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/clock-source-termination-and-crystal-routing-emc-boundary.md`
+  - **新增 Log** (1 file):
+    - `logs/p4-469-2026-5-11-d5-clock-source-termination-and-crystal-routing-emc-boundary.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `194页 handbook D5 clock` 误读成只有 generic return-path continuity 而没有独立 official route
+    - future AI 可以把这本 handbook 更准确地写成 `one D3 route + three D5 routes landed, but still not closed`
+    - 但 future AI 仍不应把这条窄 boundary 误写成 clock timing-closure recipe、jitter proof、或 EMC pass guarantee
+
+## 2026-05-11 (P4-468 D3 Remote-Feedback And Quiet Sense-Point Boundary)
+
+- **这轮把 `194页 handbook D3` 从“只有 claim-family lane”再推进了一小层，而且故意避开了大电流、去耦、以及已落的 return-path 泛边界重叠面**: 当前 repo 现在可以把 handbook 中 `remote feedback / 远端反馈`、`反馈点取自输出端而不是更嘈杂的开关点`、`反馈线短直`、`quiet layer / quiet analog ground`、以及 `远离 switch-node / noisy power region` 这类说法安全接到一条新的 owner-backed layout boundary。这个提升仍然只到 `quiet sense-point / noise-sensitive feedback routing` 层，不到任何 trace-width/spacing numerics、divider 或 compensation values、rail-specific PMIC recipe、或 ripple / regulation / EMI outcome claims
+  - **新增 Source Records** (2 files):
+    - `sources/registry/methods/ti-tps6593-q1-remote-voltage-sense-layout-guidelines.md`
+    - `sources/registry/methods/analog-devices-an136-feedback-pin-quiet-layout-boundary.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/remote-feedback-and-quiet-sense-point-routing-boundary.md`
+  - **新增 Log** (1 file):
+    - `logs/p4-468-2026-5-11-d3-remote-feedback-and-quiet-sense-point-boundary.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `194页 handbook` 的 `remote feedback` 误读成还没有任何 official route 的纯 claim inventory
+    - future AI 可以把这本 handbook 更准确地写成 `one D3 route + two D5 routes landed, but still not closed`
+    - 但 future AI 仍不应把这条窄 boundary 误写成 regulator tuning recipe 或 rail-specific exact-layout closeout
+
+## 2026-05-11 (P4-467 PCB资料 Completion Audit Successor After NXP Third-Owner 0.75 mm Raise)
+
+- **这轮没有误把 `0.75 mm` 的加强当成“已经学完”，而是把 completion wording 刷新到了当前真实状态**: `P4-466` 把 `0.75 mm` 从 `three Microchip exact rows + one Renesas second-owner exact-data page` 再推进到加上 `NXP` third-owner exact-data page；这会直接让旧的 `P4-401` completion snapshot 变旧。repo 现在可以更准确地说：`program_level_strong_complete` 仍然成立，但 `full_corpus_closed_without_open_residual_authority_gaps` 依旧没有达到，因为 `1.50 mm`、`0.75 mm`、`connector-origin universal doctrine`、以及 `board-level installation-mark geometry` 这些 residual 仍未 universal closeout
+  - **新增 Log** (1 file):
+    - `logs/p4-467-2026-5-11-pcb-ziliao-completion-audit-successor-after-nxp-third-owner-0p75mm-raise.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应继续用 `P4-401` 里的旧 `0.75 mm` snapshot 作为 completion wording
+    - future AI 不应把 `P4-466` 误读成 `PCB资料` 已 fully learned
+    - 当前是否“学完”的判断应以 `P4-467` 的 wording 为准
+
+## 2026-05-11 (P4-466 NXP Third-Owner 0.75 mm Reflow-Footprint Landing)
+
+- **这轮不是再做 `0.75 mm` rerank，而是把一个真正更强的 third-owner current-public exact-data route 落进来了**: 当前 repo 之前对 `0.75 mm` 的最强表述还是 `three Microchip exact rows + one Renesas second-owner exact-data page`；这轮新增了 `NXP SOT1908-1` 官方 package-information PDF，并把其中 named-package `FBGA448 / SOT1908-1`、`0.75 mm pitch`、以及可见 `Reflow soldering footprint part 1/2/3` 页面上的 `448X φ0.45`、`448X φ0.35`、`27X 0.75` 与 `recommended stencil thickness: 0.125` 一起落成一张 owner-scoped exact-data card。repo 因此现在可以更稳地写：`0.75 mm` 已经不只是 `Microchip + Renesas` 两家 owner family 的 exact-data coverage，而是又多了一个 current-public `NXP` owner family；但这仍然不等于 universal `0.75 mm pitch -> land pattern` law
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/nxp-sot1908-1-fbga448-0p75mm-reflow-footprint.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/nxp-0p75mm-fbga448-reflow-footprint.md`
+  - **更新 Route / Tracker** (4 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `0.75 mm` 误读成只有 `Microchip + Renesas` 两家 owner family
+    - future AI 可以把当前 `0.75 mm` ceiling 更准确地写成 `three Microchip exact rows + one Renesas second-owner exact-data page + one NXP third-owner exact-data page`
+    - 但 future AI 仍不应把这层 multi-owner exact-data coverage 误写成 universal cross-vendor pitch law
+
+## 2026-05-11 (P4-464 IEC Area-Array Land-Pattern Family Boundary)
+
+- **这轮没有硬造第三个 `1.50 mm` 厂商 exact row，而是把 standards-side 最干净的一层再往上抬了一格**: 当前 repo 之前对 `1.50 mm` 的 IEC 支撑主要还是 `IEC 60191-6-2` 的 coarse-pitch package design-guide existence metadata；这轮新增了 `IEC 61188-5-8` 官方页，公开确认 `area array components (BGA, FBGA, CGA, LGA)` 本身就是 IEC 的 land-pattern geometry family，而且其公开 lifecycle metadata 还明确这条线后来被 `IEC 61188-6-2:2021` / `IEC 61188-6-3:2024` 部分替代。repo 因此现在可以更稳地写：`1.50 mm` 不仅有 coarse-pitch package-guide existence，也有 standards-owner area-array land-pattern family framing 与 later land-pattern design family framing；但这仍然不等于 public exact `1.50 mm` geometry row，更不等于 universal cross-vendor `1.50 mm pitch -> land pattern` law
+  - **新增 Source Records** (2 files):
+    - `sources/registry/standards/iec-61188-5-8-area-array-land-pattern-page.md`
+    - `sources/registry/standards/iec-61188-6-2-land-pattern-design-smd-page.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/iec-area-array-land-pattern-geometry-family-boundary.md`
+  - **更新 Route / Tracker** (5 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `1.50 mm` 的 standards-side ceiling 误读成只有 `IEC 60191-6-2 existence only`
+    - future AI 可以更准确地区分：
+      - `IEC 60191-6-2` = coarse-pitch package-design-guide existence
+      - `IEC 61188-5-8` = area-array land-pattern geometry family
+      - `IEC 61188-6-2` = later maintained land-pattern design family
+    - 但 future AI 仍不应把这层 metadata boundary 误写成 public exact geometry row
+
+## 2026-05-11 (P4-465 1.50 mm Exact Lane Re-Audit After IEC Family Raise)
+
+- **这轮没有再新增 `1.50 mm` authority，而是把 `P4-464` 之后的 exact lane 真状态写死了**: 当前 repo 现在确实已经高于旧的 `IEC 60191-6-2 existence only`，因为还有 `IEC 61188-5-8 / 61188-6-2` 的 standards-family framing；但 fresh scout 仍没拿到第三个 materially independent current-public owner exact row，也没拿到 genuinely public official geometry row。也就是说，`P4-464` 是 standards-side raise，不是 exact-lane closeout。这条 lane 当前应该记成“已复核、边界更强、但 exact gap 仍在”，而不是再被后续 AI 当成未侦察空白区
+  - **新增 Log** (1 file):
+    - `logs/p4-465-2026-5-11-1p50mm-exact-lane-reaudit-after-iec-family-raise.md`
+  - **更新 Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `P4-464` 误读成 `1.50 mm` exact lane 已闭合
+    - future AI 不应再把 `1.50 mm` 当成未复核的 blind-search 空白区
+    - 这条 lane 只有在出现第三个 independent owner exact row 或 genuinely public official geometry surface 时才值得重开
+
+## 2026-05-11 (P4-463 Package Non-BGA Marking/Origin Re-Audit And No-Write Closeout)
+
+- **这轮没有再硬开新的 non-BGA package authority，而是把 `connector-origin / installation-mark / visible-vs-fab cue` 这条 residual lane 在当前证据层上重新核了一遍**: 当前 repo 已经把这组 `KiCad/KLC + Molex/Samtec/Amphenol + IEC + local handbook` 最干净的可复用面吸收完了。`KiCad` 的 `F.SilkS` 与 `F.Fab` cue split 已经在现有 fact card 中落下，后续 owner drawing 只是在 named-series owner layout context 上补强，`IEC 61188-7` 与 `IEC 61760-1` 也只分别把 `zero orientation` 与 `pin-1 / polarity identification` 锚在 CAD-library / component-specification framing 里，并没有再额外闭合 universal connector-origin、board-level installation-mark geometry、或 layer/symbol-specific marking rules。所以这条 lane 当前最真实状态不是“还有一个没摘下来的新边界”，而是“在现有 source set 下已经 re-audited closed”
+  - **新增 Log** (1 file):
+    - `logs/p4-463-2026-5-11-package-nonbga-marking-origin-reaudit-and-no-write-closeout.md`
+  - **复用 Existing Parent Log / Fact / Wiki** (8 surfaces):
+    - `logs/p4-317-2026-5-8-connector-origin-and-installation-mark-boundary-landing.md`
+    - `logs/p4-322-2026-5-8-samtec-connector-owner-layout-route-landing.md`
+    - `logs/p4-393-2026-5-10-amphenol-connector-owner-layout-route.md`
+    - `facts/methods/connector-origin-and-installation-mark-boundary.md`
+    - `facts/methods/iec-zero-orientation-cad-library-construction-boundary.md`
+    - `facts/methods/iec-smd-component-marking-boundary.md`
+    - `facts/local_pdf/pin1-origin-installation-mark-visual-boundary.md`
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `visible cue versus F.Fab cue` 误读成当前 repo 里一个“还没落”的 clean gap
+    - future AI 不应再用当前 `KiCad + Molex/Samtec/Amphenol + IEC + local handbook` 这组旧证据反复重开同一条 non-BGA residual lane
+
+## 2026-05-11 (P4-462 E5 Reliability-Layout Access And Rework Authority Recovery)
+
+- **这轮把 `如何保证电子产品可靠性设计？三方面为您解读，值得收藏！.pdf` 从“只有一个 early-review / mismatch-trigger official boundary”再推进到“又一条 narrow access / rework boundary”**: 当前 repo 现在可以把这篇除了 `P4-416` 已经落下的 early fabrication-and-assembly review posture 之外，再更稳地接到 `spacing / spatial-interference` 作为 guarded assembly-access review surface，把 dense or tall neighborhoods 写成 mixed-technology assembly-review input，把 package-neighborhood interference 与 crowded re-entry paths 写成 keep-access / rework-access review surface，并把 inspection / validation handoff 保持为相邻 governance layer，而不必把这部分只留在 route-only。这个提升仍然只到 access-planning / rework-access / neighboring-governance posture，不到 spacing numerics、geometry thresholds、reliability outcomes、thermal/performance assurance、pricing / quote logic、或 tool-sufficiency claims
+  - **新增 Log** (1 file):
+    - `logs/p4-462-2026-5-11-e5-reliability-layout-access-and-rework-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (7 surfaces):
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `wiki/processes/compact-closure-and-rework.md`
+    - `wiki/processes/mixed-technology-solder-route-selection.md`
+    - `wiki/testing/pcba-quality-gates-and-test-strategy.md`
+    - `logs/p4-346-2026-5-9-e5-reliability-design-dfm-route-integration.md`
+    - `logs/p4-416-2026-5-10-e5-reliability-review-trigger-authority-recovery.md`
+    - `logs/p4-313-2026-5-8-pcb-article-e5-usage-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `如何保证电子产品可靠性设计？三方面为您解读，值得收藏！.pdf` 不应再被误读成只有一条 early-review official raise
+    - repo 现在对这篇又多了一条更具体的 `spacing / interference / rework-access` official boundary
+
+## 2026-05-11 (P4-461 Post-E4 Article-Residual Exhaustion Rerank)
+
+- **这轮没有再去硬开新的 article authority，而是把 `P4-459` 的 continuation wording 在 `P4-460` 之后再收紧了一层**: 当前 `P4-325` 里非 `official_fact-backed` 的 article row 其实只剩 `PCB板的Mark点设计对SMT重要性.pdf`、`简单好用！再也不用担心PCB图形对齐问题.pdf`、以及 `3` 篇 branded-tool `E7` PDF；而这 `5` 条 residual 又已经分别被 `P4-460` 与 `P4-458` 复核过，当前都没有 clean further raise。所以 repo 现在更真实的 restart posture 不再是“广义上默认继续 article-side narrow recovery”，而是“当前 article residual 已具体化且已复核，除非出现 genuinely new authority，否则不要再泛化重开”
+  - **新增 Log** (1 file):
+    - `logs/p4-461-2026-5-11-post-e4-article-residual-exhaustion-rerank.md`
+  - **复用 Existing Parent Log / Tracker** (5 surfaces):
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-458-2026-5-11-e7-residual-route-reaudit-and-no-write-closeout.md`
+    - `logs/p4-459-2026-5-11-pcb-ziliao-continuation-rerank-and-tracker-correction.md`
+    - `logs/p4-460-2026-5-11-e4-mark-fiducial-route-reaudit-and-no-write-closeout.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 article-side narrow recovery 当成一个宽泛默认入口
+    - 当前 article residual 已明确只剩 `E4 Mark` 与当前 `E7` residual set，并且都已经被复核过；没有 genuinely new authority 时，不应继续在这些面上空转
+
+## 2026-05-11 (P4-460 E4 Mark-Fiducial Route Re-Audit And No-Write Closeout)
+
+- **这轮没有硬把 `PCB板的Mark点设计对SMT重要性.pdf` 往上抬成新 authority，而是把当前 fiducial 证据面重新核了一遍**: 用 subagent 辅助重审后，repo 现在能更清楚地说：`IPC-7525C` public metadata、internal stencil-support 的 `fiducial integration` 词汇、以及 `Ucamco Gerber` 的 fiducial attribute 词汇，只够把 `fiducial` 保持在 stencil / print-control / data-vocabulary 的边界层；它们仍不足以把这篇真正想表达的 board/panel/local scope split、optical-alignment framing、asymmetry、visibility/cleanliness conditions 稳定抬成一条新的 single-PDF `official_fact-backed` authority lane。因此这篇当前最真实状态仍是 route-only，而不是“再整理一下就能升格”
+  - **新增 Log** (1 file):
+    - `logs/p4-460-2026-5-11-e4-mark-fiducial-route-reaudit-and-no-write-closeout.md`
+  - **复用 Existing Parent Log / Fact / Source** (8 surfaces):
+    - `logs/p4-312-2026-5-8-pcb-article-e4-usage-route-integration.md`
+    - `logs/p4-353-2026-5-9-e4-mark-fiducial-role-route-integration.md`
+    - `facts/methods/ipc-stencil-guideline-family-and-upstream-print-control-boundary.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `sources/registry/standards/ipc-7525c-toc.md`
+    - `sources/registry/standards/ucamco-gerber-format-page.md`
+    - `sources/registry/processes/apt-pcba-stencil-support-services.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再用当前这组 `IPC-7525C` / stencil-support / Gerber 弱锚点重复重开这篇 `E4 Mark` PDF
+    - 当前 continuation point 更清楚：这篇需要 materially stronger assembly-owner、CAD-library-owner、或 standards-adjacent fiducial authority，才值得再试一次 official raise
+
+## 2026-05-11 (P4-459 PCB资料 Continuation Rerank And Tracker Correction)
+
+- **这轮没有硬造新的 package authority，而是把已经滞后的 continuation priority 纠正到当前真实 repo 状态**: `P4-309` 与 `P4-325` 早先都还把 `1.50 mm public exact-geometry recovery` 写成默认下一步，但在 `P4-400`、`P4-405` 和 `P4-458` 之后，这个指引已经不再准确。当前 package residual block 的更真实快照已经是：`1.50 mm = IEC existence + NXP exact row + Renesas drawing + Renesas exact row`，`0.75 mm = three Microchip exact rows + one Renesas second-owner exact-data page`，`connector-origin = KiCad + Molex + Samtec + Amphenol`，`installation mark / component marking = layered support + IEC zero-orientation + IEC pin-1 / polarity route`。这些 lane 仍然都没有 universal closeout，但也不该再被写成“默认继续盲搜 `1.50 mm`”
+  - **新增 Log** (1 file):
+    - `logs/p4-459-2026-5-11-pcb-ziliao-continuation-rerank-and-tracker-correction.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应继续把当前 package residual block 当成 `1.50 mm blind-search-first`
+    - 当前默认 continuation class 已更适合切回 article-side narrow recovery
+    - package residual 仍可继续，但前提是出现 materially stronger owner / standards-adjacent source，而不是重复在现有证据面上空转
+
+## 2026-05-11 (P4-458 E7 Residual-Route Re-Audit And No-Write Closeout)
+
+- **这轮没有继续硬推进 `E7` 新 authority，而是把当前 residual 面重新核了一遍**: 用 subagent 重新审了 `简单好用！再也不用担心PCB图形对齐问题.pdf` 与剩余 `3` 篇 branded-tool `E7` PDF；结论是当前 repo 并没有漏掉任何已经可以安全落地却未同步的 single-PDF authority lane。`简单好用！再也不用担心PCB图形对齐问题.pdf` 仍只能保持 shared-reference-frame / local registration workflow 的 route-only 层，而剩余 `3` 篇 branded-tool PDF 的低风险中性残余也没有超出既有 `P4-430` / `P4-431` / `P4-341` 已吸收的范围
+  - **新增 Log** (1 file):
+    - `logs/p4-458-2026-5-11-e7-residual-route-reaudit-and-no-write-closeout.md`
+  - **复用 Existing Parent Log / Fact / Wiki** (6 surfaces):
+    - `logs/p4-283c-2026-5-7-pcb-article-manufacturing-data-exchange-and-vendor-tool-hold-map.md`
+    - `logs/p4-351-2026-5-9-e7-graphic-alignment-workflow-route-integration.md`
+    - `logs/p4-341-2026-5-9-e7-assembly-analysis-input-package-route-integration.md`
+    - `logs/p4-430-2026-5-10-e7-handoff-format-identity-authority-recovery.md`
+    - `logs/p4-431-2026-5-10-e7-assembly-input-package-boundary-authority-recovery.md`
+    - `logs/p4-386-2026-5-10-pcb-ziliao-residual-route-audit-and-no-write-closeout.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再重开当前 `E7` residual block 期待 repo 里其实已经有漏记的 safe authority lane
+    - 当前最真实状态已明确：`E7` 需要新 authority 才值得继续推进，而不是继续在现有 branded-tool 文章里反复筛
+
+## 2026-05-11 (P4-457 E1 Stage-Linking Review Authority Recovery)
+
+- **这轮把 `华秋DFM在硬件制造中的作用.pdf` 从“只有 route-only 的 stage-linking lane”再推进到“一条 narrow official broader-than-layout review boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 `DFM` early review-gate posture、ICT-versus-flying-probe test-access identity、以及 quality-gates-and-test-strategy page，并把 `DFM` 写成 broader-than-layout 的上游 review posture，把 fabrication readiness、assembly readiness、test-point planning 与 later test-stage preparation 写成 downstream handoff 前的 review-stage planning vocabulary，而不必只停在 article routing。这个提升仍然只到 stage-linking / planning posture，不到任何 software-capability claims、procurement authenticity / `BOM` auto-verification、executable process recipes、`ICT/FCT/Burn In` completeness、fabrication-capability claims、或 cost / yield / reliability outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-457-2026-5-11-e1-stage-linking-review-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 1 wiki/page + 1 parent log):
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `facts/methods/pcba-ict-boundary-and-flying-probe-method-identity.md`
+    - `wiki/testing/pcba-quality-gates-and-test-strategy.md`
+    - `logs/p4-360-2026-5-9-e1-dfm-manufacturing-stage-linking-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `华秋DFM在硬件制造中的作用.pdf` 不再只能写成 route-only
+    - repo 现在对 `DFM` as broader-than-layout fabrication / assembly / test-preparation review 又多了一条单 PDF official boundary
+    - article-side `E1` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-456 E1 Concurrent-Engineering Feedback Authority Recovery)
+
+- **这轮把 `引领工业新思想--DFM的含义将如何演变.pdf` 从“只有 route-only 的 concurrent-engineering lane”再推进到“一条 narrow official upstream-feedback boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 `DFM` early review-gate posture 和 APT `NPI` staged feedback posture，并把 `DFM` 写成 upstream concurrent-engineering review posture，把 manufacturability feedback 写成 fabrication / assembly release handoff 前回灌设计的上游反馈姿态，而不必只停在 article routing。这个提升仍然只到 early review / feedback-loop posture，不到任何 cost / cycle / quality / competitiveness outcomes、vendor software sufficiency、named-company adoption、industry-maturity、exact principle lists、或 universal `DFX` taxonomy closure
+  - **新增 Log** (1 file):
+    - `logs/p4-456-2026-5-11-e1-concurrent-engineering-feedback-authority-recovery.md`
+  - **复用 Existing Fact / Parent Log** (2 facts + 2 parent logs):
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `facts/processes/apt-npi-process-capabilities.md`
+    - `logs/p4-356-2026-5-9-e1-dfm-concurrent-engineering-route-integration.md`
+    - `logs/p4-283a-2026-5-7-pcb-article-dfm-governance-and-persuasion-hold-map.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `引领工业新思想--DFM的含义将如何演变.pdf` 不再只能写成 route-only
+    - repo 现在对 `DFM` as upstream concurrent-engineering review plus pre-release manufacturability feedback 又多了一条单 PDF official boundary
+    - article-side `E1` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-455 E1 DRC-Versus-DFM Stage-Boundary Authority Recovery)
+
+- **这轮把 `PCB layout有DRC检查为什么还要用DFM.pdf` 从“只有 route-only 的 DRC-vs-DFM lane”再推进到“一条 narrow official stage-boundary boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 `DFM` early review-gate posture 与 PCB design for manufacturing evidence pack，并把 `DRC` 写成 layout-stage rule-correctness checking，把 `DFM` 写成 before-release 的 staged manufacturability / assembly review posture，把两者写成不同 review layer 而不是可互换检查，而不必只停在 article routing。这个提升仍然只到 review-boundary / staged-review posture，不到任何 exact `DRC` numeric examples、comparison-table rows、rule-count / standards-list authority、vendor software sufficiency、或 cost / reliability outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-455-2026-5-11-e1-drc-vs-dfm-stage-boundary-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (1 fact + 1 wiki/page + 2 parent logs):
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `wiki/consumption/pcb-design-for-manufacturing-2-evidence-pack.md`
+    - `logs/p4-349-2026-5-9-e1-drc-vs-dfm-review-boundary-route-integration.md`
+    - `logs/p4-290-2026-5-7-pcb-article-e1-e7-controller-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB layout有DRC检查为什么还要用DFM.pdf` 不再只能写成 route-only
+    - repo 现在对 `DRC` as layout-stage rule check versus `DFM` as staged manufacturability review 又多了一条单 PDF official boundary
+    - article-side `E1` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-454 E1 Early-Manufacturing-Awareness Authority Recovery)
+
+- **这轮把 `全局DFM意识对于PCB设计的重要性.pdf` 从“只有 route-only 的 global-DFM-awareness lane”再推进到“一条 narrow official early-manufacturing-awareness boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 `DFM` early review-gate posture、PCB design for manufacturing evidence pack、以及 selected-build-context alignment framing，并把 `DFM` 写成 before-layout-freeze / before-release-handoff 的 early manufacturing-awareness review posture，把 design rules / constraints / build assumptions 写成需要与 selected build context 对齐的上游 review 对象，而不必只停在 article routing。这个提升仍然只到 early review / selected-build-context posture，不到任何 supplier capability proof、real-time BOM / ranked alternate claims、global ecosystem / one-click supplier workflow、software sufficiency、或 cost / schedule / profit / certainty / reputation outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-454-2026-5-11-e1-early-manufacturing-awareness-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (1 fact + 1 wiki/page + 3 parent logs):
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `wiki/consumption/pcb-design-for-manufacturing-2-evidence-pack.md`
+    - `logs/p4-359-2026-5-9-e1-global-dfm-awareness-route-integration.md`
+    - `logs/p4-356-2026-5-9-e1-dfm-concurrent-engineering-route-integration.md`
+    - `logs/p4-290-2026-5-7-pcb-article-e1-e7-controller-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `全局DFM意识对于PCB设计的重要性.pdf` 不再只能写成 route-only
+    - repo 现在对 `DFM` as early manufacturing-awareness before layout freeze / release handoff 又多了一条单 PDF official boundary
+    - article-side `E1` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-453 E1 DFM Governance-Artifact Authority Recovery)
+
+- **这轮把 `对PCB设计师而言，熟练运用DFM已成为必备能力.pdf` 从“只有 route-only 的 DFM governance-loop lane”再推进到“一条 narrow official governance-artifact boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 `DFM` review-gate positioning、APT `NPI` documentation and feedback-loop posture、以及 inspection governance page，并把 `DFM specification` 写成 maintained governance artifact，把 `DFM checklist` 写成 design-planning and review-routing tool，把 `DFM report` 写成 running issue/correction record，并把 sample validation and feedback 写成 before-release governance-loop posture，而不必只停在 article routing。这个提升仍然只到 governance-artifact / feedback-loop posture，不到任何 exact checklist rows、`ISO9001` equivalence、universal workflow doctrine、或 first-pass / yield / cost / reliability / schedule outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-453-2026-5-11-e1-dfm-governance-artifact-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 1 wiki/page + 2 parent logs):
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `facts/processes/apt-npi-process-capabilities.md`
+    - `wiki/processes/inspection-governance-navigation-map.md`
+    - `logs/p4-358-2026-5-9-e1-dfm-governance-loop-route-integration.md`
+    - `logs/p4-290-2026-5-7-pcb-article-e1-e7-controller-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `对PCB设计师而言，熟练运用DFM已成为必备能力.pdf` 不再只能写成 route-only
+    - repo 现在对 `DFM specification / checklist / report / feedback loop` as governance-artifact posture 又多了一条单 PDF official boundary
+    - article-side `E1` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-452 E1 DFM-Before-Quote Cost-Ambiguity Authority Recovery)
+
+- **这轮把 `大家最关心的制造成本来了！怎么使用DFM降低成本？.pdf` 从“只有 route-only 的 cost-driver lane”再推进到“一条 narrow official quote-preparation boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 PCB cost-driver / quote-preparation boundary、`DFM` early review-gate posture、以及 quote-preparation process page，并把 `DFM before quote` 写成 cost-ambiguity review gate，把 fabrication complexity / assembly burden / test burden / BOM readiness 写成 quote-preparation review surfaces，把 material / finish / stackup / process-family complexity 写成 project-specific engineering-input context，而不必只停在 article routing。这个提升仍然只到 quote-preparation / engineering-input posture，不到任何 price table、cost formula、utilization / material-saving math、yield / scrap / delivery / schedule / profit outcome、或 branded-tool savings sufficiency claims
+  - **新增 Log** (1 file):
+    - `logs/p4-452-2026-5-11-e1-dfm-before-quote-cost-ambiguity-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 2 wiki/pages + 2 parent logs):
+    - `facts/methods/pcb-cost-driver-review-and-quote-preparation-boundary.md`
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `wiki/processes/pcb-cost-driver-review-and-quote-preparation.md`
+    - `wiki/consumption/pcb-cost-drivers-yield-evidence-pack.md`
+    - `logs/p4-395-2026-5-10-e1-dfm-cost-driver-route-integration.md`
+    - `logs/p4-290-2026-5-7-pcb-article-e1-e7-controller-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `大家最关心的制造成本来了！怎么使用DFM降低成本？.pdf` 不再只能写成 route-only
+    - repo 现在对 `DFM before quote handoff` as cost-ambiguity review gate 又多了一条单 PDF official boundary
+    - article-side `E1` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-450 E3 Stamp-Hole Branch-Selection Authority Recovery)
+
+- **这轮把 `这样做，轻松拿捏阻焊桥！.pdf` 从“只有 route-only 的 solder-mask-bridge lane”再推进到“一条 narrow official release-review boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 IPC solder-mask / released-output boundary、solder-mask opening completeness posture、pad-mask relationship route、以及 released-package review boundary，并把 bridge presence / loss 写成 dense adjacent-opening context 下的 released-output review surface，把 adjacent pad spacing 与 pad-mask opening relationship 写成 guarded bridge-risk review context，把 no-bridge / open-window 写成 preserved separation 没有被保持时的 higher-risk fallback release posture，而不必只停在 article routing。这个提升仍然只到 release-review / guarded fallback posture，不到任何 exact `IPC` terminology closure、bridge-width / opening / spacing / copper numerics、color / copper / large-copper default rules、checker sufficiency、或 thermal / rework / quality / cost / cycle / iteration outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-451-2026-5-11-e3-solder-mask-bridge-release-review-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 1 wiki/page + 4 parent logs):
+    - `facts/methods/ipc-solder-mask-layer-and-pad-definition-boundary.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+    - `logs/p4-373-2026-5-9-e3-solder-mask-bridge-preservation-route-integration.md`
+    - `logs/p4-362-2026-5-9-e3-solder-mask-opening-completeness-route-integration.md`
+    - `logs/p4-371-2026-5-9-e3-multilayer-pad-mask-relationship-route-integration.md`
+    - `logs/p4-311-2026-5-8-pcb-article-e3-usage-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `这样做，轻松拿捏阻焊桥！.pdf` 不再只能写成 route-only
+    - repo 现在对 solder-mask bridge presence / loss as release-review topic 又多了一条单 PDF official boundary
+    - article-side `E3` 不再有这条明显还停在“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-450 E3 Stamp-Hole Branch-Selection Authority Recovery)
+
+- **这轮把 `PCB邮票孔桥连设计要点，干货满满！.pdf` 从“只有 route-only 的 stamp-hole bridge lane”再推进到“一条 narrow official branch-selection boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 manufacturer-owner panelization / edge-feature boundary，并把 `stamp-hole / mouse-bite` 写成 panel-connection branch vocabulary，把 `V-cut` 写成独立 panelization branch identity，把 special breakaway / slot handling 写成 explicit panelization-input posture，并把 half-hole / castellated combinations 写成 special edge-feature review context，而不必只停在 article routing。这个提升仍然只到 branch-selection / special-review posture，不到任何 bridge-width / hole-size / hole-count / spacing / inset numerics、`V-cut` priority doctrine、process-order / post-finish drilling / plating-sequence rules、acceptability、supplier-capability、或 quality/cost/cycle/schedule claims
+  - **新增 Log** (1 file):
+    - `logs/p4-450-2026-5-11-e3-stamp-hole-branch-selection-authority-recovery.md`
+  - **复用 Existing Fact / Parent Log** (1 fact + 3 parent logs):
+    - `facts/methods/stamp-hole-panelization-and-castellated-edge-boundary.md`
+    - `logs/p4-397-2026-5-10-e3-stamp-hole-panelization-boundary-route-integration.md`
+    - `logs/p4-374-2026-5-9-e3-stamp-hole-bridge-gap-note.md`
+    - `logs/p4-311-2026-5-8-pcb-article-e3-usage-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB邮票孔桥连设计要点，干货满满！.pdf` 不再只能写成 route-only
+    - repo 现在对 stamp-hole / mouse-bite as branch-selection vocabulary and special-review topic 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-449 E3 Broken-Trace Release-Check Authority Recovery)
+
+- **这轮把 `如何避免“断头线”带来的DFM（可制造性）问题？.pdf` 从“只有 route-only 的 broken-trace residual-copper lane”再推进到“一条 narrow official release-check boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 `DFM` review-gate positioning、CAM data-exchange boundary、以及 design-data handoff-boundary page，并把 broken traces / residual copper 写成 pre-release review surfaces，把 continuity / open-net 写成 guarded release-check wording，把 CAM 写成 released outputs 留下 copper-intent ambiguity 时的 handoff clarification boundary，而不必只停在 article routing。这个提升仍然只到 release-check / handoff-clarification posture，不到任何 default repair action、branded checker sufficiency、supplier-capability / defect-certainty、quality / yield / cost / cycle / scrap outcomes、或 numeric rules
+  - **新增 Log** (1 file):
+    - `logs/p4-449-2026-5-11-e3-broken-trace-release-check-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 1 wiki/page + 2 parent logs):
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+    - `logs/p4-372-2026-5-9-e3-broken-trace-residual-copper-route-integration.md`
+    - `logs/p4-311-2026-5-8-pcb-article-e3-usage-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `如何避免“断头线”带来的DFM（可制造性）问题？.pdf` 不再只能写成 route-only
+    - repo 现在对 broken traces / residual copper as release-check and handoff-clarification topic 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-448 E2 50 Ohm Impedance Boundary Authority Recovery)
+
+- **这轮把 `PCB为什么常用50Ω阻抗？6大原因.pdf` 从“只有 route-only 的 50 ohm impedance-rationale lane”再推进到“一条 narrow official controlled-impedance planning boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 controlled-impedance verification posture、IPC measurement-method boundary、stackup-planning page、以及 RF-structure boundary page，并把 `50 ohm` 写成 controlled-impedance discussion 里的 common label，把 controlled impedance 写成 stackup-aware planning topic，把 measurement-method identity 写成独立于 supplier-capability / compatibility / cost claims 的边界层，而不必只停在 article routing。这个提升仍然只到 planning / measurement-boundary posture，不到任何 historical-origin proof、maximum-power / best-compromise doctrine、trace-width / dielectric / copper / spacing / tolerance recipes、manufacturability proof、compatibility doctrine、或 cost outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-448-2026-5-11-e2-50ohm-impedance-boundary-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 2 wiki/pages + 2 parent logs):
+    - `facts/methods/controlled-impedance-tdr-verification-posture.md`
+    - `facts/methods/pcb-impedance-and-rf-measurement-method-boundary.md`
+    - `wiki/processes/advanced-pcb-fabrication-and-stackup-planning.md`
+    - `wiki/processes/rf-transmission-line-structure-boundaries.md`
+    - `logs/p4-331-2026-5-9-e2-50ohm-impedance-route-integration.md`
+    - `logs/p4-310-2026-5-8-pcb-article-e2-usage-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB为什么常用50Ω阻抗？6大原因.pdf` 不再只能写成 route-only
+    - repo 现在对 `50 ohm` as controlled-impedance planning label / measurement-boundary topic 又多了一条单 PDF official boundary
+    - article-side `E2` 不再有这条明显还停在“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-447 E3 Pad-Mask Relationship Authority Recovery)
+
+- **这轮把 `多层板的焊盘到底应该怎么设计？四种主要设计方式带你搞懂！.pdf` 从“只有 route-only 的 multilayer pad-design lane”再推进到“一条 narrow official pad-mask-relationship boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 IPC solder-mask / pad-definition boundary、footprint-review governance posture、以及 sister pad-review route，并把 pad and solder-mask opening 写成 separate controlled review objects，把 `盖PAD` / `露PAD` 写成 guarded pad-mask relationship branches，把 `半盖半露` / `等大设计` 写成 pad-asymmetry 与 tolerance-sensitive risk branches，而不必只停在 article routing。这个提升仍然只到 pad-mask relationship / review posture，不到任何 pad/opening numerics、universal branch-selection doctrine、IPC terminology closure、CAD/checker authority、或 yield / quality / cost outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-447-2026-5-11-e3-pad-mask-relationship-authority-recovery.md`
+  - **复用 Existing Fact / Parent Log** (3 facts + 3 parent logs):
+    - `facts/methods/ipc-solder-mask-layer-and-pad-definition-boundary.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `facts/methods/intel-nsmd-smd-land-pad-terminology-boundary.md`
+    - `logs/p4-371-2026-5-9-e3-multilayer-pad-mask-relationship-route-integration.md`
+    - `logs/p4-369-2026-5-9-e3-pad-geometry-and-pad-mask-review-route-integration.md`
+    - `logs/p4-311-2026-5-8-pcb-article-e3-usage-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `多层板的焊盘到底应该怎么设计？四种主要设计方式带你搞懂！.pdf` 不再只能写成 route-only
+    - repo 现在对 pad-mask relationship as controlled review topic 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-446 E4 Character Open-Area Conflict Authority Recovery)
+
+- **这轮把 `PCB字符的DFM（可制造性）设计.pdf` 从“只有 route-only 的 character-legend lane”再推进到“一条 narrow official character-open-area conflict boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 silkscreen-pad conflict authority lane、IPC solder-mask / pad-definition boundary、以及 footprint-review governance posture，并把 character / legend on opened / solderable areas 写成 released-manufacturing-data conflict，把 character overlap with solderable surfaces 写成 footprint-release / fabrication-output review surface，而不必只停在 article routing。这个提升仍然只到 manufacturing-data conflict / release-review posture，不到任何 legend keepout / line-width / text-height numerics、QR / barcode geometry、color/process-capability claims、mirroring doctrine、checker sufficiency、或 quality / efficiency / outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-446-2026-5-11-e4-character-open-area-conflict-authority-recovery.md`
+  - **复用 Existing Fact / Parent Log** (2 facts + 4 parent logs):
+    - `facts/methods/ipc-solder-mask-layer-and-pad-definition-boundary.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-354-2026-5-9-e4-character-legend-manufacturability-route-integration.md`
+    - `logs/p4-424-2026-5-10-e2-silkscreen-pad-conflict-authority-recovery.md`
+    - `logs/p4-443-2026-5-10-e4-legend-open-area-conflict-authority-recovery.md`
+    - `logs/p4-312-2026-5-8-pcb-article-e4-usage-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB字符的DFM（可制造性）设计.pdf` 不再只能写成 route-only
+    - repo 现在对 character / legend on opened / solderable areas as released-manufacturing-data conflict 又多了一条单 PDF official boundary
+    - article-side `E4` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-445 E4 Irregular-Panel Edge-Access-Risk Authority Recovery)
+
+- **这轮把 `PCB板各种形状的拼版实例分享.pdf` 从“只有 route-only 的 irregular-shape panelization lane”再推进到“一条 narrow official special-edge access-risk boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 board-edge access-risk lanes、panel-handling lanes、以及 half-hole special edge-feature boundary，并把 protruding-edge / edge-near hardware 写成 panel-adjacency and assembly-access risk，把 half-hole board 写成需要 explicit special-review context 的 special panelization subfamily，把 inward-facing special edge regions 写成 keep-access and adjacency-risk review surfaces，把 singulation-stage accessibility loss / damage 写成 guarded downstream risk，而不必只停在 article routing。这个提升仍然只到 edge-access-risk / special-review / keep-access posture，不到任何 gap/hole/bridge numerics、breakage certainty、route-default hierarchy、checker sufficiency、或 cost / yield / schedule outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-445-2026-5-11-e4-irregular-panel-edge-access-risk-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 1 wiki/page + 5 parent logs):
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `facts/methods/depanelization-cleanliness-and-edge-risk-boundary.md`
+    - `wiki/processes/compact-closure-and-rework.md`
+    - `logs/p4-357-2026-5-9-e4-irregular-shape-panelization-examples-route-integration.md`
+    - `logs/p4-421-2026-5-10-e4-board-edge-access-risk-authority-recovery.md`
+    - `logs/p4-434-2026-5-10-e4-board-edge-layout-access-risk-authority-recovery.md`
+    - `logs/p4-442-2026-5-10-e4-assembly-facing-panel-handling-access-risk-authority-recovery.md`
+    - `logs/p4-444-2026-5-11-e4-panel-handling-and-edge-interference-authority-recovery.md`
+    - `logs/p4-440-2026-5-10-e3-half-hole-special-edge-feature-review-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB板各种形状的拼版实例分享.pdf` 不再只能写成 route-only
+    - repo 现在对 protruding-edge / half-hole special regions as assembly-access and keep-access review 又多了一条单 PDF official boundary
+    - article-side `E4` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-11 (P4-444 E4 Panel-Handling And Edge-Interference Authority Recovery)
+
+- **这轮把 `PCB拼板，不得不注意的10个问题！.pdf` 从“只有 route-only 的 panel-connection lane”再推进到“一条 narrow official assembly-facing panel-handling boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 assembly-facing panel-handling authority lane、board-edge access-risk lanes、以及 access / singulation / keep-access 支撑面，并把 panelization 写成 assembly-facing handling and release-review decision，把 board-edge / protruding-part interference 写成 assembly-access and adjacency-risk review context，把 outer frame / holding edge / rails 写成 planning / keep-access objects，把 singulation-stage accessibility loss 或 damage 写成 guarded downstream risk，而不必只停在 article routing。这个提升仍然只到 assembly-facing handling / access-risk / keep-access posture，不到任何 `V-CUT` / stamp-hole / hollow-connection numerics、`Mark` / tooling-hole rules、route-default hierarchy、checker sufficiency、或 quality / efficiency / cost outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-444-2026-5-11-e4-panel-handling-and-edge-interference-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 1 wiki/page + 4 parent logs):
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `facts/methods/depanelization-cleanliness-and-edge-risk-boundary.md`
+    - `wiki/processes/compact-closure-and-rework.md`
+    - `logs/p4-361-2026-5-9-e4-panel-connection-and-edge-interference-route-integration.md`
+    - `logs/p4-442-2026-5-10-e4-assembly-facing-panel-handling-access-risk-authority-recovery.md`
+    - `logs/p4-421-2026-5-10-e4-board-edge-access-risk-authority-recovery.md`
+    - `logs/p4-434-2026-5-10-e4-board-edge-layout-access-risk-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB拼板，不得不注意的10个问题！.pdf` 不再只能写成 route-only
+    - repo 现在对 panelization as assembly-facing handling / edge-interference / keep-access 又多了一条单 PDF official boundary
+    - article-side `E4` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-10 (P4-443 E4 Legend Open-Area Conflict Authority Recovery)
+
+- **这轮把 `PCB可制造性设计及案例分析之字符、外形、拼板（图文结合，推荐）.pdf` 从“只有 route-only 的 mixed legend/outline/panel lane”再推进到“一条 narrow official legend-open-area conflict boundary”**: 当前 repo 现在可以把这篇里最安全的一小段更稳地接到既有的 silkscreen-pad conflict authority lane、IPC solder-mask / pad-definition boundary、以及 footprint-review governance posture，并把 legend on opened / solderable areas 写成 released-manufacturing-data conflict，把 legend overlap with solderable surfaces 写成 footprint-release / fabrication-output review surface，而不必只停在 article routing。这个提升仍然只到 manufacturing-data conflict / release-review posture，不到任何 legend numerics、inner-slot / edge-connection cleanup recipe、panel-direction default、route-default、checker sufficiency、或 quality / efficiency / outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-443-2026-5-10-e4-legend-open-area-conflict-authority-recovery.md`
+  - **复用 Existing Fact / Parent Log** (2 facts + 2 parent logs):
+    - `facts/methods/ipc-solder-mask-layer-and-pad-definition-boundary.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-379-2026-5-9-e4-legend-outline-panel-direction-release-review-route-integration.md`
+    - `logs/p4-424-2026-5-10-e2-silkscreen-pad-conflict-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB可制造性设计及案例分析之字符、外形、拼板（图文结合，推荐）.pdf` 不再只能写成 route-only
+    - repo 现在对 legend on opened / solderable areas as released-manufacturing-data conflict 又多了一条单 PDF official boundary
+    - article-side `E4` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-10 (P4-442 E4 Assembly-Facing Panel-Handling Access-Risk Authority Recovery)
+
+- **这轮把 `啥？PCB拼版对SMT组装有影响！.pdf` 从“只有 route-only 的 assembly-facing panel-handling lane”再推进到“一条 narrow official board-edge access-risk / keep-access boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 assembly-facing panel-handling route、board-edge access-risk boundary、board-edge layout access-risk boundary、以及 depanelization edge-risk / compact-closure / mixed-technology route-selection 支撑面，并把 panelization 写成 assembly-facing handling decision，把 no-gap / tight adjacency 写成 inter-board component-interference risk，把 rails and kept separation 写成 assembly-clearance / keep-access posture，把 depanel-stage damage 与 later re-entry / serviceability impact 写成 guarded downstream-risk 与显式 re-entry review layers，而不必只停在 article routing。这个提升仍然只到 access-risk / inter-board interference / keep-access posture，不到任何 rail/gap/tab/`V-CUT` numerics、route-default hierarchy、machine-compatibility guarantees、checker sufficiency、或 yield / cost / cycle / schedule outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-442-2026-5-10-e4-assembly-facing-panel-handling-access-risk-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 2 wiki/pages + 4 parent logs):
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `facts/methods/depanelization-cleanliness-and-edge-risk-boundary.md`
+    - `wiki/processes/compact-closure-and-rework.md`
+    - `wiki/processes/mixed-technology-solder-route-selection.md`
+    - `logs/p4-355-2026-5-9-e4-assembly-facing-panel-handling-route-integration.md`
+    - `logs/p4-421-2026-5-10-e4-board-edge-access-risk-authority-recovery.md`
+    - `logs/p4-434-2026-5-10-e4-board-edge-layout-access-risk-authority-recovery.md`
+    - `logs/p4-347-2026-5-9-e4-board-edge-spacing-severity-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `啥？PCB拼版对SMT组装有影响！.pdf` 不再只能写成 route-only
+    - repo 现在对 assembly-facing panel handling / inter-board interference / keep-access 又多了一条单 PDF official boundary
+    - article-side `E4` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-10 (P4-441 E3 Pad Review Dimensions And Mismatch-Trigger Authority Recovery)
+
+- **这轮把 `PCB焊盘设计之问题详解.pdf` 从“只有 route-only 的 pad-review lane”再推进到“一条 narrow official pad review dimensions and mismatch-trigger boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 footprint-review governance boundary、package-to-footprint mismatch-trigger boundary、以及受控的 pad-mask vocabulary，并把 pad symmetry 写成 footprint-review dimension，把 `pad length / width / inner spacing` 写成 non-numeric review dimensions，把 pad-to-mask relationship 写成 controlled review topic，把 package-to-pad mismatch 写成 explicit review trigger，而不必只停在 article routing。这个提升仍然只到 non-numeric review dimensions / mismatch-trigger posture，不到任何 pad-geometry numerics、`NSMD/SMD` / `mask-defined` 定义闭环、keepout 公式、pad-type doctrine、checker claims、或 defect / yield outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-441-2026-5-10-e3-pad-review-dimensions-and-mismatch-trigger-authority-recovery.md`
+  - **复用 Existing Fact / Parent Log** (3 facts + 1 parent log):
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `facts/methods/package-to-footprint-and-pin-count-alignment-review-boundary.md`
+    - `facts/methods/intel-nsmd-smd-land-pad-terminology-boundary.md`
+    - `logs/p4-369-2026-5-9-e3-pad-geometry-and-pad-mask-review-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB焊盘设计之问题详解.pdf` 不再只能写成 route-only
+    - repo 现在对 pad review dimensions / mismatch-trigger 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-10 (P4-440 E3 Half-Hole Special Edge-Feature Review Authority Recovery)
+
+- **这轮把 `千万不能小瞧的PCB半孔板.pdf` 从“只有 route-only 的 half-hole edge-feature lane”再推进到“一条 narrow official half-hole special edge-feature review boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 `castellated / half-hole` special edge-feature boundary、special panelization branch context、以及 release-check posture，并把 `half-hole` 写成 special board-edge feature vocabulary，把 half-hole board 写成 special panelization subfamily，把 ordinary-board assumptions 对这类 edge region 的不适用写成 explicit special-review context，把 opening / bridge expression 写成 release-check surface，而不必只停在 article routing。这个提升仍然只到 special edge-feature / branch-selection / release-review posture，不到任何 half-hole terminology closure、geometry / bridge numerics、process-order recipes、panelization defaults、plating/acceptability/supplier capability、或 cost/cycle outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-440-2026-5-10-e3-half-hole-special-edge-feature-review-authority-recovery.md`
+  - **复用 Existing Fact / Parent Log** (1 fact + 2 parent logs):
+    - `facts/methods/stamp-hole-panelization-and-castellated-edge-boundary.md`
+    - `logs/p4-378-2026-5-9-e3-half-hole-edge-feature-and-panelization-route-integration.md`
+    - `logs/p4-366-2026-5-9-e3-castellated-half-hole-terminology-gap-note.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `千万不能小瞧的PCB半孔板.pdf` 不再只能写成 route-only
+    - repo 现在对 half-hole special edge-feature / release-review 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-10 (P4-439 E3 Small Hole-Slot Typing Release-Review Authority Recovery)
+
+- **这轮把 `器件引脚小尺寸的孔和槽如何避坑？.pdf` 从“只有 route-only 的 small-hole-slot typing lane”再推进到“一条 narrow official small hole-slot typing release-review boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 hole-slot released-output completeness boundary、design-canvas versus released-output boundary、以及 opening-expression release-check posture，并把 small lead-hole / slot feature typing confusion 写成 guarded handoff-risk review，把 opening / cover-oil expression 写成 release-check surface，把 released-package explicitness 写成 completeness-review topic，而不必只停在 article routing。这个提升仍然只到 feature-typing / release-review posture，不到任何 hole-slot capability numerics、compensation / tolerance rules、factory-default behavior、software-output recipe、checker sufficiency、supplier capability、或 cost/efficiency/process-preference outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-439-2026-5-10-e3-small-hole-slot-typing-release-review-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (1 fact + 1 wiki/page + 3 parent logs):
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+    - `logs/p4-377-2026-5-9-e3-small-hole-slot-feature-typing-opening-risk-route-integration.md`
+    - `logs/p4-437-2026-5-10-e3-hole-slot-fabrication-intent-output-completeness-authority-recovery.md`
+    - `logs/p4-368-2026-5-9-e3-hole-slot-terminology-gap-note.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `器件引脚小尺寸的孔和槽如何避坑？.pdf` 不再只能写成 route-only
+    - repo 现在对 small hole-slot typing / release-review 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-10 (P4-438 E3 Special Hole-Slot Intent Release-Review Authority Recovery)
+
+- **这轮把 `器件引脚的方槽、方孔如何避坑？.pdf` 从“只有 route-only 的 square-lead / special-hole lane”再推进到“一条 narrow official special hole-slot intent release-review boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 hole-slot released-output completeness boundary、package-to-footprint review-trigger boundary、以及 design-canvas versus released-output boundary，并把 square 或 non-round lead shape 写成 package-to-footprint review trigger，把 square-hole / square-slot request 写成必须明确进入 released package 的 explicit special-feature intent，把 drill-drawing / annotation 写成 release-check support surface，而不必只停在 article routing。这个提升仍然只到 special-feature intent / release-review posture，不到任何 official square-hole terminology closure、hole-slot numerics、workaround defaults、CAD-specific UI / export recipe、checker sufficiency、supplier capability、或 insertion / quality / cost outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-438-2026-5-10-e3-special-hole-slot-intent-release-review-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (2 facts + 1 wiki/page + 3 parent logs):
+    - `facts/methods/package-to-footprint-and-pin-count-alignment-review-boundary.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+    - `logs/p4-376-2026-5-9-e3-square-lead-special-hole-intent-release-check-route-integration.md`
+    - `logs/p4-437-2026-5-10-e3-hole-slot-fabrication-intent-output-completeness-authority-recovery.md`
+    - `logs/p4-368-2026-5-9-e3-hole-slot-terminology-gap-note.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `器件引脚的方槽、方孔如何避坑？.pdf` 不再只能写成 route-only
+    - repo 现在对 special hole-slot intent / release-review 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-10 (P4-437 E3 Hole-Slot Fabrication-Intent Output-Completeness Authority Recovery)
+
+- **这轮把 `PCB可制造性设计及案例分析之孔槽篇.pdf` 从“只有 route-only 的 hole-slot fabrication-intent lane”再推进到“一条 narrow official hole-slot released-output completeness boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 hole-slot output-completeness authority boundary、fabrication-package handoff boundary、以及 design-intent versus released-output boundary，并把 intended hole / slot feature presence 写成 released fabrication-package completeness surface，把 omitted / misexpressed hole-slot intent 写成 manufacturing-data completeness review topic，把 hole-table / slot-annotation 写成 release-check support surface，而不必只停在 article routing。这个提升仍然只到 released-output completeness / release-review posture，不到任何 plated / non-plated terminology closure、hole-slot numerics、layer-recipe defaults、CAD-specific UI / export recipe、checker sufficiency、supplier capability、或 yield / reliability / cost outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-437-2026-5-10-e3-hole-slot-fabrication-intent-output-completeness-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (1 fact + 1 wiki/page + 3 parent logs):
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+    - `logs/p4-375-2026-5-9-e3-hole-slot-fabrication-intent-and-output-completeness-route-integration.md`
+    - `logs/p4-352-2026-5-9-e3-hole-slot-output-completeness-route-integration.md`
+    - `logs/p4-419-2026-5-10-e3-hole-slot-output-completeness-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB可制造性设计及案例分析之孔槽篇.pdf` 不再只能写成 route-only
+    - repo 现在对 hole-slot released-output completeness / release-review 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-10 (P4-436 E3 Via Solder-Mask Release-Expression Authority Recovery)
+
+- **这轮把 `一招搞定PCB阻焊过孔问题.pdf` 从“只有 route-only 的 via treatment lane”再推进到“一条 narrow official via cover/open release-expression boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 solder-mask released-data boundary、fabrication-package output boundary、以及受控的 via-in-pad / HDI posture，并把 via `cover/open` 写成 released solder-mask expression，把 via solder-mask treatment 写成 fabrication-package release-review topic，把 mismatched cover/open intent 写成 guarded output-review surface，而不必只停在 article routing。这个提升仍然只到 released solder-mask expression / release-review posture，不到任何 treatment numerics、universal cover/open/fill defaults、IPC definition closure、CAD-specific UI / export recipe、checker sufficiency、supplier-process proof、或 defect / yield / reliability / cost outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-436-2026-5-10-e3-via-solder-mask-release-expression-authority-recovery.md`
+  - **复用 Existing Fact / Wiki / Parent Log** (3 facts + 3 parent logs):
+    - `facts/methods/ipc-solder-mask-layer-and-pad-definition-boundary.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `facts/methods/hdi-microvia-and-vippo-process-posture.md`
+    - `logs/p4-367-2026-5-9-e3-via-solder-mask-treatment-route-integration.md`
+    - `logs/p4-344-2026-5-9-e5-via-in-pad-manufacturability-route-integration.md`
+    - `logs/p4-423-2026-5-10-e5-via-in-pad-review-trigger-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `一招搞定PCB阻焊过孔问题.pdf` 不再只能写成 route-only
+    - repo 现在对 via `cover/open` released-expression / release-review 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+
+## 2026-05-10 (P4-435 E3 Gold-Finger Edge-Contact Identity Authority Recovery)
+
+- **这轮把 `PCB“金手指”从设计到生产全流程.pdf` 从“只有 route-only 的 gold-finger / edge-contact lane”再推进到“一条 narrow official gold-finger edge-contact identity boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 edge-contact IPC metadata boundary、finish-zoning posture card、以及 finish-zoning process page，并把 `gold finger` 写成 edge-connector contact-region vocabulary，把 edge-contact region 写成 distinct from ordinary solderable pad zones，把 finish planning 写成 contact-duty 与 soldering-duty 不同场景下的 zoned review topic，而不必只停在 article routing。这个提升仍然只到 edge-contact identity / finish-zoning posture，不到 thickness、bevel、durability、contact resistance、acceptance criteria、supplier capability、qualification、或 yield/cost/efficiency outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-435-2026-5-10-e3-gold-finger-edge-contact-identity-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (2 facts + 1 wiki/page + 1 parent log):
+    - `facts/standards/edge-contact-gold-finger-standards-metadata-boundary.md`
+    - `facts/methods/finish-zoning-by-assembly-sequence-and-storage-exposure.md`
+    - `wiki/processes/finish-zoning-and-selective-multi-finish.md`
+    - `logs/p4-365-2026-5-9-e3-gold-finger-edge-contact-boundary-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB“金手指”从设计到生产全流程.pdf` 不再只能写成 route-only
+    - repo 现在对 gold-finger edge-contact identity / finish-zoning review 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 route coverage”的单 PDF 残余
+  - **What this still does not unlock**
+    - no bevel, board-edge, finger-length, finger-width, or spacing rule
+    - no hard-gold, nickel-underplate, `ENIG`, or `ENEPIG` thickness or stack-selection rule
+    - no durability, insertion-cycle, wear, or contact-resistance performance claim
+    - no acceptance, inspection pass/fail, supplier capability, or qualification claim
+    - no yield, cost, efficiency, or production-readiness outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-434 E4 Board-Edge Layout Access-Risk Authority Recovery)
+
+- **这轮把 `PCBA板边器件布局重要性.pdf` 从“只有 route-only 的 board-edge component-layout lane”再推进到“一条 narrow official board-edge layout access-risk / re-entry boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 selective-solder access-check boundary、compact-closure page、mixed-technology route-selection page、以及相邻的 `P4-421` board-edge authority lane，并把 board-edge-near parts 写成 access-risk review surfaces，把 tall or fragile edge-near parts 写成 priority-review objects，把 equipment-path / rail / fixture / carrier exposure 写成 guarded assembly-path interference review topics，把 compact-closure / keep-access / serviceability / rework impact 写成 explicit re-entry review layers，而不必只停在 article routing。这个提升仍然只到 access-risk / assembly-path interference / re-entry posture，不到 board-edge numerics、`V-cut` / milling / depanel spacing defaults、machine-compatibility guarantees、damage or reliability certainty、checker sufficiency、或 yield/cost/cycle/schedule outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-434-2026-5-10-e4-board-edge-layout-access-risk-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (1 fact + 2 wiki/pages + 2 parent logs):
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `wiki/processes/compact-closure-and-rework.md`
+    - `wiki/processes/mixed-technology-solder-route-selection.md`
+    - `logs/p4-348-2026-5-9-e4-board-edge-component-layout-importance-route-integration.md`
+    - `logs/p4-421-2026-5-10-e4-board-edge-access-risk-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCBA板边器件布局重要性.pdf` 不再只能写成 route-only
+    - repo 现在对 board-edge layout access-risk / re-entry review 又多了一条单 PDF official boundary
+    - article-side `E4` 现在已有两篇板边文章至少各有一条 narrow official boundary
+  - **What this still does not unlock**
+    - no exact board-edge spacing numeric or threshold rule
+    - no `V-cut`, milling, rail, clamp, fixture, or depanel-method spacing default
+    - no machine-compatibility, path-clearance, or process-success guarantee
+    - no deterministic damage, warpage, hidden-failure, or reliability wording
+    - no checker completeness, sufficiency, or workflow-superiority claim
+    - no yield, cost, cycle-time, schedule, or project-impact outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-433 E5 Crowded-Neighborhood Access And Rework Authority Recovery)
+
+- **这轮把 `组装电子元器件间距不足的严重性.pdf` 从“只有 route-only 的 crowded-neighborhood / spacing-severity lane”再推进到“一条 narrow official crowded-neighborhood access / rework boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 mixed-technology assembly-flow card、selective-wave / selective-solder route-planning cards、manual-rework boundary card、access-planning pages、以及 quality-gate page，并把 crowded mixed-technology neighborhoods 写成 route-review triggers，把 nearby pins / pads / vias / holes / component bodies 写成 access / nearby-hardware interference review surfaces，把 dense neighborhoods 写成 manual touch-up / serviceability risk context，把 inspection / post-rework revalidation 写成相邻 governance layers，而不必只停在 article routing。这个提升仍然只到 route-review / access-planning / controlled-rework posture，不到 spacing thresholds、solder-mask defaults、via-in-pad rules、defect certainty、process-parameter causality、route-superiority claims、或 reliability/cost/schedule outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-433-2026-5-10-e5-crowded-neighborhood-access-and-rework-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (5 facts + 3 wiki/pages + 1 parent log):
+    - `facts/methods/pcba-mixed-technology-assembly-flow.md`
+    - `facts/methods/selective-wave-solder-and-mixed-technology-sequencing.md`
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `facts/methods/manual-solder-rework-boundary-for-mixed-technology.md`
+    - `facts/methods/parameter-scope-pcba-selective-solder-tht-route-context.md`
+    - `wiki/processes/selective-solder-fixture-and-access-planning.md`
+    - `wiki/processes/hand-solder-touchup-and-rework-control.md`
+    - `wiki/testing/pcba-quality-gates-and-test-strategy.md`
+    - `logs/p4-343-2026-5-9-e5-component-spacing-severity-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `组装电子元器件间距不足的严重性.pdf` 不再只能写成 route-only
+    - repo 现在对 crowded mixed-technology neighborhood as access / rework review 又多了一条单 PDF official boundary
+    - article-side `E5` 现在不再有只停在 route-only 的单 PDF 残余
+  - **What this still does not unlock**
+    - no spacing, pad-to-via, pin-to-hole, or hole-to-pad threshold rule
+    - no solder-mask or exposed-copper default rule
+    - no via-in-pad or near-pad universal defect rule
+    - no defect certainty or parameter-fix causality claim
+    - no route-superiority or mandatory-process claim
+    - no reliability, quality, cost, schedule, or delay outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-432 E5 Component-Spacing Access And Rework Authority Recovery)
+
+- **这轮把 `关于PCBA元器件布局的重要性.pdf` 从“只有 route-only 的 component-layout / spacing lane”再推进到“一条 narrow official component-spacing access / rework boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 selective-solder access-check boundary、mixed-technology route-selection page、compact-closure page、以及 quality-gate page，并把 component spacing 写成 access and rework boundary，把 dense 或 tall component neighborhoods 写成 mixed-technology assembly-review inputs，把 connector overhang、tall-part adjacency、以及 large-part-over-small-part obstruction 写成 interference / re-entry review surfaces，而不必只停在 article routing。这个提升仍然只到 access-planning / re-entry-review posture，不到 spacing numerics、safety grading、stencil-threshold rules、warpage-causality certainty、checker sufficiency、或 cost/cycle/reliability outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-432-2026-5-10-e5-component-spacing-access-and-rework-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (1 fact + 3 wiki/pages + 1 parent log):
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `wiki/processes/mixed-technology-solder-route-selection.md`
+    - `wiki/processes/compact-closure-and-rework.md`
+    - `wiki/testing/pcba-quality-gates-and-test-strategy.md`
+    - `logs/p4-342-2026-5-9-e5-component-layout-importance-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `关于PCBA元器件布局的重要性.pdf` 不再只能写成 route-only
+    - repo 现在对 component spacing as access / rework boundary 又多了一条单 PDF official boundary
+    - article-side `E5` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no spacing numerics or safety-grade logic
+    - no stencil aperture, thickness, or bridging-threshold rule
+    - no warpage-causality certainty or reliability-failure certainty
+    - no universal unreworkable or machine-blocking claim
+    - no tool-checker sufficiency or workflow-completeness claim
+    - no cost, cycle, quality, or reliability outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-431 E7 Assembly-Input Package Boundary Authority Recovery)
+
+- **这轮把 `华秋DFM组装分析前需准备的数据文件.pdf` 从“只有 route-only 的 assembly-input lane”再推进到“一条 narrow official assembly-input package boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 PCBA test-input package boundary 和 CAM-format boundary，并把 fabrication-oriented handoff files 与 assembly-supporting companion artifacts 写成不同 data layers，把 Gerber / drill 写成不能单独等于 full assembly-analysis input package 的 fabrication-oriented handoff files，把 `BOM` 与 placement-related data 写成在 chosen handoff family 没有暴露足够 assembly context 时仍可能需要单独携带的 companion artifacts，而不必只停在 article routing。这个提升仍然只到 assembly-input package / companion-artifact boundary，不到 universal `PCB/ODB` embedded-content sufficiency、universal minimum assembly-analysis package doctrine、tool-capability/import-path claims、file-prep-readiness claims、automatic matching claims、或 cost/yield/speed/quality outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-431-2026-5-10-e7-assembly-input-package-boundary-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (2 files + 2 parent logs):
+    - `facts/methods/pcba-test-method-input-package-boundary.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `logs/p4-341-2026-5-9-e7-assembly-analysis-input-package-route-integration.md`
+    - `logs/p4-290-2026-5-7-pcb-article-e1-e7-controller-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `华秋DFM组装分析前需准备的数据文件.pdf` 不再只能写成 route-only
+    - repo 现在对 assembly-analysis input package boundary 又多了一条单 PDF official boundary
+    - article-side `E7` 现在只剩 `简单好用！再也不用担心PCB图形对齐问题.pdf` 还停在 route-only
+  - **What this still does not unlock**
+    - no universal `PCB/ODB` embedded `BOM` or placement-coordinate sufficiency
+    - no universal minimum assembly-analysis package doctrine
+    - no tool-capability, import-path, drag-drop, compressed-package, or parser-completeness claim
+    - no file-preparation-alone readiness claim
+    - no automatic `BOM` matching, library matching, or package-alignment success claim
+    - no cost, yield, speed, quality, or error-reduction outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-430 E7 Handoff-Format Identity Authority Recovery)
+
+- **这轮把 `PCB制造文件传输数据的主要格式.pdf` 从“只有 route-only 的 data-exchange / handoff lane”再推进到“一条 narrow official handoff-format identity boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 CAM data-exchange format boundary 和 test-input package boundary，并把 native PCB authoring file 与 released manufacturing-transfer output 写成不同 data layers，把 Gerber 与 `ODB++` 写成 fabrication handoff context 下的 manufacturing-data exchange format identities，把 fabrication-oriented format package 写成不能单独等于 full downstream assembly/test package 的受控边界，而不必只停在 article routing。这个提升仍然只到 handoff-format identity / package-boundary posture，不到 `Excellon` authority closure、universal release-package doctrine、format-superiority claims、vendor support-matrix claims、one-format production-readiness、或 cost/yield/quote-speed outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-430-2026-5-10-e7-handoff-format-identity-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (2 files + 2 parent logs):
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `facts/methods/pcba-test-method-input-package-boundary.md`
+    - `logs/p4-340-2026-5-9-e7-data-exchange-format-route-integration.md`
+    - `logs/p4-290-2026-5-7-pcb-article-e1-e7-controller-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB制造文件传输数据的主要格式.pdf` 不再只能写成 route-only
+    - repo 现在对 native authoring file versus released manufacturing-handoff package identity 又多了一条单 PDF official boundary
+    - article-side `E7` 不再全部停在 route-only
+  - **What this still does not unlock**
+    - no `Excellon` authority closure beyond drill / route program context
+    - no universal minimum release-package doctrine
+    - no format-superiority or replacement claim such as `ODB++` always replacing Gerber
+    - no vendor support-matrix or current tool-capability claim
+    - no one-format production-ready or downstream package-sufficiency claim
+    - no cost, yield, quote-speed, or quality outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-429 E2 Board-Edge Profiling Release-Review Authority Recovery)
+
+- **这轮把 `PCB布局布线的可制造性设计.pdf` 从“只有 route-only 的 layout-routing manufacturability lane”再推进到“一条 narrow official board-edge profiling / release-review boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 depanelization edge-risk boundary 和 selective-solder access-check boundary，并把 board-edge components、pads、以及 conductive features 写成 profiling and release-review topic，把 edge-near conductive features 写成 rail-handling / profiling-intent / post-separation damage risk review surface，把 process rails / panel-edge accommodations 写成 routing-enablement context，而不必只停在 article routing。这个提升仍然只到 board-edge / release-review posture，不到 board-edge spacing numerics、machine-rail compatibility certainty、profiling allowance / rail-width recipes、route-superiority claims、或 cost/yield/cycle outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-429-2026-5-10-e2-board-edge-profiling-release-review-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (2 files + 2 parent logs):
+    - `facts/methods/depanelization-cleanliness-and-edge-risk-boundary.md`
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `logs/p4-382-2026-5-9-e2-layout-routing-manufacturability-route-integration.md`
+    - `logs/p4-310-2026-5-8-pcb-article-e2-usage-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB布局布线的可制造性设计.pdf` 不再只能写成 route-only
+    - repo 现在对 board-edge profiling / release-review 又多了一条单 PDF official boundary
+    - article-side `E2` 现在只剩 `PCB为什么常用50Ω阻抗？6大原因.pdf` 还停在 route-only
+  - **What this still does not unlock**
+    - no exact board-edge spacing numeric
+    - no machine-rail compatibility certainty
+    - no profiling allowance, rail-width, or process-edge recipe
+    - no route-superiority claim for wave, selective, or manual solder
+    - no cost, yield, or cycle-time outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-428 E2 Board-Edge Copper And Milling-Path Authority Recovery)
+
+- **这轮把 `PCB可制造性设计及案例分析之线路篇.pdf` 从“只有 route-only 的 copper-expression / edge-conflict lane”再推进到“一条 narrow official board-edge copper / milling-path boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 depanelization cleanliness / edge-risk boundary，并把 board-edge copper、nets、以及 milling paths 写成 edge-conflict and release-review topics，把 edge-near conductive features 写成 profiling-intent-before-release review surface，把 outer-layer decorative / exposed copper band 写成 release-expression object，而不必只停在 article routing。这个提升仍然只到 edge-conflict / release-review posture，不到 milling / edge-clearance numerics、profiling-program defaults、`BGA` pad-style preference claims、decorative-copper implementation recipes、或 tool/capability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-428-2026-5-10-e2-board-edge-copper-and-milling-path-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (1 file + 2 parent logs):
+    - `facts/methods/depanelization-cleanliness-and-edge-risk-boundary.md`
+    - `logs/p4-385-2026-5-9-e2-copper-balance-and-routing-expression-route-integration.md`
+    - `logs/p4-310-2026-5-8-pcb-article-e2-usage-route-integration.md`
+  - **相邻模式一致性参考** (1 log):
+    - `logs/p4-421-2026-5-10-e4-board-edge-access-risk-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB可制造性设计及案例分析之线路篇.pdf` 不再只能写成 route-only
+    - repo 现在对 board-edge copper / milling-path conflict review 又多了一条单 PDF official boundary
+    - article-side `E2` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no exact milling or edge-clearance numeric
+    - no profiling-program default or universal redesign prescription
+    - no `BGA` pad-style preference claim
+    - no decorative-copper implementation recipe
+    - no tool behavior, checker sufficiency, or capability claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-427 E2 Layout-Governance Return-Path Authority Recovery)
+
+- **这轮把 `印制电路板设计重点.pdf` 从“只有 route-only 的 design-priority / layout-governance lane”再推进到“一条 narrow official return-path / split-plane boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 ADI/TI-backed return-path continuity boundary，并把 routing priorities、loop-area awareness、split-plane caution、以及 return-path continuity 写成 execution-boundary language，把 reference-plane continuity 写成 routing-planning concerns，而不必只停在 article routing。这个提升仍然只到 return-path routing discipline / split-plane caution posture，不到 spacing numerics、`3W/10W/20H` formula rules、exact current/via tables、exact impedance geometry or tolerance claims、或 tool/capability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-427-2026-5-10-e2-layout-governance-return-path-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (1 file + 3 parent logs):
+    - `facts/methods/ground-and-return-path-boundary-stays-at-reference-plane-and-routing-continuity.md`
+    - `logs/p4-383-2026-5-9-e2-design-priority-and-layout-governance-route-integration.md`
+    - `logs/p4-310-2026-5-8-pcb-article-e2-usage-route-integration.md`
+    - `logs/p4-425-2026-5-10-e2-reference-plane-and-return-path-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `印制电路板设计重点.pdf` 不再只能写成 route-only
+    - repo 现在对 routing priorities、loop-area awareness、reference-plane continuity、split-plane caution、以及 return-path continuity 又多了一条单 PDF official boundary
+    - article-side `E2` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no exact component/pad/board-edge/package spacing numerics
+    - no `3W/10W/20H` or exact angle-formula rule
+    - no exact current-carrying trace or via table claim
+    - no exact impedance geometry or tolerance claim
+    - no tool recipe, vendor default, or capability claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-426 E2 Reference-Plane Selection And Split-Plane Caution Authority Recovery)
+
+- **这轮把 `PCB内层的可制造性设计.pdf` 从“只有 route-only 的 inner-layer reference-plane lane”再推进到“一条 narrow official reference-plane selection / split-plane caution boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 ADI/TI-backed return-path continuity boundary，并把 reference-plane choice 写成 return-path and shielding-aware planning，把 ground-plane preference 写成 qualitative reference-plane posture，把 key-signal routing across plane splits 写成 return-path discontinuity caution class，而不必只停在 article routing。这个提升仍然只到 reference-plane selection / split-plane crossing caution posture，不到 plane-size / offset numerics、exact stackup-order or coupling recipes、dense-BGA geometry claims、current-bottleneck certainty、或 tool/capability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-426-2026-5-10-e2-reference-plane-selection-and-split-plane-caution-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (1 file + 2 parent surfaces):
+    - `facts/methods/ground-and-return-path-boundary-stays-at-reference-plane-and-routing-continuity.md`
+    - `logs/p4-350-2026-5-9-e2-inner-layer-manufacturability-route-integration.md`
+    - `logs/p4-310-2026-5-8-pcb-article-e2-usage-route-integration.md`
+    - `wiki/processes/rigid-board-family-and-layer-boundaries.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB内层的可制造性设计.pdf` 不再只能写成 route-only
+    - repo 现在对 reference-plane selection、ground-plane preference as qualitative posture、以及 split-plane crossing caution 又多了一条单 PDF official boundary
+    - article-side `E2` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no plane-size, offset, or setback numerics
+    - no exact stackup order or coupling recipe
+    - no dense-BGA geometry or current-bottleneck claim
+    - no yield, quality, capability, or tool-sufficiency claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-425 E2 Reference-Plane And Return-Path Authority Recovery)
+
+- **这轮把 `PCB叠层顺序规划配置方案.pdf` 从“只有 route-only 的 stackup-planning lane”再推进到“一条 narrow official reference-plane / return-path boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 ADI/TI-backed return-path continuity boundary，并把 reference-plane continuity 与 return-path quality 写成 routing-planning concerns，把 split-power-plane nearby high-speed caution 写成 return-path continuity degradation 的受控复核面，而不必只停在 article routing。这个提升仍然只到 return-path routing discipline / split-plane caution posture，不到 broad stackup-planning closure、exact layer-count / thickness rules、exact stackup recipe、decoupling / EMI outcomes、impedance geometry or tolerance claims、或 `HDI` / laser-drill / supplier-capability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-425-2026-5-10-e2-reference-plane-and-return-path-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (1 file + 3 parent logs):
+    - `facts/methods/ground-and-return-path-boundary-stays-at-reference-plane-and-routing-continuity.md`
+    - `logs/p4-381-2026-5-9-e2-stackup-planning-and-reference-plane-route-integration.md`
+    - `logs/p4-350-2026-5-9-e2-inner-layer-manufacturability-route-integration.md`
+    - `logs/p4-310-2026-5-8-pcb-article-e2-usage-route-integration.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB叠层顺序规划配置方案.pdf` 不再只能写成 route-only
+    - repo 现在对 reference-plane continuity、return-path routing discipline、以及 split-plane continuity caution 又多了一条单 PDF official boundary
+    - article-side `E2` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no exact layer-count, thickness, or material numerics
+    - no exact stackup order, spacing, coupling, or setback rule
+    - no decoupling, EMI, or performance-outcome claim
+    - no impedance geometry, tolerance, or coupon-coverage claim
+    - no `HDI` / laser-drill capability closure or supplier capability claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-424 E2 Silkscreen-Pad Conflict Authority Recovery)
+
+- **这轮把 `PCB设计必须考虑的8种安全距离，搞错1种都出大问题！.pdf` 从“只有 route-only 的 safety-distance lane”再推进到“一条 narrow official silkscreen-pad-conflict boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 IPC solder-mask / pad-definition boundary 与 footprint-review governance posture，并把 silkscreen 与 solderable pad 的 overlap 写成 released-manufacturing-data conflict，把这个冲突写成 footprint-release / fabrication-output review surface，而不必只停在 article routing。这个提升仍然只到 manufacturing-data conflict / release-review posture，不到 spacing numerics、silkscreen text-size / offset rules、voltage-conditioned clearance truth、CAD-menu authority、或 supplier-capability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-424-2026-5-10-e2-silkscreen-pad-conflict-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (2 files):
+    - `facts/methods/ipc-solder-mask-layer-and-pad-definition-boundary.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB设计必须考虑的8种安全距离，搞错1种都出大问题！.pdf` 不再只能写成 route-only
+    - repo 现在对 silkscreen-to-pad overlap 作为 released-manufacturing-data conflict 又多了一条单 PDF official boundary
+    - article-side `E2` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no exact spacing or silkscreen numerics
+    - no voltage-conditioned clearance or pass/fail truth
+    - no CAD menu-path or auto-cleanup sufficiency claim
+    - no supplier capability, manufacturability, or promo/outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-423 E5 Via-In-Pad Review-Trigger Authority Recovery)
+
+- **这轮把 `元器件虚焊原因之一盘中孔的可制造设计规范.pdf` 从“只有 route-only 的 via-in-pad manufacturability lane”再推进到“一条 narrow official via-in-pad review-trigger boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 package-owner-scoped via-in-pad existence example、HDI dense-interconnect posture、staged BGA process-review、以及 later reflow / hidden-joint inspection boundary，并把 via-in-pad 讨论写成 dense BGA escape-pressure 触发 via strategy review 的窄复核面，而不必只停在 article routing。这个提升仍然只到 owner-scoped existence / HDI posture / process-review posture，不到 fanout numerics、pitch-threshold rules、universal resin-fill / planarization defaults、defect-certainty claims、或 cost/lead-time/capability outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-423-2026-5-10-e5-via-in-pad-review-trigger-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (6 files):
+    - `facts/methods/microchip-csp-bga-solder-land-and-pitch-examples.md`
+    - `facts/methods/hdi-microvia-and-vippo-process-posture.md`
+    - `facts/methods/low-void-bga-dfm-to-process-review.md`
+    - `facts/methods/low-void-bga-reflow-paste-vs-assembly-boundary.md`
+    - `facts/methods/hidden-joint-xray-inspection-boundary.md`
+    - `wiki/processes/low-void-bga-reflow-and-hidden-joint-inspection.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `元器件虚焊原因之一盘中孔的可制造设计规范.pdf` 不再只能写成 route-only
+    - repo 现在对 owner-scoped via-in-pad existence、dense BGA escape-pressure review、以及 downstream BGA reflow / hidden-joint inspection review 又多了一条单 PDF official boundary
+    - article-side `E5` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no fanout or pitch-threshold numerics
+    - no universal resin-fill, planarization, or process-sequence default
+    - no defect-certainty or solderability-outcome claim
+    - no cost, lead-time, capability, yield, or reliability claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-422 E5 DIP Fit-Review Trigger Authority Recovery)
+
+- **这轮把 `那些关于DIP器件不得不说的坑.pdf` 从“只有 route-only 的 DIP/THT pitfalls lane”再推进到“一条 narrow official fit-review-trigger boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 package-to-footprint alignment review、mixed-technology THT route context、以及 selective-solder access-planning posture，并把 DIP / THT package 讨论写成 insertion 前的 fit-review trigger，把 package identity versus footprint-library object 写成复核面，把 lead / finished-hole / pitch compatibility 写成必须回到 owner datasheet 的受控复核动作，而不必只停在 article routing。这个提升仍然只到 fit-review trigger / owner-datasheet recheck posture，不到 hole-size / lead-diameter / pitch numerics、bridge-threshold rules、route-superiority claims、reliability / safety outcomes、或 cost/schedule claims
+  - **新增 Log** (1 file):
+    - `logs/p4-422-2026-5-10-e5-dip-fit-review-trigger-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (5 files):
+    - `facts/methods/package-to-footprint-and-pin-count-alignment-review-boundary.md`
+    - `facts/methods/selective-wave-solder-and-mixed-technology-sequencing.md`
+    - `facts/methods/parameter-scope-pcba-selective-solder-tht-route-context.md`
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `wiki/processes/selective-solder-fixture-and-access-planning.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `那些关于DIP器件不得不说的坑.pdf` 不再只能写成 route-only
+    - repo 现在对 DIP / THT fit-review trigger、package/footprint alignment review、以及 owner-datasheet recheck posture 又多了一条单 PDF official boundary
+    - article-side `E5` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no hole-size, lead-diameter, or pitch numerics
+    - no bridge-threshold or route-superiority claim
+    - no insertion-failure, reliability, safety, cost, or schedule outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-421 E4 Board-Edge Access-Risk Authority Recovery)
+
+- **这轮把 `元器件到PCB板边缘间距不足的严重性.pdf` 从“只有 route-only 的 board-edge spacing-severity lane”再推进到“一条 narrow official board-edge access-risk boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 assembly access-review、depanel / transport / rail / clamp / tooling / machine-path interference review、以及 compact-closure / re-entry / serviceability posture，并把 board-edge-near parts 写成 access-risk review surface，把 tall / fragile / edge-near parts 写成 priority-review objects，把 assembly-path exposure 写成 guarded interference topic，而不必只停在 article routing。这个提升仍然只到 access-risk / re-entry / serviceability posture，不到 edge-clearance numerics、V-cut or tab-route spacing defaults、machine-compatibility guarantees、damage certainty、或 cost/quality/cycle outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-421-2026-5-10-e4-board-edge-access-risk-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (3 files):
+    - `facts/methods/selective-solder-design-access-checks.md`
+    - `wiki/processes/compact-closure-and-rework.md`
+    - `wiki/processes/mixed-technology-solder-route-selection.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `元器件到PCB板边缘间距不足的严重性.pdf` 不再只能写成 route-only
+    - repo 现在对 board-edge access-risk review、assembly-path interference review、以及 re-entry / serviceability review 又多了一条单 PDF official boundary
+    - article-side `E4` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no edge-clearance numerics or generic distance defaults
+    - no `V-CUT` / tab-route / rail / clamp / fixture spacing numerics
+    - no machine-compatibility or process-success guarantee
+    - no failure-certainty, quality, cost, cycle, or yield outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-420 E2 Impedance Planning And Measurement-Boundary Authority Recovery)
+
+- **这轮把 `PCB阻抗误差控制在5%，究竟有多难？.pdf` 从“只有 route-only 的 impedance-difficulty lane”再推进到“一条 narrow official planning-and-measurement boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 controlled-impedance verification posture、measurement-method boundary、spread-glass planning、stackup planning、以及 RF validation boundary，并把 controlled impedance 写成 stackup / material / lamination / outer-layer / verification 的联动 planning topic，把 spread-glass / fiber-weave 写成 qualitative uncertainty class，把 measurement identity 写成必须与 tolerance promise 和 supplier-capability claim 分离的独立 review layer，而不必只停在 article routing。这个提升仍然只到 planning / uncertainty / method-boundary posture，不到 tolerance percentages、exact geometry、quantified solder-mask effects、coupon-coverage doctrine、或 supplier capability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-420-2026-5-10-e2-impedance-planning-and-measurement-boundary-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (5 files):
+    - `facts/methods/controlled-impedance-tdr-verification-posture.md`
+    - `facts/methods/pcb-impedance-and-rf-measurement-method-boundary.md`
+    - `facts/methods/spread-glass-and-controlled-impedance-planning.md`
+    - `wiki/processes/advanced-pcb-fabrication-and-stackup-planning.md`
+    - `wiki/testing/rf-validation-and-test-coverage.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB阻抗误差控制在5%，究竟有多难？.pdf` 不再只能写成 route-only
+    - repo 现在对 controlled-impedance planning、spread-glass uncertainty、以及 measurement-boundary separation 又多了一条单 PDF official boundary
+    - article-side `E2` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no impedance tolerance percentages or generic industry-default windows
+    - no exact geometry, dielectric, copper, coupon, or solder-mask numerics
+    - no universal coupon-coverage or verification-depth claim
+    - no supplier-capability, RF-performance, pass/fail, cost, or quality outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-419 E3 Hole-Slot Output-Completeness Authority Recovery)
+
+- **这轮把 `PCB板漏孔、漏槽在设计端如何避坑.pdf` 从“只有 route-only 的 hole / slot omission lane”再推进到“一条 narrow official release-completeness boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 fabrication-package completeness boundary，并把 intended holes / slots / drill / route features 写成 explicit released-output review surfaces，把 missing holes / slots 写成 manufacturing-data completeness review，把 CAD layer-role mismatch 与 guarded feature-definition failure 写成 design-intent-loss / upstream review families，而不必只停在 article routing。这个提升仍然只到 released-output / completeness-review posture，不到 CAD-specific export or UI recipe、checker sufficiency、universal failure certainty、exact file-package doctrine、或 any hole/slot/drill numerics
+  - **新增 Log** (1 file):
+    - `logs/p4-419-2026-5-10-e3-hole-slot-output-completeness-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (3 files):
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB板漏孔、漏槽在设计端如何避坑.pdf` 不再只能写成 route-only
+    - repo 现在对 hole / slot omission as manufacturing-data completeness review 与 feature-definition review posture 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no CAD-specific export / menu / UI recipe
+    - no checker sufficiency or universal omission certainty
+    - no exact file-package doctrine
+    - no hole / slot / drill numerics
+    - no `/goal complete`
+
+## 2026-05-10 (P4-418 E3 Hole-Spacing Authority Recovery)
+
+- **这轮把 `PCB设计孔间距的DFM可靠性.pdf` 从“只有 route-only 的 hole-spacing / reliability lane”再推进到“一条 narrow official reliability-review boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 hole-spacing boundary，并把 `hole wall to hole wall`、`hole-to-hole clearance`、`hole-to-object clearance` 写成 standards-adjacent / CAD-owner vocabulary，而不必只停在 article routing。这个提升仍然只到 reliability-review / guarded-vocabulary posture，不到 universal hole-spacing thresholds、acceptance criteria、manufacturability guarantees、或 supplier-capability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-418-2026-5-10-e3-hole-spacing-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (3 files):
+    - `facts/methods/hole-spacing-reliability-boundary.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB设计孔间距的DFM可靠性.pdf` 不再只能写成 route-only
+    - repo 现在对 hole-spacing reliability-review vocabulary 与 CAD-owner hole-clearance vocabulary 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no universal hole-spacing threshold or acceptance criterion
+    - no manufacturability guarantee or supplier-capability claim
+    - no exact spacing-value promotion from the article
+    - no `/goal complete`
+
+## 2026-05-10 (P4-417 E3 Solder-Mask Opening Authority Recovery)
+
+- **这轮把 `PCB设计如何防止阻焊漏开窗.pdf` 从“只有 route-only 的 solder-mask opening lane”再推进到“一条 narrow official release-data boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 `solder mask` released manufacturing-data boundary，并把 missing openings 写成 fabrication-package completeness review，把 footprint / padstack definition failure 与 object-type / version mismatch 写成 guarded missing-opening families，而不必只停在 article routing。这个提升仍然只到 release-data / completeness-review posture，不到 opening-expansion numerics、tool-specific export / UI recipe、checker sufficiency、supplier-process proof、或 solderability / efficiency outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-417-2026-5-10-e3-solder-mask-opening-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (4 files):
+    - `facts/methods/ipc-solder-mask-layer-and-pad-definition-boundary.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB设计如何防止阻焊漏开窗.pdf` 不再只能写成 route-only
+    - repo 现在对 `solder mask` 作为 released manufacturing data 与 missing-opening completeness review 又多了一条单 PDF official boundary
+    - article-side `E3` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no opening-expansion numerics or process-window rules
+    - no tool-specific export / menu / UI recipe
+    - no checker sufficiency or supplier-process proof
+    - no universal solderability / efficiency / cost outcome claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-416 E5 Reliability Review-Trigger Authority Recovery)
+
+- **这轮把 `如何保证电子产品可靠性设计？三方面为您解读，值得收藏！.pdf` 从“只有 route-only 的 reliability / early-DFM lane”再推进到“一条 narrow official review-trigger boundary”**: 当前 repo 现在可以把这篇更稳地接到既有的 `DFM/DFA` early fabrication-and-assembly review posture，并把 package-name mismatch、pin-count mismatch、以及 footprint-library selection mismatch 收进 explicit stop-and-review triggers，而不必只停在 article routing。这个提升仍然只到 early-review / mismatch-trigger posture，不到 reliability/quality/pass-rate outcomes、fab/assembly geometry numerics、thermal/performance assurance、pricing/quote logic、或 tool-sufficiency claims
+  - **新增 Log** (1 file):
+    - `logs/p4-416-2026-5-10-e5-reliability-review-trigger-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (4 files):
+    - `facts/methods/dfa-assembly-review-and-package-footprint-mismatch-trigger-boundary.md`
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `facts/methods/package-to-footprint-and-pin-count-alignment-review-boundary.md`
+    - `wiki/processes/pcba-npi-to-mass-production-flow.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `如何保证电子产品可靠性设计？三方面为您解读，值得收藏！.pdf` 不再只能写成 route-only
+    - repo 现在对 early fabrication-and-assembly review posture 与 package/footprint mismatch stop-and-review trigger 又多了一条单 PDF official boundary
+    - article-side `E5` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no reliability, quality, or straight-through-rate outcomes
+    - no fab/assembly geometry numerics
+    - no thermal/performance assurance
+    - no pricing/quote logic or tool-sufficiency claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-415 E5 DFA Assembly-Review Authority Recovery)
+
+- **这轮把 `DFA是什么？这些组装性问题你都知道怎么解决吗？.pdf` 从“只有 route-only 的 DFA / assembly-risk lane”再推进到“一条 narrow official assembly-review boundary”**: 当前 repo 现在可以把这篇更稳地接到 `DFA` 作为 early assembly-review posture，并把 package-name mismatch、pin-count mismatch、以及 footprint-library selection mismatch 收进 explicit release triggers，而不必只停在 article routing。这个提升仍然只到 early-review / mismatch-trigger posture，不到 spacing numerics、pad geometry、fiducial defaults、hole-fit ratios、library-matching sufficiency、或 quality/cost/delivery claims
+  - **新增 Fact / Log** (2 files):
+    - `facts/methods/dfa-assembly-review-and-package-footprint-mismatch-trigger-boundary.md`
+    - `logs/p4-415-2026-5-10-e5-dfa-assembly-review-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (3 files):
+    - `facts/methods/pcba-dfm-dft-dfa-review-gate-positioning.md`
+    - `facts/methods/package-to-footprint-and-pin-count-alignment-review-boundary.md`
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `DFA是什么？这些组装性问题你都知道怎么解决吗？.pdf` 不再只能写成 route-only
+    - repo 现在对 `DFA` early assembly-review posture 与 package/footprint mismatch trigger 有一条更显式的 narrow official boundary
+    - article-side `E5` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no spacing, board-edge, or rail-clearance numerics
+    - no chip-pad geometry, fiducial, or THT-fit rules
+    - no library-matching sufficiency or workflow-completeness claim
+    - no yield, quality, cost, delivery, or `covers everything` claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-414 E2 Layer-Role And Drill-Annotation Authority Recovery)
+
+- **这轮把 `一文带你读懂PCB电路板设计中各种层的定义.pdf` 从“只有 route-only 的 layer-definition / drill-annotation lane”再推进到“一条 narrow official vocabulary boundary”**: 当前 repo 现在可以把这篇更稳地接到 layer-role vocabulary 和 released-output drill-annotation vocabulary，也就是把 top / bottom / multilayer、solder mask / legend / drill、以及 `Drillguide` / `Drilldrawing` / `Drl` / `NPTH` 这些表述收进 design-intent 与 handoff-annotation surfaces，而不必只停在 article routing。这个提升仍然只到 vocabulary / annotation posture，不到 hole-size、stackup、drill-depth、keepout、blind/buried capability、或 supplier capability claims
+  - **新增 Fact / Log** (2 files):
+    - `facts/methods/layer-role-and-drill-output-annotation-vocabulary-boundary.md`
+    - `logs/p4-414-2026-5-10-e2-layer-role-and-drill-annotation-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (5 files):
+    - `facts/methods/ipc-solder-mask-layer-and-pad-definition-boundary.md`
+    - `facts/methods/cam-data-exchange-format-boundary.md`
+    - `facts/methods/pcb-design-tool-official-feature-identity-boundary.md`
+    - `wiki/processes/pcb-design-data-exchange-and-tool-boundaries.md`
+    - `wiki/processes/rigid-board-family-and-layer-boundaries.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `一文带你读懂PCB电路板设计中各种层的定义.pdf` 不再只能写成 route-only
+    - repo 现在对 layer-role 与 drill-output annotation vocabulary 有一条更显式的 narrow official boundary
+    - article-side `E2` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no hole-size, layer-count, board-thickness, or stackup claims
+    - no blind/buried capability or buildability claim
+    - no keepout, DRC, or acceptability threshold claim
+    - no supplier capability, quality, cost, or schedule claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-413 E6 Procurement-Release Identity Authority Recovery)
+
+- **这轮把 `如何避免采购电子元器件入坑.pdf` 从“只有 route-only 的 procurement-risk / identity-completeness lane”再推进到“一条 narrow official procurement-release boundary”**: 当前 repo 现在可以把这篇更稳地接到 procurement-ready BOM release posture，也就是把 manufacturer identity、`Manufacturer Part Number`、以及 supplier-facing sourcing or link identity 保持为分离的 review surfaces，并把 alternates、traceability、以及 authenticity review 保持在 governance layer，而不必只停在 article routing。这个提升仍然只到 procurement-release governance posture，不到 stock/shortage/lead-time/MOQ、seller approval、authenticity outcome、delivery reliability、或 package numerics
+  - **新增 Fact / Log** (2 files):
+    - `facts/methods/procurement-release-identity-completeness-and-controlled-source-boundary.md`
+    - `logs/p4-413-2026-5-10-e6-procurement-release-identity-authority-recovery.md`
+  - **复用 Existing Fact / Source Layer** (6 files):
+    - `facts/methods/bom-identity-field-separation-manufacturer-part-and-supplier-link-boundary.md`
+    - `facts/methods/pcba-bom-sourcing-and-traceability-posture.md`
+    - `facts/methods/avl-and-alternate-control-posture.md`
+    - `facts/standards/high-reliability-traceability-and-counterfeit-control-metadata.md`
+    - `sources/registry/methods/altium-activebom-managing-solutions-manufacturer-supplier-identity.md`
+    - `sources/registry/methods/altium-activebom-manufacturer-link-fields-dialog.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `如何避免采购电子元器件入坑.pdf` 不再只能写成 route-only
+    - repo 现在对 procurement-ready BOM release posture 有一条更显式的 narrow official boundary
+    - article-side `E6` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no stock / shortage / lead-time / MOQ / price claims
+    - no seller-quality, supplier-approval, or delivery-reliability claim
+    - no authenticity-outcome or counterfeit-guarantee claim
+    - no package-width, suffix-taxonomy, or dimensional claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-412 E5 Pin-1 Polarity And Designator Authority Recovery)
+
+- **这轮把 `PCBA丝印位号与极性符号的组装性设计.pdf` 从“只有 route-only 的 polarity / pin-1 / designator lane”再推进到“一条 narrow official documentation boundary”**: 当前 repo 现在可以把这篇更稳地接到 `pin-1`、polarity、以及 reference-designator 作为受控的 component-specification、CAD-library、assembly-document、和 inspection-governance surfaces，而不必只停在 article routing。这个提升仍然只到 documentation / inspection posture，不到 universal `R/C/L/U/Q` grammar、丝印字体和间距规则、`pin-1` / polarity symbol 几何、board-level installation-mark geometry、或 failure/yield/cost claims
+  - **新增 Fact / Log** (2 files):
+    - `facts/methods/pin1-polarity-and-reference-designator-documentation-boundary.md`
+    - `logs/p4-412-2026-5-10-e5-pin1-polarity-and-designator-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (5 files):
+    - `facts/methods/iec-smd-component-marking-boundary.md`
+    - `facts/methods/iec-zero-orientation-cad-library-construction-boundary.md`
+    - `facts/methods/component-orientation-and-polarity-inspection-vocabulary-boundary.md`
+    - `wiki/testing/pcba-visual-inspection-taxonomy.md`
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCBA丝印位号与极性符号的组装性设计.pdf` 不再只能写成 route-only
+    - repo 现在对 `pin-1` / polarity / reference-designator 的 documentation-governance 有一条更显式的 narrow official boundary
+    - article-side `E5` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no universal component-prefix grammar
+    - no silkscreen text-size, spacing, keepout, or offset rules
+    - no universal `pin-1` or polarity symbol geometry
+    - no board-level installation-mark geometry
+    - no failure, yield, cost, delivery, or supplier-capability claim
+
+## 2026-05-10 (P4-411 E5 Stencil Guideline Family Authority Recovery)
+
+- **这轮把 `如何避免踩坑钢网.pdf` 从“只有 route-only 的 stencil / paste lane”再推进到“一条 current-public official stencil boundary”**: 当前 repo 现在可以把这篇更稳地接到 `IPC-7525C` 作为官方 stencil-guideline family 的 public anchor，并把 stencil / solder-paste layer / aperture-list / step-stencil / fiducial / intrusive-soldering discussion 保持在 `upstream print-control` 和 document-scope framing 内，而不必只停在 article routing。这个提升仍然只到 guideline-family / scope posture，不到 aperture reduction、notch default、mark-point geometry、thickness selection、fabrication-method precision、或 process-window claims
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/standards/ipc-7525c-toc.md`
+    - `facts/methods/ipc-stencil-guideline-family-and-upstream-print-control-boundary.md`
+    - `logs/p4-411-2026-5-10-e5-stencil-guideline-family-authority-recovery.md`
+  - **复用 Existing Fact / Wiki** (3 files):
+    - `facts/methods/pcba-stencil-selective-solder-and-fine-pitch-controls.md`
+    - `facts/methods/selective-wave-solder-and-mixed-technology-sequencing.md`
+    - `wiki/processes/mixed-technology-solder-route-selection.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `如何避免踩坑钢网.pdf` 不再只能写成 route-only
+    - repo 现在对 `IPC-7525C` 这类 official stencil-guideline family 与 upstream print-control framing 有一条更显式的 public boundary
+    - article-side `E5` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no aperture reduction or area-ratio defaults
+    - no notch, fiducial, or mark-point geometry rules
+    - no stencil-thickness or intrusive-soldering process-window claims
+    - no fabrication-method ranking, yield, cost, delivery, or supplier-capability claim
+
+## 2026-05-10 (P4-410 E5 BGA Process And Hidden-Joint Authority Recovery)
+
+- **这轮把 `你想知道的BGA焊接问题都在这里.pdf` 从“只有 route-only 的 BGA process / X-ray lane”再推进到“一条 current-public official BGA boundary”**: 当前 repo 现在可以把这篇更稳地接到 staged BGA process review、paste-dependent reflow、以及 hidden-joint X-ray / AXI visibility，而不必只停在 article routing。这个提升仍然只到 process-review / inspection-boundary posture，不到 pitch/escape 数值、via-in-pad 默认做法、void 阈值、覆盖率、或 yield/reliability/cost claims
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/bga-staged-process-review-and-hidden-joint-inspection-boundary.md`
+  - **复用 Existing Fact / Wiki** (4 files):
+    - `facts/methods/low-void-bga-dfm-to-process-review.md`
+    - `facts/methods/low-void-bga-reflow-paste-vs-assembly-boundary.md`
+    - `facts/methods/hidden-joint-xray-inspection-boundary.md`
+    - `wiki/processes/low-void-bga-reflow-and-hidden-joint-inspection.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-410-2026-5-10-e5-bga-process-and-hidden-joint-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `你想知道的BGA焊接问题都在这里.pdf` 不再只能写成 route-only
+    - repo 现在对 staged BGA process review / paste-dependent reflow / hidden-joint X-ray visibility 有一条更显式的 official current-public boundary
+    - article-side `E5` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no pitch / escape numerics
+    - no via-in-pad default or pad-geometry rule
+    - no void threshold or inspection-coverage percentage
+    - no yield / reliability / cost / supplier-capability claim
+
+## 2026-05-10 (P4-409 E5 Test-Method And ICT Fixture Authority Recovery)
+
+- **这轮把 `PCB测试四大方式你都了解吗？内含治具的DFM（可制造性）设计！.pdf` 从“只有 route-only 的 testability / fixture-introduction lane”再推进到“一条 current-public official test-method boundary”**: 当前 repo 现在可以把这篇更稳地接到 `ICT` 作为 fixture-based lane、flying probe 作为 fixture-free lane、以及 `ICT fixture introduction` 作为 DFM/DFT readiness gate，而不必只停在 article routing。这个提升仍然只到 method identity / readiness posture，不到治具成本、测试覆盖率、节拍、批量阈值、定位孔几何，或 universal `四大测试方式` doctrine
+  - **强化 Fact / Wiki** (2 files):
+    - `facts/methods/pcba-ict-fixture-introduction-gate.md`
+    - `wiki/processes/ict-fixture-introduction-and-method-selection.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-409-2026-5-10-e5-test-method-and-ict-fixture-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB测试四大方式你都了解吗？内含治具的DFM（可制造性）设计！.pdf` 不再只能写成 route-only
+    - repo 现在对 `ICT` versus flying probe method identity 与 `ICT fixture introduction` gate 有一条更显式的 official current-public boundary
+    - article-side `E5` 少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no locator-hole count / diameter guidance
+    - no throughput / payback / cost / batch-threshold claims
+    - no universal `AOI + flying probe + ICT + manual inspection` doctrine
+    - no `/goal complete`
+
+## 2026-05-10 (P4-408 E6 Package Identity Grammar Authority Recovery)
+
+- **这轮把 `电子元器件封装(Package).pdf` 从“只有 route-only 的 package-family / governance lane”再推进到“一条 owner-scoped package identity grammar boundary”**: 当前 repo 现在可以把这篇更稳地接到 package-family label、pin count、variant、以及 owner-documented legacy alias 这些 package-identity fields，而不必只停在 article routing。这个提升仍然只到 identity grammar / governance posture，不到 `0201/0402/0603` conversion truth、exact geometry、或 universal cross-vendor naming doctrine
+  - **新增 Source Records** (2 files):
+    - `sources/registry/methods/infineon-package-family-and-package-detail-identity-grammar.md`
+    - `sources/registry/methods/kicad-library-conventions-package-family-and-footprint-naming.md`
+  - **强化 Fact / Wiki** (2 files):
+    - `facts/methods/package-family-and-footprint-governance-vocabulary-boundary.md`
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-408-2026-5-10-e6-package-identity-grammar-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `电子元器件封装(Package).pdf` 不再只能写成 route-only
+    - repo 现在对 package family label / pin count / variant / legacy alias 有一条 official current-public boundary
+    - article-side `E6` 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no `0201/0402/0603` conversion truth
+    - no exact package geometry or footprint rule
+    - no universal cross-vendor naming law
+    - no `/goal complete`
+
+## 2026-05-10 (P4-407 E6 BOM Identity-Field Separation Authority Recovery)
+
+- **这轮把 `BOM查错助力元器件采购.pdf` 从“只有 route-only 的 BOM sourcing / alternate-control lane”再推进到“一条 current-public official BOM identity-field boundary”**: 当前 repo 现在可以把这篇更稳地接到 `Manufacturer Name`、`Manufacturer Part Number`、以及 supplier-facing sourcing identity 作为分离的 BOM-field surfaces，而不必只停在 article routing。这个提升仍然只到 identity hygiene / sourcing-review posture，不到自动匹配、库存、MOQ、交期、价格、supplier approval、或 delivery claims
+  - **新增 Source Records** (3 files):
+    - `sources/registry/methods/altium-activebom-managing-solutions-manufacturer-supplier-identity.md`
+    - `sources/registry/methods/altium-activebom-manufacturer-link-fields-dialog.md`
+    - `sources/registry/methods/altium-365-bom-portal-identity-and-sourcing-columns.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/bom-identity-field-separation-manufacturer-part-and-supplier-link-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-407-2026-5-10-e6-bom-identity-field-separation-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `BOM查错助力元器件采购.pdf` 不再只能写成 route-only
+    - repo 现在对 manufacturer identity / manufacturer part number / supplier-facing link separation 有一条 official current-public boundary
+    - article-side 又少了一条“只有 controller/route coverage”的狭窄残余
+  - **What this still does not unlock**
+    - no automatic BOM matching sufficiency
+    - no stock / price / MOQ / lead-time / delivery claims
+    - no supplier-approval or counterfeit-guarantee claim
+    - no `/goal complete`
+
+## 2026-05-10 (P4-406 PCB资料 Completion Audit Successor After Renesas 1.50 mm Exact-Row Raise)
+
+- **这轮没有把 `/goal` 误报成 complete，而是把 `P4-405` 之后最准确的 `1.50 mm` residual wording 再收进 successor audit**: 当前 repo 仍然只满足 `program-level strong_complete`，不满足 `full_corpus_closed_without_open_residual_authority_gaps`；但 `1.50 mm` 的真实 ceiling 已不再是 `one NXP exact row + one Renesas named-package drawing`，而是 `one NXP exact row + one Renesas named-package drawing + one Renesas exact row`
+  - **新增 Audit Note** (1 file):
+    - `logs/p4-406-2026-5-10-pcb-ziliao-completion-audit-successor-after-renesas-1p50mm-exact-row-raise.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future `/goal` work 不会再按 `P4-401` 的旧 `1.50 mm = one NXP exact row + one Renesas drawing` snapshot 判断当前 ceiling
+    - repo 现在有一份更准确的 successor audit 用于表达 `P4-405` 之后的 package residual state
+    - completion verdict 与 wording ceiling 之间的差异继续保持显式
+  - **What this still does not unlock**
+    - no `/goal complete`
+    - no universal `1.50 mm` closeout
+    - no change to article-side controller-routing reality
+
+## 2026-05-10 (P4-405 Renesas Second-Owner 1.50 mm Exact Row Landing)
+
+- **这轮把 `1.50 mm` residual 从“one NXP exact row + one Renesas named-package drawing”再推进到“再加一条 Renesas current-public exact row”**: 当前 repo 已直接复核到官方 Renesas `BGA,LGA Mount Pad Dimensions` 单页 PDF 中的可见 exact row，现可安全复用 `Lead pitch(mm) 1.50` 对应 `φ(mm) 0.55 to 0.65` 这一条 owner-scoped exact-data surface。这把 `1.50 mm` lane 抬高到 `one NXP exact row + one Renesas named-package drawing + one Renesas exact row`，但仍不是 universal cross-vendor closeout
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/renesas-bga-lga-mount-pad-dimensions-common-pitches.md`
+  - **新增 Exact-Data Fact Card** (1 file):
+    - `facts/methods/renesas-1p50mm-bga-lga-mount-pad-dimensions-row.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-405-2026-5-10-renesas-second-owner-1p50mm-exact-row-landing.md`
+  - **更新 Route / Tracker** (5 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `1.50 mm` 不再只能写成 `one NXP exact row + one Renesas named-package drawing`
+    - future `/goal` work 可以更准确地把这条 lane 写成 `one NXP exact row + one Renesas named-package drawing + one Renesas exact row`
+    - package route map 不再把 Renesas `1.50 mm` 只停留在 named-package drawing 身份层
+  - **What this still does not unlock**
+    - no universal `1.50 mm pitch -> land pattern` rule
+    - no cross-vendor `1.50 mm` closeout
+    - no full-corpus completion claim
+
+## 2026-05-10 (P4-404 D5 Surface-Ground Continuity And Exposed-Zone Isolation Boundary)
+
+- **这轮继续把 `194页 handbook D5` 从“mostly claim-family”往 source-backed 再推进一小步，而且故意不和刚完成的 entry-path lane 重复**: 当前 repo 现在可以把 handbook 中 `表层要有良好GND回路`、`不要大范围切断表层铜皮`、`板边敏感信号下方需要参考平面`、以及 `暴露区与内部敏感走线分区` 这类说法安全接到更窄的 owner-backed layout boundary：`connector-near / board-edge surface-ground continuity` 和 `exposed-zone isolation`。这仍不是任何 exact edge distance、copper setback、via-count、shield distance、或 EMC/ESD pass claim
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/infineon-ap24026-emc-and-system-esd-design-guidelines-board-layout.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/connector-near-surface-ground-continuity-and-exposed-zone-isolation-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-404-2026-5-10-d5-surface-ground-continuity-and-exposed-zone-isolation-boundary.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `194页 handbook` 的 `D5` 不再只有 entry-path interception 一条 official route
+    - repo 现在对 connector-near / board-edge continuity 与 exposed-zone separation 也有 current-public owner support
+    - future `/goal` work 可以更准确地把这本 handbook 写成 `two strengthened D5 routes landed, but still not closed`
+  - **What this still does not unlock**
+    - no exact edge-distance or copper-setback rules
+    - no exact stitch-via or shield-distance recipe
+    - no EMC / ESD pass or certification claim
+    - no full `D5` closeout
+    - no `/goal complete`
+
+## 2026-05-10 (P4-403 D5 ESD Entry-Path Boundary Owner-Source Strengthening)
+
+- **这轮把刚落地的 `194页 handbook D5` 小 lane 从“已有一条 owner route”补强成“`ST + TI` 双原厂布局指南为主”的更稳表述**: 当前 repo 现在不仅能把 handbook 中 `接口处放 ESD / 静电释放先经过保护器件` 这类话术安全接到 `connector-adjacent protection placement`，还可以更明确地接到 `ESD source -> protection -> protected IC`、`avoid stub / branch-first routing`、以及 `exposed protected traces` 与 `clean unprotected traces` 分离这几个 owner-backed layout surfaces。仍然不能把这条 lane 写成 exact path length、via-count rule、封装示例默认值、IEC pass 保证或 full `D5` closeout
+  - **新增 Source Records** (2 files):
+    - `sources/registry/methods/st-an5686-pcb-layout-tips-to-maximize-esd-protection-efficiency.md`
+    - `sources/registry/methods/ti-slva680-esd-protection-layout-guide.md`
+  - **新增 Strengthening Note** (1 file):
+    - `logs/p4-403-2026-5-10-d5-esd-entry-path-boundary-owner-source-strengthening.md`
+  - **更新 Fact / Tracker** (5 files):
+    - `facts/methods/connector-adjacent-esd-protection-and-entry-path-boundary.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `D5` 这条小 route 不再主要依赖单一 entry-point placement wording
+    - repo 现在对 `source -> protection -> IC` 路径顺序和 `clean trace separation` 也有 current-public owner support
+    - future `/goal` work 可以更准确地把 `194页` handbook 写成 `claim-family mostly, but with one strengthened official D5 route`
+  - **What this still does not unlock**
+    - no exact path-length or via-count rules
+    - no package-example defaulting
+    - no IEC pass / surge / EMC guarantee
+    - no full `D5` closeout
+    - no `/goal complete`
+
+## 2026-05-10 (P4-402 D5 Connector-Adjacent ESD Entry-Path Boundary Route)
+
+- **这轮把 `【PCB必备】194页-PCB设计规范经验之书.pdf` 的 `D5` lane 从纯 handbook claim-family 再推进一小步**: 当前 repo 已新增一条 current-public 半导体原厂 route，可把 handbook 中 `ESD 器件摆在接口处或静电释放处、走线先经过静电器件` 这类来源端保护说法安全接到更窄的 owner-backed boundary：`protection close to connector or other entry point`、`short exposure path before protected IC`、以及 `local return/reference continuity`。这仍不是任何 exact distance、ground-via count、resistor/capacitor value、IEC pass level、或 RK3588-specific implementation recipe
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/nexperia-pesd-layout-close-to-connector-boundary.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/connector-adjacent-esd-protection-and-entry-path-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-402-2026-5-10-d5-connector-adjacent-esd-entry-path-boundary-route.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `194页 handbook` 不再需要在这个窄 `D5` slice 上完全停留在 claim-family only
+    - repo 现在有一条 current-public owner-backed route 来承接 `connector-adjacent ESD protection` 和 `short entry-path interception` 的安全表述
+    - future `/goal` work 可以把 handbook 的 `D5` continuation 写成 `still mostly claim-family level, but with one official-source-backed ESD-entry route landed`
+  - **What this still does not unlock**
+    - no exact board-edge or connector clearance numerics
+    - no exact via-count, resistor, or capacitor rules
+    - no IEC pass / surge / EMC compliance claim
+    - no full `D5` closeout
+    - no `/goal complete`
+
+## 2026-05-10 (P4-401 PCB资料 Completion Audit Successor After Renesas 0.75 mm Exact-Data Raise)
+
+- **这轮没有把 `/goal` 误报成 complete，而是把 `P4-400` 之后最准确的 residual-package wording 再收进 successor audit**: 当前 repo 仍然只满足 `program-level strong_complete`，不满足 `full_corpus_closed_without_open_residual_authority_gaps`；但 `0.75 mm` 的真实 ceiling 已不再是 `three Microchip rows + one Renesas second-owner document`，而是 `three Microchip exact rows + one Renesas second-owner exact-data page`
+  - **新增 Audit Note** (1 file):
+    - `logs/p4-401-2026-5-10-pcb-ziliao-completion-audit-successor-after-renesas-0p75mm-exact-data-raise.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future `/goal` work 不会再按 `P4-399` 的旧 `0.75 mm = three Microchip rows + one Renesas document` snapshot 判断当前 ceiling
+    - repo 现在有一份更准确的 successor audit 用于表达 `P4-400` 之后的 package residual state
+    - completion verdict 与 wording ceiling 之间的差异继续保持显式
+  - **What this still does not unlock**
+    - no `/goal complete`
+    - no universal `0.75 mm` closeout
+    - no change to article-side controller-routing reality
+
+## 2026-05-10 (P4-400 Renesas Second-Owner 0.75 mm Exact-Data Page Landing)
+
+- **这轮把 `Renesas BCG48D1` 从“second-owner named-package land-pattern document”再抬高到“second-owner exact-data page”**: 当前 repo 已直接复核到官方 Renesas `48-FBGA, Package Land Pattern 10.0 x 10.0 x 1.27 mm Body, 0.75mm Pitch BCG48D1` 页面的可见几何与注记，现可安全复用 `RECOMMENDED LAND PATTERN DIMENSION` 页面里的 `0.300`、`0.75`、`3.750`、`5.25`、`10.000`，以及 `ALL DIMENSIONS ARE IN MM. ANGLES IN DEGREES.`、`LAND PATTERN RECOMMENDATION PER IPC-7351B GENERIC`、`SMD PATTERN ASSUMED` 这些 page-scoped context；这把 `0.75 mm` lane 抬高到 `three Microchip exact rows + one Renesas second-owner exact-data page`，但仍不是 universal cross-vendor closeout
+  - **更新 Source Record** (1 file):
+    - `sources/registry/methods/renesas-bcg48d1-48-fbga-package-land-pattern-0p75mm.md`
+  - **更新 Exact-Data Fact Card** (1 file):
+    - `facts/methods/renesas-0p75mm-fbga-package-land-pattern-bcg48d1.md`
+  - **更新 Route / Tracker** (5 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `0.75 mm` 不再只能写成 `three Microchip exact rows + one Renesas second-owner document`
+    - future `/goal` work 可以更准确地把这条 lane 写成 `three Microchip exact rows + one Renesas second-owner exact-data page`
+    - package route map 不再需要对 `BCG48D1` 保留 “reopen the PDF before reusing any pad numerics” 这层旧警告
+  - **What this still does not unlock**
+    - no universal `0.75 mm pitch -> land pattern` rule
+    - no cross-vendor `0.75 mm` closeout
+    - no full-corpus completion claim
+
+## 2026-05-10 (P4-399 PCB资料 Completion Audit Successor After Second-Owner 1.50 mm Raise)
+
+- **这轮没有把 `/goal` 误报成 complete，而是把 `P4-398` 之后最准确的 residual-package wording 再收进 successor audit**: 当前 repo 仍然只满足 `program-level strong_complete`，不满足 `full_corpus_closed_without_open_residual_authority_gaps`；但 `1.50 mm` 的真实 ceiling 已不再是 `one NXP current-public exact row`，而是 `one NXP exact row + one Renesas second-owner named-package drawing`
+  - **新增 Audit Note** (1 file):
+    - `logs/p4-399-2026-5-10-pcb-ziliao-completion-audit-successor-after-second-owner-1p50mm-raise.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future `/goal` work 不会再按 `P4-394` 的旧 `1.50 mm = one NXP row` snapshot 判断当前 ceiling
+    - repo 现在有一份更准确的 successor audit 用于表达 `P4-398` 之后的 package residual state
+    - completion verdict 与 wording ceiling 之间的差异继续保持显式
+  - **What this still does not unlock**
+    - no `/goal complete`
+    - no universal `1.50 mm` closeout
+    - no change to article-side controller-routing reality
+
+## 2026-05-10 (P4-398 Renesas Second-Owner 1.50 mm BGA Package Drawing Boundary)
+
+- **这轮把 `1.50 mm` residual 从“一条 NXP owner-scoped exact row”再抬高到“再加一条 Renesas second-owner named-package drawing”**: 当前 repo 已新增 `Renesas PRBG0225CB-A` current-public owner drawing，可直接承接 `225-pin Plastic BGA`、`e = 1.50`、`b = 0.75` 这些 named-package identity wording；这说明 `1.50 mm` 不再只停在一条 NXP current-public row，但这仍不是 Renesas recommended land-pattern geometry，也不是 universal cross-vendor closeout
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/renesas-prbg0225cb-a-1p50mm-bga-package-drawing.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/renesas-1p50mm-bga-package-drawing-prbg0225cb-a.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-398-2026-5-10-renesas-second-owner-1p50mm-bga-package-drawing-boundary.md`
+  - **更新 Route / Tracker** (4 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+  - **What this pass now fixes**
+    - `1.50 mm` 不再只能写成 `one NXP current-public exact row`
+    - future `/goal` work 可以更准确地把这条 residual 写成 `one NXP exact row + one Renesas named-package drawing`
+    - package route map 现在对 `1.50 mm` 也有第二个 owner family，而不是单 owner surface
+  - **What this still does not unlock**
+    - no Renesas recommended land-pattern geometry
+    - no universal `1.50 mm pitch -> land pattern` rule
+    - no cross-vendor `1.50 mm` closeout
+
+## 2026-05-10 (P4-397 E3 Stamp-Hole Panelization Boundary Route Integration)
+
+- **这轮把 `PCB邮票孔桥连设计要点，干货满满！.pdf` 从纯 `E3` hold 提升成一条更窄的 manufacturer-owner route**: 当前 repo 已能把这篇安全接到 `stamp-hole / mouse-bite` 作为 panel-connection branch vocabulary、`V-cut` 作为独立 panelization branch identity、special breakaway / slot branch 需要 explicit design-input handling、以及 `castellated / half-hole` 作为 special-review context；但这仍不是任何 bridge-width、hole-size、hole-count、spacing、`V-cut` priority、post-finish drilling、acceptability、或 supplier-capability claim
+  - **新增 Source Records** (2 files):
+    - `sources/registry/methods/jlcpcb-castellated-holes-capability-guide.md`
+    - `sources/registry/methods/jlcpcb-panelization-v-cut-and-mouse-bites-guide.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/stamp-hole-panelization-and-castellated-edge-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-397-2026-5-10-e3-stamp-hole-panelization-boundary-route-integration.md`
+  - **更新 Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+  - **What this pass now fixes**
+    - `PCB邮票孔桥连设计要点，干货满满！.pdf` 不再只有 article-side negative-result posture
+    - repo now has one narrow reusable boundary for `stamp-hole / mouse-bite / V-cut / castellated-edge` wording
+    - future article wording can reuse branch-selection and special-edge-review vocabulary more safely
+  - **What this still does not unlock**
+    - no bridge-width, hole-size, hole-count, or spacing table
+    - no `V-cut` priority doctrine or process-order default
+    - no customer-acceptance or supplier-capability claim
+
+## 2026-05-10 (P4-396 E3 Hole-Spacing Reliability Boundary Route Integration)
+
+- **这轮把 `PCB设计孔间距的DFM可靠性.pdf` 从纯 `E3` hold 提升成一条更窄的 standards-adjacent and CAD-owner route**: 当前 repo 已能把它安全接到 `hole wall to hole wall` / `hole-to-hole clearance` / `hole-to-object clearance` 这些官方 rule identity，以及 annular-ring、breakout-like damage、cracks and wicking、drill-wander、`CAF risk assessment` 这些 guarded reliability-review vocabulary；但这仍不是 universal hole-spacing threshold、acceptability criterion、或 supplier-capability claim
+  - **新增 Source Records** (2 files):
+    - `sources/registry/methods/altium-hole-to-hole-clearance-rule.md`
+    - `sources/registry/methods/altium-hole-to-object-clearance-rule.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/hole-spacing-reliability-boundary.md`
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-396-2026-5-10-e3-hole-spacing-reliability-boundary-route-integration.md`
+  - **更新 Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+  - **What this pass now fixes**
+    - `E3-H` 不再只有 article-side negative-result posture
+    - repo now has one narrow reusable boundary for hole-spacing reliability wording
+    - future article wording can reuse annular-ring / breakout-like / drill-wander / CAF caution more safely
+  - **What this still does not unlock**
+    - no universal numeric spacing table
+    - no acceptance criteria
+    - no supplier capability or manufacturability guarantee
+
+## 2026-05-10 (P4-395 E1 DFM Cost-Driver Route Integration)
+
+- **这轮把 `E1` 里最后一个纯成本/说服型 hold PDF 提升成了一条受控单 PDF route**: `大家最关心的制造成本来了！怎么使用DFM降低成本？.pdf` 现在不再只停在 cluster-level hold。 当前 repo 已能把它安全接到 `quote-preparation / engineering-complexity review`：包括 fabrication complexity、assembly burden、test burden、BOM correctness、以及 material / finish / stackup / process-family complexity 这些 cost-driver category；同时可把 `DFM` 写成 quote handoff 之前用于暴露成本相关歧义的 review gate。 但这仍然不是任何 price table、cost formula、yield / delivery / profit outcome、或 branded-tool savings proof
+  - **新增 Lane Log** (1 file):
+    - `logs/p4-395-2026-5-10-e1-dfm-cost-driver-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `E1` 不再只有 `5` 条 single-PDF routes，而是 `6` 条
+    - 后续 `/goal` work 可以把这篇 cost/DFM PDF 作为 `quote-preparation and complexity review` 路线复用，而不是继续把它整体当成 persuasion-only hold
+    - article side 又少了一个纯 controller-level hold 面
+  - **What this still does not unlock**
+    - no fact promotion from the article itself
+    - no price formulas, cost deltas, utilization gains, or live quote claims
+    - no yield, delivery, schedule, or profit outcome claims
+    - no branded-tool calculation or savings sufficiency claims
+
+## 2026-05-10 (P4-394 PCB资料 Completion Audit Successor After Residual Lane Raises)
+
+- **这轮没有把 `/goal` 误报成 complete，而是把 `P4-389` 到 `P4-393` 之后的真实完成度重新审计并写进 repo**: `P4-388` 的高层结论仍然正确, 即当前只达到 `program-level strong_complete`，还没有达到 `full_corpus_closed_without_open_residual_authority_gaps`；但它的 residual-package snapshot 已经过时。 这轮把最新同日进展正式收口成一个 successor audit：`1.50 mm` 现在已有 `NXP SOT648-1 / BGA225` current-public named-package exact row，`0.75 mm` 现在已有 `three Microchip rows + one Renesas second-owner document`，`connector-origin` 现在已有 `KiCad + Molex + Samtec + Amphenol`，`installation-mark / component-marking` 现在已有 IEC zero-orientation 与 IEC `pin-1 / polarity identification` route；但这仍然不是 full-corpus closeout，因为 article side 仍主要停在 controller/cluster/usage-route coverage，package residual 也仍未关闭到 universal-rule 层
+  - **新增 Audit Note** (1 file):
+    - `logs/p4-394-2026-5-10-pcb-ziliao-completion-audit-successor-after-residual-lane-raises.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future `/goal` work 不会再把 `P4-388` 的旧 residual-package wording 当成当前状态
+    - 后续 continuation 可以准确区分“completion verdict 没变”与“residual lane ceiling 已抬高”
+    - repo 现在有一份明确 successor audit，说明为什么当前还不能说“整个 PCB资料 fully learned”
+  - **What this still does not unlock**
+    - no `/goal complete`
+    - no article-side per-file fact closeout
+    - no universal `1.50 mm` or `0.75 mm` pitch doctrine
+    - no universal connector-origin or board-level installation-mark geometry doctrine
+
+## 2026-05-10 (P4-393 Amphenol Connector-Owner Layout Route)
+
+- **这轮把 `connector-origin` lane 从 `Molex + Samtec` 再推进到 `Molex + Samtec + Amphenol`**: 当前公开可访问的 `Amphenol 10122424` owner drawing 现在已给 repo 一条新的 named-series connector route，直接带 `RECOMMENDED PCB LAYOUT`、`CONNECTOR MOUNTING SIDE`、`MATING PCB SIDE` 与 `PIN 1` 语境；因此 connector lane 现在已经不仅有 pin-numbering / mating-card context，也多了一条 current-public owner side-label context。 但这仍然不是 universal connector-origin doctrine，也不是 board-level installation-mark geometry closeout
+  - **新增 Artifact** (2 files):
+    - `sources/registry/methods/amphenol-10122424-sfp-board-connector-recommended-pcb-layout.md`
+    - `logs/p4-393-2026-5-10-amphenol-connector-owner-layout-route.md`
+  - **更新 Route / Tracker** (6 files):
+    - `facts/methods/connector-origin-and-installation-mark-boundary.md`
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `connector-origin` 不再只能写成 `KiCad + Molex + Samtec`
+    - future `/goal` work 可以更准确地把 connector owner layer 写成 `multiple current-public owner drawings with named-side context`
+    - package route map 现在有了第三个 current-public connector-owner family，而不是只剩两家 owner 重复
+  - **What this still does not unlock**
+    - no universal connector-origin doctrine
+    - no standards-grade connector-origin rule
+    - no board-level installation-mark geometry closeout
+    - no closeout for residual `1.50 mm` or `0.75 mm`
+
+## 2026-05-10 (P4-392 IEC SMD Component-Marking Boundary)
+
+- **这轮把 `installation-mark / component-marking` lane 再推进到一条更窄的 `pin-1 / polarity identification` 公共路线**: 官方 `IEC 61760-1:2020` webstore metadata 现在给 repo 一条 `surface-mount component specification` 的 standards-owner 主锚点，而公开 preview surface 还直接暴露了 `4.2 Component marking` 及其 `multipin` / `polarity` 子面；因此当前 repo 已经可以把 `pin-1` 与极性识别写成受控 component-specification / documentation 纪律，而不必只靠 `KiCad`、owner drawing 或 local handbook context。 但这仍然不是 board-level installation-mark geometry doctrine，也不是 universal connector-origin 或 package-family-specific marking closeout
+  - **新增 Artifact** (4 files):
+    - `sources/registry/standards/iec-61760-1-smd-specification-page.md`
+    - `sources/registry/standards/iec-61760-1-component-marking-preview-page.md`
+    - `facts/methods/iec-smd-component-marking-boundary.md`
+    - `logs/p4-392-2026-5-10-iec-smd-component-marking-boundary.md`
+  - **更新 Route / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `pin-1 / polarity identification` 不再只能写成 `KiCad + owner drawing + local handbook / APT governance`
+    - future `/goal` work 可以把 non-BGA residual 更准确地拆成 `component marking public route landed` versus `board-level installation-mark geometry still open`
+    - package route map 现在有了单独的 IEC `component marking` 入口，而不是把所有安装标识语义都塞进一个混合 boundary
+  - **What this still does not unlock**
+    - no universal connector-origin doctrine
+    - no board-level installation-mark geometry rule
+    - no package-family-specific marking exceptions or exact marker-shape conventions
+    - no closeout for residual `1.50 mm` or `0.75 mm`
+
+## 2026-05-10 (P4-391 IEC Zero-Orientation CAD-Library Boundary)
+
+- **这轮把 `installation-mark` 相关 residual 从“只有 KiCad + connector-owner drawing + local handbook context”再推进到一条 standards-owner `zero orientation` 边界**: 官方 `IEC 61188-7:2017` 现已给 repo 一条可复用的 standards-owner layer，明确 `electronic component zero orientation` 属于 `CAD library construction` 范畴，因此当前 package lane 已经不必只靠 `KiCad` convention 或 local handbook 来解释 orientation-governance；但这仍然不是 universal `connector-origin`、universal `pin-1 / polarity mark` doctrine，也不是 board-level installation-mark geometry rule
+  - **新增 Artifact** (3 files):
+    - `sources/registry/standards/iec-61188-7-zero-orientation-cad-library-page.md`
+    - `facts/methods/iec-zero-orientation-cad-library-construction-boundary.md`
+    - `logs/p4-391-2026-5-10-iec-zero-orientation-cad-library-boundary.md`
+  - **更新 Route / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `installation-mark` lane 不再只能写成 `KiCad + owner drawing + local handbook context`
+    - future `/goal` work 可以更准确地把这条 residual 拆成 `standards-owner zero-orientation landed` versus `board-level installation-mark geometry still open`
+    - package route map 现在多了一条 standards-owner orientation-description 入口，而不是只剩 CAD-library / owner-drawing layering
+  - **What this still does not unlock**
+    - no universal `connector-origin` doctrine
+    - no universal `pin-1` or polarity-mark rule
+    - no board-level installation-mark geometry closeout
+    - no closeout for residual `1.50 mm` or `0.75 mm`
+
+## 2026-05-10 (P4-390 NXP SOT648-1 1.50 mm Reflow Footprint Landing)
+
+- **这轮把 `1.50 mm` residual 从“只有 standards existence + legacy near-hit”推进到“已有 current-public named-package exact row”**: 直接验到了官方 NXP `SOT648-1` package-information PDF 在同一份文档中同时给出了 package-outline `e = 1.5` 和 `BGA225` 的 reflow footprint row `P 1.50 / SL 0.750 / SP 0.650 / SR 0.900 / Hx 27.500 / Hy 27.500`，因此当前 `1.50 mm` lane 已不再停在 `P4-318 + P4-329 + P4-323` 的 ceiling；但这仍然只是 `BGA225 / SOT648-1` 的 owner-scoped exact row，不是 universal cross-vendor `1.50 mm` pitch law
+  - **新增 Artifact** (3 files):
+    - `sources/registry/methods/nxp-sot648-1-bga225-1p50mm-reflow-footprint.md`
+    - `facts/methods/nxp-1p50mm-bga225-reflow-footprint.md`
+    - `logs/p4-390-2026-5-10-nxp-sot648-1-1p50mm-reflow-footprint-landing.md`
+  - **更新 Route / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `1.50 mm` 不再只能被描述成 `standards existence + legacy near-hit + false-positive filter`
+    - future `/goal` work 可以把这条 lane 更准确地写成 `one current-public named-package exact row landed`
+    - package route map 现在对 `1.50 mm` 也有了直接 owner-scoped exact-data stop
+  - **What this still does not unlock**
+    - no universal `1.50 mm pitch -> land pattern` rule
+    - no cross-vendor `1.50 mm` closeout
+    - no closeout for connector-origin or stronger installation-mark doctrine
+
+## 2026-05-10 (P4-389 Renesas Second-Owner 0.75 mm Package Land-Pattern Boundary)
+
+- **这轮把 `0.75 mm` residual 从“只有三条 Microchip owner-scoped rows”推进到“已经有第二 owner 的 current-public named-package land-pattern document”**: 直接验到了官方 Renesas 文档 `48-FBGA, Package Land Pattern 10.0 x 10.0 x 1.27 mm Body, 0.75mm Pitch BCG48D1`，因此当前 `0.75 mm` lane 已不再只停在 `three Microchip rows only`；但因为这次只直接抽到了文档类目、package identity 和 `0.75mm Pitch` 头部文本，没有继续硬写未抽取的 pad numerics，所以这轮仍保持在 `source-backed partial`，不是 universal cross-vendor closeout
+  - **新增 Artifact** (3 files):
+    - `sources/registry/methods/renesas-bcg48d1-48-fbga-package-land-pattern-0p75mm.md`
+    - `facts/methods/renesas-0p75mm-fbga-package-land-pattern-bcg48d1.md`
+    - `logs/p4-389-2026-5-10-renesas-second-owner-0p75mm-package-land-pattern-boundary.md`
+  - **更新 Route / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `0.75 mm` 不再只能被描述成 `three Microchip owner-scoped rows`
+    - future `/goal` work 可以更准确地把这条 residual 写成 `three Microchip rows + one direct-verified Renesas second-owner named-package document`
+    - package route map 现在保留了一个 second-owner public route，而不是只保留单 vendor family repetition
+  - **What this still does not unlock**
+    - no Renesas pad-diameter or land-pattern numeric promotion
+    - no universal `0.75 mm pitch -> pad diameter` rule
+    - no closeout for residual `1.50 mm`, connector-origin, or stronger installation-mark authority
+
+## 2026-05-10 (P4-388 PCB资料 Completion Audit)
+
+- **这轮没有继续假装“只差一点就能学完”，而是把当前 `/goal` 的完成判据正式写成 evidence-based audit**: `PCB资料` 目前已经满足 `program-level strong_complete`，但还不满足 `full_corpus_closed_without_open_residual_authority_gaps`；差异来自两个层面：article side 仍主要是 cluster/controller coverage，不是 all-PDF fact closeout；package residual authority gaps `1.50 mm`、`0.75 mm`、`connector-origin`、`installation-mark` 也都仍然 open
+  - **新增 Log** (1 file):
+    - `logs/p4-388-2026-5-10-pcb-ziliao-completion-audit.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - 后续 AI 不需要再混淆 `program-level strong_complete` 与 `whole corpus fully learned`
+    - `/goal` 当前为什么不能被标成 complete 现在有了正式 checklist 和 file evidence
+    - 继续推进时可以更明确地选择：关 residual authority gaps，或下调验收标准
+  - **What this still does not unlock**
+    - no new source, fact, or wiki landing
+    - no closure for the four open package residuals
+    - no basis to call the whole `PCB资料` corpus fully learned
+
+## 2026-05-10 (P4-387 Package Residual Live Recheck No-Closeout)
+
+- **这轮继续沿真正还开着的 `package residual authority recovery` 做 fresh public recheck，但结果仍然是 no-closeout**: 重新核了 `1.50 mm` public exact-geometry、`0.75 mm` stronger-owner recovery、`connector-origin defaulting`、以及 `installation-mark conventions` 四条 lane；结论是当前 repo 仍然只有 `P4-318 + P4-329 + P4-323` 这一层 `1.50 mm` 支撑，`0.75 mm` 仍然只有 `3` 条 `Microchip` owner-scoped rows，`connector-origin / installation-mark` 仍然只有 `KiCad + Molex + Samtec` 的 layered boundary support，没有出现新的 current-public owner / standards-adjacent source 足以把这些 residual lane 安全收口
+  - **新增 Log** (1 file):
+    - `logs/p4-387-2026-5-10-package-residual-live-recheck-no-closeout.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - 后续 AI 不需要把这些 residual package lanes 当成“显然只差再搜一次”的开放空白
+    - `1.50 mm` 当前 ceiling 继续明确为 `standards-existence + legacy PBGA near-hit + false-positive filter`
+    - `0.75 mm` 当前 ceiling 继续明确为 `three Microchip owner-scoped rows`, not second-owner or standards closeout
+    - `connector-origin / installation-mark` 当前 ceiling 继续明确为 `CAD-owner convention + named-series owner drawings`, not universal doctrine
+  - **What this still does not unlock**
+    - no clean public named-package `1.50 mm` exact-geometry row
+    - no second-owner `0.75 mm` named-package land-pattern row
+    - no new fact or source landing for package residuals
+    - no cross-vendor connector-origin or installation-mark doctrine
+    - no goal-level proof that `PCB资料` is fully learned without residual authority gaps
+
+## 2026-05-10 (P4-386 PCB资料 Residual Route Audit And No-Write Closeout)
+
+- **这轮没有继续硬推进新 route，而是用 subagent 把 `PCB资料` 里仍最容易被误判成“也许还能补一条单篇 route”的 residual 面做了一次 completion-style re-audit**: 重新核了 `E3` 的 `PCB设计孔间距的DFM可靠性.pdf` 与 `PCB邮票孔桥连设计要点，干货满满！.pdf`、`E7` 的 `3` 篇 branded-tool PDF、以及 `【PCB必备】194页-PCB设计规范经验之书.pdf`；结论是当前 repo 并没有漏掉任何已经可安全落地却未同步的 single-PDF route，这些面仍应保持 `claim_family_level_only_with_explicit_hold_reason` 或 handbook claim-family level only
+  - **新增 Log** (1 file):
+    - `logs/p4-386-2026-5-10-pcb-ziliao-residual-route-audit-and-no-write-closeout.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - 后续 AI 不需要再把这批 residual article / handbook 面误判成“已经有净增量 route 只是还没同步”
+    - `PCB资料` 当前还不能被说成“已经完全学完”；现状是 broad inventory、many single-PDF routes、and explicit remaining blockers
+    - 继续推进时，默认应回到 true authority recovery，而不是重复重开已证伪的 residual route 候选
+  - **What this still does not unlock**
+    - no new single-PDF route
+    - no new `facts/`, `wiki/`, or `sources/registry/` artifact
+    - no status change for the audited PDFs in `p4-325`
+
+## 2026-05-09 (P4-385 PCB资料 E2 Copper-Balance And Routing-Expression Route Integration)
+
+- **这轮把 `PCB可制造性设计及案例分析之线路篇.pdf` 推进到 single-PDF route 层，但仍严格停在 copper-balance / routing-expression / edge-conflict framing 上**: 当前已经可以把这篇保守接到 fill-line versus solid-copper expression boundary、dense/sparse routing 与 copper-balance 作为 manufacturability risk families、thin residual copper 与 isolated copper 作为 fabrication-risk families、special pad effective area 作为 review surface、board-edge copper 与 milling-path conflict review、panel-level copper-balance difference 作为 review trigger、以及 outer-layer bare-copper band 作为 release-expression boundary；但仍不解锁任何 exact fill-line width、residual-copper width、bridge/hole/annular/tolerance numerics、BGA pad-style preference claims、milling/opening recipes、tool behavior claims、或 vendor capability/cost/yield outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-385-2026-5-9-e2-copper-balance-and-routing-expression-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB可制造性设计及案例分析之线路篇.pdf` 不再只停在 `P4-310` 的 cluster-level hold map，而是有一条单 PDF route 接到 copper expression boundary、copper-balance risk、board-edge milling conflict、special pad effective-area review、以及 outer-layer bare-copper expression boundary
+  - **What this still does not unlock**
+    - no exact fill-line, bridge, hole, annular, or tolerance numeric rule
+    - no BGA pad-style preference or mask-defined closure claim
+    - no exact milling/opening/thermal-via recipe
+    - no tool-default, capability, cost, yield, or cycle outcome claim
+
+## 2026-05-09 (P4-384 PCB资料 E2 Safety-Distance Taxonomy And Spacing-Boundary Route Integration)
+
+- **这轮把 `PCB设计必须考虑的8种安全距离，搞错1种都出大问题！.pdf` 推进到 single-PDF route 层，但仍严格停在 spacing-taxonomy / review-surface / boundary framing 上**: 当前已经可以把这篇保守接到 electrical versus non-electrical spacing taxonomy、traces/pads/vias/board-edge/components 作为 distinct spacing review surfaces、spacing 作为 manufacturability/reliability/assembly-risk topic family、copper-to-edge 作为 edge-risk review、silkscreen-to-pad overlap 作为 manufacturing-data conflict、以及 mechanical 3D clearance 作为 fit-review surface；但仍不解锁任何 exact spacing thresholds、hole/via numerics、`best/common/acceptable` threshold wording、voltage-conditioned clearance truth、CAD-menu authority、或 vendor capability/promo claims
+  - **新增 Log** (1 file):
+    - `logs/p4-384-2026-5-9-e2-safety-distance-taxonomy-and-spacing-boundary-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB设计必须考虑的8种安全距离，搞错1种都出大问题！.pdf` 不再只停在 `P4-310` 的 cluster-level hold map，而是有一条单 PDF route 接到 spacing taxonomy、spacing review surfaces、copper-edge review、silkscreen-pad conflict、以及 mechanical-fit clearance review
+  - **What this still does not unlock**
+    - no exact spacing, hole, or via numeric rule
+    - no `best/common/acceptable` threshold wording or voltage-conditioned clearance truth
+    - no CAD-menu authority or factory auto-cleanup sufficiency claim
+    - no vendor capability, standards-grade, or promo outcome claim
+
+## 2026-05-09 (P4-383 PCB资料 E2 Design-Priority And Layout-Governance Route Integration)
+
+- **这轮把 `印制电路板设计重点.pdf` 推进到 single-PDF route 层，但仍严格停在 design-governance / layout-priority / routing-boundary framing 上**: 当前已经可以把这篇保守接到 pre-layout input readiness 作为 DFM intake gate、library/footprint governance before layout release、layout priority 与 functional partitioning 的 qualitative posture、decoupling 与 power-grouping planning surfaces、routing priority 与 return-path continuity boundary、adjacent-layer direction control 作为 crosstalk-risk posture、以及 impedance-layer/reference-layer selection with validation posture；但仍不解锁任何 exact spacing thresholds、`3W/10W/20H` formula claims、current-carrying/via table claims、exact impedance geometry/tolerance rules、或 tool-recipe claims
+  - **新增 Log** (1 file):
+    - `logs/p4-383-2026-5-9-e2-design-priority-and-layout-governance-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `印制电路板设计重点.pdf` 不再只停在 `P4-310` 的 cluster-level hold map，而是有一条单 PDF route 接到 pre-layout intake governance、library/footprint review governance、layout/routing priority boundary、以及 impedance-layer planning posture
+  - **What this still does not unlock**
+    - no exact spacing, current-carrying, or via-table rule
+    - no `3W/10W/20H` formula or exact angle/length rule
+    - no exact impedance geometry/tolerance rule
+    - no tool-default, process-recipe, or capability/cost outcome claim
+
+## 2026-05-09 (P4-382 PCB资料 E2 Layout-Routing Manufacturability Route Integration)
+
+- **这轮把 `PCB布局布线的可制造性设计.pdf` 推进到 single-PDF route 层，但仍严格停在 layout/routing DFM / assembly-context / edge-risk framing 上**: 当前已经可以把这篇保守接到 layout/routing DFM 作为 early review gate、routing path complexity 作为 manufacturability review surface、dense SMT neighborhoods 作为 assembly-risk context、mixed SMT/THT population 作为 solder-route selection context、board-edge/profile zones 作为 release-review surfaces、以及 tall/short component neighborhoods 作为 access/heating/rework risk surfaces；但仍不解锁任何 exact component-spacing / line-space-via thresholds、exact solder-route clearance、manufacturer capability / cost claims、exact annular-ring / teardrop rules、或 tool-rule completeness claims
+  - **新增 Log** (1 file):
+    - `logs/p4-382-2026-5-9-e2-layout-routing-manufacturability-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB布局布线的可制造性设计.pdf` 不再只停在 `P4-310` 的 cluster-level hold map，而是有一条单 PDF route 接到 early DFM gate、routing complexity review、mixed-technology solder-route context、board-edge/profile review、以及 tall/short component neighborhood risk
+  - **What this still does not unlock**
+    - no exact component-spacing, line/space, or via-size rule
+    - no exact wave/selective-solder clearance or process parameter claim
+    - no manufacturer capability, low-cost, or yield outcome claim
+    - no exact annular-ring, teardrop, or tool-rule-completeness claim
+
+## 2026-05-09 (P4-381 PCB资料 E2 Stackup-Planning And Reference-Plane Route Integration)
+
+- **这轮把 `PCB叠层顺序规划配置方案.pdf` 推进到 single-PDF route 层，但仍严格停在 stackup-planning / reference-plane / return-path framing 上**: 当前已经可以把这篇保守接到 stackup planning 作为 multivariable tradeoff posture、signal / power / ground 作为 distinct layer-role families、reference-plane continuity 与 return-path planning、decoupling short-path awareness、split-power-plane nearby high-speed caution、以及 controlled-impedance planning/validation posture；但仍不解锁任何 exact layer-count / thickness rules、exact stackup recipe、`HDI` / laser-drill capability closure、exact EMI / decoupling outcomes、或 supplier / manufacturer capability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-381-2026-5-9-e2-stackup-planning-and-reference-plane-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB叠层顺序规划配置方案.pdf` 不再只停在 `P4-310` 的 cluster-level hold map，而是有一条单 PDF route 接到 stackup tradeoff posture、signal/power/ground layer-role split、reference-plane and return-path planning、decoupling short-path awareness、以及 split-plane caution
+  - **What this still does not unlock**
+    - no exact layer-count, thickness, or material-thickness rule
+    - no exact stackup ordering, spacing, or setback recipe
+    - no `HDI`, laser-drill, or manufacturer capability closure
+    - no exact EMI, decoupling-effectiveness, cost, or schedule outcome claim
+
+## 2026-05-09 (P4-380 PCB资料 E2 Layer-Definition Grammar And Drill-Annotation Route Integration)
+
+- **这轮把 `一文带你读懂PCB电路板设计中各种层的定义.pdf` 推进到 single-PDF route 层，但仍严格停在 layer-grammar / drill-annotation / naming-boundary framing 上**: 当前已经可以把这篇保守接到 layer-role vocabulary 作为 design-intent grammar、top / bottom / multilayer 作为 board-family identity wording、`Drillguide` / `Drilldrawing` / `Drl` / `NPTH` 作为 output-annotation vocabulary、blind / buried layer-pair names 作为 released-output examples、以及 design-tool naming versus manufacturing-data boundary；但仍不解锁任何 hole-size / stackup numerics、blind / buried capability closure、keepout-rule authority、或 supplier capability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-380-2026-5-9-e2-layer-definition-grammar-and-drill-annotation-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `一文带你读懂PCB电路板设计中各种层的定义.pdf` 不再只停在 `P4-310` 的 cluster-level hold map，而是有一条单 PDF route 接到 layer-role grammar、drill annotation vocabulary、以及 tool naming versus released-output boundary
+  - **What this still does not unlock**
+    - no hole-size, layer-count, or stackup numeric rule
+    - no blind / buried capability or process closure claim
+    - no keepout-rule, manufacturability, or supplier-capability claim
+
+## 2026-05-09 (P4-379 PCB资料 E4 Legend-Outline-Panel-Direction Release-Review Route Integration)
+
+- **这轮把 `PCB可制造性设计及案例分析之字符、外形、拼板（图文结合，推荐）.pdf` 推进到 single-PDF route 层，但仍严格停在 release-review / panel-direction-clarity / special-outline framing 上**: 当前已经可以把这篇保守接到 legend 落在 opened / solderable area 上作为 release-review surface、special inner-slot / concave outline 作为 branch-review trigger、board-edge connection detail 作为 post-separation review trigger、以及 symmetric panel direction 作为 released-package clarity topic；但仍不解锁任何 geometry numerics、cleanup recipes、routing-tool defaults、manufacturability certainty、quality / efficiency outcomes、或 vendor-workflow sufficiency
+  - **新增 Log** (1 file):
+    - `logs/p4-379-2026-5-9-e4-legend-outline-panel-direction-release-review-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB可制造性设计及案例分析之字符、外形、拼板（图文结合，推荐）.pdf` 不再只停在 `P4-312` 的 cluster-level hold map，而是有一条单 PDF route 接到 legend obstruction review、special-outline review、edge-connection-detail review、以及 symmetric-panel direction clarity
+  - **What this still does not unlock**
+    - no inner-slot, corner, or connection geometry numeric rule
+    - no cleanup-hole or shape-adjustment default recipe
+    - no tooling-default, manufacturability-certainty, or factory-capability claim
+    - no quality, efficiency, cost, or schedule outcome claim
+
+## 2026-05-09 (P4-378 PCB资料 E3 Half-Hole Edge-Feature And Panelization Route Integration)
+
+- **这轮把 `千万不能小瞧的PCB半孔板.pdf` 推进到 single-PDF route 层，但仍严格停在 edge-feature / panelization / release-check framing 上**: 当前已经可以把这篇保守接到 half-hole 作为 special board-edge feature family、half-hole board 作为 special panelization subfamily、ordinary-board panelization assumptions 对 half-hole edge region 可能不适用、以及 opening / bridge expression 作为 release-check surfaces；但仍不解锁任何 half-hole terminology closure、geometry / bridge numerics、process-order recipes、panelization defaults、或 cost / cycle / capability outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-378-2026-5-9-e3-half-hole-edge-feature-and-panelization-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `千万不能小瞧的PCB半孔板.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 half-hole special-edge identity、special panelization review、ordinary-board assumption warning、以及 opening / bridge release-check surfaces
+  - **What this still does not unlock**
+    - no official half-hole terminology closure
+    - no geometry, bridge, or panelization numeric rule
+    - no process-order, capability, or cost-cycle outcome claim
+
+## 2026-05-09 (P4-377 PCB资料 E3 Small-Hole-Slot Feature-Typing Opening-Risk Route Integration)
+
+- **这轮把 `器件引脚小尺寸的孔和槽如何避坑？.pdf` 推进到 single-PDF route 层，但仍严格停在 small-feature risk / feature-typing / opening-expression framing 上**: 当前已经可以把这篇保守接到 small-feature manufacturability risk framing、small lead-hole feature typing 作为 handoff-risk family、feature typing 混淆时 opening / cover-oil expression 作为 release-check surface、以及 pre-release `DFM/CAM` review posture；但仍不解锁任何 hole / slot capability numerics、compensation / tolerance rules、factory-default behavior、software-output recipes、或 cost / efficiency / process-preference outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-377-2026-5-9-e3-small-hole-slot-feature-typing-opening-risk-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `器件引脚小尺寸的孔和槽如何避坑？.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 small-feature risk、feature typing confusion、opening / cover-oil release-check surface、以及 pre-release review timing
+  - **What this still does not unlock**
+    - no hole / slot capability, compensation, tolerance, or minimum-feature numerics
+    - no software-output recipe or factory-default behavior claim
+    - no cost, efficiency, or process-preference outcome claim
+
+## 2026-05-09 (P4-376 PCB资料 E3 Square-Lead Special-Hole Intent Release-Check Route Integration)
+
+- **这轮把 `器件引脚的方槽、方孔如何避坑？.pdf` 推进到 single-PDF route 层，但仍严格停在 special-feature intent / release-check framing 上**: 当前已经可以把这篇保守接到 square 或 non-round lead shape 作为 package-to-footprint review trigger、square-hole / square-slot request 作为 explicit fabrication-intent expression、design-canvas shape 不等于 released-output correctness、以及 pre-release special-feature annotation review posture；但仍不解锁任何 official square-hole terminology closure、workaround defaults、tool-behavior claims、manufacturability certainty、或 insertion / quality / cost outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-376-2026-5-9-e3-square-lead-special-hole-intent-release-check-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `器件引脚的方槽、方孔如何避坑？.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 special-hole intent expression、package-to-footprint review trigger、design-canvas versus released-output boundary、以及 pre-release annotation review
+  - **What this still does not unlock**
+    - no official square-hole or square-slot taxonomy closure
+    - no workaround default, software-behavior, or capability-certainty claim
+    - no insertion-success, quality, or cost outcome claim
+
+## 2026-05-09 (P4-375 PCB资料 E3 Hole-Slot Fabrication-Intent And Output-Completeness Route Integration)
+
+- **这轮把 `PCB可制造性设计及案例分析之孔槽篇.pdf` 推进到 single-PDF route 层，但仍严格停在 fabrication-intent / output-completeness framing 上**: 当前已经可以把这篇保守接到 hole / slot features 作为 fabrication-intent objects、omitted / misexpressed hole-slot 作为 handoff-risk families、hole-table / slot-annotation support 作为 release-check surfaces、同位置冲突 hole-slot intent 作为 design-intent-loss risk、以及 pre-release `DFM/CAM` review posture；但仍不解锁任何 plated / non-plated terminology closure、drill / slot numerics、layer-recipe defaults、process-order claims、或 cycle / yield / capability outcomes
+  - **新增 Log** (1 file):
+    - `logs/p4-375-2026-5-9-e3-hole-slot-fabrication-intent-and-output-completeness-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB可制造性设计及案例分析之孔槽篇.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 fabrication-intent expression、output completeness、hole-table / slot annotation release-check support、以及 pre-release review timing
+  - **What this still does not unlock**
+    - no plated / non-plated terminology closure
+    - no drill / slot numeric rule, layer-recipe default, or process-order claim
+    - no yield, cycle, cost, or capability outcome claim
+
+## 2026-05-09 (P4-374 PCB资料 E3 Stamp-Hole Bridge Gap Note)
+
+- **这轮没有硬把 `PCB邮票孔桥连设计要点，干货满满！.pdf` 升成 single-PDF route，而是把缺口固化成一条负结果边界说明**: 当前 repo 只够把 `stamp-hole / bridge / panelization connection branch` 写成 controller-level taxonomy，也有 irregular-outline / half-hole special-review 的相邻支撑；但仍没有真实 official 或 owner-scoped authority 去闭合该文里的 bridge-width、hole-size、spacing、`VCUT` 优先级、half-hole process-order、或 process-review default，因此不能安全落这篇的单篇 route
+  - **新增 Log** (1 file):
+    - `logs/p4-374-2026-5-9-e3-stamp-hole-bridge-gap-note.md`
+  - **更新 Tracker** (4 files):
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/update-log.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+  - **What this pass now fixes**
+    - 后续 AI 不需要再把 `PCB邮票孔桥连设计要点，干货满满！.pdf` 误判成“已经足够接回单篇 route”的 lane
+  - **What this still does not unlock**
+    - no single-PDF route for bridge geometry or selection authority
+    - no `VCUT` priority doctrine
+    - no half-hole process-order or release/default rule
+
+## 2026-05-09 (P4-373 PCB资料 E3 Solder-Mask Bridge Preservation Route Integration)
+
+- **这轮把 `E3` 里阻焊桥文章推进到 single-PDF route 层，但仍严格停在 bridge-preservation / release-check framing 上**: `这样做，轻松拿捏阻焊桥！` 现在已经接到 solder-mask bridge preservation 作为 defect-prevention family、dense pad spacing 与 pad-mask relationship 作为 bridge-risk review topic、bridge presence / loss 作为 release-check surface、以及 no-bridge open-window 作为 higher-risk fallback posture；但仍不解锁任何 bridge numerics、颜色/铜厚默认规则、品牌 checker 能力、standards-grade `solder mask bridge` definition closure、或质量 / 成本 / 迭代结果
+  - **新增 Log** (1 file):
+    - `logs/p4-373-2026-5-9-e3-solder-mask-bridge-preservation-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `这样做，轻松拿捏阻焊桥！.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 bridge preservation、dense-pad pad-mask relationship、release-check surface、以及 no-bridge fallback posture
+  - **What this still does not unlock**
+    - no bridge width, opening, spacing, copper, or color numeric rule
+    - no standards-grade `solder mask bridge` definition closure
+    - no branded checker sufficiency or quality / cost / iteration outcome claim
+
+## 2026-05-09 (P4-372 PCB资料 E3 Broken Trace Residual Copper Route Integration)
+
+- **这轮把 `E3` 里另一篇制造缺陷文章推进到 single-PDF route 层，但仍严格停在 release-check / handoff framing 上**: `如何避免“断头线”带来的DFM（可制造性）问题？` 现在已经接到 broken traces 与 residual copper 作为 DFM risk families、continuity / open-net 作为 release-check review surfaces、CAM confirmation 作为 handoff clarification boundary、以及 fabrication-data formats 作为 identity 而不是 correctness proof；但仍不解锁任何默认修复动作、品牌 checker 能力、质量 / 交期 / 成本 / 良率结果、SMT 损失叙述、或数值规则
+  - **新增 Log** (1 file):
+    - `logs/p4-372-2026-5-9-e3-broken-trace-residual-copper-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `如何避免“断头线”带来的DFM（可制造性）问题？.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 broken-trace / residual-copper risk families、continuity / open-net review surfaces、CAM handoff clarification、以及 data-format identity boundary
+  - **What this still does not unlock**
+    - no default repair action or deletion prescription
+    - no branded checker sufficiency or completeness claim
+    - no quality / cost / cycle / yield outcome claim
+    - no numeric threshold or process rule
+
+## 2026-05-09 (P4-371 PCB资料 E3 Multilayer Pad-Mask Relationship Route Integration)
+
+- **这轮把 `E3` 里另一篇焊盘设计文章推进到 single-PDF route 层，但仍严格停在 pad-mask relationship framing 上**: `多层板的焊盘到底应该怎么设计？四种主要设计方式带你搞懂！` 现在已经接到 pad 与 solder-mask opening 作为分离 review objects、`盖PAD` / `露PAD` 作为 pad-mask relationship branches、usable pad area 受 pad-to-mask relationship 影响、`半盖半露` 作为 non-default pad-asymmetry risk branch、以及 `等大设计` 作为 tolerance-sensitive mask-encroachment risk family；但仍不解锁任何 pad/opening numerics、universal branch-selection rules、standards-grade `mask-defined` terminology closure、factory compensation claims、或 defect/yield outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-371-2026-5-9-e3-multilayer-pad-mask-relationship-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `多层板的焊盘到底应该怎么设计？四种主要设计方式带你搞懂！.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 pad-mask relationship branches、usable pad area 与 mask opening relationship、以及 `半盖半露` / `等大设计` 的风险边界
+  - **What this still does not unlock**
+    - no exact pad size, mask opening, or tolerance numeric rule
+    - no standards-grade `mask-defined` / `non-solder-mask-defined` definition closure
+    - no universal branch-selection rule or supplier compensation/process proof
+    - no defect, yield, or production-smoothness outcome claim
+
+## 2026-05-09 (P4-370 PCB资料 E3 Hole-Spacing Reliability Gap Note)
+
+- **这轮没有硬造 `hole-spacing reliability` 官方边界卡，而是把缺口固化成一条负结果边界说明**: 当前 repo 只够把 `hole-to-hole spacing` 写成 reliability / failure-risk review topic，但仍没有真实 official 或 standards-adjacent anchor 去闭合 breakout / structural-weakness / spacing-sensitive reliability 术语层，所以不能新落 reliability fact，也不能写 spacing thresholds、CAF / breakout 数值、acceptance、或 supplier capability 结论
+  - **新增 Log** (1 file):
+    - `logs/p4-370-2026-5-9-e3-hole-spacing-reliability-gap-note.md`
+  - **更新 Tracker** (2 files):
+    - `logs/backlog.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - 后续 AI 不需要再把 `hole-spacing reliability` 误判成“已经接近可落官方边界卡”的 lane
+  - **What this still does not unlock**
+    - no official or standards-adjacent reliability boundary fact
+    - no spacing, breakout, CAF, or annular-ring threshold rule
+    - no acceptance or supplier-capability claim
+
+## 2026-05-09 (P4-369 PCB资料 E3 Pad-Geometry And Pad-Mask Review Route Integration)
+
+- **这轮把 `E3` 里一篇焊盘设计文章推进到 single-PDF route 层，但仍严格停在 review-dimension / governance framing 上**: `PCB焊盘设计之问题详解` 现在已经接到 pad symmetry 作为 review dimension、pad length / width / inner spacing 作为 non-numeric review dimensions、pad-to-mask relationship 作为 controlled review topic、以及 package-to-pad mismatch 作为 footprint-review trigger；但仍不解锁任何 pad-geometry numerics、standards-grade `NSMD/SMD` / `mask-defined` 定义闭环、keepout 公式、universal pad-type preference、或 branded checker claims
+  - **新增 Log** (1 file):
+    - `logs/p4-369-2026-5-9-e3-pad-geometry-and-pad-mask-review-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB焊盘设计之问题详解.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 pad review dimensions、pad-mask relationship review、以及 package-to-pad mismatch trigger
+  - **What this still does not unlock**
+    - no exact pad geometry, land-pattern, or keepout numeric rule
+    - no standards-grade `NSMD/SMD` / `mask-defined` definition closure
+    - no universal tombstoning, wetting, reliability, or yield outcome claim
+
+## 2026-05-09 (P4-368 PCB资料 E3 Hole-Slot Terminology Gap Note)
+
+- **这轮没有硬造 `hole / slot taxonomy` 官方术语卡，而是把缺口固化成一条负结果边界说明**: 当前 repo 只够把 `hole / slot / drill / route` 写成 released fabrication-output identity / output completeness posture，也就是 design-canvas presence 不等于 released-output presence；但仍没有真实 official 或 standards-adjacent terminology anchor，所以不能新落 plated/non-plated hole/slot 术语 fact，也不能写 geometry / file-recipe / capability / acceptance 结论
+  - **新增 Log** (1 file):
+    - `logs/p4-368-2026-5-9-e3-hole-slot-terminology-gap-note.md`
+  - **更新 Tracker** (2 files):
+    - `logs/backlog.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - 后续 AI 不需要再把 `hole / slot` 误判成“已经接近可落官方术语卡”的 lane
+  - **What this still does not unlock**
+    - no official plated / non-plated hole or slot terminology fact
+    - no geometry, tolerance, file-recipe, capability, or acceptance rule
+
+## 2026-05-09 (P4-367 PCB资料 E3 Via Solder-Mask Treatment Route Integration)
+
+- **这轮把 `E3` 里一篇阻焊过孔文章推进到 single-PDF route 层，但仍严格停在 via treatment taxonomy / release-expression framing 上**: `一招搞定PCB阻焊过孔问题` 现在已经接到 via solder-mask treatment 作为 branch taxonomy、treatment choice 作为 context-dependent review、released solder-mask expression 作为 cover/open output surface、以及 via-in-pad 作为 treatment-related dense-interconnect branch；但仍不解锁任何 treatment numerics、universal cover/open/fill defaults、IPC definition closure、CAD-specific UI / export recipe、checker sufficiency、或 supplier-process proof
+  - **新增 Log** (1 file):
+    - `logs/p4-367-2026-5-9-e3-via-solder-mask-treatment-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `一招搞定PCB阻焊过孔问题.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 via treatment taxonomy、solder-mask output expression、以及 via-in-pad branch posture
+  - **What this still does not unlock**
+    - no via-treatment numerics or default rules
+    - no exact `IPC` definitions for via tenting or related pad-definition terms
+    - no CAD-specific UI recipes, checker sufficiency, or supplier-process proof
+
+## 2026-05-09 (P4-366 PCB资料 E3 Castellated Half-Hole Terminology Gap Note)
+
+- **这轮没有强行给 `castellated / half-hole` 造官方术语卡，而是把缺口固化成一条负结果边界说明**: 当前 repo 只够把 `castellated / half-hole / edge-feature` 写成 special fabrication / handoff / panelization review taxonomy，以及 ordinary pad / adjacency assumptions 不能直接套用的 board-edge feature family；但仍没有真实 official 或 owner-scoped terminology anchor，所以不能新落 terminology fact，也不能写 geometry / plating / acceptability / capability 结论
+  - **新增 Log** (1 file):
+    - `logs/p4-366-2026-5-9-e3-castellated-half-hole-terminology-gap-note.md`
+  - **更新 Tracker** (2 files):
+    - `logs/backlog.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - 后续 AI 不需要再把 `castellated / half-hole` 误判成“已经接近可落 official terminology”的 lane
+  - **What this still does not unlock**
+    - no official or owner-scoped terminology fact
+    - no geometry, plating, reliability, or acceptance rule
+    - no supplier capability or process recipe
+
+## 2026-05-09 (P4-365 PCB资料 E3 Gold-Finger Edge-Contact Boundary Integration)
+
+- **这轮没有新造 gold-finger fact，而是把 repo 里已有的 standards metadata boundary 正式接回 `E3` 单 PDF 路由**: `PCB“金手指”从设计到生产全流程.pdf` 现在已经可以保守接到 `gold finger` 作为 edge-contact / edge-connector contact-region vocabulary、edge-contact region 区别于普通 solderable pad zones、finish planning 作为 zoned review topic、以及 IPC finish / acceptability / rigid-board metadata 作为 standards-family anchors；但仍不解锁任何 hard-gold / nickel thickness、bevel angle、durability、contact resistance、acceptance threshold、或 supplier-process proof
+  - **新增 Log** (1 file):
+    - `logs/p4-365-2026-5-9-e3-gold-finger-edge-contact-boundary-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB“金手指”从设计到生产全流程.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 edge-contact vocabulary、finish-zone review、以及 IPC metadata anchors
+  - **What this still does not unlock**
+    - no hard-gold thickness, nickel thickness, or bevel-angle rules
+    - no insertion-cycle durability or contact-resistance authority
+    - no acceptance thresholds or supplier-process proof
+
+## 2026-05-09 (P4-364 PCB资料 E3 Intel NSMD/SMD Vendor Terminology Boundary)
+
+- **这轮没有硬抬 `IPC` 定义层，而是把 `NSMD/SMD` 收成一条更窄的 `Intel` owner-scoped 术语边界**: 当前 repo 已经可以把 `NSMD` / `SMD` 明确绑定到 Intel `AN 114` 的 BGA land-pad guidance 语境里使用，其中 `SMD` pad 与 BGA pad size 对齐、`NSMD` pad 约小 `15%`；但这仍不解锁任何 `IPC` 级精确定义、跨 vendor 等价、pad-type preference、开窗 / 桥宽数值、via tenting 规则、acceptance criteria、或 reliability/yield/manufacturability outcome claims
+  - **新增 Fact / Log** (2 files):
+    - `facts/methods/intel-nsmd-smd-land-pad-terminology-boundary.md`
+    - `logs/p4-364-2026-5-9-e3-intel-nsmd-smd-vendor-terminology-boundary.md`
+  - **更新 Resume / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `E3` 不再只是泛泛地说 `SMD/NSMD` 可作为 vendor-scoped official vocabulary，而是有一条更具体的 Intel owner-scoped 术语边界可直接复用
+  - **What this still does not unlock**
+    - no exact public `IPC` definitions for `NSMD`, `SMD`, `mask-defined`, `non-solder-mask-defined`, `via tenting`, or `solder mask bridge`
+    - no cross-vendor equivalence or universal pad-type selection rule
+    - no solder-mask opening, bridge, or via-treatment numerics
+    - no acceptance criteria or process-capability claims
+
+## 2026-05-09 (P4-363 PCB资料 E3 IPC Solder-Mask Terminology Boundary Recovery)
+
+- **这轮不再硬推 article 单篇 route，而是给 `E3` 的 solder-mask 子族补了一条窄官方术语边界**: 当前已经可以把 `solder mask` 写成 released fabrication-data layer family，把 `IPC` 写成确实存在 solder-mask design / pad-definition / tented-via 文档家族的 standards-owner metadata anchor，并把 `SMD/NSMD` 维持在 vendor-scoped official vocabulary；但仍不解锁任何 `IPC` 级精确定义、`mask-defined / non-solder-mask-defined / via tenting / solder mask bridge` 定义闭环、开窗 / 桥宽数值、acceptance criteria、或 supplier-process proof
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/standards/ipc-7093a-toc.md`
+    - `facts/methods/ipc-solder-mask-layer-and-pad-definition-boundary.md`
+    - `logs/p4-363-2026-5-9-e3-ipc-solder-mask-terminology-boundary-recovery.md`
+  - **更新 Resume / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `E3` 不再只有 article-side `阻焊开窗` 路由，也有一条官方补源的术语边界可供恢复：`solder mask` 作为 fabrication-data layer family，`IPC` 作为相关术语 / 文档家族锚点
+  - **What this still does not unlock**
+    - no exact `IPC` definitions for `mask-defined`, `non-solder-mask-defined`, `via tenting`, or `solder mask bridge`
+    - no opening-expansion, bridge-width, or via-opening numerics
+    - no universal pad-type selection rule or acceptance authority
+    - no checker, workflow, or supplier-process proof
+
+## 2026-05-09 (P4-362 PCB资料 E3 Solder-Mask Opening Completeness Single-PDF Route Expansion)
+
+- **这轮把 `E3` 里一篇阻焊漏开窗文章推进到 single-PDF route 层，但仍严格停在 opening-expression / release-check framing 上**: `PCB设计如何防止阻焊漏开窗` 现在已经接到 solder-mask opening 作为 explicit manufacturing-data expression、opening completeness 作为 release-check topic、hole-pad / SMT-pad / selected exposed-copper opening presence 作为 review surfaces、footprint 或 padstack definition failure 作为 missing-opening family、以及 version / object-type mismatch 作为 design-intent-loss risk，但仍不解锁任何开窗扩大量数值、软件菜单 / UI / export recipe、检测全覆盖 claims、通用可焊性保证、或 cost / efficiency outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-362-2026-5-9-e3-solder-mask-opening-completeness-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB设计如何防止阻焊漏开窗.pdf` 不再只停在 `P4-311` 的 cluster-level hold map，而是有一条单 PDF route 接到 solder-mask opening explicit-expression posture、opening completeness review、footprint / padstack missing-opening family、以及 version / object-type mismatch risk
+  - **What this still does not unlock**
+    - no opening-expansion numerics or process-window authority
+    - no software menu-path, export-setting, or UI-sequence authority
+    - no checker sufficiency or universal detection-completeness claims
+    - no universal solderability, communication-cost, or manufacturing-efficiency outcome claims
+
+## 2026-05-09 (P4-361 PCB资料 E4 Panel-Connection And Edge-Interference Single-PDF Route Expansion)
+
+- **这轮把 `E4` 里一篇拼板经验文推进到 single-PDF route 层，但仍严格停在 connection-branch / edge-interference framing 上**: `PCB拼板，不得不注意的10个问题！` 现在已经接到 panelization 作为 small / special board 的 release-review topic、`V-CUT` / 邮票孔 / 空心连接条 作为 connection-branch vocabulary、straight-line / regular-outline 与 irregular-outline 的 branch-selection context、board-edge / protruding-part interference review、以及 outer frame / holding edge / panel rails 作为 planning objects，但仍不解锁任何尺寸建议、mark/定位孔规则、工厂 capability claims、通用方法处方、或 cost/yield/efficiency outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-361-2026-5-9-e4-panel-connection-and-edge-interference-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB拼板，不得不注意的10个问题！.pdf` 不再只停在 `P4-312` 的 cluster-level hold map，而是有一条单 PDF route 接到 connection-method selection、straight-line vs irregular-outline split、edge / protruding-part interference review、以及 frame / rail / holding-edge planning objects
+  - **What this still does not unlock**
+    - no `V-CUT` / 邮票孔 / 连接条 / panel-array numerics
+    - no `Mark` / tooling-hole / clearance rule authority
+    - no factory-capability, universal method-prescription, or acceptance authority
+    - no cost/yield/efficiency outcome claims
+
+## 2026-05-09 (P4-360 PCB资料 E1 DFM Manufacturing-Stage Linking Single-PDF Route Expansion)
+
+- **这轮把 `E1` 里偏制造阶段串联的一篇文章推进到 single-PDF route 层，但仍严格停在 stage-linking framing 上**: `华秋DFM在硬件制造中的作用` 现在已经接到 `DFM` 不止于 layout-only 检查、fabrication readiness before release handoff、assembly readiness before downstream build、`test-point planning` 与 later test-stage preparation 作为 review-stage vocabulary、以及 design-manufacturing-test review handoff language，但仍不解锁任何软件能力 claims、采购保真或 `BOM` 自动核对 claims、工艺处方、`ICT/FCT/Burn In` 完整测试方案、或 cost/yield/reliability outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-360-2026-5-9-e1-dfm-manufacturing-stage-linking-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `华秋DFM在硬件制造中的作用.pdf` 不再只停在 `P4-290` 的 cluster-level hold map，而是有一条单 PDF route 接到 fabrication-readiness review、assembly-readiness review、`test-point planning`、later test-stage preparation、以及 design-manufacturing-test handoff language
+  - **What this still does not unlock**
+    - no software-capability, procurement-authenticity, or `BOM` auto-verification authority
+    - no stencil / reflow / `AOI` / wave-solder / programming / `ICT` / `FCT` / burn-in / environmental / drop-test execution authority
+    - no cost/yield/efficiency/reliability outcome claims
+
+## 2026-05-09 (P4-359 PCB资料 E1 Global-DFM-Awareness Single-PDF Route Expansion)
+
+- **这轮把 `E1` 里偏全局制造意识的一篇文章推进到 single-PDF route 层，但仍严格停在 manufacturing-awareness framing 上**: `全局DFM意识对于PCB设计的重要性` 现在已经接到 design rules / constraints aligned to selected build context、manufacturing awareness before layout freeze and release handoff、constraint maintenance and design-target clarity 作为 `DFM` posture、以及 cross-functional governance language，但仍不解锁任何 supplier capability proof、real-time BOM / alternate claims、global ecosystem workflow、或 cost/schedule/profit outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-359-2026-5-9-e1-global-dfm-awareness-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `全局DFM意识对于PCB设计的重要性.pdf` 不再只停在 `P4-290` / `P4-283a` 的 cluster-level hold map，而是有一条单 PDF route 接到 selected-build-context constraint alignment、early manufacturing awareness、constraint maintenance、以及 cross-functional governance language
+  - **What this still does not unlock**
+    - no supplier capability proof or vendor-rule authority
+    - no real-time BOM availability or ranked alternate workflow claims
+    - no global ecosystem or one-click supplier-matching claims
+    - no cost/schedule/profit/certainty outcome claims
+
+## 2026-05-09 (P4-358 PCB资料 E1 DFM Governance-Loop Single-PDF Route Expansion)
+
+- **这轮把 `E1` 里最适合安全升格的一篇 `DFM` 治理闭环文章推进到 single-PDF route 层，但仍严格停在 governance-loop framing 上**: `对PCB设计师而言，熟练运用DFM已成为必备能力` 现在已经接到 `DFM` specification 作为 maintained governance artifact、`DFM` checklist 作为 design-planning / review-routing tool、`DFM` report 作为 running issue-and-correction record、sample validation 作为 feedback loop before release、以及 summary review 作为 late governance step，但仍不解锁任何 first-pass/yield/cost/reliability outcome claims、exact checklist rows、`ISO` equivalence、或 universal workflow prescriptions
+  - **新增 Log** (1 file):
+    - `logs/p4-358-2026-5-9-e1-dfm-governance-loop-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `对PCB设计师而言，熟练运用DFM已成为必备能力.pdf` 不再只停在 `P4-290` / `P4-283a` 的 cluster-level hold map，而是有一条单 PDF route 接到 specification maintenance、checklist planning、issue-report governance、sample-validation feedback、以及 summary-review posture
+  - **What this still does not unlock**
+    - no first-pass/yield/cost/reliability outcome authority
+    - no exact checklist rows, process-prescription authority, or `ISO` equivalence
+    - no universal company-workflow judgment
+    - no quantified comparison or savings claims
+
+## 2026-05-09 (P4-357 PCB资料 E4 Irregular-Shape Panelization Examples Single-PDF Route Expansion)
+
+- **这轮把 `E4` 里最适合安全升格的一篇异形拼版案例文章推进到 single-PDF route 层，但仍严格停在 irregular-shape branch-selection framing 上**: `PCB板各种形状的拼版实例分享` 现在已经接到 irregular outline 作为 panelization branch-selection context、nonflush / grooved / rounded edge 的 shape-constrained route-choice context、half-hole board 作为 special panelization subfamily、protruding-edge component interference、以及 inverted arrangement / stamp-hole bridge 作为 example branch choices，但仍不解锁任何 gap/hole/connection numerics、breakage-certainty claims、factory capability guarantees、cost/yield/schedule claims、或 branded checker sufficiency claims
+  - **新增 Log** (1 file):
+    - `logs/p4-357-2026-5-9-e4-irregular-shape-panelization-examples-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB板各种形状的拼版实例分享.pdf` 不再只停在 `P4-312` 的 cluster-level hold map，而是有一条单 PDF route 接到 irregular-outline branch-selection context、half-hole subfamily handling、protruding-edge interference、以及 inverted arrangement / stamp-hole bridge example branches
+  - **What this still does not unlock**
+    - no gap, hole, connection, or process-edge numeric authority
+    - no breakage-certainty, scrap-certainty, or factory-capability guarantees
+    - no cost/yield/schedule outcome or branded checker sufficiency claims
+
+## 2026-05-09 (P4-356 PCB资料 E1 DFM Concurrent-Engineering Single-PDF Route Expansion)
+
+- **这轮把 `E1` 里最适合安全升格的一篇 `DFM` 治理文章推进到 single-PDF route 层，但仍严格停在 concurrent-engineering / lifecycle-governance framing 上**: `引领工业新思想--DFM的含义将如何演变` 现在已经接到 `DFM` 作为 upstream concurrent-engineering posture、manufacturability feedback before release handoff、`DFM` 作为 broader `DFX` / `NPI` review vocabulary 的一部分、以及 bare-board `DFM` vs assembly-facing `DFM` 的 branch split，但仍不解锁任何 cost/cycle/quality outcome claims、vendor software sufficiency、named-company adoption proof、industry-maturity claims、exact principle lists、或 universal `DFX` taxonomy closure
+  - **新增 Log** (1 file):
+    - `logs/p4-356-2026-5-9-e1-dfm-concurrent-engineering-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `引领工业新思想--DFM的含义将如何演变.pdf` 不再只停在 `P4-290` / `P4-283a` 的 cluster-level hold map，而是有一条单 PDF route 接到 `DFM` upstream review posture、release handoff 前的 manufacturability feedback、broader `DFX` / `NPI` review vocabulary、以及 bare-board / assembly `DFM` branch split
+  - **What this still does not unlock**
+    - no cost, cycle, quality, or competitiveness outcome authority
+    - no vendor software completeness or workflow sufficiency claims
+    - no named-company adoption proof or industry-maturity claims
+    - no universal `DFX` taxonomy closure or exact principle-list authority
+
+## 2026-05-09 (P4-355 PCB资料 E4 Assembly-Facing Panel-Handling Single-PDF Route Expansion)
+
+- **这轮把 `E4` 里最适合安全升格的一篇拼版文章推进到 single-PDF route 层，但仍严格停在 assembly-facing panel-handling framing 上**: `啥？PCB拼版对SMT组装有影响！` 现在已经接到 panelization 作为 assembly-facing handling decision、no-gap / tight adjacency 作为 inter-board component-interference risk、rails and kept separation 作为 assembly-clearance posture、以及 depanel damage / scrap 作为 guarded downstream risk，但仍不解锁任何 rail/gap/V-CUT/tab numerics、route-default rules、machine-compatibility guarantees、cost/yield/schedule claims、或 branded panel-tool/checker sufficiency claims
+  - **新增 Log** (1 file):
+    - `logs/p4-355-2026-5-9-e4-assembly-facing-panel-handling-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `啥？PCB拼版对SMT组装有影响！.pdf` 不再只停在 `P4-312` 的 cluster-level hold map，而是有一条单 PDF route 接到 assembly-facing panel-handling、inter-board component interference、rails/kept separation posture、以及 guarded depanel damage risk
+  - **What this still does not unlock**
+    - no rail/gap/V-CUT/tab/process-specific numeric authority
+    - no machine-compatibility or route-default guarantees
+    - no branded panel-tool/checker sufficiency or cost/yield/schedule outcome claims
+
+## 2026-05-09 (P4-354 PCB资料 E4 Character-Legend Manufacturability Single-PDF Route Expansion)
+
+- **这轮把 `E4` 里最适合安全升格的一篇字符文章推进到 single-PDF route 层，但仍严格停在 legend manufacturability framing 上**: `PCB字符的DFM（可制造性）设计` 现在已经接到 character / legend 作为 fabrication-communication and identification context、legend 在 solderable areas 上的 obstruction risk、small/dense/overlapping/clipped legend 的 readability risk、top/bottom mirroring 作为 legibility coordination、以及 logo/code placement 作为 release-coordination topic，但仍不解锁任何 legend geometry numerics、negative-legend rules、scanning guarantees、color/process-capability claims、或 branded checker sufficiency claims
+  - **新增 Log** (1 file):
+    - `logs/p4-354-2026-5-9-e4-character-legend-manufacturability-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB字符的DFM（可制造性）设计.pdf` 不再只停在 `P4-312` 的 cluster-level hold map，而是有一条单 PDF route 接到 legend communication role、obstruction risk、readability-risk taxonomy、mirroring coordination、以及 logo/code placement coordination
+  - **What this still does not unlock**
+    - no legend line-width, height, spacing, offset, or negative-legend authority
+    - no color/process-capability closure or scanning-success guarantees
+    - no branded checker sufficiency or quality/yield/cost outcome claims
+
+## 2026-05-09 (P4-353 PCB资料 E4 Mark-Fiducial Role Single-PDF Route Expansion)
+
+- **这轮把 `E4` 里最适合安全升格的一篇 `Mark` 文章推进到 single-PDF route 层，但仍严格停在 fiducial-role framing 上**: `PCB板的Mark点设计对SMT重要性` 现在已经接到 `Mark` 作为 optical alignment reference、board / panel / local-component scope split、asymmetry 作为 orientation-disambiguation context、以及 visibility / cleanliness 作为 recognition conditions，但仍不解锁任何 `Mark` geometry/count defaults、package-specific local-Mark defaults、no-Mark workaround guidance、machine precision/efficiency guarantees、或 quality/cost/schedule outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-353-2026-5-9-e4-mark-fiducial-role-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB板的Mark点设计对SMT重要性.pdf` 不再只停在 `P4-312` / `P4-283e` 的 cluster-level hold map，而是有一条单 PDF route 接到 `Mark` optical-reference role、board/panel/local-component scope split、asymmetry 作为防混淆语境、以及 visibility/cleanliness recognition conditions
+  - **What this still does not unlock**
+    - no `Mark` size, opening, edge-distance, keepout, or count-rule authority
+    - no package-specific local-Mark defaults or no-Mark workaround guidance
+    - no machine precision/efficiency guarantees or cost/schedule/yield outcome claims
+
+## 2026-05-09 (P4-352 PCB资料 E3 Hole-Slot Output-Completeness Single-PDF Route Expansion)
+
+- **这轮把 `E3` 里最适合安全升格的一篇漏孔/漏槽文章推进到 single-PDF route 层，但仍严格停在 fabrication-handoff failure / release-check posture 上**: `PCB板漏孔、漏槽在设计端如何避坑` 现在已经接到 omitted holes / slots 作为 fabrication-handoff failure families、drill / route / slot output completeness 作为 release-check topic、CAD layer-role mismatch 作为 design-intent-loss risk、以及 intended features 必须在 released package 中被明确表达而不是只存在于 design canvas，但仍不解锁 CAD-specific output recipes、tool-side detection completeness、universal failure certainty、或任何 hole / slot geometry numerics
+  - **新增 Log** (1 file):
+    - `logs/p4-352-2026-5-9-e3-hole-slot-output-completeness-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB板漏孔、漏槽在设计端如何避坑.pdf` 不再只停在 `P4-311` / `P4-283e3` 的 cluster-level hold map，而是有一条单 PDF route 接到 omitted hole / slot failure families、drill / slot output completeness、CAD layer-role mismatch、以及 explicit released-package feature expression posture
+  - **What this still does not unlock**
+    - no CAD-specific output recipes, UI settings, or layer-name authority
+    - no checker sufficiency or universal failure-certainty claims
+    - no hole / slot geometry, tolerance, or manufacturability numerics
+
+## 2026-05-09 (P4-351 PCB资料 E7 Graphic-Alignment Workflow Single-PDF Route Expansion)
+
+- **这轮把 `E7` 里最适合安全升格的一篇图形对齐文章推进到 single-PDF route 层，但仍严格停在 local alignment workflow identity 上**: `简单好用！再也不用担心PCB图形对齐问题` 现在已经接到 graphic alignment 作为 shared-reference-frame correction workflow、single-layer / local-subregion alignment by common reference point、multi-layer alignment 作为 revision-comparison registration、以及 coordinate-to-graphic alignment 作为 pre-analysis local workflow，但仍不解锁 UI shortcut/menu sequences、auto-fix sufficiency、universal alignment-readiness、branded convenience/superiority、或 speed/cost/defect outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-351-2026-5-9-e7-graphic-alignment-workflow-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `简单好用！再也不用担心PCB图形对齐问题.pdf` 不再只停在 `P4-290` / `P4-283c` 的 cluster-level hold map，而是有一条单 PDF route 接到 shared-reference-frame correction、single-layer / local-subregion alignment、revision-comparison registration、以及 coordinate-to-graphic pre-analysis correction posture
+  - **What this still does not unlock**
+    - no UI-step, shortcut, menu-path, or button-sequence authority
+    - no auto-fix sufficiency or universal alignment-readiness claims
+    - no branded convenience/superiority or speed/cost/defect outcome claims
+
+## 2026-05-09 (P4-350 PCB资料 E2 Inner-Layer Manufacturability Single-PDF Route Expansion)
+
+- **这轮继续把 `E2` 里最稳的内层文章推进到 single-PDF route 层，但仍严格停在 inner-layer taxonomy / stackup framing 上**: `PCB内层的可制造性设计` 现在已经接到 inner-layer power / ground / reference-plane taxonomy、reference-plane selection 作为 return-path planning、split-plane crossing 作为 continuity caution、power / ground adjacency 作为 stackup-organization topic、以及 inner-layer review 属于 multilayer branch，但仍不解锁 plane sizes/offsets、exact stackup order、BGA inner-region spacing、copper-bridge recovery rules、current-bottleneck certainty、或 branded checker claims
+  - **新增 Log** (1 file):
+    - `logs/p4-350-2026-5-9-e2-inner-layer-manufacturability-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB内层的可制造性设计.pdf` 不再只停在 `P4-310` 的 cluster-level inventory，而是有一条单 PDF route 接到 inner-layer / reference-plane taxonomy、split-plane continuity caution、stackup-organization framing、以及 multilayer-branch planning surfaces
+  - **What this still does not unlock**
+    - no plane sizes, offsets, or exact stackup-order claims
+    - no BGA inner-region spacing, copper-bridge, or bottleneck-current rules
+    - no quality/yield/cost outcomes or branded checker sufficiency claims
+
+## 2026-05-09 (P4-349 PCB资料 E1 DRC-Versus-DFM Review-Boundary Single-PDF Route Expansion)
+
+- **这轮先把 `E1` 里最稳的一篇 `DRC vs DFM` 边界文章推进到 single-PDF route 层，但仍严格停在 review-boundary reuse 上**: `PCB layout有DRC检查为什么还要用DFM` 现在已经接到 `DRC` 与 `DFM` 作为不同 review layer、`DRC` 作为 layout-stage rule-correctness check、`DFM` 作为 staged manufacturability / assembly review posture、cross-functional review language、以及 manufacturability findings 不必等同于 online-layout-rule violation 的谨慎边界，但仍不解锁 comparison-table rows、rule-count claims、standards-list authority、exact `DRC` numeric examples、branded workflow sufficiency、或 cost / reliability outcome claims
+  - **新增 Log** (1 file):
+    - `logs/p4-349-2026-5-9-e1-drc-vs-dfm-review-boundary-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB layout有DRC检查为什么还要用DFM.pdf` 不再只停在 `P4-290` 的 cluster-level hold map，而是有一条单 PDF route 接到 `DRC` / `DFM` review-boundary split、staged manufacturability review posture、以及 cross-functional `DFM` review language
+  - **What this still does not unlock**
+    - no comparison-table rows, standards-list authority, or rule-count claims
+    - no exact spacing / mask / hole / silkscreen `DRC` numeric examples
+    - no branded workflow sufficiency or cost / reliability outcome claims
+
+## 2026-05-09 (P4-348 PCB资料 E4 Board-Edge Component-Layout Importance Single-PDF Route Expansion)
+
+- **这轮继续把 `E4` 的板边器件布局文章推进到 single-PDF route 层，但仍严格停在 edge-exposure review posture 上**: `PCBA板边器件布局重要性` 现在已经接到 board-edge component exposure 作为 assembly / depanel risk family、tall or fragile edge-part priority review、equipment-path / rail / fixture interference review posture、compact-closure / re-entry / serviceability impact context、以及 layout-fairness / edge-stress caution，但仍不解锁 board-edge numerics、V-cut / milling clearances、machine-compatibility guarantees、reliability / cycle / cost claims、或 branded checker authority
+  - **新增 Log** (1 file):
+    - `logs/p4-348-2026-5-9-e4-board-edge-component-layout-importance-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCBA板边器件布局重要性.pdf` 不再只停在 `P4-312` 的 cluster-level inventory，而是有一条单 PDF route 接到 board-edge component exposure、tall or fragile edge-part priority review、equipment-path / rail / fixture interference review posture、以及 compact-closure / re-entry / serviceability impact context
+  - **What this still does not unlock**
+    - no board-edge numerics, V-cut / milling clearances, or process-specific edge defaults
+    - no machine-compatibility guarantees or hidden-failure certainty claims
+    - no reliability / cost / cycle outcomes or branded checker sufficiency claims
+
+## 2026-05-09 (P4-347 PCB资料 E4 Board-Edge Spacing Severity Single-PDF Route Expansion)
+
+- **这轮把 `E4` 里最适合安全升格的一篇板边间距文章推进到 single-PDF route 层，但仍严格停在 edge-exposure risk framing 上**: `元器件到PCB板边缘间距不足的严重性` 现在已经接到 board-edge component exposure 作为 assembly-risk family、tall-part edge exposure priority review、depanel / transport / machine-path interference risk framing、serviceability / rework / compact-closure impact context、以及 mechanism-level edge-stress caution，但仍不解锁 edge-clearance numerics、V-cut/tab spacing、machine-compatibility guarantees、damage-certainty、或 branded checker claims
+  - **新增 Log** (1 file):
+    - `logs/p4-347-2026-5-9-e4-board-edge-spacing-severity-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `元器件到PCB板边缘间距不足的严重性.pdf` 不再只停在 `P4-312` 的 cluster-level inventory，而是有一条单 PDF route 接到 board-edge exposure、tall-part edge priority review、depanel / transport / machine-path interference risk framing、以及 compact-closure / rework impact context
+  - **What this still does not unlock**
+    - no edge-clearance numerics or V-cut / tab-route spacing defaults
+    - no machine-compatibility or process-success guarantees
+    - no damage-certainty, cost/cycle/quality, or branded checker sufficiency claims
+
+## 2026-05-09 (P4-346 PCB资料 E5 Reliability-Design DFM Single-PDF Route Expansion)
+
+- **这轮把 `E5` 里偏可靠性/可制造性综述的一篇文章推进到 single-PDF route 层，但仍严格停在 early-review posture reuse 上**: `如何保证电子产品可靠性设计？三方面为您解读，值得收藏！` 现在已经接到 early `DFM` review-gate posture、fabrication / assembly review-surface inventory、package-to-footprint / pin-count review trigger、spacing / interference / rework-access risk language、以及 article-side fabrication / assembly / cost tri-split inventory，但仍不解锁 fab/assembly geometry numerics、reliability/quality/straight-through-rate outcomes、pricing/quote logic、tool feature coverage、或 performance/thermal assurance claims
+  - **新增 Log** (1 file):
+    - `logs/p4-346-2026-5-9-e5-reliability-design-dfm-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `如何保证电子产品可靠性设计？三方面为您解读，值得收藏！.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 early `DFM` review-gate posture、fabrication / assembly review-surface inventory、package-to-footprint / pin-count review trigger、spacing / interference / rework-access risk language、以及 article-side fabrication / assembly / cost tri-split inventory
+  - **What this still does not unlock**
+    - no fab/assembly geometry numerics or standards-backed reliability rules
+    - no pricing / quote logic or tool feature-coverage claims
+    - no quality/reliability/straight-through-rate or thermal/performance assurance claims
+
+## 2026-05-09 (P4-345 PCB资料 E5 DFA Assembly-Risk Single-PDF Route Expansion)
+
+- **这轮继续把 `E5` 里剩余的 `DFA` 文章推进到 single-PDF route 层，但仍严格停在 assembly-risk taxonomy reuse 上**: `DFA是什么？这些组装性问题你都知道怎么解决吗？` 现在已经接到 `DFA` 作为 assembly-risk taxonomy、package-to-footprint / pin-count mismatch review trigger、component spacing 作为 access / rework risk、board-edge / transport exposure 作为 guarded risk family、silkscreen reference visibility 作为 assembly-communication issue、以及 mark-point identity context，但仍不解锁 spacing numerics、board-edge clearances、pad geometry / tombstoning rules、BOM/library matching sufficiency、或 branded checker coverage claims
+  - **新增 Log** (1 file):
+    - `logs/p4-345-2026-5-9-e5-dfa-assembly-risk-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `DFA是什么？这些组装性问题你都知道怎么解决吗？.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 `DFA` 作为 assembly-risk taxonomy、package-to-footprint / pin-count mismatch review trigger、component spacing 作为 access / rework risk、board-edge / transport exposure 作为 guarded risk family、silkscreen reference visibility 作为 assembly-communication issue、以及 mark-point identity context
+  - **What this still does not unlock**
+    - no spacing numerics, board-edge clearances, or rail / V-cut safe-distance defaults
+    - no chip-pad geometry, tombstoning thresholds, hole-ratio, or press-fit dimensional rules
+    - no BOM/library matching sufficiency, fiducial defaults, yield/quality/cost/delivery, or branded checker coverage claims
+
+## 2026-05-09 (P4-344 PCB资料 E5 Via-In-Pad Manufacturability Single-PDF Route Expansion)
+
+- **这轮继续把 `E5` 里剩余的 via-in-pad 文章推进到 single-PDF route 层，但仍严格停在 dense-interconnect / HDI posture reuse 上**: `元器件虚焊原因之一盘中孔的可制造设计规范` 现在已经接到 via-in-pad 作为 dense-interconnect / HDI posture、dense BGA escape pressure 触发 via strategy review、一个 owner-scoped via-in-pad existence example、以及把 via-in-pad 讨论继续绑到 assembly / inspection review 的局部机理例子，但仍不解锁 fanout numerics、universal resin-fill / planarization defaults、defect-certainty、或 cost / lead-time / checker-sufficiency claims
+  - **新增 Log** (1 file):
+    - `logs/p4-344-2026-5-9-e5-via-in-pad-manufacturability-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `元器件虚焊原因之一盘中孔的可制造设计规范.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 via-in-pad 作为 dense-interconnect / HDI posture、dense BGA escape pressure review trigger、一个 owner-scoped via-in-pad existence example、以及把 via-in-pad 讨论继续绑到 assembly / inspection review 的局部机理例子
+  - **What this still does not unlock**
+    - no fanout pitch / drill / trace / annular-ring numerics
+    - no universal resin-fill, copper-cap, or planarization defaults
+    - no untreated-via defect-certainty, cost/lead-time, or branded checker sufficiency claims
+
+## 2026-05-09 (P4-343 PCB资料 E5 Component-Spacing Severity Single-PDF Route Expansion)
+
+- **这轮继续把 `E5` 的间距缺陷文章推进到 single-PDF route 层，但仍严格停在 crowded-neighborhood risk posture 上**: `组装电子元器件间距不足的严重性` 现在已经接到 dense-neighborhood route review、mixed SMT/THT neighbor access-risk taxonomy、manual touch-up serviceability risk、以及 pad / via / close solder neighborhood 的局部机理例子，但仍不解锁 spacing thresholds、solder-mask defaults、via-in-pad rules、route-selection superiority、或 reliability/cost/schedule claims
+  - **新增 Log** (1 file):
+    - `logs/p4-343-2026-5-9-e5-component-spacing-severity-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `组装电子元器件间距不足的严重性.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 dense-neighborhood route review、mixed SMT/THT neighbor access-risk taxonomy、manual touch-up serviceability risk、以及 pad/via/close solder neighborhood 的局部机理例子
+  - **What this still does not unlock**
+    - no spacing thresholds, via-to-pad rules, or universal solder-mask defaults
+    - no route-selection superiority or defect-certainty claims
+    - no reliability, burned-board, cost, cycle, or branded checker claims
+
+## 2026-05-09 (P4-342 PCB资料 E5 Component-Layout Importance Single-PDF Route Expansion)
+
+- **这轮把 `E5` 的布局/间距文章推进到 single-PDF route 层，但仍严格停在 layout-risk 与 access-boundary reuse 上**: `关于PCBA元器件布局的重要性` 现在已经接到 component spacing 作为 access / rework boundary、dense mixed-technology neighborhood review、tall-part interference review、以及 stencil-spacing interaction 的高层 context，但仍不解锁 spacing numerics、red/yellow/green grading、warpage-causality certainty、tool-check sufficiency、或 cost/cycle/reliability claims
+  - **新增 Log** (1 file):
+    - `logs/p4-342-2026-5-9-e5-component-layout-importance-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `关于PCBA元器件布局的重要性.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 component spacing 作为 access / rework boundary、dense mixed-technology neighborhood review、tall-part interference review、以及 stencil-spacing interaction context
+  - **What this still does not unlock**
+    - no spacing numerics, no universal safe-distance doctrine, and no red/yellow/green grading authority
+    - no stencil aperture / thickness defaults or exact bridging thresholds
+    - no warpage / reliability certainty, branded checker sufficiency, or cost/cycle claims
+
+## 2026-05-09 (P4-341 PCB资料 E7 Assembly-Analysis Input Package Single-PDF Route Expansion)
+
+- **这轮继续把 `E7` 相邻的 assembly-input 文章推进到 single-PDF route 层，但仍严格停在 input-package boundary reuse 上**: `华秋DFM组装分析前需准备的数据文件` 现在已经接到 assembly-analysis input package boundary、不同 file family 携带不同 downstream review context、以及 Gerber / drill handoff 可能仍需独立 `BOM` 与 placement-related companion artifacts 的谨慎边界，但仍不解锁 `PCB/ODB` universal embedded-`BOM` sufficiency、tool-side import capability、automatic matching correctness、或 one-workflow readiness claims
+  - **新增 Log** (1 file):
+    - `logs/p4-341-2026-5-9-e7-assembly-analysis-input-package-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `华秋DFM组装分析前需准备的数据文件.pdf` 不再只停在 `P4-290` 的 cluster-level inventory，而是有一条单 PDF route 接到 assembly-analysis input package boundary、不同 handoff family 的 downstream context 差异、以及 `Gerber/Drill` 可能仍需 `BOM` 与 placement-related companion data 的谨慎边界
+  - **What this still does not unlock**
+    - no universal `PCB` / `ODB` embedded `BOM` / coordinate sufficiency claims
+    - no branded import capability, compressed-package handling, or automatic matching correctness claims
+    - no supplier-neutral minimum assembly-analysis intake package or one-workflow readiness guarantees
+
+## 2026-05-09 (P4-340 PCB资料 E7 Data-Exchange Format Single-PDF Route Expansion)
+
+- **这轮把 `E7` 里最适合安全升格的一篇格式文章推进到 single-PDF route 层，但仍严格停在 handoff-boundary reuse 上**: `PCB 制造文件传输数据的主要格式` 现在已经接到 native authoring file 与 manufacturing handoff package 的身份分层、Gerber / ODB++ / IPC-DPMX 的 identity-level exchange vocabulary、以及 fabrication outputs 不等于 full assembly/test review package 的边界，但仍不解锁 Excellon authority closure、universal format-superiority、vendor support matrix、或 one-package readiness claims
+  - **新增 Log** (1 file):
+    - `logs/p4-340-2026-5-9-e7-data-exchange-format-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB制造文件传输数据的主要格式.pdf` 不再只停在 `P4-290` 的 cluster-level inventory，而是有一条单 PDF route 接到 native PCB authoring file 与 manufacturing handoff package 的身份分层、Gerber / ODB++ / IPC-DPMX 的 identity-level exchange wording、以及 fabrication outputs 不等于 full assembly/test review completeness 的边界
+  - **What this still does not unlock**
+    - no Excellon exact authority closure or current controller-support claims
+    - no universal format-superiority, universal supplier-acceptance, or mainstream-status claims
+    - no branded vendor support-matrix or one-package manufacturing-readiness guarantees
+
+## 2026-05-09 (P4-339 PCB资料 E5 DIP/THT Single-PDF Route Expansion)
+
+- **这轮继续把 `E5` 剩余文章按 single-PDF route integration 往前推一格，但仍严格停在既有 surface reuse 层**: `DIP / THT` 文章现在已经接到 mixed-technology route-planning、selective / wave solder context、以及 dense through-hole neighborhood access-review surfaces，但仍不解锁 hole-size / lead-diameter / pitch 数值、bridge-threshold 规则、软件检查充分性、或 cost/time/yield 结论
+  - **新增 Log** (1 file):
+    - `logs/p4-339-2026-5-9-e5-dip-tht-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `那些关于DIP器件不得不说的坑.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 DIP / THT fit-review identity、wave / selective solder 之前的 mixed-technology route planning、以及 dense through-hole neighborhood 的 access-review posture
+  - **What this still does not unlock**
+    - no hole-size / lead-diameter / pitch numerics or tolerance defaults
+    - no bridge-threshold rules, insertion-failure certainty, or reliability/safety outcome claims
+    - no branded checker sufficiency, cost/time savings, yield, or delivery claims
+
+## 2026-05-09 (P4-337 To P4-338 PCB资料 Single-PDF Route Expansion)
+
+- **这轮继续把 E5 / E6 的剩余高价值 article PDF 仅做 single-PDF route integration，而不是假装新增了事实层**: `BGA` 焊接文章和采购风险文章现在都已经接入 existing-surface reuse，但仍不解锁 pitch / escape 数值、via-in-pad 默认、stock / lead-time / authorized-source 事实或 shipping 结论
+  - **新增 Log** (2 files):
+    - `logs/p4-337-2026-5-9-e5-bga-soldering-route-integration.md`
+    - `logs/p4-338-2026-5-9-e6-procurement-risk-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `你想知道的BGA焊接问题都在这里.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 low-void BGA process review、reflow boundary、hidden-joint X-ray visibility 与 BGA process-chain posture surfaces
+    - `如何避免采购电子元器件入坑.pdf` 不再只停在 `P4-314` 的 cluster-level inventory，而是有一条单 PDF route 接到 BOM identity completeness、alternate control、traceability / counterfeit-risk vocabulary 与 procurement-review posture surfaces
+  - **What this still does not unlock**
+    - no BGA pitch / escape numerics, via-in-pad defaults, or acceptance/yield/reliability claims
+    - no live stock, lead-time, supplier capability, or delivery claims
+    - no authenticity / authorized-source proof for branded entities
+
+## 2026-05-09 (P4-334 To P4-336 PCB资料 Single-PDF Route Expansion)
+
+- **这轮继续用并发 subagent 只做单 PDF route 扩张，不制造虚假的“fact promotion”**: `E2` 的阻抗误差文章、`E5` 的钢网文章、`E6` 的 BOM 查错文章现在都已经有明确的单 PDF source-backed reuse route，但全部仍停在 existing-surface reuse 层，不新增 tolerance 数值、钢网 aperture 规则、采购/交期/库存事实、或工具充分性结论
+  - **新增 Log** (3 files):
+    - `logs/p4-334-2026-5-9-e2-impedance-tolerance-difficulty-route-integration.md`
+    - `logs/p4-335-2026-5-9-e5-stencil-and-paste-route-integration.md`
+    - `logs/p4-336-2026-5-9-e6-bom-sourcing-and-alternate-control-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB阻抗误差控制在5%，究竟有多难？.pdf` 不再只停在 `P4-310` 的 cluster-level 阻抗篮子，而是有一条单 PDF route 接到 impedance verification posture、measurement boundary、spread-glass planning、stackup planning 与 RF validation boundary
+    - `如何避免踩坑钢网.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 stencil/paste upstream control 与 mixed-technology sequencing surfaces
+    - `BOM查错助力元器件采购.pdf` 不再只停在 `P4-314` 的 cluster-level inventory，而是有一条单 PDF route 接到 BOM sourcing/traceability、AVL/alternate control、BOM complexity governance 与 shipping-boundary-as-non-claim surfaces
+  - **What this still does not unlock**
+    - no impedance tolerance percentages, exact geometry, solder-mask quantitative effects, or supplier capability claims
+    - no stencil aperture defaults, notch rules, mark-point geometry, fabrication-method precision claims, or process-window claims
+    - no software matching sufficiency, sourcing guarantees, stock/MOQ/lead-time claims, counterfeit-control guarantees, or shipping/delivery claims
+
+## 2026-05-09 (P4-329 To P4-333 PCB资料 Narrow Route Consolidation)
+
+- **这轮没有把 article side 单 PDF route 误报成“已 fully learned”，而是把 5 条更窄的 continuation 正式收进 tracker**: `E2` 的 `50 ohm` 文章、`E5` 的丝印/极性与测试/ICT 治具文章、`E6` 的 package 文章，现在都拥有了明确的单 PDF source-backed reuse route，但仍没有新增 package geometry、silkscreen numerics、test-fixture geometry、或 impedance recipe 事实层；同时 `1.50 mm` residual 也从“只有 standards-owner existence”推进到了“有 1 条 current-public owner-scoped near-hit”，但仍低于 exact-geometry closeout
+  - **新增 Log** (5 files):
+    - `logs/p4-329-2026-5-9-1p50mm-nxp-legacy-pbga-route.md`
+    - `logs/p4-330-2026-5-9-e5-test-method-and-ict-fixture-route-integration.md`
+    - `logs/p4-331-2026-5-9-e2-50ohm-impedance-route-integration.md`
+    - `logs/p4-332-2026-5-9-e5-polarity-reference-designator-route-integration.md`
+    - `logs/p4-333-2026-5-9-e6-package-family-and-footprint-route-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `PCB为什么常用50Ω阻抗？6大原因.pdf` 不再只靠 cluster-level `P4-310` 描述，而是有一条单 PDF route 接到 controlled-impedance planning、measurement boundary、stackup planning 与 RF structure surfaces
+    - `PCBA丝印位号与极性符号的组装性设计.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 polarity / orientation vocabulary 与 package-library governance surfaces
+    - `PCB测试四大方式你都了解吗？内含治具的DFM（可制造性）设计！.pdf` 不再只停在 `P4-313` 的 cluster-level inventory，而是有一条单 PDF route 接到 flying-probe vs ICT identity、fixture-introduction gate 与 inspection-governance map
+    - `电子元器件封装(Package).pdf` 不再只停在 `P4-314` 的 cluster-level inventory，而是有一条单 PDF route 接到 package-family vocabulary、package-to-footprint review 与 package-library governance surfaces
+    - `1.50 mm` residual 现在明确高于 `P4-318` 的 standards-metadata existence level，因为已有 `NXP` 当前公开 legacy `PBGA` near-hit 可引用为 owner-scoped continuation note
+  - **What this still does not unlock**
+    - no `50 ohm` historical-origin closure, geometry recipe, manufacturability proof, compatibility proof, or cost claim
+    - no universal silkscreen, polarity, or pin-1 numeric or acceptability rule
+    - no ICT / flying-probe cost, throughput, locator-hole geometry, or payback claim
+    - no package conversion rows, package geometry numerics, universal naming grammar, or footprint-geometry inference
+    - no exact `1.50 mm` public named-package land-pattern row
+
+## 2026-05-09 (P4-327 And P4-328 E6 Narrow Official-Source Recovery Batch)
+
+- **这轮按并发 subagent 把 `E6` 再往前推了两格，但仍严格停在窄边界上**: 现在除了已经 landed 的 `FPC` taxonomy，仓库又新增了两条可复用但不越界的 `E6` 路线：`0Ω` 文章现在有一条 owner-backed `jumper-class identity` 边界，`bom 与焊盘不匹配` 文章现在有一条 source-backed `package-to-footprint / pin-count alignment review` 边界；两条都没有把 package 尺寸、land-pattern 几何、自动匹配承诺、或更广的 `0R` 角色泛化写成事实
+  - **新增 Source / Fact / Log** (6 files):
+    - `sources/registry/methods/rohm-jumper-chip-resistor-faq.md`
+    - `sources/registry/methods/panasonic-chip-resistor-zero-ohm-marking-guide.md`
+    - `facts/methods/zero-ohm-jumper-resistor-identity-boundary.md`
+    - `facts/methods/package-to-footprint-and-pin-count-alignment-review-boundary.md`
+    - `logs/p4-327-2026-5-9-e6-zero-ohm-jumper-identity-source-recovery.md`
+    - `logs/p4-328-2026-5-9-e6-package-to-footprint-alignment-source-integration.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `0Ω电阻在PCB板中的5大常见作用.pdf` 不再只是 article role taxonomy，而是拥有一条官方支持的 `jumper-class identity + low-but-nonzero resistance` 边界
+    - `如何解决bom物料与焊盘不匹配问题.pdf` 不再只靠文章 case framing，而是拥有一条 source-backed `package-name / pin-count / library-selection mismatch` review boundary
+    - `P4-325` 现在可以把这两份 `E6` PDF 也写成 narrow `official_fact-backed` 路线，而不是继续全部压成 claim-family-only
+  - **What this still does not unlock**
+    - no package dimensions, hole sizes, or exact land-pattern geometry
+    - no automatic matching sufficiency or vendor-tool superiority claims
+    - no universal `0R` debug / isolation / configuration / fuse-substitute doctrine
+    - no change to the global `1.50 mm` package exact-geometry gap
+
+## 2026-05-09 (P4-326 E6 FPC Type Taxonomy Official-Source Recovery)
+
+- **这轮没有继续空转在 `1.50 mm` 包装 exact-geometry 盲搜上，而是先把 article side 最容易安全升级的一小块真正落库**: `E6` 里的 `单层 / 双面 / 多层 FPC` 比较现在已经接到 IPC 公共标准层，仓库新增了一条 standards-backed taxonomy 路线，后续写作不必再完全依赖文章 wording 才能区分 `single-sided`、`double-sided`、`multilayer flex` 和 `rigid-flex`
+  - **新增 Source / Fact / Wiki / Log** (4 files):
+    - `sources/registry/standards/ipc-2223e-toc.md`
+    - `facts/standards/ipc-flex-printed-board-type-taxonomy-boundary.md`
+    - `wiki/processes/flex-printed-board-type-taxonomy-and-structure-map.md`
+    - `logs/p4-326-2026-5-9-e6-fpc-type-taxonomy-official-source-recovery.md`
+  - **更新 Master / Index / Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `单层双面多层FPC有何区别？.pdf` 不再只是 `claim-family inventory`，而是拥有一条 `official_fact-backed` 的结构 taxonomy 路线
+    - `rigid-flex` 不必再被模糊写成普通 `multilayer FPC`
+    - 后续 agent 可以在 `llm_wiki` 内直接找到 `Type 1` 到 `Type 5` 的公开 IPC 分类入口
+  - **What this still does not unlock**
+    - no bend-radius, material-stack, coverlay, adhesive, or layer-limit rules
+    - no `0R` resistor role closure
+    - no procurement, BOM, or package-dimension promotion
+    - no change to the global `1.50 mm` package exact-geometry gap
+
+## 2026-05-08 (P4-325 PCB资料 Per-PDF Coverage Index)
+
+- **这轮没有继续盲开新 recovery lane，而是先把后续 `/goal` 最缺的一层补齐**: 仓库现在新增了一份 deletion-safe `per-PDF coverage index`，把 `/code/blogs/tmps/PCB资料` 下全部 `63` 个 PDF 逐个映射到当前 usage state、所属 cluster / handbook lane、以及最该恢复的仓库内落点；这样后续 subagent 可以按单个 PDF 或明确 cluster 直接派发，而不用再从 `P4-309` 的大段 master prose 里反推
+  - **新增 Log** (1 file):
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+  - **更新 Master / Plan / Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `docs/superpowers/plans/2026-05-08-pcb-ziliao-full-pdf-learning-and-usage-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - all `63` PDFs now have one explicit in-repo dispatch row instead of only batch-level or cluster-level prose coverage
+    - the `194页` RK3588 handbook is now harder to misread as already fact-promoted like the stronger handbook lanes
+    - future `/goal` work can split by exact PDF, exact cluster, or exact hold surface without rebuilding inventory
+  - **What this still does not unlock**
+    - no article PDF became per-file fact-promoted in this pass
+    - no new `1.50 mm` exact-geometry source or fact landed
+    - no change to the existing `E1` / `E7` hold-only posture
+
+## 2026-05-08 (P4-324 Microchip Third 0.75 mm TFBGA Row Landing)
+
+- **这轮继续收紧更容易安全落地的 `0.75 mm` residual，并把它从“两条 owner row”推进到“三条 owner row”**: 现在仓库里除了 `4LX` 与 `7G`，还补进了 `196-ball BAB TFBGA` 的第三条 named-package route，因此 `0.75 mm` 的 owner-scoped replacement surface 又宽了一层；但这仍然只是多个 named-package rows，不是 universal pitch law
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/microchip-196b-tfbga-bab-package-drawing-0p75mm-land-pattern.md`
+    - `facts/methods/microchip-0p75mm-tfbga-land-pattern-bab.md`
+    - `logs/p4-324-2026-5-8-microchip-third-0p75mm-tfbga-row-landing.md`
+  - **更新 Wiki / Fact / Master / Tracker** (5 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `0.75 mm` no longer depends on only two Microchip named-package rows
+    - future `/goal` work can describe `0.75 mm` as `three owner-scoped rows landed`
+    - the package route map now has a third in-repo exact-data stop for `0.75 mm`
+  - **What this still does not unlock**
+    - no universal cross-vendor `0.75 mm pitch -> pad diameter` rule
+    - no clean replacement yet for residual handbook `1.50 mm`
+    - no closeout for `connector-origin` or stronger `installation mark` authority
+
+## 2026-05-08 (P4-323 1.50 mm Search Filter Note)
+
+- **这轮没有继续盲搜 `1.50 mm`，而是先把一个高频误判模式写进仓库**: 当前 Microchip `E8B` drawing 虽然同时出现了 `1.50`、`RECOMMENDED LAND PATTERN`、和 BGA 语义，但复核后发现真实 `Pitch` 是 `1.00 BSC`，而 `1.50` 只对应 body-size wording 与 `Contact Pad Spacing`；因此这轮把它固定成 `1.50 mm` residual 的 search-filter note，而不是误判成新 owner row
+  - **新增 Log** (1 file):
+    - `logs/p4-323-2026-5-8-1p50mm-search-filter-note.md`
+  - **更新 Master / Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future `/goal` work can filter out `1.50` false positives earlier instead of repeatedly reopening wrong package drawings
+    - the repo now records one concrete example where `1.50` does not mean `1.50 mm pitch`
+    - the open `1.50 mm` lane now has a better search discipline without pretending that exact geometry is already found
+  - **What this still does not unlock**
+    - no public exact `1.50 mm` land-pattern row
+    - no new owner-scoped `1.50 mm` source record
+    - no closeout of the residual exact-geometry gap
+
+## 2026-05-08 (P4-322 Samtec Connector-Owner Layout Route Landing)
+
+- **这轮没有再碰被阻断的 Amphenol candidate，而是换成一条当前环境里可公开抓取、可文本复核的 Samtec owner drawing**: `MB1-1XX-XX-XX-S-XX-SL-X-FOOTPRINT` 现在已经把 `RECOMMENDED PCB LAYOUT`、`RECOMMENDED STENCIL LAYOUT`、和 `RECOMMENDED MATING CARD LAYOUT` 接进现有 connector boundary，因此这条 lane 不再只靠 `KiCad + Molex` 单组组合；但这仍然只是 named-series layout authority，不是 universal connector-origin 或 installation-mark doctrine
+  - **新增 Source / Log** (2 files):
+    - `sources/registry/methods/samtec-mb1-recommended-pcb-layout-and-mating-card.md`
+    - `logs/p4-322-2026-5-8-samtec-connector-owner-layout-route-landing.md`
+  - **更新 Fact / Wiki / Master / Tracker** (5 files):
+    - `facts/methods/connector-origin-and-installation-mark-boundary.md`
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - connector-owner support is no longer limited to `Molex 105133`
+    - future `/goal` work can reference a second publicly retrievable owner-series route for connector layout context
+    - the connector lane now separates `publicly retrievable owner routes` from `currently blocked owner candidates`
+  - **What this still does not unlock**
+    - no universal connector-origin default
+    - no standards-grade cross-vendor installation-mark doctrine
+    - no basis to generalize Samtec footprint geometry into a generic connector rule
+
+## 2026-05-08 (P4-321 Connector-Owner Amphenol Public Access Blocker Note)
+
+- **这轮没有把 scout candidate 硬抬成新主源，而是先把真实阻塞条件写进仓库**: `P4-315` 里那条 Amphenol connector-owner candidate 这次复查时，当前公开 URL 返回的是 `403` + Cloudflare challenge HTML，而不是可复核的 owner drawing PDF，所以这轮只把它固定成 access-blocker note，明确当前 `connector-origin / installation mark` lane 的可复用 ceiling 仍是 `P4-317`
+  - **新增 Log** (1 file):
+    - `logs/p4-321-2026-5-8-connector-owner-amphenol-public-access-blocker-note.md`
+  - **更新 Master / Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future `/goal` work no longer needs to guess whether the Amphenol candidate is already promotable
+    - the repo now records that one connector-owner strengthening candidate is blocked by current public access, not by topic irrelevance
+    - downstream agents can preserve `P4-317` as the lane ceiling without silently treating this candidate as missing work
+  - **What this still does not unlock**
+    - no new connector-owner source record
+    - no stronger cross-vendor installation-mark doctrine
+    - no universal connector-origin default
+
+## 2026-05-08 (P4-320 Microchip Second 0.75 mm TFBGA Row Landing)
+
+- **这轮没有再碰 `1.50 mm` ceiling，而是先把更容易安全落地的 `0.75 mm` residual 继续收紧**: 现在仓库里不止有 `4LX` 一条 `0.75 mm` Microchip owner row，还补进了 `169-ball 7G TFBGA` 的第二条 named-package route，因此 `0.75 mm` 已从“只有一条 owner-scoped row”推进到“已有多条 owner-scoped rows”，但仍不能升格成 universal pitch law
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/microchip-169b-tfbga-7g-package-drawing-0p75mm-land-pattern.md`
+    - `facts/methods/microchip-0p75mm-tfbga-land-pattern-7g.md`
+    - `logs/p4-320-2026-5-8-microchip-second-0p75mm-tfbga-row-landing.md`
+  - **更新 Wiki / Fact / Master / Tracker** (5 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `0.75 mm` no longer depends on only one Microchip named-package row
+    - future `/goal` work can describe `0.75 mm` as `multiple owner-scoped rows landed` without pretending the pitch class is universally solved
+    - the package route map now has a second in-repo exact-data stop for `0.75 mm`
+  - **What this still does not unlock**
+    - no universal cross-vendor `0.75 mm pitch -> pad diameter` rule
+    - no clean replacement yet for residual handbook `1.50 mm`
+    - no closeout for `connector-origin` or stronger `installation mark` authority
+
+## 2026-05-08 (P4-319 1.50 mm Public Exact-Geometry Recheck)
+
+- **这轮继续沿 `P4-309` 的当前主线尝试突破 `1.50 mm` residual，但没有把“不确定”伪装成“新落地”**: 复查了当前公开 package-owner 检索面，并抽样下载了 `NXP` 与 `Microchip` package PDF；结果仍未拿到一条可安全落库的 public `1.50 mm` exact-geometry row，所以这轮只把 negative result 固定成 controller note，明确当前 ceiling 仍是 `P4-318`
+  - **新增 Log** (1 file):
+    - `logs/p4-319-2026-5-8-1p50mm-public-exact-geometry-recheck.md`
+  - **更新 Master / Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future `/goal` work no longer needs to treat public `1.50 mm` exact-geometry as an unscouted blank area
+    - the repo now records that one more package-owner recheck still failed to exceed the current `P4-318` standards-owner boundary
+    - downstream agents can keep `1.50 mm` as the highest-value open gap without falsely assuming that a clean public row is already available
+  - **What this still does not unlock**
+    - no public exact `1.50 mm` pad-diameter or solder-mask row
+    - no named owner-scoped `1.50 mm` recommended-land-pattern source record
+    - no closeout of the residual exact-geometry gap
+
+## 2026-05-08 (P4-318 IEC 1.50 mm BGA Standards Existence Boundary)
+
+- **这轮没有伪造 `1.50 mm` 的 exact row，而是先把 standards-owner 能公开确认的最强边界落下来**: IEC 官方 webstore metadata 现在已经把 `1.50 mm / 1.27 mm / 1.00 mm` ball-and-column package design guide 的存在与包类范围正式接进仓库，因此 `1.50 mm` 不再只是 discovery noun，但仍然没有 public geometry row
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/standards/iec-60191-6-2-ball-column-package-design-guide-page.md`
+    - `facts/methods/bga-1p50mm-pitch-standards-existence-boundary.md`
+    - `logs/p4-318-2026-5-8-iec-1p50mm-bga-standards-existence-boundary.md`
+  - **更新 Wiki / Master / Tracker** (5 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `1.50 mm` now has one primary standards-owner existence-and-scope anchor instead of only scout notes
+    - future `/goal` work can distinguish `standards-owner existence confirmed` from `exact geometry still missing`
+    - the package route map now has one safe place to send `1.50 mm` terminology questions without pretending the blocked handbook row is replaced
+  - **What this still does not unlock**
+    - no public exact `1.50 mm` pad-diameter or solder-mask row
+    - no named package-owner `1.50 mm` land-pattern drawing landed yet
+    - no closeout of the residual exact-geometry gap
+
+## 2026-05-08 (P4-317 Connector Origin And Installation-Mark Boundary Landing)
+
+- **这轮没有硬冲 `1.50 mm`，而是把更稳的 residual 边界先落成一张可复用方法卡**: 现在仓库里已经有 `KiCad KLC` 的 library-convention 层，加上 `Molex 105133` 的 connector-owner drawing 层，`connector-origin` 与 `installation mark` 不再只靠 local handbook 或单点 KiCad 解释
+  - **新增 Source / Fact / Log** (4 files):
+    - `sources/registry/methods/kicad-library-conventions-footprint-orientation-and-marking.md`
+    - `sources/registry/methods/molex-105133-0002-micro-b-recommended-pcb-layout.md`
+    - `facts/methods/connector-origin-and-installation-mark-boundary.md`
+    - `logs/p4-317-2026-5-8-connector-origin-and-installation-mark-boundary-landing.md`
+  - **更新 Wiki / Fact / Master / Tracker** (6 files):
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `connector-origin` now has one explicit layered route: CAD-owner convention for generic library posture, connector-owner drawing for named series
+    - `installation mark` now has one stronger official wording path for `F.SilkS` and `F.Fab` pin-1 cues in connector-footprint documentation
+    - future `/goal` work no longer needs to rediscover that `connector-origin` and `installation mark` are only partially recoverable at layered boundary level
+  - **What this still does not unlock**
+    - no universal connector-origin default across all connector families
+    - no standards-grade cross-vendor installation-mark doctrine
+    - no clean replacement yet for residual handbook `1.50 mm`
+
+## 2026-05-08 (P4-316 Microchip 0.75 mm TFBGA Land-Pattern Landing)
+
+- **这轮没有再泛扫 package residual，而是把 `P4-315` 的最佳窄路径真正落成 source/fact 层**: Microchip 官方 `176-ball 4LX TFBGA` package drawing 现在已经把 `0.75 mm` pitch 从“完全未替代”推进到“已有 1 条 owner-scoped named-package replacement row”，并且这条路由已经接回当前 `package` exact-geometry map
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/microchip-176b-tfbga-4lx-package-drawing-0p75mm-land-pattern.md`
+    - `facts/methods/microchip-0p75mm-tfbga-land-pattern-4lx.md`
+    - `logs/p4-316-2026-5-8-microchip-0p75mm-tfbga-land-pattern-landing.md`
+  - **更新 Wiki / Fact / Master / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `0.75 mm` is no longer only a scout target; the repo now has one real official owner-scoped replacement row
+    - downstream prompts can now route one `0.75 mm` need into a named package drawing instead of reopening the blocked handbook table
+    - the master resume state now records that `0.75 mm` is partially recovered, not untouched
+  - **What this still does not unlock**
+    - no universal cross-vendor `0.75 mm pitch -> pad diameter` law
+    - no clean replacement yet for residual handbook `1.50 mm`
+    - no closeout yet for `connector-origin defaulting` or stronger `installation mark` authority
+
+## 2026-05-08 (P4-314 Article Usage-Lane Batch-3 Landing)
+
+- **这轮把 article side 最后一个未落 usage-route 的 `E6` 也收口了**: `package / BOM / 0R / FPC` 的 technical identity subset 现在已经有 controller-owned usage-route log，同时采购/库存/交期/供应商风险部分被明确留在 hold split 里，不再和 technical identity 混用
+  - **新增 Log** (1 file):
+    - `logs/p4-314-2026-5-8-pcb-article-e6-usage-route-integration.md`
+  - **这一轮 article side 的新状态**
+    - `E6` is now `controller_routed_at_usage_level_only_with_explicit_procurement_hold_split`
+    - article lanes landed under `P4-309` are now `E2`, `E3`, `E4`, `E5`, and `E6`
+    - `E1` and `E7` remain explicit hold-only lanes
+  - **更新 Master / Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the article corpus now has a full bounded usage-route surface across `E2-E6`
+    - future `/goal` work no longer needs another article-cluster usage-integration batch before returning to package residual authority
+    - the repo now separates `E6` technical identity subsets from procurement-risk hold subsets explicitly
+  - **What this still does not unlock**
+    - no direct promotion of package dimensions, BOM quantities, stock/lead-time/cost claims, supplier-screening claims, or `0R` selection rules
+    - no change yet to handbook residual `1.50 mm`, `0.75 mm`, connector-origin defaulting, or stronger installation-mark authority
+    - no package residual authority recovery has landed yet in this pass
+
+## 2026-05-08 (P4-310 And P4-312 Article Usage-Lane Batch-2 Landing)
+
+- **这轮继续沿 `P4-309` 推进 article usage integration，并把第二批两个最自然的 lane 收口了**: `E2` 与 `E4` 现在都已从 claim-family map 推进到 controller-owned usage-route logs，后续 agent 不需要再重扫这些 `PCB文章` PDF 才知道哪些内容可作 qualitative taxonomy、哪些只能留在 blocked / local-evidence / official-recovery 框里
+  - **新增 Log** (2 files):
+    - `logs/p4-310-2026-5-8-pcb-article-e2-usage-route-integration.md`
+    - `logs/p4-312-2026-5-8-pcb-article-e4-usage-route-integration.md`
+  - **这一轮 article side 的新状态**
+    - `E2` is now `usage_route_integrated_at_controller_level_only`
+    - `E4` is now `controller_routed_at_usage_level_only`
+    - article lanes already landed under `P4-309` are now `E3`, `E5`, `E2`, and `E4`
+    - the next uncovered article usage lane is now `E6`
+  - **更新 Master / Tracker** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the article corpus is no longer only split into `E3/E5 landed` versus `everything else pending`; `E2` and `E4` now also have explicit usage routing
+    - future `/goal` work can continue directly from `E6` rather than reopening layout, stackup, panelization, Mark, or character branches
+    - the repo now records that `E2` is safest to continue through official-source recovery for safety-distance and impedance, while `E4` is safest to continue through neutral local-evidence capture first
+  - **What this still does not unlock**
+    - no direct promotion of routing widths, spacing minima, stackup values, impedance tolerances, panel defaults, edge-clearance numbers, Mark sizes, or character geometry rules
+    - no supplier capability, quality, cost, delivery, or yield claims from article PDFs
+    - no closeout yet for `E6` or the package residual authority gap
+
+## 2026-05-08 (P4-309 PCB资料 Full Corpus Master Entry And Batch-1 Usage-Lane Kickoff)
+
+- **这轮先不假装 `PCB资料` 的 `63` 个 PDF 都已经完成 per-file 深吸收，而是把 corpus-wide 真实状态统一进一个新的总入口**: `P4-309` 已把 `4` 本 handbook 与 `59` 个 `PCB文章` PDF 的当前状态、批次边界、执行顺序和 resume 规则写成单一 master log，后续 `/goal` 不再需要在 `P4-291`、`P4-283`、`P4-292` 和 package residual notes 之间手动拼接上下文
+  - **新增 Log** (1 file):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+  - **这一轮定义的 corpus 真状态**
+    - handbook side remains `strong_complete_with_residual_authority_gaps`
+    - article side remains `cluster_covered_but_not_usage_integrated`
+    - batch-1 execution order is now explicitly `E3 -> E5`, then `E2 -> E4 -> E6`, with package residual authority recovery after the article usage lanes
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future `/goal` work now has one corpus-wide restart file instead of mixing handbook closeout, article cluster inventory, and unified-slice notes
+    - the repo now states clearly that article coverage exists but usage integration is still in progress
+    - the first operational batch is now narrowed to one master entry plus two bounded article usage lanes
+  - **What this still does not unlock**
+    - no claim that all `63` PDFs are already fully learned at fact/wiki consumption level
+    - no direct promotion of article numerics, capability promises, or workflow screenshots
+    - no closure yet for handbook residual `0.75 mm`, `1.50 mm`, connector-origin defaulting, or stronger installation-mark authority
+
+## 2026-05-08 (P4-308 Intel BGA Land Pad Guideline Landing)
+
+- **这轮补进了一条新的 package-owner BGA 主源，而且重点价值在 `0.4 mm VBGA/WLCSP`**: Intel 官方 `AN 114` 的 `Surface Land Pad Dimension` 已落成 source/fact，并接回当前 `package` 路由，让 page `28` blocked `BGA pitch-to-pad` 表的官方替代面进一步变宽
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/intel-an114-bga-land-pad-dimensions.md`
+    - `facts/methods/intel-bga-land-pad-guidelines-common-pitches-and-vbga.md`
+    - `logs/p4-308-2026-5-8-intel-bga-land-pad-guideline-landing.md`
+  - **更新 Wiki / Fact / Tracker** (5 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the package lane now has one more official owner-scoped BGA geometry source, not only `NXP / TI / Microchip`
+    - `0.4 mm VBGA/WLCSP` now has a direct official replacement row instead of only secondary-PDF pressure
+    - downstream prompts have a wider exact-geometry route while still staying inside package-owner scope
+  - **What this still does not unlock**
+    - no universal cross-vendor BGA rule
+    - no clean replacement yet for handbook residual `0.75 mm` and `1.50 mm`
+    - no direct closeout for non-BGA `pin-1 / origin / installation-mark` authority gaps
+
+## 2026-05-08 (P4-307 Package BGA Official Replacement Route Integration)
+
+- **这轮没有再新增 source，而是把仓库里已经落地的 `NXP / TI / Microchip` package-owner BGA/CSP exact-data 卡正式接回当前 `package` 路由**: `package-library-governance-and-footprint-review-map` 现在有了明确的 `Exact-Geometry Route`，`page 28` handbook 的 blocked `BGA pitch-to-pad` 表也因此有了可发现的官方替代路径
+  - **更新 Wiki / Fact / Log** (3 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-307-2026-5-8-package-bga-official-replacement-route-integration.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the package-governance surface no longer stops at abstract wording like `route to stronger authority`; it now points to specific in-repo owner-scoped BGA/CSP cards
+    - the blocked handbook page-`28` table is now easier to replace correctly during downstream prompt use
+    - the remaining residual exact-data gap is now narrowed to still-uncovered pitch classes such as `1.50 mm` and `0.75 mm`, rather than the whole table
+  - **What this still does not unlock**
+    - no universal cross-vendor `pitch -> pad diameter` law
+    - no new replacement for `1.50 mm` or `0.75 mm`
+    - no direct closeout for non-BGA `pin-1 / connector-origin / installation-mark` authority gaps
+
+## 2026-05-08 (P4-304 PCB资料 Package Pin-1 Origin Authority-Gap Tightening)
+
+## 2026-05-08 (P4-306 Package Pin-1 Origin KiCad Official Doc Tightening)
+
+- **这轮把已有的 `KiCad` 官方文档重新接到了 `pin-1 / origin` 的 authority gap 上，但仍只把它当作 CAD/library-owner convention，不假装已经拿到 package-owner 或 standards closeout**: 复核已登记的 `kicad-getting-started-guide` 后，补充了 `through-hole pin 1 @ (0,0)` 与 `KLC` library-convention 语义，并把这条官方支持点接入 `methods-padstack-origin-pin1-and-footprint-review-governance-boundary`
+  - **更新 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/kicad-getting-started-guide.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/p4-306-2026-5-8-package-pin1-origin-kicad-official-doc-tightening.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the `pin-1 / origin` lane now has one explicit official CAD-owner support point instead of relying only on internal public wording plus local handbook context
+    - `through-hole pin 1 @ (0,0)` can now be described as a guarded KiCad library convention inside footprint-governance discussions
+    - the remaining gap is narrower and clearer: next recovery should target package-owner, connector-owner, or standards-owner authority rather than more local restatement
+  - **What this still does not unlock**
+    - no universal connector-origin defaulting
+    - no package-owner land-pattern origin mandate
+    - no standards-grade `installation mark` convention
+
+## 2026-05-08 (P4-304 PCB资料 Package Pin-1 Origin Authority-Gap Tightening)
+
+- **这轮没有再泛扫 `PCB资料`，而是直接收紧 `package` 里优先级最高的 authority gap**: 针对 `pin-1`、`origin`、`installation mark`，复核了现有 internal APT resources 与 handbook pages `29-30`，判断当前还不足以升级成新的 `methods/*` 官方层 fact
+  - **新增 Evidence / Fact / Log** (3 files):
+    - `pdf_evidence/pcb_ziliao/package/pin1-origin-installation-mark-text-boundary.md`
+    - `facts/local_pdf/pin1-origin-installation-mark-visual-boundary.md`
+    - `logs/p4-304-2026-5-8-pcb-ziliao-package-pin1-origin-authority-gap-tightening.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the page-`29-30` handbook context for `pin-1` mark, polarity mark, installation mark, and origin examples no longer lives only inside transient analysis
+    - `llm_wiki` now has one more tightly scoped `local_pdf_fact` that can support blog-body documentation-governance explanation without pretending to be standards or package-owner authority
+    - the remaining gap is now narrower and explicit: future work should recover one stronger package-owner / CAD-owner / standards-adjacent source rather than continuing broad package evidence accumulation
+
+## 2026-05-08 (P4-305 Package Pin-1 Origin Internal Public Source Tightening)
+
+- **这轮继续沿着 `P4-304` 收紧 `pin-1 / origin` lane，但只做 internal-public source 补强，不假装已经拿到 package-owner authority**: 新登记了 `Assembly Drawing Essentials` 与 `SMT Component Polarity` 两条 APT 英文公开博客 source records，并小幅补强 `methods-padstack-origin-pin1-and-footprint-review-governance-boundary`
+  - **新增 Source / Log** (3 files):
+    - `sources/registry/internal/frontendapt-blog-assembly-drawing-essentials-en.md`
+    - `sources/registry/internal/frontendapt-blog-smt-component-polarity-en.md`
+    - `logs/p4-305-2026-5-8-package-pin1-origin-internal-public-source-tightening.md`
+  - **更新 Fact / Tracker** (4 files):
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the `pin-1 / polarity / assembly drawing` governance lane is no longer supported only by glossary + DFM JSON + local handbook context
+    - `llm_wiki` now has stronger internal public wording for explicit assembly-package annotation and zero-orientation discipline
+    - this still does not unlock package-owner land-pattern defaults, universal connector-origin rules, or standards-grade `pin-1` conventions
+
+## 2026-05-08 (P4-303 PCB资料 Package Naming-Grammar Evidence Batch 4)
+
+- **这轮继续把 `PCB资料` unified slice 往 `package` page `22` 的 naming-inventory 补齐，但仍严格停在 evidence-only**: `via padstack naming grammar`、`thermal pad or flash naming grammar`、`irregular pad and shape naming grammar` 现在都进入了 `pdf_evidence/pcb_ziliao/package/`
+  - **新增 Evidence / Log** (4 files):
+    - `pdf_evidence/pcb_ziliao/package/via-padstack-naming-grammar.md`
+    - `pdf_evidence/pcb_ziliao/package/thermal-pad-or-flash-naming-grammar.md`
+    - `pdf_evidence/pcb_ziliao/package/irregular-pad-and-shape-naming-grammar.md`
+    - `logs/p4-303-2026-5-8-pcb-ziliao-package-naming-grammar-evidence-batch-4.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the page-`22` handbook naming-grammar inventory no longer lives only inside older lane logs
+    - future agents can retrieve these naming-surface examples from the unified evidence layer even after `tmps/` cleanup
+    - the `package` evidence layer now better preserves controlled-library naming provenance without promoting it into fact authority
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no house-formatted naming strings were promoted as universal grammar
+    - the local text still does not replace package-owner, CAD-owner, or standards-backed naming authority
+  - **Current status**
+    - `package` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader again
+    - direct blog-body consumption still flows through existing admitted fact and wiki layers, not the new text excerpts themselves
+    - all three new records remain `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-302 PCB资料 Package Lead-Family Evidence Batch 3)
+
+- **这轮继续把 `PCB资料` unified slice 往 `package` family-aware review posture 补齐，但仍严格停在 evidence-only**: `package lead-family review logic` 现在也进入了 `pdf_evidence/pcb_ziliao/package/`
+  - **新增 Evidence / Log** (2 files):
+    - `pdf_evidence/pcb_ziliao/package/package-lead-family-review-logic-diagram.md`
+    - `logs/p4-302-2026-5-8-pcb-ziliao-package-lead-family-evidence-batch-3.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the admitted `gull-wing / no-lead extension / J-lead` family-aware review grouping now has a direct local evidence record in the unified evidence layer
+    - downstream prompts can now retrieve a clean package lead-family review-logic concept without reopening the temporary extraction tree
+    - the `package` evidence layer now better matches the admitted package-governance vocabulary already present in the current fact and wiki surface
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no threshold band, mil value, or land-pattern rule was promoted
+    - the local diagram still does not replace the admitted fact layer for blog-body wording
+  - **Current status**
+    - `package` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader again
+    - direct blog-body consumption still flows through existing admitted fact and wiki layers, not the new diagram itself
+    - the new record remains `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-301 PCB资料 PCBA Orientation Vocabulary Evidence Batch 8)
+
+- **这轮继续把 `PCB资料` unified slice 往 `PCBA` orientation-vocabulary 补齐，但仍严格停在 evidence-only**: `component polarity visibility` 和 `readable marking direction` 现在也进入了 `pdf_evidence/pcb_ziliao/pcba/`
+  - **新增 Evidence / Log** (3 files):
+    - `pdf_evidence/pcb_ziliao/pcba/component-polarity-visibility-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/readable-marking-direction-example.md`
+    - `logs/p4-301-2026-5-8-pcb-ziliao-pcba-orientation-vocabulary-evidence-batch-8.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the admitted `component polarity visibility` and `readable marking direction` wording now have direct local evidence records in the unified evidence layer
+    - downstream prompts can now retrieve all page-`44` clean orientation-vocabulary concepts through `pdf_evidence/pcb_ziliao/pcba/`
+    - the `PCBA` evidence layer now better matches the admitted orientation/polarity taxonomy already present in the current fact and wiki surface
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no best/acceptable/unacceptable labels, universal install rules, or workmanship conclusions were promoted
+    - the local diagram still does not replace the admitted fact layer for blog-body wording
+  - **Current status**
+    - `PCBA` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader again
+    - direct blog-body consumption still flows through existing admitted fact and wiki layers, not the new diagram itself
+    - both new records remain `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-300 PCB资料 PCBA Jumper Clearance Evidence Batch 7)
+
+- **这轮继续把 `PCB资料` unified slice 往 `PCBA` jumper-clearance structural context 补齐，但仍严格停在 evidence-only**: `jumper-wire path clearance context` 现在也进入了 `pdf_evidence/pcb_ziliao/pcba/`
+  - **新增 Evidence / Log** (2 files):
+    - `pdf_evidence/pcb_ziliao/pcba/jumper-wire-path-clearance-context.md`
+    - `logs/p4-300-2026-5-8-pcb-ziliao-pcba-jumper-clearance-evidence-batch-7.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the admitted `jumper-wire path clearance context` wording now has a direct local evidence record in the unified evidence layer
+    - downstream prompts can now retrieve both jumper-route-shape and local-clearance context from `pdf_evidence/pcb_ziliao/pcba/`
+    - the `PCBA` evidence layer now better matches the admitted board-warpage and jumper-wire vocabulary surface
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no wire gauge, insulation, approved repair method, or dimensional-spacing prescription was promoted
+    - the local image still does not replace the admitted fact layer for blog-body wording
+  - **Current status**
+    - `PCBA` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader again
+    - direct blog-body consumption still flows through existing admitted fact and wiki layers, not the new image itself
+    - the new record remains `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-299 PCB资料 Package Blocked Exact-Data Evidence Batch 2)
+
+- **这轮把 `package` 里高价值但仍 blocked 的 exact-data surfaces 也沉淀进统一 evidence 层**: page `24` 的 `pin compensation` / `flash calculation` 图，以及 page `28` 的 `BGA pitch-to-pad-diameter` 表，现在都已进入 `pdf_evidence/pcb_ziliao/package/`，但全部保持 `evidence_only`
+  - **新增 Evidence / Log** (4 files):
+    - `pdf_evidence/pcb_ziliao/package/pin-compensation-calculation-rule-diagram.md`
+    - `pdf_evidence/pcb_ziliao/package/flash-calculation-rule-diagram.md`
+    - `pdf_evidence/pcb_ziliao/package/bga-pitch-to-pad-diameter-table.md`
+    - `logs/p4-299-2026-5-8-pcb-ziliao-package-blocked-exact-data-evidence-batch-2.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - important blocked exact-data candidates in the package lane no longer live only inside older lane logs
+    - the unified evidence layer now preserves both blog-safe structural visuals and future-authority-recovery exact-data candidates
+    - future agents can recover these blocked tables and formula panels from `llm_wiki` even after `tmps/` cleanup
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no pin-compensation, flash-construction, or BGA table numerics were promoted
+    - these records still do not authorize blog-body geometry rules
+  - **Current status**
+    - `package` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader and more useful for future exact-data recovery
+    - direct blog-body consumption still remains limited to the existing promoted non-numeric package structural visuals
+    - all three new records remain `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-298 PCB资料 PCBA Misalignment Evidence Batch 6)
+
+- **这轮继续把 `PCB资料` unified slice 往 `PCBA` misalignment taxonomy 扩，但仍严格停在 evidence-only**: `chip component misalignment` 这张偏移异常图现在也进入了 `pdf_evidence/pcb_ziliao/pcba/`
+  - **新增 Evidence / Log** (2 files):
+    - `pdf_evidence/pcb_ziliao/pcba/chip-component-misalignment-example.md`
+    - `logs/p4-298-2026-5-8-pcb-ziliao-pcba-misalignment-evidence-batch-6.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the admitted `chip component misalignment` taxonomy now has a direct local evidence record in the unified evidence layer
+    - downstream prompts can now retrieve a concrete misalignment example through `pdf_evidence/pcb_ziliao/pcba/`
+    - the `PCBA` evidence layer more closely matches the full admitted defect-photo taxonomy set
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no offset percentage, terminal-overhang limit, or acceptability conclusion was promoted
+    - the local image still does not replace the admitted fact layer for blog-body wording
+  - **Current status**
+    - `PCBA` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader again
+    - direct blog-body consumption still flows through existing admitted fact and wiki layers, not the new image itself
+    - the new record remains `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-297 PCB资料 PCBA Polarity Taxonomy Evidence Batch 5)
+
+- **这轮继续把 `PCB资料` unified slice 往 `PCBA` polarity taxonomy 扩，但仍严格停在 evidence-only**: `radial capacitor lead orientation` 和 `reversed polarity example` 这 `2` 张极性方向图现在也进入了 `pdf_evidence/pcb_ziliao/pcba/`
+  - **新增 Evidence / Log** (3 files):
+    - `pdf_evidence/pcb_ziliao/pcba/radial-capacitor-lead-orientation-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/reversed-polarity-example.md`
+    - `logs/p4-297-2026-5-8-pcb-ziliao-pcba-polarity-taxonomy-evidence-batch-5.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the `component-orientation-and-polarity` admitted vocabulary now has matching local evidence records for the radial-capacitor slice
+    - downstream prompts can now retrieve polarity-direction examples through the unified evidence layer
+    - the evidence layer now better matches the admitted orientation/polarity taxonomy already present in the current fact and wiki surface
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no lead-length rule, universal polarity law, or acceptability judgment was promoted
+    - the local diagrams still do not replace the admitted fact layer for blog-body wording
+  - **Current status**
+    - `PCBA` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader again
+    - direct blog-body consumption still flows through existing admitted fact and wiki layers, not the new diagrams themselves
+    - both new records remain `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-296 PCB资料 PCBA Contamination Taxonomy Evidence Batch 4)
+
+- **这轮继续把 `PCB资料` unified slice 往 `PCBA` contamination taxonomy 扩，但仍严格停在 evidence-only**: `particulate contamination` 和 `white residue` 这 `2` 张污染类图现在也进入了 `pdf_evidence/pcb_ziliao/pcba/`
+  - **新增 Evidence / Log** (3 files):
+    - `pdf_evidence/pcb_ziliao/pcba/particulate-contamination-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/white-residue-example.md`
+    - `logs/p4-296-2026-5-8-pcb-ziliao-pcba-contamination-taxonomy-evidence-batch-4.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the contamination-family image set in `PCBA` is no longer limited to flux residue and gold-finger contamination
+    - downstream prompts can now retrieve particulate and white-residue examples through the unified evidence layer
+    - the evidence layer now better matches the admitted contamination taxonomy already present in the current fact and wiki surface
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no cleanliness threshold, composition certainty, or release conclusion was promoted
+    - the local images still do not replace the admitted fact layer for blog-body wording
+  - **Current status**
+    - `PCBA` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader again
+    - direct blog-body consumption still flows through existing admitted fact and wiki layers, not the new images themselves
+    - both new records remain `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-295 PCB资料 PCBA Anomaly Taxonomy Evidence Batch 3)
+
+- **这轮继续把 `PCB资料` unified slice 往 `PCBA` anomaly taxonomy 扩，但仍严格停在 evidence-only**: `side-mounted`、`upside-down`、`tombstone`、`coplanarity` 这 `4` 张异常形态图现在都已进入 `pdf_evidence/pcb_ziliao/pcba/`，不过全部保持 `evidence_only`
+  - **新增 Evidence / Log** (5 files):
+    - `pdf_evidence/pcb_ziliao/pcba/side-mounted-chip-placement-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/upside-down-chip-placement-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/tombstone-defect-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/coplanarity-defect-example.md`
+    - `logs/p4-295-2026-5-8-pcb-ziliao-pcba-anomaly-taxonomy-evidence-batch-3.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the cleanest remaining `PCBA` anomaly-family images from pages `150-151` are no longer trapped only in the older lane and asset-link logs
+    - `pdf_evidence/pcb_ziliao/pcba/` now carries a broader deletion-safe anomaly-taxonomy layer
+    - downstream prompts can now look up these anomaly-family examples through the unified evidence layer rather than depending on the temporary extraction tree
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no severity ranking, accept/reject conclusion, or root-cause claim was promoted
+    - the local images still do not replace the admitted fact layer for blog-body wording
+  - **Current status**
+    - `PCBA` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader again
+    - direct blog-body consumption still flows through existing admitted fact and wiki layers, not the new images themselves
+    - all four new records remain `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-294 PCB资料 Package Evidence Expansion Batch 1)
+
+- **这轮接着把 `PCB资料` unified slice 扩到 `package` 的下一组安全结构图，但仍严格不做新事实提升**: pages `25-27` 的 `4` 张 package-to-footprint geometry-variable 图现在都进了 `pdf_evidence/pcb_ziliao/package/`，不过全部保持 `evidence_only`
+  - **新增 Evidence / Log** (5 files):
+    - `pdf_evidence/pcb_ziliao/package/no-lead-smd-footprint-variable-mapping-diagram.md`
+    - `pdf_evidence/pcb_ziliao/package/gull-wing-smd-footprint-variable-mapping-diagram.md`
+    - `pdf_evidence/pcb_ziliao/package/flat-laying-smd-footprint-variable-mapping-diagram.md`
+    - `pdf_evidence/pcb_ziliao/package/j-lead-smd-footprint-variable-mapping-diagram.md`
+    - `logs/p4-294-2026-5-8-pcb-ziliao-package-evidence-expansion-batch-1.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - the cleanest remaining `Tier 2` package geometry-variable assets are no longer trapped only in the older package asset-linkage map
+    - `pdf_evidence/pcb_ziliao/package/` now preserves the next bounded package follow-on set in the unified evidence layer
+    - downstream prompts can now look up these package-variable diagrams as provenance without re-reading the handbook slice
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no compensation equations or handbook numeric ranges were promoted
+    - package-specific footprint defaults remain blocked
+  - **Current status**
+    - the package evidence layer is wider than the initial `P4-292` slice
+    - the direct blog-body local-PDF layer is still limited to the previously promoted non-numeric package structural visuals
+    - all four new records remain `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-293 PCB资料 PCBA Evidence Expansion Batch 2)
+
+- **这轮继续把 `PCB资料` 的 unified slice 往实体层推进，但仍严格停在 evidence-only**: `PCBA` 现在又多了 `5` 个本地证据记录，覆盖 `burn/discoloration`、`warpage`、`jumper-wire`、`ESD workstation grounding`、`ESD awareness symbol`；不过这批都没有升成新的 `facts/local_pdf/`
+  - **新增 Evidence / Log** (6 files):
+    - `pdf_evidence/pcb_ziliao/pcba/burn-mark-versus-solder-mask-discoloration-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/board-warpage-visual-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/jumper-wire-routing-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/esd-workstation-grounding-layout.md`
+    - `pdf_evidence/pcb_ziliao/pcba/esd-awareness-symbol-example.md`
+    - `logs/p4-293-2026-5-8-pcb-ziliao-pcba-evidence-expansion-batch-2.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `pcba-al-007` through `pcba-al-011` no longer live only in old asset-link or lane logs
+    - `pdf_evidence/pcb_ziliao/pcba/` now carries the next safe deletion-safe image batch for `PCBA`
+    - downstream prompts can now retrieve these local images from the unified evidence layer instead of depending on `tmps/` memory
+  - **What this does not change**
+    - no new `facts/local_pdf/` were created
+    - no warpage thresholds, jumper-wire prescriptions, or ESD compliance conclusions were promoted
+    - the local ESD images still do not replace the official-source-backed fact layer
+  - **Current status**
+    - `PCBA` evidence coverage inside `pdf_evidence/pcb_ziliao/` is broader and more durable
+    - the promoted blog-body local-PDF slice is still limited to the package structural visuals from `P4-292`
+    - all five new records remain `blocked_evidence` with `promotion_status: evidence_only`
+
+## 2026-05-08 (P4-292 PCB资料 Unified Knowledge Layer First Slice Landing)
+
+- **这轮把 `2026-05-08` unified model 从 plan-only 推进到了实体层**: `PCB资料` 现在不再只是“计划以后要落 `pdf_evidence/pcb_ziliao/` 和 `facts/local_pdf/`”，而是已经有首批真实 records，且 policy / tracker 已同步切到 `official_fact` + `local_pdf_fact` + `blocked_evidence` 的消费模型
+  - **新增 Evidence / Facts / Log** (15 files):
+    - `pdf_evidence/pcb_ziliao/README.md`
+    - `pdf_evidence/pcb_ziliao/pcba/through-hole-solder-wetting-continuity-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/gold-finger-solder-contamination-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/flux-residue-visibility-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/adhesive-contamination-before-soldering-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/horizontal-component-orientation-example.md`
+    - `pdf_evidence/pcb_ziliao/pcba/vertical-component-polarity-orientation-example.md`
+    - `pdf_evidence/pcb_ziliao/package/padstack-layer-role-diagram.md`
+    - `pdf_evidence/pcb_ziliao/package/leaded-footprint-review-dimensions-diagram.md`
+    - `pdf_evidence/pcb_ziliao/package/chip-footprint-review-dimensions-diagram.md`
+    - `pdf_evidence/pcb_ziliao/package/bga-array-layout-context.md`
+    - `facts/local_pdf/README.md`
+    - `facts/local_pdf/padstack-layer-role-visual-boundary.md`
+    - `facts/local_pdf/footprint-review-dimensions-visual-boundary.md`
+    - `logs/p4-292-2026-5-8-pcb-ziliao-unified-knowledge-layer-first-slice-landing.md`
+  - **更新 Policy / Tracker** (5 files):
+    - `policies/prompt-consumption-specification.md`
+    - `policies/exact-data-admission-policy.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - `pdf_evidence/pcb_ziliao/` now exists as a real deletion-safe evidence layer
+    - `facts/local_pdf/` now exists as a real blog-consumable local-PDF fact layer
+    - downstream prompts now explicitly distinguish `official_fact`, `local_pdf_fact`, and `blocked_evidence`
+    - `P4-291 strong_complete` is now clearly separated from the newer unified-slice landing state
+  - **Promotion judgment in this pass**
+    - promoted to `local_pdf_fact`:
+      - package page `23` padstack layer-role diagram
+      - package page `36` leaded-package review-dimension diagram
+      - package page `38` chip-footprint review-dimension diagram
+    - kept as `blocked_evidence` / evidence-only:
+      - first-batch `PCBA` defect and orientation images
+      - package page `28` BGA array-layout context
+  - **Why the split matters**
+    - the package diagrams can be written into blog body as scoped local visual explanations without pretending to be official standards or package-owner defaults
+    - the `PCBA` local images add provenance, but their safe wording is already covered by existing admitted boundary facts, so forcing a second fact layer now would add little value and more prompt risk
+  - **Current status**
+    - blog-ready local-PDF slice exists for non-numeric package structural visuals
+    - `PCBA` local visuals are now durable evidence, but not new local-PDF body facts
+    - `BGA` pitch-adjacent content, handbook thresholds, branded `DFM` UI, and dynamic capability/commercial claims remain blocked
+
+## 2026-05-08 (PCB资料 Unified Authority Model And First Implementation Slice Plan)
+
+- **这轮没有继续新增 `PCB资料` 的 source / fact / wiki 实体，而是把长期模型和当前执行切口正式写进 `llm_wiki`**: 为了让后续 `/goal` 和 subagent 不再依赖 `tmps/` 存活、也不再把 `PCB资料` 只当成 `exact-data governance` 项目，这次把“全库统一权威模型 + `PCB资料` 首批落地切片”明确落到 README 和专用计划文档
+  - **新增 Plan** (1 file):
+    - `docs/superpowers/plans/2026-05-08-pcb-ziliao-unified-knowledge-layer-plan.md`
+  - **更新 README** (1 file):
+    - `README.md`
+  - **What this pass now fixes**
+    - `llm_wiki` 现在明确区分 `official_fact`、`local_pdf_fact`、`blocked_evidence`
+    - `deletion_safe` 被明确降回状态字段，而不是目录层名
+    - `/code/blogs/tmps/PCB资料` 的下一阶段默认目标不再只是继续旧的 `exact-data` lane，而是先落 `pdf_evidence/pcb_ziliao/` 与 `facts/local_pdf/` 这两个可长期消费的知识层
+    - 后续 `/goal` 可直接读取新的计划文档来持续 dispatch subagents
+  - **What this does not change**
+    - 这轮没有新增 `pdf_evidence/pcb_ziliao/` 实体记录
+    - 这轮没有新增 `facts/local_pdf/` 实体记录
+    - `materias_pdf` 仍然不在本轮范围内
+  - **Current status**
+    - unified model is now documented
+    - `PCB资料` implementation slice is now plan-ready
+    - the next long-running execution should start from `docs/superpowers/plans/2026-05-08-pcb-ziliao-unified-knowledge-layer-plan.md`
+
+## 2026-05-07 (P4-288 Remaining-Scope D4 And E6 Lane Execution)
+
+- **这轮把 `P4-287` 的 remaining-scope 续跑再推进一档**: `194页 RK3588 handbook` 的 `D4` 和 `PCB文章` 的 `E6` 继续被执行成 bounded lane logs，continuation surface 从 planning 转成 actual execution
+  - **新增 Logs** (3 files):
+    - `logs/p4-282d-2026-5-7-rk3588-handbook-lane-interface-and-memory-routing.md`
+    - `logs/p4-283e6-2026-5-7-pcb-article-e6-packages-bom-and-component-selection-alignment-claim-family-map.md`
+    - `logs/p4-288-2026-5-7-pcb-pdf-lane-d4-e6-controller-integration.md`
+  - **What this pass now fixes**
+    - `194页 handbook` 已从 `D3` 继续到 `D4`
+    - `PCB文章` 已从 `E4` 继续到 `E6`
+    - 下次 AI 现在应该从 `D5` / `E2` 接着跑，而不是回头重扫 `D4/E6`
+  - **What this does not change**
+    - no new source-backed `facts/` or `wiki/` were landed
+    - no exact interface, memory, package, procurement, or stock numerics were promoted
+    - no branded `华秋DFM` surfaces or vendor procurement pitches were upgraded into reusable authority
+  - **Current status**
+  - `D4` and `E6` are now `claim_family_level_only` learned lanes
+  - `D5` and `E2` remain open
+  - the overall `/code/blogs/tmps/PCB资料` exact-data program still must not be marked complete
+
+## 2026-05-07 (P4-291 PCB PDF Strong Completion Closeout)
+
+- **这轮把 `/code/blogs/tmps/PCB资料` 的 controller 状态正式收口**: 经过 `P4-217` 强完成标准对照、`P4-219` 后的 exact-data / wiki / asset 链接证据、以及 `C2-R1` 残余边界核对，batch-level program completion 现在应当记为 `strong_complete`
+  - **新增 Log** (1 file):
+    - `logs/p4-291-2026-5-7-pcb-pdf-strong-completion-closeout.md`
+  - **What this pass now fixes**
+    - program-level 状态不再停留在“有很多学习产物但仍未完成”的模糊态
+    - `P4-217` 的 strong completion 条件现在有 controller-owned 结论
+    - future AI 可以直接从 `strong_complete` 状态继续做残余 blocker 维护，而不是重新判断整个 batch 是否学完
+  - **What this does not change**
+    - `C2-R1` 仍保留 `1.50 mm` 与 `0.75 mm` 作为 residual blocker
+    - generic `MIN / MAX / recommended` universalization 仍 blocked
+    - 若未来出现更强官方 source，`C2-R1` 可以作为可选 authority-recovery lane 重新打开
+  - **Current status**
+    - `/code/blogs/tmps/PCB资料` now `strong_complete`
+    - residual blockers remain recorded but non-blocking at the program level
+
+## 2026-05-07 (P4-289 Remaining-Scope D5 And E2 Lane Execution)
+
+- **这轮把 `P4-288` 的 remaining-scope 再推进到当前这一段的收口**: `194页 RK3588 handbook` 的 `D5` 和 `PCB文章` 的 `E2` 继续被执行成 bounded lane logs，continuation surface 现在从“最后一对剩余 lane”转成“继续处理其他未执行 cluster 或 exact-data lane”
+  - **新增 Logs** (3 files):
+    - `logs/p4-282e-2026-5-7-rk3588-handbook-lane-emc-esd-and-dfm-review-boundaries.md`
+    - `logs/p4-283b-2026-5-7-pcb-article-e2-layout-routing-stackup-layers-and-impedance-claim-family-map.md`
+    - `logs/p4-289-2026-5-7-pcb-pdf-lane-d5-e2-controller-integration.md`
+  - **What this pass now fixes**
+    - `194页 handbook` 已从 `D4` 继续到 `D5`
+    - `PCB文章` 已从 `E6` 继续到 `E2`
+    - 下次 AI 现在应该从 `E1` / `E7` 或其他 exact-data continuation 接着跑，而不是回头重扫 `D5/E2`
+  - **What this does not change**
+    - no new source-backed `facts/` or `wiki/` were landed
+    - no exact EMC / DFM / routing / stackup / impedance numerics were promoted
+    - no branded `华秋DFM` surfaces or vendor rule tables were upgraded into reusable authority
+  - **Current status**
+    - `D5` and `E2` are now `claim_family_level_only` learned lanes
+    - `E1` and `E7` remain open
+    - the overall `/code/blogs/tmps/PCB资料` exact-data program still must not be marked complete
+
+## 2026-05-07 (P4-290 Article-Corpus E1 And E7 Closure)
+
+- **这轮把 `PCB文章` corpus 的最后两条 cluster 也收掉了**: `E1` 和 `E7` 现在都已形成 controller-owned hold maps，article corpus 终于从“部分 cluster 已执行”变成“`E1-E7` 全部有正式 lane output”
+  - **新增 Logs** (3 files):
+    - `logs/p4-283a-2026-5-7-pcb-article-dfm-governance-and-persuasion-hold-map.md`
+    - `logs/p4-283c-2026-5-7-pcb-article-manufacturing-data-exchange-and-vendor-tool-hold-map.md`
+    - `logs/p4-290-2026-5-7-pcb-article-e1-e7-controller-integration.md`
+  - **What this pass now fixes**
+    - `PCB文章` 已补完 `E1` DFM governance / persuasion
+    - `PCB文章` 已补完 `E7` manufacturing-data / vendor-tool workflow
+    - 下次 AI 不需要再 broad reread `E1-E7`；article corpus 已经在 claim-family / hold-map 层面闭环
+  - **What this does not change**
+    - no new source-backed `facts/` or `wiki/` were landed
+    - no article numerics, branded rule tables, or vendor workflow promises were promoted
+    - `/code/blogs/tmps/PCB资料` exact-data program still remains open outside the article cluster surface
+  - **Current status**
+    - `E1-E7` are now controller-covered
+    - article corpus is now closed at `claim_family_level_only`
+    - exact-data and authority-recovery continuations remain open
+
+## 2026-05-07 (P4-281 PCB PDF Continuation Plan And Resume Entry)
+
+- **这轮没有继续补新 source / fact / wiki，而是把 continuation surface 收紧成后续 AI 可直接接手的执行入口**: `P4-06 Batch 1` 和 `/code/blogs/tmps/PCB资料` 在最近几轮里已经很容易被混成“同一条主线”，这次显式把它们拆开，避免后续 AI 一边重复 `bridge audit`，一边又误把 `PCB资料` 当成“已经学完”
+  - **新增 Plan / Log** (2 files):
+    - `docs/superpowers/plans/2026-05-07-pcb-pdf-continuation-plan.md`
+    - `logs/p4-281-2026-5-7-pcb-pdf-continuation-plan-and-resume-entry.md`
+  - **What this controller pass now fixes**
+    - `P4-06 Batch 1` is now explicitly tracked as `prompt-handoff complete` only
+    - `/code/blogs/tmps/PCB资料` is now explicitly tracked as a separate governed `exact-data learning` continuation
+    - only the `4` handbook PDFs are treated as formally learned inputs, and only `3` of them currently have dedicated lane-log coverage
+    - the `59` `PCB文章` PDFs are explicitly kept outside formal per-PDF learning scope until a dedicated clustering/intake pass lands
+  - **What this does not change**
+    - no new exact-data artifacts were landed
+    - no blocked numeric table, formula, or branded rule was promoted
+    - no new source recovery was executed
+  - **Current status**
+    - later AI should draft `6-layer / 8-layer / 10-layer` only from `P4-255`
+    - later AI should resume `PCB资料` learning from `P4-281` plus the new continuation plan, not from the stale `P4-117` session entry
+    - `PCB资料` overall still must not be marked fully learned
+
+## 2026-05-07 (P4-282 To P4-284 Remaining PCB PDF Scope Formalization)
+
+- **这轮真正把 `PCB资料` 里最后两块还没正式接进学习主线的范围收进来了**: 不是继续补 source/fact，而是把 `194页 RK3588 handbook` 和 `59` 个 `PCB文章` PDF 从“知道还没学”推进成“已经有正式 controller-owned continuation”
+  - **新增 Logs** (3 files):
+    - `logs/p4-282-2026-5-7-rk3588-handbook-lane-split-plan.md`
+    - `logs/p4-283-2026-5-7-pcb-article-cluster-inventory.md`
+    - `logs/p4-284-2026-5-7-pcb-pdf-remaining-scope-controller-integration.md`
+  - **What this pass now fixes**
+    - `194页 handbook` no longer stays at vague `claim-family intake only`; it now has explicit bounded lanes `D1-D5`
+    - the `59` `PCB文章` PDFs no longer stay outside formal learning; they now have neutral English cluster inventory and a priority order
+    - the remaining `PCB资料` scope now has a single controller-owned continuation surface instead of depending on memory or chat context
+  - **What this does not change**
+    - no new source-backed fact cards were landed from the new `194页` or article clusters
+    - no handbook or article numerics were promoted
+    - no branded `华秋DFM` rule/UI material was upgraded into reusable authority
+  - **Current status**
+    - all `4` handbook PDFs are now inside formal learning scope
+    - only `85页 EMC`、`158页 PCBA检验`、`42种封装` have executed lane logs so far
+    - `194页 handbook` and the `59` `PCB文章` PDFs still remain below narrow-lane execution and below any new exact-data promotion
+
+## 2026-05-07 (P4-285 Remaining-Scope D1 And E3 Lane Execution)
+
+- **这轮把 `P4-284` 的 continuation 真正往前推了一步**: 不再只是 plan / split / cluster inventory，而是把 `194页 RK3588 handbook` 的 `D1` 和 `PCB文章` 的 `E3` 各执行出了一条真正的 bounded lane
+  - **新增 Logs** (3 files):
+    - `logs/p4-282a-2026-5-7-rk3588-handbook-lane-d1-design-flow-and-placement-governance.md`
+    - `logs/p4-283e3-2026-5-7-pcb-article-e3-claim-family-boundary-map.md`
+    - `logs/p4-285-2026-5-7-pcb-pdf-lane-d1-e3-controller-integration.md`
+  - **What this pass now fixes**
+    - `194页 handbook` 不再只是 lane split；`D1` 已经被执行成 claim-family lane log
+    - `PCB文章` 不再只是 cluster inventory；`E3 fabrication features` 已经被执行成 claim-family boundary map
+    - 后续 AI 现在有明确的 resume node：应从 `D2/D3` 或 `E5/E4` 往后继续，而不是回到 broad reread
+  - **What this does not change**
+    - no new source-backed `facts/` or `wiki/` were landed
+    - no handbook or article numerics were promoted
+    - no branded `华秋DFM` thresholds, UI rules, or CTA-bearing images were upgraded into reusable authority
+  - **Current status**
+    - `D1` and `E3` are now `claim_family_level_only` learned lanes
+    - `D2-D5` and `E2/E4/E5/E6` remain open
+    - the overall `/code/blogs/tmps/PCB资料` exact-data program still must not be marked complete
+
+## 2026-05-07 (P4-286 Remaining-Scope D2 And E5 Lane Execution)
+
+- **这轮继续把 `P4-285` 的执行面往前推了一档**: `194页 RK3588 handbook` 的 `D2` 和 `PCB文章` 的 `E5` 也已经被执行成 bounded lane logs，继续把 continuation surface 从 planning 转成 actual execution
+  - **新增 Logs** (3 files):
+    - `logs/p4-282b-2026-5-7-rk3588-handbook-lane-stackup-impedance-and-routing-governance.md`
+    - `logs/p4-283e-2026-5-7-pcb-article-e5-assembly-stencil-test-claim-family-map.md`
+    - `logs/p4-286-2026-5-7-pcb-pdf-lane-d2-e5-controller-integration.md`
+  - **What this pass now fixes**
+    - `194页 handbook` 已从 `D1` 继续到 `D2`
+    - `PCB文章` 已从 `E3` 继续到 `E5`
+    - 下次 AI 现在应该从 `D3` / `E4` / `E6` 接着跑，而不是回头重扫 `D1/D2` 或 `E3/E5`
+  - **What this does not change**
+    - no new source-backed `facts/` or `wiki/` were landed
+    - no exact impedance, geometry, or assembly thresholds were promoted
+    - no branded `华秋DFM` surfaces were upgraded into reusable authority
+  - **Current status**
+    - `D1` and `D2` are now `claim_family_level_only` learned lanes
+    - `E3` and `E5` are now `claim_family_level_only` learned lanes
+    - the overall `/code/blogs/tmps/PCB资料` exact-data program still must not be marked complete
+
+## 2026-05-07 (P4-287 Remaining-Scope D3 And E4 Lane Execution)
+
+- **这轮继续把 `P4-286` 的执行面往前推了一档**: `194页 RK3588 handbook` 的 `D3` 和 `PCB文章` 的 `E4` 也已经被执行成 bounded lane logs，继续把 continuation surface 从 planning 转成 actual execution
+  - **新增 Logs** (3 files):
+    - `logs/p4-282c-2026-5-7-rk3588-handbook-lane-power-delivery-and-grounding-layout.md`
+    - `logs/p4-283e-2026-5-7-pcb-article-e4-panelization-outline-edge-clearance-and-marking-claim-family-map.md`
+    - `logs/p4-287-2026-5-7-pcb-pdf-lane-d3-e4-controller-integration.md`
+  - **What this pass now fixes**
+    - `194页 handbook` 已从 `D2` 继续到 `D3`
+    - `PCB文章` 已从 `E5` 继续到 `E4`
+    - 下次 AI 现在应该从 `D4` / `E6` 接着跑，而不是回头重扫 `D1/D2/D3` 或 `E3/E4/E5`
+  - **What this does not change**
+    - no new source-backed `facts/` or `wiki/` were landed
+    - no exact power, panelization, or edge-clearance thresholds were promoted
+    - no branded `华秋DFM` surfaces were upgraded into reusable authority
+  - **Current status**
+    - `D1`, `D2`, and `D3` are now `claim_family_level_only` learned lanes
+    - `E3`, `E4`, and `E5` are now `claim_family_level_only` learned lanes
+    - the overall `/code/blogs/tmps/PCB资料` exact-data program still must not be marked complete
+## 2026-05-07 (P4-255 P4-06 Batch 1 Topic-To-Prompt Mapping)
+
+- **`P4-06` 的第一波证据包终于被收口成了可直接消费的 prompt handoff**: 这轮没有再做新的 source recovery，而是把 `6-layer / 8-layer / 10-layer` 三个 first-wave pack 转成了可继续写作的 topic-to-prompt mapping note
+  - **新增 Log** (1 file):
+    - `logs/p4-255-2026-5-7-p4-06-batch-1-topic-to-prompt-mapping.md`
+  - **What this handoff now fixes**
+    - `6-layer`, `8-layer`, and `10-layer` can now be consumed directly by `prompts_template/shared/query.md` with `prompts_template/hilpcb/query-overlay.md`
+    - each pack now has a clear `use / do not write` boundary
+    - the inline `BlogQuickQuoteInline` requirement remains preserved for HILPCB query output
+  - **What this does not change**
+    - no new exact-data facts were promoted
+    - no unsupported capability, standards, cost, or lead-time numerics were unlocked
+    - the batch is still `conservative draftable`, not `high-numeric-density ready`
+  - **Current status**
+    - `P4-06 Batch 1` is now prompt-handoff complete
+    - later AI should draft from the mapping note instead of re-running the bridge audit
+
+## 2026-05-07 (P4-254 A1 Murata Part-Level Impedance Recheck Still Blocked)
+
+- **`A1 capacitor` 的 Murata part-level impedance 这次没有落成，但它的官方链路被补强成了更完整的 resume point**: 这轮重新确认了 product-detail 端点、MLCC `S-parameter Measurement Conditions`、以及 SimSurfing 电气特性/比较数据 FAQ 的存在关系，但 `GRM188R71C104KA01#` 的 exact payload chain 仍然没有在同一 pass 里稳定复核出来
+  - **新增 Source / Log** (3 files):
+    - `sources/registry/methods/murata-mlcc-sparameter-measurement-conditions.md`
+    - `sources/registry/methods/murata-mlcc-electrical-characteristics-data-and-comparison-faq.md`
+    - `logs/p4-254-2026-5-7-a1-murata-part-level-impedance-recheck-blocked.md`
+  - **What was rechecked safely**
+    - Murata MLCC S-parameter measurement conditions
+    - Murata SimSurfing electrical-characteristic data and comparison-data availability
+    - product-detail endpoint for `GRM188R71C104KA01#` still behaves like a React shell in the fetched HTML
+  - **What remained blocked**
+    - stable `product detail page + measurement conditions + owner-hosted payload` chain
+    - directly re-verifiable part-level impedance / S2P payload in one pass
+  - **Current status**
+    - `Murata part-level impedance lane` stays `ready_but_not_landed`
+    - next AI should resume from the now-registered measurement-context + data-availability sources instead of rescanning the same pages blindly
+
+## 2026-05-07 (P4-253 B1-R2 ESD Awareness Symbol Identity Landing)
+
+- **`B1` 又多学进了一块真实可复用知识，这次是 page `9` 的 ESD symbol identity**: handbook 里的 `ESD warning / protection symbols` 现在不再只是本地图片 inventory，而是有了官方来源支撑的 English canonical identity layer
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/desco-esd-awareness-symbols-page.md`
+    - `facts/methods/esd-awareness-symbol-identity-boundary.md`
+    - `logs/p4-253-2026-5-7-b1-r2-esd-awareness-symbol-identity-landing.md`
+  - **What landed safely**
+    - `ESD Susceptibility Symbol`
+    - `ESD Protective Symbol`
+    - `ESD Common Point Ground`
+    - symbol identity-level application split between:
+      - ESDS items
+      - ESD protective materials/equipment
+      - common-point-ground marking
+  - **Local asset relationship also advanced**
+    - `p4-221a` 新增 `pcba-al-011`
+    - handbook page `9` 的 symbol image 现在挂到了新的 symbol-identity fact 上，但仍保持 `supporting_local_asset_only + structural_context_only`
+  - **What remained blocked**
+    - symbol presence does not prove packaging conformance
+    - symbol presence does not prove protective performance
+    - page `10` thresholds and page `8` family sensitivity ranges remain blocked
+  - **Current status**
+    - `B1 lane` 现在已是 `multiple_exact_data_artifacts_landed`
+    - `PCBA` 分支已经不只是 handling vocabulary，也开始有真实 ESD-control knowledge cards
+
+## 2026-05-07 (P4-252 C2-R1 Microchip CSP/BGA Extension And Residual Narrowing)
+
+- **`C2-R1` 又向前推进了一层，这次把 `0.40 mm` pitch 也学进来了**: 这轮用 Microchip/Microsemi 的官方 `AC243` 应用笔记，把 `0.40 / 0.50 / 0.80` pitch 的 named-package `Solder Land Diameter` rows 落成了新卡
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/microchip-ac243-csp-pcb-design-guidelines.md`
+    - `facts/methods/microchip-csp-bga-solder-land-and-pitch-examples.md`
+    - `logs/p4-252-2026-5-7-c2-r1-microchip-csp-bga-extension-and-residual-narrowing.md`
+  - **What landed safely**
+    - `uC81`:
+      - pitch `0.40`
+      - `Solder Land Diameter 0.23`
+    - `CS81/CS121/CS196/CS201/CS281/FCS325`:
+      - pitch `0.50`
+      - `Solder Land Diameter 0.25`
+    - `CS49/CS128/CS180`:
+      - pitch `0.80`
+      - `Solder Land Diameter 0.30`
+    - `VF400`:
+      - pitch `0.80`
+      - `Solder Land Diameter 0.40`
+  - **What changed**
+    - `0.40 mm` 已经不再是未替代 residual
+    - `C2-R1` 目前主剩余未替代 pitch classes 收缩到：
+      - `1.50 mm`
+      - `0.75 mm`
+  - **What remained blocked**
+    - handbook `MIN / MAX / recommended` generic framing
+    - universal cross-vendor `pitch -> pad diameter` rewrite
+  - **Current status**
+    - `C2-R1` 已形成 `NXP + TI + Microchip` 三个主源的多卡组合
+    - 但仍然是 `multiple_partial_exact_data_artifacts_landed`，不是 universal table completion
+
+## 2026-05-07 (P4-251 C2-R1 TI BGA Pad Geometry Extension)
+
+- **`C2-R1` 没有停在 `P4-250` 的 partial replacement，而是继续补进了一张 TI 官方 pad-geometry 卡**: 这轮把 `1.27 mm` pitch 从 residual 里拿掉了，同时也给 `1.0 mm` pitch 增加了第二个主源视角
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/ti-an1126-bga-pad-geometry-guidelines.md`
+    - `facts/methods/ti-bga-pad-geometry-guidelines-1p27-and-1p0-mm-pitch.md`
+    - `logs/p4-251-2026-5-7-c2-r1-ti-bga-pad-geometry-extension.md`
+  - **What landed safely**
+    - `1.27 mm` pitch:
+      - `NSMD` `PCB pad diameter 0.64 mm`
+      - `SMD` `PCB pad diameter 0.78 mm`
+    - `1.0 mm` pitch:
+      - `NSMD` `PCB pad diameter 0.46 mm`
+      - `SMD` `PCB pad diameter 0.60 mm`
+  - **What remained blocked**
+    - `1.50 mm`
+    - `0.75 mm`
+    - `0.40 mm`
+    - handbook `MIN / MAX / recommended` generic framing
+  - **Current status**
+    - `C2-R1` 现在已经不是单张 partial card，而是 `multiple_partial_exact_data_artifacts_landed`
+    - 但仍然不能把这些 vendor/package-scoped rows 合并伪装成 universal BGA table
+
+## 2026-05-07 (P4-250 C2-R1 BGA Pitch Table Partial Official Replacement)
+
+- **`PCB资料` 的 `C2-R1` 也开始出现真实 exact-data 落地了，但这轮是明确的“部分替代”，不是偷换成通用行业规则**: handbook 的 `BGA pitch -> pad diameter` 表先被 subagent 精确转成 claim inventory，再由主线程用 NXP 官方 `AN10778` 落成一个 package-scoped exact-data card
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/nxp-an10778-bga-footprints.md`
+    - `facts/methods/nxp-bga-footprint-pitch-and-pcb-land-pad-examples.md`
+    - `logs/p4-250-2026-5-7-c2-r1-bga-pitch-table-partial-official-replacement.md`
+  - **What landed safely**
+    - named-package `1.0 mm` pitch example with `PCB land pad diameter 0.45`
+    - named-package `0.8 mm` pitch examples with `PCB land pad diameter 0.35` and `0.30`
+    - named-package `0.65 mm` pitch example with `PCB land pad diameter 0.25`
+    - named-package `0.5 mm` pitch examples with `PCB land pad diameter 0.25`
+  - **What was explicitly not overclaimed**
+    - the handbook table was not rewritten as a universal `pitch -> pad diameter` law
+    - `1.50`, `1.27`, `0.75`, and `0.40` pitch rows remain unreplaced
+    - handbook `MIN / MAX / recommended` framing remains blocked
+  - **Why this matters**
+    - `PCB资料` 现在不只 `EMC A1` 和 `PCBA B1` 有 exact-data landing，`package C2` 也开始学进了真正的 primary-source footprint numerics
+    - 同时知识库保住了最关键的边界：同一个 `0.8 mm` pitch 在官方 named-package rows 里就可能对应不同 `PCB land pad diameter`
+
+## 2026-05-07 (P4-249 B1-R1 ESD Workstation Grounding Exact-Data Landing)
+
+- **`PCB资料` 的 `B1-R1` 已经从“下一步计划”变成了真实落地的 exact-data artifact**: 这轮没有去碰 page `10` 的 blocked resistance/discharge tables，而是用 `ESDA + Desco` 的公开主源把 handbook page `11` 的 workstation-grounding topology 转成了一个可复用但严格限域的方法卡
+  - **新增 Source / Fact / Log** (4 files):
+    - `sources/registry/methods/esda-part-3-basic-esd-control-procedures-and-materials.md`
+    - `sources/registry/methods/desco-1-megohm-resistor-esd-grounding-article.md`
+    - `facts/methods/esd-workstation-grounding-topology-and-wrist-strap-resistor-method-example.md`
+    - `logs/p4-249-2026-5-7-b1-r1-esd-workstation-grounding-exact-data-landing.md`
+  - **What landed safely**
+    - `common point ground` workstation topology
+    - wrist strap as `wristband + ground cord`
+    - wrist-strap resistor most commonly `1 megohm`
+    - nominal `1 megohm` also commonly used to ground work surfaces in the cited public standards-adjacent wording
+    - worksurface resistance-to-ground range `1.0 x 10^6` to `1.0 x 10^9`
+  - **Local asset relationship also advanced**
+    - `p4-221a` 新增 `pcba-al-010`
+    - handbook page `11` 图现在挂到了新的 ESD workstation grounding fact 上，但仍保持 `supporting_local_asset_only + structural_context_only`
+  - **What remained blocked**
+    - page `10` resistance / discharge-time tables
+    - page `8` family sensitivity ranges
+    - page `7` inspection magnification table
+    - any full `ANSI/ESD S20.20` or `IEC 61340-5-1` compliance reconstruction
+  - **Current status**
+    - `B1 lane` 进入 `first_exact_data_artifact_landed`
+    - `PCB资料` 现已不只是在 `EMC A1` 有 exact-data landing，`PCBA B1` 也开始有真实学习成果
+
+## 2026-05-07 (P4-247 To P4-248 Post-A1 Next-Lane Selection And Resume Reset)
+
+- **`PCB资料` 这轮没有继续盲目扩 `A1 capacitor`，而是正式把 post-`A1` 的下一条 exact-data 主线收口出来**: 结合主线程审计和两个 `gpt-5.4` subagent 的 lane review，当前默认 continuation 已从“继续广泛找 blocked numerics”收敛为一个明确的 `B1-R1` 恢复任务，并把 `C2-BGA` 保留为次优备选
+  - **新增 Logs** (2 files):
+    - `logs/p4-247-2026-5-7-post-a1-next-exact-data-lane-selection-b1-over-c2.md`
+    - `logs/p4-248-2026-5-7-pcb-pdf-post-a1-b1-r1-resume-entry.md`
+  - **What was decided**
+    - default next lane:
+      - `B1-R1: ESD workstation grounding exact-data recovery`
+    - fallback lane:
+      - `C2-R1: BGA pitch-to-pad-diameter official-source recovery`
+    - `B2/B3/C3` 当前剩余 numerics 大多继续留在 taxonomy / governance / supporting-asset 层，不作为默认 exact-data 主线
+  - **Why this matters**
+    - 这把 `PCB资料` 的下一步从“继续扫描一堆 blocked handbook 表格”改成了一个更可能真实落库的窄恢复任务
+    - 下次 AI 不需要重新比较 `B1`、`B2`、`B3`、`C2`、`C3`，可以直接从 `B1-R1` 开始
+  - **Next step**
+    - 优先恢复 page `11` 对应的 `ESD-safe workbench grounding` 官方 exact-data
+    - 若公开权威源无法满足 admission gate，再切换到 `C2-R1`
+
+## 2026-05-07 (P4-246 A1 Murata Low-ESL Loop-Impedance Fallback Landing)
+
+- **`A1 capacitor` 在 antiresonance exact-data 这轮受阻后，没有停住，而是吸收了当前最强的官方 fallback**: 这轮把 Murata 官方 `low-ESL / loop-impedance` 技术文章落成了一张新的 exact-data 卡，继续把 handbook 里的“高频电容为什么需要更低 ESL / 更少器件”这类压力转成可复用本地知识
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/murata-low-esl-capacitors-loop-impedance-article.md`
+    - `facts/methods/murata-low-esl-loop-impedance-method-example.md`
+    - `logs/p4-246-2026-5-7-a1-murata-low-esl-loop-impedance-fallback-landing.md`
+  - **What landed safely**
+    - same `1 uF` comparison:
+      - `LW reverse capacitor`: about `1/3` the `ESL` of a normal MLCC
+      - `3-terminal capacitor`: about `1/10` the `ESL` of a normal MLCC
+    - figure-6 structure example:
+      - `LW reverse capacitor`: `1.0 × 0.6 mm`, `4.3 uF`
+      - `3-terminal capacitor`: `1.0 × 0.5 mm`, `4.3 uF`
+      - comparator MLCC: `0.6 × 0.3 mm`, `1 uF`
+      - high-frequency equivalence: `two` and `four or more`
+    - system-level example:
+      - `100` MLCCs down to `32`
+      - reduction `68`
+      - area reduction about `35 mm^2`
+  - **Current status**
+    - `A1 capacitor lane` 现在进入 `four_exact_data_artifacts_landed`
+    - official antiresonance exact-data lane 仍未被真正打通
+    - 但高频行为、low-ESL、loop-impedance、measurement-context 这些真实可复用知识层已经更厚了
+  - **Next step**
+    - antiresonance lane 保持 future open
+    - Murata `part-level impedance` 继续保持 `ready_but_not_landed`
+    - 如果 `A1` 再继续卡住，下一步可以考虑转去别的高收益 blocked exact-data lane
+
+## 2026-05-07 (P4-245 A1 Official Antiresonance Example Scout Mostly Blocked)
+
+- **`A1 capacitor` 这轮专门去找“官方 antiresonance exact-data 例子”，结论基本还是 blocked**: 不是因为没有官方资料，而是当前拿到的 `TDK` 和 `Murata` 官方页都更适合作为 boundary 或 low-ESL method example，而不是那种能一比一替代 handbook `Figure 3-12 / 3-15` 的 antiresonance exact-data card
+  - **新增 Log** (1 file):
+    - `logs/p4-245-2026-5-7-a1-official-antiresonance-example-scout-mostly-blocked.md`
+  - **What was clarified**
+    - TDK `MLCC replace guide` 仍然只够支撑 `SRF + antiresonance risk` boundary，不够形成新 exact-data 卡
+    - Murata `Methods of using low-ESL capacitors` 有真实数据，但更适合作为 `low-ESL / loop-impedance` method example，不是 antiresonance card
+    - handbook antiresonance numerics 继续 blocked
+  - **Next step**
+    - 继续保留 `official antiresonance example` 作为未来有效续点
+    - 当前更高产出的 fallback 是 Murata `low-ESL / loop-impedance` exact-data lane，或以后重开 Murata `part-level impedance` lane
+
+## 2026-05-07 (P4-244 Murata Part-Level Impedance Lane Rechecked But Not Landed)
+
+- **`A1 capacitor` 的 Murata `part-level impedance` 续线这轮被重新核过，但没有被硬落库**: 这次不是 authority 不够，而是当前 pass 里还没有把 `product detail page + measurement conditions + exact payload` 这条链稳定地一次性复核下来，所以控制结论是 `ready_but_not_landed`
+  - **新增 Log** (1 file):
+    - `logs/p4-244-2026-5-7-murata-part-level-impedance-lane-verified-as-ready-but-not-landed.md`
+  - **What was confirmed**
+    - Murata `S-parameter Measurement Conditions` page 足够强，可作为 setup context
+    - Murata FAQ `char/0053` 足够强，可作为 owner-hosted downloadable characteristic data existence support
+    - `GRM188R71C104KA01#` 这条 lane 仍然是有效续点
+  - **Why nothing new was landed**
+    - 这轮没有把 exact product-page payload chain 稳定复核到可直接落成本地 exact-data artifact 的程度
+    - 所以不能把“lane 很有希望”误写成“fact 已 landed”
+  - **Next step**
+    - 继续把 Murata `part-level impedance` 保留为 `A1` 的有效续点
+    - 但默认优先级切向更容易 clean landing 的 `official antiresonance example with named parts + conditions`
+
+## 2026-05-07 (P4-243 A1 Capacitor Frequency-Characteristic Measurement-Context Landing)
+
+- **`PCB资料` 的 `A1 capacitor` 又补进了一块更像“真实工程读取条件”的数据**: 这轮不是追 handbook 那个 antiresonance 峰值，而是用 Murata 官方 FAQ 落了一张“为什么 SimSurfing 的 `capacitance-frequency` 曲线会低于 nominal capacitance”的 named-part method card
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/murata-mlcc-simsurfing-capacitance-frequency-measurement-context-faq.md`
+    - `facts/methods/murata-mlcc-simsurfing-low-signal-measurement-method-example.md`
+    - `logs/p4-243-2026-5-7-a1-capacitor-frequency-characteristic-measurement-context-landing.md`
+  - **What landed safely**
+    - named part:
+      - `GRM155B30J225KE95`
+    - printed example values:
+      - nominal capacitance `2.2 uF`
+      - SimSurfing `capacitance-frequency` example `1.68 uF`
+      - AC voltage characteristic at `10 mVrms`: `1.66 uF`
+    - measurement-context rule:
+      - SimSurfing `capacitance-frequency` data is measured at low signal voltage
+      - high-dielectric MLCCs can show lower capacitance under those conditions than under nominal-capacitance measurement conditions
+  - **Current status**
+    - `A1 capacitor lane` 现在已经进入 `three_exact_data_artifacts_landed`
+    - 这些卡仍然全部保持 `vendor_scoped named-part method example` posture
+    - handbook antiresonance peaks、generic `package -> ESL` 表、dielectric universalization 继续 blocked
+  - **Next step**
+    - 后续若继续补 `A1`，还是优先找真正的 `official antiresonance example with named parts + conditions`
+
+## 2026-05-07 (P4-242 A1 Capacitor Output-Capacitor Structure Exact-Data Landing)
+
+- **`PCB资料` 的 `A1 capacitor` 又多学进了一张真正能直接给后续博客使用的数据卡**: 这轮不是再补泛化 vocabulary，而是用 TDK 官方 `MLCC Solutions for Power Supply Circuits` solution guide 落了一张带命名件、带工况、带结果值的 output-capacitor method card
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/tdk-mlcc-output-capacitor-structure-solution-guide.md`
+    - `facts/methods/tdk-mlcc-output-capacitor-structure-method-example.md`
+    - `logs/p4-242-2026-5-7-a1-capacitor-output-capacitor-structure-exact-data-landing.md`
+  - **What landed safely**
+    - TDK named-part MLCC example:
+      - `CGA6P1X7T0G107M250AC`
+      - `4.0 V`
+      - `3225`
+      - `100 uF x10 pcs`
+    - comparison structure:
+      - conductive polymer capacitor `2.5 V 7343 330 uF x3 pcs`
+    - evaluation conditions:
+      - `12 V`
+      - `1.5 V`
+      - `400 kHz`
+      - `30 A`
+      - `100 A/usec`
+    - exact summary results:
+      - fixed-load voltage fluctuation: `61 mV` versus `12 mV`
+      - rising-load voltage fluctuation: `179 mV` versus `95 mV`
+      - phase-compensation example: `43 kHz -> 63 kHz`, `30 deg -> 53 deg`, `31 mV` reduction
+  - **Current status**
+    - `A1 capacitor lane` 现在已经不是只有一张 `YFF` 卡，而是进入 `two_exact_data_artifacts_landed`
+    - 这两张卡目前都还是 `vendor_scoped ... method examples only`
+    - handbook antiresonance peaks、generic `package -> ESL` 表、以及 generic compensation recipes 仍然 blocked
+  - **Murata scout result preserved**
+    - Murata `GRM188R71C104KA01#` official product page 证明了 owner-hosted per-part metadata 和 `S parameter (S2P type)` availability
+    - 但由于页面本身没有给出行为数据的 measurement conditions，这轮仍然是 `no-go`，不能直接升格成新 exact-data 卡
+  - **Next step**
+    - 后续若继续补 `A1`，优先找 `official antiresonance example with named parts + conditions`，或者 `part-scoped impedance/S-parameter lane with explicit measurement context`
+
+## 2026-05-07 (P4-241 A1 Capacitor Exact-Data Landing From TDK YFF Series)
+
+- **`PCB资料` 终于又多学进了一块真正的 `A1 capacitor` 数据，不再只停在 boundary vocabulary**: 这轮没有去碰 handbook 那张 generic `package -> ESL` 表，而是用 TDK 官方 `YFF Series` solution guide 落了一个更窄但真实可复用的 exact-data artifact
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/tdk-yff-series-low-esl-and-insertion-loss-solution-guide.md`
+    - `facts/methods/tdk-yff-series-low-esl-and-insertion-loss-method-example.md`
+    - `logs/p4-241-2026-5-7-a1-capacitor-low-esl-and-insertion-loss-exact-data-landing.md`
+  - **What landed safely**
+    - TDK printed structure-scoped `ESL` comparison:
+      - standard `2-terminal MLCC`: about `200-300 pH`
+      - reverse geometry capacitor: about `80-100 pH`
+      - `3-terminal feed-through filter`: about `20-30 pH`
+    - named-part example data for:
+      - `YFF18AC1A104M`
+      - `YFF18AC0G106M`
+    - explicit example values for:
+      - `insertion loss`
+      - `dBuVmax`
+      - `mVpp`
+      - converter condition context such as `5 V`, `0.8 V`, `1.8 V`, `2 MHz`, `2 A`, `4 A`
+  - **Current status**
+    - `A1 capacitor lane` 现在不再只是 `source_backed_fact_layer_partial` 的 boundary wording，而是新增了 `one_exact_data_artifact_landed`
+    - 这张卡是 `vendor_scoped_structure_and_named_part_example_only`
+    - handbook 的 generic `Table 3-1` package/ESL table、generic insertion-loss comparison、以及 value recipes 仍然 blocked
+  - **Next step**
+    - 后续若继续补 `A1`，优先找更强的 official antiresonance example 或 explicit MLCC family/part impedance data
+    - 不要把这张 TDK YFF 卡改写成 universal capacitor package ranking 或 universal component-count reduction rule
+
+## 2026-05-07 (P4-240 TDK Second-Owner Common-Mode Choke Scout Deferred)
+
+- **`EMC` 的第二厂商补强候选已经评估，但这轮选择显式不落地**: 在 `P4-239` 已经有 Murata mode-behavior article + Coilcraft family exact-data card 的前提下，本轮评估了 TDK FAQ cluster 与 `10BASE-T1S` application note，结论是当前不值得新增本地 `source` 或 `fact`
+  - **新增 Log** (1 file):
+    - `logs/p4-240-2026-5-7-tdk-common-mode-choke-second-owner-scout-deferred.md`
+  - **What was evaluated**
+    - TDK FAQ:
+      - `Why are common mode filters / chokes necessary?`
+      - `What is the difference between common mode and differential mode?`
+      - `What is differential insertion loss?`
+      - `What is the difference between common mode impedance, differential mode impedance and characteristic impedance?`
+    - TDK application note:
+      - `Common Mode Chokes and Chip Varistors for 10BASE-T1S`
+  - **Current status**
+    - TDK FAQ cluster 属于真实 owner-backed material，但当前只会带来第二厂商术语补全，不会明显提升已存在的 Murata/Coilcraft boundary quality
+    - `10BASE-T1S` note 过于 application-specific，当前落地风险高于收益
+    - 因此这轮是 `defer`，不是 `source_only`，更不是 `source_plus_fact_delta`
+  - **Next step**
+    - 只有在后续 prompt 明确需要 second-owner reinforcement，或明确开 `10BASE-T1S / automotive Ethernet` 窄 lane 时，再重开 TDK
+    - 当前默认续点仍应留在更高收益的 owner-backed `EMC` 主线，而不是平行 vendor duplication
+
+## 2026-05-07 (P4-239 Common-Mode Choke Vendor Mode-Behavior Boundary Reinforcement)
+
+- **`EMC` common-mode choke lane 又前进了半步，但这次是边界纠偏，不是再开一张 exact-data 卡**: 在 `P4-235` 已经把 `Coilcraft LPD3015` exact-data card 落地之后，这一轮继续沿 owner-backed lane 补了一个更稳的 Murata 技术解释来源，目的是阻断 handbook 里那种 `differential current passes without attenuation` 的绝对化表述回流到后续博客
+  - **新增 Source / Log** (2 files):
+    - `sources/registry/methods/murata-common-mode-choke-signal-lines-characteristics-and-selection-article.md`
+    - `logs/p4-239-2026-5-7-common-mode-choke-vendor-mode-behavior-boundary-reinforcement.md`
+  - **Fact 窄增量** (1 file):
+    - `facts/methods/common-mode-choke-vs-ferrite-bead-vendor-boundary.md`
+      - 新增 Murata 官方技术文章对 `Sdd21 / Scc21` 的 vendor-scoped framing
+      - 明确差模信号并非 universal `without attenuation`，而是也会随频率出现一定衰减
+      - 明确 `cutoff frequency at least 3 times signal frequency` 只是 Murata 示例文章里的 reference guideline，不是通用阈值
+  - **Current status**
+    - `common-mode choke` 现在线上既有 `Coilcraft LPD3015` family-scoped exact data，也有 Murata owner-backed mode-behavior wording boundary
+    - `ferrite bead` 仍保持 `P4-223` blocker posture，不被这次更新触碰
+    - handbook-only curves、universal attenuation wording、interface outcome claims 继续 blocked
+  - **Next step**
+    - 如果后续继续扩 `EMC`，优先找第二个 owner-backed common-mode-choke application-note / technical-article lane，形成更稳的 multi-owner wording
+    - 不要把资源再投回 `BLA3216A102SG4` exact-part scout，除非出现新的 Murata owner evidence
+
+## 2026-05-07 (P4-220A To P4-221B Queue Integration And First Supporting-Asset Linkage Execution)
+
+- **`PCB资料` 已从 first promotion-review pass 进入 controller-owned queue，并完成第一批 supporting asset linkage**: `P4-220A/B/C` 先把后续动作收口为 `EMC exact authority recovery first, asset-linkage implementation second`，随后 `P4-221` 与 `P4-221A/P4-221B` 把新的 resume entry 和第一批安全 asset-link records 落地
+  - **Logs 创建** (6 files):
+    - `logs/p4-220a-2026-5-7-emc-authority-recovery-queue-and-source-priority.md`
+    - `logs/p4-220b-2026-5-7-pcba-local-asset-linkage-map.md`
+    - `logs/p4-220c-2026-5-7-package-asset-linkage-and-authority-gap-map.md`
+    - `logs/p4-221-2026-5-7-pcb-pdf-post-p4-220-controller-integration-and-next-resume-entry.md`
+    - `logs/p4-221a-2026-5-7-pcba-controller-owned-asset-link-execution-log.md`
+    - `logs/p4-221b-2026-5-7-package-footprint-asset-link-execution-log.md`
+  - **Current status**
+    - `P4-220A` 只定义 `EMC` exact recovery queue，不新增 facts
+    - `P4-220B` 与 `P4-220C` 只定义 asset-linkage / authority-gap map，不把 local assets 升格成 authority
+    - `P4-221A` 与 `P4-221B` 已把第一批 `PCBA` 与 `package / footprint` clean visuals 落成 `supporting_context_only` link records
+    - handbook numerics, formulas, thresholds, and branded UI surfaces remain blocked
+    - `strong completion` 仍未达到，因为 exact-data promotion into admitted `sources/` and `facts/` 仍未新增落地
+  - **What advanced**
+    - 本地知识层现在不再只是“知道哪些图可用”，而是已经有可追溯、可被后续 prompt 读取的 controller-owned asset-link execution records
+    - program 已满足 `P4-217` 中“at least one local technical figure or table asset linked into the knowledge layer”的一项条件
+  - **Next step**
+    - 先执行 owner-backed `EMC` exact curve recovery，优先 `BLA3216A102SG4` 与 named common-mode-choke mode-curve lane
+    - 再扩展那些仍能保持 `supporting_local_asset_only + structural_context_only` 的 `PCBA` / `package` visual links
+    - 仅在需要加强现有 boundary facts 时再开 `pin-1 / origin / review-dimension` 的窄 authority recovery
+
+## 2026-05-07 (P4-222 EMC Owner-Curve Recovery Triaged To One Family-Backed Lane And One Blocked Exact-Part Lane)
+
+- **`EMC` exact curve recovery 已从抽象 queue 进入 owner-backed triage**: 这一轮没有回到 handbook 重读，而是直接把 `Q1/Q2` 拆成 owner-backed yes/no 结果
+  - **新增 Source / Log** (3 files):
+    - `sources/registry/methods/coilcraft-lpd3015-common-mode-chokes-datasheet.md`
+    - `sources/registry/methods/murata-bla31ag102sn4-family-equivalent-ferrite-bead-specification.md`
+    - `logs/p4-222-2026-5-7-emc-owner-curve-recovery-controller-integration.md`
+  - **Fact 最小增量** (2 files):
+    - `facts/methods/common-mode-choke-vs-ferrite-bead-vendor-boundary.md`
+      - 增加 `Coilcraft LPD3015` named family datasheet，允许更稳的 family-scoped `common-mode / differential-mode` curve evidence
+    - `facts/methods/ferrite-bead-vendor-guidance-boundary.md`
+      - 明确 `BLA3216A102SG4` 当前仍是 `exact-part unresolved`，只允许把 `BLA31AG102SN4#` 当成 clearly labeled family-equivalent fallback
+  - **Current status**
+    - `common-mode choke` lane 现已具备 owner-backed named-family curve evidence
+    - `ferrite bead` lane 现阶段未找到 Murata owner-backed exact alias，不能把当前 fallback 写成 exact-part recovery
+    - handbook ferrite-bead curve、handbook common-mode-choke curve、以及 generalized attenuation/selection claims 继续 blocked
+  - **Next step**
+    - 如果后续还要继续补 `ferrite bead`，只能找 Murata alias / archived exact source，不能拿 family-equivalent fallback 冒充 exact part
+    - `common-mode choke` 后续可继续做 family-scoped exact-data absorption，但必须维持 non-universal wording
+
+## 2026-05-07 (P4-223 Ferrite-Bead Exact-Part Recovery Closed At Blocker Ceiling)
+
+- **`BLA3216A102SG4` 这条磁珠 exact-part lane 不再悬挂**: 在继续限定 `Murata owner-only` 的前提下，这一轮没有拿到 alias、archived exact source、或 owner-backed cross-reference，因此把这条 lane 正式收口成 blocker state
+  - **Log 创建** (1 file):
+    - `logs/p4-223-2026-5-7-ferrite-bead-exact-part-recovery-blocked-at-family-equivalent-ceiling.md`
+  - **Current status**
+    - `BLA3216A102SG4` 继续保持 `exact_part_unresolved`
+    - `BLA31AG102SN4#` 继续只能作为 `family_equivalent_fallback_only`
+    - handbook ferrite-bead curve 继续不能被当成 exact-part curve evidence
+  - **What changed**
+    - 后续 AI 不需要再把这条 lane 当作默认 `next`
+    - 除非出现新的 Murata owner alias / archived exact source / controlled legacy source，否则这条 lane 视为暂时封存
+  - **Next step**
+    - 把 `EMC` 主线资源留给已经有 owner-backed evidence 的 common-mode-choke lane 或其他新出现的高价值 authority lane
+
+## 2026-05-07 (P4-235 Common-Mode Choke Lane Advanced From Source Readiness To Landed Exact-Data Fact)
+
+- **`EMC` 现在新增了一张真正可消费的 common-mode-choke exact-data fact card**: 在 `P4-222` 已拿到 `Coilcraft LPD3015` owner-backed family curves、并且 `P4-223` 已把磁珠 exact-part lane 收口后，本轮把最值钱、最安全的一张窄 exact-data 卡正式落地
+  - **新增 Fact / Log** (2 files):
+    - `facts/methods/coilcraft-lpd3015-common-mode-choke-family-exact-data.md`
+    - `logs/p4-235-2026-5-7-emc-common-mode-choke-minimal-owner-curve-fact-integration.md`
+  - **Current status**
+    - `Coilcraft LPD3015` 现在可以作为 family-scoped / part-row-scoped common-mode-choke exact data 被后续 prompt 消费
+    - 现有 `common-mode-choke-vs-ferrite-bead-vendor-boundary` 继续保留为 boundary card，不被 exact data 混淆
+    - `BLA3216A102SG4` 继续保持 `P4-223` blocker state
+  - **What stays blocked**
+    - handbook-only ferrite-bead / common-mode-choke curves
+    - universal attenuation wording
+    - `differential current passes without attenuation` 这类泛化表述
+    - broad EMC cookbook rules
+  - **Next step**
+    - 继续只扩展那些已经有 clean owner-backed named-family / named-part evidence 的 `EMC` lanes
+
+## 2026-05-07 (P4-219 Promotion-Review Pass Landed For EMC, PCBA, And Package Governance)
+
+- **`PCB资料` 已跨过 first promotion-review pass**: post-`Round 3` 的 `PR1 / PR2 / PR3` 现已完成，当前 batch 从“等待 promotion review”进入“已有 boundary-level promotion，下一步做 authority recovery 与 local asset linkage”
+  - **Promotion-Review Logs 创建** (3 files):
+    - `logs/p4-219a-2026-5-7-emc-promotion-review-existing-coverage-and-gap-map.md`
+      - 确认 `A2` 与 `A3` 当前都只应标记为 `existing_fact_layer_reused_only`
+      - 记录 `ferrite bead / common-mode choke` 与 `via-transition / return-path` 已由既有 facts 覆盖，剩余主要缺口是 exact curve 和更窄 slot / connector authority recovery
+    - `logs/p4-219b-2026-5-7-pcba-taxonomy-first-promotion-review.md`
+      - 固化 `B2/B3` 的 taxonomy-first promotion judgement：允许提升 visual taxonomy / orientation / warpage / jumper vocabulary，不允许提升 handbook threshold / acceptability claims
+    - `logs/p4-219c-2026-5-7-package-footprint-governance-promotion-review.md`
+      - 固化 `C1/C2/C3` 的 governance-first promotion judgement：允许提升 package-family / footprint review vocabulary，不允许提升公式、表格、vendor UI numerics
+  - **Fact / Wiki 创建** (7 files):
+    - `facts/methods/pcba-defect-photo-taxonomy-boundary.md`
+    - `facts/methods/component-orientation-and-polarity-inspection-vocabulary-boundary.md`
+    - `facts/methods/board-warpage-and-jumper-wire-inspection-vocabulary-boundary.md`
+    - `wiki/testing/pcba-visual-inspection-taxonomy.md`
+      - 为 `PCBA inspection` 落地 defect / contamination / orientation / warpage / jumper 的 English-only canonical vocabulary layer
+    - `facts/methods/package-family-and-footprint-governance-vocabulary-boundary.md`
+    - `facts/methods/padstack-origin-pin1-and-footprint-review-governance-boundary.md`
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+      - 为 `package / footprint` 落地 package-family、padstack、pin-1、origin、review-dimension 的 governance vocabulary layer
+  - **Tracker / Resume 更新** (4 files):
+    - `logs/p4-219-2026-5-7-pcb-pdf-post-round-3-promotion-review-resume-entry.md`
+    - `logs/backlog.md`
+    - `logs/update-log.md`
+    - `logs/phase-status.md`
+      - 将当前 continuation 明确切到：`EMC exact authority recovery + local technical asset linkage + narrow supplementary authority recovery`
+  - **Current status**
+    - 这批 PDF 现在不再只是“候选 inventory + blocked claims”；其中 `PCBA` 和 `package / footprint` 已经有可被下游 prompt 消费的 boundary-level facts / wiki
+    - 但 handbook 公式、阈值、尺寸表、BGA pitch 表、warpage 百分比、jumper gauge / length 等仍未升格为 admitted exact data
+    - strong completion 仍未达到，因为 `exact-data promotion` 与 `local technical image/table asset linkage` 还没有完成到要求层级
+  - **Next step**
+    - 继续 `EMC` exact curve authority recovery
+    - 给 `PCBA` 与 `package / footprint` 新 facts/wiki 补 local technical asset linkage
+    - 仅在需要更强表述时再补 `pin-1 / origin / review dimensions` 或特定 defect-family 的更窄 authority
+
+## 2026-05-07 (P4-216 Round 3 Completion And Post-Round-3 Resume Shift)
+
+- **`PCB资料` 第一波 lane 学习面已完整闭环**: 已把 `Round 3: A3 + B3 + C3` 做 controller integration，并将整批 `/code/blogs/tmps/PCB资料` 的 active continuation 从“继续 dispatch Round 3”切到“promotion review / authority recovery”
+  - **Log 创建** (2 files):
+    - `logs/p4-216c-2026-5-6-pcb-pdf-round-3-a3-b3-c3-controller-integration.md`
+      - 统一固化 `A3/B3/C3` 的 controller judgment：`A3` 主要是 return-path / via-transition structural assets，`B3` 主要是 orientation / polarity / warpage / jumper taxonomy 与被阻断的 handbook thresholds，`C3` 主要是 package-library governance vocabulary 与被阻断的 branded DFM UI thresholds
+      - 明确记录 `A3/B3/C3` 全部仍为 `not_promoted`，但 `A1-A3/B1-B3/C1-C3` 的 first-wave lane execution surface 已经完成
+    - `logs/p4-219-2026-5-7-pcb-pdf-post-round-3-promotion-review-resume-entry.md`
+      - 提供新的 post-`Round 3` resume entry，规定后续 AI 的必读顺序、下一阶段的 `PR1/PR2/PR3` promotion-review focus，以及新的 resume command
+  - **Workstream / Controller / Tracker 更新** (8 files):
+    - `logs/p4-215a-2026-5-6-emc-exact-data-workstream.md`
+    - `logs/p4-215b-2026-5-6-pcba-inspection-exact-data-workstream.md`
+    - `logs/p4-215c-2026-5-6-package-footprint-exact-data-workstream.md`
+      - 三条 workstream 现都标记为 `round_3_completed`，并补齐 `A3/B3/C3` result log 引用
+    - `logs/p4-216-2026-5-6-pcb-pdf-subagent-coordination-plan.md`
+      - 当前状态补齐 `wave-3 lane dispatch` 与 `main-agent integration round 3`
+    - `logs/p4-217-2026-5-6-pcb-pdf-program-completion-criteria.md`
+      - 将 `workstream execution completion` 更新为 `round_1_to_round_3_reached`，并把 next step 切换到 `P4-219`
+    - `logs/p4-218-2026-5-6-pcb-pdf-round-3-handoff-and-resume-entry.md`
+      - 标记为 historical pre-`Round 3` handoff，并指向 `P4-219`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+      - 将 tracker 的 active continuation 从 `Round 3 dispatch` 改到 `promotion review / authority recovery`
+  - **Current status**
+    - 现在 `llm_wiki` 已经能告诉后续 AI：这一批 PDF 的图、表、参数、结构图已经被吃到 candidate / structural / blocked 三层，但仍未跨入 admitted fact layer
+    - 程序状态不再是“继续学习页”，而是“选择最值得升格的 exact-data candidate，补更强 authority，再落进 `sources/`、`facts/`、`wiki/`”
+  - **Next step**
+    - 从 `P4-219` 启动三个 promotion-review 方向：`EMC primary-source curve recovery`、`PCBA taxonomy-first promotion`、`package-library governance promotion`
+
+## 2026-05-06 (P4-218 PCB PDF Round 3 Handoff And Resume Entry)
+
+- **`PCB资料` 批次已经有明确续跑入口**: 为避免下次 AI 重新摸索当前状态，新增一份专用 handoff / resume log，并把 tracker 主入口改到这份文件
+  - **Log 创建** (1 file):
+    - `logs/p4-218-2026-5-6-pcb-pdf-round-3-handoff-and-resume-entry.md`
+      - 固化当前完成层级、必须先读的文件顺序、`Round 3` 的精确 lane 边界、预期产物文件名、停止条件、以及一句话 resume command
+  - **Tracker 更新** (2 files):
+    - `logs/p4-217-2026-5-6-pcb-pdf-program-completion-criteria.md`
+      - 将当前 program state 更新为 `round_1_and_round_2_reached`，并把 next step 指向 `P4-218`
+    - `logs/phase-status.md`
+      - 将 `next_session_entry` 与 `immediate_next_task` 改为 `P4-218` 和 `Round 3: A3 + B3 + C3`
+  - **Current status**
+    - 下次任何 AI 只要从 `llm_wiki` 的 tracker 层进入，就可以直接从 `Round 3` 继续，不需要重新判断目前做到哪一步
+  - **Next step**
+    - 按 `P4-218` dispatch `A3 + B3 + C3`，再写 `p4-216c` controller integration
+
+## 2026-05-06 (P4-216 Round 2 Exact-Data Lane Execution And Integration)
+
+- **`PCB资料` exact-data 第二轮 lane 已真正吃到图表密集页**: 继续沿 `P4-216` 执行 `Round 2: A2 + B2 + C2`，已把 `EMC ferrite bead/common-mode choke`、`PCBA solder defect/workmanship`、`package pad/origin/pin-1/keepout` 三条 lane 落成可追踪的 controller-owned 结果日志，并完成二轮集成
+  - **Lane / Integration Logs 创建** (4 files):
+    - `logs/p4-215a2-2026-5-6-emc-lane-a2-ferrite-bead-vs-common-mode-choke.md`
+      - 固化 `pages 21-22` 的磁珠阻抗频率曲线、共模扼流圈共模/差模曲线、噪声模式区分、以及被阻断的 topology-selection cookbook rules
+    - `logs/p4-215b2-2026-5-6-pcba-lane-b2-solder-defect-and-workmanship-pages.md`
+      - 固化 `pages 84-98, 129-151` 的 defect taxonomy、workmanship plate、本地 defect-photo refs、以及被阻断的 accept/reject thresholds 与 geometry percentages
+    - `logs/p4-215c2-2026-5-6-package-lane-c2-pad-origin-pin1-keepout-drawings.md`
+      - 固化 `pages 22-30` 的 padstack vocabulary、pad/drill formulas、lead-compensation equations、BGA pitch table、keepout/hole-table inventory、以及被阻断的 branded shell assets
+    - `logs/p4-216b-2026-5-6-pcb-pdf-round-2-a2-b2-c2-controller-integration.md`
+      - 统一记录 `Round 2` 的 controller judgment：现阶段只批准 candidate inventory / local asset traceability / visual taxonomy / source-mapping value，不批准从 secondary PDF 直接升格到 `facts/`
+  - **Current status**
+    - `Round 2` 已把图表和图片密集的三条 lane 真正吃进去，并且把本地图片引用关系、英文 canonical naming、branding-block posture、blocked threshold inventory 都明确落盘
+    - 但这仍不等于已经学成 fact layer；`A2/B2/C2` 的曲线、公式、表格、尺寸、验收阈值目前仍然多数停留在 `secondary_pdf_claim_inventory_only`
+  - **Next step**
+    - 进入 `Round 3: A3 + B3 + C3`，重点吃掉 `via-transition/return-path figures`、`cleanliness/warpage/jumper/orientation pages`、`library-governance/hole-pad examples`
+
+## 2026-05-06 (P4-207 PCB资料 PDF Batch Intake And Image Governance)
+
+- **`/code/blogs/tmps/PCB资料` 批次 intake 已落地**: 新增一份 deletion-safe intake / governance map，明确这批 `63` 个 PDF 应按 `handbook` 与 `vendor article` 两类分别吸收，并把图片保留与去品牌化作为独立治理层处理
+  - **Log 创建** (1 file):
+    - `logs/p4-207-2026-5-6-pcb-pdf-batch-ingestion-and-image-governance-map.md`
+      - 固化目录规模、样本结构、可用本地工具、图片保留/裁切/屏蔽规则、blocked claim classes，以及推荐的 `PDF -> clean asset -> claim-family -> source-backed promotion` 四层转化路径
+  - **Script / Test 创建** (2 files):
+    - `scripts/extract_pcb_pdf_assets.py`
+      - 实现 `文本优先抽取 + 图片资产单独保留 + manifest 引用关系` 的本地链路
+    - `scripts/test_extract_pcb_pdf_assets.py`
+      - 用临时 PDF 验证文本文件、图片资产与 `manifest.json` 的 page/image 引用关系
+  - **Pilot 输出**
+    - 已对 `【PCB必备】85页-PCB设计EMC设计指导书.pdf`、`PCB阻抗误差控制在5%，究竟有多难？.pdf`、`华秋DFM在硬件制造中的作用.pdf` 跑通试抽，输出目录为 `/code/blogs/tmps/pcb_pdf_extracted`
+  - **Current status**
+    - 该批次目前完成了高层 intake、治理设计和 text-first extraction pilot，不代表已进入 `facts/` 或 `wiki/` 的 source-backed fact layer
+  - **Next step**
+    - 批量跑完整个 `/code/blogs/tmps/PCB资料` 目录；再只对 `manifest` 中 `image_count > 0` 的页或真实图表资产发起 `gpt-5.4` 视觉识别与去品牌化判断
+
+## 2026-05-06 (P4-216 Round 1 Exact-Data Lane Execution And Integration)
+
+- **`PCB资料` exact-data 首轮 lane 已真正产出页级结果**: 继续沿 `P4-216` 执行 `Round 1: A1 + B1 + C1`，已把 `EMC capacitor figures/tables`、`PCBA EOS/ESD/handling`、`package taxonomy/naming` 三条 lane 落成可追踪的 controller-owned 结果日志，并完成一轮集成
+  - **Lane / Integration Logs 创建** (4 files):
+    - `logs/p4-215a1-2026-5-6-emc-lane-a1-capacitor-figures-and-parameter-tables.md`
+      - 固化 `pages 19-20, 25-28` 的电容谐振/反谐振图、ESL 表、插入损耗图、去耦布局图的 exact-data candidates、local asset refs、blocked numerics 与 source-mapping demand
+    - `logs/p4-215b1-2026-5-6-pcba-lane-b1-eos-esd-handling-pages.md`
+      - 固化 `pages 7-13` 的 `ESD` 符号、工作台接地结构、人工拿板示例、以及被阻断的 magnification / sensitivity / resistance thresholds
+    - `logs/p4-215c1-2026-5-6-package-lane-c1-package-taxonomy-and-naming.md`
+      - 固化 `pages 7-15` 的 package naming grammar、关键命名样例、英文 canonical pattern、以及必须屏蔽的 repeated branded shell assets
+    - `logs/p4-216a-2026-5-6-pcb-pdf-round-1-a1-b1-c1-controller-integration.md`
+      - 统一记录 `Round 1` 的 controller judgment：现阶段只批准 candidate inventory / local asset traceability / source-mapping value，不批准从 secondary PDF 直接升格到 `facts/`
+  - **Current status**
+    - `Round 1` 已从“治理就绪”推进到“真正有页级结果返回并被控制层整合”
+    - 但这仍不等于已经学成 fact layer；`A1/B1/C1` 的数值、表格、规则、命名体系目前仍然多数停留在 `secondary_pdf_claim_inventory_only`
+  - **Next step**
+    - 进入 `Round 2: A2 + B2 + C2`，重点吃掉 `ferrite bead/common-mode choke`、`solder defect taxonomy/workmanship plates`、`pad/origin/pin-1/keepout drawings`
+
+## 2026-05-06 (P4-208 PCB资料 Handbook Intake First Formal Learning Pass)
+
+- **`PCB资料` 四本手册已进入正式学习**: 基于 text-first extraction 结果，为 `4` 本 handbook PDF 建立了第一份 claim-family level intake map
+  - **Log 创建** (1 file):
+    - `logs/p4-208-2026-5-6-pcb-handbook-intake-map.md`
+      - 固化 `42种封装设计指导规范`、`85页EMC设计指导书`、`158页PCBA检验规范汇总`、`194页PCB设计规范经验之书` 的主题族、blocked claim classes、现有 `llm_wiki` 支撑、以及后续 image/table selective vision routing
+  - **Current status**
+    - 该批次 handbook 目前达到 `completed_at_claim_family_level`
+    - 这代表正式学习已开始，但还未把 source-backed facts 或 wiki 聚合写回主知识层
+  - **Next step**
+    - 以 `【PCB必备】85页-PCB设计EMC设计指导书.pdf` 为下一优先 lane，做更细的 topic-family absorption，并只对图表页做选择性视觉识别
+
+## 2026-05-06 (P4-209 EMC Handbook Subagent-Driven Topic Absorption)
+
+- **`85页 PCB设计EMC设计指导书` 已完成 second-pass topic absorption**: 采用 `gpt-5.4` subagent 并行分 lane 学习，已把该 handbook 切成 `layout/filter/ground`, `impedance/via/slot`, `RF/safety appendix` 三个 claim-family lane，并完成 controller integration
+  - **Controller / Lane Logs 创建** (4 files):
+    - `logs/p4-209-2026-5-6-emc-handbook-controller-note.md`
+    - `logs/p4-209a-2026-5-6-emc-handbook-lane-layout-filter-ground.md`
+    - `logs/p4-209b-2026-5-6-emc-handbook-lane-impedance-via-slot.md`
+    - `logs/p4-209c-2026-5-6-emc-handbook-lane-rf-and-safety.md`
+  - **Current status**
+    - 该 handbook 现已达到 `completed_at_claim_family_level`
+    - 已明确三类可安全复用层：`EMC-aware layout/filtering vocabulary`, `impedance/return-path/slot-crossing posture`, `RF shielding and safety-distance vocabulary`
+    - 仍未进入 source-backed fact layer，也未授权复用 handbook 中的数值规则、阻抗公式、爬电间隙表、载流表、合规/验收结论
+  - **Next step**
+    - 按窄 lane 做 source-first promotion，优先顺序为：`capacitor role/parasitic boundary`, `common-mode choke vs ferrite-bead boundary`, `transmission-line and via/return-path supplement`, `slot-crossing/bridging boundary`, `RF shield-cavity boundary`, `safety spacing authority lane`
+
+## 2026-05-06 (P4-210 EMC Handbook Source-First Narrow Lane Routing)
+
+- **`85页 PCB设计EMC设计指导书` 已进入 source-first 窄 lane 路由**: 在 `P4-209` 的 claim-family 吸收基础上，继续把最值钱、最容易误吸收的 `公式 / 表 / 规则` 先拆成 `authority recovery demand map`
+  - **Lane Logs 创建** (3 files):
+    - `logs/p4-210a-2026-5-6-emc-source-lane-capacitor-parasitic-resonance.md`
+      - 固化 `电容角色 / ESR / ESL / 自谐振 / 反谐振` 的最小可复用 claim family、blocked numerics、后续半导体/电容原厂来源类型、以及 selective vision 候选图页
+    - `logs/p4-210b-2026-5-6-emc-source-lane-common-mode-choke-vs-ferrite-bead.md`
+      - 固化 `共模扼流圈 vs 磁珠` 的中性术语、噪声模式边界、blocked selection claims、后续器件原厂 application-note 恢复方向
+    - `logs/p4-210c-2026-5-6-emc-source-lane-transmission-line-via-return-slot.md`
+      - 固化 `传输线 / 阻抗 / 过孔 / 回流路径 / 跨槽` 的 checklist vocabulary、blocked formula/numeric claims、以及后续 SI/EDA/测量类 authority lane
+  - **Current status**
+    - `P4-210` 目前仍然是 `completed_at_claim_family_level_only`
+    - 这一步的价值不是直接写入 `facts/`，而是把 handbook 中“写得很好但不能原样吸收”的数值规则和图表，拆成可验证、可补权威源的细分主题
+  - **Next step**
+    - 先补 3 类 authority:
+      - 半导体/电容原厂的 decoupling / PDN / parasitic / resonance 指南
+      - EMI 器件原厂的 ferrite bead / common-mode choke selection guides
+      - SI / EDA / measurement 公共来源的 transmission-line / via / return-path / discontinuity guidance
+
+## 2026-05-06 (P4-211 EMC Source-First Authority Recovery Integration)
+
+- **`P4-210` 的首轮 authority recovery 已落到本地知识层**: 继续沿着 `85页 EMC 手册` 的三条高价值窄 lane 推进，优先把已经有官方/原厂支持的边界升格进 `sources/` 与 `facts/`
+  - **Source 创建** (4 files):
+    - `sources/registry/methods/murata-capacitor-impedance-frequency-faq.md`
+      - 固化 Murata 官方 FAQ 对 `capacitor impedance / ESR frequency dependence` 的最小支撑
+    - `sources/registry/methods/tdk-mlcc-antiresonance-decoupling-guide.md`
+      - 固化 TDK 官方 `MLCC decoupling / SRF / antiresonance` 指导页，用于阻止把并联电容简单当成“越多越好”的规则
+    - `sources/registry/methods/analog-devices-decoupling-capacitors-on-power-pins.md`
+      - 固化 ADI 官方支持文档里的 `decoupling / bypass / bulk capacitor` 角色语言
+    - `sources/registry/methods/murata-common-mode-choke-coils-overview.md`
+      - 固化 Murata 官方 `common-mode choke` 产品概览页，用于与 ferrite bead 做组件族边界区分
+  - **Fact 创建** (2 files):
+    - `facts/methods/capacitor-parasitic-self-resonance-and-antiresonance-boundary.md`
+      - 允许保守复用 `decoupling / bypass / bulk` 角色语言、`ESR`、`SRF`、`antiresonance` 边界；仍禁止值表、介质推荐、放置公式和 cookbook 配方
+    - `facts/methods/common-mode-choke-vs-ferrite-bead-vendor-boundary.md`
+      - 允许保守复用 `ferrite bead` 与 `common-mode choke` 的不同组件族身份和 `common-mode noise` 语义；仍禁止 universal selection / placement / compliance claims
+  - **Integration Log 创建** (1 file):
+    - `logs/p4-211-2026-5-6-emc-source-first-authority-recovery-integration.md`
+      - 记录哪些 lane 已进入 `source_backed_fact_layer_partial`，以及 `transmission-line / via / slot` 为什么暂时只复用现有 fact layer
+  - **Current status**
+    - `电容非理想/谐振` 与 `磁珠 vs 共模扼流圈` 两条 lane 已进入 `source_backed_fact_layer_partial`
+    - `传输线 / 回流 / 过孔 / 跨槽` 目前仍以现有 `return-path`、`impedance`、`TDR` 卡片复用为主，没有强行新增弱卡
+  - **Next step**
+    - 如果后续内容确实需要更细的 `via parasitic`、`slot bridging`、`quiet ground crossing`，再专门补更强的官方来源，不直接从 handbook 公式抄升格
+
+## 2026-05-06 (Language Normalization And Canonical English Indexing Policy)
+
+- **统一知识层语言索引规则已固化**: 为避免 `llm_wiki` 因中文 PDF / 中文术语输入而形成中英文两套并行索引，新增一份语言归一化 policy，并把规则接入主 README 与 prompt-consumption 规范
+  - **Policy 创建** (1 file):
+    - `policies/language-normalization-and-indexing.md`
+      - 明确 `sources/registry`、`facts/`、`wiki/` 一律使用英文 canonical storage / retrieval language
+      - 中文仅允许保留在 provenance、原始 PDF 文件名、claim-inventory logs、以及必要原文说明中
+      - 禁止为同一概念维护中英文两套 `fact_id` / `source_id` / `topic` / `tags` / 文件路径
+  - **Doc 更新** (3 files):
+    - `README.md`
+    - `facts/README.md`
+    - `policies/prompt-consumption-specification.md`
+  - **Current status**
+    - 后续从中文 PDF 学到的内容，仍可保留中文来源上下文，但入库后的可复用知识层必须统一到英文主键和英文正文
+
+## 2026-05-06 (P4-212 Via Transition Authority Recovery Integration)
+
+- **`via-transition / return-path continuity` 已补成更窄的 source-backed fact lane**: 在 `P4-210C` 的基础上，继续用更强的官方来源把过孔换层与回流路径处理收口成独立知识卡
+  - **Source 创建** (1 file):
+    - `sources/registry/methods/nxp-an11397-ptn3363-pcb-layout-guidelines.md`
+      - 固化 NXP 官方 `via-transition` / `ground vias` / `parasitic` / `stub` 语义
+  - **Fact 创建** (1 file):
+    - `facts/methods/via-transition-return-path-continuity-boundary.md`
+      - 允许保守复用 `via transition`、`return-path continuity`、`nearby ground vias`、`parasitic`、`stub` 等英文主键；仍禁止 universal spacing / via-count / bridge recipe
+  - **Integration Log 创建** (1 file):
+    - `logs/p4-212-2026-5-6-via-transition-authority-recovery-integration.md`
+      - 记录 `slot-crossing / quiet-ground` 仍然只是现有 return-path boundary 的复用，不单独升格
+  - **Current status**
+    - `P4-210C` 中最强的可升格部分已经进入 `source_backed_fact_layer_partial`
+    - `slot-crossing / quiet-ground` 仍然不足以独立形成新 fact card，继续留在原有 return-path boundary 内复用
+
+## 2026-05-06 (P4-213 To P4-217 PCB资料 Exact-Data Learning Governance)
+
+- **`PCB资料` exact-data 学习主控面已建立**: 为后续把 `公式 / 表格 / 图片 / 参数数据` 真正学进 `llm_wiki`，新增 batch-wide exact-data map、图表学习契约、admission policy、三条 workstream、subagent 协调方案与完成标准
+  - **Log / Policy 创建** (8 files):
+    - `logs/p4-213-2026-5-6-pcb-pdf-exact-data-learning-map.md`
+      - 固化 batch-wide exact-data family ranking、可升格 exact-data class、blocked secondary-PDF claims、以及 `sources/registry -> facts -> wiki` 的落地路径
+    - `logs/p4-214-2026-5-6-pcb-pdf-figure-table-learning-contract.md`
+      - 固化 `formula_figure`、`parameter_table`、`defect_photo`、`process_diagram`、`package_footprint_drawing`、`branded_poster` 六类资产的学习动作、去品牌规则与引用契约
+    - `policies/exact-data-admission-policy.md`
+      - 定义 `part_scoped_exact_data`、`method_scoped_exact_data`、`standard_scoped_exact_data`、`dated_capability_exact_data`、`secondary_pdf_claim_inventory_only` 五类 exact-data admission 边界
+    - `logs/p4-215a-2026-5-6-emc-exact-data-workstream.md`
+    - `logs/p4-215b-2026-5-6-pcba-inspection-exact-data-workstream.md`
+    - `logs/p4-215c-2026-5-6-package-footprint-exact-data-workstream.md`
+      - 将第一波精确学习拆成 `EMC`、`PCBA inspection`、`package/footprint` 三条可并行 subagent workstream，并固化 page slices、expected outputs、blocked classes
+    - `logs/p4-216-2026-5-6-pcb-pdf-subagent-coordination-plan.md`
+      - 定义 main-agent 与 subagent 的职责边界、lane output contract、并行顺序与 integration 规则
+    - `logs/p4-217-2026-5-6-pcb-pdf-program-completion-criteria.md`
+      - 区分 governance-layer completion 与 strong completion，避免后续把“只抽取 / 只建 log”误报成“已经学完”
+  - **Policy 更新** (1 file):
+    - `policies/prompt-consumption-specification.md`
+      - 明确 downstream prompt 只能消费已通过 `exact-data-admission-policy.md` 的公式 / 表格 / 参数数据；secondary-PDF-only 数据一律不得直接入 evidence pack
+  - **Current status**
+    - `PCB资料` 批次现已从 `claim-family intake` 进入 `exact-data governance ready`
+    - 这仍不代表 exact-data 已经批量写回 `facts/` 或 `wiki/`；它只表示后续多 agent / 多 AI 已经有统一的执行与验收合同
+  - **Next step**
+    - 按 `P4-216` 开始 `Round 1: A1 + B1 + C1`，优先从 `EMC capacitor/choke`、`PCBA ESD/handling`、`package taxonomy/naming` 三条 lane 启动 subagent 精确学习
+
 ## 2026-05-06 (Thermal Cycling Public Parameter Boundary)
 
 - **Thermal cycling 参数层补强**: 为 `thermal-cycling-test-for-pcb-reliability` 补入可公开复用的 IPC 方法参数边界，并区分 method-scoped example 与 universal rule

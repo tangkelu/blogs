@@ -5,6 +5,7 @@ category: "processes"
 status: "active"
 last_reviewed_at: "2026-05-04"
 fact_ids:
+  - "methods-bga-staged-process-review-and-hidden-joint-inspection-boundary"
   - "methods-low-void-bga-dfm-to-process-review"
   - "methods-low-void-bga-reflow-paste-vs-assembly-boundary"
   - "methods-hidden-joint-xray-inspection-boundary"

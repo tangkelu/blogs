@@ -24,13 +24,28 @@
 ## 标准执行顺序
 
 1. 先读 `shared/technical-blog-standard.md`
-2. 再读 `shared/blog-rewrite-data-gap-contract.md`，先分析博客 / 主题关键点，判断是否需要补 `llm_wiki`
-3. 再读 `shared/template-selection-and-pruning.md`，判断使用 `query` 还是 `pillar`
-4. 用 `shared/evidence-pack-template.md` 准备 facts / judgments / 禁写边界
-5. 选择目标站点 overlay
-6. 按站点内链策略分配产品页、服务页、工具页、次级博客页
-7. 如需数字型参数，先检查 `shared/fact-seed-repository-standard.md`
-8. 最终执行 `shared/query.md` 或 `shared/pillar.md`
+2. 再读 `shared/blog-rewrite-data-gap-contract.md`，先分析博客 / 主题关键点，判断是否需要补内部证据库
+3. 先到 `../llm_wiki/` 检查现有 `sources/registry/`、`facts/`、`wiki/` 是否已覆盖当前主题；默认先消费本地知识库，不先直接查外部网络
+4. 如果本地知识库只能支撑“安全但薄”的文章，而不能支撑顶尖稿所需的工程深度、检查表、决策矩阵、验证动作和 FAQ 含金量，也视为缺少关键事实
+5. 只有当 `llm_wiki` 缺少支撑当前标题、description、H2、表格、FAQ 所需的关键事实时，才允许补外部来源；补完后必须先写回 `llm_wiki`，再继续正文
+6. 再读 `shared/template-selection-and-pruning.md`，判断使用 `query` 还是 `pillar`
+7. 用 `shared/evidence-pack-template.md` 准备 facts / judgments / 禁写边界
+8. 选择目标站点 overlay
+9. 按站点内链策略分配产品页、服务页、工具页、次级博客页
+10. 如需数字型参数，先检查 `shared/fact-seed-repository-standard.md`
+11. 生成结尾 CTA 时，优先使用“问题场景 + 提交资料 + 工程反馈”的服务引导结构，不再默认用产品链接清单式结尾
+12. 最终执行 `shared/query.md` 或 `shared/pillar.md`
+
+## 4 步硬流程
+
+任何博客重写或新写，在进入正文前都必须先完成下面 4 步：
+
+1. 先查本地 `../llm_wiki/`，优先消费已有 `sources/registry/`、`facts/`、`wiki/`、gate 和 readiness notes。
+2. 如果本地知识库不足以支撑标题、description、H2、表格、FAQ 和工程密度，再补官方公开来源；不要先跳到外部搜索。
+3. 外部补到的来源、事实、主题页或 gate，必须先回写 `../llm_wiki/`；不允许“查完就直接写博客”。
+4. 只有在 `llm_wiki` 已足够支撑成稿，且最小消费清单已经明确后，才允许开始正文生成。
+
+这 4 步是硬门槛，不是建议。若本地知识库只能支撑一篇“安全但薄”的保守稿，也视为数据不足，必须先补官方来源并回写 `llm_wiki`。
 
 ## HILPCB 使用路径
 
@@ -87,7 +102,7 @@ APTPCB 的内链承接要优先落向：
 ## 这个目录现在负责什么
 
 - 固定博客生产时真正使用的 prompt 入口
-- 固定博客分析 / 重写 / 生成前的 `分析关键点 -> 查 llm_wiki -> 补数据 -> 再写作` 契约
+- 固定博客分析 / 重写 / 生成前的 `分析关键点 -> 查内部证据库 -> 补数据 -> 再写作` 契约
 - 固定 Query / Pillar 两套主结构
 - 固定关键词集群与数据组织方法
 - 固定 evidence-first 的技术博客写法
@@ -106,7 +121,15 @@ APTPCB 的内链承接要优先落向：
 执行博客写作时：
 
 - 在 `prompts_template/` 里组装证据与结构
-- 在 `llm_wiki/` 里读取来源、事实卡片、主题页
+- 在内部证据库里优先读取来源、事实卡片、主题页
+- 如果本地知识库只能产出保守薄稿，也算缺少关键事实；此时必须先补官方来源并回写 `../llm_wiki/`
+- 只有本地知识库足够支撑顶尖稿时，才允许直接进入正文；否则必须先把新增来源 / fact / wiki 回写到 `../llm_wiki/`
+
+对外成稿红线：
+
+- 最终博客正文、脚注、FAQ、作者信息、review 信息、引用说明中，不得出现 `llm_wiki`、`evidence pack`、`source layer`、`local evidence layer`、`working prompt`、`prompt`、`workflow`、`internal`、`repo`、`knowledge base` 等内部执行术语
+- 最终博客成稿不得使用 Markdown 脚注语法，例如 `[^1]`、`[^validation]`；如需归因，只能使用正文内联来源句柄或括号式说明
+- 这些词只允许出现在内部流程文档里，不允许出现在面向站点发布的最终 Markdown 成稿里
 
 不要把外部真实数据源登记、法规刷新记录、材料参数事实卡片继续堆回本目录。
 

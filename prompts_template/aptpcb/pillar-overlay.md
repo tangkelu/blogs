@@ -21,3 +21,14 @@
 - Materials & Stackups
 - PCBA Testing & Inspection
 - Industry-specific PCB Guides
+
+## APTPCB CTA 规则
+
+- APTPCB 的 Pillar 页面结尾 CTA，优先写成“专题进入执行阶段时的关键卡点 + 应提交的工程资料 + 24 小时 DFM 反馈”
+- 当前可公开复用的联系邮箱是 `sales@aptpcb.com`
+- 当前可公开复用的承接页是 `https://aptpcb.com/en/quote/`
+- 当前可公开复用的工程响应表述是“DFM feedback within 24 hours”
+- CTA 应总结该专题最常见的执行卡点
+  - 例如 stackup 冻结、材料选择、finish zoning、test strategy、DFM cleanup、validation handoff
+- 允许补充 `3-4` 个一级承接页链接，但它们应作为后续阅读路径，不应替代主 CTA
+- 不要把专题页结尾写成产品目录或品牌宣传段

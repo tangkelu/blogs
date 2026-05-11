@@ -8,6 +8,8 @@ confidence: "high"
 must_refresh: false
 reviewed_at: "2026-05-04"
 source_ids:
+  - "keysight-in-circuit-test-systems-page"
+  - "seica-flying-probe-page"
   - "pcba-ict-boundary-and-flying-probe-method-identity"
   - "methods-pcba-dfm-dft-dfa-review-gate-positioning"
   - "processes-inspection-governance-navigation-map"
@@ -22,6 +24,7 @@ tags: ["pcba", "ict", "fixture", "dft", "dfm", "release-readiness", "test-access
 
 ## Stable Facts
 
+- The official Keysight and SEICA pages keep the outer method split explicit: ICT is the fixture-based lane, while flying probe is the fixture-free lane.
 - DFM, DFT, and DFA are early review gates that shape later inspection and validation.
 - ICT belongs to the post-assembly electrical-test layer inside the broader PCBA quality flow.
 - Flying probe remains the fixture-free fallback when dedicated fixture-based access is not the right choice.
@@ -39,6 +42,8 @@ tags: ["pcba", "ict", "fixture", "dft", "dfm", "release-readiness", "test-access
 
 ## Source Links
 
+- https://www.keysight.com/us/en/products/in-circuit-test-for-manufacturing/in-circuit-test-systems.html
+- https://www.seica.com/en/products/flying-probe-test-systems
 - /code/hileap/frontendAPT/public/static/pcba/en/ict-test.json
 - /code/hileap/frontendAPT/public/static/pcba/en/flying-probe-testing.json
 - /code/hileap/frontendAPT/public/static/pcba/en/quality-system.json
