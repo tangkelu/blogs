@@ -32,8 +32,13 @@ HILPCB pillar 博客必须包含内置快速报价组件：
 
 ## 适合优先做强的枢纽主题
 
+- Single / Double Layer PCB
+- Low-layer FR-4 / Prototype Baseline
 - High-Speed / Impedance
 - HDI / Microvia
 - Rigid-Flex / Flex Reliability
 - PCBA / Assembly Quality
+- Turnkey BOM Sourcing / PCBA Traceability
+- Through-Hole / Mixed-Technology Assembly
+- Volume PCBA Ramp / SPC Production
 - Materials / Surface Finish / Thermal

@@ -3,22 +3,26 @@ topic_id: "processes-package-library-governance-and-footprint-review-map"
 title: "Package Library Governance And Footprint Review Map"
 category: "processes"
 status: "active"
-last_reviewed_at: "2026-05-11"
+last_reviewed_at: "2026-05-12"
 fact_ids:
   - "methods-package-family-and-footprint-governance-vocabulary-boundary"
   - "methods-padstack-origin-pin1-and-footprint-review-governance-boundary"
   - "methods-connector-origin-and-installation-mark-boundary"
+  - "methods-phoenix-contact-finepitch-orientation-and-plug-direction-boundary"
   - "methods-cad-owner-footprint-reference-point-and-layer-role-boundary"
   - "methods-iec-zero-orientation-cad-library-construction-boundary"
   - "methods-iec-smd-component-marking-boundary"
+  - "methods-analog-devices-lfcsp-package-outline-pin1-indicator-boundary"
   - "methods-bga-1p50mm-pitch-standards-existence-boundary"
   - "methods-iec-square-bga-1mm-or-larger-outline-and-variation-boundary"
   - "methods-iec-area-array-land-pattern-geometry-family-boundary"
+  - "methods-ipc-public-bga-csp-1p50mm-pitch-and-0p75ball-geometry-boundary"
   - "methods-nxp-1p50mm-bga225-reflow-footprint"
   - "methods-renesas-1p50mm-bga-package-drawing-prbg0225cb-a"
   - "methods-renesas-1p50mm-bga-lga-mount-pad-dimensions-row"
   - "methods-amd-bg225-bgg225-1p50mm-bga-footprint-row"
   - "methods-nxp-bga-footprint-pitch-and-pcb-land-pad-examples"
+  - "methods-diodes-u-wlb1510-6-outline-and-suggested-pad-layout"
   - "methods-ti-bga-pad-geometry-guidelines-1p27-and-1p0-mm-pitch"
   - "methods-microchip-csp-bga-solder-land-and-pitch-examples"
   - "methods-microchip-0p75mm-tfbga-land-pattern-4lx"
@@ -41,18 +45,24 @@ source_ids:
   - "molex-105133-0002-micro-b-recommended-pcb-layout"
   - "samtec-mb1-recommended-pcb-layout-and-mating-card"
   - "amphenol-10122424-sfp-board-connector-recommended-pcb-layout"
+  - "phoenix-contact-finepitch-fp-08-80-mv-265-orientation-page"
   - "iec-61188-7-zero-orientation-cad-library-page"
   - "iec-61760-1-smd-specification-page"
   - "iec-61760-1-component-marking-preview-page"
+  - "analog-devices-cp-28-12-lfcsp-package-outline-pin1-indicator"
+  - "analog-devices-cp-32-32-lfcsp-package-outline-pin1-indicator-area"
+  - "analog-devices-cp-48-4-lfcsp-package-outline-pin1-indicator-area"
   - "iec-60191-6-2-ball-column-package-design-guide-page"
   - "iec-60191-6-18-square-bga-design-guide-page"
   - "iec-61188-5-8-area-array-land-pattern-page"
   - "iec-61188-6-2-land-pattern-design-smd-page"
+  - "ipc-bga-csp-technology-paper-1p50mm-pitch-and-0p75ball-geometry"
   - "nxp-sot648-1-bga225-1p50mm-reflow-footprint"
   - "renesas-prbg0225cb-a-1p50mm-bga-package-drawing"
   - "renesas-bga-lga-mount-pad-dimensions-common-pitches"
   - "amd-ug112-bg225-bgg225-1p50mm-bga-footprint-row"
   - "nxp-an10778-bga-footprints"
+  - "diodes-dmn1016ucb6-u-wlb1510-6-outline-and-suggested-pad-layout"
   - "ti-an1126-bga-pad-geometry-guidelines"
   - "microchip-ac243-csp-pcb-design-guidelines"
   - "microchip-176b-tfbga-4lx-package-drawing-0p75mm-land-pattern"
@@ -93,12 +103,16 @@ This page closes those failure modes by routing package-library work into the ri
 | What package-family names are safe to use? | `methods-package-family-and-footprint-governance-vocabulary-boundary` | Taxonomy and governance vocabulary |
 | What padstack, origin, pin-1, and review-dimension terms are safe? | `methods-padstack-origin-pin1-and-footprint-review-governance-boundary` | Review vocabulary and blocked numerics |
 | What official support exists for connector origin or installation-mark wording? | `methods-connector-origin-and-installation-mark-boundary` | CAD-library convention plus multiple series-specific owner drawings only |
+| What current-public owner wording ties `pin 1` to PCB-assembly orientation and plug-in direction for one named board-to-board connector family? | `methods-phoenix-contact-finepitch-orientation-and-plug-direction-boundary` | Named-series owner guidance only |
 | What official CAD-owner support exists for footprint reference-point handling and visible/documentation layer separation? | `methods-cad-owner-footprint-reference-point-and-layer-role-boundary` | Cross-tool CAD-owner construction boundary only |
 | What standards-owner support exists for zero-orientation wording in CAD library construction? | `methods-iec-zero-orientation-cad-library-construction-boundary` | Standards-owner orientation-description boundary only |
 | What public IEC support exists for `pin-1` and polarity identification? | `methods-iec-smd-component-marking-boundary` | Component-specification marking boundary only |
+| What current-public owner support exists for one package-family-specific `pin-1` indicator surface? | `methods-analog-devices-lfcsp-package-outline-pin1-indicator-boundary` | ADI LFCSP owner package-outline marking boundary only |
 | What official support exists for `1.50 mm` coarse-pitch BGA wording if exact geometry is still missing? | `methods-bga-1p50mm-pitch-standards-existence-boundary`, `methods-iec-square-bga-1mm-or-larger-outline-and-variation-boundary` | Standards-owner existence plus square-BGA family framing only |
 | What stronger IEC support exists for area-array land-pattern design without a public `1.50 mm` row? | `methods-iec-area-array-land-pattern-geometry-family-boundary` | Standards-owner area-array land-pattern family and lifecycle framing only |
+| What public IPC-hosted geometry support exists above metadata-only `1.50 mm` framing? | `methods-ipc-public-bga-csp-1p50mm-pitch-and-0p75ball-geometry-boundary` | Standards-adjacent public pitch-family and round-land geometry boundary only |
 | What official support exists for current-public `1.50 mm` owner-scoped package evidence? | `methods-nxp-1p50mm-bga225-reflow-footprint`, `methods-renesas-1p50mm-bga-package-drawing-prbg0225cb-a`, `methods-renesas-1p50mm-bga-lga-mount-pad-dimensions-row`, `methods-amd-bg225-bgg225-1p50mm-bga-footprint-row` | Multiple owner-scoped exact rows plus one Renesas named-package drawing |
+| What official support exists for one current-public named-package outline and footprint example outside the current BGA/CSP pitch lane? | `methods-diodes-u-wlb1510-6-outline-and-suggested-pad-layout` | Vendor-scoped named-package outline and suggested-pad-layout only |
 | What official BGA / CSP land-pattern examples can replace handbook table pressure? | `methods-nxp-bga-footprint-pitch-and-pcb-land-pad-examples`, `methods-ti-bga-pad-geometry-guidelines-1p27-and-1p0-mm-pitch`, `methods-microchip-csp-bga-solder-land-and-pitch-examples`, `methods-microchip-0p75mm-tfbga-land-pattern-4lx`, `methods-microchip-0p75mm-tfbga-land-pattern-7g`, `methods-microchip-0p75mm-tfbga-land-pattern-bab`, `methods-renesas-0p75mm-fbga-package-land-pattern-bcg48d1`, `methods-nxp-0p75mm-fbga448-reflow-footprint`, `methods-intel-0p75mm-ubga-csp-pcb-design-guidelines-table`, `methods-intel-bga-land-pad-guidelines-common-pitches-and-vbga` | Vendor-scoped exact geometry only |
 | Where does footprint review sit in broader DFM review? | `methods-pcba-dfm-dft-dfa-review-gate-positioning` | DFM gate placement |
 | Which internal APT resource pages support this topic? | `methods-internal-resource-layer-prompt-support-corpus` | Resource-layer routing |
@@ -134,9 +148,9 @@ If exact geometry is needed:
   route to stronger package-owner or standards-backed authority
 ```
 
-## Exact-Geometry Route
+## Geometry Route
 
-When a prompt needs real BGA or CSP pad geometry rather than vocabulary-only footprint review language, route to existing package-owner cards instead of reopening the local handbook table:
+When a prompt needs real package-scoped pad geometry rather than vocabulary-only footprint review language, route to existing package-owner cards or narrowly bounded public standards-adjacent geometry cards instead of reopening the local handbook table:
 
 - `methods-nxp-bga-footprint-pitch-and-pcb-land-pad-examples`
   - use for named-package NXP `1.0`, `0.8`, `0.65`, and `0.5 mm` BGA footprint rows
@@ -152,10 +166,14 @@ When a prompt needs real BGA or CSP pad geometry rather than vocabulary-only foo
   - use for one Renesas owner-scoped `1.50 mm` exact row `Lead pitch(mm) 1.50 -> φ(mm) 0.55 to 0.65`
 - `methods-amd-bg225-bgg225-1p50mm-bga-footprint-row`
   - use for one AMD-hosted `UG112` owner-scoped `1.50 mm` exact row `BG225 / BGG225` with same-table footprint geometry values
+- `methods-diodes-u-wlb1510-6-outline-and-suggested-pad-layout`
+  - use for one Diodes owner-scoped `U-WLB1510-6` named-package outline and suggested-pad-layout page, and keep the visible `1.50` attached to package body `D` rather than pitch `e`
 - `methods-iec-square-bga-1mm-or-larger-outline-and-variation-boundary`
   - use for one tighter official IEC package-family boundary that `all square BGA packages, terminal pitch 1 mm or larger` have formal outline, dimension, and recommended-variation framing, while keeping exact public PCB land-pattern geometry blocked
 - `methods-iec-area-array-land-pattern-geometry-family-boundary`
   - use for official IEC standards-owner framing that area-array land-pattern geometry is a formal design family, while keeping exact `1.50 mm` geometry blocked unless a public owner row or paid-standard content is separately available
+- `methods-ipc-public-bga-csp-1p50mm-pitch-and-0p75ball-geometry-boundary`
+  - use for one public IPC-hosted geometry chain from `1.50 / 1.27 mm` pitch family to nominal `0.75 mm` ball class and visible round-land example values, while keeping universal exact-row reuse blocked
 - `methods-microchip-0p75mm-tfbga-land-pattern-4lx`
   - use for one Microchip owner-scoped `0.75 mm` `176-ball 4LX TFBGA` package-drawing row
 - `methods-microchip-0p75mm-tfbga-land-pattern-7g`
@@ -230,7 +248,7 @@ Use these to explain what is being reviewed, not to publish handbook thresholds.
 - keepout offsets or silkscreen clearances
 - vendor workflow screenshots or UI-derived rule settings
 
-If a draft specifically needs package-scoped BGA/CSP geometry, leave this map and use the exact-data cards listed in `Exact-Geometry Route`.
+If a draft specifically needs package-scoped BGA/CSP geometry, leave this map and use the exact-data cards listed in `Geometry Route`.
 
 ## Provenance Inventory Boundary
 

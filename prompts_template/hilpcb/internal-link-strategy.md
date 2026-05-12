@@ -31,6 +31,26 @@ HILPCB 的技术博客内链默认遵循“产品页 / 服务页优先，博客�
 
 ## 主题优先承接
 
+### 标准 1-2 层 / 低密度 / 成本敏感 PCB
+
+- `products/single-double-layer-pcb`
+- `products/fr4-pcb`
+- `services/pcb-prototype`
+- `quote/`
+
+使用场景：
+
+- 关键词包含 `single layer PCB`、`double layer PCB`、`2 layer PCB`、`single sided PCB`、`double sided PCB`
+- 内容讨论简单控制板、LED driver、sensor board、power supply、low-density routing、cost-sensitive prototype
+- 文章需要解释“什么时候 1-2 层够用，什么时候升级到 multilayer/HDI”
+
+规则：
+
+- 这类主题开头或第一个相关技术段优先链接到 `products/single-double-layer-pcb`
+- 不要把这类意图默认承接到 `products/fr4-pcb`、`products/multilayer-pcb` 或博客页
+- 如涉及能力参数，优先查 `llm_wiki/facts/processes/hil-single-double-layer-capability-specs.md`
+- 当前稳定口径：1-2 layers, 24-48h quick-turn, 150/150 μm standard trace/space, 75/75 μm advanced trace/space, FR-4 Tg 130-170°C
+
 ### 高速 / 阻抗 / SI
 
 - `products/high-speed-pcb`
@@ -44,6 +64,12 @@ HILPCB 的技术博客内链默认遵循“产品页 / 服务页优先，博客�
 - `products/multilayer-pcb`
 - `services/pcb-prototype`
 
+规则：
+
+- 关键词包含 `HDI PCB`、`microvia`、`blind via`、`buried via`、`VIPPO`、`via-in-pad`、`fine-pitch BGA` 时，优先承接到 `products/hdi-pcb`
+- 如果文章只是普通多层板、plane/routing layer 增加，不要默认落到 HDI；优先 `products/multilayer-pcb`
+- 如果主问题是高速损耗、协议、阻抗，而不是微孔/封装逃逸，优先 `products/high-speed-pcb`
+
 ### Rigid-Flex / Flex
 
 - `products/rigid-flex-pcb`
@@ -56,6 +82,15 @@ HILPCB 的技术博客内链默认遵循“产品页 / 服务页优先，博客�
 - `products/smt-assembly`
 - `products/through-hole-assembly`
 - `products/small-batch-assembly`
+- `products/large-volume-assembly`
+
+规则：
+
+- BOM sourcing、AVL、EOL、alternates、procurement ownership、component traceability 优先承接到 `products/turnkey-assembly`
+- connector、terminal、relay、transformer、press-fit、wave solder、selective solder、mixed-technology THT 优先承接到 `products/through-hole-assembly`
+- NPI、first article、prototype PCBA、pilot build 优先承接到 `products/small-batch-assembly`
+- repeat production、mass production、SPC、MES traceability、pilot-to-volume ramp、forecast-driven PCBA 优先承接到 `products/large-volume-assembly`
+- enclosure、harness、firmware loading、system test、pack-out 优先承接到 `products/box-build-assembly`
 
 ### 材料 / 表面处理 / 热管理
 

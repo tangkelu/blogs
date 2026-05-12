@@ -45,6 +45,9 @@ Residual authority gaps that remain open:
 
 Residual narrowing already landed:
 
+- `1.50 mm` remains the only live package-side reopen lane, but the current public owner layer has now also been rechecked after the broader JEITA landing through:
+  - `logs/p4-560-2026-5-12-bounded-owner-scout-after-jeita-current-public-1p50mm-no-reopen.md`
+- that post-`P4-559` bounded pass checked a fresh official-owner lane across `TI`, `Analog Devices / Maxim`, `ST`, `onsemi`, `Qorvo`, `Skyworks`, `Lattice`, `Marvell`, and `Qualcomm`, plus a controller-verified NXP-hosted Freescale PBGA presentation; no surface exposed both true `1.50 mm` pitch identity and same-surface PCB land-pattern / footprint geometry
 - `0.75 mm` now has one official owner-scoped replacement route through:
 - `0.75 mm` now has three official owner-scoped exact rows plus one current-public second-owner exact-data page plus one current-public third-owner exact-data page through:
   - `logs/p4-316-2026-5-8-microchip-0p75mm-tfbga-land-pattern-landing.md`
@@ -69,6 +72,10 @@ Residual narrowing already landed:
   - `logs/p4-393-2026-5-10-amphenol-connector-owner-layout-route.md`
   - `facts/methods/connector-origin-and-installation-mark-boundary.md`
 - this does not close them as universal cross-vendor rules, but it does add one more current-public owner route with named-side context
+- `connector-origin` now also has one supplementary named-series owner orientation route through:
+  - `logs/p4-549-2026-5-12-phoenix-contact-finepitch-orientation-wording-supplementary-boundary-no-reopen.md`
+  - `facts/methods/phoenix-contact-finepitch-orientation-and-plug-direction-boundary.md`
+- this raises the named-series owner side above drawing-only context alone by linking `pin 1` marking, owner drawing marking, PCB-assembly orientation, and plug-in direction in one current-public owner statement, but it still does not close universal connector-origin doctrine or board-level installation-mark geometry
 - the doctrine lane now also has one stronger cross-tool CAD-owner footprint-construction boundary through:
   - `logs/p4-483-2026-5-11-altium-cad-owner-footprint-reference-point-and-layer-boundary.md`
   - `facts/methods/cad-owner-footprint-reference-point-and-layer-role-boundary.md`
@@ -80,6 +87,10 @@ Residual narrowing already landed:
   - `logs/p4-392-2026-5-10-iec-smd-component-marking-boundary.md`
   - `facts/methods/iec-smd-component-marking-boundary.md`
 - this does not close board-level installation-mark geometry, universal connector-origin doctrine, or package-family-specific marking conventions
+- `installation mark / component marking` now also has one current-public package-family owner marking route through:
+  - `logs/p4-554-2026-5-12-adi-lfcsp-package-outline-pin1-indicator-boundary-no-reopen.md`
+  - `facts/methods/analog-devices-lfcsp-package-outline-pin1-indicator-boundary.md`
+- this raises package-family-specific marking above IEC topic framing alone by adding sampled ADI LFCSP package-outline drawings with explicit `PIN 1 INDICATOR`, `PIN 1 INDICATOR AREA`, and `PIN 1 INDICATOR AREA OPTIONS` labeling, but it still does not close board-level installation-mark geometry, universal connector-origin doctrine, or one universal `pin-1` symbol law
 - the current `KiCad + Molex/Samtec/Amphenol + IEC + local handbook` set has now also been re-audited through:
   - `logs/p4-463-2026-5-11-package-nonbga-marking-origin-reaudit-and-no-write-closeout.md`
 - this re-audit confirms that the clean `visible cue` versus `F.Fab` cue split is already absorbed in the current fact layer, and that this lane should not be reopened on the same source set unless materially stronger authority appears
@@ -124,13 +135,17 @@ Residual narrowing already landed:
   - `logs/p4-498-2026-5-11-d3-power-pin-and-decoupling-dedicated-plane-connection-boundary.md`
   - `facts/methods/power-pin-and-decoupling-dedicated-plane-connection-boundary.md`
 - this adds one owner-backed local plane-entry route above placement language alone, but it still does not authorize exact via counts, exact via geometry, universal one-via-per-pin doctrine, or RK3588 rail-specific sufficiency
+- the `194页` handbook `D4` lane now also has one official-source-backed narrow route for DDR / memory-interface routing governance through:
+  - `logs/p4-551-2026-5-12-d4-ddr-memory-interface-routing-governance-boundary.md`
+  - `facts/methods/ddr-memory-interface-routing-governance-boundary.md`
+- this adds one owner-backed memory-interface route above claim-family wording alone for solid reference-plane continuity, nearby ground stitching vias at layer transitions, unnecessary-transition avoidance, time-domain length / skew matching, same-byte or same-group layer discipline, and controlled serpentine compensation; it still does not authorize DDR impedance / spacing / timing / skew numerics, memory-interface validation outcomes, or any platform-specific routing recipe
 - the current `194页` handbook state has now also been re-audited through:
   - `logs/p4-502-2026-5-11-194-page-handbook-nine-route-successor-no-write-closeout.md`
 - this successor closeout replaces the stale `P4-499` handbook residual wording and records the current safe ceiling more exactly:
   - the earlier successor closeout captured an intermediate route count before the later fifth `D5` raise
-  - the current handbook ceiling is now four `D3` routes plus five `D5` routes landed
-  - it should not be reopened on the same source set for `remote feedback`, current `local decoupling`, current `exposed pad`, current `dedicated plane connection`, current `D5 clock`, current `switch-mode power`, current `pair-symmetry/common-mode-conversion`, or other synonym-level rewrites of already-landed surfaces
-  - future reopen should require materially stronger and non-overlapping authority beyond the current four `D3` routes and current five `D5` routes
+  - the current handbook ceiling is now four `D3` routes plus two `D4` routes plus five `D5` routes landed
+  - it should not be reopened on the same source set for `remote feedback`, current `local decoupling`, current `exposed pad`, current `dedicated plane connection`, current `D4 memory-interface routing governance`, current `D5 clock`, current `switch-mode power`, current `pair-symmetry/common-mode-conversion`, or other synonym-level rewrites of already-landed surfaces
+  - future reopen should require materially stronger and non-overlapping authority beyond the current four `D3` routes, two `D4` routes, and current five `D5` routes
 - `1.50 mm` now has one standards-owner existence-and-scope route through:
 - `1.50 mm` now also has one stronger square-BGA standards-owner package-family route through:
   - `logs/p4-487-2026-5-11-iec-square-bga-1mm-or-larger-family-boundary.md`
@@ -151,6 +166,18 @@ Residual narrowing already landed:
 - `1.50 mm` now also has one stronger standards-owner area-array land-pattern family route through:
   - `logs/p4-464-2026-5-11-iec-area-array-land-pattern-family-boundary.md`
   - `facts/methods/iec-area-array-land-pattern-geometry-family-boundary.md`
+- `1.50 mm` now also has one public IPC-hosted standards-adjacent geometry route through:
+  - `logs/p4-507-2026-5-11-ipc-public-bga-csp-1p50mm-pitch-and-0p75ball-geometry-boundary.md`
+  - `facts/methods/ipc-public-bga-csp-1p50mm-pitch-and-0p75ball-geometry-boundary.md`
+- this raises the public non-owner side above `IEC metadata / family framing only` by linking `1.50 / 1.27 mm` pitch variation to nominal `0.75 mm` ball class and visible round-land example geometry, but it still does not expose a formal public `1.50 mm` standards row or authorize a universal pitch-to-land-pattern rule
+- `1.50 mm` now also has one stronger public standards-owner geometry-bearing guide below gate through:
+  - `logs/p4-550-2026-5-12-jeita-edr-7315b-public-bga-geometry-surface-below-1p50mm-no-reopen.md`
+  - `facts/standards/jeita-edr-7315b-bga-public-geometry-below-1p50mm-boundary.md`
+- this raises the standards-side ceiling above TOC-only and discoverability-only anchors by adding one real public BGA design-guide body, but the visible public payload still stops at `1.27 mm` and `1.00 mm`, so it still does not reopen `1.50 mm`
+- `1.50 mm` now also has one broader public JEITA supplementary geometry/process stack below gate through:
+  - `logs/p4-558-2026-5-12-jeita-public-bga-fbga-flga-geometry-bundle-below-1p50mm-no-reopen.md`
+  - `facts/standards/jeita-public-bga-fbga-flga-geometry-surfaces-below-1p50mm-boundary.md`
+- this raises the public JEITA side above `EDR-7315B alone` by adding one BGA/FBGA warpage table surface and two printed-circuit-board socket-mounting-pattern surfaces, but the visible public rows still stop at `1.27 mm` or `0.80 / 0.65 / 0.50 / 0.40`, so it still does not reopen `1.50 mm`
 - the current `1.50 mm` exact lane has now also been re-audited after that standards-family raise through:
   - `logs/p4-465-2026-5-11-1p50mm-exact-lane-reaudit-after-iec-family-raise.md`
 - `1.50 mm` now also has one current-public third-owner exact row through:
@@ -186,7 +213,7 @@ Interpretation:
 
 - the article corpus already has controller-owned claim-family coverage
 - the article corpus now has bounded `usage route` surfaces for `E2-E6`, plus limited single-PDF route expansion in `E1` and `E7`
-- `E1` and `E7` remain non-fact-promoted lanes, but now each has limited single-PDF route expansion above pure hold-map coverage
+- `E1` remains non-fact-promoted overall but now includes limited single-PDF official-fact-backed raises, while `E7` likewise includes limited single-PDF official-fact-backed raises and the current live hold-only set is now only the two re-audited branded-tool PDFs recorded in `P4-535`
 - `E6` now also includes one narrow official-fact raise above route-only status for `BOM查错助力元器件采购.pdf`:
   - `logs/p4-407-2026-5-10-e6-bom-identity-field-separation-authority-recovery.md`
   - `facts/methods/bom-identity-field-separation-manufacturer-part-and-supplier-link-boundary.md`
@@ -650,7 +677,12 @@ Interpretation:
     - this still does not unlock board-edge numerics, depanel spacing defaults, machine-compatibility guarantees, reliability certainty, or cost/quality/cycle claims
   - `PCB板各种形状的拼版实例分享.pdf` now has a bounded route into irregular outline as panelization branch-selection context, shape-constrained route choice for nonflush / grooved / rounded edges, half-hole boards as special panelization subfamily, protruding-edge component interference context, and inverted arrangement / stamp-hole bridge as example branch choices only
   - `PCB板的Mark点设计对SMT重要性.pdf` now has a bounded route into `Mark` as optical alignment reference, board / panel / local-component scope split, asymmetry as orientation-disambiguation context, and visibility / cleanliness as recognition conditions
-  - `PCB板的Mark点设计对SMT重要性.pdf` has now also been re-audited against the current `IPC-7525C` stencil-metadata lane, internal stencil-support lane, and `Ucamco` Gerber fiducial-attribute lane, but those anchors still stop below a clean single-PDF official raise, so this surface remains route-only unless a materially stronger assembly-owner, CAD-library-owner, or standards-adjacent fiducial source appears
+  - `P4-460` correctly re-audited the older `IPC-7525C` / internal stencil-support / `Ucamco` fiducial-evidence set and kept it below reopen on its own
+  - `PCB板的Mark点设计对SMT重要性.pdf` now also has one narrow official-fact boundary through current-public `Yamaha` SMT machine-owner sources plus `KiCad` PCB Editor documentation:
+    - `Mark` / fiducial as optical alignment reference
+    - `board-global` versus `footprint-local` fiducial scope split
+    - `local marks` as local-correction posture
+  - this still does not unlock panel-level scope doctrine, asymmetry or visibility/cleanliness doctrine, geometry/count/opening/keepout rules, package-specific local-mark defaults, workaround guidance, or outcome claims
   - `PCB字符的DFM（可制造性）设计.pdf` now has a bounded route into character / legend as fabrication-communication and identification context, obstruction risk on solderable areas, readability risk from small/dense/overlapping/clipped legend, mirroring as legibility coordination, and logo / code placement as release-coordination topic
   - `PCB字符的DFM（可制造性）设计.pdf` now also has one narrow official-fact boundary for character or legend on opened / solderable areas as released-manufacturing-data conflict:
     - character or legend on opened or solderable areas may be reused as released-manufacturing-data conflict topic
@@ -844,11 +876,12 @@ Narrow follow-up already landed:
 - `logs/p4-340-2026-5-9-e7-data-exchange-format-route-integration.md`
 - `logs/p4-341-2026-5-9-e7-assembly-analysis-input-package-route-integration.md`
 - `logs/p4-351-2026-5-9-e7-graphic-alignment-workflow-route-integration.md`
+- `logs/p4-534-2026-5-11-e7-visual-bom-cross-probe-and-pcb-location-boundary-authority-recovery.md`
 
 Interpretation:
 
 - this does not make the whole `E7` lane fact-promoted
-- it raises only three single PDFs above pure cluster inventory:
+- it raises only four single PDFs above pure cluster inventory:
   - `PCB制造文件传输数据的主要格式.pdf` now has a bounded route into authoring-file versus manufacturing-handoff-package identity, Gerber / ODB++ / IPC-DPMX identity-level exchange vocabulary, and the boundary that fabrication outputs do not by themselves equal full assembly or test review completeness
   - `PCB制造文件传输数据的主要格式.pdf` now also has one narrow official-fact boundary for native PCB authoring file versus released manufacturing-handoff package identity:
     - native PCB authoring files and released manufacturing-transfer outputs may be reused as different data layers
@@ -862,6 +895,15 @@ Interpretation:
     - `BOM` and placement-related data may be reused as remaining separate companion artifacts when the chosen handoff family does not already expose enough assembly context
     - this still does not unlock universal `PCB/ODB` embedded-content sufficiency, universal minimum assembly-analysis package doctrine, tool-capability claims, file-prep-readiness claims, or automatic matching / outcome claims
   - `简单好用！再也不用担心PCB图形对齐问题.pdf` now has a bounded route into graphic alignment as a shared-reference-frame correction workflow, single-layer and local-subregion alignment by common reference point, multi-layer alignment as revision-comparison registration, and coordinate-to-graphic alignment as a local pre-analysis correction posture
+  - `简单好用！再也不用担心PCB图形对齐问题.pdf` now also has one narrow official-fact boundary through current-public `Ucamco` Gerber layer-format specification wording:
+    - graphic alignment may be reused as a shared-reference-frame and same-coordinate-system registration problem
+    - `.SameCoordinates` can be reused as file-alignment language
+    - revision identifiers may be reused as coordinate-system / revision-check aids
+    - this still does not unlock UI-step sequences, auto-fix sufficiency, local-subregion move workflow, library-adjustment authority, or outcome claims
+  - `华秋DFM可视化BOM交互焊接工具，SMT工厂、PCB工程师的福音来了！.pdf` now has one narrow official-fact boundary for visual-BOM to PCB review navigation:
+    - a visual BOM surface may cross-select or cross-probe corresponding PCB objects for review context
+    - BOM-visible review may expose PCB location, rotation, and side-of-board metadata
+    - this still does not unlock automatic matching sufficiency, pad-level visibility, pin-1 or polarity-proof claims, progress-marking correctness, inventory-checking guarantees, or assembly-correctness outcomes
 - it still does not unlock Excellon authority closure, universal format-superiority claims, vendor support-matrix claims, one-package manufacturing-readiness guarantees, or branded UI-step / convenience claims
 
 ## Historical Article Execution Order
@@ -886,12 +928,27 @@ Current next sequence from this master entry is:
 
 1. use this master entry as a current-state surface, not as a blind `1.50 mm first` search instruction
 2. treat the current package residual block as materially stronger but still open:
-  - `1.50 mm = IEC 60191-6-2 existence + IEC 61188-5-8/6-2 land-pattern family boundary + NXP exact row + Renesas named-package drawing + Renesas exact row + AMD-hosted BG225/BGG225 third-owner exact row`
+  - `1.50 mm = IEC 60191-6-2 existence + IEC 60191-6-18 square-BGA family boundary + IEC 61188-5-8/6-2 land-pattern family boundary + one public IPC-hosted pitch-family/round-land geometry boundary + one broader public JEITA geometry/process stack still below visible 1.50 mm row + NXP exact row + Renesas named-package drawing + Renesas exact row + AMD-hosted BG225/BGG225 third-owner exact row`
   - `0.75 mm = three Microchip exact rows + one Renesas second-owner exact-data page + one NXP third-owner exact-data page + one Intel-hosted .75mm µBGA CSP fourth-owner exact table`
-   - `connector-origin = KiCad + Molex + Samtec + Amphenol layered support`
-   - `installation mark / component marking = layered support + IEC zero-orientation + IEC pin-1 / polarity-identification route`
+   - `connector-origin = KiCad + Molex + Samtec + Amphenol + Phoenix Contact layered support`
+   - `installation mark / component marking = layered support + IEC zero-orientation + IEC pin-1 / polarity-identification route + ADI LFCSP package-family pin-1-indicator owner route`
 3. reopen those package residuals only if a materially stronger owner or standards-adjacent source appears
-4. otherwise keep the current restart pressure on candidate-gated package and doctrine residuals from `P4-325`, while treating article-side narrow recovery as effectively exhausted at the current authority layer unless genuinely new authority appears
+4. otherwise keep the current restart pressure on candidate-gated package and doctrine residuals from `P4-325`, while treating broad article-side reopen as effectively exhausted at the current authority layer unless genuinely new authority appears
+
+Current completion audit note:
+
+- `P4-561` is the active `/goal` completion audit after the post-JEITA bounded owner scout in `P4-560`
+- use `P4-561` for the goal verdict: complete at `program_level_strong_complete` plus `current_public_authority_layer_exhausted_with_residual_authority_gaps`, not `full_corpus_closed_without_open_residual_authority_gaps`
+- prefer `P4-559` as the freshest completion wording after the broader public JEITA bundle landed through `P4-558`
+- `P4-559` confirms the repo is still `program_level_strong_complete` rather than fully closed without open residual authority gaps
+- broad article-side reopen is exhausted at the current authority layer; the top reopen lane remains package-side `1.50 mm`, while the live article-side `E7` hold-only set is now only the two re-audited branded-tool PDFs
+- after `P4-556`, `Broadcom / Avago` should also no longer be treated as an unreviewed owner blank: the strongest surfaced official hit splits into non-BGA `SOT-89` `e = 1.50 BSC` pitch identity without same-surface PCB geometry plus separate geometry-bearing owner surfaces that still stay below the current `1.50 mm` BGA/CSP gate
+- after `P4-557`, `MediaTek` should also no longer be treated as an unreviewed owner blank: the strongest surfaced official package surface is `MT8395` with mechanical-drawing context for one `0.4 mm pitch` `VFBGA` package, while the rest of the reviewed public owner package pages stay at `0.5 mm` or other non-qualifying contexts and do not expose same-surface PCB geometry for a true `1.50 mm` row
+- after `P4-558`, the public JEITA standards-side stack should no longer be read as `EDR-7315B alone`; it now also includes `ED-7306`, `EDR-7712`, and `EDR-7713`, but the visible public rows still stop below reusable `1.50 mm` BGA geometry
+- after `P4-560`, the bounded post-JEITA owner scout should also no longer be treated as pending: `TI`, `Analog Devices / Maxim`, `ST`, `onsemi`, `Qorvo`, `Skyworks`, `Lattice`, `Marvell`, `Qualcomm`, and one NXP-hosted Freescale PBGA presentation did not expose a same-surface `true 1.50 mm + PCB geometry` reopen
+- use the dispatch/index pair, not this master plan alone, to avoid reading the current state as full closure
+- after `P4-552`, the `194页 handbook` safe ceiling is four `D3` routes plus two `D4` routes plus five `D5` routes: one DDR / memory-interface routing-governance route and one eMMC / HS400 routing plus simulation-governance route; this strengthens the handbook state but does not make it a main reopen target or a full `D4` closeout
+- after `P4-559`, the honest corpus verdict is still `program_level_strong_complete` plus `current_public_authority_layer_exhausted_with_residual_authority_gaps`; do not write this as `full_corpus_closed_without_open_residual_authority_gaps`
 
 ## Batch-1 Deliverables
 
@@ -1037,7 +1094,7 @@ Batch-10 status:
 When future agents are asked whether `/code/blogs/tmps/PCB资料` is fully learned, the correct answer is:
 
 - handbook side: program-level `strong_complete`, with explicit residual authority gaps
-- article side: controller-level usage routing is covered across `E2-E6`, while `E1/E7` remain hold-heavy with only narrow single-PDF route expansions and article-side fact/wiki promotion is still far from complete
+- article side: controller-level usage routing is covered across `E2-E6`, while `E1` and `E7` now each have bounded single-PDF official-fact-backed raises; article-side broad reopen is effectively exhausted at the current authority layer, but the repo still remains below full closure
 
 Do not collapse these two statements into a false single claim such as `all PDFs fully learned`.
 
@@ -1047,20 +1104,24 @@ Resume from this file and execute:
 
 - do not treat current package residuals as blind-search-first continuation
 - treat `0.75 mm` as `three owner-scoped Microchip exact rows plus one Renesas second-owner exact-data page plus one NXP third-owner exact-data page`, not as fully closed
-- treat `connector-origin` as `KiCad convention plus Molex, Samtec, and Amphenol named-series routes`, not as a universal doctrine
-- treat `installation mark / component marking` as `layered boundary support plus one IEC zero-orientation anchor plus one IEC public pin-1 / polarity-identification route`, while board-level geometry and package-family-specific marking closeout remain open
-- treat the current non-BGA `connector-origin / installation-mark / visible-vs-fab cue` lane as already re-audited at this safe ceiling; do not reopen it on the current `KiCad + Molex/Samtec/Amphenol + IEC + local handbook` set alone
-- treat connector-owner support as `KiCad convention plus Molex, Samtec, and Amphenol named-series routes`, not as a universal connector doctrine
+- treat `connector-origin` as `KiCad convention plus Molex, Samtec, Amphenol, and Phoenix Contact named-series routes`, not as a universal doctrine
+- treat `installation mark / component marking` as `layered boundary support plus one IEC zero-orientation anchor plus one IEC public pin-1 / polarity-identification route plus one ADI LFCSP package-family pin-1-indicator owner route`, while board-level geometry and package-family-specific marking closeout remain open
+- treat the current non-BGA `connector-origin / installation-mark / visible-vs-fab cue` lane as already re-audited at this safe ceiling; do not reopen it on the old `KiCad + Molex/Samtec/Amphenol/Phoenix Contact + IEC + local handbook` set alone or silently universalize the newer ADI LFCSP owner route
+- treat connector-owner support as `KiCad convention plus Molex, Samtec, Amphenol, and Phoenix Contact named-series routes`, not as a universal connector doctrine
 - treat `P4-321` as the current blocker note for one additional Amphenol connector-owner candidate; do not promote it until the public endpoint is retrievable as a real owner document
-- treat `1.50 mm` as `IEC 60191-6-2 existence plus IEC 61188-5-8/6-2 land-pattern family boundary plus one NXP exact row plus one Renesas drawing plus one Renesas exact row plus one AMD-hosted BG225/BGG225 third-owner exact row`, while universal closeout still remains open
-- treat `P4-319` as the current negative-result controller note for public `1.50 mm` recheck; do not pretend this gap is unscouted
+- treat `1.50 mm` as `IEC 60191-6-2 existence plus IEC 60191-6-18 square-BGA family boundary plus IEC 61188-5-8/6-2 land-pattern family boundary plus one public IPC-hosted pitch-family/round-land geometry boundary plus one NXP exact row plus one Renesas drawing plus one Renesas exact row plus one AMD-hosted BG225/BGG225 third-owner exact row`, while universal closeout still remains open
+- treat `P4-536` as the latest current-public negative-result recheck for `1.50 mm`; do not pretend this gap is unscouted or silently improved after the date rollover
+- treat `P4-545` as the strongest current public IPC standards-side visibility note for `1.50 mm`; public `IPC-7095E` now reaches visible SMD/NSMD definitions plus clause-title and figure-title visibility, but still not public geometry payload
+- treat `P4-550` as one stronger public standards-owner geometry-bearing guide below gate; public `JEITA EDR-7315B` is a real visible BGA design-guide body, but the surfaced public geometry still stops below a reusable `1.50 mm` row
+- treat `P4-546` as the clean current `onsemi` owner-class wording; the official `AND8075/D` BGA guidance note is directly retrievable and carries real pad-geometry tables, but its visible pitch coverage still stops below `1.50 mm`
+- treat `P4-547` as the clean current JEDEC wording; the official homepage now gives one `Search & Download JEDEC Documents` plus `Registered Outlines: JEP95` discoverability anchor, but still not public JEP95 geometry recovery
 - treat `P4-323` as the current search-filter note for `1.50 mm`; filter out body-size and contact-pad-spacing false positives before reopening owner-drawing candidates
 - treat `P4-473` as a still-useful reject-filter note for the old weak `1.50 mm` candidate classes:
   - current IEC pages still stay at metadata or standards-family framing only
-  - current Infineon near-hit still lacks a same-document public exact land-pattern row
+  - current retrievable-but-wrong-pitch `Infineon` class still lacks a same-document public exact land-pattern row
   - current ADI candidate class still contains false positives where `1.50` is not the real package pitch
 - treat `P4-479` as the current third-owner exact-row landing for `1.50 mm`
-- do not reopen `1.50 mm` again on the old weak candidate classes alone; only reopen it next for a legitimately public official geometry surface or another materially stronger owner-scoped surface above the current stack
+- do not reopen `1.50 mm` again on the old weak candidate classes alone; only reopen it next for a legitimately public official geometry surface or another materially stronger owner-scoped surface above the current stack, consistent with `P4-536`
 - treat `0.75 mm` as second priority behind `1.50 mm`, but no longer as a lane still waiting on a fourth owner row
 - treat `P4-474` as a still-useful reject-filter note for the old weak `0.75 mm` candidate classes:
   - current NXP general-BGA guidance still does not expose a `0.75 mm` row
@@ -1072,10 +1133,10 @@ Resume from this file and execute:
   - current IEC support still stays at orientation or marking framing rather than doctrine closeout
   - current `KiCad/KLC` support still stays at CAD-owner convention level
   - current connector-owner material still stays at named-series context rather than cross-family doctrine
-- treat the `194页 handbook` as currently strengthened to `four D3 + four D5 routes`; do not keep it in the main watch-only residual list unless another genuinely independent handbook residual later clears a new authority bar
-- treat `P4-482` as the current completion-wording successor after `P4-481`; do not keep using `P4-480` as the freshest completion snapshot
-- treat article-side narrow recovery as effectively exhausted at the current authority layer except for already re-audited `E4 Mark` and `E7` residuals; reopen those only if genuinely new authority appears, otherwise shift restart pressure back to non-article residual authority gaps
+- treat the `194页 handbook` as currently strengthened to `four D3 + two D4 + five D5 routes`; do not keep it in the main watch-only residual list unless another genuinely independent handbook residual later clears a new authority bar
+- treat `P4-559` as the current completion-wording successor after `P4-558`; do not keep using older completion snapshots such as `P4-555`, `P4-537`, `P4-482`, or `P4-533` as the freshest wording
+- treat article-side narrow recovery as effectively exhausted at the current authority layer outside the two remaining `E7` hold-only branded-tool surfaces; `E4 Mark` and `简单好用！再也不用担心PCB图形对齐问题.pdf` now each have one narrow official-fact raise above their older route-only ceilings, `华秋DFM可视化BOM交互焊接工具，SMT工厂、PCB工程师的福音来了！.pdf` now also has one narrow visual-BOM official-fact raise, and future continuation should only reopen the remaining `E7` hold-only branded-tool surfaces when genuinely new authority appears
 - preserve the article-side result as:
   - `E2-E6` usage-route covered at controller level
-  - `E1/E7` hold-heavy lanes with bounded single-PDF route expansions
-- keep `E1` and `E7` hold-heavy unless a bounded neutral subset can change the fact layer
+  - `E1/E7` bounded article lanes with limited single-PDF official-fact-backed raises and a current live `E7` hold-only set of two re-audited branded-tool PDFs
+- keep `E1` and `E7` bounded at the current fact layer unless a bounded neutral subset can change that layer materially

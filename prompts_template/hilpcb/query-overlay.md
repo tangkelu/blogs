@@ -15,15 +15,33 @@
 - 单篇建议 `4-6` 个内链
 - 至少 `2` 个直达产品页或服务页
 - 中段优先落：
+  - `single-double-layer-pcb`
+  - `fr4-pcb`
+  - `pcb-prototype`
+  - `quick-turn-pcb`
   - `high-speed-pcb`
   - `hdi-pcb`
   - `rigid-flex-pcb`
   - `turnkey-assembly`
   - `smt-assembly`
-  - `pcb-prototype`
-  - `quick-turn-pcb`
+  - `through-hole-assembly`
+  - `large-volume-assembly`
   - `pcb-surface-finish`
   - `impedance-calculator`
+
+## 低层数命中规则
+
+- 当查询主题是 `single layer PCB`、`double layer PCB`、`2 layer PCB`、`single sided PCB`、`double sided PCB`、`simple FR-4`、`baseline prototype`、`cost-sensitive board` 时，优先落到 `products/single-double-layer-pcb`
+- 当主题仍在“简单、低密度、快转样板”阶段，但强调材料而不是层数时，再考虑 `products/fr4-pcb`
+- 当查询已经明显转向密度、阻抗、微孔或多层结构时，才升级到 `products/multilayer-pcb` 或 `products/hdi-pcb`
+- 不要把低层数意图直接承接到博客页，除非博客页是在做问题解释或对比说明
+
+## 高价值产品页命中规则
+
+- `HDI / microvia / VIPPO / via-in-pad / fine-pitch BGA`：优先 `products/hdi-pcb`
+- `BOM sourcing / component alternates / EOL / AVL / turnkey PCBA`：优先 `products/turnkey-assembly`
+- `wave solder / selective solder / press-fit / connector / transformer / terminal / mixed THT`：优先 `products/through-hole-assembly`
+- `mass production / repeat PCBA / SPC / MES traceability / volume ramp / forecast`：优先 `products/large-volume-assembly`
 
 ## 口径要求
 

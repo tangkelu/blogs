@@ -2,6 +2,891 @@
 
 Historical record only. For execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md) first.
 
+## 2026-05-12 (P4-561 PCB资料 Goal Completion Audit After P4-560)
+
+- **这轮把 active `/goal` 做了最终 completion audit，而不是把 residual gaps 擦掉**: 审计把用户目标拆成 `63` 个 PDF 可恢复索引、`tmps` 仅作为 claim inventory、source/fact/wiki 可得即落库、unsupported claim 显式阻断、subagent bounded lanes、tracker 更新、最后 `1.50 mm` live lane 的 current-public authority 层耗尽证明、以及 verification 命令。结论是：`PCB资料` 已达到本 repo 的完成阈值 `program_level_strong_complete` + `current_public_authority_layer_exhausted_with_residual_authority_gaps`；不要写成 `full_corpus_closed_without_open_residual_authority_gaps`
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-561-2026-5-12-pcb-ziliao-goal-completion-audit-after-p4-560.md`
+  - **What this pass now fixes**
+    - future AI 可以把 active goal 视为完成于 current public authority layer
+    - future AI 仍必须保留 residual gaps 的准确说法
+    - future AI 只有在 genuinely new authority 出现时才重开，不应继续 blind sweep
+
+## 2026-05-12 (P4-560 Bounded Owner Scout After JEITA Current-Public 1.50 mm No-Reopen)
+
+- **这轮没有找到新的 `1.50 mm` reopen surface，而是把 `P4-559` 之后唯一 live lane 又压实了一层**: 一个 bounded subagent lane 检查了 `TI`、`Analog Devices / Maxim`、`ST`、`onsemi`、`Qorvo`、`Skyworks`、`Lattice`、`Marvell`、`Qualcomm` 等官方 owner surfaces，没有发现同一公开 surface 同时满足 true `1.50 mm` pitch identity 和 PCB land-pattern / footprint geometry。主控另核了 NXP-hosted Freescale `PBGAPRES.pdf`：它有 PBGA PCB pad/stencil 表，但可见 pitch range 和表格最高仍停在 `1.27 mm`，所以也不能 reopen `1.50 mm`。当前结论仍是 `program_level_strong_complete` + `current_public_authority_layer_exhausted_with_residual_authority_gaps`
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-560-2026-5-12-bounded-owner-scout-after-jeita-current-public-1p50mm-no-reopen.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应默认重复这一组 bounded semiconductor / package-owner scout
+    - future AI 不应把 TI `1.5 mm max height`、Qorvo `1.27 Typ.`、ADI `0.80 BSC`、或 NXP/Freescale `1.0-1.27mm` PBGA geometry 误写成 `1.50 mm` reopen
+    - future AI 只有在先出现 genuinely new same-surface `true 1.50 mm + PCB geometry` owner/standards surface 时，才应重开 package-side `1.50 mm`
+
+## 2026-05-12 (P4-559 Current-State Completion Audit Successor After JEITA Public Bundle)
+
+- **这轮没有把 repo 误报成“已经学完”，而是把 `P4-556 / P4-557 / P4-558` 之后的 current-state wording 再锁成了一个新的单一入口**: `P4-555` 之后，repo 又先后补上了 `Broadcom / Avago` 与 `MediaTek` 两个 owner-class no-reopen closeout，并且把 public JEITA standards-side stack 从 `EDR-7315B` 单一 guide 又扩成了 `EDR-7315B + ED-7306 + EDR-7712 + EDR-7713`。这些变化都是真实 state change，但它们仍然没有清掉 `1.50 mm` reopen gate。当前最准确的读法因此是：`PCB资料` 仍然只是 `program_level_strong_complete` + `current_public_authority_layer_exhausted_with_residual_authority_gaps`；唯一 live reopen lane 仍是 `1.50 mm`，而 `0.75 mm`、doctrine、两篇 live `E7` hold-only、以及 `194页 handbook` 都应默认写成 exhausted-at-current-authority-layer 或 watch-only below reopen
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-559-2026-5-12-current-state-completion-audit-successor-after-jeita-public-bundle.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-555` 当成 freshest completion wording
+    - future AI 应把 `1.50 mm` 继续读成唯一 live reopen lane
+    - future AI 应把 `0.75 mm`、doctrine、两篇 live `E7` hold-only、以及 `194页 handbook` 读成 exhausted-at-current-authority-layer 或 watch-only below reopen
+
+## 2026-05-12 (P4-558 JEITA Public BGA FBGA FLGA Geometry Bundle Below 1.50 mm No-Reopen)
+
+- **这轮没有把 `JEITA` 误抬成 `1.50 mm` reopen，而是把 standards-side 的真实 public geometry/process stack 再扩了一层**: 当前 repo 不再只拥有 `EDR-7315B` 这一条 public JEITA BGA guide，还多了 `ED-7306` 这份公开 BGA/FBGA/FLGA warpage 标准，以及 `EDR-7712 / EDR-7713` 两份公开 printed-circuit-board socket-mounting-pattern 指南。它们都是真实公开、可复核的 geometry/process-bearing 标准面；但可见 rows 仍只到 `1.27 mm`，或者 `0.80 / 0.65 / 0.50 / 0.40` 这些 fine-pitch classes，没有 reusable public `1.50 mm` BGA geometry row。因此这轮只够把 `public JEITA stack` 压得更实，不够 reopen `1.50 mm`
+  - **新增 Source / Fact / Log** (5 files):
+    - `sources/registry/standards/jeita-ed-7306-bga-fbga-flga-warpage-standard.md`
+    - `sources/registry/standards/jeita-edr-7712-fbga-socket-mounting-pattern-guide.md`
+    - `sources/registry/standards/jeita-edr-7713-flga-socket-mounting-pattern-guide.md`
+    - `facts/standards/jeita-public-bga-fbga-flga-geometry-surfaces-below-1p50mm-boundary.md`
+    - `logs/p4-558-2026-5-12-jeita-public-bga-fbga-flga-geometry-bundle-below-1p50mm-no-reopen.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `JEITA` 只读成 `EDR-7315B` 单一 public guide
+    - future AI 可以安全复用一条 `broader public JEITA geometry/process stack still below 1.50 mm` 的标准边界
+    - future AI 仍不应把这些新 public JEITA surfaces 误写成 reusable `1.50 mm` BGA geometry
+
+## 2026-05-12 (P4-557 MediaTek Official Package Scout No Reopen)
+
+- **这轮没有把 `MediaTek` 硬抬成新 authority，而是把一个此前未进入 package residual 主线的 owner class 压成了 clean no-reopen**: 这轮用 subagent 加主控复核了 `mediatek.com` 与 `genio.mediatek.com` 的官方 package/document surfaces。当前最强 near-hit 是官方 `MT8395` datasheet，它确实公开到了 `Package Information` 与 `Mechanical Drawing`，并且明确写出了 `MFC VFBGA 15.0 mm × 15.0 mm, 1046-ball, 0.4 mm pitch package`；但它没有同页 PCB land-pattern / footprint geometry，而且 pitch 也不是 `1.50 mm`。其他已查的 `MT7933CT`、`MT7931AN` 与 module 文档同样只到 `0.5 mm` 或 module/package identity context。`Genio hardware-design` 页面虽然提到 layout/reference-layout resources，但当前公开可达页面没有落到能直接过 gate 的 package 文档。因此 `MediaTek` 现在应被读成 `sub-1.50 package identity and mechanical-drawing owner class`，而不是仍待复核的 blank，也不是新的 `1.50 mm` reopen
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-557-2026-5-12-mediatek-official-package-scout-no-reopen.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `MediaTek` 当成 package residual 的 fresh blank owner class
+    - future AI 不应把 `MT8395` 这类 `0.4 mm pitch` mechanical-drawing surface 误写成 `1.50 mm` reopen
+    - future AI 也不应把 `Genio hardware-design` 页面对 layout/reference-layout 资源的提及误写成已公开可验证的 gate-clearing package authority
+
+## 2026-05-12 (P4-556 Broadcom Avago Owner Split-Surface 1.50 mm No Reopen)
+
+- **这轮没有把 `Broadcom / Avago` 误抬成新 authority，而是把一个此前 repo 内未明确点名的 owner class 压成了 clean no-reopen**: 这轮用 subagent 加主控复核了多个 current-public `docs.broadcom.com` owner surfaces。最强 `1.50` 命中来自官方 `MGA-53589` product brief，上面确实能直接看到 `e = 1.50 BSC`，但 package context 是 `SOT-89`，而且同页没有 printed PCB land-pattern geometry；另外几份 geometry-bearing owner docs 虽然真实存在，但不是非目标 package context，就是 `Packaging AN500-RDS` 这类 BGA guidance 可见 pitch 只到 `1.27 / 1.00 / 0.80 / 0.50 / 0.40 mm`。这意味着 `Broadcom / Avago` 现在应被读成 `split-surface / wrong-family no-reopen owner class`，而不是仍待复核的 blank，也不是新的 `1.50 mm` reopen
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-556-2026-5-12-broadcom-avago-owner-split-surface-1p50mm-no-reopen.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `Broadcom / Avago` 当成 package residual 的 fresh blank owner class
+    - future AI 不应把 non-BGA `SOT-89` 上的 `e = 1.50 BSC` 误写成 `1.50 mm` BGA/CSP reopen
+    - future AI 也不应把 `pitch identity 在这里` 加上 `geometry 在别处` 的 split-surface owner evidence 误写成同一 surface 过 gate
+## 2026-05-12 (P4-555 Current-State Completion Audit Successor After ADI LFCSP Marking Landing)
+
+- **这轮没有新增 authority source，而是把 `P4-554` 之后的 current-state completion wording 再锁成一个新的单一入口**: `P4-553` 当时的诚实之处在于它把 corpus verdict 锁成 `program_level_strong_complete` + `current_public_authority_layer_exhausted_with_residual_authority_gaps`；但它还残留着一处随后的过时状态，即把 `ADI LFCSP` package-family marking lane 仍写成 `watch-only because main-controller retrieval did not complete`。`P4-554` 之后，这一点已经不再准确。当前最准确的读法是：`ADI LFCSP` 已经并入 current-public owner package-family marking ceiling，但全局阈值依然没有变化，repo 仍然不是 `full_corpus_closed_without_open_residual_authority_gaps`
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-555-2026-5-12-current-state-completion-audit-successor-after-adi-lfcsp-marking-landing.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-553` 里的 `ADI LFCSP watch-only` 旧状态当作当前真实口径
+    - future AI 应以 `P4-555` 作为最新 completion wording surface
+    - future AI 仍不应把当前 repo 写成 full corpus closure
+
+## 2026-05-12 (P4-554 ADI LFCSP Package Outline Pin1 Indicator Boundary No-Reopen)
+
+- **这轮把 `P4-553` 里点名但当时未完成主控取回验证的 `ADI LFCSP` 候选真正落成了一条可复用的 package-family owner marking 边界**: 多份当前公开的 `ADI LFCSP` package-outline PDF 现在已被主控和 subagent 一起核实到可直接复核的 owner labels，包括 `PIN 1 INDICATOR`、`PIN 1 INDICATOR AREA` 和 `PIN 1 INDICATOR AREA OPTIONS`。这比当前 `IEC 61760-1` 的 generic `pin-1 / polarity` topic framing 更强，因为它是 owner-issued package-outline mechanical content；但它仍然只够支撑 `ADI LFCSP package-family pin-1-indicator owner boundary`，不够支撑 universal connector-origin、universal pin-1 symbol law、或 board-level installation-mark geometry closeout
+  - **新增 Source / Fact / Log** (5 files):
+    - `sources/registry/methods/analog-devices-cp-28-12-lfcsp-package-outline-pin1-indicator.md`
+    - `sources/registry/methods/analog-devices-cp-32-32-lfcsp-package-outline-pin1-indicator-area.md`
+    - `sources/registry/methods/analog-devices-cp-48-4-lfcsp-package-outline-pin1-indicator-area.md`
+    - `facts/methods/analog-devices-lfcsp-package-outline-pin1-indicator-boundary.md`
+    - `logs/p4-554-2026-5-12-adi-lfcsp-package-outline-pin1-indicator-boundary-no-reopen.md`
+  - **更新 Route / Resume / Tracker Surface** (5 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `ADI LFCSP Pin 1 indicator` 当成 `watch-only` 或 `未验证` 候选
+    - future AI 可以安全复用一条 `ADI LFCSP owner package-family marking boundary`
+    - future AI 仍不应把这条 owner route 误写成 board-level installation-mark geometry、universal connector-origin、或 one universal `pin-1` symbol law
+
+## 2026-05-12 (P4-553 PCB资料 Current Public Authority Layer Exhaustion Closeout)
+
+- **这轮把多个 subagent 的 residual 结果收成当前控制层 verdict，而不是误报“全语料无缺口学完”**: `PCB资料` 当前是 `program_level_strong_complete` + `current_public_authority_layer_exhausted_with_residual_authority_gaps`。含义是：当前公开权威层里已浮出的 residual 要么已经落到安全上限，要么没有通过 reopen gate，要么只能继续 hold/watch；这仍然不是 `full_corpus_closed_without_open_residual_authority_gaps`
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-553-2026-5-12-pcb-ziliao-current-public-authority-layer-exhaustion-closeout.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 可以把当前公开权威层读成 exhausted，但不能写成 universal/full closure
+    - future AI 不应继续盲扫旧 `1.50 mm`、`0.75 mm`、E7、doctrine 或 handbook residual classes
+    - 后续只在 genuinely new authority 出现时重开
+
+## 2026-05-12 (P4-552 D4 eMMC HS400 Interface Routing And Simulation Governance Boundary)
+
+- **这轮把 `194页 D4` 再抬了一条和 DDR/EMIF 不重叠的窄 route**: TI 官方 `AM62Px eMMC HS400 Board Design and Simulation Guidelines` 足够支撑 eMMC / HS400 interface routing and simulation governance：point-to-point routing、solid reference / return-path continuity、avoid plane-split crossings、minimize layer transitions、reference-plane transition 附近 ground vias、no stubs / no branched probe access、clock/strobe crosstalk sensitivity，以及 EVM / extraction / simulation gate。Raspberry Pi CM5 只保留为 system-on-module / eMMC-option vocabulary，不当作 routing-rule authority
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/ti-am62px-emmc-hs400-board-design-and-simulation-guidelines.md`
+    - `facts/methods/emmc-hs400-interface-routing-and-simulation-governance-boundary.md`
+    - `logs/p4-552-2026-5-12-d4-emmc-hs400-interface-routing-and-simulation-governance-boundary.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `194页 D4` 的 eMMC surface 全部读成 claim-family-only
+    - current handbook ceiling 现在是 `four D3 + two D4 + five D5 routes`
+    - future AI 仍不应写 eMMC pull-up / matching values、impedance / timing numerics、HS400 entitlement、customer-board performance、或 full D4 closeout
+
+## 2026-05-12 (P4-551 D4 DDR Memory Interface Routing Governance Boundary)
+
+- **这轮用多个 subagent 快速扫了当前 residual，只有 `194页 D4` 找到可安全落库的新窄 route**: `1.50 mm` 没有新 owner / standards geometry 过门槛，`0.75 mm` 没有超过 Microchip + Renesas + NXP + Intel stack 的新增强，两个 live `E7` branded-tool hold-only PDF 的中性内容也已经被现有 DFM/DFA 和 package-footprint review 边界吸收。真正可推进的是 `194页` 的 D4 memory-interface route：Intel 当前公开 `External Memory Interfaces Agilex 7 ... General Layout Routing Guidelines` 足够支撑 DDR / EMIF routing governance，包括 solid ground reference planes / uninterrupted return path、layer-transition ground stitching vias、avoid unnecessary layer transitions、time-domain length and skew matching、same byte/group 同层约束，以及 serpentine 作为受控补偿。该 route 不授权任何 handbook 数值、DDR timing closure、SI margin、供应商能力或 full D4 closeout
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/intel-emif-ddr4-general-layout-routing-guidelines.md`
+    - `facts/methods/ddr-memory-interface-routing-governance-boundary.md`
+    - `logs/p4-551-2026-5-12-d4-ddr-memory-interface-routing-governance-boundary.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `194页 D4` 全部读成 claim-family-only；它现在有一条 narrow official-source-backed memory-interface route
+    - future AI 仍不应把这条 route 写成 DDR 数值规则、DDR4/DDR5 支持能力、timing closure、SI margin 或 full handbook closeout
+    - 当前 repo 仍然只是 `program_level_strong_complete`，不是 full corpus closed
+
+## 2026-05-12 (P4-550 JEITA EDR-7315B Public BGA Geometry Surface Below 1.50 mm No-Reopen)
+
+- **这轮没有把 standards-side 的新发现误抬成 reopen，而是把一个真正 stronger 的 public standards-owner geometry surface 以守门方式写进 repo**: `JEITA EDR-7315B` 不是 TOC、metadata、figure-title list 或 discoverability 页面，而是一份能公开打开的 BGA design guide 正文，带 visible geometry-bearing body content 和 recommended-variation coverage。它比当前 repo 已有的 `JEDEC homepage discoverability`、`J-STD-013 topic/figure-title visibility`、`IPC-7095E clause/figure-title visibility` 都强，因为它是真正的 public geometry-bearing standards-owner body surface。问题也同样明确：当前 surfaced public payload 只看到了 `1.27 mm` 和 `1.00 mm`，没有 visible reusable `1.50 mm` row，所以它仍不能当成 `1.50 mm` geometry recovery
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/standards/jeita-edr-7315b-bga-design-guide.md`
+    - `facts/standards/jeita-edr-7315b-bga-public-geometry-below-1p50mm-boundary.md`
+    - `logs/p4-550-2026-5-12-jeita-edr-7315b-public-bga-geometry-surface-below-1p50mm-no-reopen.md`
+  - **更新 Resume / Tracker Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 standards-side public BGA lane 只读成 `IPC/JEDEC visibility only`
+    - future AI 也不应把 `JEITA EDR-7315B` 误写成已经公开拿到 `1.50 mm` geometry row
+    - 当前 goal 仍然不能标 complete
+
+## 2026-05-12 (P4-549 Phoenix Contact FINEPITCH Orientation Wording Supplementary Boundary No-Reopen)
+
+- **这轮没有把 doctrine residual 误报成已闭合，而是把 Phoenix Contact 这条 current-public owner surface 以最窄方式落进 repo**: 当前公开 `FINEPITCH` 产品页不只是提供 drawing / CAD asset 入口，而是直接写出 `position a1 (row a, pin 1)` 标在器件上、`position 1` 也标在图纸里，并因此让 PCB assembly orientation 与 plug-in direction 清晰可定义；同一页还明确保留 `customer can provide a different definition in its own documentation`。这意味着 repo 现在可以安全复用一条新的 `named-series owner orientation wording` 路线，但这个 owner override 条款也正是它仍然不能被抬成 cross-vendor connector doctrine 或 board-level installation-mark geometry closeout 的原因
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/phoenix-contact-finepitch-fp-08-80-mv-265-orientation-page.md`
+    - `facts/methods/phoenix-contact-finepitch-orientation-and-plug-direction-boundary.md`
+    - `logs/p4-549-2026-5-12-phoenix-contact-finepitch-orientation-wording-supplementary-boundary-no-reopen.md`
+  - **更新 Route / Resume / Tracker Surface** (5 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 Phoenix Contact 只读成 generic product-page noise；repo 现在有一条可复用的 named-series owner orientation boundary
+    - future AI 不应把这条 Phoenix Contact owner wording 误写成 universal connector-origin doctrine
+    - 当前 goal 仍然不能标 complete
+
+## 2026-05-12 (P4-548 Master Plan Resync After IPC onsemi JEDEC Tightening)
+
+- **这轮没有新增 source/fact，而是把 `p4-309` 这份 corpus master plan 跟最新的 `IPC-7095E / onsemi / JEDEC` 细化口径再对齐了一次**: `P4-545 / P4-546 / P4-547` 之后，tracker 已经知道 standards-side public visibility 和 owner-side wrong-pitch/filter wording 又收紧了一层，但 `p4-309` 还没有把这些新恢复点直接写进去。现在这份 master plan 已经显式告诉 future AI：`P4-545` 是当前最强的 public IPC BGA visibility note，`P4-546` 是当前最干净的 `onsemi` official-but-wrong-pitch note，`P4-547` 是当前最干净的 JEDEC `official discoverability only` note。这样后续 `/goal` 继续跑时，就不会只从 tracker 知道这些变化，而能直接从 master resume surface 读到
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-548-2026-5-12-master-plan-resync-after-ipc-onsemi-jedec-tightening.md`
+  - **更新 Resume / Tracker Surface** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 可以继续把 `p4-309` 当成安全的最顶层 resume surface，而不会漏掉 `P4-545 / P4-546 / P4-547`
+    - future AI 不应把这些新 wording tightenings 误写成 `1.50 mm` reopen
+    - 当前 goal 仍然不能标 complete
+
+## 2026-05-12 (P4-547 JEDEC Home JEP95 Discoverability Still No-Reopen)
+
+- **这轮没有把 JEDEC 误报成“已经公开拿到了 primary geometry”，而是把它从模糊 primary-lane 假设压成了一条很窄的 official discoverability anchor**: 当前官方 JEDEC 首页至少已经能直接看到 `Search & Download JEDEC Documents`、`Search by keyword or document number`，并且把 `Registered Outlines: JEP95` 直接列成 technology focus area。这说明 JEDEC 公开面现在至少能支撑 `official document-search discoverability + JEP95 discoverability`，比 `P4-489` 当时那种“没拿到 recoverable current-public official primary surface”更强一点。但这仍然不是 `JEP95` 正文可公开取回，也不是 `1.50 mm` BGA geometry row、outline payload、或 land-pattern criteria。因此这轮仍然只能落成 `official discoverability only`，不能算 `public formal geometry recovery`
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/standards/jedec-home-document-search-and-jep95-discoverability.md`
+    - `facts/standards/jedec-home-jep95-document-discoverability-boundary.md`
+    - `logs/p4-547-2026-5-12-jedec-home-jep95-discoverability-still-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 JEDEC 只读成 vague primary lane
+    - future AI 也不应把 homepage discoverability 误写成 `JEP95` 正文已公开取回
+    - 当前 `1.50 mm` standards-side residual 仍未因 JEDEC public discoverability 而 reopen
+
+## 2026-05-12 (P4-546 onsemi AND8075 Official BGA Guidance Wrong-Pitch No-Reopen)
+
+- **这轮没有把 `onsemi` 当成一个还没查清的 vague owner hit，而是用一个可直接公开取回的官方 BGA note 把它压实成了 `wrong-pitch / below-gate` filter**: 当前官方 `AND8075/D Board Mounting Considerations for FCBGA Packages` 已经能直接打开，而且不只是泛泛 prose，它明确带有 `SMD / NSMD` 术语、`Optimal / Minimal SMD Design Dimensions` 与 `Optimal / Minimal NSMD Design Dimensions` 表、`Trace Tapering Dimensions` 表，以及 process / inspection guidance。这说明 `onsemi` 确实有一个 current-public owner-controlled BGA guidance surface。但这份 note 的可见 grid spacing 只写到 `0.8 / 1.0 / 1.27 mm`，而实际 pad-dimension tables 只覆盖 `0.80 mm Ball Pitch` 和 `1.00 mm Ball Pitch`。所以它不是 `1.50 mm` reopen，而是一条更干净的 official-but-wrong-pitch owner class 记录
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-546-2026-5-12-onsemi-and8075-official-bga-guidance-wrong-pitch-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `onsemi` 当成“也许未复核”的 vague current-public owner class
+    - future AI 不应把这份公开 `onsemi` BGA guidance 误写成 `1.50 mm` owner exact row
+    - 当前 `1.50 mm` residual 仍只对 `true 1.50 mm pitch + same-surface PCB geometry` 的更强 surface 开门
+
+## 2026-05-12 (P4-545 IPC-7095E Open Surface Definition And Figure-Title Visibility Still No-Reopen)
+
+- **这轮不是扩新 lane，而是把 `IPC-7095E` 这条 public IPC BGA near-hit 用直接打开 PDF 的方式又核实了一层**: repo 先前已经知道 `IPC-7095E` 公开面至少能支撑 clause-title visibility；这轮进一步确认，公开可见内容还不止章节标题，而是已经到了 visible definition + figure-title 层：`Solder-Mask-Defined (SMD) BGA Land` 和 `Non-Solder-Mask Defined (NSMD) BGA Land` 的定义文本本身就是公开可见的，同时 `6.2.1 Land Diameter Size and Its Impact on Routing`、`6.2.4 Via Size and Location`、`6.2.5 Parameters Affecting Solder Mask on BGAs` 这些 attachment-site 条目也都是公开可见的；另外 figure list 里还能看到 `Figure 6-2 Solder Lands for BGA Components`、`Figure 6-3 Metal-Defined Land Attachment Profile`、`Figure 6-5 Solder Joint Geometry Contrast`、`Figure 6-10 Balls Anywhere Land Pattern Design for a Balls Anywhere BGA Component`。这说明 standards-side public visibility 确实比普通 TOC 更强，但依然没有公开 figure payload、geometry row、pad diameter、或 solder-mask criteria，所以它仍然只能算 `visible definitions + clause-title + figure-title visibility`，不能算 `public formal geometry recovery`
+  - **新增 Successor Log** (1 file):
+    - `logs/p4-545-2026-5-12-ipc-7095e-open-surface-definition-and-figure-title-visibility-still-no-reopen.md`
+  - **加强 Existing Source / Fact** (2 files):
+    - `sources/registry/standards/ipc-7095e-toc.md`
+    - `facts/standards/ipc-7095e-bga-clause-title-visibility-boundary.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `IPC-7095E` 只读成 clause-title visibility；它现在应被读成 `visible definitions + clause-title + figure-title visibility`
+    - future AI 仍不应把这些 visible definitions、attachment-site headings 或 figure titles 误写成公开 geometry 数据
+    - 当前 `1.50 mm` standards-side residual 仍未因此 reopen
+
+## 2026-05-12 (P4-544 Dispatch Index E7 Residual Wording Resync)
+
+- **这轮没有新增 authority source，而是把 dispatch index 里残留的一处旧 `E7` residual 计数同步掉了**: `P4-325` 先前仍保留着 `three remaining branded-tool E7 PDFs` 的旧 wording，但这已经落后于 `P4-534 / P4-535 / P4-537` 之后的当前 repo 状态。现在这份 per-PDF dispatch index 已经改成只剩 `two` 篇 live `E7` hold-only，并且 recommended-next-action 里的同一处 wording 也已一并同步。这样 future `/goal` work 再从 `P4-325` 恢复时，就不会把 article residual count 读回旧状态
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-544-2026-5-12-dispatch-index-e7-residual-wording-resync.md`
+  - **更新 Resume / Tracker Surface** (4 files):
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再从 `P4-325` 恢复出旧的 `3` 篇 `E7` residual 计数
+    - future AI 可以继续把 `P4-325` 当成安全的 per-PDF dispatch index
+    - 当前 goal 仍然不能标 complete
+
+## 2026-05-12 (P4-543 IPC-7095E Public TOC BGA Clause-Title Visibility No-Reopen)
+
+- **这轮继续沿 standards-side `1.50 mm` lane 往前试了一步，但结果仍然是 no-reopen，只是拿到了比 `J-STD-013` 更强的 clause-title visibility**: 当前公开 `IPC-7095E` TOC 已经不只是 document identity，而是直接露出 `Solder-Mask-Defined (SMD) BGA Land`、`Non-Solder-Mask Defined (NSMD) BGA Land`、`Land Patterns and Printed Board Considerations`、`BGA Package Pitch`、`Land Pattern Design`、`Ball Size Relationships` 这些 clause-title 级主题。这比 `J-STD-013` 的 public topic + figure-title visibility 更强，但仍然没有公开 geometry row、table payload、或 criteria，所以它仍然只能算 `clause-title visibility`，不能算 `public formal geometry recovery`
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/standards/ipc-7095e-toc.md`
+    - `facts/standards/ipc-7095e-bga-clause-title-visibility-boundary.md`
+    - `logs/p4-543-2026-5-12-ipc-7095e-public-toc-bga-clause-title-visibility-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `IPC-7095E` 只读成普通 standards identity
+    - future AI 也不应把这份 public TOC 误写成公开 geometry / criteria surface
+    - 当前 `1.50 mm` residual 仍未因 standards-side public TOC visibility 而 reopen
+
+## 2026-05-12 (P4-542 J-STD-013 Open TOC Figure-Title Visibility Still No-Reopen)
+
+- **这轮不是扩新 lane，而是把 `J-STD-013` 这条 public-TOC near-hit 用直接打开 PDF 的方式又核实了一层**: repo 先前已经知道 `J-STD-013` 公开 TOC 至少能支撑 `CBGA/PBGA land pattern` 主题可见；这轮进一步确认，公开可见内容还不止章节标题，而是已经到了 figure-title 层：`Figure 4-3 Land Pattern Comparisons`、`Figure 5-2 Solder Mask Defined Land Patterns for CBGA and PBGA`、`Figure 5-3 Land Defined Land Patterns for CBGA and PBGA` 都是公开可见的，而且 figure list 里还能看到一条 `Variations - 1.50 Pitch`。这说明 standards-side public visibility 确实比普通 TOC 更强，但依然没有公开 figure payload、geometry row、pad diameter、或 solder-mask criteria，所以它仍然只能算 `topic + figure-title visibility`，不能算 `public formal geometry recovery`
+  - **新增 Successor Log** (1 file):
+    - `logs/p4-542-2026-5-12-j-std-013-open-toc-figure-title-visibility-still-no-reopen.md`
+  - **加强 Existing Source / Fact** (2 files):
+    - `sources/registry/standards/j-std-013-toc.md`
+    - `facts/standards/j-std-013-cbga-pbga-land-pattern-topic-visibility-boundary.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `J-STD-013` 只读成“有 land-pattern topic 的 TOC”；它现在应被读成 `topic + figure-title visibility`
+    - future AI 仍不应把 visible `1.50 Pitch` figure-list entry 误写成公开 geometry 数据
+    - 当前 `1.50 mm` standards-side residual 仍未因此 reopen
+
+## 2026-05-12 (P4-541 J-STD-013 Public TOC CBGA/PBGA Land-Pattern Topic Visibility No-Reopen)
+
+- **这轮继续沿 standards-side `1.50 mm` lane 往前试了一步，但结果仍然是 no-reopen，只是拿到了更强的 topic visibility**: 当前公开 `J-STD-013` TOC 已经明显强于单纯 document identity，因为它不只告诉 repo “有这份标准”，还直接露出了 `Land Pattern Comparisons`、`Solder Mask Defined Land Patterns for CBGA and PBGA`、`Land Defined Land Patterns for CBGA and PBGA` 这些 headings。这足够让 repo 安全地说 `CBGA/PBGA land pattern` 是真实的 public IPC standards topic，但仍不够说“公开标准面已经给出了 geometry row 或 criteria”。所以这轮最安全的落法是 `TOC topic-visibility boundary`，不是 formal geometry recovery
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/standards/j-std-013-toc.md`
+    - `facts/standards/j-std-013-cbga-pbga-land-pattern-topic-visibility-boundary.md`
+    - `logs/p4-541-2026-5-12-j-std-013-public-toc-cbga-pbga-land-pattern-topic-visibility-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `J-STD-013` 当成只有 document identity 的空 TOC；它现在至少能支撑 `CBGA/PBGA land pattern` topic visibility
+    - future AI 也不应把这份 public TOC 误写成公开 geometry / criteria surface
+    - 当前 `1.50 mm` residual 仍未因 standards-side public TOC visibility 而 reopen
+
+## 2026-05-12 (P4-540 JCET PBGA Family Pitch-Availability Source And Boundary Landing)
+
+- **这轮没有把 `1.50 mm` reopen 打开，而是把 `P4-539` 的状态变化真正沉淀成了一条可复用的 owner-family 边界**: `P4-539` 已经证明 `JCET` 官方 `PBGA_22Dec2021.pdf` 在当前环境里从 retrieval-limited 变成了 directly retrievable，并且可见内容确实不只是一条 snippet，而是 family-level `0.65 / 0.80 / 1.00 / 1.27 / 1.50 mm` pitch availability，加上 package configurations、thermal、reliability 这类 package-house framing。这轮做的不是重开 package residual，而是把这个 newly retrievable owner surface 落成一条最窄的 reusable boundary：后续 AI 可以安全复用 `JCET PBGA family pitch availability` 这层 owner authority，但仍不能把它误写成 same-surface footprint / land-pattern geometry，也不能把它抬成 `1.50 mm` exact-data reopen
+  - **新增 Source / Fact / Log** (3 files):
+    - `sources/registry/methods/jcet-pbga-family-pitch-availability-and-package-context.md`
+    - `facts/methods/jcet-pbga-family-pitch-availability-boundary.md`
+    - `logs/p4-540-2026-5-12-jcet-pbga-family-pitch-availability-source-and-boundary-landing.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再只从 `P4-539` 的 state-change note 里被动知道 `JCET` 已可取回；repo 现在有了可直接引用的 source/fact
+    - future AI 可以把 `JCET` 安全复用为 `owner-scoped PBGA family pitch availability`，但不能复用为 same-surface geometry authority
+    - 当前 `1.50 mm` residual 仍然只对 `true 1.50 mm pitch + same-surface PCB geometry` 的更强 surface 开门
+
+## 2026-05-12 (P4-539 JCET PBGA PDF Now Directly Retrievable But Still No Reopen)
+
+- **这轮拿到了一条真实 package-side 状态变化，但它仍然没有把 `1.50 mm` reopen 打开**: 之前 `JCET` 官方 `PBGA_22Dec2021.pdf` 在 repo 里一直只能算 retrieval-limited family candidate；这轮 current-environment 复核显示，这个 official URL 现在已经会直接返回 `200 OK`，并且 PDF 正文也能下载，不再只是 search-surface snippet。当前公开可见内容已经足够把 `JCET` 从“只看得到 family-level snippet”提升成“可直接复核的 official family-level owner PDF”：它明确支持 `0.65 / 0.80 / 1.00 / 1.27 / 1.50mm ball pitch` family-level wording，也能看到 package configurations、thermal-performance、reliability 这类 package-house framing。问题在于，它当前仍没有同页 PCB land-pattern / footprint geometry，所以这次状态变化仍只够把 `JCET` 的 live state 从 retrieval-limited 修正成 directly retrievable family-level owner PDF，不够把 `1.50 mm` lane reopen
+  - **新增 State-Change Log** (1 file):
+    - `logs/p4-539-2026-5-12-jcet-pbga-pdf-now-directly-retrievable-but-still-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `JCET` 官方 `PBGA` PDF 读成 retrieval-limited only
+    - future AI 不应把 `JCET` 这次 direct retrievability state change 误写成 `1.50 mm` reopen
+    - 当前 `1.50 mm` residual 仍只接受 `true 1.50 mm pitch + same-surface PCB geometry` 的更强公开 owner / standards surface
+
+## 2026-05-12 (P4-538 Master Plan Resync After Current-State Refresh)
+
+- **这轮没有新增 source/fact，而是把 `p4-309` 这份 corpus master plan 跟最新 live state 再对齐了一次**: `P4-535 / P4-536 / P4-537` 之后，`p4-309` 里仍残留了几处过期读法，例如把 `E7` 说得过于 broad hold-heavy、继续让旧 completion snapshot 看起来像 freshest state、还把 `1.50 mm` 的 latest negative-result note 留在较早的旧编号，以及把 `194页 handbook` ceiling 停在 `four D3 + four D5`。这轮只做 current-state resync，不伪装成新增 authority recovery。同步后的 master plan 现在能更安全地承接后续 `/goal` 续跑：article side broad reopen 已在当前 authority layer 上基本审尽，package side `1.50 mm` 仍是第一 residual，但当前 repo 也没有一个明确排队中的旧 candidate class，真正该等的是 genuinely new owner surface 或更强 public standards geometry
+  - **新增 Controller Log** (1 file):
+    - `logs/p4-538-2026-5-12-master-plan-resync-after-current-state-refresh.md`
+  - **更新 Resume / Tracker Surface** (4 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 可以重新把 `p4-309` 当成安全的 master resume surface，而不是一份带着旧 residual wording 的半过期入口
+    - future AI 不应再把 `1.50 mm` 读成“还有一个已知排队中的 package-house 或 owner class 等着复核”；当前更准确的读法是“只等 genuinely new owner surface 或更强 public standards geometry”
+    - `PCB资料` 当前仍不能标成 complete
+
+## 2026-05-12 (P4-537 Current-State Completion Audit Successor After E7 Closeout And 1.50 Recheck)
+
+- **这轮没有新增 source/fact，而是把当前真实完成度重新锁成新的单一入口**: `P4-533` 当时仍把 article residual 记成 `3` 篇 branded-tool `E7` hold-only PDF，但在 `P4-535` 与 `P4-536` 之后，这个口径已经过时。当前 repo 最准确的读法是：article side 只剩 `2` 篇 live `E7` hold-only 且都已 re-audit closeout；package side 的 `1.50 mm` 仍是 top residual，但 `Amkor/Lattice/ADI` 这批 strongest current-public near-hit 仍未清掉 reopen gate。所以当前 safe verdict 仍然只能是 `program_level_strong_complete`，不是 `full_corpus_closed_without_open_residual_authority_gaps`
+  - **新增 Completion-Audit Successor** (1 file):
+    - `logs/p4-537-2026-5-12-current-state-completion-audit-successor-after-e7-closeout-and-1p50-recheck.md`
+  - **更新 Resume / Live Tracker** (4 files):
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `P4-533` 的旧 residual 计数当成 current state
+    - future AI 应把 `P4-537` 当成当前 completion wording 的主入口
+    - `PCB资料` 目标仍不能标成 complete
+
+## 2026-05-12 (P4-536 Date-Rollover 1.50 mm Current-Public Candidate Recheck No-Reopen)
+
+- **这轮没有新增 source/fact，而是对 `1.50 mm` top residual 做了一次跨日期的 current-public 官方面复核**: `Amkor PBGA/TEPBGA` 当前公开 family page 与 datasheet 仍然只证明 `1.50 mm` family identity，没有 same-surface footprint / land-pattern geometry；`Lattice` 当前公开 BGA layout technical note 仍只落到 `0.40 / 0.50 / 0.65 / 0.80 / 1.00 mm`；`ADI` 当前公开 BGA/module guidance 里可见的 pad / stencil geometry 仍只落到 `0.80 / 1.00 / 1.27 mm`。所以 `1.50 mm` 仍然是 package-side top residual，但这批 strongest current-public near-hit 也没有出现能够清掉 reopen gate 的 state change
+  - **新增 Audit Log** (1 file):
+    - `logs/p4-536-2026-5-12-date-rollover-1p50mm-current-public-candidate-recheck-no-reopen.md`
+  - **更新 Live Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 date rollover 本身误读成 `1.50 mm` residual 可能已经自动解锁
+    - future AI 仍应把 `Amkor` 读成 stronger near-hit，但不是 same-surface geometry reopen
+    - `PCB资料` 当前仍然只能保持 `program_level_strong_complete`，不能写成 full closure
+
+## 2026-05-11 (P4-535 Last Two Live E7 Hold PDFs Re-Audit And No-Write Closeout)
+
+- **这轮没有再新增 source/fact，而是把 article side 最后两篇 live `E7` hold-only PDF 用 subagent 审到底**: `华秋DFM携带DFA全网重磅上线！新功能极速体验，一睹为快.pdf` 重新核实后，最安全可复用的只剩已经被 `P4-415` 吸收的 `DFA` 早期组装审查 posture 与 package / footprint mismatch trigger；`华秋干货铺：PCB设计避坑指南（图文结合、视频演示，荐读！）.pdf` 重新核实后，最安全可复用的只剩已经被 `P4-356` 吸收的通用 `DFM` review posture 与 check-family inventory。两篇都没有再暴露新的 neutral `E7` authority lane，因此当前 live article residual 已在现有 authority layer 上完成 re-audit closeout
+  - **新增 Audit Log** (1 file):
+    - `logs/p4-535-2026-5-11-last-two-live-e7-hold-pdfs-reaudit-and-no-write-closeout.md`
+  - **更新 Resume / Tracker Surface** (4 files):
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把这两篇 article PDF 当成当前 authority layer 下“可能还漏一个窄边界”的 reopen 入口
+    - future AI 不应把已经在 `E5/E1` 吸收过的 `DFA` / 通用 `DFM` posture 再包装成新的 `E7` 落库
+    - 当前默认续做压力应从 article residual 切回 package-side `1.50 mm` exact-geometry gap
+
+## 2026-05-11 (P4-534 E7 Visual BOM Cross-Probe And PCB Location Boundary Authority Recovery)
+
+- **这轮真的给 `E7` 再抬起了一篇 branded-tool PDF，但只抬一个很窄的官方边界**: 之前 repo 内部复核时，`华秋DFM可视化BOM交互焊接工具，SMT工厂、PCB工程师的福音来了！.pdf` 只能被看成 `BOM / coordinate / PCB graphic` 交叉引用工作流的 demand signal，仍不足以脱离 hold-only。现在通过 current-public `Altium` 官方文档，repo 拿到了两个更具体的中性主源：`BomDoc` 选择项可以 cross-select / cross-probe 到对应 schematic / PCB 对象，以及 BOM column 配置可以暴露 `PCB location / rotation / side-of-board` 元数据。因此这篇现在可以被安全提升成一条 narrow `official_fact-backed` 单 PDF 路线
+  - **新增 Source / Fact / Log** (4 files):
+    - `sources/registry/methods/altium-bomdoc-cross-select-and-cross-probe-between-bom-and-pcb.md`
+    - `sources/registry/methods/altium-activebom-column-settings-pcb-location-rotation-side.md`
+    - `facts/methods/bomdoc-cross-probe-and-pcb-location-context-boundary.md`
+    - `logs/p4-534-2026-5-11-e7-visual-bom-cross-probe-and-pcb-location-boundary-authority-recovery.md`
+  - **更新 Tracker / Resume Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把这篇 `可视化BOM交互焊接工具` 误读成只能 hold-only
+    - future AI 不应把这条新边界扩写成自动匹配、焊接正确率、IQC 点料、维修效率、或进度标记正确性承诺
+    - 当前 article residual pressure 已从 `3` 篇 branded-tool `E7` hold-only PDF 收缩到 `2` 篇
+
+## 2026-05-11 (P4-533 PCB资料 Current-State Completion Audit After Dispatch Resync)
+
+- **这轮没有再扩 source recovery，而是把当前真实完成度做了一次 completion-style audit**: repo 现在已经具备 `63` 篇 PDF 的 master/index/resume surface，也已经把 article-side、handbook-side、package-side 的大部分可回收 authority 吸进 `facts/` / `wiki/` / tracker；但当前仍不能把 `PCB资料` 写成 fully learned without open authority gaps，因为 `3` 篇 branded-tool `E7` PDF 仍是 hold-only，package-side `1.50 mm / 0.75 mm / doctrine` 也仍只是 tightly gated watch-only residuals。当前最准确 verdict 仍是 `program_level_strong_complete`，不是 full closure
+  - **新增 Completion-Audit Log** (1 file):
+    - `logs/p4-533-2026-5-11-pcb-ziliao-current-state-completion-audit-after-dispatch-resync.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把当前大量已落库和 tracker 完整误读成“已经 full close”
+    - future AI 不应再把当前 residual set 当成“只是还没扫到”，而应读成“已审过但仍缺新 authority”
+    - 当前 goal 还不能标 complete
+
+## 2026-05-11 (P4-532 Dispatch Index Resync After E7 Raise And Infineon State Shift)
+
+- **这轮没有新增 authority source，而是把 corpus-wide dispatch index 和后续 state-change 对齐了一次**: `p4-325` 之前还把 `简单好用！再也不用担心PCB图形对齐问题.pdf` 写成 route-only，这已经落后于 `P4-506`；同时它的 package-side recommended wording 也还在沿用旧的 `Infineon near-hit` 简写，不够贴近 `P4-531` 之后的 `retrievable but wrong-pitch` live state。现在这份 dispatch index 已同步成更安全的 resume surface
+  - **新增 Dispatch-Index Resync Log** (1 file):
+    - `logs/p4-532-2026-5-11-dispatch-index-resync-after-e7-raise-and-infineon-state-shift.md`
+  - **更新 Tracker / Resume Surface** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `简单好用！再也不用担心PCB图形对齐问题.pdf` 当成 route-only residual
+    - future AI 不应再把当前 package-side live state 读成旧的 `Infineon near-hit` 简写
+    - 当前 article residual set 在 dispatch index 层面现在也明确收敛为 `3` 篇 branded-tool `E7` hold-only PDF
+
+## 2026-05-11 (P4-531 Infineon Retrievable Wrong-Pitch Current-State Normalization)
+
+- **这轮没有再做新的 package-source 扫面，而是把 `P4-530` 之后的 live wording 统一归一**: 当前最新状态应该读成 `Infineon` concrete package pages 已经可公开取回，但 visible pitch 仍然是 `1.0 mm`，所以当前 label 应该是 `retrievable wrong-pitch same-surface owner class`，不是 `blocked`。package-house exhaustion map 仍然成立，但 `Infineon` 的 live entry 需要从 blocked 改成 retrievable
+  - **新增 Current-State Normalization Log** (1 file):
+    - `logs/p4-531-2026-5-11-infineon-retrievable-wrong-pitch-current-state-normalization.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把当前 `Infineon` concrete package page 当成 blocked
+    - future AI 不应因为它们可取回就把它们误写成 `1.50 mm` reopen
+    - 当前最准确的 live wording 是 `retrievable but wrong-pitch`
+
+## 2026-05-11 (P4-530 Infineon Concrete Package Pages Now Retrievable But Below True 1.50 mm Gate)
+
+- **这轮拿到了一个真正的状态变化，但它仍然没有把 `1.50 mm` reopen 打开**: 之前一直记成 blocked 的 `Infineon` concrete package page 现在已经可公开取回：`P-BGA-165-801`、`P-BGA-165-802`、以及 `PG-BGA-165-807` 当前都能直接看到 package parametrics，而且同页能看到 `Min. Terminal Pitch (mm)` 与 `Footprint Drawing` presence。可惜这三页当前 visible pitch 都是 `1.0 mm`，不是 true `1.50 mm`。所以这轮的真实含义不是 reopen，而是把这条 lane 从“blocked owner path”升级成“same-surface 可取回但 wrong-pitch”的更强 false-positive filter
+  - **新增 State-Change Log** (1 file):
+    - `logs/p4-530-2026-5-11-infineon-concrete-package-pages-now-retrievable-but-below-true-1p50mm-gate.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把这批 `Infineon` concrete package page 当成 blocked
+    - future AI 不应因为同页有 `Footprint Drawing` 就把它们误写成 `1.50 mm` reopen
+    - 当前最准确状态是：retrievable same-surface owner page, but visible pitch still only `1.0 mm`
+
+## 2026-05-11 (P4-529 Blocked And Retrieval-Limited Package Surfaces No State Change)
+
+- **这轮没有再扩 fresh package-house 名单，而是只对当前仍值得 watch 的 blocked / retrieval-limited owner path 做了一轮状态确认**: 当前 bounded recheck 只复查了 `Infineon` concrete package-portal / product URL、`JCET` 官方 `PBGA` PDF、以及 `ChipMOS` English official site。结果是三类都没有发生状态跃迁：`Infineon` 这些 concrete URL 仍返回 `HTTP/2 202 + x-amzn-waf-action: challenge + content-length: 0`，`JCET` 仍只有 family-level `1.50 mm` pitch wording 而没有 current-environment 可复核的 same-surface geometry row，`ChipMOS` 英文 official site 仍是 `403`。这轮因此继续不是 reopen，而是把当前 blocked-state drift 也压成了“no change”记录
+  - **新增 Blocked-State Recheck Log** (1 file):
+    - `logs/p4-529-2026-5-11-blocked-and-retrieval-limited-package-surfaces-no-state-change.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `Infineon` concrete package path 当成可能已经自动解锁的 reopened surface
+    - future AI 不应把 `JCET` 或 `ChipMOS` 当成当前环境下已自动转成 publicly retrievable
+    - 当前 package-side continuation 现在也不应默认押注 blocked-state drift，除非这些 official path 真正发生状态变化
+
+## 2026-05-11 (P4-528 Completion Audit Successor After Package-House Exhaustion Rerank)
+
+- **这轮没有改掉全局 completion verdict，而是把 `P4-527` 的 package-house exhaustion rerank 正式收进 completion wording**: 当前 repo 仍然只满足 `program_level_strong_complete`，不满足 `full_corpus_closed_without_open_residual_authority_gaps`；但和 `P4-491 / P4-503` 相比，最关键的变化是 package-house family pool 现在不应再被当成 blind sweep 的默认目标，因为 `P4-521` 到 `P4-527` 已经把 `ASE / JCET / UTAC / ChipMOS / SPIL / PTI / Unisem / STATS ChipPAC / Powertech / KYEC / Huatian / Tongfu / Amkor / Infineon blocked` 吸成了 exhaustion map
+  - **新增 Completion Audit Successor Log** (1 file):
+    - `logs/p4-528-2026-5-11-completion-audit-successor-after-package-house-exhaustion-rerank.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 package-house family pool 当成未扫空白
+    - future AI 不应把 `P4-527` 之前的 package-house 名单继续当成默认下一步
+    - 当前用户可读 completion wording 仍然是 `program_level_strong_complete`，但 package-house continuation now requires a genuinely new owner surface or blocked-path retrievability
+
+## 2026-05-11 (P4-527 Package-House Candidate-Pool Exhaustion Rerank)
+
+- **这轮不再继续把 fresh package-house lane 当成“还有一个没扫到的名字”，而是把 `P4-521` 到 `P4-526` 的结果统一收口成一条 candidate-pool exhaustion rerank**: 当前 package-house 侧已经被压成一串明确状态：`ASE` below gate，`JCET` family identity only / retrieval-limited on same-surface geometry，`UTAC` below gate，`ChipMOS` retrieval-limited only，`SPIL` below gate，`PTI` below target pitch，`Unisem` below target pitch，`STATS ChipPAC` family-only，`Powertech` deduped into `PTI`，`KYEC` family-only plus package-dimension false-positive filter，`Huatian` family-only，`Tongfu` below target pitch，`Amkor` family-level near-hit only，`Infineon package-portal` blocked。也就是说，当前 named package-house pool 已经不是“还差一个 blind sweep”的状态，而是被压成了当前证据层下的 exhaustion map
+  - **新增 Rerank Log** (1 file):
+    - `logs/p4-527-2026-5-11-package-house-candidate-pool-exhaustion-rerank.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把当前 package-house lane 误当成还有一个清晰排队中的未复核空白类
+    - future AI 不应默认再扫一个 blind package-house vendor 名单
+    - 当前 `1.50 mm` 仍然是 top residual，但 package-house 侧的默认 continuation 现在应该转向 genuinely new owner surface 或 blocked path retrievability
+
+## 2026-05-11 (P4-526 Fresh Package-House Follow-Up Huatian And Tongfu No Reopen)
+
+- **这轮继续沿 fresh package-house lane 往前走，并把 `Huatian` 与 `Tongfu` 都压成了可直接复核、但仍没有跨过当前 `1.50 mm` gate 的官方状态**: 当前 follow-up 复核了 `Huatian` 与 `Tongfu` 两类 package-house 候选。`Huatian` 这边，当前公开 official surface 能确认 `FBGA / TFBGA / LFBGA / LGA / EHS-FBGA / FCBGA / HFCBGA / CFCBGA` 这类 family/capability framing，也能看到 `I/O` 与产品尺寸范围，但仍没有拿到 true `1.50 mm` pitch identity，更没有 same-surface printed PCB land-pattern / footprint geometry。`Tongfu` 这边，当前英文官方 `WBBGALGA(HS)PBGAB Series` 页则直接给出 `0.35 / 0.4 / 0.5 / 0.65 / 0.75 / 0.80 / 1.0 mm` pitch，因此这不是 retrieval-limited，也不是 family-only 模糊命中，而是一个可直接复核但 visible pitch 上限仍低于目标的 owner surface。这轮因此继续不是 reopen，而是把 fresh non-chip-vendor pool 再压实两类
+  - **新增 Fresh Follow-Up Log** (1 file):
+    - `logs/p4-526-2026-5-11-fresh-package-house-followup-huatian-and-tongfu-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `Huatian` family/capability official surface 误写成已经触达 true `1.50 mm` pitch lane
+    - future AI 不应把 `Tongfu` 这种 visible pitch 上限只到 `1.0 mm` 的 owner page 继续误挂在 `1.50 mm` reopen 候选上
+    - 当前 fresh package-house continuation 现在又多了两类已复核状态：`Huatian family-only` 与 `Tongfu below target pitch`
+
+## 2026-05-11 (P4-525 Powertech Dedup To PTI And KYEC No Reopen)
+
+- **这轮没有把 `Powertech` 这种会回到同一官方域名的别名类重复算成新 owner class，也顺手把 `KYEC` 页面里的 visible `1.5 mm` 外形尺寸压回 false-positive context**: 当前 follow-up 复核了 `Powertech` 与 `KYEC` 两类 package-house 候选。`Powertech` 这边，当前 official surface 实际回到已落过的 `PTI` 官方域名与 `Wire Bond BGA` 页面，visible pitch 仍然只是 `0.3 to 1.0mm ball pitch available`，所以它不是一条新的 fresh class，而只是对 `P4-523` 的别名去重确认。`KYEC` 这边，当前公开封装服务页能看到 `LFBGA / TFBGA / Mini BGA` 这类 family framing，也能看到 `14 mm x 14 mm x 1.5 mm` 这类 package-dimension 值；但这个 `1.5 mm` 属于封装尺寸上下文，不是真实 pitch identity，页面也没有 same-surface printed PCB land-pattern / footprint geometry。这轮因此继续不是 reopen，而是同时修掉“别名重复计数”和“1.5 mm 尺寸误判”为 pitch 这两类风险
+  - **新增 Fresh Follow-Up Log** (1 file):
+    - `logs/p4-525-2026-5-11-powertech-dedup-to-pti-and-kyec-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `Powertech` 再当成独立于 `PTI` 的新 package-house class 重复计数
+    - future AI 不应把 `KYEC` 页面里的 visible `1.5 mm` package dimension 误写成 true `1.50 mm` pitch 命中
+    - 当前 fresh package-house continuation 现在又多了一条去重结论和一条 false-positive filter：`Powertech -> PTI dedup` 与 `KYEC family-only / dimension-context no-reopen`
+
+## 2026-05-11 (P4-524 Fresh Package-House Follow-Up Unisem And STATS ChipPAC No Reopen)
+
+- **这轮继续沿 fresh package-house lane 往前走，并把 `Unisem` 与 `STATS ChipPAC` 都压成了可复核、但仍明显低于当前 `1.50 mm` gate 的官方状态**: 当前 follow-up 复核了 `Unisem` 与 `STATS ChipPAC` 两类 package-house 候选。`Unisem` 这边，当前公开 `FBGA / LGA` owner surface 直接写明 `Solder Ball Pitch: 0.5mm and 0.8mm`，因此它不是 retrieval-limited，也不是 family-only 模糊命中，而是一个可直接复核但 visible pitch 自身低于目标的 owner class；其 linked 官方 `Package Configurations` PDF 也没有把它抬成 true `1.50 mm` same-surface geometry。`STATS ChipPAC` 这边，当前公开 official surface 能看到 `WB-BGA / fcBGA / FBGA` 这类 technology / applications family framing，但仍没有拿到 true `1.50 mm` pitch identity，更没有 same-surface printed PCB land-pattern / footprint geometry。这轮因此继续不是 reopen，而是把 fresh non-chip-vendor pool 再压实两类
+  - **新增 Fresh Follow-Up Log** (1 file):
+    - `logs/p4-524-2026-5-11-fresh-package-house-followup-unisem-and-stats-chippac-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `Unisem` 这类 visible pitch 明确只有 `0.5 / 0.8 mm` 的 owner page 继续误挂在 `1.50 mm` reopen 候选上
+    - future AI 不应把 `STATS ChipPAC` technology / applications family framing 误写成 true `1.50 mm` pitch lane
+    - 当前 fresh package-house continuation 现在又多了两类已复核状态：`Unisem below target pitch` 与 `STATS ChipPAC family-only`
+
+## 2026-05-11 (P4-523 Fresh Package-House Follow-Up SPIL And PTI No Reopen)
+
+- **这轮继续沿 fresh package-house lane 往前走，但把 `SPIL` 和 `PTI` 都压回了“真实 official surface 已复核、仍未过 gate”的更细状态**: 当前 follow-up 复核了 `SPIL` 与 `PTI` 两类 package-house 候选。`SPIL` 这边，当前公开 owner surface 能直接看到 `PBGA / EDHS-PBGA / TFBGA / VFBGA / LGA / FCBGA / FCCSP / WLCSP` 这类 package family listing，因此它不再是纯名字猜测；但页面没有 true `1.50 mm` pitch identity，也没有 same-surface footprint / land-pattern geometry，所以仍低于 gate。`PTI` 这边，当前官方 `Wire Bond BGA` 页面则直接写明 `0.3 to 1.0mm ball pitch available`，这说明它也是真实 owner surface，但 visible pitch 自身就低于当前 `1.50 mm` target，同时页面也没有 same-surface geometry。这轮因此继续不是 reopen，而是把 fresh non-chip-vendor pool 再压实两类
+  - **新增 Fresh Follow-Up Log** (1 file):
+    - `logs/p4-523-2026-5-11-fresh-package-house-followup-spil-and-pti-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `SPIL` family listing surface 误写成已经触达 true `1.50 mm` pitch lane
+    - future AI 不应把 `PTI` 这种 visible pitch 明确只到 `1.0 mm` 的 owner page 继续误挂在 `1.50 mm` reopen 候选上
+    - 当前 fresh package-house continuation 现在又多了两类已复核状态：`SPIL below gate` 与 `PTI below target pitch`
+
+## 2026-05-11 (P4-522 Fresh Package-House Follow-Up UTAC And ChipMOS No Reopen)
+
+- **这轮继续沿 fresh package-house lane 往前走，但只落能够直接复核的官方页面，不拿搜索摘要硬充 owner evidence**: 当前 follow-up 复核了 `UTAC` 与 `ChipMOS` 两类 package-house 候选。`UTAC` 的官方 `Packaging Overview` 页面是可取回的 current-public owner surface，但露出的只是 `Leadframe / Laminate / MEMS / Image Sensor / SiP / WLCSP / Power` 这些分类，没有 visible `1.50 mm` BGA/PBGA row，更没有 same-surface footprint / land-pattern geometry，所以只能记成低于 gate。`ChipMOS` 这边，当前官方英文首页直接返回 `403`，因此这轮不能把任何搜索层命中或猜测型 package pitch 写进 repo，只能准确记成 retrieval-limited candidate。这轮因此继续不是 reopen，而是把 fresh non-chip-vendor pool 再压实一层
+  - **新增 Fresh Follow-Up Log** (1 file):
+    - `logs/p4-522-2026-5-11-fresh-package-house-followup-utac-and-chipmos-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `UTAC packaging overview` 误写成已经触达 `1.50 mm` BGA/PBGA exact-geometry lane
+    - future AI 不应从 unretrieved `ChipMOS` surface 推出任何 pitch 或 geometry 结论
+    - 当前 fresh package-house continuation 现在又多了两类已复核状态：`UTAC below gate` 与 `ChipMOS retrieval-limited`
+
+## 2026-05-11 (P4-521 Fresh OSAT Package-House 1.50 mm Scout No Reopen)
+
+- **这轮没有继续停留在 repo 内部的 exhaustion 记录，而是实际去外部官方源里 surfacing 了一组不同结构的 package-house / OSAT 候选**: 当前 fresh surfacing 第一次把 `ASE` 与 `JCET` 这类非芯片原厂 package-house 类真正压到 `1.50 mm` residual 上。`ASE` 的官方 `Wire Bond BGA`、`Packaging Substrate`、和 `Flip Chip Packaging` 页面都是真正的 owner surface，但可见内容要么停在 family/capability framing，要么 BGA pitch 只到 `1.27`，没有 same-surface `1.50 mm` geometry。`JCET` 这边则 surfaced 出了官方 `PBGA` family PDF，并且公开 snippet 已能看到 `0.65, 0.80, 1.00, 1.27 and 1.50mm ball pitch`；但当前环境下仍没有取回一个可直接复核的 same-surface footprint / land-pattern geometry row，所以它当前仍然只是 stronger family candidate，不是 reopen。这轮因此不是 closeout，而是把 fresh non-chip-vendor candidate pool 继续压实
+  - **新增 Fresh Official-Source Scout Log** (1 file):
+    - `logs/p4-521-2026-5-11-fresh-osat-package-house-1p50mm-scout-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `ASE` 当成“也许还没复核”的 package-house blank class；当前可见 BGA pitch 上限仍只到 `1.27`
+    - future AI 不应把 `JCET` surfaced 出来的 `1.50mm ball pitch` family identity 误写成 same-surface geometry reopen
+    - 当前 `1.50 mm` residual 现在不只关掉了 chip-vendor broad clusters，也把 fresh `ASE` 与 `JCET` package-house classes 压到了 gate 以下
+
+## 2026-05-11 (P4-520 Post-P4-519 Materially Different 1.50 mm Owner-Class Recheck No New Class)
+
+- **这轮没有顺着 `P4-519` 的“materially different owner class”表述继续凭空猜下一组 OSAT / package-house 名单，而是先核实当前 repo 里到底有没有一个已经被指向、但还没复核的具体类**: 结果是没有。`P4-519` 已经把 broad owner-cluster scout 的收益压成 candidate-pool tightening，而这轮进一步确认：当前 repo 里真正已经 surfaced 的不同结构类，仍只有已关掉的 `Infineon package-portal blocked` 与 `Amkor family near-hit` 两类；按 `ASE / SPIL / JCET / PTI / Powertech / KYEC / UTAC / Unisem / Stats ChipPAC / ChipMOS / Huatian / Tongfu / OSAT / package-house / package-portal` 这类词做 log-only recheck，也没有出现一个被当前 `1.50 mm` residual 明确挂起为下一步的具体 owner class。所以这轮把状态再收紧一层：`1.50 mm` 仍然是第一 residual，但当前 repo 证据下已经没有一个清晰排队中的 materially different owner class；后续只有在 fresh surfacing 先出现一个具体 owner surface，或 blocked owner path 重新可取回时，才继续 reopen
+  - **新增 No-New-Class Audit Log** (1 file):
+    - `logs/p4-520-2026-5-11-post-p4-519-materially-different-1p50mm-owner-class-recheck-no-new-class.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把猜测型 OSAT / package-house vendor-name 扩展误当成已经被 repo 指向的下一条 clean continuation
+    - future AI 应继续把 `1.50 mm` 写成当前第一 residual，但同时承认当前 repo 内没有一个具体排队中的 materially different owner class
+    - future AI 不应因为没有新 owner class，就错误退回 article-side broad reopening；`E7` 与 article residual 仍维持已复核 exhaustion 状态
+
+## 2026-05-11 (P4-519 Post-P4-518 Residual Priority And Candidate-Pool Tightening Rerank)
+
+- **这轮没有继续把 broad owner-cluster scout 当成默认最高收益动作，而是先把 `P4-516` 到 `P4-518` 的真实含义收成一个新的 controller rerank**: 最近三轮 scout 的结果都没有打开新的 reopen class。两轮 `1.50 mm` owner-cluster scout 继续证明，当前公开面仍然没有新的 same-surface `true 1.50 mm pitch + footprint / land-pattern geometry` owner row；一轮 `0.75 mm` scout 也继续证明，即使 `Micron` 与 `Fujitsu` 已露出 true `0.75 mm` pitch identity，只要没有同页几何强到超过现有 `Microchip + Renesas + NXP + Intel` stack，就仍不能 reopen。所以这轮把它们统一收口成 candidate-pool tightening：`1.50 mm` 仍是最小 open gap，`0.75 mm` 仍第二，但下一轮默认不应再做同形态 blind cluster sweep，除非先出现 materially different owner class 或 blocked owner page 重新可取回
+  - **新增 Residual Rerank Log** (1 file):
+    - `logs/p4-519-2026-5-11-post-p4-518-residual-priority-and-candidate-pool-tightening-rerank.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把“再扫一组 broad vendor cluster”默认当成当前最高收益的下一步
+    - future AI 应继续把 `1.50 mm` 写成当前第一 residual，但同时承认当前 candidate pool 已比 `P4-515` 时更紧
+    - future AI 不应把 true `0.75 mm` pitch identity 本身误当成超过现有 owner stack 的 reopen
+
+## 2026-05-11 (P4-518 New Vendor Cluster 0.75 mm Owner Same-Surface Scout)
+
+- **这轮没有把 `Micron` / `Fujitsu` 这种已经能看到 true `0.75 mm` pitch identity 的 owner surface 误写成 `0.75 mm` reopen，而是继续把这条 lane 严格卡在 same-surface 几何门槛上**: `P4-518` 针对 `Samsung / Micron / SK hynix / Fujitsu / Toshiba / Nuvoton` 做了一轮新的 `0.75 mm` owner-cluster scout。当前 `Micron` 与 `Fujitsu` 已经能公开看到 true `0.75 mm` pitch identity，但同页仍没有强到超过现有 `Microchip + Renesas + NXP + Intel` stack 的 printed PCB land-pattern / footprint geometry；其他命中则停在 `0.80 / 0.65`、generic BGA guide、family page、或 package-size listing。所以这轮继续不是 reopen，而是把 `0.75 mm` 的 gate 也压得更实
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-518-2026-5-11-new-vendor-cluster-0p75mm-owner-same-surface-scout.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 true `0.75 mm` pitch identity 本身误当成 reopen
+    - future AI 不应把 `Micron` / `Fujitsu` 当前 surfaced package pages 误写成已经超过现有 `0.75 mm` owner stack
+    - 当前 `0.75 mm` 仍然 open，但优先级仍低于 `1.50 mm`
+
+## 2026-05-11 (P4-517 New Vendor Cluster 1.50 mm Owner Same-Surface Scout 2)
+
+- **这轮又扫了一组新的 Japanese / consumer / module-leaning vendor cluster，但还是没有找到能重开 `1.50 mm` 的 owner surface**: `P4-517` 针对 `Mitsubishi Electric / Sony / NEC / Fujitsu / Alps Alpine / Panasonic` 又做了一轮 cluster scout。当前公开 surfacing 出来的要么是 `1.27 / 1.0 / 0.8 mm` 级别的 package PDF，要么是 WLCSP / module / materials page，要么是 technical report，并没有任何一页同时满足 true `1.50 mm` pitch identity 与 same-surface printed PCB land-pattern / footprint geometry。所以这轮继续不是 reopen，而是把另一整组 vendor class 从“可能未复核”压回到“已复核但仍低于 gate”
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-517-2026-5-11-new-vendor-cluster-1p50mm-owner-same-surface-scout-2.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把这组 Japanese / consumer / module-heavy vendor cluster 误当成还没复核的空白区
+    - future AI 不应把 materials page、technical report、module page、或 sub-`1.50 mm` package PDF 当成新的 `1.50 mm` reopen 候选
+    - 当前 `1.50 mm` 仍然是 package-side 最小 open gap，但当前公共候选集已被继续压实
+
+## 2026-05-11 (P4-516 New Vendor Cluster 1.50 mm Owner Same-Surface Scout)
+
+- **这轮没有在新的 vendor cluster 里找到可重开 `1.50 mm` 的公共 owner surface，而是再次把候选收窄回同一条最小 package-side gap**: `P4-516` 针对 `Samsung / Micron / SK hynix / Nuvoton / ROHM / Socionext` 做了一个新的 owner-cluster scout，但当前 surfacing 出来的 pitch 仍然是 `0.8 / 0.65 / 0.5 / 0.4` 或者只是 generic BGA guidance，没有任何一页同时满足 true `1.50 mm` pitch identity 与 same-surface printed PCB land-pattern / footprint geometry。因此这轮不是 reopen，而是继续确认 `1.50 mm` 仍然是当前最小、最明确的 package-side 开口
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-516-2026-5-11-new-vendor-cluster-1p50mm-owner-same-surface-scout.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `Samsung / Micron / SK hynix / Nuvoton / ROHM / Socionext` 这组新的 cluster 命中误写成 `1.50 mm` reopen
+    - future AI 不应把 sub-`1.50 mm` pitch、generic BGA guide、或没有同页几何的 search hit 当成同类 open gap 的替代
+    - 当前 `1.50 mm` 仍然是 package-side 最小 open gap
+
+## 2026-05-11 (P4-515 Post P4-514 Residual Priority And Completion Gap Rerank)
+
+- **这轮没有把 `P4-514` 的 false-positive cleanup 误读成“剩余 gap 已经换成别的 lane”，而是把当前最小剩余缺口继续固定回 package-side `1.50 mm` exact-geometry recovery**: `P4-514` 刚把 `Nexperia WLCSP` 这类新的 false-positive owner class 压回去，但 rerank 结果仍然显示，当前最小意义上的未闭合 gap 还是一条真正的 public owner surface，必须同时给出 true `1.50 mm` pitch identity 和 same-surface footprint / land-pattern geometry。`0.75 mm` 仍在 open 状态，但优先级低于 `1.50 mm`；doctrine 和 handbook 也仍然都只是 watch-only
+  - **新增 Residual Rerank Log** (1 file):
+    - `logs/p4-515-2026-5-11-post-p4-514-residual-priority-and-completion-gap-rerank.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `P4-514` 的 false-positive cleanup 误当成完成闭环
+    - future AI 不应把 `0.75 mm`、doctrine、或 handbook 误写成当前 package-side 最小 gap
+    - 当前 `1.50 mm` 仍然是最小且最明确的 package-side reopen lane
+
+## 2026-05-11 (P4-514 Nexperia WLCSP Same-Surface And 1.50 False-Positive No-Reopen)
+
+- **这轮没有因为 `Nexperia WLCSP` 的 package-information PDF 已经长得很像“同页 exact geometry owner page”就误报成新的 `1.50 mm` 命中，而是把它准确固定成又一批 wrong-pitch / false-positive filter**: 当前 `WLCSP12_SOT8088` 官方 PDF 确实已经比很多弱候选更像样，因为它同一 owner surface 上就给出了 package identity、reflow footprint geometry、以及 true pitch identity；但它的真实 pitch 是 `0.40`，不是 `1.50`。另外，`WLCSP9_SOT8134` 与 `WLCSP6_SOT8090` 这两份 owner PDF 虽然也都有 visible `1.50`，但那里仍是 body dimension，真正 pitch 还是 `e = 0.50`。所以这轮把 `Nexperia WLCSP` 固定成新的 false-positive owner class，而不是 `1.50 mm` reopen
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-514-2026-5-11-nexperia-wlcsp-same-surface-and-1p50-false-positive-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `Nexperia WLCSP` package-information PDFs 里的 visible `1.50` 误写成 `1.50 mm` pitch hit
+    - future AI 不应把 same-surface footprint geometry 本身误当成 reopen，除非 printed pitch 数值本身命中 `1.50`
+    - 当前 `1.50 mm` residual 的 reopen gate 在新的 owner class 上又被压实了一层
+
+## 2026-05-11 (P4-513 Toshiba WCSP20 And BGA Guide True-Pitch No-Reopen)
+
+- **这轮没有因为 `Toshiba` 首次出现了“同页有真实 pitch identity + land pattern”就直接误报成 `1.50 mm` 命中，而是继续按 `P4-512` 的 tightened gate 把它压回 no-reopen**: 当前 `WCSP20` 官方 package-detail page 确实已经比很多弱候选更像样，因为它同一 owner surface 上同时给出了 package identity、true pitch identity，以及 `Land pattern dimensions for reference only`。但它的真实 pitch 是 `0.40`，不是 `1.50`。同时，Toshiba 当前公开 `BGA` mounting guide 的 lineup 也只到 `0.40 / 0.50 / 0.65 / 0.80 mm`，没有同类 public `1.50 mm` pitch geometry 面。所以这轮把它固定成又一条“结构对了、目标 pitch 不对”的 near-hit，而不是新的 `1.50 mm` reopen
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-513-2026-5-11-toshiba-wcsp20-and-bga-guide-true-pitch-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把“同页 true pitch + same-surface land pattern”自动当成 `1.50 mm` 命中，除非 pitch 本身就是 `1.50`
+    - future AI 不应把当前 Toshiba BGA guide 误写成已覆盖 `1.50 mm`
+    - 当前 `1.50 mm` gate 现在不仅要求 same-surface geometry，还要求 pitch 数值本身命中目标类
+
+## 2026-05-11 (P4-512 Post-P4-511 Tighten 1.50 mm Gate To True Pitch Identity)
+
+- **这轮没有把 `P4-511` 仅仅当成又一个 `1.50` 近命中，而是顺手把当前 reopen gate 里残留的一处歧义也清掉了**: `P4-510` 当时把 clean next step 写成了 `true 1.50 mm package identity + same-surface geometry`，但 `P4-511` 现在已经证明，这个表述还不够严，因为 visible `1.50` 也可能只是 body `D`，不是 pitch。于是这轮把当前 `1.50 mm` BGA/CSP residual 的唯一干净 gate 再收紧回去：后续只有在文档明确给出 true `1.50 mm` pitch identity，并且同一 owner surface 还给出 printed PCB land-pattern / footprint geometry 时，才允许 reopen
+  - **新增 Gate-Tightening Log** (1 file):
+    - `logs/p4-512-2026-5-11-post-p4-511-tighten-1p50mm-gate-to-true-pitch-identity.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `true 1.50 mm package identity` 当成足够精确的 reopen gate
+    - future AI 不应再把任何 visible `1.50` package dimension 自动当成 pitch hit
+    - 当前 `1.50 mm` residual 的 clean reopen bar 现在重新明确为 `true pitch identity + same-surface geometry`
+
+## 2026-05-11 (P4-511 Diodes U-WLB1510-6 Outline And Suggested Pad Layout Landing)
+
+- **这轮没有把新找到的 `Diodes` datasheet 误写成又一条 `1.50 mm pitch` reopen，而是把它准确拆成“新增 exact-geometry 示例 + 强化 `1.50` 搜索过滤”两件事**: 官方 `DMN1016UCB6` datasheet 在同一 owner PDF surface 上同时给出了 named package `U-WLB1510-6`、package outline、以及 `Suggested Pad Layout`，所以这是一条真实可落库的 owner-scoped exact-geometry page；repo 因此新增了一个 named-package outline + footprint 示例。但这份文档里 visible `1.50` 属于 package body `D`，真正的 pitch `e` 是 `0.50`，所以它不能被写成新的 `1.50 mm` BGA/CSP pitch reopen。也就是说，这轮既补进了一条新 exact-data 卡，也把当前 `1.50` 搜索 discipline 再压实了一层
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/diodes-dmn1016ucb6-u-wlb1510-6-outline-and-suggested-pad-layout.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/diodes-u-wlb1510-6-outline-and-suggested-pad-layout.md`
+  - **新增 Log** (1 file):
+    - `logs/p4-511-2026-5-11-diodes-u-wlb1510-6-outline-and-suggested-pad-layout-landing.md`
+  - **更新 Route / Tracker** (4 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 `DMN1016UCB6` 的 visible `1.50` 误写成 package pitch；当前 owner page 明确还有 `e = 0.50`
+    - future AI 现在可以安全复用一条新的 named-package outline + `Suggested Pad Layout` owner exact-geometry example
+    - 当前 `1.50 mm` BGA/CSP residual 仍未因此重开，后续仍只接受 true pitch identity + same-surface geometry 的更强候选
+
+## 2026-05-11 (P4-510 Post-P4-509 Residual Rerank Keep 1.50 mm But Tighten Candidate Class)
+
+- **这轮没有因为 `Infineon` 与 `Amkor` 两个具体子类都没过门槛，就把整条 `1.50 mm` residual 误降级，而是把“该继续追什么”写得更窄更准**: `P4-507` 已经说明 `1.50 mm` 这条 lane 仍在真实上升，因为它刚拿到一条新的 public IPC-hosted geometry boundary；`P4-508` 与 `P4-509` 证明的只是两个具体子类不该 reopen，不是整条 lane 该让位给 `0.75 mm`、doctrine、handbook 或 article residual。所以这轮把当前最准确的 continuation 重新固定为：`1.50 mm` 仍是第一优先 residual，但后续只接受 `current-public owner package drawing / datasheet + true 1.50 mm identity + same-surface printed PCB land-pattern geometry` 这一种候选类
+  - **新增 Rerank Log** (1 file):
+    - `logs/p4-510-2026-5-11-post-p4-509-residual-rerank-keep-1p50mm-but-tighten-candidate-class.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应因为两个具体 `1.50 mm` 子类被压回，就把整条 lane 误降到 `0.75 mm` 或 doctrine 之后
+    - future AI 不应再把 `package-family identity`、`package-portal structure`、或 `TOC / metadata` 当成 `1.50 mm` 的 clean reopen class
+    - 当前 `1.50 mm` 的唯一干净 next step 已经收窄成 `owner same-surface exact geometry`
+
+## 2026-05-11 (P4-509 Amkor PBGA 1.50 mm Family Near-Hit No-Reopen)
+
+- **这轮没有把一个新的非重复 owner 类硬抬成 `1.50 mm` reopen，而是把它准确固定成“强于噪音、但仍低于门槛”的 near-hit**: `Amkor` 当前公开 `PBGA/TEPBGA` family page 与链接的官方 datasheet 都明确写到 `1.00, 1.27 & 1.50 mm standard ball pitch available`，因此这不是 `IEC metadata`、generic app note、或 `1.50` 坐标噪音一类弱候选；它是真正的 owner family identity。但当前公开面仍没有同页 `footprint drawing`、printed PCB land-pattern geometry、或 package-scoped exact row，所以它还不到新的 `1.50 mm` owner reopen surface，只能固定成 stronger near-hit
+  - **新增 Negative Scout Log** (1 file):
+    - `logs/p4-509-2026-5-11-amkor-pbga-1p50mm-family-near-hit-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应把 true `1.50 mm` owner family identity 本身误写成已经达到 reopen gate
+    - future AI 不应把 `Amkor PBGA/TEPBGA` family page + datasheet 当成同页 footprint-geometry authority
+    - 当前 `1.50 mm` 如果继续推进，仍应只接受 package-scoped geometry row 或 same-surface footprint geometry 的更强公开 owner surface
+
+## 2026-05-11 (P4-508 Infineon P-BGA / PG-BGA Current Access Blocker No-Reopen)
+
+- **这轮没有再把子代理刚指出的 `Infineon P-BGA / PG-BGA` 具体 package-portal URL 当成“下一条大概率可落库主源”，而是先把当前环境里的真实访问状态写死**: 针对 `P-BGA-165-801`、`P-BGA-165-802`、`PG-BGA-165-807` 以及关联 product page `CY7C1515KV18-300BZCT` 的直接复查显示，当前 reachable endpoint 返回的是 `HTTP/2 202`、`x-amzn-waf-action: challenge`、以及 `content-length: 0`，不是可复核的 owner page 或 PDF。也就是说，这批具体 URL 在当前环境里应视为 access-blocked candidate，而不是新的 `1.50 mm` public owner reopen surface
+  - **新增 Access-Blocker Log** (1 file):
+    - `logs/p4-508-2026-5-11-infineon-p-bga-pg-bga-current-access-blocker-no-reopen.md`
+  - **更新 Tracker** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把这批当前 challenge-blocked 的 `Infineon P-BGA / PG-BGA` 具体 URL 当成“主线只差复核”的新候选
+    - future AI 不应把 `package portal` 结构存在和当前环境下 `publicly retrievable` 混为一谈
+    - 当前 `1.50 mm` 继续推进时，仍应优先寻找真正可取回的 same-surface owner exact row，或 genuinely public formal geometry surface
+
+## 2026-05-11 (P4-507 IPC Public BGA/CSP 1.50 mm Pitch And 0.75-Ball Geometry Boundary)
+
+- **这轮没有再把 `1.50 mm` 继续卡死在 `IEC metadata / family framing + owner exact rows` 的口径上，而是把一个真正公开可见的 IPC-hosted geometry 面收进 repo**: 当前 repo 现在可以把 public IPC paper `Principles for Implementing BGA and CSP Technology` 里公开可见的 `1.50 / 1.27 mm` pitch variation、nominal `0.75 mm` ball class、以及 round-land / solder-mask-opening example geometry 接成一条更窄的 standards-adjacent public geometry boundary。这样 `1.50 mm` lane 就不再只有 standards-owner metadata、family framing、和若干 owner-scoped exact rows；它还多了一条 public IPC-hosted 几何面。但这次提升仍只到 `pitch-family -> nominal-ball -> visible round-land geometry` 这条窄边界，不到 formal public `IPC-7095A` row、universal `1.50 mm pitch -> land pattern` law、或 handbook generic table closeout
+  - **新增 Source Record** (1 file):
+    - `sources/registry/methods/ipc-bga-csp-technology-paper-1p50mm-pitch-and-0p75ball-geometry.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/ipc-public-bga-csp-1p50mm-pitch-and-0p75ball-geometry-boundary.md`
+  - **新增 Log** (1 file):
+    - `logs/p4-507-2026-5-11-ipc-public-bga-csp-1p50mm-pitch-and-0p75ball-geometry-boundary.md`
+  - **更新 Route / Tracker** (6 files):
+    - `wiki/processes/package-library-governance-and-footprint-review-map.md`
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `1.50 mm` 的公开非 owner 面写成只有 `IEC` metadata / family framing
+    - future AI 不应把这条 IPC paper 边界误写成 formal public `IPC-7095A` exact row
+    - 当前 `1.50 mm` lane 现在可以更诚实地写成 `IEC family boundaries + public IPC-hosted geometry boundary + owner exact rows`, 但仍低于 universal closeout
+
+## 2026-05-11 (P4-505 E4 Mark Fiducial Optical-Alignment Scope And Local-Correction Authority Recovery)
+
+- **这轮没有再拿 `IPC-7525C` / stencil-support / `Ucamco` 那套旧弱锚点硬抬 `E4 Mark`，而是等到 genuinely stronger 的 machine-owner + CAD-owner 公共面出现后，才把它窄窄地升了一层**: 当前 repo 现在可以用 `Yamaha` SMT glossary 把 `fiducial mark` 稳定写成 placement / printing 的 optical alignment reference，用 `Yamaha YRM-D` feature page 把 `multiple marks`、`individual local marks`、以及 `local correction` 收进 machine-owner posture，再用 `KiCad` PCB Editor 文档把 `Fiducial, global to board` 和 `Fiducial, local to footprint` 这组明确 scope label 落成 CAD-owner support。这样 `PCB板的Mark点设计对SMT重要性.pdf` 就终于不再只有 route-only，而是多出一条 narrow official-fact-backed lane；但这次提升仍只到 `optical alignment + board-global vs footprint-local scope + local-correction posture`，不到 panel-level doctrine、asymmetry / visibility / cleanliness doctrine、任何 geometry / count / keepout numerics、package-specific mandatory local-Mark rules、workaround guidance、或 outcome claims
+  - **新增 Source Record** (3 files):
+    - `sources/registry/methods/yamaha-smt-glossary-fiducial-mark.md`
+    - `sources/registry/methods/yamaha-yrm-d-multiple-marks-and-local-correction.md`
+    - `sources/registry/methods/kicad-pcb-editor-fiducial-fabrication-property.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/fiducial-optical-alignment-global-local-scope-and-local-correction-boundary.md`
+  - **新增 Log** (1 file):
+    - `logs/p4-505-2026-5-11-e4-mark-fiducial-optical-alignment-scope-and-local-correction-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `PCB板的Mark点设计对SMT重要性.pdf` 写成“当前还只有 route-only residual”
+    - future AI 不应再把 `board/panel/local` 整体混成一条已闭合 doctrine；这次只闭合了 `board-global vs footprint-local` 这条更窄的 official surface
+    - 当前 article-side residual 压力不再需要继续放在 `E4 Mark`，而应更多转回剩余 `E7` residual
+
+## 2026-05-11 (P4-506 E7 Graphic Alignment Shared-Reference-Frame And Same-Coordinate-System Authority Recovery)
+
+- **这轮没有继续把 `简单好用！再也不用担心PCB图形对齐问题.pdf` 当成只剩 route-only 的 local-alignment 文章，而是用更强的 `Ucamco` format-owner specification 把它再抬了一小段**: 当前 repo 现在可以把这篇里最安全的一段接到 `shared-reference-frame`、`same-coordinate-system registration`、`.SameCoordinates`、以及 `ident` / `ProjectId` 的 revision-check posture；`Ucamco` 还明确写了 PCB fabrication-data layers must use the same coordinate system、same offset、no mirroring、1:1 scale 这类注册语言。这样这篇就不再只是 shared-reference-frame workflow route，而是多出一条 narrow official-fact-backed lane；但这次提升仍只到 same-coordinate-system registration / revision-comparison alignment，不到 UI-step sequences、auto-fix sufficiency、local-subregion move workflow、library-adjustment authority、或 outcome claims
+  - **新增 Source Record** (1 file):
+    - `sources/registry/standards/ucamco-gerber-layer-format-specification-revision-2024-05.md`
+  - **新增 Fact Card** (1 file):
+    - `facts/methods/gerber-layer-shared-reference-frame-and-same-coordinate-system-registration-boundary.md`
+  - **新增 Log** (1 file):
+    - `logs/p4-506-2026-5-11-e7-graphic-alignment-shared-reference-frame-and-same-coordinate-system-authority-recovery.md`
+  - **更新 Tracker** (5 files):
+    - `logs/p4-309-2026-5-8-pcb-ziliao-full-corpus-learning-and-usage-master-plan.md`
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不应再把 `简单好用！再也不用担心PCB图形对齐问题.pdf` 写成只有 route-only
+    - future AI 不应把它的 shared-reference-frame / registration 说法误读成 UI-shell 操作或 one-click 便利性
+    - 当前 article-side residual 已进一步收缩：现在主要只剩 `3` 篇 branded-tool `E7` hold-only PDF
+
 ## 2026-05-11 (P4-504 D5 Reset Quiet-Routing And Local Filter Boundary)
 
 - **这轮没有把 handbook 里 `RESETn`、`nPOR`、`滤波电容靠近管脚`、`远离 DCDC / RF`、`远离板边和金属接插件` 这组说法误判成一个足够独立的新 lane，而是先做了重叠核查并把它压回 no-reopen**: subagent 复核后确认，这条 candidate 虽然没有一个现成同名 fact，但它当前能从主源恢复出来的 substantive pieces，仍然主要落在现有 `entry-path`、`quiet sense routing`、`switching-noise avoidance`、以及 `near-pin passive placement` 这些已落库边界上；剩下最 reset-specific 的部分则仍太接近 handbook recipe territory，没有超过当前 reopen bar
