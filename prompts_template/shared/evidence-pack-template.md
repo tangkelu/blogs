@@ -178,6 +178,40 @@
 - 不要堆链接
 - 同一来源不要正文引用后又在文末重复堆一遍
 
+## 8.5 Failure Pattern Inventory
+
+这一部分不是可选项。对 `SI / DFM / assembly / validation / stackup / materials / reliability / thermal / HV-isolation / connector-launch` 这类主题，必须先准备至少 `1` 条可安全写入正文的 failure pattern。
+
+| Section target | Scenario setup | Missing input / uncontrolled point | Physical mechanism or EQ trigger | Consequence | Why it proves early definition matters | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  | framing_only / verified |
+
+要求：
+
+- 必须能落到具体 H2，不允许只写成“全篇存在风险”
+- 优先写物理机制、装配冲突、测试盲区、资料包缺口或 release pause
+- 如果没有数字支撑，就写清 failure chain，不要补假数
+- 这张表的输出目标，是让正文能自然写出 `typical failure pattern`，而不是临时靠作者发挥
+
+## 8.6 Engineering CTA Inputs
+
+这一部分不是可选项。每个 evidence pack 都要先把结尾 CTA 的输入冻结清楚，避免最后退化成产品链接清单。
+
+| CTA field | Required content | Status |
+| --- | --- | --- |
+| Reader pain / project blockage | 读者此类项目最可能卡住的工程问题 | framing_only |
+| Package to request | 应提交的资料包，例如 `Gerber`、`ODB++`、`stackup`、`BOM`、坐标、测试意图、机械约束 | framing_only |
+| Review owner | 哪个工程团队返回反馈，例如 `DFM`, `CAM`, `stackup`, `SMT`, `DFT` | framing_only |
+| Review outputs | 会返回什么，例如封装冲突、阻抗风险、测试盲区、装配路线、验证路径 | framing_only |
+| SLA / response wording | 只有站点 overlay 已公开时才填入 | verified / framing_only |
+| Quote / contact route | 公开可复用的邮箱或 quote 路径 | verified / framing_only |
+
+要求：
+
+- 如果站点没有公开邮箱、quote 页面或 SLA，不要编造
+- CTA 输入必须跟主题强绑定，不能用站点通用说法替代
+- Evidence pack 交付时，这一块应足够具体到可以直接驱动 `Next steps`
+
 ## 9. AI-SEO Evidence Primitives
 
 这一部分不是可选项。它的目标是让后续写作阶段直接拿到“可被 AI 抽取、可被作者自然写进正文、可被引用”的证据原料。
@@ -256,7 +290,10 @@
   - 定义 / 设计决策 / 制造控制 / 风险失效 / 选型对比
 - 推荐早期表格类型：
 - 推荐第二层结构块类型：
+- 推荐 failure pattern 落点：
 - 推荐站点承接页：
+- 推荐 CTA 数据包：
+- 推荐 CTA 工程反馈：
 - 推荐正文锚点：
 - 推荐 FAQ 补点：
 

@@ -49,6 +49,18 @@
 - 商业承接要自然嵌入工程动作
 - 比起博客互链，更优先把流量送到产品 / 服务 / 工具页
 
+## HILPCB CTA 规则
+
+- HILPCB 的 Query 文章结尾 CTA，优先写成“工程痛点 + 应提交资料 + 工程团队反馈 + 公开响应时效”
+- 当前可公开复用的联系邮箱是 `sales@hilpcb.com`
+- 当前可公开复用的承接页是 `https://hilpcb.com/en/quote/`
+- 当前可公开复用的响应表述，应以 HIL 现有公开 quote 文案为边界：
+  - `Our team will contact you within 24 hours with detailed pricing and technical recommendations.`
+- 当文章主题明显落在 DFM、stackup、assembly、materials、test access、thermal、high-speed、HV isolation 这类工程审查问题时，CTA 可以安全收敛成 `engineering review feedback within 24 hours`，但不要扩写成交付、产能或量产承诺
+- 可以自然写入的资料类型包括：`Gerber`、`ODB++`、`stackup draft`、`BOM`、坐标文件、阻抗要求、背钻说明、材料 / finish 意图、测试要求、机械约束、应用场景
+- 不要每篇都复制同一句 CTA；必须根据正文的 failure pattern 或 review burden 改写工程痛点
+- 允许在主 CTA 后补 `2-4` 个相关链接，但这些链接只能作为辅助，不应盖过主 CTA
+
 ## 内置报价组件
 
 HILPCB 博客必须包含内置快速报价组件：

@@ -79,8 +79,26 @@ Before a template consumes an evidence pack, confirm all of the following:
 3. Quick-answer, FAQ, and table content contain no blocked thresholds, capability numerics, supplier proof, or commercial numerics.
 4. Site-specific capability statements are separated from shared factual framing.
 5. Any unsupported but structurally important claim is downgraded, omitted, or marked `DATA_GAP` before generation starts.
+6. Any internal labels, reasoning notes, workflow names, or author-side deliberation are stripped before final article generation.
 
 If this checklist fails, the template should reduce scope instead of filling gaps.
+
+## 5.5 Leakage Ban
+
+Prompt consumption may use internal control language for author-side filtering only. It must never surface that language in the final article.
+
+Never expose:
+
+- chain-of-thought, reasoning traces, or author decision narration
+- internal statuses such as `verified`, `framing_only`, `blocked`, `must_refresh`, `DATA_GAP`
+- system words such as `llm_wiki`, `evidence pack`, `prompt`, `template`, `workflow`, `working prompt`, `internal`
+
+Always convert them into:
+
+- reader-facing engineering conclusions
+- scoped cautions
+- review actions
+- validation actions
 
 ## 6. Operating Rule
 

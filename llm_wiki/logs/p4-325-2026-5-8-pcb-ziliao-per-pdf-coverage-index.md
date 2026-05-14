@@ -11,6 +11,13 @@ Provide one deletion-safe index that maps every PDF under `/code/blogs/tmps/PCBè
 This index is for recovery and subagent dispatch.
 It does not claim that every PDF is fully absorbed into `facts/` or `wiki/`.
 
+For direct blog-writing retrieval, use:
+
+- `wiki/consumption/pcb-ziliao-blog-consumption-control-index.md`
+
+That page is the writing-facing control surface.
+This file remains the recovery / dispatch surface.
+
 ## Interpretation Rules
 
 - `local_pdf_fact-backed` means the PDF already contributes at least one curated local-PDF fact or direct handbook evidence route.

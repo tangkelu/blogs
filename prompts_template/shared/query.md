@@ -24,6 +24,7 @@
 1. 只输出最终 Markdown。
 2. 首字符必须是 `---`。
 3. 不输出分析过程、推理过程、提示词解释或写作说明。
+3.1 不输出任何内部思考痕迹，例如“我如何得出结论”“为什么这样组织内容”“按模板/提示词/工作流执行”。
 4. 不写 AI 口吻，不写“本文将”“接下来我们”之类空泛导语。
 5. 语言要像工程团队或制造团队写给工程师、采购、项目经理看的技术文档。
 6. 先回答问题，再解释背景，再展开细节。
@@ -61,6 +62,7 @@
 
 1. 先拆解博客或关键词的关键点：搜索意图、工程决策、必须解释的概念、需要的表格 / 检查表 / 选择框架、站点承接动作、不可写 claim。
 2. 先检查 `llm_wiki` 是否已有足够 source / fact / wiki / gate 支撑顶尖稿；默认优先消费本地知识库，不先直接查外部来源。
+2.1 执行本地检查时，默认先用 `rg` 在 `llm_wiki/sources/registry/`、`llm_wiki/facts/`、`llm_wiki/wiki/`、相关 `llm_wiki/logs/` 中搜索主关键词、同义词、标准号、材料名、工艺名和失败模式词；只有没有 `rg` 时才回退到 `grep`。
 3. 如果 `llm_wiki` 缺少关键事实，才允许补外部来源；补完后必须先回写 `llm_wiki`，再继续正文。
 4. 如果状态是 `safe_but_generic`、`needs_data` 或 `hold`，不能直接写正文；必须先补内部证据库或缩小文章承诺。
 4.1 如果现有证据只能写出一篇“安全但薄”的 Query 文章，也必须停下，不能先输出保守版本充数；此时应把状态视为 `safe_but_generic` 或 `needs_data`。
@@ -70,6 +72,7 @@
    - 本次正文直接消费的 `wiki` 页面
    - 仍需去官方来源补的缺口
    - 补完后要回写到 `llm_wiki` 的目标文件类型
+   - 支撑这些消费项的本地 `rg` 命中路径或等价检索结果
    如果没有这份清单，或清单只有泛化 source 名称而没有事实消费路径，应停止生成。
 5.2 如果本地 `llm_wiki` 已经提供了可用的检查项、边界、失效模式、参数语境或验证动作，正文必须优先消费这些本地材料；外部来源只能补缺口，不能替代本地消费。
 5.3 正文的每个核心 H2 最好都能对应至少一条本地消费路径；如果某个 H2 只能依赖外部来源而本地完全没有命中，应先回到 `llm_wiki` 补源或缩小该 H2 承诺。
@@ -130,6 +133,7 @@ Evidence pack 里的 `Disposition`、`Prompt action`、`Current-blog section bri
 - H2 / H3 不得暴露“模板、审稿、策略、证据包、生成规则”这类内部流程
 - 作者与审核信息不得出现内部证据库名称、内部文件路径、内部数据层、内部审核 workflow 或任何仓库/提示词系统名称；应改成“工程内容审核团队”“制造工程团队”“材料与工艺审核团队”等对外可理解实体
 - 正文、脚注、FAQ、表格、作者信息、review 信息、引用说明中，都不得出现 `llm_wiki`、`evidence pack`、`source layer`、`local evidence layer`、`working prompt`、`prompt`、`workflow`、`internal`、`repo`、`knowledge base` 等内部执行术语
+- 正文不得出现任何内部思考过程措辞，例如 `analysis`、`reasoning`、`chain-of-thought`、`my logic`、`I chose this structure because`
 - 最终成稿不得使用 Markdown 脚注语法，例如 `[^1]`、`[^validation]`；来源归因只能写成正文内联来源句柄或括号式说明
 
 在开始写正文前，默认再做一次快速自检：
@@ -145,6 +149,7 @@ Evidence pack 里的 `Disposition`、`Prompt action`、`Current-blog section bri
 - 是否把 evidence pack 的内部控制语句误转成了正文栏目、表格列名或小标题
 - 作者与审核信息是否完全移除了内部证据库名称、内部路径、内部 workflow 和提示词系统名称
 - 正文与脚注是否完全移除了 `llm_wiki`、`evidence pack`、`source layer`、`local evidence layer`、`working prompt`、`prompt`、`workflow`、`internal`、`repo`、`knowledge base` 等内部执行术语
+- 正文是否完全移除了“我如何思考 / 我如何判断 / 为什么这样写”的元叙述
 - 正文是否完全移除了 Markdown 脚注语法，例如 `[^1]`、`[^validation]`
 
 ## 文章必须包含的结构
@@ -273,16 +278,19 @@ tags: {{tags}}
 
 ### 5.5 典型工程场景 / Failure Pattern
 
-当主题属于以下任一类型时，默认建议加入 `1` 段高信息密度的典型工程场景，除非已有同等密度的故障链路或评审案例：
+当主题属于以下任一类型时，默认必须加入 `1` 段高信息密度的典型工程场景，除非本节已经有同等密度的故障链路或评审案例：
 
 - `SI`
 - `DFM`
+- `assembly`
 - `validation`
 - `stackup`
 - `materials`
 - `cost`
 - `lead time`
 - `reliability`
+- `thermal`
+- `high voltage / isolation`
 - `connector / launch`
 
 要求：
@@ -292,7 +300,9 @@ tags: {{tags}}
 - 必须写清：
   - 缺了什么输入、约束或边界
   - 触发了哪个 EQ、review pause、返工动作或验证 burden
+  - 失控的物理机制、装配机制、测试盲区或数据包断点是什么
   - 为什么它会影响成本、进度、风险或 release
+- 最后一两句必须把 failure pattern 回扣到“为什么不能只扔 Gerber / 只看走线 / 只看名义参数”
 - 如果当前 evidence pack 不支持该主题的 numerics，就用定性的 failure chain 来写厚，不得强行补数字
 
 ### 6. 下一步 / CTA
@@ -308,6 +318,11 @@ tags: {{tags}}
 - 不要把 CTA 写成只剩产品线链接的购物目录
 - 可以在主 CTA 后补一行“如果其中某一部分仍未定义，可先看以下页面”，再放 `2-4` 个相关内链
 - CTA 语气应像工程支持或制造协作，不要写成夸张销售文案
+- CTA 默认按这个顺序组织：
+  - 先点明读者当前最可能的工程卡点
+  - 再点明应发送的完整数据包
+  - 再说明会返回什么审查结果，例如 DFM、stackup review、test-access review、assembly-route review
+  - 只有 overlay 已公开时，才写 `within 24 hours`、`same-day` 之类响应表述
 
 ### 7. 正文技术图的嵌入方式
 

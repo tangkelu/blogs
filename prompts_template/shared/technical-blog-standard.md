@@ -31,6 +31,7 @@ PCB / PCBA 技术博客默认不是普通资讯文，也不是空泛 SEO 文。
 - 直接回答
 - 至少一块早期结构化信息
 - 至少一张早期规则 / 参数 / 对比表
+- 对抽象工程主题至少 `1` 个高信息密度 failure pattern / EQ delay pattern
 - FAQ
 - CTA 或下一步承接
 - 自然内链
@@ -140,6 +141,43 @@ PCB / PCBA 技术博客默认不是普通资讯文，也不是空泛 SEO 文。
 - 不得编造客户名、项目名、节省金额、量产结果、良率数字或工厂奇迹
 - 如果写了具体数值、标准窗口或工厂能力，仍然必须满足证据边界，不能靠“案例口吻”绕过
 
+### Physical Failure Pattern 强制要求
+
+以下主题默认不能只停留在规则、trade-off 或 review posture，必须在正文相关 H2 内部补 `1` 段真实工程语境下的 failure pattern：
+
+- `SI`
+- `DFM`
+- `assembly`
+- `validation`
+- `stackup`
+- `materials`
+- `reliability`
+- `thermal`
+- `high voltage / isolation`
+- `connector / launch / press-fit`
+
+这段 failure pattern 不是装饰性案例，而是正文的证明链。它必须回答：
+
+- 板上到底同时存在什么结构、材料、封装、热负载或数据包缺口
+- 真正失控的物理机制、装配机制或 EQ 触发动作是什么
+- 最终会怎样坏掉、暂停、返工、误测或拖慢 release
+- 为什么这说明 release package、DFM gate、stackup intent、装配说明或 test intent 必须在前面冻结
+
+默认写法必须接近以下链路：
+
+- `setup`
+- `missing definition or uncontrolled geometry`
+- `physical mechanism or review trigger`
+- `manufacturing / test / field consequence`
+- `why this proves the package must define it early`
+
+禁止写成：
+
+- 空泛提醒，例如 “if not handled properly, problems may occur”
+- 只说“会影响性能”而不解释具体怎么失控
+- 只说“工厂需要注意”而不解释缺了什么输入
+- 用泛化营销口吻把 failure pattern 写成品牌背书
+
 ### 主题特异性要求
 
 技术博客不能只写“放到任何相邻主题都成立”的抽象句子。
@@ -176,6 +214,25 @@ PCB / PCBA 技术博客默认不是普通资讯文，也不是空泛 SEO 文。
   - 设计、制造、验证之间最容易被混淆的边界
   - 读者在做项目决策时真正会追加追问的问题
 - 如果一个 FAQ 只是在重复“本文不证明什么”，但没有进一步解释“那应该看什么、怎么确认、谁来确认”，应重写或删除
+
+### 内部思考过程与内部术语泄漏禁令
+
+最终成稿只能呈现对读者有用的工程内容，不得暴露作者在背后的思考过程、审稿动作或提示词执行痕迹。
+
+禁止出现：
+
+- 分析过程、推理过程、思考步骤、心路、判断过程说明
+- “我先分析”“我判断”“这里我选择”“基于上面的推理”“下面解释我的逻辑” 这类作者自述
+- “根据提示词”“按模板要求”“按本工作流”“根据 evidence pack / llm_wiki / gate / overlay” 这类内部执行语句
+- `llm_wiki`、`evidence pack`、`prompt`、`template`、`workflow`、`internal`、`repo`、`knowledge base`、`working prompt`、`reasoning`、`analysis`、`chain-of-thought` 等内部术语
+- 内部状态词，例如 `verified`、`framing_only`、`blocked`、`must_refresh`、`supplier_scoped_dated_only`、`DATA_GAP`
+- 任何把正文写成“作者如何得出结论”的元叙述
+
+必须改写成：
+
+- 直接面向读者的工程结论
+- 可执行的检查项、边界、验证动作或风险解释
+- 对外可理解的角色称谓，例如“工程评审团队”“制造工程团队”“材料与工艺审核团队”
 
 ## 三、写作优先级
 
@@ -252,6 +309,11 @@ PCB / PCBA 技术博客默认不是普通资讯文，也不是空泛 SEO 文。
 - 如果没有站点级公开信息，不要编造邮箱、响应时效、免费承诺、认证背书或工程服务范围
 - CTA 里的链接仍然应该保留，但应作为“如果某一块仍未定义，可先看这些页面”的辅助动作，而不是整段 CTA 的主体
 - CTA 必须听起来像工程协作下一步，不像硬切换到销售页
+- 对 HILPCB / APTPCB 这类带 quote intake 的站点，CTA 默认应具备 `4` 个要素：
+  - 读者现在卡住的工程风险或 release burden
+  - 应提交的数据包或冻结输入
+  - 谁会返回什么类型的工程审查反馈
+  - 站点 overlay 已公开时才可复用的响应时效或 SLA
 
 ## 七、内链原则
 

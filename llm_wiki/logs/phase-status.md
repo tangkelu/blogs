@@ -2,9 +2,21 @@
 
 Historical execution record only. For current execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md).
 
-Last updated: 2026-05-12
+Last updated: 2026-05-13
 
 ## Overall
+
+- `2026-05-13 HilPCB Cost lane Batch A authority pack landed`: `llm_wiki` now has one HIL-side `/en/quote` source registry record plus one dedicated `pcb-prototype-readiness-checklist` consumption pack. This closes the local route-authority gap for conservative Batch A draft preparation inside `llm_wiki`, while leaving frontend lane activation and public-status changes to the external control docs.
+
+- `2026-05-13 HilPCB Lane M environmental-monitoring evidence gate started`: a new consumption pack now constrains the remaining `*-environmental-monitoring` demand into two narrow board-review query lanes only. Water-treatment / wastewater / water-quality monitoring-control can reuse the existing water-treatment and industrial-control boundaries; remote storm-observation can reuse the hurricane-monitor and sensor/navigation boundaries. `wind-speed`, `leaf-wetness`, `plant-health`, `garbage-truck`, `waste-collection`, and `incinerator-control` remain `llm_wiki_gap` until official-source recovery is completed.
+
+- `2026-05-13 HilPCB LED lane blog repair gate started`: generation-first work for the HilPCB LED replacement lane has been paused. Two writing-facing consumption packs now constrain the repair of `led-mcpcb-thermal-assembly-guide` and `led-driver-lighting-control-pcba-review` to scoped board-level claims, named local fact/wiki consumption, public references, and explicit data gaps. The broader non-indexed-blog rebuild objective remains active; this is a repair gate, not completion.
+
+- `2026-05-13 HilPCB 2026-05 replacement template gate cleared`: after the Lane L repair, the current 2026-05 English replacement blog set was repaired for missing TOC and public-copy internal-term hits. The template sweep now reports `0` missing-TOC or banned-term failures. This does not replace per-lane evidence-depth review; it only clears the current structural / public-copy template gate.
+
+- `2026-05-12 PCB资料 blog-consumption objective completion audit landed`: one more controller-owned pass checked the actual post-`P4-562` state against the user's direct-writing objective rather than only against corpus-authority completion. `P4-563` now confirms that all `63` PDFs are covered by one master control index and that every PDF has writing-facing fields for theme, parameter route, formula handling, asset route, process / inspection route, scenario route, and block status, with real landing points across `facts/`, `wiki/`, `pdf_evidence/`, and `consumption/`. This means the direct blog-consumption objective is complete, while the broader corpus still remains correctly described as `program_level_strong_complete` plus `current_public_authority_layer_exhausted_with_residual_authority_gaps`
+
+- `2026-05-12 PCB资料 blog-consumption control surface landed`: one more controller-owned pass filled the remaining structure gap between `dispatch/recovery` and `direct writing consumption`. The repo now has `wiki/consumption/pcb-ziliao-blog-consumption-control-index.md` as a single blog-writing entry point that routes all `63` PDFs by topic family, parameter / formula route, asset route, process / inspection route, scenario route, and blocked class. `P4-325` remains the per-PDF dispatch surface, while the new page becomes the writing-facing control surface. This pass does not change the authority ceiling; the safe corpus verdict remains `program_level_strong_complete` plus `current_public_authority_layer_exhausted_with_residual_authority_gaps`
 
 - `2026-05-12 PCB资料 active goal completion audit landed after P4-560`: controller-owned audit now maps the user goal to concrete repo evidence: all `63` PDFs are resumable from `P4-309` and `P4-325`, `tmps` material remains claim inventory, reusable source/fact/wiki layers exist where authority supports them, unsupported claims are blocked or held, multiple bounded subagent lanes were integrated by the controller, trackers are current, and the last live package-side `1.50 mm` lane has a post-JEITA bounded no-reopen audit in `P4-560`. The active goal is complete at `program_level_strong_complete` plus `current_public_authority_layer_exhausted_with_residual_authority_gaps`; this remains explicitly different from `full_corpus_closed_without_open_residual_authority_gaps`
 

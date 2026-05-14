@@ -26,6 +26,7 @@
 1. 先读 `shared/technical-blog-standard.md`
 2. 再读 `shared/blog-rewrite-data-gap-contract.md`，先分析博客 / 主题关键点，判断是否需要补内部证据库
 3. 先到 `../llm_wiki/` 检查现有 `sources/registry/`、`facts/`、`wiki/` 是否已覆盖当前主题；默认先消费本地知识库，不先直接查外部网络
+3.1 本地检索默认使用 `rg`（ripgrep），先扫主题主词、同义词、标准号、材料名、工艺名、失败模式词，再收敛到要消费的 `fact_id`、`wiki` 页面和 gate；只有当前环境没有 `rg` 时才回退到 `grep`
 4. 如果本地知识库只能支撑“安全但薄”的文章，而不能支撑顶尖稿所需的工程深度、检查表、决策矩阵、验证动作和 FAQ 含金量，也视为缺少关键事实
 5. 只有当 `llm_wiki` 缺少支撑当前标题、description、H2、表格、FAQ 所需的关键事实时，才允许补外部来源；补完后必须先写回 `llm_wiki`，再继续正文
 6. 再读 `shared/template-selection-and-pruning.md`，判断使用 `query` 还是 `pillar`
@@ -33,14 +34,17 @@
 8. 选择目标站点 overlay
 9. 按站点内链策略分配产品页、服务页、工具页、次级博客页
 10. 如需数字型参数，先检查 `shared/fact-seed-repository-standard.md`
-11. 生成结尾 CTA 时，优先使用“问题场景 + 提交资料 + 工程反馈”的服务引导结构，不再默认用产品链接清单式结尾
-12. 最终执行 `shared/query.md` 或 `shared/pillar.md`
+11. 对 `SI / DFM / assembly / validation / stackup / materials / reliability / thermal / HV isolation / connector-launch` 这类主题，先在 evidence pack 里冻结至少 `1` 条 failure pattern / EQ delay pattern，再写正文
+12. 生成结尾 CTA 时，优先使用“问题场景 + 提交资料 + 工程反馈”的服务引导结构，不再默认用产品链接清单式结尾
+13. 最终执行 `shared/query.md` 或 `shared/pillar.md`
+14. 成稿前必须做一次“内部泄漏检查”：不得出现内部术语、内部状态词、内部工作流语言或作者思考过程
 
 ## 4 步硬流程
 
 任何博客重写或新写，在进入正文前都必须先完成下面 4 步：
 
 1. 先查本地 `../llm_wiki/`，优先消费已有 `sources/registry/`、`facts/`、`wiki/`、gate 和 readiness notes。
+1.1 执行本地检索时，默认先用 `rg` 在 `sources/registry/`、`facts/`、`wiki/`、相关 `logs/` 中按主题词和近义词查找；`grep` 仅作 `rg` 不可用时的兼容回退。
 2. 如果本地知识库不足以支撑标题、description、H2、表格、FAQ 和工程密度，再补官方公开来源；不要先跳到外部搜索。
 3. 外部补到的来源、事实、主题页或 gate，必须先回写 `../llm_wiki/`；不允许“查完就直接写博客”。
 4. 只有在 `llm_wiki` 已足够支撑成稿，且最小消费清单已经明确后，才允许开始正文生成。
@@ -108,6 +112,8 @@ APTPCB 的内链承接要优先落向：
 - 固定 evidence-first 的技术博客写法
 - 固定参数事实库的使用边界与版本口径
 - 固定 HILPCB 与 APTPCB 的站点承接和内链方法
+- 固定 failure pattern 与工程协作式 CTA 必须先在 evidence pack 中成型
+- 固定“最终成稿不得暴露内部思考过程和内部术语”的红线
 - 固定 AI SEO / AI 可引用性写法，包括定义型摘要、内联来源归因、公开参考资料、FAQ query phrasing、作者与审核权威信号
 
 ## 与 LLM Wiki 的边界

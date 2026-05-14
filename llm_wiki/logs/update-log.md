@@ -2,6 +2,76 @@
 
 Historical record only. For execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md) first.
 
+## 2026-05-13 (P4-566 HilPCB Cost Lane Batch A Authority Pack)
+
+- **This pass closes the HIL quote-route documentation gap for Batch A inside `llm_wiki` without changing frontend control docs**: the repo now has one HIL-side source registry record for `/en/quote` plus one dedicated writing-facing consumption pack for `pcb-prototype-readiness-checklist`.
+  - **New source registry**
+    - `sources/registry/internal/frontendhil-quote-page-en.md`
+  - **New consumption pack**
+    - `wiki/consumption/pcb-prototype-readiness-checklist-evidence-pack.md`
+  - **What this pass allows**
+    - Batch A can now consume one local HIL quote-intake authority layer for canonical route framing, field inventory, file-upload intake, and source-attribution behavior instead of relying only on APT-side quote records.
+    - Batch A now has one dedicated pack that pulls together prototype routing, quote-preparation posture, fabrication-package completeness, BOM identity governance, and HIL support-route linking.
+    - The route-level gap is now narrowed to `docs-ready` inside `llm_wiki` for conservative draft preparation.
+  - **What remains outside this pass**
+    - Frontend control docs still own lane activation and any external status change for `Cost / Quote / Prototype / Lead Time`.
+    - Price, lead-time, MOQ, yield, supplier ranking, and production-readiness-guarantee claims remain blocked.
+
+## 2026-05-13 (P4-565 HilPCB Environmental Monitoring Lane Evidence Gate)
+
+- **This pass starts HilPCB Lane M as an evidence gate, not a generation pass**: the remaining `*-environmental-monitoring` non-indexed slugs were split into source-backed board-review candidates versus `llm_wiki_gap` items before any public blog drafting.
+  - **New consumption pack**:
+    - `wiki/consumption/environmental-monitoring-sensor-control-pcb-evidence-pack.md`
+  - **What this pass allows**
+    - A narrow water-treatment / wastewater / water-quality monitoring-control board-review query page can consume the existing water-treatment, industrial-control, conformal-coating, environmental-test, and DFM/DFT/DFA boundaries.
+    - A narrow remote storm-observation board-review query page can consume the existing hurricane-monitor, NOAA observation, sensor/navigation/imaging, protection, and staged-validation boundaries.
+  - **What remains gated**
+    - `wind-speed-sensor-environmental-monitoring`, `leaf-wetness-environmental-monitoring`, `plant-health-environmental-monitoring`, `garbage-truck-environmental-monitoring`, `waste-collection-environmental-monitoring`, and `incinerator-control-environmental-monitoring` remain `llm_wiki_gap` until official sources are recovered and written back.
+    - Direct salinity / ORP sensor performance claims, wind-speed measurement claims, agriculture diagnosis, waste-fleet outcomes, incinerator / emissions compliance, waterproof / corrosion-proof survival, environmental qualification, cost, lead-time, yield, uptime, and field-life claims remain blocked.
+
+## 2026-05-13 (P4-564 HilPCB LED Lane Blog Repair Gate)
+
+- **This pass stops generation-first behavior for the HilPCB LED lane and adds writing-facing consumption gates before public blog repair**: the two Lane L replacement articles now have scoped consumption packs under `wiki/consumption/` that route the article promises through existing LED optical / lifetime / safety boundaries, thermal-platform selection, MCPCB reflow source coverage, MCPCB depanelization, smart-home protocol identity, wireless product-level boundaries, and PCBA DFM/DFT/DFA review gates.
+  - **New consumption packs**:
+    - `wiki/consumption/led-mcpcb-thermal-assembly-evidence-pack.md`
+    - `wiki/consumption/led-driver-lighting-control-pcba-evidence-pack.md`
+  - **What this pass fixes**
+    - The LED lane can no longer rely on a loose `go_now_conservative` status alone.
+    - Public rewrite work must consume named local fact/wiki paths before publication.
+    - Explosion-proof, transportation lighting, aviation lighting, optical-performance, certification, cost, lead-time, yield, and field-reliability claims remain gated unless official or dated evidence is added first.
+
+- **Follow-up repair sweep completed for the current 2026-05 HilPCB replacement batch**: the public-copy template gate was rerun across `frontendHIL/public/static/blogs/2026/05/en/*.md`. The remaining missing-TOC pages were repaired, and the four public-copy terms that matched the internal-term gate were rewritten into public engineering language. The rerun now reports `0` missing-TOC or banned-term failures for the 2026-05 replacement set.
+
+## 2026-05-12 (P4-563 PCB资料 Blog Consumption Objective Completion Audit)
+
+- **这轮把新总控索引真正和用户目标对齐到了“已完成”**: `P4-561` 的 completion audit 发生在 `P4-562` 之前，因此它证明的是 corpus 在 authority layer 上已经达到 `program_level_strong_complete`，但还没有直接审计“博客写作可消费总控索引”这个最后结构层。`P4-563` 现在把用户要求逐条映射到 repo 证据：`63` 个 PDF 逐个可检索、每个 PDF 都有 theme / parameter route / formula handling / asset route / process-inspection route / scenario route / block status、`facts/wiki/pdf_evidence/consumption` 四层都有真实落点、`tmps` 不被当 authority、unsupported numerics 明确保持 `blocked` 或 `needs_source`、tracker 已同步。结论是：这个 direct blog-consumption objective 已按 repo 标准完成
+  - **新增 Completion Audit** (1 file):
+    - `logs/p4-563-2026-5-12-pcb-ziliao-blog-consumption-objective-completion-audit.md`
+  - **更新 Tracker Surface** (3 files):
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不必再用 `P4-561` 去推断 `P4-562` 之后的 direct-writing completion
+    - future AI 现在有一份显式 completion audit，证明用户要求的消费层字段已经真实落到 repo
+    - 当前 objective 可以安全视为完成，同时仍不应误写成 full authority-gap closure
+
+## 2026-05-12 (P4-562 PCB资料 Blog Consumption Control Index)
+
+- **这轮没有新增 authority，而是把 `PCB资料` 从“可恢复索引”补齐到“博客写作可直接消费的控制面”**: repo 之前已经有 `P4-309` 的 corpus resume、`P4-325` 的 per-PDF dispatch、以及大量 `facts/wiki/pdf_evidence` 落库，但还缺少一个 writing-facing 单一入口，能直接回答后续 agent 在写博客时最关心的 `按主题去哪里找参数、图、工艺、质检点、场景和 blocked claims`。这轮新增了 `wiki/consumption/pcb-ziliao-blog-consumption-control-index.md`，把 package、EMC、inspection、DFM、routing、fabrication features、panelization、assembly、BOM/FPC、data exchange 全部收口成一个检索控制面，同时明确它和 `P4-325` 的职责边界：`P4-325` 继续做 recovery / dispatch，新页面负责 direct blog consumption
+  - **新增 Controller Surface / Log** (2 files):
+    - `wiki/consumption/pcb-ziliao-blog-consumption-control-index.md`
+    - `logs/p4-562-2026-5-12-pcb-ziliao-blog-consumption-control-index.md`
+  - **更新 Resume / Tracker Surface** (4 files):
+    - `logs/p4-325-2026-5-8-pcb-ziliao-per-pdf-coverage-index.md`
+    - `logs/backlog.md`
+    - `logs/phase-status.md`
+    - `logs/update-log.md`
+  - **What this pass now fixes**
+    - future AI 不必再把 `P4-325` 当成写作消费层终态
+    - future AI 现在可以从一个页面直接按 topic family / parameter route / asset route / process route / scenario route / blocked class 检索 `PCB资料`
+    - 这轮没有抬高 authority ceiling；当前全局 verdict 仍然是 `program_level_strong_complete` + `current_public_authority_layer_exhausted_with_residual_authority_gaps`
+
 ## 2026-05-12 (P4-561 PCB资料 Goal Completion Audit After P4-560)
 
 - **这轮把 active `/goal` 做了最终 completion audit，而不是把 residual gaps 擦掉**: 审计把用户目标拆成 `63` 个 PDF 可恢复索引、`tmps` 仅作为 claim inventory、source/fact/wiki 可得即落库、unsupported claim 显式阻断、subagent bounded lanes、tracker 更新、最后 `1.50 mm` live lane 的 current-public authority 层耗尽证明、以及 verification 命令。结论是：`PCB资料` 已达到本 repo 的完成阈值 `program_level_strong_complete` + `current_public_authority_layer_exhausted_with_residual_authority_gaps`；不要写成 `full_corpus_closed_without_open_residual_authority_gaps`

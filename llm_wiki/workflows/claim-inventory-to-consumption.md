@@ -61,6 +61,8 @@ This workflow ensures:
    - Material claims (e.g., "uses MEGTRON 6")
    - Process claims (e.g., "48-hour turnaround")
    - Certification claims (e.g., "IPC Class 3 certified")
+   - Failure-pattern candidates (e.g., "crossing plane split breaks return path and collapses eye diagram")
+   - CTA-input candidates (e.g., "reader should send stackup draft, BOM, and drill chart for review")
 
 2. **Classify each claim** using Claim Class Matrix:
 
@@ -107,6 +109,8 @@ claim_inventory:
 - List of A-class claims needing source recovery
 - List of blocked claims (B-G) for exclusion
 - List of claims requiring refresh
+- At least one candidate failure pattern or EQ-delay pattern for evidence-pack shaping when the topic is abstract, review-heavy, or process-coupled
+- CTA-input notes for what package the eventual article should ask the reader to submit
 
 ---
 
@@ -352,6 +356,8 @@ excluded_classes:
 ## Topic Summary
 ## Usable Technical Facts
 ## Claim Extraction & Disposition
+## Failure Pattern Inventory
+## Engineering CTA Inputs
 ## Handoff to Template
 ```
 
@@ -364,11 +370,15 @@ excluded_classes:
 | No B-G numerics | Blocked claims excluded |
 | Must-refresh flagged | Dynamic claims identified |
 | Wiki framing only | Wiki pages as secondary support |
+| Failure pattern present | Abstract engineering topics surface at least one publishable physical / EQ / DFT failure chain |
+| CTA inputs frozen | Pack states what files to request, what team reviews them, and which SLA wording is actually public |
 
 ### Output
 - `wiki/consumption/{topic}-evidence-pack.md`
 - Ready for prompt template consumption
 - All claims traceable to sources
+- Pack includes at least one reusable failure pattern when the article would otherwise drift generic
+- Pack includes CTA-ready inputs so prompt templates do not fall back to product-link lists
 
 ---
 
@@ -382,7 +392,7 @@ excluded_classes:
 
 1. **Load evidence pack** into prompt context
 2. **Execute template** with evidence constraints
-3. **Generate content** using only evidenced claims
+3. **Generate content** using only evidenced claims, the permitted failure-pattern inventory, and the CTA-input block
 4. **Log execution** in `logs/update-log.md`
 
 ### Output

@@ -67,6 +67,7 @@
 在进入正文前，统一按以下顺序执行：
 
 1. 先查 `llm_wiki`。
+1.1 默认用 `rg` 做本地关键词检索，先扫 `sources/registry/`、`facts/`、`wiki/` 和相关 gate/readiness notes；只有没有 `rg` 时才回退到 `grep`。
 2. 不足则补官方公开来源。
 3. 补完后回写 `llm_wiki`。
 4. 再写正文。

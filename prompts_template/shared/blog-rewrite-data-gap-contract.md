@@ -56,11 +56,12 @@
 硬规则：
 
 - 默认先用 `llm_wiki`，不先直接查外部网络或临时搜索结果。
+- 默认先用 `rg` 对 `llm_wiki/sources/registry/`、`llm_wiki/facts/`、`llm_wiki/wiki/`、相关 `llm_wiki/logs/` 做本地关键词检索；主题主词、同义词、标准号、材料名、工艺名、失败模式词都应纳入检索式。只有当前环境没有 `rg` 时才回退到 `grep`。
 - 如果本地知识库已经有足够支撑，必须直接消费本地卡片和主题页，不要跳过。
 - 只有当 `llm_wiki` 明确缺少当前文章关键事实时，才进入外部来源补充。
 - “当前文章关键事实”不只指有没有基础定义，也包括能否支撑顶尖稿所需的厚度：工程审查表、决策矩阵、参数边界、验证步骤、检查项、常见误判与 non-claims。
 - 如果 `llm_wiki` 只能支撑一篇保守薄稿，而不能支撑顶尖稿，应视为“明确缺少关键事实”，必须进入外部来源补充。
-- 在真正写正文前，必须先明确列出本次要消费的 `fact_id`、`wiki` 页面，以及仍然缺失、需要去官方补源的点；如果这份消费清单为空，或只有泛泛的 source record 名称，没有对应 fact/wiki 消费路径，视为流程未执行到位。
+- 在真正写正文前，必须先明确列出本次要消费的 `fact_id`、`wiki` 页面、对应本地 `rg` 命中路径或等价检索结果，以及仍然缺失、需要去官方补源的点；如果这份消费清单为空，或只有泛泛的 source record 名称，没有对应 fact/wiki 消费路径，视为流程未执行到位。
 - 如果执行中只是“看过一些本地卡片”，但正文没有明显消费这些卡片的检查项、边界、失效模式或工程动作，也视为没有真正使用 `llm_wiki`。
 
 ### 3. 缺数据时先补数据
@@ -120,6 +121,7 @@
 - 有读者可执行的检查表或资料清单
 - 有安全的商业承接
 - 不暴露内部数据层、prompt、workflow、仓库路径或内部证据库名称
+- 不暴露内部思考过程、作者推理痕迹或“为什么这样写”的元叙述
 - 即使删除了高风险数值，也仍然有足够“工程血肉”，能让读者理解为什么这个主题会卡住设计、报价、试产或放行
 
 ### 5. 最后做发布前验证
@@ -127,6 +129,7 @@
 公开博客输出前必须检查：
 
 - 内部泄漏：`llm_wiki`、`evidence pack`、`source layer`、`local evidence layer`、`working prompt`、`prompt`、`workflow`、`internal`、`repo`、`knowledge base`、内部路径、template、`DATA_GAP`、`framing_only`、`blocked` 等不得出现
+- 思考过程泄漏：`analysis`、`reasoning`、`chain-of-thought`、`my logic`、`I chose this because`、`based on the prompt`、`according to the template` 等作者侧元叙述不得出现
 - 引用格式：最终博客不得使用 Markdown 脚注语法，例如 `[^1]`、`[^validation]`；如需归因，只能使用正文内联来源句柄或括号式说明
 - 高风险 claim：覆盖率、良率、成本、交期、认证、qualification、IPC 阈值、标准验收值、SI pass/fail、BER、eye-mask、jitter、insertion-loss 等不得无证据出现
 - 站点组件：HILPCB 博客必须包含 `<!-- COMPONENT: BlogQuickQuoteInline -->`
