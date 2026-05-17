@@ -286,9 +286,12 @@ Pillar 页面默认启用目录。
 - 装配
 - 高压 / 隔离
 
+写这段之前，默认先按 `llm_wiki/wiki/processes/blog-failure-pattern-mechanism-family-map.md` 选主 `failure mechanism family`。专题页虽然比 Query 更宽，但也不能把所有风险都揉成一个泛化案例。
+
 要求：
 
 - 必须绑定到某个具体工程冲突，而不是泛化“设计复杂所以有风险”
+- 必须说明当前专题的主机制族是什么，例如 `mechanical strain`、`return-path collapse`、`heat path`、`process window`、`surface condition` 或 `data-package incompleteness`
 - 必须解释清楚结构、材料、热、测试接入或 release package 到底哪里失控
 - 必须给出明确后果，例如眼图闭合、板翘、空洞、拒锡、压接裂孔、EQ hold、测试盲区或返工暂停
 - 结尾必须把场景回扣到专题页主张：为什么这件事不是局部技巧，而是整个专题的 review gate

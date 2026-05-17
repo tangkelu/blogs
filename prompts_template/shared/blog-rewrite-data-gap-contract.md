@@ -57,12 +57,17 @@
 
 - 默认先用 `llm_wiki`，不先直接查外部网络或临时搜索结果。
 - 默认先用 `rg` 对 `llm_wiki/sources/registry/`、`llm_wiki/facts/`、`llm_wiki/wiki/`、相关 `llm_wiki/logs/` 做本地关键词检索；主题主词、同义词、标准号、材料名、工艺名、失败模式词都应纳入检索式。只有当前环境没有 `rg` 时才回退到 `grep`。
+- 默认先把主题归到一个主 `failure mechanism family`，并优先打开 `llm_wiki/wiki/processes/blog-failure-pattern-mechanism-family-map.md`；如果没有完成这一步，就不应开始判断 `ready`。
+- 如果主题涉及 `test / ICT / fixture / probe / DFT / assembly stress`，失败模式词默认还要包含 `probe load`、`board flex`、`mechanical strain`、`strain relief`、`micro-crack`、`latent damage`、`open solder joint`、`MLCC`、`hidden joint` 等物理机制词；如果这些词本地无命中，通常不能判成 `ready`。
 - 如果本地知识库已经有足够支撑，必须直接消费本地卡片和主题页，不要跳过。
 - 只有当 `llm_wiki` 明确缺少当前文章关键事实时，才进入外部来源补充。
 - “当前文章关键事实”不只指有没有基础定义，也包括能否支撑顶尖稿所需的厚度：工程审查表、决策矩阵、参数边界、验证步骤、检查项、常见误判与 non-claims。
 - 如果 `llm_wiki` 只能支撑一篇保守薄稿，而不能支撑顶尖稿，应视为“明确缺少关键事实”，必须进入外部来源补充。
 - 在真正写正文前，必须先明确列出本次要消费的 `fact_id`、`wiki` 页面、对应本地 `rg` 命中路径或等价检索结果，以及仍然缺失、需要去官方补源的点；如果这份消费清单为空，或只有泛泛的 source record 名称，没有对应 fact/wiki 消费路径，视为流程未执行到位。
+- 这份消费清单默认还必须写出：当前主题的主 `failure mechanism family` 是什么，为什么是它，以及为它准备了哪些本地机制词命中。
 - 如果执行中只是“看过一些本地卡片”，但正文没有明显消费这些卡片的检查项、边界、失效模式或工程动作，也视为没有真正使用 `llm_wiki`。
+- 如果文章讨论的是 `test / ICT / fixture / probe / DFT`，但消费清单里只有 `method identity`、`stage boundary`、`release posture`，没有 `physical failure pattern` 或 `mechanical strain` 类消费路径，也应视为未执行到位。
+- 如果文章属于 `SI / stackup / thermal / assembly / coating / quote-package` 这类主题，但消费清单没有落到对应机制族，例如 `return path collapse`、`heat path`、`process window`、`surface condition`、`data-package incompleteness`，也应视为未执行到位。
 
 ### 3. 缺数据时先补数据
 

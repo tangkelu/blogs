@@ -34,7 +34,8 @@
 8. 选择目标站点 overlay
 9. 按站点内链策略分配产品页、服务页、工具页、次级博客页
 10. 如需数字型参数，先检查 `shared/fact-seed-repository-standard.md`
-11. 对 `SI / DFM / assembly / validation / stackup / materials / reliability / thermal / HV isolation / connector-launch` 这类主题，先在 evidence pack 里冻结至少 `1` 条 failure pattern / EQ delay pattern，再写正文
+11. 对 `SI / DFM / assembly / validation / stackup / materials / reliability / thermal / HV isolation / connector-launch / test / ICT / fixture / probe / DFT / quote-package` 这类主题，先在 evidence pack 里冻结至少 `1` 条 failure pattern / EQ delay pattern，再写正文
+11.1 冻结 failure pattern 前，先到 `../llm_wiki/wiki/processes/blog-failure-pattern-mechanism-family-map.md` 选主 `failure mechanism family`；不要把所有主题都写成同一种 generic failure pattern
 12. 生成结尾 CTA 时，优先使用“问题场景 + 提交资料 + 工程反馈”的服务引导结构，不再默认用产品链接清单式结尾
 13. 最终执行 `shared/query.md` 或 `shared/pillar.md`
 14. 成稿前必须做一次“内部泄漏检查”：不得出现内部术语、内部状态词、内部工作流语言或作者思考过程

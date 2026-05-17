@@ -180,18 +180,41 @@
 
 ## 8.5 Failure Pattern Inventory
 
-这一部分不是可选项。对 `SI / DFM / assembly / validation / stackup / materials / reliability / thermal / HV-isolation / connector-launch` 这类主题，必须先准备至少 `1` 条可安全写入正文的 failure pattern。
+这一部分不是可选项。对 `SI / DFM / assembly / validation / stackup / materials / reliability / thermal / HV-isolation / connector-launch / test / ICT / fixture / probe / DFT / quote-package` 这类主题，必须先准备至少 `1` 条可安全写入正文的 failure pattern。
 
-| Section target | Scenario setup | Missing input / uncontrolled point | Physical mechanism or EQ trigger | Consequence | Why it proves early definition matters | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  | framing_only / verified |
+在填表前，先选主 `failure mechanism family`。默认可选：
+
+- `mechanical load / strain`
+- `electrical field / return path collapse`
+- `thermal mismatch / heat path`
+- `process window interaction`
+- `chemical / surface condition`
+- `data-package incompleteness / governance failure`
+
+| Section target | Failure mechanism family | Scenario setup | Missing input / uncontrolled point | Physical mechanism or EQ trigger | Consequence | Why it proves early definition matters | Retrieval keywords | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  | framing_only / verified |
 
 要求：
 
 - 必须能落到具体 H2，不允许只写成“全篇存在风险”
+- 必须先选主机制族，不能只填一个事件表面现象
 - 优先写物理机制、装配冲突、测试盲区、资料包缺口或 release pause
 - 如果没有数字支撑，就写清 failure chain，不要补假数
 - 这张表的输出目标，是让正文能自然写出 `typical failure pattern`，而不是临时靠作者发挥
+- 如果主题属于 `FAI / NPI / BOM / release package / assembly drawing / placement data / quote package`，默认必须把 failure chain 写到 `machine amplification` 层，而不是停在 `EQ hold`：
+  - `small package ambiguity`
+  - `programming / feeder / polarity / rotation assumption`
+  - `automation repeats the same mistake`
+  - `downstream test catches the issue too late`
+  - `mass rework / scrap / release delay`
+- 对这类主题，`Scenario setup` 与 `Missing input / uncontrolled point` 默认优先覆盖：
+  - `mixed BOM`
+  - `unapproved substitute`
+  - `AVL ambiguity`
+  - `Pin 1 / polarity mismatch`
+  - `rotation-code mismatch`
+  - `coordinate / placement-data inconsistency`
 
 ## 8.6 Engineering CTA Inputs
 
@@ -211,6 +234,11 @@
 - 如果站点没有公开邮箱、quote 页面或 SLA，不要编造
 - CTA 输入必须跟主题强绑定，不能用站点通用说法替代
 - Evidence pack 交付时，这一块应足够具体到可以直接驱动 `Next steps`
+- 如果主题属于 `FAI / NPI / BOM / release package / assembly launch`，默认还要补齐以下字段内容后才算可写：
+  - `Reader pain / project blockage` 要明确到 mixed BOM、substitute risk、polarity / rotation mismatch、first-build derailment
+  - `Package to request` 要尽量具体到 `AVL`, `approved-substitute status`, `assembly drawing`, `Gerber`, `placement data`, `inspection / test ownership`
+  - `Review outputs` 要明确到 BOM ambiguity、substitute governance、polarity / rotation alignment、FAI halt points、downstream test ownership
+  - `SLA / response wording` 如果站点已公开对外承诺，应写成 engineering review 动作，而不是泛客服响应
 
 ## 9. AI-SEO Evidence Primitives
 

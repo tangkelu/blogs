@@ -63,6 +63,7 @@
 1. 先拆解博客或关键词的关键点：搜索意图、工程决策、必须解释的概念、需要的表格 / 检查表 / 选择框架、站点承接动作、不可写 claim。
 2. 先检查 `llm_wiki` 是否已有足够 source / fact / wiki / gate 支撑顶尖稿；默认优先消费本地知识库，不先直接查外部来源。
 2.1 执行本地检查时，默认先用 `rg` 在 `llm_wiki/sources/registry/`、`llm_wiki/facts/`、`llm_wiki/wiki/`、相关 `llm_wiki/logs/` 中搜索主关键词、同义词、标准号、材料名、工艺名和失败模式词；只有没有 `rg` 时才回退到 `grep`。
+2.2 对抽象工程主题，默认还要先把文章归到 `failure mechanism family`，并优先消费 `llm_wiki/wiki/processes/blog-failure-pattern-mechanism-family-map.md`。如果连机制族都说不清，就不要开始正文。
 3. 如果 `llm_wiki` 缺少关键事实，才允许补外部来源；补完后必须先回写 `llm_wiki`，再继续正文。
 4. 如果状态是 `safe_but_generic`、`needs_data` 或 `hold`，不能直接写正文；必须先补内部证据库或缩小文章承诺。
 4.1 如果现有证据只能写出一篇“安全但薄”的 Query 文章，也必须停下，不能先输出保守版本充数；此时应把状态视为 `safe_but_generic` 或 `needs_data`。
@@ -70,6 +71,7 @@
 5.1 在开始正文前，必须先形成一份最小消费清单：
    - 本次正文直接消费的 `fact_id`
    - 本次正文直接消费的 `wiki` 页面
+   - 本次正文对应的 `failure mechanism family`
    - 仍需去官方来源补的缺口
    - 补完后要回写到 `llm_wiki` 的目标文件类型
    - 支撑这些消费项的本地 `rg` 命中路径或等价检索结果
@@ -77,7 +79,13 @@
 5.2 如果本地 `llm_wiki` 已经提供了可用的检查项、边界、失效模式、参数语境或验证动作，正文必须优先消费这些本地材料；外部来源只能补缺口，不能替代本地消费。
 5.3 正文的每个核心 H2 最好都能对应至少一条本地消费路径；如果某个 H2 只能依赖外部来源而本地完全没有命中，应先回到 `llm_wiki` 补源或缩小该 H2 承诺。
 6. 重写时必须消费新增数据，不能补了数据但正文仍停留在泛泛解释。
-6.1 如果主题属于 `SI`、`DFM`、`validation`、`stackup`、`materials`、`cost`、`lead time`、`reliability`、`connector / launch` 之一，正文不得只剩抽象 review posture；至少要补足 `1` 段典型工程场景、常见失效模式、EQ 触发点或 release-review burden 说明。
+6.1 如果主题属于 `SI`、`DFM`、`validation`、`stackup`、`materials`、`cost`、`lead time`、`reliability`、`connector / launch`、`test / ICT / fixture / probe / DFT` 之一，正文不得只剩抽象 review posture；至少要补足 `1` 段典型工程场景、常见失效模式、EQ 触发点或 release-review burden 说明。
+6.1.0 这类主题在写正文前，必须先从本地 taxonomy 里选出主 `failure mechanism family`，并按该机制族去组织 failure pattern；不能只因为“有一个案例”就跳过机制归类。
+6.1.1 如果主题涉及 `ICT`、`test points`、`bed-of-nails`、`flying probe`、`fixture`、`probing`、`support tooling` 或其它会向板子施加载荷的测试路径，正文相关 H2 里必须优先消费本地 `llm_wiki` 中关于 `mechanical load / board flex / latent damage` 的事实卡；如果本地没有这类卡，状态不能判成 `ready`，必须先补官方来源并回写知识库。
+6.1.2 如果主题涉及 `stackup / SI / PI / impedance / RF / EMC / ESD`，正文 failure pattern 不得只写 `review burden`；默认至少要落到 `return path / coupling / field path / protection path` 其中一条真实失控链。
+6.1.3 如果主题涉及 `thermal / power / LED / heavy copper / MCPCB`，正文 failure pattern 默认至少要解释 `heat path / thermal accumulation / CTE mismatch` 中的一条。
+6.1.4 如果主题涉及 `assembly / stencil / reflow / via-in-pad / warpage / solderability`，正文 failure pattern 默认至少要解释 `process window 被压窄` 的具体方式，而不是只说“量产有风险”。
+6.1.5 如果主题涉及 `quote package / release docs / data exchange / Gerber / ODB++ / IPC-2581 / BOM completeness`，正文 failure pattern 默认可以不是物理损坏，但必须明确 `缺什么输入 -> 谁暂停 -> 为什么误做或拖期` 这条治理失效链。
 6.2 删除 unsupported numerics 之后，必须用工程动作、失败链路、trade-off、冻结点或供应商沟通重点补回信息密度；不能只把原文压缩成安全版提纲。
 6.3 生成每个主体 H2 前，先做一次“主题词替换测试”：如果把当前主题替换成相邻主题后，这一节大部分句子仍然成立，说明内容还不够特异，应继续下钻到机制、失效模式、材料层级、结构卡点或验证动作。
 6.4 FAQ 不得主要由防御性免责声明构成；如果问题是 `Does this article prove X?`，回答中必须继续解释真正该看什么、该如何确认、边界在哪里。
@@ -203,6 +211,26 @@ tags: {{tags}}
 
 ## 正文结构
 
+### 0. 批量结构轮换硬规则
+
+同一批 Query 文章不能连续复用同一套 section order，也不能连续复用相同 intro、CTA 或 failure-chain 句式。
+
+生成或重写同一批文章时，必须在以下正文结构中轮换；如果上一篇已使用某结构，下一篇必须换用另一种结构，除非关键词意图明显不匹配，并且要同步改变小标题措辞：
+
+| Structure ID | Section order | 适用主题 | 必须避免 |
+| --- | --- | --- | --- |
+| `QA-decision-review` | `Quick answer -> Decision table -> Failure mechanism -> Review checklist` | DFM、NPI、validation、release readiness、review 型主题 | 不要连续复用“first check / then review / finally freeze”句式 |
+| `QA-boundary-release` | `Quick answer -> What it is not -> Physical boundary -> Release implications` | 概念澄清、SI / PI / thermal / materials 边界、容易误解的工程术语 | 不要把每篇 intro 都写成“X is not just Y” |
+| `QA-mistake-freeze` | `Quick answer -> Common mistake -> Why it fails -> What to freeze` | failure、troubleshooting、test、assembly、制造风险主题 | 不要连续复用“missing input -> EQ -> delay”同一链路句式 |
+| `QA-selection-handoff` | `Quick answer -> Selection criteria -> Trade-off table -> Handoff` | 材料、工艺路线、供应商沟通、Gerber / ODB++ / BOM / test handoff 主题 | 不要把 handoff 结尾都写成“send the package through the quote page” |
+
+批量改写时必须执行以下反套壳规则：
+
+- `section order`：同一 lane 相邻两篇不得使用同一 `Structure ID`
+- `intro`：相邻两篇不得使用同一承接句式，例如连续使用 “If your ... is moving into prototype or pilot build”
+- `CTA`：相邻两篇不得使用同一 CTA mode opening、同一资料包排序或同一 quote / review 收口句
+- `failure-chain`：相邻两篇不得复用同一位置、长度和句式；可放入主体 H2、side note、caution block 或 release checklist，但全文只保留 `1` 条主 failure chain
+
 ### 1. 顶部答案块
 
 紧跟 H1 输出。
@@ -278,7 +306,7 @@ tags: {{tags}}
 
 ### 5.5 典型工程场景 / Failure Pattern
 
-当主题属于以下任一类型时，默认必须加入 `1` 段高信息密度的典型工程场景，除非本节已经有同等密度的故障链路或评审案例：
+当主题属于以下任一类型时，默认加入 `1` 条主 failure chain 或同等密度的典型工程场景，除非该主题本身是纯定义型 `knowledge` 页面且正文已经通过边界表、选择表和 FAQ 解释清楚风险：
 
 - `SI`
 - `DFM`
@@ -295,15 +323,16 @@ tags: {{tags}}
 
 要求：
 
-- 放在最相关的 H2 内部，紧跟规则表、判断表或结论段
+- 放在最相关的 H2、side note、caution block、release checklist 或 handoff section 中；不强制每篇放在同一位置
 - 只写通用工程场景，不编造客户名、项目名、节省金额、良率结果或 capability 奇迹
 - 必须写清：
   - 缺了什么输入、约束或边界
   - 触发了哪个 EQ、review pause、返工动作或验证 burden
   - 失控的物理机制、装配机制、测试盲区或数据包断点是什么
   - 为什么它会影响成本、进度、风险或 release
-- 最后一两句必须把 failure pattern 回扣到“为什么不能只扔 Gerber / 只看走线 / 只看名义参数”
+- 结论必须回扣到当前主题的冻结点、验证动作、review package 或 handoff package；不要每篇都使用“为什么不能只扔 Gerber / 只看走线 / 只看名义参数”同一句式
 - 如果当前 evidence pack 不支持该主题的 numerics，就用定性的 failure chain 来写厚，不得强行补数字
+- 全文只保留 `1` 条主 failure chain；其他风险只能做短提醒，避免段段都写成事故报告
 
 ### 6. 下一步 / CTA
 
@@ -311,18 +340,16 @@ tags: {{tags}}
 
 要求：
 
-- 先写“读者项目现在可能卡在哪个工程问题上”，再写站点承接
-- 优先写成“提交什么资料，可获得什么工程反馈”的协作式 CTA
-- 允许引导提交 `Gerber`、`stackup`、`BOM`、目标阻抗、测试要求、材料限制、应用约束、enclosure 条件等
-- 如果站点 overlay 已提供公开邮箱、quote 页面或 DFM 响应承诺，应优先复用
+- CTA 必须按 `page_intent_mode` 选择，不得所有文章默认使用 quote / 24h DFM 收口
+- `knowledge`：只给下一步阅读路径或概念延伸链接，不强行要求提交资料
+- `review`：写成 review package，允许引导提交 `Gerber`、`stackup`、`BOM`、目标阻抗、测试要求、材料限制、应用约束、enclosure 条件等，并说明会返回的 review 输出；不默认写 SLA
+- `handoff`：写成 handoff package，强调 Gerber / ODB++ / BOM / 坐标 / assembly drawing / test requirement / release note 的交接完整性和缺项后果
+- `commercial`：才使用 quote path、公开邮箱、SLA 或 quick-turn / cost / lead-time 承接
 - 不要把 CTA 写成只剩产品线链接的购物目录
 - 可以在主 CTA 后补一行“如果其中某一部分仍未定义，可先看以下页面”，再放 `2-4` 个相关内链
 - CTA 语气应像工程支持或制造协作，不要写成夸张销售文案
-- CTA 默认按这个顺序组织：
-  - 先点明读者当前最可能的工程卡点
-  - 再点明应发送的完整数据包
-  - 再说明会返回什么审查结果，例如 DFM、stackup review、test-access review、assembly-route review
-  - 只有 overlay 已公开时，才写 `within 24 hours`、`same-day` 之类响应表述
+- 同一批文章不得连续复用同一 CTA 顺序；在 “pain -> package -> output -> contact”、 “knowledge gap -> next reading -> decision point”、 “handoff gap -> missing input -> owner -> release action” 等结构间切换
+- 只有 `commercial` 模式且 overlay 已公开时，才写 `within 24 hours`、`same-day` 之类响应表述
 
 ### 7. 正文技术图的嵌入方式
 

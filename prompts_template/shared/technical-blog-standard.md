@@ -141,13 +141,31 @@ PCB / PCBA 技术博客默认不是普通资讯文，也不是空泛 SEO 文。
 - 不得编造客户名、项目名、节省金额、量产结果、良率数字或工厂奇迹
 - 如果写了具体数值、标准窗口或工厂能力，仍然必须满足证据边界，不能靠“案例口吻”绕过
 
-### Physical Failure Pattern 强制要求
+### Physical Failure Pattern 使用要求
 
-以下主题默认不能只停留在规则、trade-off 或 review posture，必须在正文相关 H2 内部补 `1` 段真实工程语境下的 failure pattern：
+### Failure Mechanism Family 路由表
+
+failure pattern 不是一个抽象占位符。不同主题族默认应该落到不同的真实失效机制族，而不是统一写成“如果处理不好会有风险”。
+
+在进入正文前，默认先判断当前主题最接近哪一类 `failure mechanism family`：
+
+| Topic family | Default mechanism family | Draft must explain | Default retrieval terms |
+| --- | --- | --- | --- |
+| `test / ICT / fixture / probe / DFT / depanel support / access tooling` | `mechanical load / strain` | 工装或探针把力施加在哪里，局部板弯或应变如何产生，为什么会变成潜伏失效或 release hold | `probe load`, `board flex`, `mechanical strain`, `support pin`, `strain relief`, `micro-crack`, `latent damage`, `open solder joint`, `MLCC`, `hidden joint` |
+| `stackup / SI / PI / impedance / DDR / RF / EMC / ESD` | `electrical field / return path collapse` | 返回路径、阻抗连续性、耦合关系或保护路径在哪里失控，最终表现成什么电气验证失败 | `return path`, `plane split`, `stitching via`, `crosstalk`, `overshoot`, `eye closure`, `jitter`, `ESD path`, `stub`, `field coupling` |
+| `thermal / MCPCB / power / LED / heavy copper / reflow heat` | `thermal mismatch / heat path` | 热路径、热堆积或材料膨胀不匹配在哪里出现，最终导致什么焊点、材料或寿命问题 | `thermal path`, `hot spot`, `CTE mismatch`, `heat spreading`, `voiding`, `solder fatigue`, `thermal cycling`, `delamination` |
+| `assembly / stencil / reflow / via-in-pad / coplanarity / warpage / solderability` | `process window interaction` | 设计为什么看似可做但会把装配窗口压窄，最终导致什么制程波动、返工或量产不稳定 | `process window`, `warpage`, `coplanarity`, `tombstone`, `voiding`, `bridging`, `insufficient wetting`, `paste release`, `rework` |
+| `coating / cleanliness / surface finish / residue / corrosion / contamination` | `chemical / surface condition` | 表面状态、残留物或界面化学在哪里失控，最终为什么变成漏电、腐蚀、附着或焊接问题 | `residue`, `ionic contamination`, `electrochemical migration`, `adhesion`, `wetting`, `oxidation`, `corrosion`, `surface condition` |
+| `quote package / Gerber / ODB++ / IPC-2581 / BOM / stackup note / fabrication drawing / release docs` | `data-package incompleteness / governance failure` | 缺了什么定义或资料包字段，谁会停下来，为什么会引发错误假设、EQ、返工或 release delay | `missing input`, `package completeness`, `EQ hold`, `ambiguity`, `release package`, `netlist`, `stackup note`, `fabrication drawing`, `coordinate data` |
+
+如果主题同时命中多类，只要求主文至少落稳 `1` 条主机制族；其他机制可以作为次要风险补充，但不能反过来把主机制写空。
+
+以下主题默认不能只停留在规则、trade-off 或 review posture，应在正文中补 `1` 条主 failure chain 或同等密度的典型工程场景：
 
 - `SI`
 - `DFM`
 - `assembly`
+- `test / ICT / fixture / probe / DFT`
 - `validation`
 - `stackup`
 - `materials`
@@ -156,20 +174,55 @@ PCB / PCBA 技术博客默认不是普通资讯文，也不是空泛 SEO 文。
 - `high voltage / isolation`
 - `connector / launch / press-fit`
 
-这段 failure pattern 不是装饰性案例，而是正文的证明链。它必须回答：
+这条 failure chain 不是装饰性案例，而是正文的证明链。它应回答：
 
 - 板上到底同时存在什么结构、材料、封装、热负载或数据包缺口
 - 真正失控的物理机制、装配机制或 EQ 触发动作是什么
 - 最终会怎样坏掉、暂停、返工、误测或拖慢 release
 - 为什么这说明 release package、DFM gate、stackup intent、装配说明或 test intent 必须在前面冻结
 
-默认写法必须接近以下链路：
+failure chain 的位置可按文章结构决定：可嵌入相关 H2、side note、caution block、review checklist 或 handoff section。不要把所有文章都写成同一位置、同一长度、同一句式；全文默认只保留 `1` 条主 failure chain，其他风险用短提醒即可。
+
+如果主题属于 `quote package / Gerber / ODB++ / IPC-2581 / BOM / stackup note / fabrication drawing / release docs / FAI / NPI launch` 这条 `data-package incompleteness / governance failure` 族，failure pattern 不能只写成 `资料不全 -> 需要 EQ`。
+
+优先补足一条“机器放大错误”的真实工厂链路，可贴近以下要素，但不要逐篇复制同一句式：
+
+- `mixed BOM / unapproved substitute / unclear AVL status`
+- `polarity / Pin 1 / package orientation / coordinate rotation mismatch`
+- `line program released and feeders loaded`
+- `FAI halt-and-verify missing or reduced to a weak signoff`
+- `machine repeats the same wrong assumption across the lot`
+- `downstream electrical test / power-on / debug catches the issue too late`
+- `mass manual rework / scrap / release delay follows`
+
+也就是说，这类主题的 failure pattern 默认要回答：
+
+- 资料包里到底缺了哪个字段、批准状态或坐标定义
+- 谁会按这个错误假设继续放料、编程、贴装或放行
+- 为什么错误不会只停在一块板，而会被自动化设备成批复制
+- 为什么这说明 FAI 的本质是 `halt, verify, and lock the baseline before scale`
+
+默认逻辑应覆盖以下链路，但可调整顺序和表达：
 
 - `setup`
 - `missing definition or uncontrolled geometry`
 - `physical mechanism or review trigger`
 - `manufacturing / test / field consequence`
-- `why this proves the package must define it early`
+- `why the package must define this boundary before release`
+
+如果主题属于 `test / ICT / fixture / probe / DFT`，failure pattern 不能只写成 `access 不够 -> review burden 增加`。优先补足一条实体物理链：
+
+- `probe / clamp / support tooling load`
+- `board flex / local strain / poor backside support`
+- `MLCC crack / open solder joint / hidden-joint stress / latent damage`
+- `initial screening may pass, but later open / short / intermittent or release hold appears`
+
+也就是说，这类主题的 failure pattern 默认要回答：
+
+- 夹具或探针到底把力施加在了哪里
+- 哪些脆弱器件或隐藏焊点区域会承受局部应力
+- 为什么这会变成潜伏失效，而不只是当场测不过
+- 为什么 test-point 规划因此也是机械安全间距与支撑设计问题
 
 禁止写成：
 
@@ -177,6 +230,51 @@ PCB / PCBA 技术博客默认不是普通资讯文，也不是空泛 SEO 文。
 - 只说“会影响性能”而不解释具体怎么失控
 - 只说“工厂需要注意”而不解释缺了什么输入
 - 用泛化营销口吻把 failure pattern 写成品牌背书
+
+### CTA / Next Steps 使用要求
+
+技术博客结尾的 `CTA / Next steps` 不能退化成“欢迎联系我们获取报价”。
+
+CTA 必须按 `page_intent_mode` 选择，不得把所有技术博客默认写成 quote、SLA 或 24h DFM 反馈：
+
+| `page_intent_mode` | CTA mode | 结尾必须覆盖 | SLA / quote 使用边界 |
+| --- | --- | --- | --- |
+| `knowledge` | `reference CTA` | 下一步阅读路径、概念边界、相关深文章或 support page | 不写 SLA，不把主 CTA 指向 quote |
+| `review` | `review CTA` | review package、review owner、会返回的 DFM / stackup / assembly / test-access 输出 | 不默认写 SLA，除非站点 overlay 和页面意图都允许 |
+| `handoff` | `handoff CTA` | handoff package、缺项字段、交接 owner、release / FAI / test 的下一步动作 | 不默认写报价，不把 handoff 缺项强行改成价格问题 |
+| `commercial` | `quote CTA` | quote path、公开邮箱、报价资料包、成本 / 交期 / quick-turn 判断输入 | 只有该模式可使用 SLA、quote page 或 24h 反馈作为主收口 |
+
+对 `assembly / BOM / drawing / quote package / release docs / FAI / NPI / test planning / stackup review / DFM review` 这类主题，如果 `page_intent_mode` 是 `review` 或 `handoff`，CTA 应写成工程协作式承接，并回答与该模式相关的问题：
+
+- 读者现在最可能担心什么工程翻车点
+- 应该提交哪一套资料包
+- 哪个工程团队会接手 review
+- 会返回哪些审查输出或冻结建议
+- 是否需要联系、review、handoff 或 quote；只有 `commercial` 模式才写 SLA
+
+如果主题属于 `FAI / BOM / release package / assembly launch / NPI`，CTA 默认优先覆盖以下输入：
+
+- `AVL`
+- `approved substitute status`
+- `assembly drawing`
+- `Gerber`
+- `placement / coordinate data`
+- `polarity / Pin 1 / rotation concerns`
+- `expected FAI / inspection / test ownership`
+
+CTA 逻辑链按模式选择，不要求每篇固定同一顺序：
+
+- `knowledge`：`knowledge gap -> next reading -> decision point`
+- `review`：`reader pain or launch risk -> review package -> review owner -> review output`
+- `handoff`：`handoff gap -> missing input -> owner -> release / FAI / test action`
+- `commercial`：`commercial need -> quote package -> quote path or email -> allowed SLA`
+
+禁止写成：
+
+- 只有品牌口号，没有工程输入
+- 只有产品页链接，没有 review scope
+- 只有“联系我们”而没有资料包定义
+- 只有抽象承诺，而没有读者能立即执行的下一步
 
 ### 主题特异性要求
 
@@ -300,20 +398,16 @@ PCB / PCBA 技术博客默认不是普通资讯文，也不是空泛 SEO 文。
 ### CTA / Next Steps 写法
 
 - 结尾 CTA 不能只是“按产品线罗列 4-5 个链接”的清单
-- 更优先使用“项目问题场景 + 读者应提交的资料 + 工程团队会返回什么”的服务引导结构
+- CTA 结构必须跟随前文定义的 `page_intent_mode`，不能所有文章默认使用同一种服务引导结构
 - CTA 必须贴合正文主题，不得用一段通用销售话术套所有文章
 - 推荐把 CTA 写成读者正在面对的具体问题
   - 例如阻抗、stackup、finish zoning、DFT、test access、热路径、材料选择、验证路径
-- CTA 可以自然引导读者提交 Gerber、stackup、BOM、测试要求、应用约束或 enclosure 条件
-- 如果站点 overlay 已给出公开可用邮箱、quote 页面、DFM 响应承诺或工程团队称谓，CTA 应优先复用这些站点级信息
+- `review`、`handoff`、`commercial` 模式可以自然引导读者提交 Gerber、stackup、BOM、测试要求、应用约束或 enclosure 条件；`knowledge` 模式优先给下一步阅读路径
+- 如果站点 overlay 已给出公开可用邮箱、quote 页面、DFM 响应承诺或工程团队称谓，只能在对应 `page_intent_mode` 允许时复用这些站点级信息
 - 如果没有站点级公开信息，不要编造邮箱、响应时效、免费承诺、认证背书或工程服务范围
 - CTA 里的链接仍然应该保留，但应作为“如果某一块仍未定义，可先看这些页面”的辅助动作，而不是整段 CTA 的主体
-- CTA 必须听起来像工程协作下一步，不像硬切换到销售页
-- 对 HILPCB / APTPCB 这类带 quote intake 的站点，CTA 默认应具备 `4` 个要素：
-  - 读者现在卡住的工程风险或 release burden
-  - 应提交的数据包或冻结输入
-  - 谁会返回什么类型的工程审查反馈
-  - 站点 overlay 已公开时才可复用的响应时效或 SLA
+- CTA 必须听起来像当前页面意图的自然下一步，不像硬切换到销售页
+- 对 HILPCB / APTPCB 这类带 quote intake 的站点，只有 `commercial` 模式才默认包含 quote path、邮箱或公开 SLA；`review` 和 `handoff` 模式只在需要时写 review / handoff 输入与输出；`knowledge` 模式不得强行询盘
 
 ## 七、内链原则
 
