@@ -2,9 +2,17 @@
 
 Historical execution record only. For current execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md).
 
-Last updated: 2026-05-13
+Last updated: 2026-05-15
 
 ## Overall
+
+- `2026-05-15 FAI machine-amplification and engineering-CTA repair landed`: the repo now has one stronger local writing boundary for `FAI / release-package / NPI` topics. The safe posture is no longer just `FAI is a documentation and launch gate`; future writing can now also explain the canonical local failure chain `small package ambiguity -> weak or skipped halt-and-verify -> automation repeats the same wrong assumption across the lot -> downstream test catches it too late -> mass rework or scrap risk`, and prompt surfaces now require engineering-grade CTA inputs for this topic family.
+
+- `2026-05-14 materials follow-on technical-revalidate map landed`: the repo now has one writing-facing readiness surface for the four remaining `Materials / Surface Finish / Thermal` technical-revalidate slugs plus one reusable MRI boundary fact. Current safe posture is now explicit: MRI is only supportable at `MR labeling + loop-risk + device-level validation` boundary, while `low-thermal-conductivity-stackup` and `electrowetting-pcb` remain blocked pending official-source recovery for thermal-isolation and electrowetting-specific mechanism layers.
+
+- `2026-05-14 blog failure-pattern mechanism-family taxonomy landed`: the repo now has a writing-facing routing page that classifies future blog failure patterns into six mechanism families instead of treating `failure pattern` as one generic requirement. Prompt surfaces, evidence-pack inventory, and pillar/query drafting rules now all require a primary mechanism-family choice before the article can be treated as `ready`.
+
+- `2026-05-14 dense ICT physical-failure boundary landed`: `llm_wiki` now has one dedicated physical-failure fact layer for dense ICT and test-point writing. The local corpus can now support guarded language around `probe load -> board flex -> small-MLCC crack or open solder joint -> latent open/short risk`, backed by official Murata and TDK sources plus the existing ICT fixture-introduction gate. This closes a concrete blog-depth gap without unlocking fixture or geometry numerics.
 
 - `2026-05-13 HilPCB Cost lane Batch A authority pack landed`: `llm_wiki` now has one HIL-side `/en/quote` source registry record plus one dedicated `pcb-prototype-readiness-checklist` consumption pack. This closes the local route-authority gap for conservative Batch A draft preparation inside `llm_wiki`, while leaving frontend lane activation and public-status changes to the external control docs.
 

@@ -2,6 +2,75 @@
 
 Historical record only. For execution, read [../policies/ai-execution-contract.md](../policies/ai-execution-contract.md) first.
 
+## 2026-05-15 (P4-570 FAI Machine-Amplification And Release-Package CTA Repair)
+
+- **This pass closes one specific writing-depth gap that showed up during expert review of the APT FAI article**: the repo now has stronger local wording for `FAI as halt-and-verify before automation amplifies release-package errors`, plus prompt-surface reinforcement so future `FAI / BOM / NPI / release docs` articles must carry one real `machine amplification` failure chain and one engineering-grade CTA instead of generic governance prose.
+  - **Updated prompt surfaces**
+    - `prompts_template/shared/technical-blog-standard.md`
+    - `prompts_template/shared/evidence-pack-template.md`
+  - **Updated fact card**
+    - `facts/methods/pcba-first-article-inspection-vs-high-speed-validation-boundary.md`
+  - **What this pass allows**
+    - Future `FAI / release-package / assembly launch` rewrites can now safely describe the canonical local chain:
+      `mixed BOM or substitute ambiguity / polarity or rotation mismatch -> weak or skipped FAI halt-and-verify -> SMT repeats the same wrong assumption at batch scale -> downstream electrical test or debug catches it too late -> mass rework or scrap risk`.
+    - Future engineering CTAs for this topic family are now expected to ask for `AVL`, approved-substitute status, assembly drawing, `Gerber`, placement data, and explicit inspection / test ownership instead of defaulting to a generic quote invitation.
+  - **What remains outside this pass**
+    - This pass does not unlock universal batch-size, yield, scrap, turnaround, or customer-program qualification claims for FAI topics.
+
+## 2026-05-14 (P4-569 Materials Follow-On Technical Revalidate Review)
+
+- **This pass reviews the remaining technical-revalidate slugs in the `Materials / Surface Finish / Thermal` lane and converts them into one writing-facing readiness map instead of letting them drift as generic material blogs**.
+  - **New fact card**
+    - `facts/methods/mri-board-material-and-routing-mr-conditional-boundary.md`
+  - **New topic wiki**
+    - `wiki/processes/materials-surface-finish-thermal-follow-on-revalidate-map.md`
+  - **New controller log**
+    - `logs/p4-569-2026-5-14-materials-follow-on-technical-revalidate-review.md`
+  - **What this pass allows**
+    - MRI-related rewrites now have one reusable local boundary that keeps writing at `MR labeling + loop-risk + device-level validation` scope instead of claiming that board material or routing choices alone prove MRI compatibility.
+    - The lane now has one explicit readiness surface that assigns each of the four remaining slugs a primary mechanism family, expected failure chain, and rewrite status.
+  - **What remains blocked**
+    - `low-thermal-conductivity-stackup` still lacks official-source support for cryogenic / thermal-isolation stackup guidance.
+    - `electrowetting-pcb` still lacks electrowetting-specific official or primary-source support for dielectric, hydrophobic-surface, and actuation-validation claims.
+    - MRI testing and routing numerics, material lists, finish bans, and pass/fail criteria remain blocked until narrower official sources are recovered.
+
+## 2026-05-14 (P4-568 Blog Failure Pattern Mechanism Family Taxonomy)
+
+- **This pass generalizes the previous ICT-specific repair into a reusable prompt-and-wiki routing system**: the repo now has one writing-facing `failure mechanism family` taxonomy page plus coordinated `prompts_template` updates so future blogs must first classify which real mechanism family they belong to, rather than merely adding one generic failure-pattern paragraph at the end.
+  - **New topic wiki**
+    - `wiki/processes/blog-failure-pattern-mechanism-family-map.md`
+  - **Updated prompt surfaces**
+    - `prompts_template/shared/technical-blog-standard.md`
+    - `prompts_template/shared/query.md`
+    - `prompts_template/shared/blog-rewrite-data-gap-contract.md`
+    - `prompts_template/shared/evidence-pack-template.md`
+    - `prompts_template/shared/pillar.md`
+    - `prompts_template/README.md`
+  - **What this pass allows**
+    - Future writing can now route topics through six primary mechanism families:
+      `mechanical load / strain`, `electrical field / return path collapse`, `thermal mismatch / heat path`, `process window interaction`, `chemical / surface condition`, and `data-package incompleteness / governance failure`.
+    - Failure-pattern inventory is now expected to start from `which mechanism family governs this topic?`, not from ad hoc case selection.
+  - **What remains outside this pass**
+    - The taxonomy page does not itself prove every family at equal depth; future topic work may still need narrower source-backed facts inside a given family.
+
+## 2026-05-14 (P4-567 ICT Fixture Strain MLCC Latent Damage Boundary)
+
+- **This pass closes one specific depth gap that had been causing dense ICT articles to stay too generic**: `llm_wiki` now has three official manufacturer source records plus one reusable fact card for the `probe load -> board flex -> small-MLCC crack / open solder joint -> latent open/short risk` chain, and the existing ICT fixture-method-selection wiki now points at that new physical-failure layer instead of only access posture.
+  - **New source registry**
+    - `sources/registry/methods/murata-mlcc-test-probe-board-flex-precaution-faq.md`
+    - `sources/registry/methods/murata-small-mlcc-board-bending-caution-pdf.md`
+    - `sources/registry/methods/tdk-mlcc-flex-crack-cause-and-consequence-faq.md`
+  - **New fact card**
+    - `facts/methods/methods-pcba-ict-fixture-strain-and-mlcc-latent-damage-boundary.md`
+  - **Updated topic wiki / controller log**
+    - `wiki/processes/ict-fixture-introduction-and-method-selection.md`
+    - `logs/p4-567-2026-5-14-ict-fixture-strain-mlcc-latent-damage-boundary.md`
+  - **What this pass allows**
+    - Future dense ICT / test-point rewrites can now consume one source-backed physical failure scenario instead of stopping at review burden or release hold posture only.
+    - Prompt work can now safely describe tiny-MLCC fragility, probe-load board flex, and latent post-test short/open risk without inventing geometry or fixture numerics.
+  - **What remains blocked**
+    - Universal support-pin spacing, probe-force, test-point clearance, BGA-edge clearance, coverage, cost, or fixture-payback claims remain blocked until separate authority is added.
+
 ## 2026-05-13 (P4-566 HilPCB Cost Lane Batch A Authority Pack)
 
 - **This pass closes the HIL quote-route documentation gap for Batch A inside `llm_wiki` without changing frontend control docs**: the repo now has one HIL-side source registry record for `/en/quote` plus one dedicated writing-facing consumption pack for `pcb-prototype-readiness-checklist`.
